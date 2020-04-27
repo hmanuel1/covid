@@ -1,0 +1,3143 @@
+county_state,fips,county,state,population
+"Autauga, Alabama",1001,Autauga,Alabama,55869
+"Baldwin, Alabama",1003,Baldwin,Alabama,223234
+"Barbour, Alabama",1005,Barbour,Alabama,24686
+"Bibb, Alabama",1007,Bibb,Alabama,22394
+"Blount, Alabama",1009,Blount,Alabama,57826
+"Bullock, Alabama",1011,Bullock,Alabama,10101
+"Butler, Alabama",1013,Butler,Alabama,19448
+"Calhoun, Alabama",1015,Calhoun,Alabama,113605
+"Chambers, Alabama",1017,Chambers,Alabama,33254
+"Cherokee, Alabama",1019,Cherokee,Alabama,26196
+"Chilton, Alabama",1021,Chilton,Alabama,44428
+"Choctaw, Alabama",1023,Choctaw,Alabama,12589
+"Clarke, Alabama",1025,Clarke,Alabama,23622
+"Clay, Alabama",1027,Clay,Alabama,13235
+"Cleburne, Alabama",1029,Cleburne,Alabama,14910
+"Coffee, Alabama",1031,Coffee,Alabama,52342
+"Colbert, Alabama",1033,Colbert,Alabama,55241
+"Conecuh, Alabama",1035,Conecuh,Alabama,12067
+"Coosa, Alabama",1037,Coosa,Alabama,10663
+"Covington, Alabama",1039,Covington,Alabama,37049
+"Crenshaw, Alabama",1041,Crenshaw,Alabama,13772
+"Cullman, Alabama",1043,Cullman,Alabama,83768
+"Dale, Alabama",1045,Dale,Alabama,49172
+"Dallas, Alabama",1047,Dallas,Alabama,37196
+"DeKalb, Alabama",1049,DeKalb,Alabama,71513
+"Elmore, Alabama",1051,Elmore,Alabama,81209
+"Escambia, Alabama",1053,Escambia,Alabama,36633
+"Etowah, Alabama",1055,Etowah,Alabama,102268
+"Fayette, Alabama",1057,Fayette,Alabama,16302
+"Franklin, Alabama",1059,Franklin,Alabama,31362
+"Geneva, Alabama",1061,Geneva,Alabama,26271
+"Greene, Alabama",1063,Greene,Alabama,8111
+"Hale, Alabama",1065,Hale,Alabama,14651
+"Henry, Alabama",1067,Henry,Alabama,17205
+"Houston, Alabama",1069,Houston,Alabama,105882
+"Jackson, Alabama",1071,Jackson,Alabama,51626
+"Jefferson, Alabama",1073,Jefferson,Alabama,658573
+"Lamar, Alabama",1075,Lamar,Alabama,13805
+"Lauderdale, Alabama",1077,Lauderdale,Alabama,92729
+"Lawrence, Alabama",1079,Lawrence,Alabama,32924
+"Lee, Alabama",1081,Lee,Alabama,164542
+"Limestone, Alabama",1083,Limestone,Alabama,98915
+"Lowndes, Alabama",1085,Lowndes,Alabama,9726
+"Macon, Alabama",1087,Macon,Alabama,18068
+"Madison, Alabama",1089,Madison,Alabama,372909
+"Marengo, Alabama",1091,Marengo,Alabama,18863
+"Marion, Alabama",1093,Marion,Alabama,29709
+"Marshall, Alabama",1095,Marshall,Alabama,96774
+"Mobile, Alabama",1097,Mobile,Alabama,413210
+"Monroe, Alabama",1099,Monroe,Alabama,20733
+"Montgomery, Alabama",1101,Montgomery,Alabama,226486
+"Morgan, Alabama",1103,Morgan,Alabama,119679
+"Perry, Alabama",1105,Perry,Alabama,8923
+"Pickens, Alabama",1107,Pickens,Alabama,19930
+"Pike, Alabama",1109,Pike,Alabama,33114
+"Randolph, Alabama",1111,Randolph,Alabama,22722
+"Russell, Alabama",1113,Russell,Alabama,57961
+"St. Clair, Alabama",1115,St. Clair,Alabama,89512
+"Shelby, Alabama",1117,Shelby,Alabama,217702
+"Sumter, Alabama",1119,Sumter,Alabama,12427
+"Talladega, Alabama",1121,Talladega,Alabama,79978
+"Tallapoosa, Alabama",1123,Tallapoosa,Alabama,40367
+"Tuscaloosa, Alabama",1125,Tuscaloosa,Alabama,209355
+"Walker, Alabama",1127,Walker,Alabama,63521
+"Washington, Alabama",1129,Washington,Alabama,16326
+"Wilcox, Alabama",1131,Wilcox,Alabama,10373
+"Winston, Alabama",1133,Winston,Alabama,23629
+"Aleutians East Borough, Alaska",2013,Aleutians East Borough,Alaska,3337
+"Aleutians West Census Area, Alaska",2016,Aleutians West Census Area,Alaska,5634
+"Anchorage Municipality, Alaska",2020,Anchorage Municipality,Alaska,288000
+"Bethel Census Area, Alaska",2050,Bethel Census Area,Alaska,18386
+"Bristol Bay Borough, Alaska",2060,Bristol Bay Borough,Alaska,836
+"Denali Borough, Alaska",2068,Denali Borough,Alaska,2097
+"Dillingham Census Area, Alaska",2070,Dillingham Census Area,Alaska,4916
+"Fairbanks North Star Borough, Alaska",2090,Fairbanks North Star Borough,Alaska,96849
+"Haines Borough, Alaska",2100,Haines Borough,Alaska,2530
+"Hoonah-Angoon Census Area, Alaska",2105,Hoonah-Angoon Census Area,Alaska,2148
+"Juneau City and Borough, Alaska",2110,Juneau City and Borough,Alaska,31974
+"Kenai Peninsula Borough, Alaska",2122,Kenai Peninsula Borough,Alaska,58708
+"Ketchikan Gateway Borough, Alaska",2130,Ketchikan Gateway Borough,Alaska,13901
+"Kodiak Island Borough, Alaska",2150,Kodiak Island Borough,Alaska,12998
+"Kusilvak Census Area, Alaska",2158,Kusilvak Census Area,Alaska,8314
+"Lake and Peninsula Borough, Alaska",2164,Lake and Peninsula Borough,Alaska,1592
+"Matanuska-Susitna Borough, Alaska",2170,Matanuska-Susitna Borough,Alaska,108317
+"Nome Census Area, Alaska",2180,Nome Census Area,Alaska,10004
+"North Slope Borough, Alaska",2185,North Slope Borough,Alaska,9832
+"Northwest Arctic Borough, Alaska",2188,Northwest Arctic Borough,Alaska,7621
+"Petersburg Borough, Alaska",2195,Petersburg Borough,Alaska,3266
+"Prince of Wales-Hyder Census Area, Alaska",2198,Prince of Wales-Hyder Census Area,Alaska,6203
+"Sitka City and Borough, Alaska",2220,Sitka City and Borough,Alaska,8493
+"Skagway Municipality, Alaska",2230,Skagway Municipality,Alaska,1183
+"Southeast Fairbanks Census Area, Alaska",2240,Southeast Fairbanks Census Area,Alaska,6893
+"Valdez-Cordova Census Area, Alaska",2261,Valdez-Cordova Census Area,Alaska,9202
+"Wrangell City and Borough, Alaska",2275,Wrangell City and Borough,Alaska,2502
+"Yakutat City and Borough, Alaska",2282,Yakutat City and Borough,Alaska,579
+"Yukon-Koyukuk Census Area, Alaska",2290,Yukon-Koyukuk Census Area,Alaska,5230
+"Apache, Arizona",4001,Apache,Arizona,71887
+"Cochise, Arizona",4003,Cochise,Arizona,125922
+"Coconino, Arizona",4005,Coconino,Arizona,143476
+"Gila, Arizona",4007,Gila,Arizona,54018
+"Graham, Arizona",4009,Graham,Arizona,38837
+"Greenlee, Arizona",4011,Greenlee,Arizona,9498
+"La Paz, Arizona",4012,La Paz,Arizona,21108
+"Maricopa, Arizona",4013,Maricopa,Arizona,4485414
+"Mohave, Arizona",4015,Mohave,Arizona,212181
+"Navajo, Arizona",4017,Navajo,Arizona,110924
+"Pima, Arizona",4019,Pima,Arizona,1047279
+"Pinal, Arizona",4021,Pinal,Arizona,462789
+"Santa Cruz, Arizona",4023,Santa Cruz,Arizona,46498
+"Yavapai, Arizona",4025,Yavapai,Arizona,235099
+"Yuma, Arizona",4027,Yuma,Arizona,213787
+"Arkansas, Arkansas",5001,Arkansas,Arkansas,17486
+"Ashley, Arkansas",5003,Ashley,Arkansas,19657
+"Baxter, Arkansas",5005,Baxter,Arkansas,41932
+"Benton, Arkansas",5007,Benton,Arkansas,279141
+"Boone, Arkansas",5009,Boone,Arkansas,37432
+"Bradley, Arkansas",5011,Bradley,Arkansas,10763
+"Calhoun, Arkansas",5013,Calhoun,Arkansas,5189
+"Carroll, Arkansas",5015,Carroll,Arkansas,28380
+"Chicot, Arkansas",5017,Chicot,Arkansas,10118
+"Clark, Arkansas",5019,Clark,Arkansas,22320
+"Clay, Arkansas",5021,Clay,Arkansas,14551
+"Cleburne, Arkansas",5023,Cleburne,Arkansas,24919
+"Cleveland, Arkansas",5025,Cleveland,Arkansas,7956
+"Columbia, Arkansas",5027,Columbia,Arkansas,23457
+"Conway, Arkansas",5029,Conway,Arkansas,20846
+"Craighead, Arkansas",5031,Craighead,Arkansas,110332
+"Crawford, Arkansas",5033,Crawford,Arkansas,63257
+"Crittenden, Arkansas",5035,Crittenden,Arkansas,47955
+"Cross, Arkansas",5037,Cross,Arkansas,16419
+"Dallas, Arkansas",5039,Dallas,Arkansas,7009
+"Desha, Arkansas",5041,Desha,Arkansas,11361
+"Drew, Arkansas",5043,Drew,Arkansas,18219
+"Faulkner, Arkansas",5045,Faulkner,Arkansas,126007
+"Franklin, Arkansas",5047,Franklin,Arkansas,17715
+"Fulton, Arkansas",5049,Fulton,Arkansas,12477
+"Garland, Arkansas",5051,Garland,Arkansas,99386
+"Grant, Arkansas",5053,Grant,Arkansas,18265
+"Greene, Arkansas",5055,Greene,Arkansas,45325
+"Hempstead, Arkansas",5057,Hempstead,Arkansas,21532
+"Hot Spring, Arkansas",5059,Hot Spring,Arkansas,33771
+"Howard, Arkansas",5061,Howard,Arkansas,13202
+"Independence, Arkansas",5063,Independence,Arkansas,37825
+"Izard, Arkansas",5065,Izard,Arkansas,13629
+"Jackson, Arkansas",5067,Jackson,Arkansas,16719
+"Jefferson, Arkansas",5069,Jefferson,Arkansas,66824
+"Johnson, Arkansas",5071,Johnson,Arkansas,26578
+"Lafayette, Arkansas",5073,Lafayette,Arkansas,6624
+"Lawrence, Arkansas",5075,Lawrence,Arkansas,16406
+"Lee, Arkansas",5077,Lee,Arkansas,8857
+"Lincoln, Arkansas",5079,Lincoln,Arkansas,13024
+"Little River, Arkansas",5081,Little River,Arkansas,12259
+"Logan, Arkansas",5083,Logan,Arkansas,21466
+"Lonoke, Arkansas",5085,Lonoke,Arkansas,73309
+"Madison, Arkansas",5087,Madison,Arkansas,16576
+"Marion, Arkansas",5089,Marion,Arkansas,16694
+"Miller, Arkansas",5091,Miller,Arkansas,43257
+"Mississippi, Arkansas",5093,Mississippi,Arkansas,40651
+"Monroe, Arkansas",5095,Monroe,Arkansas,6701
+"Montgomery, Arkansas",5097,Montgomery,Arkansas,8986
+"Nevada, Arkansas",5099,Nevada,Arkansas,8252
+"Newton, Arkansas",5101,Newton,Arkansas,7753
+"Ouachita, Arkansas",5103,Ouachita,Arkansas,23382
+"Perry, Arkansas",5105,Perry,Arkansas,10455
+"Phillips, Arkansas",5107,Phillips,Arkansas,17782
+"Pike, Arkansas",5109,Pike,Arkansas,10718
+"Poinsett, Arkansas",5111,Poinsett,Arkansas,23528
+"Polk, Arkansas",5113,Polk,Arkansas,19964
+"Pope, Arkansas",5115,Pope,Arkansas,64072
+"Prairie, Arkansas",5117,Prairie,Arkansas,8062
+"Pulaski, Arkansas",5119,Pulaski,Arkansas,391911
+"Randolph, Arkansas",5121,Randolph,Arkansas,17958
+"St. Francis, Arkansas",5123,St. Francis,Arkansas,24994
+"Saline, Arkansas",5125,Saline,Arkansas,122437
+"Scott, Arkansas",5127,Scott,Arkansas,10281
+"Searcy, Arkansas",5129,Searcy,Arkansas,7881
+"Sebastian, Arkansas",5131,Sebastian,Arkansas,127827
+"Sevier, Arkansas",5133,Sevier,Arkansas,17007
+"Sharp, Arkansas",5135,Sharp,Arkansas,17442
+"Stone, Arkansas",5137,Stone,Arkansas,12506
+"Union, Arkansas",5139,Union,Arkansas,38682
+"Van Buren, Arkansas",5141,Van Buren,Arkansas,16545
+"Washington, Arkansas",5143,Washington,Arkansas,239187
+"White, Arkansas",5145,White,Arkansas,78753
+"Woodruff, Arkansas",5147,Woodruff,Arkansas,6320
+"Yell, Arkansas",5149,Yell,Arkansas,21341
+"Alameda, California",6001,Alameda,California,1671329
+"Alpine, California",6003,Alpine,California,1129
+"Amador, California",6005,Amador,California,39752
+"Butte, California",6007,Butte,California,219186
+"Calaveras, California",6009,Calaveras,California,45905
+"Colusa, California",6011,Colusa,California,21547
+"Contra Costa, California",6013,Contra Costa,California,1153526
+"Del Norte, California",6015,Del Norte,California,27812
+"El Dorado, California",6017,El Dorado,California,192843
+"Fresno, California",6019,Fresno,California,999101
+"Glenn, California",6021,Glenn,California,28393
+"Humboldt, California",6023,Humboldt,California,135558
+"Imperial, California",6025,Imperial,California,181215
+"Inyo, California",6027,Inyo,California,18039
+"Kern, California",6029,Kern,California,900202
+"Kings, California",6031,Kings,California,152940
+"Lake, California",6033,Lake,California,64386
+"Lassen, California",6035,Lassen,California,30573
+"Los Angeles, California",6037,Los Angeles,California,10039107
+"Madera, California",6039,Madera,California,157327
+"Marin, California",6041,Marin,California,258826
+"Mariposa, California",6043,Mariposa,California,17203
+"Mendocino, California",6045,Mendocino,California,86749
+"Merced, California",6047,Merced,California,277680
+"Modoc, California",6049,Modoc,California,8841
+"Mono, California",6051,Mono,California,14444
+"Monterey, California",6053,Monterey,California,434061
+"Napa, California",6055,Napa,California,137744
+"Nevada, California",6057,Nevada,California,99755
+"Orange, California",6059,Orange,California,3175692
+"Placer, California",6061,Placer,California,398329
+"Plumas, California",6063,Plumas,California,18807
+"Riverside, California",6065,Riverside,California,2470546
+"Sacramento, California",6067,Sacramento,California,1552058
+"San Benito, California",6069,San Benito,California,62808
+"San Bernardino, California",6071,San Bernardino,California,2180085
+"San Diego, California",6073,San Diego,California,3338330
+"San Francisco, California",6075,San Francisco,California,881549
+"San Joaquin, California",6077,San Joaquin,California,762148
+"San Luis Obispo, California",6079,San Luis Obispo,California,283111
+"San Mateo, California",6081,San Mateo,California,766573
+"Santa Barbara, California",6083,Santa Barbara,California,446499
+"Santa Clara, California",6085,Santa Clara,California,1927852
+"Santa Cruz, California",6087,Santa Cruz,California,273213
+"Shasta, California",6089,Shasta,California,180080
+"Sierra, California",6091,Sierra,California,3005
+"Siskiyou, California",6093,Siskiyou,California,43539
+"Solano, California",6095,Solano,California,447643
+"Sonoma, California",6097,Sonoma,California,494336
+"Stanislaus, California",6099,Stanislaus,California,550660
+"Sutter, California",6101,Sutter,California,96971
+"Tehama, California",6103,Tehama,California,65084
+"Trinity, California",6105,Trinity,California,12285
+"Tulare, California",6107,Tulare,California,466195
+"Tuolumne, California",6109,Tuolumne,California,54478
+"Ventura, California",6111,Ventura,California,846006
+"Yolo, California",6113,Yolo,California,220500
+"Yuba, California",6115,Yuba,California,78668
+"Adams, Colorado",8001,Adams,Colorado,517421
+"Alamosa, Colorado",8003,Alamosa,Colorado,16233
+"Arapahoe, Colorado",8005,Arapahoe,Colorado,656590
+"Archuleta, Colorado",8007,Archuleta,Colorado,14029
+"Baca, Colorado",8009,Baca,Colorado,3581
+"Bent, Colorado",8011,Bent,Colorado,5577
+"Boulder, Colorado",8013,Boulder,Colorado,326196
+"Broomfield, Colorado",8014,Broomfield,Colorado,70465
+"Chaffee, Colorado",8015,Chaffee,Colorado,20356
+"Cheyenne, Colorado",8017,Cheyenne,Colorado,1831
+"Clear Creek, Colorado",8019,Clear Creek,Colorado,9700
+"Conejos, Colorado",8021,Conejos,Colorado,8205
+"Costilla, Colorado",8023,Costilla,Colorado,3887
+"Crowley, Colorado",8025,Crowley,Colorado,6061
+"Custer, Colorado",8027,Custer,Colorado,5068
+"Delta, Colorado",8029,Delta,Colorado,31162
+"Denver, Colorado",8031,Denver,Colorado,727211
+"Dolores, Colorado",8033,Dolores,Colorado,2055
+"Douglas, Colorado",8035,Douglas,Colorado,351154
+"Eagle, Colorado",8037,Eagle,Colorado,55127
+"Elbert, Colorado",8039,Elbert,Colorado,26729
+"El Paso, Colorado",8041,El Paso,Colorado,720403
+"Fremont, Colorado",8043,Fremont,Colorado,47839
+"Garfield, Colorado",8045,Garfield,Colorado,60061
+"Gilpin, Colorado",8047,Gilpin,Colorado,6243
+"Grand, Colorado",8049,Grand,Colorado,15734
+"Gunnison, Colorado",8051,Gunnison,Colorado,17462
+"Hinsdale, Colorado",8053,Hinsdale,Colorado,820
+"Huerfano, Colorado",8055,Huerfano,Colorado,6897
+"Jackson, Colorado",8057,Jackson,Colorado,1392
+"Jefferson, Colorado",8059,Jefferson,Colorado,582881
+"Kiowa, Colorado",8061,Kiowa,Colorado,1406
+"Kit Carson, Colorado",8063,Kit Carson,Colorado,7097
+"Lake, Colorado",8065,Lake,Colorado,8127
+"La Plata, Colorado",8067,La Plata,Colorado,56221
+"Larimer, Colorado",8069,Larimer,Colorado,356899
+"Las Animas, Colorado",8071,Las Animas,Colorado,14506
+"Lincoln, Colorado",8073,Lincoln,Colorado,5701
+"Logan, Colorado",8075,Logan,Colorado,22409
+"Mesa, Colorado",8077,Mesa,Colorado,154210
+"Mineral, Colorado",8079,Mineral,Colorado,769
+"Moffat, Colorado",8081,Moffat,Colorado,13283
+"Montezuma, Colorado",8083,Montezuma,Colorado,26183
+"Montrose, Colorado",8085,Montrose,Colorado,42758
+"Morgan, Colorado",8087,Morgan,Colorado,29068
+"Otero, Colorado",8089,Otero,Colorado,18278
+"Ouray, Colorado",8091,Ouray,Colorado,4952
+"Park, Colorado",8093,Park,Colorado,18845
+"Phillips, Colorado",8095,Phillips,Colorado,4265
+"Pitkin, Colorado",8097,Pitkin,Colorado,17767
+"Prowers, Colorado",8099,Prowers,Colorado,12172
+"Pueblo, Colorado",8101,Pueblo,Colorado,168424
+"Rio Blanco, Colorado",8103,Rio Blanco,Colorado,6324
+"Rio Grande, Colorado",8105,Rio Grande,Colorado,11267
+"Routt, Colorado",8107,Routt,Colorado,25638
+"Saguache, Colorado",8109,Saguache,Colorado,6824
+"San Juan, Colorado",8111,San Juan,Colorado,728
+"San Miguel, Colorado",8113,San Miguel,Colorado,8179
+"Sedgwick, Colorado",8115,Sedgwick,Colorado,2248
+"Summit, Colorado",8117,Summit,Colorado,31011
+"Teller, Colorado",8119,Teller,Colorado,25388
+"Washington, Colorado",8121,Washington,Colorado,4908
+"Weld, Colorado",8123,Weld,Colorado,324492
+"Yuma, Colorado",8125,Yuma,Colorado,10019
+"Fairfield, Connecticut",9001,Fairfield,Connecticut,943332
+"Hartford, Connecticut",9003,Hartford,Connecticut,891720
+"Litchfield, Connecticut",9005,Litchfield,Connecticut,180333
+"Middlesex, Connecticut",9007,Middlesex,Connecticut,162436
+"New Haven, Connecticut",9009,New Haven,Connecticut,854757
+"New London, Connecticut",9011,New London,Connecticut,265206
+"Tolland, Connecticut",9013,Tolland,Connecticut,150721
+"Windham, Connecticut",9015,Windham,Connecticut,116782
+"Kent, Delaware",10001,Kent,Delaware,180786
+"New Castle, Delaware",10003,New Castle,Delaware,558753
+"Sussex, Delaware",10005,Sussex,Delaware,234225
+"District of Columbia, District of Columbia",11001,District of Columbia,District of Columbia,705749
+"Alachua, Florida",12001,Alachua,Florida,269043
+"Baker, Florida",12003,Baker,Florida,29210
+"Bay, Florida",12005,Bay,Florida,174705
+"Bradford, Florida",12007,Bradford,Florida,28201
+"Brevard, Florida",12009,Brevard,Florida,601942
+"Broward, Florida",12011,Broward,Florida,1952778
+"Calhoun, Florida",12013,Calhoun,Florida,14105
+"Charlotte, Florida",12015,Charlotte,Florida,188910
+"Citrus, Florida",12017,Citrus,Florida,149657
+"Clay, Florida",12019,Clay,Florida,219252
+"Collier, Florida",12021,Collier,Florida,384902
+"Columbia, Florida",12023,Columbia,Florida,71686
+"DeSoto, Florida",12027,DeSoto,Florida,38001
+"Dixie, Florida",12029,Dixie,Florida,16826
+"Duval, Florida",12031,Duval,Florida,957755
+"Escambia, Florida",12033,Escambia,Florida,318316
+"Flagler, Florida",12035,Flagler,Florida,115081
+"Franklin, Florida",12037,Franklin,Florida,12125
+"Gadsden, Florida",12039,Gadsden,Florida,45660
+"Gilchrist, Florida",12041,Gilchrist,Florida,18582
+"Glades, Florida",12043,Glades,Florida,13811
+"Gulf, Florida",12045,Gulf,Florida,13639
+"Hamilton, Florida",12047,Hamilton,Florida,14428
+"Hardee, Florida",12049,Hardee,Florida,26937
+"Hendry, Florida",12051,Hendry,Florida,42022
+"Hernando, Florida",12053,Hernando,Florida,193920
+"Highlands, Florida",12055,Highlands,Florida,106221
+"Hillsborough, Florida",12057,Hillsborough,Florida,1471968
+"Holmes, Florida",12059,Holmes,Florida,19617
+"Indian River, Florida",12061,Indian River,Florida,159923
+"Jackson, Florida",12063,Jackson,Florida,46414
+"Jefferson, Florida",12065,Jefferson,Florida,14246
+"Lafayette, Florida",12067,Lafayette,Florida,8422
+"Lake, Florida",12069,Lake,Florida,367118
+"Lee, Florida",12071,Lee,Florida,770577
+"Leon, Florida",12073,Leon,Florida,293582
+"Levy, Florida",12075,Levy,Florida,41503
+"Liberty, Florida",12077,Liberty,Florida,8354
+"Madison, Florida",12079,Madison,Florida,18493
+"Manatee, Florida",12081,Manatee,Florida,403253
+"Marion, Florida",12083,Marion,Florida,365579
+"Martin, Florida",12085,Martin,Florida,161000
+"Miami-Dade, Florida",12086,Miami-Dade,Florida,2716940
+"Monroe, Florida",12087,Monroe,Florida,74228
+"Nassau, Florida",12089,Nassau,Florida,88625
+"Okaloosa, Florida",12091,Okaloosa,Florida,210738
+"Okeechobee, Florida",12093,Okeechobee,Florida,42168
+"Orange, Florida",12095,Orange,Florida,1393452
+"Osceola, Florida",12097,Osceola,Florida,375751
+"Palm Beach, Florida",12099,Palm Beach,Florida,1496770
+"Pasco, Florida",12101,Pasco,Florida,553947
+"Pinellas, Florida",12103,Pinellas,Florida,974996
+"Polk, Florida",12105,Polk,Florida,724777
+"Putnam, Florida",12107,Putnam,Florida,74521
+"St. Johns, Florida",12109,St. Johns,Florida,264672
+"St. Lucie, Florida",12111,St. Lucie,Florida,328297
+"Santa Rosa, Florida",12113,Santa Rosa,Florida,184313
+"Sarasota, Florida",12115,Sarasota,Florida,433742
+"Seminole, Florida",12117,Seminole,Florida,471826
+"Sumter, Florida",12119,Sumter,Florida,132420
+"Suwannee, Florida",12121,Suwannee,Florida,44417
+"Taylor, Florida",12123,Taylor,Florida,21569
+"Union, Florida",12125,Union,Florida,15237
+"Volusia, Florida",12127,Volusia,Florida,553284
+"Wakulla, Florida",12129,Wakulla,Florida,33739
+"Walton, Florida",12131,Walton,Florida,74071
+"Washington, Florida",12133,Washington,Florida,25473
+"Appling, Georgia",13001,Appling,Georgia,18386
+"Atkinson, Georgia",13003,Atkinson,Georgia,8165
+"Bacon, Georgia",13005,Bacon,Georgia,11164
+"Baker, Georgia",13007,Baker,Georgia,3038
+"Baldwin, Georgia",13009,Baldwin,Georgia,44890
+"Banks, Georgia",13011,Banks,Georgia,19234
+"Barrow, Georgia",13013,Barrow,Georgia,83240
+"Bartow, Georgia",13015,Bartow,Georgia,107738
+"Ben Hill, Georgia",13017,Ben Hill,Georgia,16700
+"Berrien, Georgia",13019,Berrien,Georgia,19397
+"Bibb, Georgia",13021,Bibb,Georgia,153159
+"Bleckley, Georgia",13023,Bleckley,Georgia,12873
+"Brantley, Georgia",13025,Brantley,Georgia,19109
+"Brooks, Georgia",13027,Brooks,Georgia,15457
+"Bryan, Georgia",13029,Bryan,Georgia,39627
+"Bulloch, Georgia",13031,Bulloch,Georgia,79608
+"Burke, Georgia",13033,Burke,Georgia,22383
+"Butts, Georgia",13035,Butts,Georgia,24936
+"Calhoun, Georgia",13037,Calhoun,Georgia,6189
+"Camden, Georgia",13039,Camden,Georgia,54666
+"Candler, Georgia",13043,Candler,Georgia,10803
+"Carroll, Georgia",13045,Carroll,Georgia,119992
+"Catoosa, Georgia",13047,Catoosa,Georgia,67580
+"Charlton, Georgia",13049,Charlton,Georgia,13392
+"Chatham, Georgia",13051,Chatham,Georgia,289430
+"Chattahoochee, Georgia",13053,Chattahoochee,Georgia,10907
+"Chattooga, Georgia",13055,Chattooga,Georgia,24789
+"Cherokee, Georgia",13057,Cherokee,Georgia,258773
+"Clarke, Georgia",13059,Clarke,Georgia,128331
+"Clay, Georgia",13061,Clay,Georgia,2834
+"Clayton, Georgia",13063,Clayton,Georgia,292256
+"Clinch, Georgia",13065,Clinch,Georgia,6618
+"Cobb, Georgia",13067,Cobb,Georgia,760141
+"Coffee, Georgia",13069,Coffee,Georgia,43273
+"Colquitt, Georgia",13071,Colquitt,Georgia,45600
+"Columbia, Georgia",13073,Columbia,Georgia,156714
+"Cook, Georgia",13075,Cook,Georgia,17270
+"Coweta, Georgia",13077,Coweta,Georgia,148509
+"Crawford, Georgia",13079,Crawford,Georgia,12404
+"Crisp, Georgia",13081,Crisp,Georgia,22372
+"Dade, Georgia",13083,Dade,Georgia,16116
+"Dawson, Georgia",13085,Dawson,Georgia,26108
+"Decatur, Georgia",13087,Decatur,Georgia,26404
+"DeKalb, Georgia",13089,DeKalb,Georgia,759297
+"Dodge, Georgia",13091,Dodge,Georgia,20605
+"Dooly, Georgia",13093,Dooly,Georgia,13390
+"Dougherty, Georgia",13095,Dougherty,Georgia,87956
+"Douglas, Georgia",13097,Douglas,Georgia,146343
+"Early, Georgia",13099,Early,Georgia,10190
+"Echols, Georgia",13101,Echols,Georgia,4006
+"Effingham, Georgia",13103,Effingham,Georgia,64296
+"Elbert, Georgia",13105,Elbert,Georgia,19194
+"Emanuel, Georgia",13107,Emanuel,Georgia,22646
+"Evans, Georgia",13109,Evans,Georgia,10654
+"Fannin, Georgia",13111,Fannin,Georgia,26188
+"Fayette, Georgia",13113,Fayette,Georgia,114421
+"Floyd, Georgia",13115,Floyd,Georgia,98498
+"Forsyth, Georgia",13117,Forsyth,Georgia,244252
+"Franklin, Georgia",13119,Franklin,Georgia,23349
+"Fulton, Georgia",13121,Fulton,Georgia,1063937
+"Gilmer, Georgia",13123,Gilmer,Georgia,31369
+"Glascock, Georgia",13125,Glascock,Georgia,2971
+"Glynn, Georgia",13127,Glynn,Georgia,85292
+"Gordon, Georgia",13129,Gordon,Georgia,57963
+"Grady, Georgia",13131,Grady,Georgia,24633
+"Greene, Georgia",13133,Greene,Georgia,18324
+"Gwinnett, Georgia",13135,Gwinnett,Georgia,936250
+"Habersham, Georgia",13137,Habersham,Georgia,45328
+"Hall, Georgia",13139,Hall,Georgia,204441
+"Hancock, Georgia",13141,Hancock,Georgia,8457
+"Haralson, Georgia",13143,Haralson,Georgia,29792
+"Harris, Georgia",13145,Harris,Georgia,35236
+"Hart, Georgia",13147,Hart,Georgia,26205
+"Heard, Georgia",13149,Heard,Georgia,11923
+"Henry, Georgia",13151,Henry,Georgia,234561
+"Houston, Georgia",13153,Houston,Georgia,157863
+"Irwin, Georgia",13155,Irwin,Georgia,9416
+"Jackson, Georgia",13157,Jackson,Georgia,72977
+"Jasper, Georgia",13159,Jasper,Georgia,14219
+"Jeff Davis, Georgia",13161,Jeff Davis,Georgia,15115
+"Jefferson, Georgia",13163,Jefferson,Georgia,15362
+"Jenkins, Georgia",13165,Jenkins,Georgia,8676
+"Johnson, Georgia",13167,Johnson,Georgia,9643
+"Jones, Georgia",13169,Jones,Georgia,28735
+"Lamar, Georgia",13171,Lamar,Georgia,19077
+"Lanier, Georgia",13173,Lanier,Georgia,10423
+"Laurens, Georgia",13175,Laurens,Georgia,47546
+"Lee, Georgia",13177,Lee,Georgia,29992
+"Liberty, Georgia",13179,Liberty,Georgia,61435
+"Lincoln, Georgia",13181,Lincoln,Georgia,7921
+"Long, Georgia",13183,Long,Georgia,19559
+"Lowndes, Georgia",13185,Lowndes,Georgia,117406
+"Lumpkin, Georgia",13187,Lumpkin,Georgia,33610
+"McDuffie, Georgia",13189,McDuffie,Georgia,21312
+"McIntosh, Georgia",13191,McIntosh,Georgia,14378
+"Macon, Georgia",13193,Macon,Georgia,12947
+"Madison, Georgia",13195,Madison,Georgia,29880
+"Marion, Georgia",13197,Marion,Georgia,8359
+"Meriwether, Georgia",13199,Meriwether,Georgia,21167
+"Miller, Georgia",13201,Miller,Georgia,5718
+"Mitchell, Georgia",13205,Mitchell,Georgia,21863
+"Monroe, Georgia",13207,Monroe,Georgia,27578
+"Montgomery, Georgia",13209,Montgomery,Georgia,9172
+"Morgan, Georgia",13211,Morgan,Georgia,19276
+"Murray, Georgia",13213,Murray,Georgia,40096
+"Muscogee, Georgia",13215,Muscogee,Georgia,195769
+"Newton, Georgia",13217,Newton,Georgia,111744
+"Oconee, Georgia",13219,Oconee,Georgia,40280
+"Oglethorpe, Georgia",13221,Oglethorpe,Georgia,15259
+"Paulding, Georgia",13223,Paulding,Georgia,168667
+"Peach, Georgia",13225,Peach,Georgia,27546
+"Pickens, Georgia",13227,Pickens,Georgia,32591
+"Pierce, Georgia",13229,Pierce,Georgia,19465
+"Pike, Georgia",13231,Pike,Georgia,18962
+"Polk, Georgia",13233,Polk,Georgia,42613
+"Pulaski, Georgia",13235,Pulaski,Georgia,11137
+"Putnam, Georgia",13237,Putnam,Georgia,22119
+"Quitman, Georgia",13239,Quitman,Georgia,2299
+"Rabun, Georgia",13241,Rabun,Georgia,17137
+"Randolph, Georgia",13243,Randolph,Georgia,6778
+"Richmond, Georgia",13245,Richmond,Georgia,202518
+"Rockdale, Georgia",13247,Rockdale,Georgia,90896
+"Schley, Georgia",13249,Schley,Georgia,5257
+"Screven, Georgia",13251,Screven,Georgia,13966
+"Seminole, Georgia",13253,Seminole,Georgia,8090
+"Spalding, Georgia",13255,Spalding,Georgia,66703
+"Stephens, Georgia",13257,Stephens,Georgia,25925
+"Stewart, Georgia",13259,Stewart,Georgia,6621
+"Sumter, Georgia",13261,Sumter,Georgia,29524
+"Talbot, Georgia",13263,Talbot,Georgia,6195
+"Taliaferro, Georgia",13265,Taliaferro,Georgia,1537
+"Tattnall, Georgia",13267,Tattnall,Georgia,25286
+"Taylor, Georgia",13269,Taylor,Georgia,8020
+"Telfair, Georgia",13271,Telfair,Georgia,15860
+"Terrell, Georgia",13273,Terrell,Georgia,8531
+"Thomas, Georgia",13275,Thomas,Georgia,44451
+"Tift, Georgia",13277,Tift,Georgia,40644
+"Toombs, Georgia",13279,Toombs,Georgia,26830
+"Towns, Georgia",13281,Towns,Georgia,12037
+"Treutlen, Georgia",13283,Treutlen,Georgia,6901
+"Troup, Georgia",13285,Troup,Georgia,69922
+"Turner, Georgia",13287,Turner,Georgia,7985
+"Twiggs, Georgia",13289,Twiggs,Georgia,8120
+"Union, Georgia",13291,Union,Georgia,24511
+"Upson, Georgia",13293,Upson,Georgia,26320
+"Walker, Georgia",13295,Walker,Georgia,69761
+"Walton, Georgia",13297,Walton,Georgia,94593
+"Ware, Georgia",13299,Ware,Georgia,35734
+"Warren, Georgia",13301,Warren,Georgia,5254
+"Washington, Georgia",13303,Washington,Georgia,20374
+"Wayne, Georgia",13305,Wayne,Georgia,29927
+"Webster, Georgia",13307,Webster,Georgia,2607
+"Wheeler, Georgia",13309,Wheeler,Georgia,7855
+"White, Georgia",13311,White,Georgia,30798
+"Whitfield, Georgia",13313,Whitfield,Georgia,104628
+"Wilcox, Georgia",13315,Wilcox,Georgia,8635
+"Wilkes, Georgia",13317,Wilkes,Georgia,9777
+"Wilkinson, Georgia",13319,Wilkinson,Georgia,8954
+"Worth, Georgia",13321,Worth,Georgia,20247
+"Hawaii, Hawaii",15001,Hawaii,Hawaii,201513
+"Honolulu, Hawaii",15003,Honolulu,Hawaii,974563
+"Kalawao, Hawaii",15005,Kalawao,Hawaii,86
+"Kauai, Hawaii",15007,Kauai,Hawaii,72293
+"Maui, Hawaii",15009,Maui,Hawaii,167417
+"Ada, Idaho",16001,Ada,Idaho,481587
+"Adams, Idaho",16003,Adams,Idaho,4294
+"Bannock, Idaho",16005,Bannock,Idaho,87808
+"Bear Lake, Idaho",16007,Bear Lake,Idaho,6125
+"Benewah, Idaho",16009,Benewah,Idaho,9298
+"Bingham, Idaho",16011,Bingham,Idaho,46811
+"Blaine, Idaho",16013,Blaine,Idaho,23021
+"Boise, Idaho",16015,Boise,Idaho,7831
+"Bonner, Idaho",16017,Bonner,Idaho,45739
+"Bonneville, Idaho",16019,Bonneville,Idaho,119062
+"Boundary, Idaho",16021,Boundary,Idaho,12245
+"Butte, Idaho",16023,Butte,Idaho,2597
+"Camas, Idaho",16025,Camas,Idaho,1106
+"Canyon, Idaho",16027,Canyon,Idaho,229849
+"Caribou, Idaho",16029,Caribou,Idaho,7155
+"Cassia, Idaho",16031,Cassia,Idaho,24030
+"Clark, Idaho",16033,Clark,Idaho,845
+"Clearwater, Idaho",16035,Clearwater,Idaho,8756
+"Custer, Idaho",16037,Custer,Idaho,4315
+"Elmore, Idaho",16039,Elmore,Idaho,27511
+"Franklin, Idaho",16041,Franklin,Idaho,13876
+"Fremont, Idaho",16043,Fremont,Idaho,13099
+"Gem, Idaho",16045,Gem,Idaho,18112
+"Gooding, Idaho",16047,Gooding,Idaho,15179
+"Idaho, Idaho",16049,Idaho,Idaho,16667
+"Jefferson, Idaho",16051,Jefferson,Idaho,29871
+"Jerome, Idaho",16053,Jerome,Idaho,24412
+"Kootenai, Idaho",16055,Kootenai,Idaho,165697
+"Latah, Idaho",16057,Latah,Idaho,40108
+"Lemhi, Idaho",16059,Lemhi,Idaho,8027
+"Lewis, Idaho",16061,Lewis,Idaho,3838
+"Lincoln, Idaho",16063,Lincoln,Idaho,5366
+"Madison, Idaho",16065,Madison,Idaho,39907
+"Minidoka, Idaho",16067,Minidoka,Idaho,21039
+"Nez Perce, Idaho",16069,Nez Perce,Idaho,40408
+"Oneida, Idaho",16071,Oneida,Idaho,4531
+"Owyhee, Idaho",16073,Owyhee,Idaho,11823
+"Payette, Idaho",16075,Payette,Idaho,23951
+"Power, Idaho",16077,Power,Idaho,7681
+"Shoshone, Idaho",16079,Shoshone,Idaho,12882
+"Teton, Idaho",16081,Teton,Idaho,12142
+"Twin Falls, Idaho",16083,Twin Falls,Idaho,86878
+"Valley, Idaho",16085,Valley,Idaho,11392
+"Washington, Idaho",16087,Washington,Idaho,10194
+"Adams, Illinois",17001,Adams,Illinois,65435
+"Alexander, Illinois",17003,Alexander,Illinois,5761
+"Bond, Illinois",17005,Bond,Illinois,16426
+"Boone, Illinois",17007,Boone,Illinois,53544
+"Brown, Illinois",17009,Brown,Illinois,6578
+"Bureau, Illinois",17011,Bureau,Illinois,32628
+"Calhoun, Illinois",17013,Calhoun,Illinois,4739
+"Carroll, Illinois",17015,Carroll,Illinois,14305
+"Cass, Illinois",17017,Cass,Illinois,12147
+"Champaign, Illinois",17019,Champaign,Illinois,209689
+"Christian, Illinois",17021,Christian,Illinois,32304
+"Clark, Illinois",17023,Clark,Illinois,15441
+"Clay, Illinois",17025,Clay,Illinois,13184
+"Clinton, Illinois",17027,Clinton,Illinois,37562
+"Coles, Illinois",17029,Coles,Illinois,50621
+"Cook, Illinois",17031,Cook,Illinois,5150233
+"Crawford, Illinois",17033,Crawford,Illinois,18667
+"Cumberland, Illinois",17035,Cumberland,Illinois,10766
+"DeKalb, Illinois",17037,DeKalb,Illinois,104897
+"De Witt, Illinois",17039,De Witt,Illinois,15638
+"Douglas, Illinois",17041,Douglas,Illinois,19465
+"DuPage, Illinois",17043,DuPage,Illinois,922921
+"Edgar, Illinois",17045,Edgar,Illinois,17161
+"Edwards, Illinois",17047,Edwards,Illinois,6395
+"Effingham, Illinois",17049,Effingham,Illinois,34008
+"Fayette, Illinois",17051,Fayette,Illinois,21336
+"Ford, Illinois",17053,Ford,Illinois,12961
+"Franklin, Illinois",17055,Franklin,Illinois,38469
+"Fulton, Illinois",17057,Fulton,Illinois,34340
+"Gallatin, Illinois",17059,Gallatin,Illinois,4828
+"Greene, Illinois",17061,Greene,Illinois,12969
+"Grundy, Illinois",17063,Grundy,Illinois,51054
+"Hamilton, Illinois",17065,Hamilton,Illinois,8116
+"Hancock, Illinois",17067,Hancock,Illinois,17708
+"Hardin, Illinois",17069,Hardin,Illinois,3821
+"Henderson, Illinois",17071,Henderson,Illinois,6646
+"Henry, Illinois",17073,Henry,Illinois,48913
+"Iroquois, Illinois",17075,Iroquois,Illinois,27114
+"Jackson, Illinois",17077,Jackson,Illinois,56750
+"Jasper, Illinois",17079,Jasper,Illinois,9610
+"Jefferson, Illinois",17081,Jefferson,Illinois,37684
+"Jersey, Illinois",17083,Jersey,Illinois,21773
+"Jo Daviess, Illinois",17085,Jo Daviess,Illinois,21235
+"Johnson, Illinois",17087,Johnson,Illinois,12417
+"Kane, Illinois",17089,Kane,Illinois,532403
+"Kankakee, Illinois",17091,Kankakee,Illinois,109862
+"Kendall, Illinois",17093,Kendall,Illinois,128990
+"Knox, Illinois",17095,Knox,Illinois,49699
+"Lake, Illinois",17097,Lake,Illinois,696535
+"LaSalle, Illinois",17099,LaSalle,Illinois,108669
+"Lawrence, Illinois",17101,Lawrence,Illinois,15678
+"Lee, Illinois",17103,Lee,Illinois,34096
+"Livingston, Illinois",17105,Livingston,Illinois,35648
+"Logan, Illinois",17107,Logan,Illinois,28618
+"McDonough, Illinois",17109,McDonough,Illinois,29682
+"McHenry, Illinois",17111,McHenry,Illinois,307774
+"McLean, Illinois",17113,McLean,Illinois,171517
+"Macon, Illinois",17115,Macon,Illinois,104009
+"Macoupin, Illinois",17117,Macoupin,Illinois,44926
+"Madison, Illinois",17119,Madison,Illinois,262966
+"Marion, Illinois",17121,Marion,Illinois,37205
+"Marshall, Illinois",17123,Marshall,Illinois,11438
+"Mason, Illinois",17125,Mason,Illinois,13359
+"Massac, Illinois",17127,Massac,Illinois,13772
+"Menard, Illinois",17129,Menard,Illinois,12196
+"Mercer, Illinois",17131,Mercer,Illinois,15437
+"Monroe, Illinois",17133,Monroe,Illinois,34637
+"Montgomery, Illinois",17135,Montgomery,Illinois,28414
+"Morgan, Illinois",17137,Morgan,Illinois,33658
+"Moultrie, Illinois",17139,Moultrie,Illinois,14501
+"Ogle, Illinois",17141,Ogle,Illinois,50643
+"Peoria, Illinois",17143,Peoria,Illinois,179179
+"Perry, Illinois",17145,Perry,Illinois,20916
+"Piatt, Illinois",17147,Piatt,Illinois,16344
+"Pike, Illinois",17149,Pike,Illinois,15561
+"Pope, Illinois",17151,Pope,Illinois,4177
+"Pulaski, Illinois",17153,Pulaski,Illinois,5335
+"Putnam, Illinois",17155,Putnam,Illinois,5739
+"Randolph, Illinois",17157,Randolph,Illinois,31782
+"Richland, Illinois",17159,Richland,Illinois,15513
+"Rock Island, Illinois",17161,Rock Island,Illinois,141879
+"St. Clair, Illinois",17163,St. Clair,Illinois,259686
+"Saline, Illinois",17165,Saline,Illinois,23491
+"Sangamon, Illinois",17167,Sangamon,Illinois,194672
+"Schuyler, Illinois",17169,Schuyler,Illinois,6768
+"Scott, Illinois",17171,Scott,Illinois,4951
+"Shelby, Illinois",17173,Shelby,Illinois,21634
+"Stark, Illinois",17175,Stark,Illinois,5342
+"Stephenson, Illinois",17177,Stephenson,Illinois,44498
+"Tazewell, Illinois",17179,Tazewell,Illinois,131803
+"Union, Illinois",17181,Union,Illinois,16653
+"Vermilion, Illinois",17183,Vermilion,Illinois,75758
+"Wabash, Illinois",17185,Wabash,Illinois,11520
+"Warren, Illinois",17187,Warren,Illinois,16844
+"Washington, Illinois",17189,Washington,Illinois,13887
+"Wayne, Illinois",17191,Wayne,Illinois,16215
+"White, Illinois",17193,White,Illinois,13537
+"Whiteside, Illinois",17195,Whiteside,Illinois,55175
+"Will, Illinois",17197,Will,Illinois,690743
+"Williamson, Illinois",17199,Williamson,Illinois,66597
+"Winnebago, Illinois",17201,Winnebago,Illinois,282572
+"Woodford, Illinois",17203,Woodford,Illinois,38459
+"Adams, Indiana",18001,Adams,Indiana,35777
+"Allen, Indiana",18003,Allen,Indiana,379299
+"Bartholomew, Indiana",18005,Bartholomew,Indiana,83779
+"Benton, Indiana",18007,Benton,Indiana,8748
+"Blackford, Indiana",18009,Blackford,Indiana,11758
+"Boone, Indiana",18011,Boone,Indiana,67843
+"Brown, Indiana",18013,Brown,Indiana,15092
+"Carroll, Indiana",18015,Carroll,Indiana,20257
+"Cass, Indiana",18017,Cass,Indiana,37689
+"Clark, Indiana",18019,Clark,Indiana,118302
+"Clay, Indiana",18021,Clay,Indiana,26225
+"Clinton, Indiana",18023,Clinton,Indiana,32399
+"Crawford, Indiana",18025,Crawford,Indiana,10577
+"Daviess, Indiana",18027,Daviess,Indiana,33351
+"Dearborn, Indiana",18029,Dearborn,Indiana,49458
+"Decatur, Indiana",18031,Decatur,Indiana,26559
+"DeKalb, Indiana",18033,DeKalb,Indiana,43475
+"Delaware, Indiana",18035,Delaware,Indiana,114135
+"Dubois, Indiana",18037,Dubois,Indiana,42736
+"Elkhart, Indiana",18039,Elkhart,Indiana,206341
+"Fayette, Indiana",18041,Fayette,Indiana,23102
+"Floyd, Indiana",18043,Floyd,Indiana,78522
+"Fountain, Indiana",18045,Fountain,Indiana,16346
+"Franklin, Indiana",18047,Franklin,Indiana,22758
+"Fulton, Indiana",18049,Fulton,Indiana,19974
+"Gibson, Indiana",18051,Gibson,Indiana,33659
+"Grant, Indiana",18053,Grant,Indiana,65769
+"Greene, Indiana",18055,Greene,Indiana,31922
+"Hamilton, Indiana",18057,Hamilton,Indiana,338011
+"Hancock, Indiana",18059,Hancock,Indiana,78168
+"Harrison, Indiana",18061,Harrison,Indiana,40515
+"Hendricks, Indiana",18063,Hendricks,Indiana,170311
+"Henry, Indiana",18065,Henry,Indiana,47972
+"Howard, Indiana",18067,Howard,Indiana,82544
+"Huntington, Indiana",18069,Huntington,Indiana,36520
+"Jackson, Indiana",18071,Jackson,Indiana,44231
+"Jasper, Indiana",18073,Jasper,Indiana,33562
+"Jay, Indiana",18075,Jay,Indiana,20436
+"Jefferson, Indiana",18077,Jefferson,Indiana,32308
+"Jennings, Indiana",18079,Jennings,Indiana,27735
+"Johnson, Indiana",18081,Johnson,Indiana,158167
+"Knox, Indiana",18083,Knox,Indiana,36594
+"Kosciusko, Indiana",18085,Kosciusko,Indiana,79456
+"LaGrange, Indiana",18087,LaGrange,Indiana,39614
+"Lake, Indiana",18089,Lake,Indiana,485493
+"LaPorte, Indiana",18091,LaPorte,Indiana,109888
+"Lawrence, Indiana",18093,Lawrence,Indiana,45370
+"Madison, Indiana",18095,Madison,Indiana,129569
+"Marion, Indiana",18097,Marion,Indiana,964582
+"Marshall, Indiana",18099,Marshall,Indiana,46258
+"Martin, Indiana",18101,Martin,Indiana,10255
+"Miami, Indiana",18103,Miami,Indiana,35516
+"Monroe, Indiana",18105,Monroe,Indiana,148431
+"Montgomery, Indiana",18107,Montgomery,Indiana,38338
+"Morgan, Indiana",18109,Morgan,Indiana,70489
+"Newton, Indiana",18111,Newton,Indiana,13984
+"Noble, Indiana",18113,Noble,Indiana,47744
+"Ohio, Indiana",18115,Ohio,Indiana,5875
+"Orange, Indiana",18117,Orange,Indiana,19646
+"Owen, Indiana",18119,Owen,Indiana,20799
+"Parke, Indiana",18121,Parke,Indiana,16937
+"Perry, Indiana",18123,Perry,Indiana,19169
+"Pike, Indiana",18125,Pike,Indiana,12389
+"Porter, Indiana",18127,Porter,Indiana,170389
+"Posey, Indiana",18129,Posey,Indiana,25427
+"Pulaski, Indiana",18131,Pulaski,Indiana,12353
+"Putnam, Indiana",18133,Putnam,Indiana,37576
+"Randolph, Indiana",18135,Randolph,Indiana,24665
+"Ripley, Indiana",18137,Ripley,Indiana,28324
+"Rush, Indiana",18139,Rush,Indiana,16581
+"St. Joseph, Indiana",18141,St. Joseph,Indiana,271826
+"Scott, Indiana",18143,Scott,Indiana,23873
+"Shelby, Indiana",18145,Shelby,Indiana,44729
+"Spencer, Indiana",18147,Spencer,Indiana,20277
+"Starke, Indiana",18149,Starke,Indiana,22995
+"Steuben, Indiana",18151,Steuben,Indiana,34594
+"Sullivan, Indiana",18153,Sullivan,Indiana,20669
+"Switzerland, Indiana",18155,Switzerland,Indiana,10751
+"Tippecanoe, Indiana",18157,Tippecanoe,Indiana,195732
+"Tipton, Indiana",18159,Tipton,Indiana,15148
+"Union, Indiana",18161,Union,Indiana,7054
+"Vanderburgh, Indiana",18163,Vanderburgh,Indiana,181451
+"Vermillion, Indiana",18165,Vermillion,Indiana,15498
+"Vigo, Indiana",18167,Vigo,Indiana,107038
+"Wabash, Indiana",18169,Wabash,Indiana,30996
+"Warren, Indiana",18171,Warren,Indiana,8265
+"Warrick, Indiana",18173,Warrick,Indiana,62998
+"Washington, Indiana",18175,Washington,Indiana,28036
+"Wayne, Indiana",18177,Wayne,Indiana,65884
+"Wells, Indiana",18179,Wells,Indiana,28296
+"White, Indiana",18181,White,Indiana,24102
+"Whitley, Indiana",18183,Whitley,Indiana,33964
+"Adair, Iowa",19001,Adair,Iowa,7152
+"Adams, Iowa",19003,Adams,Iowa,3602
+"Allamakee, Iowa",19005,Allamakee,Iowa,13687
+"Appanoose, Iowa",19007,Appanoose,Iowa,12426
+"Audubon, Iowa",19009,Audubon,Iowa,5496
+"Benton, Iowa",19011,Benton,Iowa,25645
+"Black Hawk, Iowa",19013,Black Hawk,Iowa,131228
+"Boone, Iowa",19015,Boone,Iowa,26234
+"Bremer, Iowa",19017,Bremer,Iowa,25062
+"Buchanan, Iowa",19019,Buchanan,Iowa,21175
+"Buena Vista, Iowa",19021,Buena Vista,Iowa,19620
+"Butler, Iowa",19023,Butler,Iowa,14439
+"Calhoun, Iowa",19025,Calhoun,Iowa,9668
+"Carroll, Iowa",19027,Carroll,Iowa,20165
+"Cass, Iowa",19029,Cass,Iowa,12836
+"Cedar, Iowa",19031,Cedar,Iowa,18627
+"Cerro Gordo, Iowa",19033,Cerro Gordo,Iowa,42450
+"Cherokee, Iowa",19035,Cherokee,Iowa,11235
+"Chickasaw, Iowa",19037,Chickasaw,Iowa,11933
+"Clarke, Iowa",19039,Clarke,Iowa,9395
+"Clay, Iowa",19041,Clay,Iowa,16016
+"Clayton, Iowa",19043,Clayton,Iowa,17549
+"Clinton, Iowa",19045,Clinton,Iowa,46429
+"Crawford, Iowa",19047,Crawford,Iowa,16820
+"Dallas, Iowa",19049,Dallas,Iowa,93453
+"Davis, Iowa",19051,Davis,Iowa,9000
+"Decatur, Iowa",19053,Decatur,Iowa,7870
+"Delaware, Iowa",19055,Delaware,Iowa,17011
+"Des Moines, Iowa",19057,Des Moines,Iowa,38967
+"Dickinson, Iowa",19059,Dickinson,Iowa,17258
+"Dubuque, Iowa",19061,Dubuque,Iowa,97311
+"Emmet, Iowa",19063,Emmet,Iowa,9208
+"Fayette, Iowa",19065,Fayette,Iowa,19650
+"Floyd, Iowa",19067,Floyd,Iowa,15642
+"Franklin, Iowa",19069,Franklin,Iowa,10070
+"Fremont, Iowa",19071,Fremont,Iowa,6960
+"Greene, Iowa",19073,Greene,Iowa,8888
+"Grundy, Iowa",19075,Grundy,Iowa,12232
+"Guthrie, Iowa",19077,Guthrie,Iowa,10689
+"Hamilton, Iowa",19079,Hamilton,Iowa,14773
+"Hancock, Iowa",19081,Hancock,Iowa,10630
+"Hardin, Iowa",19083,Hardin,Iowa,16846
+"Harrison, Iowa",19085,Harrison,Iowa,14049
+"Henry, Iowa",19087,Henry,Iowa,19954
+"Howard, Iowa",19089,Howard,Iowa,9158
+"Humboldt, Iowa",19091,Humboldt,Iowa,9558
+"Ida, Iowa",19093,Ida,Iowa,6860
+"Iowa, Iowa",19095,Iowa,Iowa,16184
+"Jackson, Iowa",19097,Jackson,Iowa,19439
+"Jasper, Iowa",19099,Jasper,Iowa,37185
+"Jefferson, Iowa",19101,Jefferson,Iowa,18295
+"Johnson, Iowa",19103,Johnson,Iowa,151140
+"Jones, Iowa",19105,Jones,Iowa,20681
+"Keokuk, Iowa",19107,Keokuk,Iowa,10246
+"Kossuth, Iowa",19109,Kossuth,Iowa,14813
+"Lee, Iowa",19111,Lee,Iowa,33657
+"Linn, Iowa",19113,Linn,Iowa,226706
+"Louisa, Iowa",19115,Louisa,Iowa,11035
+"Lucas, Iowa",19117,Lucas,Iowa,8600
+"Lyon, Iowa",19119,Lyon,Iowa,11755
+"Madison, Iowa",19121,Madison,Iowa,16338
+"Mahaska, Iowa",19123,Mahaska,Iowa,22095
+"Marion, Iowa",19125,Marion,Iowa,33253
+"Marshall, Iowa",19127,Marshall,Iowa,39369
+"Mills, Iowa",19129,Mills,Iowa,15109
+"Mitchell, Iowa",19131,Mitchell,Iowa,10586
+"Monona, Iowa",19133,Monona,Iowa,8615
+"Monroe, Iowa",19135,Monroe,Iowa,7707
+"Montgomery, Iowa",19137,Montgomery,Iowa,9917
+"Muscatine, Iowa",19139,Muscatine,Iowa,42664
+"O'Brien, Iowa",19141,O'Brien,Iowa,13753
+"Osceola, Iowa",19143,Osceola,Iowa,5958
+"Page, Iowa",19145,Page,Iowa,15107
+"Palo Alto, Iowa",19147,Palo Alto,Iowa,8886
+"Plymouth, Iowa",19149,Plymouth,Iowa,25177
+"Pocahontas, Iowa",19151,Pocahontas,Iowa,6619
+"Polk, Iowa",19153,Polk,Iowa,490161
+"Pottawattamie, Iowa",19155,Pottawattamie,Iowa,93206
+"Poweshiek, Iowa",19157,Poweshiek,Iowa,18504
+"Ringgold, Iowa",19159,Ringgold,Iowa,4894
+"Sac, Iowa",19161,Sac,Iowa,9721
+"Scott, Iowa",19163,Scott,Iowa,172943
+"Shelby, Iowa",19165,Shelby,Iowa,11454
+"Sioux, Iowa",19167,Sioux,Iowa,34855
+"Story, Iowa",19169,Story,Iowa,97117
+"Tama, Iowa",19171,Tama,Iowa,16854
+"Taylor, Iowa",19173,Taylor,Iowa,6121
+"Union, Iowa",19175,Union,Iowa,12241
+"Van Buren, Iowa",19177,Van Buren,Iowa,7044
+"Wapello, Iowa",19179,Wapello,Iowa,34969
+"Warren, Iowa",19181,Warren,Iowa,51466
+"Washington, Iowa",19183,Washington,Iowa,21965
+"Wayne, Iowa",19185,Wayne,Iowa,6441
+"Webster, Iowa",19187,Webster,Iowa,35904
+"Winnebago, Iowa",19189,Winnebago,Iowa,10354
+"Winneshiek, Iowa",19191,Winneshiek,Iowa,19991
+"Woodbury, Iowa",19193,Woodbury,Iowa,103107
+"Worth, Iowa",19195,Worth,Iowa,7381
+"Wright, Iowa",19197,Wright,Iowa,12562
+"Allen, Kansas",20001,Allen,Kansas,12369
+"Anderson, Kansas",20003,Anderson,Kansas,7858
+"Atchison, Kansas",20005,Atchison,Kansas,16073
+"Barber, Kansas",20007,Barber,Kansas,4427
+"Barton, Kansas",20009,Barton,Kansas,25779
+"Bourbon, Kansas",20011,Bourbon,Kansas,14534
+"Brown, Kansas",20013,Brown,Kansas,9564
+"Butler, Kansas",20015,Butler,Kansas,66911
+"Chase, Kansas",20017,Chase,Kansas,2648
+"Chautauqua, Kansas",20019,Chautauqua,Kansas,3250
+"Cherokee, Kansas",20021,Cherokee,Kansas,19939
+"Cheyenne, Kansas",20023,Cheyenne,Kansas,2657
+"Clark, Kansas",20025,Clark,Kansas,1994
+"Clay, Kansas",20027,Clay,Kansas,8002
+"Cloud, Kansas",20029,Cloud,Kansas,8786
+"Coffey, Kansas",20031,Coffey,Kansas,8179
+"Comanche, Kansas",20033,Comanche,Kansas,1700
+"Cowley, Kansas",20035,Cowley,Kansas,34908
+"Crawford, Kansas",20037,Crawford,Kansas,38818
+"Decatur, Kansas",20039,Decatur,Kansas,2827
+"Dickinson, Kansas",20041,Dickinson,Kansas,18466
+"Doniphan, Kansas",20043,Doniphan,Kansas,7600
+"Douglas, Kansas",20045,Douglas,Kansas,122259
+"Edwards, Kansas",20047,Edwards,Kansas,2798
+"Elk, Kansas",20049,Elk,Kansas,2530
+"Ellis, Kansas",20051,Ellis,Kansas,28553
+"Ellsworth, Kansas",20053,Ellsworth,Kansas,6102
+"Finney, Kansas",20055,Finney,Kansas,36467
+"Ford, Kansas",20057,Ford,Kansas,33619
+"Franklin, Kansas",20059,Franklin,Kansas,25544
+"Geary, Kansas",20061,Geary,Kansas,31670
+"Gove, Kansas",20063,Gove,Kansas,2636
+"Graham, Kansas",20065,Graham,Kansas,2482
+"Grant, Kansas",20067,Grant,Kansas,7150
+"Gray, Kansas",20069,Gray,Kansas,5988
+"Greeley, Kansas",20071,Greeley,Kansas,1232
+"Greenwood, Kansas",20073,Greenwood,Kansas,5982
+"Hamilton, Kansas",20075,Hamilton,Kansas,2539
+"Harper, Kansas",20077,Harper,Kansas,5436
+"Harvey, Kansas",20079,Harvey,Kansas,34429
+"Haskell, Kansas",20081,Haskell,Kansas,3968
+"Hodgeman, Kansas",20083,Hodgeman,Kansas,1794
+"Jackson, Kansas",20085,Jackson,Kansas,13171
+"Jefferson, Kansas",20087,Jefferson,Kansas,19043
+"Jewell, Kansas",20089,Jewell,Kansas,2879
+"Johnson, Kansas",20091,Johnson,Kansas,602401
+"Kearny, Kansas",20093,Kearny,Kansas,3838
+"Kingman, Kansas",20095,Kingman,Kansas,7152
+"Kiowa, Kansas",20097,Kiowa,Kansas,2475
+"Labette, Kansas",20099,Labette,Kansas,19618
+"Lane, Kansas",20101,Lane,Kansas,1535
+"Leavenworth, Kansas",20103,Leavenworth,Kansas,81758
+"Lincoln, Kansas",20105,Lincoln,Kansas,2962
+"Linn, Kansas",20107,Linn,Kansas,9703
+"Logan, Kansas",20109,Logan,Kansas,2794
+"Lyon, Kansas",20111,Lyon,Kansas,33195
+"McPherson, Kansas",20113,McPherson,Kansas,28542
+"Marion, Kansas",20115,Marion,Kansas,11884
+"Marshall, Kansas",20117,Marshall,Kansas,9707
+"Meade, Kansas",20119,Meade,Kansas,4033
+"Miami, Kansas",20121,Miami,Kansas,34237
+"Mitchell, Kansas",20123,Mitchell,Kansas,5979
+"Montgomery, Kansas",20125,Montgomery,Kansas,31829
+"Morris, Kansas",20127,Morris,Kansas,5620
+"Morton, Kansas",20129,Morton,Kansas,2587
+"Nemaha, Kansas",20131,Nemaha,Kansas,10231
+"Neosho, Kansas",20133,Neosho,Kansas,16007
+"Ness, Kansas",20135,Ness,Kansas,2750
+"Norton, Kansas",20137,Norton,Kansas,5361
+"Osage, Kansas",20139,Osage,Kansas,15949
+"Osborne, Kansas",20141,Osborne,Kansas,3421
+"Ottawa, Kansas",20143,Ottawa,Kansas,5704
+"Pawnee, Kansas",20145,Pawnee,Kansas,6414
+"Phillips, Kansas",20147,Phillips,Kansas,5234
+"Pottawatomie, Kansas",20149,Pottawatomie,Kansas,24383
+"Pratt, Kansas",20151,Pratt,Kansas,9164
+"Rawlins, Kansas",20153,Rawlins,Kansas,2530
+"Reno, Kansas",20155,Reno,Kansas,61998
+"Republic, Kansas",20157,Republic,Kansas,4636
+"Rice, Kansas",20159,Rice,Kansas,9537
+"Riley, Kansas",20161,Riley,Kansas,74232
+"Rooks, Kansas",20163,Rooks,Kansas,4920
+"Rush, Kansas",20165,Rush,Kansas,3036
+"Russell, Kansas",20167,Russell,Kansas,6856
+"Saline, Kansas",20169,Saline,Kansas,54224
+"Scott, Kansas",20171,Scott,Kansas,4823
+"Sedgwick, Kansas",20173,Sedgwick,Kansas,516042
+"Seward, Kansas",20175,Seward,Kansas,21428
+"Shawnee, Kansas",20177,Shawnee,Kansas,176875
+"Sheridan, Kansas",20179,Sheridan,Kansas,2521
+"Sherman, Kansas",20181,Sherman,Kansas,5917
+"Smith, Kansas",20183,Smith,Kansas,3583
+"Stafford, Kansas",20185,Stafford,Kansas,4156
+"Stanton, Kansas",20187,Stanton,Kansas,2006
+"Stevens, Kansas",20189,Stevens,Kansas,5485
+"Sumner, Kansas",20191,Sumner,Kansas,22836
+"Thomas, Kansas",20193,Thomas,Kansas,7777
+"Trego, Kansas",20195,Trego,Kansas,2803
+"Wabaunsee, Kansas",20197,Wabaunsee,Kansas,6931
+"Wallace, Kansas",20199,Wallace,Kansas,1518
+"Washington, Kansas",20201,Washington,Kansas,5406
+"Wichita, Kansas",20203,Wichita,Kansas,2119
+"Wilson, Kansas",20205,Wilson,Kansas,8525
+"Woodson, Kansas",20207,Woodson,Kansas,3138
+"Wyandotte, Kansas",20209,Wyandotte,Kansas,165429
+"Adair, Kentucky",21001,Adair,Kentucky,19202
+"Allen, Kentucky",21003,Allen,Kentucky,21315
+"Anderson, Kentucky",21005,Anderson,Kentucky,22747
+"Ballard, Kentucky",21007,Ballard,Kentucky,7888
+"Barren, Kentucky",21009,Barren,Kentucky,44249
+"Bath, Kentucky",21011,Bath,Kentucky,12500
+"Bell, Kentucky",21013,Bell,Kentucky,26032
+"Boone, Kentucky",21015,Boone,Kentucky,133581
+"Bourbon, Kentucky",21017,Bourbon,Kentucky,19788
+"Boyd, Kentucky",21019,Boyd,Kentucky,46718
+"Boyle, Kentucky",21021,Boyle,Kentucky,30060
+"Bracken, Kentucky",21023,Bracken,Kentucky,8303
+"Breathitt, Kentucky",21025,Breathitt,Kentucky,12630
+"Breckinridge, Kentucky",21027,Breckinridge,Kentucky,20477
+"Bullitt, Kentucky",21029,Bullitt,Kentucky,81676
+"Butler, Kentucky",21031,Butler,Kentucky,12879
+"Caldwell, Kentucky",21033,Caldwell,Kentucky,12747
+"Calloway, Kentucky",21035,Calloway,Kentucky,39001
+"Campbell, Kentucky",21037,Campbell,Kentucky,93584
+"Carlisle, Kentucky",21039,Carlisle,Kentucky,4760
+"Carroll, Kentucky",21041,Carroll,Kentucky,10631
+"Carter, Kentucky",21043,Carter,Kentucky,26797
+"Casey, Kentucky",21045,Casey,Kentucky,16159
+"Christian, Kentucky",21047,Christian,Kentucky,70461
+"Clark, Kentucky",21049,Clark,Kentucky,36263
+"Clay, Kentucky",21051,Clay,Kentucky,19901
+"Clinton, Kentucky",21053,Clinton,Kentucky,10218
+"Crittenden, Kentucky",21055,Crittenden,Kentucky,8806
+"Cumberland, Kentucky",21057,Cumberland,Kentucky,6614
+"Daviess, Kentucky",21059,Daviess,Kentucky,101511
+"Edmonson, Kentucky",21061,Edmonson,Kentucky,12150
+"Elliott, Kentucky",21063,Elliott,Kentucky,7517
+"Estill, Kentucky",21065,Estill,Kentucky,14106
+"Fayette, Kentucky",21067,Fayette,Kentucky,323152
+"Fleming, Kentucky",21069,Fleming,Kentucky,14581
+"Floyd, Kentucky",21071,Floyd,Kentucky,35589
+"Franklin, Kentucky",21073,Franklin,Kentucky,50991
+"Fulton, Kentucky",21075,Fulton,Kentucky,5969
+"Gallatin, Kentucky",21077,Gallatin,Kentucky,8869
+"Garrard, Kentucky",21079,Garrard,Kentucky,17666
+"Grant, Kentucky",21081,Grant,Kentucky,25069
+"Graves, Kentucky",21083,Graves,Kentucky,37266
+"Grayson, Kentucky",21085,Grayson,Kentucky,26427
+"Green, Kentucky",21087,Green,Kentucky,10941
+"Greenup, Kentucky",21089,Greenup,Kentucky,35098
+"Hancock, Kentucky",21091,Hancock,Kentucky,8722
+"Hardin, Kentucky",21093,Hardin,Kentucky,110958
+"Harlan, Kentucky",21095,Harlan,Kentucky,26010
+"Harrison, Kentucky",21097,Harrison,Kentucky,18886
+"Hart, Kentucky",21099,Hart,Kentucky,19035
+"Henderson, Kentucky",21101,Henderson,Kentucky,45210
+"Henry, Kentucky",21103,Henry,Kentucky,16126
+"Hickman, Kentucky",21105,Hickman,Kentucky,4380
+"Hopkins, Kentucky",21107,Hopkins,Kentucky,44686
+"Jackson, Kentucky",21109,Jackson,Kentucky,13329
+"Jefferson, Kentucky",21111,Jefferson,Kentucky,766757
+"Jessamine, Kentucky",21113,Jessamine,Kentucky,54115
+"Johnson, Kentucky",21115,Johnson,Kentucky,22188
+"Kenton, Kentucky",21117,Kenton,Kentucky,166998
+"Knott, Kentucky",21119,Knott,Kentucky,14806
+"Knox, Kentucky",21121,Knox,Kentucky,31145
+"Larue, Kentucky",21123,Larue,Kentucky,14398
+"Laurel, Kentucky",21125,Laurel,Kentucky,60813
+"Lawrence, Kentucky",21127,Lawrence,Kentucky,15317
+"Lee, Kentucky",21129,Lee,Kentucky,7403
+"Leslie, Kentucky",21131,Leslie,Kentucky,9877
+"Letcher, Kentucky",21133,Letcher,Kentucky,21553
+"Lewis, Kentucky",21135,Lewis,Kentucky,13275
+"Lincoln, Kentucky",21137,Lincoln,Kentucky,24549
+"Livingston, Kentucky",21139,Livingston,Kentucky,9194
+"Logan, Kentucky",21141,Logan,Kentucky,27102
+"Lyon, Kentucky",21143,Lyon,Kentucky,8210
+"McCracken, Kentucky",21145,McCracken,Kentucky,65418
+"McCreary, Kentucky",21147,McCreary,Kentucky,17231
+"McLean, Kentucky",21149,McLean,Kentucky,9207
+"Madison, Kentucky",21151,Madison,Kentucky,92987
+"Magoffin, Kentucky",21153,Magoffin,Kentucky,12161
+"Marion, Kentucky",21155,Marion,Kentucky,19273
+"Marshall, Kentucky",21157,Marshall,Kentucky,31100
+"Martin, Kentucky",21159,Martin,Kentucky,11195
+"Mason, Kentucky",21161,Mason,Kentucky,17070
+"Meade, Kentucky",21163,Meade,Kentucky,28572
+"Menifee, Kentucky",21165,Menifee,Kentucky,6489
+"Mercer, Kentucky",21167,Mercer,Kentucky,21933
+"Metcalfe, Kentucky",21169,Metcalfe,Kentucky,10071
+"Monroe, Kentucky",21171,Monroe,Kentucky,10650
+"Montgomery, Kentucky",21173,Montgomery,Kentucky,28157
+"Morgan, Kentucky",21175,Morgan,Kentucky,13309
+"Muhlenberg, Kentucky",21177,Muhlenberg,Kentucky,30622
+"Nelson, Kentucky",21179,Nelson,Kentucky,46233
+"Nicholas, Kentucky",21181,Nicholas,Kentucky,7269
+"Ohio, Kentucky",21183,Ohio,Kentucky,23994
+"Oldham, Kentucky",21185,Oldham,Kentucky,66799
+"Owen, Kentucky",21187,Owen,Kentucky,10901
+"Owsley, Kentucky",21189,Owsley,Kentucky,4415
+"Pendleton, Kentucky",21191,Pendleton,Kentucky,14590
+"Perry, Kentucky",21193,Perry,Kentucky,25758
+"Pike, Kentucky",21195,Pike,Kentucky,57876
+"Powell, Kentucky",21197,Powell,Kentucky,12359
+"Pulaski, Kentucky",21199,Pulaski,Kentucky,64979
+"Robertson, Kentucky",21201,Robertson,Kentucky,2108
+"Rockcastle, Kentucky",21203,Rockcastle,Kentucky,16695
+"Rowan, Kentucky",21205,Rowan,Kentucky,24460
+"Russell, Kentucky",21207,Russell,Kentucky,17923
+"Scott, Kentucky",21209,Scott,Kentucky,57004
+"Shelby, Kentucky",21211,Shelby,Kentucky,49024
+"Simpson, Kentucky",21213,Simpson,Kentucky,18572
+"Spencer, Kentucky",21215,Spencer,Kentucky,19351
+"Taylor, Kentucky",21217,Taylor,Kentucky,25769
+"Todd, Kentucky",21219,Todd,Kentucky,12294
+"Trigg, Kentucky",21221,Trigg,Kentucky,14651
+"Trimble, Kentucky",21223,Trimble,Kentucky,8471
+"Union, Kentucky",21225,Union,Kentucky,14381
+"Warren, Kentucky",21227,Warren,Kentucky,132896
+"Washington, Kentucky",21229,Washington,Kentucky,12095
+"Wayne, Kentucky",21231,Wayne,Kentucky,20333
+"Webster, Kentucky",21233,Webster,Kentucky,12942
+"Whitley, Kentucky",21235,Whitley,Kentucky,36264
+"Wolfe, Kentucky",21237,Wolfe,Kentucky,7157
+"Woodford, Kentucky",21239,Woodford,Kentucky,26734
+"Acadia Parish, Louisiana",22001,Acadia Parish,Louisiana,62045
+"Allen Parish, Louisiana",22003,Allen Parish,Louisiana,25627
+"Ascension Parish, Louisiana",22005,Ascension Parish,Louisiana,126604
+"Assumption Parish, Louisiana",22007,Assumption Parish,Louisiana,21891
+"Avoyelles Parish, Louisiana",22009,Avoyelles Parish,Louisiana,40144
+"Beauregard Parish, Louisiana",22011,Beauregard Parish,Louisiana,37497
+"Bienville Parish, Louisiana",22013,Bienville Parish,Louisiana,13241
+"Bossier Parish, Louisiana",22015,Bossier Parish,Louisiana,127039
+"Caddo Parish, Louisiana",22017,Caddo Parish,Louisiana,240204
+"Calcasieu Parish, Louisiana",22019,Calcasieu Parish,Louisiana,203436
+"Caldwell Parish, Louisiana",22021,Caldwell Parish,Louisiana,9918
+"Cameron Parish, Louisiana",22023,Cameron Parish,Louisiana,6973
+"Catahoula Parish, Louisiana",22025,Catahoula Parish,Louisiana,9494
+"Claiborne Parish, Louisiana",22027,Claiborne Parish,Louisiana,15670
+"Concordia Parish, Louisiana",22029,Concordia Parish,Louisiana,19259
+"De Soto Parish, Louisiana",22031,De Soto Parish,Louisiana,27463
+"East Baton Rouge Parish, Louisiana",22033,East Baton Rouge Parish,Louisiana,440059
+"East Carroll Parish, Louisiana",22035,East Carroll Parish,Louisiana,6861
+"East Feliciana Parish, Louisiana",22037,East Feliciana Parish,Louisiana,19135
+"Evangeline Parish, Louisiana",22039,Evangeline Parish,Louisiana,33395
+"Franklin Parish, Louisiana",22041,Franklin Parish,Louisiana,20015
+"Grant Parish, Louisiana",22043,Grant Parish,Louisiana,22389
+"Iberia Parish, Louisiana",22045,Iberia Parish,Louisiana,69830
+"Iberville Parish, Louisiana",22047,Iberville Parish,Louisiana,32511
+"Jackson Parish, Louisiana",22049,Jackson Parish,Louisiana,15744
+"Jefferson Parish, Louisiana",22051,Jefferson Parish,Louisiana,432493
+"Jefferson Davis Parish, Louisiana",22053,Jefferson Davis Parish,Louisiana,31368
+"Lafayette Parish, Louisiana",22055,Lafayette Parish,Louisiana,244390
+"Lafourche Parish, Louisiana",22057,Lafourche Parish,Louisiana,97614
+"LaSalle Parish, Louisiana",22059,LaSalle Parish,Louisiana,14892
+"Lincoln Parish, Louisiana",22061,Lincoln Parish,Louisiana,46742
+"Livingston Parish, Louisiana",22063,Livingston Parish,Louisiana,140789
+"Madison Parish, Louisiana",22065,Madison Parish,Louisiana,10951
+"Morehouse Parish, Louisiana",22067,Morehouse Parish,Louisiana,24874
+"Natchitoches Parish, Louisiana",22069,Natchitoches Parish,Louisiana,38158
+"Orleans Parish, Louisiana",22071,Orleans Parish,Louisiana,390144
+"Ouachita Parish, Louisiana",22073,Ouachita Parish,Louisiana,153279
+"Plaquemines Parish, Louisiana",22075,Plaquemines Parish,Louisiana,23197
+"Pointe Coupee Parish, Louisiana",22077,Pointe Coupee Parish,Louisiana,21730
+"Rapides Parish, Louisiana",22079,Rapides Parish,Louisiana,129648
+"Red River Parish, Louisiana",22081,Red River Parish,Louisiana,8442
+"Richland Parish, Louisiana",22083,Richland Parish,Louisiana,20122
+"Sabine Parish, Louisiana",22085,Sabine Parish,Louisiana,23884
+"St. Bernard Parish, Louisiana",22087,St. Bernard Parish,Louisiana,47244
+"St. Charles Parish, Louisiana",22089,St. Charles Parish,Louisiana,53100
+"St. Helena Parish, Louisiana",22091,St. Helena Parish,Louisiana,10132
+"St. James Parish, Louisiana",22093,St. James Parish,Louisiana,21096
+"St. John the Baptist Parish, Louisiana",22095,St. John the Baptist Parish,Louisiana,42837
+"St. Landry Parish, Louisiana",22097,St. Landry Parish,Louisiana,82124
+"St. Martin Parish, Louisiana",22099,St. Martin Parish,Louisiana,53431
+"St. Mary Parish, Louisiana",22101,St. Mary Parish,Louisiana,49348
+"St. Tammany Parish, Louisiana",22103,St. Tammany Parish,Louisiana,260419
+"Tangipahoa Parish, Louisiana",22105,Tangipahoa Parish,Louisiana,134758
+"Tensas Parish, Louisiana",22107,Tensas Parish,Louisiana,4334
+"Terrebonne Parish, Louisiana",22109,Terrebonne Parish,Louisiana,110461
+"Union Parish, Louisiana",22111,Union Parish,Louisiana,22108
+"Vermilion Parish, Louisiana",22113,Vermilion Parish,Louisiana,59511
+"Vernon Parish, Louisiana",22115,Vernon Parish,Louisiana,47429
+"Washington Parish, Louisiana",22117,Washington Parish,Louisiana,46194
+"Webster Parish, Louisiana",22119,Webster Parish,Louisiana,38340
+"West Baton Rouge Parish, Louisiana",22121,West Baton Rouge Parish,Louisiana,26465
+"West Carroll Parish, Louisiana",22123,West Carroll Parish,Louisiana,10830
+"West Feliciana Parish, Louisiana",22125,West Feliciana Parish,Louisiana,15568
+"Winn Parish, Louisiana",22127,Winn Parish,Louisiana,13904
+"Androscoggin, Maine",23001,Androscoggin,Maine,108277
+"Aroostook, Maine",23003,Aroostook,Maine,67055
+"Cumberland, Maine",23005,Cumberland,Maine,295003
+"Franklin, Maine",23007,Franklin,Maine,30199
+"Hancock, Maine",23009,Hancock,Maine,54987
+"Kennebec, Maine",23011,Kennebec,Maine,122302
+"Knox, Maine",23013,Knox,Maine,39772
+"Lincoln, Maine",23015,Lincoln,Maine,34634
+"Oxford, Maine",23017,Oxford,Maine,57975
+"Penobscot, Maine",23019,Penobscot,Maine,152148
+"Piscataquis, Maine",23021,Piscataquis,Maine,16785
+"Sagadahoc, Maine",23023,Sagadahoc,Maine,35856
+"Somerset, Maine",23025,Somerset,Maine,50484
+"Waldo, Maine",23027,Waldo,Maine,39715
+"Washington, Maine",23029,Washington,Maine,31379
+"York, Maine",23031,York,Maine,207641
+"Allegany, Maryland",24001,Allegany,Maryland,70416
+"Anne Arundel, Maryland",24003,Anne Arundel,Maryland,579234
+"Baltimore, Maryland",24005,Baltimore,Maryland,827370
+"Calvert, Maryland",24009,Calvert,Maryland,92525
+"Caroline, Maryland",24011,Caroline,Maryland,33406
+"Carroll, Maryland",24013,Carroll,Maryland,168447
+"Cecil, Maryland",24015,Cecil,Maryland,102855
+"Charles, Maryland",24017,Charles,Maryland,163257
+"Dorchester, Maryland",24019,Dorchester,Maryland,31929
+"Frederick, Maryland",24021,Frederick,Maryland,259547
+"Garrett, Maryland",24023,Garrett,Maryland,29014
+"Harford, Maryland",24025,Harford,Maryland,255441
+"Howard, Maryland",24027,Howard,Maryland,325690
+"Kent, Maryland",24029,Kent,Maryland,19422
+"Montgomery, Maryland",24031,Montgomery,Maryland,1050688
+"Prince George's, Maryland",24033,Prince George's,Maryland,909327
+"Queen Anne's, Maryland",24035,Queen Anne's,Maryland,50381
+"St. Mary's, Maryland",24037,St. Mary's,Maryland,113510
+"Somerset, Maryland",24039,Somerset,Maryland,25616
+"Talbot, Maryland",24041,Talbot,Maryland,37181
+"Washington, Maryland",24043,Washington,Maryland,151049
+"Wicomico, Maryland",24045,Wicomico,Maryland,103609
+"Worcester, Maryland",24047,Worcester,Maryland,52276
+"Baltimore city, Maryland",24510,Baltimore city,Maryland,593490
+"Barnstable, Massachusetts",25001,Barnstable,Massachusetts,212990
+"Berkshire, Massachusetts",25003,Berkshire,Massachusetts,124944
+"Bristol, Massachusetts",25005,Bristol,Massachusetts,565217
+"Dukes, Massachusetts",25007,Dukes,Massachusetts,17332
+"Essex, Massachusetts",25009,Essex,Massachusetts,789034
+"Franklin, Massachusetts",25011,Franklin,Massachusetts,70180
+"Hampden, Massachusetts",25013,Hampden,Massachusetts,466372
+"Hampshire, Massachusetts",25015,Hampshire,Massachusetts,160830
+"Middlesex, Massachusetts",25017,Middlesex,Massachusetts,1611699
+"Nantucket, Massachusetts",25019,Nantucket,Massachusetts,11399
+"Norfolk, Massachusetts",25021,Norfolk,Massachusetts,706775
+"Plymouth, Massachusetts",25023,Plymouth,Massachusetts,521202
+"Suffolk, Massachusetts",25025,Suffolk,Massachusetts,803907
+"Worcester, Massachusetts",25027,Worcester,Massachusetts,830622
+"Alcona, Michigan",26001,Alcona,Michigan,10405
+"Alger, Michigan",26003,Alger,Michigan,9108
+"Allegan, Michigan",26005,Allegan,Michigan,118081
+"Alpena, Michigan",26007,Alpena,Michigan,28405
+"Antrim, Michigan",26009,Antrim,Michigan,23324
+"Arenac, Michigan",26011,Arenac,Michigan,14883
+"Baraga, Michigan",26013,Baraga,Michigan,8209
+"Barry, Michigan",26015,Barry,Michigan,61550
+"Bay, Michigan",26017,Bay,Michigan,103126
+"Benzie, Michigan",26019,Benzie,Michigan,17766
+"Berrien, Michigan",26021,Berrien,Michigan,153401
+"Branch, Michigan",26023,Branch,Michigan,43517
+"Calhoun, Michigan",26025,Calhoun,Michigan,134159
+"Cass, Michigan",26027,Cass,Michigan,51787
+"Charlevoix, Michigan",26029,Charlevoix,Michigan,26143
+"Cheboygan, Michigan",26031,Cheboygan,Michigan,25276
+"Chippewa, Michigan",26033,Chippewa,Michigan,37349
+"Clare, Michigan",26035,Clare,Michigan,30950
+"Clinton, Michigan",26037,Clinton,Michigan,79595
+"Crawford, Michigan",26039,Crawford,Michigan,14029
+"Delta, Michigan",26041,Delta,Michigan,35784
+"Dickinson, Michigan",26043,Dickinson,Michigan,25239
+"Eaton, Michigan",26045,Eaton,Michigan,110268
+"Emmet, Michigan",26047,Emmet,Michigan,33415
+"Genesee, Michigan",26049,Genesee,Michigan,405813
+"Gladwin, Michigan",26051,Gladwin,Michigan,25449
+"Gogebic, Michigan",26053,Gogebic,Michigan,13975
+"Grand Traverse, Michigan",26055,Grand Traverse,Michigan,93088
+"Gratiot, Michigan",26057,Gratiot,Michigan,40711
+"Hillsdale, Michigan",26059,Hillsdale,Michigan,45605
+"Houghton, Michigan",26061,Houghton,Michigan,35684
+"Huron, Michigan",26063,Huron,Michigan,30981
+"Ingham, Michigan",26065,Ingham,Michigan,292406
+"Ionia, Michigan",26067,Ionia,Michigan,64697
+"Iosco, Michigan",26069,Iosco,Michigan,25127
+"Iron, Michigan",26071,Iron,Michigan,11066
+"Isabella, Michigan",26073,Isabella,Michigan,69872
+"Jackson, Michigan",26075,Jackson,Michigan,158510
+"Kalamazoo, Michigan",26077,Kalamazoo,Michigan,265066
+"Kalkaska, Michigan",26079,Kalkaska,Michigan,18038
+"Kent, Michigan",26081,Kent,Michigan,656955
+"Keweenaw, Michigan",26083,Keweenaw,Michigan,2116
+"Lake, Michigan",26085,Lake,Michigan,11853
+"Lapeer, Michigan",26087,Lapeer,Michigan,87607
+"Leelanau, Michigan",26089,Leelanau,Michigan,21761
+"Lenawee, Michigan",26091,Lenawee,Michigan,98451
+"Livingston, Michigan",26093,Livingston,Michigan,191995
+"Luce, Michigan",26095,Luce,Michigan,6229
+"Mackinac, Michigan",26097,Mackinac,Michigan,10799
+"Macomb, Michigan",26099,Macomb,Michigan,873972
+"Manistee, Michigan",26101,Manistee,Michigan,24558
+"Marquette, Michigan",26103,Marquette,Michigan,66699
+"Mason, Michigan",26105,Mason,Michigan,29144
+"Mecosta, Michigan",26107,Mecosta,Michigan,43453
+"Menominee, Michigan",26109,Menominee,Michigan,22780
+"Midland, Michigan",26111,Midland,Michigan,83156
+"Missaukee, Michigan",26113,Missaukee,Michigan,15118
+"Monroe, Michigan",26115,Monroe,Michigan,150500
+"Montcalm, Michigan",26117,Montcalm,Michigan,63888
+"Montmorency, Michigan",26119,Montmorency,Michigan,9328
+"Muskegon, Michigan",26121,Muskegon,Michigan,173566
+"Newaygo, Michigan",26123,Newaygo,Michigan,48980
+"Oakland, Michigan",26125,Oakland,Michigan,1257584
+"Oceana, Michigan",26127,Oceana,Michigan,26467
+"Ogemaw, Michigan",26129,Ogemaw,Michigan,20997
+"Ontonagon, Michigan",26131,Ontonagon,Michigan,5720
+"Osceola, Michigan",26133,Osceola,Michigan,23460
+"Oscoda, Michigan",26135,Oscoda,Michigan,8241
+"Otsego, Michigan",26137,Otsego,Michigan,24668
+"Ottawa, Michigan",26139,Ottawa,Michigan,291830
+"Presque Isle, Michigan",26141,Presque Isle,Michigan,12592
+"Roscommon, Michigan",26143,Roscommon,Michigan,24019
+"Saginaw, Michigan",26145,Saginaw,Michigan,190539
+"St. Clair, Michigan",26147,St. Clair,Michigan,159128
+"St. Joseph, Michigan",26149,St. Joseph,Michigan,60964
+"Sanilac, Michigan",26151,Sanilac,Michigan,41170
+"Schoolcraft, Michigan",26153,Schoolcraft,Michigan,8094
+"Shiawassee, Michigan",26155,Shiawassee,Michigan,68122
+"Tuscola, Michigan",26157,Tuscola,Michigan,52245
+"Van Buren, Michigan",26159,Van Buren,Michigan,75677
+"Washtenaw, Michigan",26161,Washtenaw,Michigan,367601
+"Wayne, Michigan",26163,Wayne,Michigan,1749343
+"Wexford, Michigan",26165,Wexford,Michigan,33631
+"Aitkin, Minnesota",27001,Aitkin,Minnesota,15886
+"Anoka, Minnesota",27003,Anoka,Minnesota,356921
+"Becker, Minnesota",27005,Becker,Minnesota,34423
+"Beltrami, Minnesota",27007,Beltrami,Minnesota,47188
+"Benton, Minnesota",27009,Benton,Minnesota,40889
+"Big Stone, Minnesota",27011,Big Stone,Minnesota,4991
+"Blue Earth, Minnesota",27013,Blue Earth,Minnesota,67653
+"Brown, Minnesota",27015,Brown,Minnesota,25008
+"Carlton, Minnesota",27017,Carlton,Minnesota,35871
+"Carver, Minnesota",27019,Carver,Minnesota,105089
+"Cass, Minnesota",27021,Cass,Minnesota,29779
+"Chippewa, Minnesota",27023,Chippewa,Minnesota,11800
+"Chisago, Minnesota",27025,Chisago,Minnesota,56579
+"Clay, Minnesota",27027,Clay,Minnesota,64222
+"Clearwater, Minnesota",27029,Clearwater,Minnesota,8818
+"Cook, Minnesota",27031,Cook,Minnesota,5463
+"Cottonwood, Minnesota",27033,Cottonwood,Minnesota,11196
+"Crow Wing, Minnesota",27035,Crow Wing,Minnesota,65055
+"Dakota, Minnesota",27037,Dakota,Minnesota,429021
+"Dodge, Minnesota",27039,Dodge,Minnesota,20934
+"Douglas, Minnesota",27041,Douglas,Minnesota,38141
+"Faribault, Minnesota",27043,Faribault,Minnesota,13653
+"Fillmore, Minnesota",27045,Fillmore,Minnesota,21067
+"Freeborn, Minnesota",27047,Freeborn,Minnesota,30281
+"Goodhue, Minnesota",27049,Goodhue,Minnesota,46340
+"Grant, Minnesota",27051,Grant,Minnesota,5972
+"Hennepin, Minnesota",27053,Hennepin,Minnesota,1265843
+"Houston, Minnesota",27055,Houston,Minnesota,18600
+"Hubbard, Minnesota",27057,Hubbard,Minnesota,21491
+"Isanti, Minnesota",27059,Isanti,Minnesota,40596
+"Itasca, Minnesota",27061,Itasca,Minnesota,45130
+"Jackson, Minnesota",27063,Jackson,Minnesota,9846
+"Kanabec, Minnesota",27065,Kanabec,Minnesota,16337
+"Kandiyohi, Minnesota",27067,Kandiyohi,Minnesota,43199
+"Kittson, Minnesota",27069,Kittson,Minnesota,4298
+"Koochiching, Minnesota",27071,Koochiching,Minnesota,12229
+"Lac qui Parle, Minnesota",27073,Lac qui Parle,Minnesota,6623
+"Lake, Minnesota",27075,Lake,Minnesota,10641
+"Lake of the Woods, Minnesota",27077,Lake of the Woods,Minnesota,3740
+"Le Sueur, Minnesota",27079,Le Sueur,Minnesota,28887
+"Lincoln, Minnesota",27081,Lincoln,Minnesota,5639
+"Lyon, Minnesota",27083,Lyon,Minnesota,25474
+"McLeod, Minnesota",27085,McLeod,Minnesota,35893
+"Mahnomen, Minnesota",27087,Mahnomen,Minnesota,5527
+"Marshall, Minnesota",27089,Marshall,Minnesota,9336
+"Martin, Minnesota",27091,Martin,Minnesota,19683
+"Meeker, Minnesota",27093,Meeker,Minnesota,23222
+"Mille Lacs, Minnesota",27095,Mille Lacs,Minnesota,26277
+"Morrison, Minnesota",27097,Morrison,Minnesota,33386
+"Mower, Minnesota",27099,Mower,Minnesota,40062
+"Murray, Minnesota",27101,Murray,Minnesota,8194
+"Nicollet, Minnesota",27103,Nicollet,Minnesota,34274
+"Nobles, Minnesota",27105,Nobles,Minnesota,21629
+"Norman, Minnesota",27107,Norman,Minnesota,6375
+"Olmsted, Minnesota",27109,Olmsted,Minnesota,158293
+"Otter Tail, Minnesota",27111,Otter Tail,Minnesota,58746
+"Pennington, Minnesota",27113,Pennington,Minnesota,14119
+"Pine, Minnesota",27115,Pine,Minnesota,29579
+"Pipestone, Minnesota",27117,Pipestone,Minnesota,9126
+"Polk, Minnesota",27119,Polk,Minnesota,31364
+"Pope, Minnesota",27121,Pope,Minnesota,11249
+"Ramsey, Minnesota",27123,Ramsey,Minnesota,550321
+"Red Lake, Minnesota",27125,Red Lake,Minnesota,4055
+"Redwood, Minnesota",27127,Redwood,Minnesota,15170
+"Renville, Minnesota",27129,Renville,Minnesota,14548
+"Rice, Minnesota",27131,Rice,Minnesota,66972
+"Rock, Minnesota",27133,Rock,Minnesota,9315
+"Roseau, Minnesota",27135,Roseau,Minnesota,15165
+"St. Louis, Minnesota",27137,St. Louis,Minnesota,199070
+"Scott, Minnesota",27139,Scott,Minnesota,149013
+"Sherburne, Minnesota",27141,Sherburne,Minnesota,97238
+"Sibley, Minnesota",27143,Sibley,Minnesota,14865
+"Stearns, Minnesota",27145,Stearns,Minnesota,161075
+"Steele, Minnesota",27147,Steele,Minnesota,36649
+"Stevens, Minnesota",27149,Stevens,Minnesota,9805
+"Swift, Minnesota",27151,Swift,Minnesota,9266
+"Todd, Minnesota",27153,Todd,Minnesota,24664
+"Traverse, Minnesota",27155,Traverse,Minnesota,3259
+"Wabasha, Minnesota",27157,Wabasha,Minnesota,21627
+"Wadena, Minnesota",27159,Wadena,Minnesota,13682
+"Waseca, Minnesota",27161,Waseca,Minnesota,18612
+"Washington, Minnesota",27163,Washington,Minnesota,262440
+"Watonwan, Minnesota",27165,Watonwan,Minnesota,10897
+"Wilkin, Minnesota",27167,Wilkin,Minnesota,6207
+"Winona, Minnesota",27169,Winona,Minnesota,50484
+"Wright, Minnesota",27171,Wright,Minnesota,138377
+"Yellow Medicine, Minnesota",27173,Yellow Medicine,Minnesota,9709
+"Adams, Mississippi",28001,Adams,Mississippi,30693
+"Alcorn, Mississippi",28003,Alcorn,Mississippi,36953
+"Amite, Mississippi",28005,Amite,Mississippi,12297
+"Attala, Mississippi",28007,Attala,Mississippi,18174
+"Benton, Mississippi",28009,Benton,Mississippi,8259
+"Bolivar, Mississippi",28011,Bolivar,Mississippi,30628
+"Calhoun, Mississippi",28013,Calhoun,Mississippi,14361
+"Carroll, Mississippi",28015,Carroll,Mississippi,9947
+"Chickasaw, Mississippi",28017,Chickasaw,Mississippi,17103
+"Choctaw, Mississippi",28019,Choctaw,Mississippi,8210
+"Claiborne, Mississippi",28021,Claiborne,Mississippi,8988
+"Clarke, Mississippi",28023,Clarke,Mississippi,15541
+"Clay, Mississippi",28025,Clay,Mississippi,19316
+"Coahoma, Mississippi",28027,Coahoma,Mississippi,22124
+"Copiah, Mississippi",28029,Copiah,Mississippi,28065
+"Covington, Mississippi",28031,Covington,Mississippi,18636
+"DeSoto, Mississippi",28033,DeSoto,Mississippi,184945
+"Forrest, Mississippi",28035,Forrest,Mississippi,74897
+"Franklin, Mississippi",28037,Franklin,Mississippi,7713
+"George, Mississippi",28039,George,Mississippi,24500
+"Greene, Mississippi",28041,Greene,Mississippi,13586
+"Grenada, Mississippi",28043,Grenada,Mississippi,20758
+"Hancock, Mississippi",28045,Hancock,Mississippi,47632
+"Harrison, Mississippi",28047,Harrison,Mississippi,208080
+"Hinds, Mississippi",28049,Hinds,Mississippi,231840
+"Holmes, Mississippi",28051,Holmes,Mississippi,17010
+"Humphreys, Mississippi",28053,Humphreys,Mississippi,8064
+"Issaquena, Mississippi",28055,Issaquena,Mississippi,1327
+"Itawamba, Mississippi",28057,Itawamba,Mississippi,23390
+"Jackson, Mississippi",28059,Jackson,Mississippi,143617
+"Jasper, Mississippi",28061,Jasper,Mississippi,16383
+"Jefferson, Mississippi",28063,Jefferson,Mississippi,6990
+"Jefferson Davis, Mississippi",28065,Jefferson Davis,Mississippi,11128
+"Jones, Mississippi",28067,Jones,Mississippi,68098
+"Kemper, Mississippi",28069,Kemper,Mississippi,9742
+"Lafayette, Mississippi",28071,Lafayette,Mississippi,54019
+"Lamar, Mississippi",28073,Lamar,Mississippi,63343
+"Lauderdale, Mississippi",28075,Lauderdale,Mississippi,74125
+"Lawrence, Mississippi",28077,Lawrence,Mississippi,12586
+"Leake, Mississippi",28079,Leake,Mississippi,22786
+"Lee, Mississippi",28081,Lee,Mississippi,85436
+"Leflore, Mississippi",28083,Leflore,Mississippi,28183
+"Lincoln, Mississippi",28085,Lincoln,Mississippi,34153
+"Lowndes, Mississippi",28087,Lowndes,Mississippi,58595
+"Madison, Mississippi",28089,Madison,Mississippi,106272
+"Marion, Mississippi",28091,Marion,Mississippi,24573
+"Marshall, Mississippi",28093,Marshall,Mississippi,35294
+"Monroe, Mississippi",28095,Monroe,Mississippi,35252
+"Montgomery, Mississippi",28097,Montgomery,Mississippi,9775
+"Neshoba, Mississippi",28099,Neshoba,Mississippi,29118
+"Newton, Mississippi",28101,Newton,Mississippi,21018
+"Noxubee, Mississippi",28103,Noxubee,Mississippi,10417
+"Oktibbeha, Mississippi",28105,Oktibbeha,Mississippi,49587
+"Panola, Mississippi",28107,Panola,Mississippi,34192
+"Pearl River, Mississippi",28109,Pearl River,Mississippi,55535
+"Perry, Mississippi",28111,Perry,Mississippi,11973
+"Pike, Mississippi",28113,Pike,Mississippi,39288
+"Pontotoc, Mississippi",28115,Pontotoc,Mississippi,32174
+"Prentiss, Mississippi",28117,Prentiss,Mississippi,25126
+"Quitman, Mississippi",28119,Quitman,Mississippi,6792
+"Rankin, Mississippi",28121,Rankin,Mississippi,155271
+"Scott, Mississippi",28123,Scott,Mississippi,28124
+"Sharkey, Mississippi",28125,Sharkey,Mississippi,4321
+"Simpson, Mississippi",28127,Simpson,Mississippi,26658
+"Smith, Mississippi",28129,Smith,Mississippi,15916
+"Stone, Mississippi",28131,Stone,Mississippi,18336
+"Sunflower, Mississippi",28133,Sunflower,Mississippi,25110
+"Tallahatchie, Mississippi",28135,Tallahatchie,Mississippi,13809
+"Tate, Mississippi",28137,Tate,Mississippi,28321
+"Tippah, Mississippi",28139,Tippah,Mississippi,22015
+"Tishomingo, Mississippi",28141,Tishomingo,Mississippi,19383
+"Tunica, Mississippi",28143,Tunica,Mississippi,9632
+"Union, Mississippi",28145,Union,Mississippi,28815
+"Walthall, Mississippi",28147,Walthall,Mississippi,14286
+"Warren, Mississippi",28149,Warren,Mississippi,45381
+"Washington, Mississippi",28151,Washington,Mississippi,43909
+"Wayne, Mississippi",28153,Wayne,Mississippi,20183
+"Webster, Mississippi",28155,Webster,Mississippi,9689
+"Wilkinson, Mississippi",28157,Wilkinson,Mississippi,8630
+"Winston, Mississippi",28159,Winston,Mississippi,17955
+"Yalobusha, Mississippi",28161,Yalobusha,Mississippi,12108
+"Yazoo, Mississippi",28163,Yazoo,Mississippi,29690
+"Adair, Missouri",29001,Adair,Missouri,25343
+"Andrew, Missouri",29003,Andrew,Missouri,17712
+"Atchison, Missouri",29005,Atchison,Missouri,5143
+"Audrain, Missouri",29007,Audrain,Missouri,25388
+"Barry, Missouri",29009,Barry,Missouri,35789
+"Barton, Missouri",29011,Barton,Missouri,11754
+"Bates, Missouri",29013,Bates,Missouri,16172
+"Benton, Missouri",29015,Benton,Missouri,19443
+"Bollinger, Missouri",29017,Bollinger,Missouri,12133
+"Boone, Missouri",29019,Boone,Missouri,180463
+"Buchanan, Missouri",29021,Buchanan,Missouri,87364
+"Butler, Missouri",29023,Butler,Missouri,42478
+"Caldwell, Missouri",29025,Caldwell,Missouri,9020
+"Callaway, Missouri",29027,Callaway,Missouri,44743
+"Camden, Missouri",29029,Camden,Missouri,46305
+"Cape Girardeau, Missouri",29031,Cape Girardeau,Missouri,78871
+"Carroll, Missouri",29033,Carroll,Missouri,8679
+"Carter, Missouri",29035,Carter,Missouri,5982
+"Cass, Missouri",29037,Cass,Missouri,105780
+"Cedar, Missouri",29039,Cedar,Missouri,14349
+"Chariton, Missouri",29041,Chariton,Missouri,7426
+"Christian, Missouri",29043,Christian,Missouri,88595
+"Clark, Missouri",29045,Clark,Missouri,6797
+"Clay, Missouri",29047,Clay,Missouri,249948
+"Clinton, Missouri",29049,Clinton,Missouri,20387
+"Cole, Missouri",29051,Cole,Missouri,76745
+"Cooper, Missouri",29053,Cooper,Missouri,17709
+"Crawford, Missouri",29055,Crawford,Missouri,23920
+"Dade, Missouri",29057,Dade,Missouri,7561
+"Dallas, Missouri",29059,Dallas,Missouri,16878
+"Daviess, Missouri",29061,Daviess,Missouri,8278
+"DeKalb, Missouri",29063,DeKalb,Missouri,12547
+"Dent, Missouri",29065,Dent,Missouri,15573
+"Douglas, Missouri",29067,Douglas,Missouri,13185
+"Dunklin, Missouri",29069,Dunklin,Missouri,29131
+"Franklin, Missouri",29071,Franklin,Missouri,103967
+"Gasconade, Missouri",29073,Gasconade,Missouri,14706
+"Gentry, Missouri",29075,Gentry,Missouri,6571
+"Greene, Missouri",29077,Greene,Missouri,293086
+"Grundy, Missouri",29079,Grundy,Missouri,9850
+"Harrison, Missouri",29081,Harrison,Missouri,8352
+"Henry, Missouri",29083,Henry,Missouri,21824
+"Hickory, Missouri",29085,Hickory,Missouri,9544
+"Holt, Missouri",29087,Holt,Missouri,4403
+"Howard, Missouri",29089,Howard,Missouri,10001
+"Howell, Missouri",29091,Howell,Missouri,40117
+"Iron, Missouri",29093,Iron,Missouri,10125
+"Jackson, Missouri",29095,Jackson,Missouri,703011
+"Jasper, Missouri",29097,Jasper,Missouri,121328
+"Jefferson, Missouri",29099,Jefferson,Missouri,225081
+"Johnson, Missouri",29101,Johnson,Missouri,54062
+"Knox, Missouri",29103,Knox,Missouri,3959
+"Laclede, Missouri",29105,Laclede,Missouri,35723
+"Lafayette, Missouri",29107,Lafayette,Missouri,32708
+"Lawrence, Missouri",29109,Lawrence,Missouri,38355
+"Lewis, Missouri",29111,Lewis,Missouri,9776
+"Lincoln, Missouri",29113,Lincoln,Missouri,59013
+"Linn, Missouri",29115,Linn,Missouri,11920
+"Livingston, Missouri",29117,Livingston,Missouri,15227
+"McDonald, Missouri",29119,McDonald,Missouri,22837
+"Macon, Missouri",29121,Macon,Missouri,15117
+"Madison, Missouri",29123,Madison,Missouri,12088
+"Maries, Missouri",29125,Maries,Missouri,8697
+"Marion, Missouri",29127,Marion,Missouri,28530
+"Mercer, Missouri",29129,Mercer,Missouri,3617
+"Miller, Missouri",29131,Miller,Missouri,25619
+"Mississippi, Missouri",29133,Mississippi,Missouri,13180
+"Moniteau, Missouri",29135,Moniteau,Missouri,16132
+"Monroe, Missouri",29137,Monroe,Missouri,8644
+"Montgomery, Missouri",29139,Montgomery,Missouri,11551
+"Morgan, Missouri",29141,Morgan,Missouri,20627
+"New Madrid, Missouri",29143,New Madrid,Missouri,17076
+"Newton, Missouri",29145,Newton,Missouri,58236
+"Nodaway, Missouri",29147,Nodaway,Missouri,22092
+"Oregon, Missouri",29149,Oregon,Missouri,10529
+"Osage, Missouri",29151,Osage,Missouri,13615
+"Ozark, Missouri",29153,Ozark,Missouri,9174
+"Pemiscot, Missouri",29155,Pemiscot,Missouri,15805
+"Perry, Missouri",29157,Perry,Missouri,19136
+"Pettis, Missouri",29159,Pettis,Missouri,42339
+"Phelps, Missouri",29161,Phelps,Missouri,44573
+"Pike, Missouri",29163,Pike,Missouri,18302
+"Platte, Missouri",29165,Platte,Missouri,104418
+"Polk, Missouri",29167,Polk,Missouri,32149
+"Pulaski, Missouri",29169,Pulaski,Missouri,52607
+"Putnam, Missouri",29171,Putnam,Missouri,4696
+"Ralls, Missouri",29173,Ralls,Missouri,10309
+"Randolph, Missouri",29175,Randolph,Missouri,24748
+"Ray, Missouri",29177,Ray,Missouri,23018
+"Reynolds, Missouri",29179,Reynolds,Missouri,6270
+"Ripley, Missouri",29181,Ripley,Missouri,13288
+"St. Charles, Missouri",29183,St. Charles,Missouri,402022
+"St. Clair, Missouri",29185,St. Clair,Missouri,9397
+"Ste. Genevieve, Missouri",29186,Ste. Genevieve,Missouri,17894
+"St. Francois, Missouri",29187,St. Francois,Missouri,67215
+"St. Louis, Missouri",29189,St. Louis,Missouri,994205
+"Saline, Missouri",29195,Saline,Missouri,22761
+"Schuyler, Missouri",29197,Schuyler,Missouri,4660
+"Scotland, Missouri",29199,Scotland,Missouri,4902
+"Scott, Missouri",29201,Scott,Missouri,38280
+"Shannon, Missouri",29203,Shannon,Missouri,8166
+"Shelby, Missouri",29205,Shelby,Missouri,5930
+"Stoddard, Missouri",29207,Stoddard,Missouri,29025
+"Stone, Missouri",29209,Stone,Missouri,31952
+"Sullivan, Missouri",29211,Sullivan,Missouri,6089
+"Taney, Missouri",29213,Taney,Missouri,55928
+"Texas, Missouri",29215,Texas,Missouri,25398
+"Vernon, Missouri",29217,Vernon,Missouri,20563
+"Warren, Missouri",29219,Warren,Missouri,35649
+"Washington, Missouri",29221,Washington,Missouri,24730
+"Wayne, Missouri",29223,Wayne,Missouri,12873
+"Webster, Missouri",29225,Webster,Missouri,39592
+"Worth, Missouri",29227,Worth,Missouri,2013
+"Wright, Missouri",29229,Wright,Missouri,18289
+"St. Louis city, Missouri",29510,St. Louis city,Missouri,300576
+"Beaverhead, Montana",30001,Beaverhead,Montana,9453
+"Big Horn, Montana",30003,Big Horn,Montana,13319
+"Blaine, Montana",30005,Blaine,Montana,6681
+"Broadwater, Montana",30007,Broadwater,Montana,6237
+"Carbon, Montana",30009,Carbon,Montana,10725
+"Carter, Montana",30011,Carter,Montana,1252
+"Cascade, Montana",30013,Cascade,Montana,81366
+"Chouteau, Montana",30015,Chouteau,Montana,5635
+"Custer, Montana",30017,Custer,Montana,11402
+"Daniels, Montana",30019,Daniels,Montana,1690
+"Dawson, Montana",30021,Dawson,Montana,8613
+"Deer Lodge, Montana",30023,Deer Lodge,Montana,9140
+"Fallon, Montana",30025,Fallon,Montana,2846
+"Fergus, Montana",30027,Fergus,Montana,11050
+"Flathead, Montana",30029,Flathead,Montana,103806
+"Gallatin, Montana",30031,Gallatin,Montana,114434
+"Garfield, Montana",30033,Garfield,Montana,1258
+"Glacier, Montana",30035,Glacier,Montana,13753
+"Golden Valley, Montana",30037,Golden Valley,Montana,821
+"Granite, Montana",30039,Granite,Montana,3379
+"Hill, Montana",30041,Hill,Montana,16484
+"Jefferson, Montana",30043,Jefferson,Montana,12221
+"Judith Basin, Montana",30045,Judith Basin,Montana,2007
+"Lake, Montana",30047,Lake,Montana,30458
+"Lewis and Clark, Montana",30049,Lewis and Clark,Montana,69432
+"Liberty, Montana",30051,Liberty,Montana,2337
+"Lincoln, Montana",30053,Lincoln,Montana,19980
+"McCone, Montana",30055,McCone,Montana,1664
+"Madison, Montana",30057,Madison,Montana,8600
+"Meagher, Montana",30059,Meagher,Montana,1862
+"Mineral, Montana",30061,Mineral,Montana,4397
+"Missoula, Montana",30063,Missoula,Montana,119600
+"Musselshell, Montana",30065,Musselshell,Montana,4633
+"Park, Montana",30067,Park,Montana,16606
+"Petroleum, Montana",30069,Petroleum,Montana,487
+"Phillips, Montana",30071,Phillips,Montana,3954
+"Pondera, Montana",30073,Pondera,Montana,5911
+"Powder River, Montana",30075,Powder River,Montana,1682
+"Powell, Montana",30077,Powell,Montana,6890
+"Prairie, Montana",30079,Prairie,Montana,1077
+"Ravalli, Montana",30081,Ravalli,Montana,43806
+"Richland, Montana",30083,Richland,Montana,10803
+"Roosevelt, Montana",30085,Roosevelt,Montana,11004
+"Rosebud, Montana",30087,Rosebud,Montana,8937
+"Sanders, Montana",30089,Sanders,Montana,12113
+"Sheridan, Montana",30091,Sheridan,Montana,3309
+"Silver Bow, Montana",30093,Silver Bow,Montana,34915
+"Stillwater, Montana",30095,Stillwater,Montana,9642
+"Sweet Grass, Montana",30097,Sweet Grass,Montana,3737
+"Teton, Montana",30099,Teton,Montana,6147
+"Toole, Montana",30101,Toole,Montana,4736
+"Treasure, Montana",30103,Treasure,Montana,696
+"Valley, Montana",30105,Valley,Montana,7396
+"Wheatland, Montana",30107,Wheatland,Montana,2126
+"Wibaux, Montana",30109,Wibaux,Montana,969
+"Yellowstone, Montana",30111,Yellowstone,Montana,161300
+"Adams, Nebraska",31001,Adams,Nebraska,31363
+"Antelope, Nebraska",31003,Antelope,Nebraska,6298
+"Arthur, Nebraska",31005,Arthur,Nebraska,463
+"Banner, Nebraska",31007,Banner,Nebraska,745
+"Blaine, Nebraska",31009,Blaine,Nebraska,465
+"Boone, Nebraska",31011,Boone,Nebraska,5192
+"Box Butte, Nebraska",31013,Box Butte,Nebraska,10783
+"Boyd, Nebraska",31015,Boyd,Nebraska,1919
+"Brown, Nebraska",31017,Brown,Nebraska,2955
+"Buffalo, Nebraska",31019,Buffalo,Nebraska,49659
+"Burt, Nebraska",31021,Burt,Nebraska,6459
+"Butler, Nebraska",31023,Butler,Nebraska,8016
+"Cass, Nebraska",31025,Cass,Nebraska,26248
+"Cedar, Nebraska",31027,Cedar,Nebraska,8402
+"Chase, Nebraska",31029,Chase,Nebraska,3924
+"Cherry, Nebraska",31031,Cherry,Nebraska,5689
+"Cheyenne, Nebraska",31033,Cheyenne,Nebraska,8910
+"Clay, Nebraska",31035,Clay,Nebraska,6203
+"Colfax, Nebraska",31037,Colfax,Nebraska,10709
+"Cuming, Nebraska",31039,Cuming,Nebraska,8846
+"Custer, Nebraska",31041,Custer,Nebraska,10777
+"Dakota, Nebraska",31043,Dakota,Nebraska,20026
+"Dawes, Nebraska",31045,Dawes,Nebraska,8589
+"Dawson, Nebraska",31047,Dawson,Nebraska,23595
+"Deuel, Nebraska",31049,Deuel,Nebraska,1794
+"Dixon, Nebraska",31051,Dixon,Nebraska,5636
+"Dodge, Nebraska",31053,Dodge,Nebraska,36565
+"Douglas, Nebraska",31055,Douglas,Nebraska,571327
+"Dundy, Nebraska",31057,Dundy,Nebraska,1693
+"Fillmore, Nebraska",31059,Fillmore,Nebraska,5462
+"Franklin, Nebraska",31061,Franklin,Nebraska,2979
+"Frontier, Nebraska",31063,Frontier,Nebraska,2627
+"Furnas, Nebraska",31065,Furnas,Nebraska,4676
+"Gage, Nebraska",31067,Gage,Nebraska,21513
+"Garden, Nebraska",31069,Garden,Nebraska,1837
+"Garfield, Nebraska",31071,Garfield,Nebraska,1969
+"Gosper, Nebraska",31073,Gosper,Nebraska,1990
+"Grant, Nebraska",31075,Grant,Nebraska,623
+"Greeley, Nebraska",31077,Greeley,Nebraska,2356
+"Hall, Nebraska",31079,Hall,Nebraska,61353
+"Hamilton, Nebraska",31081,Hamilton,Nebraska,9324
+"Harlan, Nebraska",31083,Harlan,Nebraska,3380
+"Hayes, Nebraska",31085,Hayes,Nebraska,922
+"Hitchcock, Nebraska",31087,Hitchcock,Nebraska,2762
+"Holt, Nebraska",31089,Holt,Nebraska,10067
+"Hooker, Nebraska",31091,Hooker,Nebraska,682
+"Howard, Nebraska",31093,Howard,Nebraska,6445
+"Jefferson, Nebraska",31095,Jefferson,Nebraska,7046
+"Johnson, Nebraska",31097,Johnson,Nebraska,5071
+"Kearney, Nebraska",31099,Kearney,Nebraska,6495
+"Keith, Nebraska",31101,Keith,Nebraska,8034
+"Keya Paha, Nebraska",31103,Keya Paha,Nebraska,806
+"Kimball, Nebraska",31105,Kimball,Nebraska,3632
+"Knox, Nebraska",31107,Knox,Nebraska,8332
+"Lancaster, Nebraska",31109,Lancaster,Nebraska,319090
+"Lincoln, Nebraska",31111,Lincoln,Nebraska,34914
+"Logan, Nebraska",31113,Logan,Nebraska,748
+"Loup, Nebraska",31115,Loup,Nebraska,664
+"McPherson, Nebraska",31117,McPherson,Nebraska,494
+"Madison, Nebraska",31119,Madison,Nebraska,35099
+"Merrick, Nebraska",31121,Merrick,Nebraska,7755
+"Morrill, Nebraska",31123,Morrill,Nebraska,4642
+"Nance, Nebraska",31125,Nance,Nebraska,3519
+"Nemaha, Nebraska",31127,Nemaha,Nebraska,6972
+"Nuckolls, Nebraska",31129,Nuckolls,Nebraska,4148
+"Otoe, Nebraska",31131,Otoe,Nebraska,16012
+"Pawnee, Nebraska",31133,Pawnee,Nebraska,2613
+"Perkins, Nebraska",31135,Perkins,Nebraska,2891
+"Phelps, Nebraska",31137,Phelps,Nebraska,9034
+"Pierce, Nebraska",31139,Pierce,Nebraska,7148
+"Platte, Nebraska",31141,Platte,Nebraska,33470
+"Polk, Nebraska",31143,Polk,Nebraska,5213
+"Red Willow, Nebraska",31145,Red Willow,Nebraska,10724
+"Richardson, Nebraska",31147,Richardson,Nebraska,7865
+"Rock, Nebraska",31149,Rock,Nebraska,1357
+"Saline, Nebraska",31151,Saline,Nebraska,14224
+"Sarpy, Nebraska",31153,Sarpy,Nebraska,187196
+"Saunders, Nebraska",31155,Saunders,Nebraska,21578
+"Scotts Bluff, Nebraska",31157,Scotts Bluff,Nebraska,35618
+"Seward, Nebraska",31159,Seward,Nebraska,17284
+"Sheridan, Nebraska",31161,Sheridan,Nebraska,5246
+"Sherman, Nebraska",31163,Sherman,Nebraska,3001
+"Sioux, Nebraska",31165,Sioux,Nebraska,1166
+"Stanton, Nebraska",31167,Stanton,Nebraska,5920
+"Thayer, Nebraska",31169,Thayer,Nebraska,5003
+"Thomas, Nebraska",31171,Thomas,Nebraska,722
+"Thurston, Nebraska",31173,Thurston,Nebraska,7224
+"Valley, Nebraska",31175,Valley,Nebraska,4158
+"Washington, Nebraska",31177,Washington,Nebraska,20729
+"Wayne, Nebraska",31179,Wayne,Nebraska,9385
+"Webster, Nebraska",31181,Webster,Nebraska,3487
+"Wheeler, Nebraska",31183,Wheeler,Nebraska,783
+"York, Nebraska",31185,York,Nebraska,13679
+"Churchill, Nevada",32001,Churchill,Nevada,24909
+"Clark, Nevada",32003,Clark,Nevada,2266715
+"Douglas, Nevada",32005,Douglas,Nevada,48905
+"Elko, Nevada",32007,Elko,Nevada,52778
+"Esmeralda, Nevada",32009,Esmeralda,Nevada,873
+"Eureka, Nevada",32011,Eureka,Nevada,2029
+"Humboldt, Nevada",32013,Humboldt,Nevada,16831
+"Lander, Nevada",32015,Lander,Nevada,5532
+"Lincoln, Nevada",32017,Lincoln,Nevada,5183
+"Lyon, Nevada",32019,Lyon,Nevada,57510
+"Mineral, Nevada",32021,Mineral,Nevada,4505
+"Nye, Nevada",32023,Nye,Nevada,46523
+"Pershing, Nevada",32027,Pershing,Nevada,6725
+"Storey, Nevada",32029,Storey,Nevada,4123
+"Washoe, Nevada",32031,Washoe,Nevada,471519
+"White Pine, Nevada",32033,White Pine,Nevada,9580
+"Carson City, Nevada",32510,Carson City,Nevada,55916
+"Belknap, New Hampshire",33001,Belknap,New Hampshire,61303
+"Carroll, New Hampshire",33003,Carroll,New Hampshire,48910
+"Cheshire, New Hampshire",33005,Cheshire,New Hampshire,76085
+"Coos, New Hampshire",33007,Coos,New Hampshire,31563
+"Grafton, New Hampshire",33009,Grafton,New Hampshire,89886
+"Hillsborough, New Hampshire",33011,Hillsborough,New Hampshire,417025
+"Merrimack, New Hampshire",33013,Merrimack,New Hampshire,151391
+"Rockingham, New Hampshire",33015,Rockingham,New Hampshire,309769
+"Strafford, New Hampshire",33017,Strafford,New Hampshire,130633
+"Sullivan, New Hampshire",33019,Sullivan,New Hampshire,43146
+"Atlantic, New Jersey",34001,Atlantic,New Jersey,263670
+"Bergen, New Jersey",34003,Bergen,New Jersey,932202
+"Burlington, New Jersey",34005,Burlington,New Jersey,445349
+"Camden, New Jersey",34007,Camden,New Jersey,506471
+"Cape May, New Jersey",34009,Cape May,New Jersey,92039
+"Cumberland, New Jersey",34011,Cumberland,New Jersey,149527
+"Essex, New Jersey",34013,Essex,New Jersey,798975
+"Gloucester, New Jersey",34015,Gloucester,New Jersey,291636
+"Hudson, New Jersey",34017,Hudson,New Jersey,672391
+"Hunterdon, New Jersey",34019,Hunterdon,New Jersey,124371
+"Mercer, New Jersey",34021,Mercer,New Jersey,367430
+"Middlesex, New Jersey",34023,Middlesex,New Jersey,825062
+"Monmouth, New Jersey",34025,Monmouth,New Jersey,618795
+"Morris, New Jersey",34027,Morris,New Jersey,491845
+"Ocean, New Jersey",34029,Ocean,New Jersey,607186
+"Passaic, New Jersey",34031,Passaic,New Jersey,501826
+"Salem, New Jersey",34033,Salem,New Jersey,62385
+"Somerset, New Jersey",34035,Somerset,New Jersey,328934
+"Sussex, New Jersey",34037,Sussex,New Jersey,140488
+"Union, New Jersey",34039,Union,New Jersey,556341
+"Warren, New Jersey",34041,Warren,New Jersey,105267
+"Bernalillo, New Mexico",35001,Bernalillo,New Mexico,679121
+"Catron, New Mexico",35003,Catron,New Mexico,3527
+"Chaves, New Mexico",35005,Chaves,New Mexico,64615
+"Cibola, New Mexico",35006,Cibola,New Mexico,26675
+"Colfax, New Mexico",35007,Colfax,New Mexico,11941
+"Curry, New Mexico",35009,Curry,New Mexico,48954
+"De Baca, New Mexico",35011,De Baca,New Mexico,1748
+"Doña Ana, New Mexico",35013,Doña Ana,New Mexico,218195
+"Eddy, New Mexico",35015,Eddy,New Mexico,58460
+"Grant, New Mexico",35017,Grant,New Mexico,26998
+"Guadalupe, New Mexico",35019,Guadalupe,New Mexico,4300
+"Harding, New Mexico",35021,Harding,New Mexico,625
+"Hidalgo, New Mexico",35023,Hidalgo,New Mexico,4198
+"Lea, New Mexico",35025,Lea,New Mexico,71070
+"Lincoln, New Mexico",35027,Lincoln,New Mexico,19572
+"Los Alamos, New Mexico",35028,Los Alamos,New Mexico,19369
+"Luna, New Mexico",35029,Luna,New Mexico,23709
+"McKinley, New Mexico",35031,McKinley,New Mexico,71367
+"Mora, New Mexico",35033,Mora,New Mexico,4521
+"Otero, New Mexico",35035,Otero,New Mexico,67490
+"Quay, New Mexico",35037,Quay,New Mexico,8253
+"Rio Arriba, New Mexico",35039,Rio Arriba,New Mexico,38921
+"Roosevelt, New Mexico",35041,Roosevelt,New Mexico,18500
+"Sandoval, New Mexico",35043,Sandoval,New Mexico,146748
+"San Juan, New Mexico",35045,San Juan,New Mexico,123958
+"San Miguel, New Mexico",35047,San Miguel,New Mexico,27277
+"Santa Fe, New Mexico",35049,Santa Fe,New Mexico,150358
+"Sierra, New Mexico",35051,Sierra,New Mexico,10791
+"Socorro, New Mexico",35053,Socorro,New Mexico,16637
+"Taos, New Mexico",35055,Taos,New Mexico,32723
+"Torrance, New Mexico",35057,Torrance,New Mexico,15461
+"Union, New Mexico",35059,Union,New Mexico,4059
+"Valencia, New Mexico",35061,Valencia,New Mexico,76688
+"Albany, New York",36001,Albany,New York,305506
+"Allegany, New York",36003,Allegany,New York,46091
+"Bronx, New York",36005,Bronx,New York,1418207
+"Broome, New York",36007,Broome,New York,190488
+"Cattaraugus, New York",36009,Cattaraugus,New York,76117
+"Cayuga, New York",36011,Cayuga,New York,76576
+"Chautauqua, New York",36013,Chautauqua,New York,126903
+"Chemung, New York",36015,Chemung,New York,83456
+"Chenango, New York",36017,Chenango,New York,47207
+"Clinton, New York",36019,Clinton,New York,80485
+"Columbia, New York",36021,Columbia,New York,59461
+"Cortland, New York",36023,Cortland,New York,47581
+"Delaware, New York",36025,Delaware,New York,44135
+"Dutchess, New York",36027,Dutchess,New York,294218
+"Erie, New York",36029,Erie,New York,918702
+"Essex, New York",36031,Essex,New York,36885
+"Franklin, New York",36033,Franklin,New York,50022
+"Fulton, New York",36035,Fulton,New York,53383
+"Genesee, New York",36037,Genesee,New York,57280
+"Greene, New York",36039,Greene,New York,47188
+"Hamilton, New York",36041,Hamilton,New York,4416
+"Herkimer, New York",36043,Herkimer,New York,61319
+"Jefferson, New York",36045,Jefferson,New York,109834
+"Kings, New York",36047,Kings,New York,2559903
+"Lewis, New York",36049,Lewis,New York,26296
+"Livingston, New York",36051,Livingston,New York,62914
+"Madison, New York",36053,Madison,New York,70941
+"Monroe, New York",36055,Monroe,New York,741770
+"Montgomery, New York",36057,Montgomery,New York,49221
+"Nassau, New York",36059,Nassau,New York,1356924
+"New York, New York",36061,New York,New York,1628706
+"Niagara, New York",36063,Niagara,New York,209281
+"Oneida, New York",36065,Oneida,New York,228671
+"Onondaga, New York",36067,Onondaga,New York,460528
+"Ontario, New York",36069,Ontario,New York,109777
+"Orange, New York",36071,Orange,New York,384940
+"Orleans, New York",36073,Orleans,New York,40352
+"Oswego, New York",36075,Oswego,New York,117124
+"Otsego, New York",36077,Otsego,New York,59493
+"Putnam, New York",36079,Putnam,New York,98320
+"Queens, New York",36081,Queens,New York,2253858
+"Rensselaer, New York",36083,Rensselaer,New York,158714
+"Richmond, New York",36085,Richmond,New York,476143
+"Rockland, New York",36087,Rockland,New York,325789
+"St. Lawrence, New York",36089,St. Lawrence,New York,107740
+"Saratoga, New York",36091,Saratoga,New York,229863
+"Schenectady, New York",36093,Schenectady,New York,155299
+"Schoharie, New York",36095,Schoharie,New York,30999
+"Schuyler, New York",36097,Schuyler,New York,17807
+"Seneca, New York",36099,Seneca,New York,34016
+"Steuben, New York",36101,Steuben,New York,95379
+"Suffolk, New York",36103,Suffolk,New York,1476601
+"Sullivan, New York",36105,Sullivan,New York,75432
+"Tioga, New York",36107,Tioga,New York,48203
+"Tompkins, New York",36109,Tompkins,New York,102180
+"Ulster, New York",36111,Ulster,New York,177573
+"Warren, New York",36113,Warren,New York,63944
+"Washington, New York",36115,Washington,New York,61204
+"Wayne, New York",36117,Wayne,New York,89918
+"Westchester, New York",36119,Westchester,New York,967506
+"Wyoming, New York",36121,Wyoming,New York,39859
+"Yates, New York",36123,Yates,New York,24913
+"Alamance, North Carolina",37001,Alamance,North Carolina,169509
+"Alexander, North Carolina",37003,Alexander,North Carolina,37497
+"Alleghany, North Carolina",37005,Alleghany,North Carolina,11137
+"Anson, North Carolina",37007,Anson,North Carolina,24446
+"Ashe, North Carolina",37009,Ashe,North Carolina,27203
+"Avery, North Carolina",37011,Avery,North Carolina,17557
+"Beaufort, North Carolina",37013,Beaufort,North Carolina,46994
+"Bertie, North Carolina",37015,Bertie,North Carolina,18947
+"Bladen, North Carolina",37017,Bladen,North Carolina,32722
+"Brunswick, North Carolina",37019,Brunswick,North Carolina,142820
+"Buncombe, North Carolina",37021,Buncombe,North Carolina,261191
+"Burke, North Carolina",37023,Burke,North Carolina,90485
+"Cabarrus, North Carolina",37025,Cabarrus,North Carolina,216453
+"Caldwell, North Carolina",37027,Caldwell,North Carolina,82178
+"Camden, North Carolina",37029,Camden,North Carolina,10867
+"Carteret, North Carolina",37031,Carteret,North Carolina,69473
+"Caswell, North Carolina",37033,Caswell,North Carolina,22604
+"Catawba, North Carolina",37035,Catawba,North Carolina,159551
+"Chatham, North Carolina",37037,Chatham,North Carolina,74470
+"Cherokee, North Carolina",37039,Cherokee,North Carolina,28612
+"Chowan, North Carolina",37041,Chowan,North Carolina,13943
+"Clay, North Carolina",37043,Clay,North Carolina,11231
+"Cleveland, North Carolina",37045,Cleveland,North Carolina,97947
+"Columbus, North Carolina",37047,Columbus,North Carolina,55508
+"Craven, North Carolina",37049,Craven,North Carolina,102139
+"Cumberland, North Carolina",37051,Cumberland,North Carolina,335509
+"Currituck, North Carolina",37053,Currituck,North Carolina,27763
+"Dare, North Carolina",37055,Dare,North Carolina,37009
+"Davidson, North Carolina",37057,Davidson,North Carolina,167609
+"Davie, North Carolina",37059,Davie,North Carolina,42846
+"Duplin, North Carolina",37061,Duplin,North Carolina,58741
+"Durham, North Carolina",37063,Durham,North Carolina,321488
+"Edgecombe, North Carolina",37065,Edgecombe,North Carolina,51472
+"Forsyth, North Carolina",37067,Forsyth,North Carolina,382295
+"Franklin, North Carolina",37069,Franklin,North Carolina,69685
+"Gaston, North Carolina",37071,Gaston,North Carolina,224529
+"Gates, North Carolina",37073,Gates,North Carolina,11562
+"Graham, North Carolina",37075,Graham,North Carolina,8441
+"Granville, North Carolina",37077,Granville,North Carolina,60443
+"Greene, North Carolina",37079,Greene,North Carolina,21069
+"Guilford, North Carolina",37081,Guilford,North Carolina,537174
+"Halifax, North Carolina",37083,Halifax,North Carolina,50010
+"Harnett, North Carolina",37085,Harnett,North Carolina,135976
+"Haywood, North Carolina",37087,Haywood,North Carolina,62317
+"Henderson, North Carolina",37089,Henderson,North Carolina,117417
+"Hertford, North Carolina",37091,Hertford,North Carolina,23677
+"Hoke, North Carolina",37093,Hoke,North Carolina,55234
+"Hyde, North Carolina",37095,Hyde,North Carolina,4937
+"Iredell, North Carolina",37097,Iredell,North Carolina,181806
+"Jackson, North Carolina",37099,Jackson,North Carolina,43938
+"Johnston, North Carolina",37101,Johnston,North Carolina,209339
+"Jones, North Carolina",37103,Jones,North Carolina,9419
+"Lee, North Carolina",37105,Lee,North Carolina,61779
+"Lenoir, North Carolina",37107,Lenoir,North Carolina,55949
+"Lincoln, North Carolina",37109,Lincoln,North Carolina,86111
+"McDowell, North Carolina",37111,McDowell,North Carolina,45756
+"Macon, North Carolina",37113,Macon,North Carolina,35858
+"Madison, North Carolina",37115,Madison,North Carolina,21755
+"Martin, North Carolina",37117,Martin,North Carolina,22440
+"Mecklenburg, North Carolina",37119,Mecklenburg,North Carolina,1110356
+"Mitchell, North Carolina",37121,Mitchell,North Carolina,14964
+"Montgomery, North Carolina",37123,Montgomery,North Carolina,27173
+"Moore, North Carolina",37125,Moore,North Carolina,100880
+"Nash, North Carolina",37127,Nash,North Carolina,94298
+"New Hanover, North Carolina",37129,New Hanover,North Carolina,234473
+"Northampton, North Carolina",37131,Northampton,North Carolina,19483
+"Onslow, North Carolina",37133,Onslow,North Carolina,197938
+"Orange, North Carolina",37135,Orange,North Carolina,148476
+"Pamlico, North Carolina",37137,Pamlico,North Carolina,12726
+"Pasquotank, North Carolina",37139,Pasquotank,North Carolina,39824
+"Pender, North Carolina",37141,Pender,North Carolina,63060
+"Perquimans, North Carolina",37143,Perquimans,North Carolina,13463
+"Person, North Carolina",37145,Person,North Carolina,39490
+"Pitt, North Carolina",37147,Pitt,North Carolina,180742
+"Polk, North Carolina",37149,Polk,North Carolina,20724
+"Randolph, North Carolina",37151,Randolph,North Carolina,143667
+"Richmond, North Carolina",37153,Richmond,North Carolina,44829
+"Robeson, North Carolina",37155,Robeson,North Carolina,130625
+"Rockingham, North Carolina",37157,Rockingham,North Carolina,91010
+"Rowan, North Carolina",37159,Rowan,North Carolina,142088
+"Rutherford, North Carolina",37161,Rutherford,North Carolina,67029
+"Sampson, North Carolina",37163,Sampson,North Carolina,63531
+"Scotland, North Carolina",37165,Scotland,North Carolina,34823
+"Stanly, North Carolina",37167,Stanly,North Carolina,62806
+"Stokes, North Carolina",37169,Stokes,North Carolina,45591
+"Surry, North Carolina",37171,Surry,North Carolina,71783
+"Swain, North Carolina",37173,Swain,North Carolina,14271
+"Transylvania, North Carolina",37175,Transylvania,North Carolina,34385
+"Tyrrell, North Carolina",37177,Tyrrell,North Carolina,4016
+"Union, North Carolina",37179,Union,North Carolina,239859
+"Vance, North Carolina",37181,Vance,North Carolina,44535
+"Wake, North Carolina",37183,Wake,North Carolina,1111761
+"Warren, North Carolina",37185,Warren,North Carolina,19731
+"Washington, North Carolina",37187,Washington,North Carolina,11580
+"Watauga, North Carolina",37189,Watauga,North Carolina,56177
+"Wayne, North Carolina",37191,Wayne,North Carolina,123131
+"Wilkes, North Carolina",37193,Wilkes,North Carolina,68412
+"Wilson, North Carolina",37195,Wilson,North Carolina,81801
+"Yadkin, North Carolina",37197,Yadkin,North Carolina,37667
+"Yancey, North Carolina",37199,Yancey,North Carolina,18069
+"Adams, North Dakota",38001,Adams,North Dakota,2216
+"Barnes, North Dakota",38003,Barnes,North Dakota,10415
+"Benson, North Dakota",38005,Benson,North Dakota,6832
+"Billings, North Dakota",38007,Billings,North Dakota,928
+"Bottineau, North Dakota",38009,Bottineau,North Dakota,6282
+"Bowman, North Dakota",38011,Bowman,North Dakota,3024
+"Burke, North Dakota",38013,Burke,North Dakota,2115
+"Burleigh, North Dakota",38015,Burleigh,North Dakota,95626
+"Cass, North Dakota",38017,Cass,North Dakota,181923
+"Cavalier, North Dakota",38019,Cavalier,North Dakota,3762
+"Dickey, North Dakota",38021,Dickey,North Dakota,4872
+"Divide, North Dakota",38023,Divide,North Dakota,2264
+"Dunn, North Dakota",38025,Dunn,North Dakota,4424
+"Eddy, North Dakota",38027,Eddy,North Dakota,2287
+"Emmons, North Dakota",38029,Emmons,North Dakota,3241
+"Foster, North Dakota",38031,Foster,North Dakota,3210
+"Golden Valley, North Dakota",38033,Golden Valley,North Dakota,1761
+"Grand Forks, North Dakota",38035,Grand Forks,North Dakota,69451
+"Grant, North Dakota",38037,Grant,North Dakota,2274
+"Griggs, North Dakota",38039,Griggs,North Dakota,2231
+"Hettinger, North Dakota",38041,Hettinger,North Dakota,2499
+"Kidder, North Dakota",38043,Kidder,North Dakota,2480
+"LaMoure, North Dakota",38045,LaMoure,North Dakota,4046
+"Logan, North Dakota",38047,Logan,North Dakota,1850
+"McHenry, North Dakota",38049,McHenry,North Dakota,5745
+"McIntosh, North Dakota",38051,McIntosh,North Dakota,2497
+"McKenzie, North Dakota",38053,McKenzie,North Dakota,15024
+"McLean, North Dakota",38055,McLean,North Dakota,9450
+"Mercer, North Dakota",38057,Mercer,North Dakota,8187
+"Morton, North Dakota",38059,Morton,North Dakota,31364
+"Mountrail, North Dakota",38061,Mountrail,North Dakota,10545
+"Nelson, North Dakota",38063,Nelson,North Dakota,2879
+"Oliver, North Dakota",38065,Oliver,North Dakota,1959
+"Pembina, North Dakota",38067,Pembina,North Dakota,6801
+"Pierce, North Dakota",38069,Pierce,North Dakota,3975
+"Ramsey, North Dakota",38071,Ramsey,North Dakota,11519
+"Ransom, North Dakota",38073,Ransom,North Dakota,5218
+"Renville, North Dakota",38075,Renville,North Dakota,2327
+"Richland, North Dakota",38077,Richland,North Dakota,16177
+"Rolette, North Dakota",38079,Rolette,North Dakota,14176
+"Sargent, North Dakota",38081,Sargent,North Dakota,3898
+"Sheridan, North Dakota",38083,Sheridan,North Dakota,1315
+"Sioux, North Dakota",38085,Sioux,North Dakota,4230
+"Slope, North Dakota",38087,Slope,North Dakota,750
+"Stark, North Dakota",38089,Stark,North Dakota,31489
+"Steele, North Dakota",38091,Steele,North Dakota,1890
+"Stutsman, North Dakota",38093,Stutsman,North Dakota,20704
+"Towner, North Dakota",38095,Towner,North Dakota,2189
+"Traill, North Dakota",38097,Traill,North Dakota,8036
+"Walsh, North Dakota",38099,Walsh,North Dakota,10641
+"Ward, North Dakota",38101,Ward,North Dakota,67641
+"Wells, North Dakota",38103,Wells,North Dakota,3834
+"Williams, North Dakota",38105,Williams,North Dakota,37589
+"Adams, Ohio",39001,Adams,Ohio,27698
+"Allen, Ohio",39003,Allen,Ohio,102351
+"Ashland, Ohio",39005,Ashland,Ohio,53484
+"Ashtabula, Ohio",39007,Ashtabula,Ohio,97241
+"Athens, Ohio",39009,Athens,Ohio,65327
+"Auglaize, Ohio",39011,Auglaize,Ohio,45656
+"Belmont, Ohio",39013,Belmont,Ohio,67006
+"Brown, Ohio",39015,Brown,Ohio,43432
+"Butler, Ohio",39017,Butler,Ohio,383134
+"Carroll, Ohio",39019,Carroll,Ohio,26914
+"Champaign, Ohio",39021,Champaign,Ohio,38885
+"Clark, Ohio",39023,Clark,Ohio,134083
+"Clermont, Ohio",39025,Clermont,Ohio,206428
+"Clinton, Ohio",39027,Clinton,Ohio,41968
+"Columbiana, Ohio",39029,Columbiana,Ohio,101883
+"Coshocton, Ohio",39031,Coshocton,Ohio,36600
+"Crawford, Ohio",39033,Crawford,Ohio,41494
+"Cuyahoga, Ohio",39035,Cuyahoga,Ohio,1235072
+"Darke, Ohio",39037,Darke,Ohio,51113
+"Defiance, Ohio",39039,Defiance,Ohio,38087
+"Delaware, Ohio",39041,Delaware,Ohio,209177
+"Erie, Ohio",39043,Erie,Ohio,74266
+"Fairfield, Ohio",39045,Fairfield,Ohio,157574
+"Fayette, Ohio",39047,Fayette,Ohio,28525
+"Franklin, Ohio",39049,Franklin,Ohio,1316756
+"Fulton, Ohio",39051,Fulton,Ohio,42126
+"Gallia, Ohio",39053,Gallia,Ohio,29898
+"Geauga, Ohio",39055,Geauga,Ohio,93649
+"Greene, Ohio",39057,Greene,Ohio,168937
+"Guernsey, Ohio",39059,Guernsey,Ohio,38875
+"Hamilton, Ohio",39061,Hamilton,Ohio,817473
+"Hancock, Ohio",39063,Hancock,Ohio,75783
+"Hardin, Ohio",39065,Hardin,Ohio,31365
+"Harrison, Ohio",39067,Harrison,Ohio,15040
+"Henry, Ohio",39069,Henry,Ohio,27006
+"Highland, Ohio",39071,Highland,Ohio,43161
+"Hocking, Ohio",39073,Hocking,Ohio,28264
+"Holmes, Ohio",39075,Holmes,Ohio,43960
+"Huron, Ohio",39077,Huron,Ohio,58266
+"Jackson, Ohio",39079,Jackson,Ohio,32413
+"Jefferson, Ohio",39081,Jefferson,Ohio,65325
+"Knox, Ohio",39083,Knox,Ohio,62322
+"Lake, Ohio",39085,Lake,Ohio,230149
+"Lawrence, Ohio",39087,Lawrence,Ohio,59463
+"Licking, Ohio",39089,Licking,Ohio,176862
+"Logan, Ohio",39091,Logan,Ohio,45672
+"Lorain, Ohio",39093,Lorain,Ohio,309833
+"Lucas, Ohio",39095,Lucas,Ohio,428348
+"Madison, Ohio",39097,Madison,Ohio,44731
+"Mahoning, Ohio",39099,Mahoning,Ohio,228683
+"Marion, Ohio",39101,Marion,Ohio,65093
+"Medina, Ohio",39103,Medina,Ohio,179746
+"Meigs, Ohio",39105,Meigs,Ohio,22907
+"Mercer, Ohio",39107,Mercer,Ohio,41172
+"Miami, Ohio",39109,Miami,Ohio,106987
+"Monroe, Ohio",39111,Monroe,Ohio,13654
+"Montgomery, Ohio",39113,Montgomery,Ohio,531687
+"Morgan, Ohio",39115,Morgan,Ohio,14508
+"Morrow, Ohio",39117,Morrow,Ohio,35328
+"Muskingum, Ohio",39119,Muskingum,Ohio,86215
+"Noble, Ohio",39121,Noble,Ohio,14424
+"Ottawa, Ohio",39123,Ottawa,Ohio,40525
+"Paulding, Ohio",39125,Paulding,Ohio,18672
+"Perry, Ohio",39127,Perry,Ohio,36134
+"Pickaway, Ohio",39129,Pickaway,Ohio,58457
+"Pike, Ohio",39131,Pike,Ohio,27772
+"Portage, Ohio",39133,Portage,Ohio,162466
+"Preble, Ohio",39135,Preble,Ohio,40882
+"Putnam, Ohio",39137,Putnam,Ohio,33861
+"Richland, Ohio",39139,Richland,Ohio,121154
+"Ross, Ohio",39141,Ross,Ohio,76666
+"Sandusky, Ohio",39143,Sandusky,Ohio,58518
+"Scioto, Ohio",39145,Scioto,Ohio,75314
+"Seneca, Ohio",39147,Seneca,Ohio,55178
+"Shelby, Ohio",39149,Shelby,Ohio,48590
+"Stark, Ohio",39151,Stark,Ohio,370606
+"Summit, Ohio",39153,Summit,Ohio,541013
+"Trumbull, Ohio",39155,Trumbull,Ohio,197974
+"Tuscarawas, Ohio",39157,Tuscarawas,Ohio,91987
+"Union, Ohio",39159,Union,Ohio,58988
+"Van Wert, Ohio",39161,Van Wert,Ohio,28275
+"Vinton, Ohio",39163,Vinton,Ohio,13085
+"Warren, Ohio",39165,Warren,Ohio,234602
+"Washington, Ohio",39167,Washington,Ohio,59911
+"Wayne, Ohio",39169,Wayne,Ohio,115710
+"Williams, Ohio",39171,Williams,Ohio,36692
+"Wood, Ohio",39173,Wood,Ohio,130817
+"Wyandot, Ohio",39175,Wyandot,Ohio,21772
+"Adair, Oklahoma",40001,Adair,Oklahoma,22194
+"Alfalfa, Oklahoma",40003,Alfalfa,Oklahoma,5702
+"Atoka, Oklahoma",40005,Atoka,Oklahoma,13758
+"Beaver, Oklahoma",40007,Beaver,Oklahoma,5311
+"Beckham, Oklahoma",40009,Beckham,Oklahoma,21859
+"Blaine, Oklahoma",40011,Blaine,Oklahoma,9429
+"Bryan, Oklahoma",40013,Bryan,Oklahoma,47995
+"Caddo, Oklahoma",40015,Caddo,Oklahoma,28762
+"Canadian, Oklahoma",40017,Canadian,Oklahoma,148306
+"Carter, Oklahoma",40019,Carter,Oklahoma,48111
+"Cherokee, Oklahoma",40021,Cherokee,Oklahoma,48657
+"Choctaw, Oklahoma",40023,Choctaw,Oklahoma,14672
+"Cimarron, Oklahoma",40025,Cimarron,Oklahoma,2137
+"Cleveland, Oklahoma",40027,Cleveland,Oklahoma,284014
+"Coal, Oklahoma",40029,Coal,Oklahoma,5495
+"Comanche, Oklahoma",40031,Comanche,Oklahoma,120749
+"Cotton, Oklahoma",40033,Cotton,Oklahoma,5666
+"Craig, Oklahoma",40035,Craig,Oklahoma,14142
+"Creek, Oklahoma",40037,Creek,Oklahoma,71522
+"Custer, Oklahoma",40039,Custer,Oklahoma,29003
+"Delaware, Oklahoma",40041,Delaware,Oklahoma,43009
+"Dewey, Oklahoma",40043,Dewey,Oklahoma,4891
+"Ellis, Oklahoma",40045,Ellis,Oklahoma,3859
+"Garfield, Oklahoma",40047,Garfield,Oklahoma,61056
+"Garvin, Oklahoma",40049,Garvin,Oklahoma,27711
+"Grady, Oklahoma",40051,Grady,Oklahoma,55834
+"Grant, Oklahoma",40053,Grant,Oklahoma,4333
+"Greer, Oklahoma",40055,Greer,Oklahoma,5712
+"Harmon, Oklahoma",40057,Harmon,Oklahoma,2653
+"Harper, Oklahoma",40059,Harper,Oklahoma,3688
+"Haskell, Oklahoma",40061,Haskell,Oklahoma,12627
+"Hughes, Oklahoma",40063,Hughes,Oklahoma,13279
+"Jackson, Oklahoma",40065,Jackson,Oklahoma,24530
+"Jefferson, Oklahoma",40067,Jefferson,Oklahoma,6002
+"Johnston, Oklahoma",40069,Johnston,Oklahoma,11085
+"Kay, Oklahoma",40071,Kay,Oklahoma,43538
+"Kingfisher, Oklahoma",40073,Kingfisher,Oklahoma,15765
+"Kiowa, Oklahoma",40075,Kiowa,Oklahoma,8708
+"Latimer, Oklahoma",40077,Latimer,Oklahoma,10073
+"Le Flore, Oklahoma",40079,Le Flore,Oklahoma,49853
+"Lincoln, Oklahoma",40081,Lincoln,Oklahoma,34877
+"Logan, Oklahoma",40083,Logan,Oklahoma,48011
+"Love, Oklahoma",40085,Love,Oklahoma,10253
+"McClain, Oklahoma",40087,McClain,Oklahoma,40474
+"McCurtain, Oklahoma",40089,McCurtain,Oklahoma,32832
+"McIntosh, Oklahoma",40091,McIntosh,Oklahoma,19596
+"Major, Oklahoma",40093,Major,Oklahoma,7629
+"Marshall, Oklahoma",40095,Marshall,Oklahoma,16931
+"Mayes, Oklahoma",40097,Mayes,Oklahoma,41100
+"Murray, Oklahoma",40099,Murray,Oklahoma,14073
+"Muskogee, Oklahoma",40101,Muskogee,Oklahoma,67997
+"Noble, Oklahoma",40103,Noble,Oklahoma,11131
+"Nowata, Oklahoma",40105,Nowata,Oklahoma,10076
+"Okfuskee, Oklahoma",40107,Okfuskee,Oklahoma,11993
+"Oklahoma, Oklahoma",40109,Oklahoma,Oklahoma,797434
+"Okmulgee, Oklahoma",40111,Okmulgee,Oklahoma,38465
+"Osage, Oklahoma",40113,Osage,Oklahoma,46963
+"Ottawa, Oklahoma",40115,Ottawa,Oklahoma,31127
+"Pawnee, Oklahoma",40117,Pawnee,Oklahoma,16376
+"Payne, Oklahoma",40119,Payne,Oklahoma,81784
+"Pittsburg, Oklahoma",40121,Pittsburg,Oklahoma,43654
+"Pontotoc, Oklahoma",40123,Pontotoc,Oklahoma,38284
+"Pottawatomie, Oklahoma",40125,Pottawatomie,Oklahoma,72592
+"Pushmataha, Oklahoma",40127,Pushmataha,Oklahoma,11096
+"Roger Mills, Oklahoma",40129,Roger Mills,Oklahoma,3583
+"Rogers, Oklahoma",40131,Rogers,Oklahoma,92459
+"Seminole, Oklahoma",40133,Seminole,Oklahoma,24258
+"Sequoyah, Oklahoma",40135,Sequoyah,Oklahoma,41569
+"Stephens, Oklahoma",40137,Stephens,Oklahoma,43143
+"Texas, Oklahoma",40139,Texas,Oklahoma,19983
+"Tillman, Oklahoma",40141,Tillman,Oklahoma,7250
+"Tulsa, Oklahoma",40143,Tulsa,Oklahoma,651552
+"Wagoner, Oklahoma",40145,Wagoner,Oklahoma,81289
+"Washington, Oklahoma",40147,Washington,Oklahoma,51527
+"Washita, Oklahoma",40149,Washita,Oklahoma,10916
+"Woods, Oklahoma",40151,Woods,Oklahoma,8793
+"Woodward, Oklahoma",40153,Woodward,Oklahoma,20211
+"Baker, Oregon",41001,Baker,Oregon,16124
+"Benton, Oregon",41003,Benton,Oregon,93053
+"Clackamas, Oregon",41005,Clackamas,Oregon,418187
+"Clatsop, Oregon",41007,Clatsop,Oregon,40224
+"Columbia, Oregon",41009,Columbia,Oregon,52354
+"Coos, Oregon",41011,Coos,Oregon,64487
+"Crook, Oregon",41013,Crook,Oregon,24404
+"Curry, Oregon",41015,Curry,Oregon,22925
+"Deschutes, Oregon",41017,Deschutes,Oregon,197692
+"Douglas, Oregon",41019,Douglas,Oregon,110980
+"Gilliam, Oregon",41021,Gilliam,Oregon,1912
+"Grant, Oregon",41023,Grant,Oregon,7199
+"Harney, Oregon",41025,Harney,Oregon,7393
+"Hood River, Oregon",41027,Hood River,Oregon,23382
+"Jackson, Oregon",41029,Jackson,Oregon,220944
+"Jefferson, Oregon",41031,Jefferson,Oregon,24658
+"Josephine, Oregon",41033,Josephine,Oregon,87487
+"Klamath, Oregon",41035,Klamath,Oregon,68238
+"Lake, Oregon",41037,Lake,Oregon,7869
+"Lane, Oregon",41039,Lane,Oregon,382067
+"Lincoln, Oregon",41041,Lincoln,Oregon,49962
+"Linn, Oregon",41043,Linn,Oregon,129749
+"Malheur, Oregon",41045,Malheur,Oregon,30571
+"Marion, Oregon",41047,Marion,Oregon,347818
+"Morrow, Oregon",41049,Morrow,Oregon,11603
+"Multnomah, Oregon",41051,Multnomah,Oregon,812855
+"Polk, Oregon",41053,Polk,Oregon,86085
+"Sherman, Oregon",41055,Sherman,Oregon,1780
+"Tillamook, Oregon",41057,Tillamook,Oregon,27036
+"Umatilla, Oregon",41059,Umatilla,Oregon,77950
+"Union, Oregon",41061,Union,Oregon,26835
+"Wallowa, Oregon",41063,Wallowa,Oregon,7208
+"Wasco, Oregon",41065,Wasco,Oregon,26682
+"Washington, Oregon",41067,Washington,Oregon,601592
+"Wheeler, Oregon",41069,Wheeler,Oregon,1332
+"Yamhill, Oregon",41071,Yamhill,Oregon,107100
+"Adams, Pennsylvania",42001,Adams,Pennsylvania,103009
+"Allegheny, Pennsylvania",42003,Allegheny,Pennsylvania,1216045
+"Armstrong, Pennsylvania",42005,Armstrong,Pennsylvania,64735
+"Beaver, Pennsylvania",42007,Beaver,Pennsylvania,163929
+"Bedford, Pennsylvania",42009,Bedford,Pennsylvania,47888
+"Berks, Pennsylvania",42011,Berks,Pennsylvania,421164
+"Blair, Pennsylvania",42013,Blair,Pennsylvania,121829
+"Bradford, Pennsylvania",42015,Bradford,Pennsylvania,60323
+"Bucks, Pennsylvania",42017,Bucks,Pennsylvania,628270
+"Butler, Pennsylvania",42019,Butler,Pennsylvania,187853
+"Cambria, Pennsylvania",42021,Cambria,Pennsylvania,130192
+"Cameron, Pennsylvania",42023,Cameron,Pennsylvania,4447
+"Carbon, Pennsylvania",42025,Carbon,Pennsylvania,64182
+"Centre, Pennsylvania",42027,Centre,Pennsylvania,162385
+"Chester, Pennsylvania",42029,Chester,Pennsylvania,524989
+"Clarion, Pennsylvania",42031,Clarion,Pennsylvania,38438
+"Clearfield, Pennsylvania",42033,Clearfield,Pennsylvania,79255
+"Clinton, Pennsylvania",42035,Clinton,Pennsylvania,38632
+"Columbia, Pennsylvania",42037,Columbia,Pennsylvania,64964
+"Crawford, Pennsylvania",42039,Crawford,Pennsylvania,84629
+"Cumberland, Pennsylvania",42041,Cumberland,Pennsylvania,253370
+"Dauphin, Pennsylvania",42043,Dauphin,Pennsylvania,278299
+"Delaware, Pennsylvania",42045,Delaware,Pennsylvania,566747
+"Elk, Pennsylvania",42047,Elk,Pennsylvania,29910
+"Erie, Pennsylvania",42049,Erie,Pennsylvania,269728
+"Fayette, Pennsylvania",42051,Fayette,Pennsylvania,129274
+"Forest, Pennsylvania",42053,Forest,Pennsylvania,7247
+"Franklin, Pennsylvania",42055,Franklin,Pennsylvania,155027
+"Fulton, Pennsylvania",42057,Fulton,Pennsylvania,14530
+"Greene, Pennsylvania",42059,Greene,Pennsylvania,36233
+"Huntingdon, Pennsylvania",42061,Huntingdon,Pennsylvania,45144
+"Indiana, Pennsylvania",42063,Indiana,Pennsylvania,84073
+"Jefferson, Pennsylvania",42065,Jefferson,Pennsylvania,43425
+"Juniata, Pennsylvania",42067,Juniata,Pennsylvania,24763
+"Lackawanna, Pennsylvania",42069,Lackawanna,Pennsylvania,209674
+"Lancaster, Pennsylvania",42071,Lancaster,Pennsylvania,545724
+"Lawrence, Pennsylvania",42073,Lawrence,Pennsylvania,85512
+"Lebanon, Pennsylvania",42075,Lebanon,Pennsylvania,141793
+"Lehigh, Pennsylvania",42077,Lehigh,Pennsylvania,369318
+"Luzerne, Pennsylvania",42079,Luzerne,Pennsylvania,317417
+"Lycoming, Pennsylvania",42081,Lycoming,Pennsylvania,113299
+"McKean, Pennsylvania",42083,McKean,Pennsylvania,40625
+"Mercer, Pennsylvania",42085,Mercer,Pennsylvania,109424
+"Mifflin, Pennsylvania",42087,Mifflin,Pennsylvania,46138
+"Monroe, Pennsylvania",42089,Monroe,Pennsylvania,170271
+"Montgomery, Pennsylvania",42091,Montgomery,Pennsylvania,830915
+"Montour, Pennsylvania",42093,Montour,Pennsylvania,18230
+"Northampton, Pennsylvania",42095,Northampton,Pennsylvania,305285
+"Northumberland, Pennsylvania",42097,Northumberland,Pennsylvania,90843
+"Perry, Pennsylvania",42099,Perry,Pennsylvania,46272
+"Philadelphia, Pennsylvania",42101,Philadelphia,Pennsylvania,1584064
+"Pike, Pennsylvania",42103,Pike,Pennsylvania,55809
+"Potter, Pennsylvania",42105,Potter,Pennsylvania,16526
+"Schuylkill, Pennsylvania",42107,Schuylkill,Pennsylvania,141359
+"Snyder, Pennsylvania",42109,Snyder,Pennsylvania,40372
+"Somerset, Pennsylvania",42111,Somerset,Pennsylvania,73447
+"Sullivan, Pennsylvania",42113,Sullivan,Pennsylvania,6066
+"Susquehanna, Pennsylvania",42115,Susquehanna,Pennsylvania,40328
+"Tioga, Pennsylvania",42117,Tioga,Pennsylvania,40591
+"Union, Pennsylvania",42119,Union,Pennsylvania,44923
+"Venango, Pennsylvania",42121,Venango,Pennsylvania,50668
+"Warren, Pennsylvania",42123,Warren,Pennsylvania,39191
+"Washington, Pennsylvania",42125,Washington,Pennsylvania,206865
+"Wayne, Pennsylvania",42127,Wayne,Pennsylvania,51361
+"Westmoreland, Pennsylvania",42129,Westmoreland,Pennsylvania,348899
+"Wyoming, Pennsylvania",42131,Wyoming,Pennsylvania,26794
+"York, Pennsylvania",42133,York,Pennsylvania,449058
+"Bristol, Rhode Island",44001,Bristol,Rhode Island,48479
+"Kent, Rhode Island",44003,Kent,Rhode Island,164292
+"Newport, Rhode Island",44005,Newport,Rhode Island,82082
+"Providence, Rhode Island",44007,Providence,Rhode Island,638931
+"Washington, Rhode Island",44009,Washington,Rhode Island,125577
+"Abbeville, South Carolina",45001,Abbeville,South Carolina,24527
+"Aiken, South Carolina",45003,Aiken,South Carolina,170872
+"Allendale, South Carolina",45005,Allendale,South Carolina,8688
+"Anderson, South Carolina",45007,Anderson,South Carolina,202558
+"Bamberg, South Carolina",45009,Bamberg,South Carolina,14066
+"Barnwell, South Carolina",45011,Barnwell,South Carolina,20866
+"Beaufort, South Carolina",45013,Beaufort,South Carolina,192122
+"Berkeley, South Carolina",45015,Berkeley,South Carolina,227907
+"Calhoun, South Carolina",45017,Calhoun,South Carolina,14553
+"Charleston, South Carolina",45019,Charleston,South Carolina,411406
+"Cherokee, South Carolina",45021,Cherokee,South Carolina,57300
+"Chester, South Carolina",45023,Chester,South Carolina,32244
+"Chesterfield, South Carolina",45025,Chesterfield,South Carolina,45650
+"Clarendon, South Carolina",45027,Clarendon,South Carolina,33745
+"Colleton, South Carolina",45029,Colleton,South Carolina,37677
+"Darlington, South Carolina",45031,Darlington,South Carolina,66618
+"Dillon, South Carolina",45033,Dillon,South Carolina,30479
+"Dorchester, South Carolina",45035,Dorchester,South Carolina,162809
+"Edgefield, South Carolina",45037,Edgefield,South Carolina,27260
+"Fairfield, South Carolina",45039,Fairfield,South Carolina,22347
+"Florence, South Carolina",45041,Florence,South Carolina,138293
+"Georgetown, South Carolina",45043,Georgetown,South Carolina,62680
+"Greenville, South Carolina",45045,Greenville,South Carolina,523542
+"Greenwood, South Carolina",45047,Greenwood,South Carolina,70811
+"Hampton, South Carolina",45049,Hampton,South Carolina,19222
+"Horry, South Carolina",45051,Horry,South Carolina,354081
+"Jasper, South Carolina",45053,Jasper,South Carolina,30073
+"Kershaw, South Carolina",45055,Kershaw,South Carolina,66551
+"Lancaster, South Carolina",45057,Lancaster,South Carolina,98012
+"Laurens, South Carolina",45059,Laurens,South Carolina,67493
+"Lee, South Carolina",45061,Lee,South Carolina,16828
+"Lexington, South Carolina",45063,Lexington,South Carolina,298750
+"McCormick, South Carolina",45065,McCormick,South Carolina,9463
+"Marion, South Carolina",45067,Marion,South Carolina,30657
+"Marlboro, South Carolina",45069,Marlboro,South Carolina,26118
+"Newberry, South Carolina",45071,Newberry,South Carolina,38440
+"Oconee, South Carolina",45073,Oconee,South Carolina,79546
+"Orangeburg, South Carolina",45075,Orangeburg,South Carolina,86175
+"Pickens, South Carolina",45077,Pickens,South Carolina,126884
+"Richland, South Carolina",45079,Richland,South Carolina,415759
+"Saluda, South Carolina",45081,Saluda,South Carolina,20473
+"Spartanburg, South Carolina",45083,Spartanburg,South Carolina,319785
+"Sumter, South Carolina",45085,Sumter,South Carolina,106721
+"Union, South Carolina",45087,Union,South Carolina,27316
+"Williamsburg, South Carolina",45089,Williamsburg,South Carolina,30368
+"York, South Carolina",45091,York,South Carolina,280979
+"Aurora, South Dakota",46003,Aurora,South Dakota,2751
+"Beadle, South Dakota",46005,Beadle,South Dakota,18453
+"Bennett, South Dakota",46007,Bennett,South Dakota,3365
+"Bon Homme, South Dakota",46009,Bon Homme,South Dakota,6901
+"Brookings, South Dakota",46011,Brookings,South Dakota,35077
+"Brown, South Dakota",46013,Brown,South Dakota,38839
+"Brule, South Dakota",46015,Brule,South Dakota,5297
+"Buffalo, South Dakota",46017,Buffalo,South Dakota,1962
+"Butte, South Dakota",46019,Butte,South Dakota,10429
+"Campbell, South Dakota",46021,Campbell,South Dakota,1376
+"Charles Mix, South Dakota",46023,Charles Mix,South Dakota,9292
+"Clark, South Dakota",46025,Clark,South Dakota,3736
+"Clay, South Dakota",46027,Clay,South Dakota,14070
+"Codington, South Dakota",46029,Codington,South Dakota,28009
+"Corson, South Dakota",46031,Corson,South Dakota,4086
+"Custer, South Dakota",46033,Custer,South Dakota,8972
+"Davison, South Dakota",46035,Davison,South Dakota,19775
+"Day, South Dakota",46037,Day,South Dakota,5424
+"Deuel, South Dakota",46039,Deuel,South Dakota,4351
+"Dewey, South Dakota",46041,Dewey,South Dakota,5892
+"Douglas, South Dakota",46043,Douglas,South Dakota,2921
+"Edmunds, South Dakota",46045,Edmunds,South Dakota,3829
+"Fall River, South Dakota",46047,Fall River,South Dakota,6713
+"Faulk, South Dakota",46049,Faulk,South Dakota,2299
+"Grant, South Dakota",46051,Grant,South Dakota,7052
+"Gregory, South Dakota",46053,Gregory,South Dakota,4185
+"Haakon, South Dakota",46055,Haakon,South Dakota,1899
+"Hamlin, South Dakota",46057,Hamlin,South Dakota,6164
+"Hand, South Dakota",46059,Hand,South Dakota,3191
+"Hanson, South Dakota",46061,Hanson,South Dakota,3453
+"Harding, South Dakota",46063,Harding,South Dakota,1298
+"Hughes, South Dakota",46065,Hughes,South Dakota,17526
+"Hutchinson, South Dakota",46067,Hutchinson,South Dakota,7291
+"Hyde, South Dakota",46069,Hyde,South Dakota,1301
+"Jackson, South Dakota",46071,Jackson,South Dakota,3344
+"Jerauld, South Dakota",46073,Jerauld,South Dakota,2013
+"Jones, South Dakota",46075,Jones,South Dakota,903
+"Kingsbury, South Dakota",46077,Kingsbury,South Dakota,4939
+"Lake, South Dakota",46079,Lake,South Dakota,12797
+"Lawrence, South Dakota",46081,Lawrence,South Dakota,25844
+"Lincoln, South Dakota",46083,Lincoln,South Dakota,61128
+"Lyman, South Dakota",46085,Lyman,South Dakota,3781
+"McCook, South Dakota",46087,McCook,South Dakota,5586
+"McPherson, South Dakota",46089,McPherson,South Dakota,2379
+"Marshall, South Dakota",46091,Marshall,South Dakota,4935
+"Meade, South Dakota",46093,Meade,South Dakota,28332
+"Mellette, South Dakota",46095,Mellette,South Dakota,2061
+"Miner, South Dakota",46097,Miner,South Dakota,2216
+"Minnehaha, South Dakota",46099,Minnehaha,South Dakota,193134
+"Moody, South Dakota",46101,Moody,South Dakota,6576
+"Oglala Lakota, South Dakota",46102,Oglala Lakota,South Dakota,14177
+"Pennington, South Dakota",46103,Pennington,South Dakota,113775
+"Perkins, South Dakota",46105,Perkins,South Dakota,2865
+"Potter, South Dakota",46107,Potter,South Dakota,2153
+"Roberts, South Dakota",46109,Roberts,South Dakota,10394
+"Sanborn, South Dakota",46111,Sanborn,South Dakota,2344
+"Spink, South Dakota",46115,Spink,South Dakota,6376
+"Stanley, South Dakota",46117,Stanley,South Dakota,3098
+"Sully, South Dakota",46119,Sully,South Dakota,1391
+"Todd, South Dakota",46121,Todd,South Dakota,10177
+"Tripp, South Dakota",46123,Tripp,South Dakota,5441
+"Turner, South Dakota",46125,Turner,South Dakota,8384
+"Union, South Dakota",46127,Union,South Dakota,15932
+"Walworth, South Dakota",46129,Walworth,South Dakota,5435
+"Yankton, South Dakota",46135,Yankton,South Dakota,22814
+"Ziebach, South Dakota",46137,Ziebach,South Dakota,2756
+"Anderson, Tennessee",47001,Anderson,Tennessee,76978
+"Bedford, Tennessee",47003,Bedford,Tennessee,49713
+"Benton, Tennessee",47005,Benton,Tennessee,16160
+"Bledsoe, Tennessee",47007,Bledsoe,Tennessee,15064
+"Blount, Tennessee",47009,Blount,Tennessee,133088
+"Bradley, Tennessee",47011,Bradley,Tennessee,108110
+"Campbell, Tennessee",47013,Campbell,Tennessee,39842
+"Cannon, Tennessee",47015,Cannon,Tennessee,14678
+"Carroll, Tennessee",47017,Carroll,Tennessee,27767
+"Carter, Tennessee",47019,Carter,Tennessee,56391
+"Cheatham, Tennessee",47021,Cheatham,Tennessee,40667
+"Chester, Tennessee",47023,Chester,Tennessee,17297
+"Claiborne, Tennessee",47025,Claiborne,Tennessee,31959
+"Clay, Tennessee",47027,Clay,Tennessee,7615
+"Cocke, Tennessee",47029,Cocke,Tennessee,36004
+"Coffee, Tennessee",47031,Coffee,Tennessee,56520
+"Crockett, Tennessee",47033,Crockett,Tennessee,14230
+"Cumberland, Tennessee",47035,Cumberland,Tennessee,60520
+"Davidson, Tennessee",47037,Davidson,Tennessee,694144
+"Decatur, Tennessee",47039,Decatur,Tennessee,11663
+"DeKalb, Tennessee",47041,DeKalb,Tennessee,20490
+"Dickson, Tennessee",47043,Dickson,Tennessee,53948
+"Dyer, Tennessee",47045,Dyer,Tennessee,37159
+"Fayette, Tennessee",47047,Fayette,Tennessee,41133
+"Fentress, Tennessee",47049,Fentress,Tennessee,18523
+"Franklin, Tennessee",47051,Franklin,Tennessee,42208
+"Gibson, Tennessee",47053,Gibson,Tennessee,49133
+"Giles, Tennessee",47055,Giles,Tennessee,29464
+"Grainger, Tennessee",47057,Grainger,Tennessee,23320
+"Greene, Tennessee",47059,Greene,Tennessee,69069
+"Grundy, Tennessee",47061,Grundy,Tennessee,13427
+"Hamblen, Tennessee",47063,Hamblen,Tennessee,64934
+"Hamilton, Tennessee",47065,Hamilton,Tennessee,367804
+"Hancock, Tennessee",47067,Hancock,Tennessee,6620
+"Hardeman, Tennessee",47069,Hardeman,Tennessee,25050
+"Hardin, Tennessee",47071,Hardin,Tennessee,25652
+"Hawkins, Tennessee",47073,Hawkins,Tennessee,56786
+"Haywood, Tennessee",47075,Haywood,Tennessee,17304
+"Henderson, Tennessee",47077,Henderson,Tennessee,28117
+"Henry, Tennessee",47079,Henry,Tennessee,32345
+"Hickman, Tennessee",47081,Hickman,Tennessee,25178
+"Houston, Tennessee",47083,Houston,Tennessee,8201
+"Humphreys, Tennessee",47085,Humphreys,Tennessee,18582
+"Jackson, Tennessee",47087,Jackson,Tennessee,11786
+"Jefferson, Tennessee",47089,Jefferson,Tennessee,54495
+"Johnson, Tennessee",47091,Johnson,Tennessee,17788
+"Knox, Tennessee",47093,Knox,Tennessee,470313
+"Lake, Tennessee",47095,Lake,Tennessee,7016
+"Lauderdale, Tennessee",47097,Lauderdale,Tennessee,25633
+"Lawrence, Tennessee",47099,Lawrence,Tennessee,44142
+"Lewis, Tennessee",47101,Lewis,Tennessee,12268
+"Lincoln, Tennessee",47103,Lincoln,Tennessee,34366
+"Loudon, Tennessee",47105,Loudon,Tennessee,54068
+"McMinn, Tennessee",47107,McMinn,Tennessee,53794
+"McNairy, Tennessee",47109,McNairy,Tennessee,25694
+"Macon, Tennessee",47111,Macon,Tennessee,24602
+"Madison, Tennessee",47113,Madison,Tennessee,97984
+"Marion, Tennessee",47115,Marion,Tennessee,28907
+"Marshall, Tennessee",47117,Marshall,Tennessee,34375
+"Maury, Tennessee",47119,Maury,Tennessee,96387
+"Meigs, Tennessee",47121,Meigs,Tennessee,12422
+"Monroe, Tennessee",47123,Monroe,Tennessee,46545
+"Montgomery, Tennessee",47125,Montgomery,Tennessee,208993
+"Moore, Tennessee",47127,Moore,Tennessee,6488
+"Morgan, Tennessee",47129,Morgan,Tennessee,21403
+"Obion, Tennessee",47131,Obion,Tennessee,30069
+"Overton, Tennessee",47133,Overton,Tennessee,22241
+"Perry, Tennessee",47135,Perry,Tennessee,8076
+"Pickett, Tennessee",47137,Pickett,Tennessee,5048
+"Polk, Tennessee",47139,Polk,Tennessee,16832
+"Putnam, Tennessee",47141,Putnam,Tennessee,80245
+"Rhea, Tennessee",47143,Rhea,Tennessee,33167
+"Roane, Tennessee",47145,Roane,Tennessee,53382
+"Robertson, Tennessee",47147,Robertson,Tennessee,71813
+"Rutherford, Tennessee",47149,Rutherford,Tennessee,332285
+"Scott, Tennessee",47151,Scott,Tennessee,22068
+"Sequatchie, Tennessee",47153,Sequatchie,Tennessee,15026
+"Sevier, Tennessee",47155,Sevier,Tennessee,98250
+"Shelby, Tennessee",47157,Shelby,Tennessee,937166
+"Smith, Tennessee",47159,Smith,Tennessee,20157
+"Stewart, Tennessee",47161,Stewart,Tennessee,13715
+"Sullivan, Tennessee",47163,Sullivan,Tennessee,158348
+"Sumner, Tennessee",47165,Sumner,Tennessee,191283
+"Tipton, Tennessee",47167,Tipton,Tennessee,61599
+"Trousdale, Tennessee",47169,Trousdale,Tennessee,11284
+"Unicoi, Tennessee",47171,Unicoi,Tennessee,17883
+"Union, Tennessee",47173,Union,Tennessee,19972
+"Van Buren, Tennessee",47175,Van Buren,Tennessee,5872
+"Warren, Tennessee",47177,Warren,Tennessee,41277
+"Washington, Tennessee",47179,Washington,Tennessee,129375
+"Wayne, Tennessee",47181,Wayne,Tennessee,16673
+"Weakley, Tennessee",47183,Weakley,Tennessee,33328
+"White, Tennessee",47185,White,Tennessee,27345
+"Williamson, Tennessee",47187,Williamson,Tennessee,238412
+"Wilson, Tennessee",47189,Wilson,Tennessee,144657
+"Anderson, Texas",48001,Anderson,Texas,57735
+"Andrews, Texas",48003,Andrews,Texas,18705
+"Angelina, Texas",48005,Angelina,Texas,86715
+"Aransas, Texas",48007,Aransas,Texas,23510
+"Archer, Texas",48009,Archer,Texas,8553
+"Armstrong, Texas",48011,Armstrong,Texas,1887
+"Atascosa, Texas",48013,Atascosa,Texas,51153
+"Austin, Texas",48015,Austin,Texas,30032
+"Bailey, Texas",48017,Bailey,Texas,7000
+"Bandera, Texas",48019,Bandera,Texas,23112
+"Bastrop, Texas",48021,Bastrop,Texas,88723
+"Baylor, Texas",48023,Baylor,Texas,3509
+"Bee, Texas",48025,Bee,Texas,32565
+"Bell, Texas",48027,Bell,Texas,362924
+"Bexar, Texas",48029,Bexar,Texas,2003554
+"Blanco, Texas",48031,Blanco,Texas,11931
+"Borden, Texas",48033,Borden,Texas,654
+"Bosque, Texas",48035,Bosque,Texas,18685
+"Bowie, Texas",48037,Bowie,Texas,93245
+"Brazoria, Texas",48039,Brazoria,Texas,374264
+"Brazos, Texas",48041,Brazos,Texas,229211
+"Brewster, Texas",48043,Brewster,Texas,9203
+"Briscoe, Texas",48045,Briscoe,Texas,1546
+"Brooks, Texas",48047,Brooks,Texas,7093
+"Brown, Texas",48049,Brown,Texas,37864
+"Burleson, Texas",48051,Burleson,Texas,18443
+"Burnet, Texas",48053,Burnet,Texas,48155
+"Caldwell, Texas",48055,Caldwell,Texas,43664
+"Calhoun, Texas",48057,Calhoun,Texas,21290
+"Callahan, Texas",48059,Callahan,Texas,13943
+"Cameron, Texas",48061,Cameron,Texas,423163
+"Camp, Texas",48063,Camp,Texas,13094
+"Carson, Texas",48065,Carson,Texas,5926
+"Cass, Texas",48067,Cass,Texas,30026
+"Castro, Texas",48069,Castro,Texas,7530
+"Chambers, Texas",48071,Chambers,Texas,43837
+"Cherokee, Texas",48073,Cherokee,Texas,52646
+"Childress, Texas",48075,Childress,Texas,7306
+"Clay, Texas",48077,Clay,Texas,10471
+"Cochran, Texas",48079,Cochran,Texas,2853
+"Coke, Texas",48081,Coke,Texas,3387
+"Coleman, Texas",48083,Coleman,Texas,8175
+"Collin, Texas",48085,Collin,Texas,1034730
+"Collingsworth, Texas",48087,Collingsworth,Texas,2920
+"Colorado, Texas",48089,Colorado,Texas,21493
+"Comal, Texas",48091,Comal,Texas,156209
+"Comanche, Texas",48093,Comanche,Texas,13635
+"Concho, Texas",48095,Concho,Texas,2726
+"Cooke, Texas",48097,Cooke,Texas,41257
+"Coryell, Texas",48099,Coryell,Texas,75951
+"Cottle, Texas",48101,Cottle,Texas,1398
+"Crane, Texas",48103,Crane,Texas,4797
+"Crockett, Texas",48105,Crockett,Texas,3464
+"Crosby, Texas",48107,Crosby,Texas,5737
+"Culberson, Texas",48109,Culberson,Texas,2171
+"Dallam, Texas",48111,Dallam,Texas,7287
+"Dallas, Texas",48113,Dallas,Texas,2635516
+"Dawson, Texas",48115,Dawson,Texas,12728
+"Deaf Smith, Texas",48117,Deaf Smith,Texas,18546
+"Delta, Texas",48119,Delta,Texas,5331
+"Denton, Texas",48121,Denton,Texas,887207
+"DeWitt, Texas",48123,DeWitt,Texas,20160
+"Dickens, Texas",48125,Dickens,Texas,2211
+"Dimmit, Texas",48127,Dimmit,Texas,10124
+"Donley, Texas",48129,Donley,Texas,3278
+"Duval, Texas",48131,Duval,Texas,11157
+"Eastland, Texas",48133,Eastland,Texas,18360
+"Ector, Texas",48135,Ector,Texas,166223
+"Edwards, Texas",48137,Edwards,Texas,1932
+"Ellis, Texas",48139,Ellis,Texas,184826
+"El Paso, Texas",48141,El Paso,Texas,839238
+"Erath, Texas",48143,Erath,Texas,42698
+"Falls, Texas",48145,Falls,Texas,17297
+"Fannin, Texas",48147,Fannin,Texas,35514
+"Fayette, Texas",48149,Fayette,Texas,25346
+"Fisher, Texas",48151,Fisher,Texas,3830
+"Floyd, Texas",48153,Floyd,Texas,5712
+"Foard, Texas",48155,Foard,Texas,1155
+"Fort Bend, Texas",48157,Fort Bend,Texas,811688
+"Franklin, Texas",48159,Franklin,Texas,10725
+"Freestone, Texas",48161,Freestone,Texas,19717
+"Frio, Texas",48163,Frio,Texas,20306
+"Gaines, Texas",48165,Gaines,Texas,21492
+"Galveston, Texas",48167,Galveston,Texas,342139
+"Garza, Texas",48169,Garza,Texas,6229
+"Gillespie, Texas",48171,Gillespie,Texas,26988
+"Glasscock, Texas",48173,Glasscock,Texas,1409
+"Goliad, Texas",48175,Goliad,Texas,7658
+"Gonzales, Texas",48177,Gonzales,Texas,20837
+"Gray, Texas",48179,Gray,Texas,21886
+"Grayson, Texas",48181,Grayson,Texas,136212
+"Gregg, Texas",48183,Gregg,Texas,123945
+"Grimes, Texas",48185,Grimes,Texas,28880
+"Guadalupe, Texas",48187,Guadalupe,Texas,166847
+"Hale, Texas",48189,Hale,Texas,33406
+"Hall, Texas",48191,Hall,Texas,2964
+"Hamilton, Texas",48193,Hamilton,Texas,8461
+"Hansford, Texas",48195,Hansford,Texas,5399
+"Hardeman, Texas",48197,Hardeman,Texas,3933
+"Hardin, Texas",48199,Hardin,Texas,57602
+"Harris, Texas",48201,Harris,Texas,4713325
+"Harrison, Texas",48203,Harrison,Texas,66553
+"Hartley, Texas",48205,Hartley,Texas,5576
+"Haskell, Texas",48207,Haskell,Texas,5658
+"Hays, Texas",48209,Hays,Texas,230191
+"Hemphill, Texas",48211,Hemphill,Texas,3819
+"Henderson, Texas",48213,Henderson,Texas,82737
+"Hidalgo, Texas",48215,Hidalgo,Texas,868707
+"Hill, Texas",48217,Hill,Texas,36649
+"Hockley, Texas",48219,Hockley,Texas,23021
+"Hood, Texas",48221,Hood,Texas,61643
+"Hopkins, Texas",48223,Hopkins,Texas,37084
+"Houston, Texas",48225,Houston,Texas,22968
+"Howard, Texas",48227,Howard,Texas,36664
+"Hudspeth, Texas",48229,Hudspeth,Texas,4886
+"Hunt, Texas",48231,Hunt,Texas,98594
+"Hutchinson, Texas",48233,Hutchinson,Texas,20938
+"Irion, Texas",48235,Irion,Texas,1536
+"Jack, Texas",48237,Jack,Texas,8935
+"Jackson, Texas",48239,Jackson,Texas,14760
+"Jasper, Texas",48241,Jasper,Texas,35529
+"Jeff Davis, Texas",48243,Jeff Davis,Texas,2274
+"Jefferson, Texas",48245,Jefferson,Texas,251565
+"Jim Hogg, Texas",48247,Jim Hogg,Texas,5200
+"Jim Wells, Texas",48249,Jim Wells,Texas,40482
+"Johnson, Texas",48251,Johnson,Texas,175817
+"Jones, Texas",48253,Jones,Texas,20083
+"Karnes, Texas",48255,Karnes,Texas,15601
+"Kaufman, Texas",48257,Kaufman,Texas,136154
+"Kendall, Texas",48259,Kendall,Texas,47431
+"Kenedy, Texas",48261,Kenedy,Texas,404
+"Kent, Texas",48263,Kent,Texas,762
+"Kerr, Texas",48265,Kerr,Texas,52600
+"Kimble, Texas",48267,Kimble,Texas,4337
+"King, Texas",48269,King,Texas,272
+"Kinney, Texas",48271,Kinney,Texas,3667
+"Kleberg, Texas",48273,Kleberg,Texas,30680
+"Knox, Texas",48275,Knox,Texas,3664
+"Lamar, Texas",48277,Lamar,Texas,49859
+"Lamb, Texas",48279,Lamb,Texas,12893
+"Lampasas, Texas",48281,Lampasas,Texas,21428
+"La Salle, Texas",48283,La Salle,Texas,7520
+"Lavaca, Texas",48285,Lavaca,Texas,20154
+"Lee, Texas",48287,Lee,Texas,17239
+"Leon, Texas",48289,Leon,Texas,17404
+"Liberty, Texas",48291,Liberty,Texas,88219
+"Limestone, Texas",48293,Limestone,Texas,23437
+"Lipscomb, Texas",48295,Lipscomb,Texas,3233
+"Live Oak, Texas",48297,Live Oak,Texas,12207
+"Llano, Texas",48299,Llano,Texas,21795
+"Loving, Texas",48301,Loving,Texas,169
+"Lubbock, Texas",48303,Lubbock,Texas,310569
+"Lynn, Texas",48305,Lynn,Texas,5951
+"McCulloch, Texas",48307,McCulloch,Texas,7984
+"McLennan, Texas",48309,McLennan,Texas,256623
+"McMullen, Texas",48311,McMullen,Texas,743
+"Madison, Texas",48313,Madison,Texas,14284
+"Marion, Texas",48315,Marion,Texas,9854
+"Martin, Texas",48317,Martin,Texas,5771
+"Mason, Texas",48319,Mason,Texas,4274
+"Matagorda, Texas",48321,Matagorda,Texas,36643
+"Maverick, Texas",48323,Maverick,Texas,58722
+"Medina, Texas",48325,Medina,Texas,51584
+"Menard, Texas",48327,Menard,Texas,2138
+"Midland, Texas",48329,Midland,Texas,176832
+"Milam, Texas",48331,Milam,Texas,24823
+"Mills, Texas",48333,Mills,Texas,4873
+"Mitchell, Texas",48335,Mitchell,Texas,8545
+"Montague, Texas",48337,Montague,Texas,19818
+"Montgomery, Texas",48339,Montgomery,Texas,607391
+"Moore, Texas",48341,Moore,Texas,20940
+"Morris, Texas",48343,Morris,Texas,12388
+"Motley, Texas",48345,Motley,Texas,1200
+"Nacogdoches, Texas",48347,Nacogdoches,Texas,65204
+"Navarro, Texas",48349,Navarro,Texas,50113
+"Newton, Texas",48351,Newton,Texas,13595
+"Nolan, Texas",48353,Nolan,Texas,14714
+"Nueces, Texas",48355,Nueces,Texas,362294
+"Ochiltree, Texas",48357,Ochiltree,Texas,9836
+"Oldham, Texas",48359,Oldham,Texas,2112
+"Orange, Texas",48361,Orange,Texas,83396
+"Palo Pinto, Texas",48363,Palo Pinto,Texas,29189
+"Panola, Texas",48365,Panola,Texas,23194
+"Parker, Texas",48367,Parker,Texas,142878
+"Parmer, Texas",48369,Parmer,Texas,9605
+"Pecos, Texas",48371,Pecos,Texas,15823
+"Polk, Texas",48373,Polk,Texas,51353
+"Potter, Texas",48375,Potter,Texas,117415
+"Presidio, Texas",48377,Presidio,Texas,6704
+"Rains, Texas",48379,Rains,Texas,12514
+"Randall, Texas",48381,Randall,Texas,137713
+"Reagan, Texas",48383,Reagan,Texas,3849
+"Real, Texas",48385,Real,Texas,3452
+"Red River, Texas",48387,Red River,Texas,12023
+"Reeves, Texas",48389,Reeves,Texas,15976
+"Refugio, Texas",48391,Refugio,Texas,6948
+"Roberts, Texas",48393,Roberts,Texas,854
+"Robertson, Texas",48395,Robertson,Texas,17074
+"Rockwall, Texas",48397,Rockwall,Texas,104915
+"Runnels, Texas",48399,Runnels,Texas,10264
+"Rusk, Texas",48401,Rusk,Texas,54406
+"Sabine, Texas",48403,Sabine,Texas,10542
+"San Augustine, Texas",48405,San Augustine,Texas,8237
+"San Jacinto, Texas",48407,San Jacinto,Texas,28859
+"San Patricio, Texas",48409,San Patricio,Texas,66730
+"San Saba, Texas",48411,San Saba,Texas,6055
+"Schleicher, Texas",48413,Schleicher,Texas,2793
+"Scurry, Texas",48415,Scurry,Texas,16703
+"Shackelford, Texas",48417,Shackelford,Texas,3265
+"Shelby, Texas",48419,Shelby,Texas,25274
+"Sherman, Texas",48421,Sherman,Texas,3022
+"Smith, Texas",48423,Smith,Texas,232751
+"Somervell, Texas",48425,Somervell,Texas,9128
+"Starr, Texas",48427,Starr,Texas,64633
+"Stephens, Texas",48429,Stephens,Texas,9366
+"Sterling, Texas",48431,Sterling,Texas,1291
+"Stonewall, Texas",48433,Stonewall,Texas,1350
+"Sutton, Texas",48435,Sutton,Texas,3776
+"Swisher, Texas",48437,Swisher,Texas,7397
+"Tarrant, Texas",48439,Tarrant,Texas,2102515
+"Taylor, Texas",48441,Taylor,Texas,138034
+"Terrell, Texas",48443,Terrell,Texas,776
+"Terry, Texas",48445,Terry,Texas,12337
+"Throckmorton, Texas",48447,Throckmorton,Texas,1501
+"Titus, Texas",48449,Titus,Texas,32750
+"Tom Green, Texas",48451,Tom Green,Texas,119200
+"Travis, Texas",48453,Travis,Texas,1273954
+"Trinity, Texas",48455,Trinity,Texas,14651
+"Tyler, Texas",48457,Tyler,Texas,21672
+"Upshur, Texas",48459,Upshur,Texas,41753
+"Upton, Texas",48461,Upton,Texas,3657
+"Uvalde, Texas",48463,Uvalde,Texas,26741
+"Val Verde, Texas",48465,Val Verde,Texas,49025
+"Van Zandt, Texas",48467,Van Zandt,Texas,56590
+"Victoria, Texas",48469,Victoria,Texas,92084
+"Walker, Texas",48471,Walker,Texas,72971
+"Waller, Texas",48473,Waller,Texas,55246
+"Ward, Texas",48475,Ward,Texas,11998
+"Washington, Texas",48477,Washington,Texas,35882
+"Webb, Texas",48479,Webb,Texas,276652
+"Wharton, Texas",48481,Wharton,Texas,41556
+"Wheeler, Texas",48483,Wheeler,Texas,5056
+"Wichita, Texas",48485,Wichita,Texas,132230
+"Wilbarger, Texas",48487,Wilbarger,Texas,12769
+"Willacy, Texas",48489,Willacy,Texas,21358
+"Williamson, Texas",48491,Williamson,Texas,590551
+"Wilson, Texas",48493,Wilson,Texas,51070
+"Winkler, Texas",48495,Winkler,Texas,8010
+"Wise, Texas",48497,Wise,Texas,69984
+"Wood, Texas",48499,Wood,Texas,45539
+"Yoakum, Texas",48501,Yoakum,Texas,8713
+"Young, Texas",48503,Young,Texas,18010
+"Zapata, Texas",48505,Zapata,Texas,14179
+"Zavala, Texas",48507,Zavala,Texas,11840
+"Beaver, Utah",49001,Beaver,Utah,6710
+"Box Elder, Utah",49003,Box Elder,Utah,56046
+"Cache, Utah",49005,Cache,Utah,128289
+"Carbon, Utah",49007,Carbon,Utah,20463
+"Daggett, Utah",49009,Daggett,Utah,950
+"Davis, Utah",49011,Davis,Utah,355481
+"Duchesne, Utah",49013,Duchesne,Utah,19938
+"Emery, Utah",49015,Emery,Utah,10012
+"Garfield, Utah",49017,Garfield,Utah,5051
+"Grand, Utah",49019,Grand,Utah,9754
+"Iron, Utah",49021,Iron,Utah,54839
+"Juab, Utah",49023,Juab,Utah,12017
+"Kane, Utah",49025,Kane,Utah,7886
+"Millard, Utah",49027,Millard,Utah,13188
+"Morgan, Utah",49029,Morgan,Utah,12124
+"Piute, Utah",49031,Piute,Utah,1479
+"Rich, Utah",49033,Rich,Utah,2483
+"Salt Lake, Utah",49035,Salt Lake,Utah,1160437
+"San Juan, Utah",49037,San Juan,Utah,15308
+"Sanpete, Utah",49039,Sanpete,Utah,30939
+"Sevier, Utah",49041,Sevier,Utah,21620
+"Summit, Utah",49043,Summit,Utah,42145
+"Tooele, Utah",49045,Tooele,Utah,72259
+"Uintah, Utah",49047,Uintah,Utah,35734
+"Utah, Utah",49049,Utah,Utah,636235
+"Wasatch, Utah",49051,Wasatch,Utah,34091
+"Washington, Utah",49053,Washington,Utah,177556
+"Wayne, Utah",49055,Wayne,Utah,2711
+"Weber, Utah",49057,Weber,Utah,260213
+"Addison, Vermont",50001,Addison,Vermont,36777
+"Bennington, Vermont",50003,Bennington,Vermont,35470
+"Caledonia, Vermont",50005,Caledonia,Vermont,29993
+"Chittenden, Vermont",50007,Chittenden,Vermont,163774
+"Essex, Vermont",50009,Essex,Vermont,6163
+"Franklin, Vermont",50011,Franklin,Vermont,49402
+"Grand Isle, Vermont",50013,Grand Isle,Vermont,7235
+"Lamoille, Vermont",50015,Lamoille,Vermont,25362
+"Orange, Vermont",50017,Orange,Vermont,28892
+"Orleans, Vermont",50019,Orleans,Vermont,27037
+"Rutland, Vermont",50021,Rutland,Vermont,58191
+"Washington, Vermont",50023,Washington,Vermont,58409
+"Windham, Vermont",50025,Windham,Vermont,42222
+"Windsor, Vermont",50027,Windsor,Vermont,55062
+"Accomack, Virginia",51001,Accomack,Virginia,32316
+"Albemarle, Virginia",51003,Albemarle,Virginia,109330
+"Alleghany, Virginia",51005,Alleghany,Virginia,14860
+"Amelia, Virginia",51007,Amelia,Virginia,13145
+"Amherst, Virginia",51009,Amherst,Virginia,31605
+"Appomattox, Virginia",51011,Appomattox,Virginia,15911
+"Arlington, Virginia",51013,Arlington,Virginia,236842
+"Augusta, Virginia",51015,Augusta,Virginia,75558
+"Bath, Virginia",51017,Bath,Virginia,4147
+"Bedford, Virginia",51019,Bedford,Virginia,78997
+"Bland, Virginia",51021,Bland,Virginia,6280
+"Botetourt, Virginia",51023,Botetourt,Virginia,33419
+"Brunswick, Virginia",51025,Brunswick,Virginia,16231
+"Buchanan, Virginia",51027,Buchanan,Virginia,21004
+"Buckingham, Virginia",51029,Buckingham,Virginia,17148
+"Campbell, Virginia",51031,Campbell,Virginia,54885
+"Caroline, Virginia",51033,Caroline,Virginia,30725
+"Carroll, Virginia",51035,Carroll,Virginia,29791
+"Charles City, Virginia",51036,Charles City,Virginia,6963
+"Charlotte, Virginia",51037,Charlotte,Virginia,11880
+"Chesterfield, Virginia",51041,Chesterfield,Virginia,352802
+"Clarke, Virginia",51043,Clarke,Virginia,14619
+"Craig, Virginia",51045,Craig,Virginia,5131
+"Culpeper, Virginia",51047,Culpeper,Virginia,52605
+"Cumberland, Virginia",51049,Cumberland,Virginia,9932
+"Dickenson, Virginia",51051,Dickenson,Virginia,14318
+"Dinwiddie, Virginia",51053,Dinwiddie,Virginia,28544
+"Essex, Virginia",51057,Essex,Virginia,10953
+"Fairfax, Virginia",51059,Fairfax,Virginia,1147532
+"Fauquier, Virginia",51061,Fauquier,Virginia,71222
+"Floyd, Virginia",51063,Floyd,Virginia,15749
+"Fluvanna, Virginia",51065,Fluvanna,Virginia,27270
+"Franklin, Virginia",51067,Franklin,Virginia,56042
+"Frederick, Virginia",51069,Frederick,Virginia,89313
+"Giles, Virginia",51071,Giles,Virginia,16720
+"Gloucester, Virginia",51073,Gloucester,Virginia,37348
+"Goochland, Virginia",51075,Goochland,Virginia,23753
+"Grayson, Virginia",51077,Grayson,Virginia,15550
+"Greene, Virginia",51079,Greene,Virginia,19819
+"Greensville, Virginia",51081,Greensville,Virginia,11336
+"Halifax, Virginia",51083,Halifax,Virginia,33911
+"Hanover, Virginia",51085,Hanover,Virginia,107766
+"Henrico, Virginia",51087,Henrico,Virginia,330818
+"Henry, Virginia",51089,Henry,Virginia,50557
+"Highland, Virginia",51091,Highland,Virginia,2190
+"Isle of Wight, Virginia",51093,Isle of Wight,Virginia,37109
+"James City, Virginia",51095,James City,Virginia,76523
+"King and Queen, Virginia",51097,King and Queen,Virginia,7025
+"King George, Virginia",51099,King George,Virginia,26836
+"King William, Virginia",51101,King William,Virginia,17148
+"Lancaster, Virginia",51103,Lancaster,Virginia,10603
+"Lee, Virginia",51105,Lee,Virginia,23423
+"Loudoun, Virginia",51107,Loudoun,Virginia,413538
+"Louisa, Virginia",51109,Louisa,Virginia,37591
+"Lunenburg, Virginia",51111,Lunenburg,Virginia,12196
+"Madison, Virginia",51113,Madison,Virginia,13261
+"Mathews, Virginia",51115,Mathews,Virginia,8834
+"Mecklenburg, Virginia",51117,Mecklenburg,Virginia,30587
+"Middlesex, Virginia",51119,Middlesex,Virginia,10582
+"Montgomery, Virginia",51121,Montgomery,Virginia,98535
+"Nelson, Virginia",51125,Nelson,Virginia,14930
+"New Kent, Virginia",51127,New Kent,Virginia,23091
+"Northampton, Virginia",51131,Northampton,Virginia,11710
+"Northumberland, Virginia",51133,Northumberland,Virginia,12095
+"Nottoway, Virginia",51135,Nottoway,Virginia,15232
+"Orange, Virginia",51137,Orange,Virginia,37051
+"Page, Virginia",51139,Page,Virginia,23902
+"Patrick, Virginia",51141,Patrick,Virginia,17608
+"Pittsylvania, Virginia",51143,Pittsylvania,Virginia,60354
+"Powhatan, Virginia",51145,Powhatan,Virginia,29652
+"Prince Edward, Virginia",51147,Prince Edward,Virginia,22802
+"Prince George, Virginia",51149,Prince George,Virginia,38353
+"Prince William, Virginia",51153,Prince William,Virginia,470335
+"Pulaski, Virginia",51155,Pulaski,Virginia,34027
+"Rappahannock, Virginia",51157,Rappahannock,Virginia,7370
+"Richmond, Virginia",51159,Richmond,Virginia,9023
+"Roanoke, Virginia",51161,Roanoke,Virginia,94186
+"Rockbridge, Virginia",51163,Rockbridge,Virginia,22573
+"Rockingham, Virginia",51165,Rockingham,Virginia,81948
+"Russell, Virginia",51167,Russell,Virginia,26586
+"Scott, Virginia",51169,Scott,Virginia,21566
+"Shenandoah, Virginia",51171,Shenandoah,Virginia,43616
+"Smyth, Virginia",51173,Smyth,Virginia,30104
+"Southampton, Virginia",51175,Southampton,Virginia,17631
+"Spotsylvania, Virginia",51177,Spotsylvania,Virginia,136215
+"Stafford, Virginia",51179,Stafford,Virginia,152882
+"Surry, Virginia",51181,Surry,Virginia,6422
+"Sussex, Virginia",51183,Sussex,Virginia,11159
+"Tazewell, Virginia",51185,Tazewell,Virginia,40595
+"Warren, Virginia",51187,Warren,Virginia,40164
+"Washington, Virginia",51191,Washington,Virginia,53740
+"Westmoreland, Virginia",51193,Westmoreland,Virginia,18015
+"Wise, Virginia",51195,Wise,Virginia,37383
+"Wythe, Virginia",51197,Wythe,Virginia,28684
+"York, Virginia",51199,York,Virginia,68280
+"Alexandria city, Virginia",51510,Alexandria city,Virginia,159428
+"Bristol city, Virginia",51520,Bristol city,Virginia,16762
+"Buena Vista city, Virginia",51530,Buena Vista city,Virginia,6478
+"Charlottesville city, Virginia",51540,Charlottesville city,Virginia,47266
+"Chesapeake city, Virginia",51550,Chesapeake city,Virginia,244835
+"Colonial Heights city, Virginia",51570,Colonial Heights city,Virginia,17370
+"Covington city, Virginia",51580,Covington city,Virginia,5538
+"Danville city, Virginia",51590,Danville city,Virginia,40044
+"Emporia city, Virginia",51595,Emporia city,Virginia,5346
+"Fairfax city, Virginia",51600,Fairfax city,Virginia,24019
+"Falls Church city, Virginia",51610,Falls Church city,Virginia,14617
+"Franklin city, Virginia",51620,Franklin city,Virginia,7967
+"Fredericksburg city, Virginia",51630,Fredericksburg city,Virginia,29036
+"Galax city, Virginia",51640,Galax city,Virginia,6347
+"Hampton city, Virginia",51650,Hampton city,Virginia,134510
+"Harrisonburg city, Virginia",51660,Harrisonburg city,Virginia,53016
+"Hopewell city, Virginia",51670,Hopewell city,Virginia,22529
+"Lexington city, Virginia",51678,Lexington city,Virginia,7446
+"Lynchburg city, Virginia",51680,Lynchburg city,Virginia,82168
+"Manassas city, Virginia",51683,Manassas city,Virginia,41085
+"Manassas Park city, Virginia",51685,Manassas Park city,Virginia,17478
+"Martinsville city, Virginia",51690,Martinsville city,Virginia,12554
+"Newport News city, Virginia",51700,Newport News city,Virginia,179225
+"Norfolk city, Virginia",51710,Norfolk city,Virginia,242742
+"Norton city, Virginia",51720,Norton city,Virginia,3981
+"Petersburg city, Virginia",51730,Petersburg city,Virginia,31346
+"Poquoson city, Virginia",51735,Poquoson city,Virginia,12271
+"Portsmouth city, Virginia",51740,Portsmouth city,Virginia,94398
+"Radford city, Virginia",51750,Radford city,Virginia,18249
+"Richmond city, Virginia",51760,Richmond city,Virginia,230436
+"Roanoke city, Virginia",51770,Roanoke city,Virginia,99143
+"Salem city, Virginia",51775,Salem city,Virginia,25301
+"Staunton city, Virginia",51790,Staunton city,Virginia,24932
+"Suffolk city, Virginia",51800,Suffolk city,Virginia,92108
+"Virginia Beach city, Virginia",51810,Virginia Beach city,Virginia,449974
+"Waynesboro city, Virginia",51820,Waynesboro city,Virginia,22630
+"Williamsburg city, Virginia",51830,Williamsburg city,Virginia,14954
+"Winchester city, Virginia",51840,Winchester city,Virginia,28078
+"Adams, Washington",53001,Adams,Washington,19983
+"Asotin, Washington",53003,Asotin,Washington,22582
+"Benton, Washington",53005,Benton,Washington,204390
+"Chelan, Washington",53007,Chelan,Washington,77200
+"Clallam, Washington",53009,Clallam,Washington,77331
+"Clark, Washington",53011,Clark,Washington,488241
+"Columbia, Washington",53013,Columbia,Washington,3985
+"Cowlitz, Washington",53015,Cowlitz,Washington,110593
+"Douglas, Washington",53017,Douglas,Washington,43429
+"Ferry, Washington",53019,Ferry,Washington,7627
+"Franklin, Washington",53021,Franklin,Washington,95222
+"Garfield, Washington",53023,Garfield,Washington,2225
+"Grant, Washington",53025,Grant,Washington,97733
+"Grays Harbor, Washington",53027,Grays Harbor,Washington,75061
+"Island, Washington",53029,Island,Washington,85141
+"Jefferson, Washington",53031,Jefferson,Washington,32221
+"King, Washington",53033,King,Washington,2252782
+"Kitsap, Washington",53035,Kitsap,Washington,271473
+"Kittitas, Washington",53037,Kittitas,Washington,47935
+"Klickitat, Washington",53039,Klickitat,Washington,22425
+"Lewis, Washington",53041,Lewis,Washington,80707
+"Lincoln, Washington",53043,Lincoln,Washington,10939
+"Mason, Washington",53045,Mason,Washington,66768
+"Okanogan, Washington",53047,Okanogan,Washington,42243
+"Pacific, Washington",53049,Pacific,Washington,22471
+"Pend Oreille, Washington",53051,Pend Oreille,Washington,13724
+"Pierce, Washington",53053,Pierce,Washington,904980
+"San Juan, Washington",53055,San Juan,Washington,17582
+"Skagit, Washington",53057,Skagit,Washington,129205
+"Skamania, Washington",53059,Skamania,Washington,12083
+"Snohomish, Washington",53061,Snohomish,Washington,822083
+"Spokane, Washington",53063,Spokane,Washington,522798
+"Stevens, Washington",53065,Stevens,Washington,45723
+"Thurston, Washington",53067,Thurston,Washington,290536
+"Wahkiakum, Washington",53069,Wahkiakum,Washington,4488
+"Walla Walla, Washington",53071,Walla Walla,Washington,60760
+"Whatcom, Washington",53073,Whatcom,Washington,229247
+"Whitman, Washington",53075,Whitman,Washington,50104
+"Yakima, Washington",53077,Yakima,Washington,250873
+"Barbour, West Virginia",54001,Barbour,West Virginia,16441
+"Berkeley, West Virginia",54003,Berkeley,West Virginia,119171
+"Boone, West Virginia",54005,Boone,West Virginia,21457
+"Braxton, West Virginia",54007,Braxton,West Virginia,13957
+"Brooke, West Virginia",54009,Brooke,West Virginia,21939
+"Cabell, West Virginia",54011,Cabell,West Virginia,91945
+"Calhoun, West Virginia",54013,Calhoun,West Virginia,7109
+"Clay, West Virginia",54015,Clay,West Virginia,8508
+"Doddridge, West Virginia",54017,Doddridge,West Virginia,8448
+"Fayette, West Virginia",54019,Fayette,West Virginia,42406
+"Gilmer, West Virginia",54021,Gilmer,West Virginia,7823
+"Grant, West Virginia",54023,Grant,West Virginia,11568
+"Greenbrier, West Virginia",54025,Greenbrier,West Virginia,34662
+"Hampshire, West Virginia",54027,Hampshire,West Virginia,23175
+"Hancock, West Virginia",54029,Hancock,West Virginia,28810
+"Hardy, West Virginia",54031,Hardy,West Virginia,13776
+"Harrison, West Virginia",54033,Harrison,West Virginia,67256
+"Jackson, West Virginia",54035,Jackson,West Virginia,28576
+"Jefferson, West Virginia",54037,Jefferson,West Virginia,57146
+"Kanawha, West Virginia",54039,Kanawha,West Virginia,178124
+"Lewis, West Virginia",54041,Lewis,West Virginia,15907
+"Lincoln, West Virginia",54043,Lincoln,West Virginia,20409
+"Logan, West Virginia",54045,Logan,West Virginia,32019
+"McDowell, West Virginia",54047,McDowell,West Virginia,17624
+"Marion, West Virginia",54049,Marion,West Virginia,56072
+"Marshall, West Virginia",54051,Marshall,West Virginia,30531
+"Mason, West Virginia",54053,Mason,West Virginia,26516
+"Mercer, West Virginia",54055,Mercer,West Virginia,58758
+"Mineral, West Virginia",54057,Mineral,West Virginia,26868
+"Mingo, West Virginia",54059,Mingo,West Virginia,23424
+"Monongalia, West Virginia",54061,Monongalia,West Virginia,105612
+"Monroe, West Virginia",54063,Monroe,West Virginia,13275
+"Morgan, West Virginia",54065,Morgan,West Virginia,17884
+"Nicholas, West Virginia",54067,Nicholas,West Virginia,24496
+"Ohio, West Virginia",54069,Ohio,West Virginia,41411
+"Pendleton, West Virginia",54071,Pendleton,West Virginia,6969
+"Pleasants, West Virginia",54073,Pleasants,West Virginia,7460
+"Pocahontas, West Virginia",54075,Pocahontas,West Virginia,8247
+"Preston, West Virginia",54077,Preston,West Virginia,33432
+"Putnam, West Virginia",54079,Putnam,West Virginia,56450
+"Raleigh, West Virginia",54081,Raleigh,West Virginia,73361
+"Randolph, West Virginia",54083,Randolph,West Virginia,28695
+"Ritchie, West Virginia",54085,Ritchie,West Virginia,9554
+"Roane, West Virginia",54087,Roane,West Virginia,13688
+"Summers, West Virginia",54089,Summers,West Virginia,12573
+"Taylor, West Virginia",54091,Taylor,West Virginia,16695
+"Tucker, West Virginia",54093,Tucker,West Virginia,6839
+"Tyler, West Virginia",54095,Tyler,West Virginia,8591
+"Upshur, West Virginia",54097,Upshur,West Virginia,24176
+"Wayne, West Virginia",54099,Wayne,West Virginia,39402
+"Webster, West Virginia",54101,Webster,West Virginia,8114
+"Wetzel, West Virginia",54103,Wetzel,West Virginia,15065
+"Wirt, West Virginia",54105,Wirt,West Virginia,5821
+"Wood, West Virginia",54107,Wood,West Virginia,83518
+"Wyoming, West Virginia",54109,Wyoming,West Virginia,20394
+"Adams, Wisconsin",55001,Adams,Wisconsin,20220
+"Ashland, Wisconsin",55003,Ashland,Wisconsin,15562
+"Barron, Wisconsin",55005,Barron,Wisconsin,45244
+"Bayfield, Wisconsin",55007,Bayfield,Wisconsin,15036
+"Brown, Wisconsin",55009,Brown,Wisconsin,264542
+"Buffalo, Wisconsin",55011,Buffalo,Wisconsin,13031
+"Burnett, Wisconsin",55013,Burnett,Wisconsin,15414
+"Calumet, Wisconsin",55015,Calumet,Wisconsin,50089
+"Chippewa, Wisconsin",55017,Chippewa,Wisconsin,64658
+"Clark, Wisconsin",55019,Clark,Wisconsin,34774
+"Columbia, Wisconsin",55021,Columbia,Wisconsin,57532
+"Crawford, Wisconsin",55023,Crawford,Wisconsin,16131
+"Dane, Wisconsin",55025,Dane,Wisconsin,546695
+"Dodge, Wisconsin",55027,Dodge,Wisconsin,87839
+"Door, Wisconsin",55029,Door,Wisconsin,27668
+"Douglas, Wisconsin",55031,Douglas,Wisconsin,43150
+"Dunn, Wisconsin",55033,Dunn,Wisconsin,45368
+"Eau Claire, Wisconsin",55035,Eau Claire,Wisconsin,104646
+"Florence, Wisconsin",55037,Florence,Wisconsin,4295
+"Fond du Lac, Wisconsin",55039,Fond du Lac,Wisconsin,103403
+"Forest, Wisconsin",55041,Forest,Wisconsin,9004
+"Grant, Wisconsin",55043,Grant,Wisconsin,51439
+"Green, Wisconsin",55045,Green,Wisconsin,36960
+"Green Lake, Wisconsin",55047,Green Lake,Wisconsin,18913
+"Iowa, Wisconsin",55049,Iowa,Wisconsin,23678
+"Iron, Wisconsin",55051,Iron,Wisconsin,5687
+"Jackson, Wisconsin",55053,Jackson,Wisconsin,20643
+"Jefferson, Wisconsin",55055,Jefferson,Wisconsin,84769
+"Juneau, Wisconsin",55057,Juneau,Wisconsin,26687
+"Kenosha, Wisconsin",55059,Kenosha,Wisconsin,169561
+"Kewaunee, Wisconsin",55061,Kewaunee,Wisconsin,20434
+"La Crosse, Wisconsin",55063,La Crosse,Wisconsin,118016
+"Lafayette, Wisconsin",55065,Lafayette,Wisconsin,16665
+"Langlade, Wisconsin",55067,Langlade,Wisconsin,19189
+"Lincoln, Wisconsin",55069,Lincoln,Wisconsin,27593
+"Manitowoc, Wisconsin",55071,Manitowoc,Wisconsin,78981
+"Marathon, Wisconsin",55073,Marathon,Wisconsin,135692
+"Marinette, Wisconsin",55075,Marinette,Wisconsin,40350
+"Marquette, Wisconsin",55077,Marquette,Wisconsin,15574
+"Menominee, Wisconsin",55078,Menominee,Wisconsin,4556
+"Milwaukee, Wisconsin",55079,Milwaukee,Wisconsin,945726
+"Monroe, Wisconsin",55081,Monroe,Wisconsin,46253
+"Oconto, Wisconsin",55083,Oconto,Wisconsin,37930
+"Oneida, Wisconsin",55085,Oneida,Wisconsin,35595
+"Outagamie, Wisconsin",55087,Outagamie,Wisconsin,187885
+"Ozaukee, Wisconsin",55089,Ozaukee,Wisconsin,89221
+"Pepin, Wisconsin",55091,Pepin,Wisconsin,7287
+"Pierce, Wisconsin",55093,Pierce,Wisconsin,42754
+"Polk, Wisconsin",55095,Polk,Wisconsin,43783
+"Portage, Wisconsin",55097,Portage,Wisconsin,70772
+"Price, Wisconsin",55099,Price,Wisconsin,13351
+"Racine, Wisconsin",55101,Racine,Wisconsin,196311
+"Richland, Wisconsin",55103,Richland,Wisconsin,17252
+"Rock, Wisconsin",55105,Rock,Wisconsin,163354
+"Rusk, Wisconsin",55107,Rusk,Wisconsin,14178
+"St. Croix, Wisconsin",55109,St. Croix,Wisconsin,90687
+"Sauk, Wisconsin",55111,Sauk,Wisconsin,64442
+"Sawyer, Wisconsin",55113,Sawyer,Wisconsin,16558
+"Shawano, Wisconsin",55115,Shawano,Wisconsin,40899
+"Sheboygan, Wisconsin",55117,Sheboygan,Wisconsin,115340
+"Taylor, Wisconsin",55119,Taylor,Wisconsin,20343
+"Trempealeau, Wisconsin",55121,Trempealeau,Wisconsin,29649
+"Vernon, Wisconsin",55123,Vernon,Wisconsin,30822
+"Vilas, Wisconsin",55125,Vilas,Wisconsin,22195
+"Walworth, Wisconsin",55127,Walworth,Wisconsin,103868
+"Washburn, Wisconsin",55129,Washburn,Wisconsin,15720
+"Washington, Wisconsin",55131,Washington,Wisconsin,136034
+"Waukesha, Wisconsin",55133,Waukesha,Wisconsin,404198
+"Waupaca, Wisconsin",55135,Waupaca,Wisconsin,50990
+"Waushara, Wisconsin",55137,Waushara,Wisconsin,24443
+"Winnebago, Wisconsin",55139,Winnebago,Wisconsin,171907
+"Wood, Wisconsin",55141,Wood,Wisconsin,72999
+"Albany, Wyoming",56001,Albany,Wyoming,38880
+"Big Horn, Wyoming",56003,Big Horn,Wyoming,11790
+"Campbell, Wyoming",56005,Campbell,Wyoming,46341
+"Carbon, Wyoming",56007,Carbon,Wyoming,14800
+"Converse, Wyoming",56009,Converse,Wyoming,13822
+"Crook, Wyoming",56011,Crook,Wyoming,7584
+"Fremont, Wyoming",56013,Fremont,Wyoming,39261
+"Goshen, Wyoming",56015,Goshen,Wyoming,13211
+"Hot Springs, Wyoming",56017,Hot Springs,Wyoming,4413
+"Johnson, Wyoming",56019,Johnson,Wyoming,8445
+"Laramie, Wyoming",56021,Laramie,Wyoming,99500
+"Lincoln, Wyoming",56023,Lincoln,Wyoming,19830
+"Natrona, Wyoming",56025,Natrona,Wyoming,79858
+"Niobrara, Wyoming",56027,Niobrara,Wyoming,2356
+"Park, Wyoming",56029,Park,Wyoming,29194
+"Platte, Wyoming",56031,Platte,Wyoming,8393
+"Sheridan, Wyoming",56033,Sheridan,Wyoming,30485
+"Sublette, Wyoming",56035,Sublette,Wyoming,9831
+"Sweetwater, Wyoming",56037,Sweetwater,Wyoming,42343
+"Teton, Wyoming",56039,Teton,Wyoming,23464
+"Uinta, Wyoming",56041,Uinta,Wyoming,20226
+"Washakie, Wyoming",56043,Washakie,Wyoming,7805
+"Weston, Wyoming",56045,Weston,Wyoming,6927

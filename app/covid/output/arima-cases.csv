@@ -1,0 +1,3794 @@
+date,state,cases,predict,lower,upper
+2020-01-21,Washington,1.0,,,
+2020-01-22,Washington,1.0,,,
+2020-01-23,Washington,1.0,,,
+2020-01-24,Illinois,1.0,,,
+2020-01-24,Washington,1.0,,,
+2020-01-25,California,1.0,,,
+2020-01-25,Illinois,1.0,,,
+2020-01-25,Washington,1.0,,,
+2020-01-26,Arizona,1.0,,,
+2020-01-26,California,2.0,,,
+2020-01-26,Illinois,1.0,,,
+2020-01-26,Washington,1.0,,,
+2020-01-27,Arizona,1.0,,,
+2020-01-27,California,2.0,,,
+2020-01-27,Illinois,1.0,,,
+2020-01-27,Washington,1.0,,,
+2020-01-28,Arizona,1.0,,,
+2020-01-28,California,2.0,,,
+2020-01-28,Illinois,1.0,,,
+2020-01-28,Washington,1.0,,,
+2020-01-29,Arizona,1.0,,,
+2020-01-29,California,2.0,,,
+2020-01-29,Illinois,1.0,,,
+2020-01-29,Washington,1.0,,,
+2020-01-30,Arizona,1.0,,,
+2020-01-30,California,2.0,,,
+2020-01-30,Illinois,2.0,,,
+2020-01-30,Washington,1.0,,,
+2020-01-31,Arizona,1.0,,,
+2020-01-31,California,3.0,,,
+2020-01-31,Illinois,2.0,,,
+2020-01-31,Washington,1.0,,,
+2020-02-01,Arizona,1.0,,,
+2020-02-01,California,3.0,,,
+2020-02-01,Illinois,2.0,,,
+2020-02-01,Massachusetts,1.0,,,
+2020-02-01,Washington,1.0,,,
+2020-02-02,Arizona,1.0,,,
+2020-02-02,California,6.0,,,
+2020-02-02,Illinois,2.0,,,
+2020-02-02,Massachusetts,1.0,,,
+2020-02-02,Washington,1.0,,,
+2020-02-03,Arizona,1.0,,,
+2020-02-03,California,6.0,,,
+2020-02-03,Illinois,2.0,,,
+2020-02-03,Massachusetts,1.0,,,
+2020-02-03,Washington,1.0,,,
+2020-02-04,Arizona,1.0,,,
+2020-02-04,California,6.0,,,
+2020-02-04,Illinois,2.0,,,
+2020-02-04,Massachusetts,1.0,,,
+2020-02-04,Washington,1.0,,,
+2020-02-05,Arizona,1.0,,,
+2020-02-05,California,6.0,,,
+2020-02-05,Illinois,2.0,,,
+2020-02-05,Massachusetts,1.0,,,
+2020-02-05,Washington,1.0,,,
+2020-02-05,Wisconsin,1.0,,,
+2020-02-06,Arizona,1.0,,,
+2020-02-06,California,6.0,,,
+2020-02-06,Illinois,2.0,,,
+2020-02-06,Massachusetts,1.0,,,
+2020-02-06,Washington,1.0,,,
+2020-02-06,Wisconsin,1.0,,,
+2020-02-07,Arizona,1.0,,,
+2020-02-07,California,6.0,,,
+2020-02-07,Illinois,2.0,,,
+2020-02-07,Massachusetts,1.0,,,
+2020-02-07,Washington,1.0,,,
+2020-02-07,Wisconsin,1.0,,,
+2020-02-08,Arizona,1.0,,,
+2020-02-08,California,6.0,,,
+2020-02-08,Illinois,2.0,,,
+2020-02-08,Massachusetts,1.0,,,
+2020-02-08,Washington,1.0,,,
+2020-02-08,Wisconsin,1.0,,,
+2020-02-09,Arizona,1.0,,,
+2020-02-09,California,6.0,,,
+2020-02-09,Illinois,2.0,,,
+2020-02-09,Massachusetts,1.0,,,
+2020-02-09,Washington,1.0,,,
+2020-02-09,Wisconsin,1.0,,,
+2020-02-10,Arizona,1.0,,,
+2020-02-10,California,7.0,,,
+2020-02-10,Illinois,2.0,,,
+2020-02-10,Massachusetts,1.0,,,
+2020-02-10,Washington,1.0,,,
+2020-02-10,Wisconsin,1.0,,,
+2020-02-11,Arizona,1.0,,,
+2020-02-11,California,7.0,,,
+2020-02-11,Illinois,2.0,,,
+2020-02-11,Massachusetts,1.0,,,
+2020-02-11,Washington,1.0,,,
+2020-02-11,Wisconsin,1.0,,,
+2020-02-12,Arizona,1.0,,,
+2020-02-12,California,7.0,,,
+2020-02-12,Illinois,2.0,,,
+2020-02-12,Massachusetts,1.0,,,
+2020-02-12,Texas,1.0,,,
+2020-02-12,Washington,1.0,,,
+2020-02-12,Wisconsin,1.0,,,
+2020-02-13,Arizona,1.0,,,
+2020-02-13,California,7.0,,,
+2020-02-13,Illinois,2.0,,,
+2020-02-13,Massachusetts,1.0,,,
+2020-02-13,Texas,2.0,,,
+2020-02-13,Washington,1.0,,,
+2020-02-13,Wisconsin,1.0,,,
+2020-02-14,Arizona,1.0,,,
+2020-02-14,California,7.0,,,
+2020-02-14,Illinois,2.0,,,
+2020-02-14,Massachusetts,1.0,,,
+2020-02-14,Texas,2.0,,,
+2020-02-14,Washington,1.0,,,
+2020-02-14,Wisconsin,1.0,,,
+2020-02-15,Arizona,1.0,,,
+2020-02-15,California,7.0,,,
+2020-02-15,Illinois,2.0,,,
+2020-02-15,Massachusetts,1.0,,,
+2020-02-15,Texas,2.0,,,
+2020-02-15,Washington,1.0,,,
+2020-02-15,Wisconsin,1.0,,,
+2020-02-16,Arizona,1.0,,,
+2020-02-16,California,7.0,,,
+2020-02-16,Illinois,2.0,,,
+2020-02-16,Massachusetts,1.0,,,
+2020-02-16,Texas,2.0,,,
+2020-02-16,Washington,1.0,,,
+2020-02-16,Wisconsin,1.0,,,
+2020-02-17,Arizona,1.0,,,
+2020-02-17,California,7.0,,,
+2020-02-17,Illinois,2.0,,,
+2020-02-17,Massachusetts,1.0,,,
+2020-02-17,Nebraska,10.0,,,
+2020-02-17,Texas,2.0,,,
+2020-02-17,Washington,1.0,,,
+2020-02-17,Wisconsin,1.0,,,
+2020-02-18,Arizona,1.0,,,
+2020-02-18,California,7.0,,,
+2020-02-18,Illinois,2.0,,,
+2020-02-18,Massachusetts,1.0,,,
+2020-02-18,Nebraska,10.0,,,
+2020-02-18,Texas,2.0,,,
+2020-02-18,Washington,1.0,,,
+2020-02-18,Wisconsin,1.0,,,
+2020-02-19,Arizona,1.0,,,
+2020-02-19,California,7.0,,,
+2020-02-19,Illinois,2.0,,,
+2020-02-19,Massachusetts,1.0,,,
+2020-02-19,Nebraska,10.0,,,
+2020-02-19,Texas,2.0,,,
+2020-02-19,Washington,1.0,,,
+2020-02-19,Wisconsin,1.0,,,
+2020-02-20,Arizona,1.0,,,
+2020-02-20,California,8.0,,,
+2020-02-20,Illinois,2.0,,,
+2020-02-20,Massachusetts,1.0,,,
+2020-02-20,Nebraska,11.0,,,
+2020-02-20,Texas,2.0,,,
+2020-02-20,Washington,1.0,,,
+2020-02-20,Wisconsin,1.0,,,
+2020-02-21,Arizona,1.0,,,
+2020-02-21,California,9.0,,,
+2020-02-21,Illinois,2.0,,,
+2020-02-21,Massachusetts,1.0,,,
+2020-02-21,Nebraska,11.0,,,
+2020-02-21,Texas,4.0,,,
+2020-02-21,Washington,1.0,,,
+2020-02-21,Wisconsin,1.0,,,
+2020-02-22,Arizona,1.0,,,
+2020-02-22,California,9.0,,,
+2020-02-22,Illinois,2.0,,,
+2020-02-22,Massachusetts,1.0,,,
+2020-02-22,Nebraska,11.0,,,
+2020-02-22,Texas,4.0,,,
+2020-02-22,Washington,1.0,,,
+2020-02-22,Wisconsin,1.0,,,
+2020-02-23,Arizona,1.0,,,
+2020-02-23,California,9.0,,,
+2020-02-23,Illinois,2.0,,,
+2020-02-23,Massachusetts,1.0,,,
+2020-02-23,Nebraska,11.0,,,
+2020-02-23,Texas,4.0,,,
+2020-02-23,Washington,1.0,,,
+2020-02-23,Wisconsin,1.0,,,
+2020-02-24,Arizona,1.0,,,
+2020-02-24,California,11.0,,,
+2020-02-24,Illinois,2.0,,,
+2020-02-24,Massachusetts,1.0,,,
+2020-02-24,Nebraska,12.0,,,
+2020-02-24,Texas,10.0,,,
+2020-02-24,Washington,5.0,,,
+2020-02-24,Wisconsin,1.0,,,
+2020-02-25,Arizona,1.0,,,
+2020-02-25,California,11.0,,,
+2020-02-25,Illinois,2.0,,,
+2020-02-25,Massachusetts,1.0,,,
+2020-02-25,Nebraska,13.0,,,
+2020-02-25,Texas,10.0,,,
+2020-02-25,Utah,1.0,,,
+2020-02-25,Washington,5.0,,,
+2020-02-25,Wisconsin,1.0,,,
+2020-02-26,Arizona,1.0,,,
+2020-02-26,California,26.0,,,
+2020-02-26,Illinois,2.0,,,
+2020-02-26,Massachusetts,1.0,,,
+2020-02-26,Nebraska,13.0,,,
+2020-02-26,Texas,10.0,,,
+2020-02-26,Utah,1.0,,,
+2020-02-26,Washington,5.0,,,
+2020-02-26,Wisconsin,1.0,,,
+2020-02-27,Arizona,1.0,,,
+2020-02-27,California,26.0,,,
+2020-02-27,Illinois,2.0,,,
+2020-02-27,Massachusetts,1.0,,,
+2020-02-27,Nebraska,13.0,,,
+2020-02-27,Texas,10.0,,,
+2020-02-27,Utah,1.0,,,
+2020-02-27,Washington,5.0,,,
+2020-02-27,Wisconsin,1.0,,,
+2020-02-28,Arizona,1.0,,,
+2020-02-28,California,27.0,,,
+2020-02-28,Illinois,2.0,,,
+2020-02-28,Massachusetts,1.0,,,
+2020-02-28,Nebraska,13.0,,,
+2020-02-28,Oregon,1.0,,,
+2020-02-28,Texas,11.0,,,
+2020-02-28,Utah,1.0,,,
+2020-02-28,Washington,7.0,,,
+2020-02-28,Wisconsin,1.0,,,
+2020-02-29,Arizona,1.0,,,
+2020-02-29,California,28.0,,,
+2020-02-29,Illinois,3.0,,,
+2020-02-29,Massachusetts,1.0,,,
+2020-02-29,Nebraska,13.0,,,
+2020-02-29,Oregon,1.0,,,
+2020-02-29,Texas,11.0,,,
+2020-02-29,Utah,1.0,,,
+2020-02-29,Washington,10.0,,,
+2020-02-29,Wisconsin,1.0,,,
+2020-03-01,Arizona,1.0,,,
+2020-03-01,California,33.0,,,
+2020-03-01,Florida,2.0,,,
+2020-03-01,Illinois,3.0,,,
+2020-03-01,Massachusetts,1.0,,,
+2020-03-01,Nebraska,13.0,,,
+2020-03-01,New York,1.0,,,
+2020-03-01,Oregon,2.0,,,
+2020-03-01,Rhode Island,2.0,,,
+2020-03-01,Texas,11.0,,,
+2020-03-01,Utah,1.0,,,
+2020-03-01,Washington,17.0,,,
+2020-03-01,Wisconsin,1.0,,,
+2020-03-02,Arizona,1.0,,,
+2020-03-02,California,38.0,,,
+2020-03-02,Florida,2.0,,,
+2020-03-02,Georgia,2.0,,,
+2020-03-02,Illinois,4.0,,,
+2020-03-02,Massachusetts,2.0,,,
+2020-03-02,Nebraska,13.0,,,
+2020-03-02,New Hampshire,1.0,,,
+2020-03-02,New York,1.0,,,
+2020-03-02,Oregon,2.0,,,
+2020-03-02,Rhode Island,2.0,,,
+2020-03-02,Texas,11.0,,,
+2020-03-02,Utah,1.0,,,
+2020-03-02,Washington,23.0,,,
+2020-03-02,Wisconsin,1.0,,,
+2020-03-03,Arizona,2.0,,,
+2020-03-03,California,45.0,,,
+2020-03-03,Florida,3.0,,,
+2020-03-03,Georgia,2.0,,,
+2020-03-03,Illinois,4.0,,,
+2020-03-03,Massachusetts,2.0,,,
+2020-03-03,Nebraska,13.0,,,
+2020-03-03,New Hampshire,2.0,,,
+2020-03-03,New York,2.0,,,
+2020-03-03,North Carolina,1.0,,,
+2020-03-03,Oregon,2.0,,,
+2020-03-03,Rhode Island,2.0,,,
+2020-03-03,Texas,11.0,,,
+2020-03-03,Utah,1.0,,,
+2020-03-03,Washington,32.0,,,
+2020-03-03,Wisconsin,1.0,,,
+2020-03-04,Arizona,2.0,,,
+2020-03-04,California,55.0,,,
+2020-03-04,Florida,3.0,,,
+2020-03-04,Georgia,2.0,,,
+2020-03-04,Illinois,4.0,,,
+2020-03-04,Massachusetts,2.0,,,
+2020-03-04,Nebraska,13.0,,,
+2020-03-04,New Hampshire,2.0,,,
+2020-03-04,New Jersey,1.0,,,
+2020-03-04,New York,11.0,,,
+2020-03-04,North Carolina,1.0,,,
+2020-03-04,Oregon,2.0,,,
+2020-03-04,Rhode Island,2.0,,,
+2020-03-04,Texas,12.0,,,
+2020-03-04,Utah,1.0,,,
+2020-03-04,Washington,47.0,,,
+2020-03-04,Wisconsin,1.0,,,
+2020-03-05,Arizona,2.0,,,
+2020-03-05,California,67.0,,,
+2020-03-05,Colorado,2.0,,,
+2020-03-05,Florida,4.0,,,
+2020-03-05,Georgia,2.0,,,
+2020-03-05,Illinois,5.0,,,
+2020-03-05,Maryland,3.0,,,
+2020-03-05,Massachusetts,3.0,,,
+2020-03-05,Nebraska,13.0,,,
+2020-03-05,Nevada,2.0,,,
+2020-03-05,New Hampshire,2.0,,,
+2020-03-05,New Jersey,2.0,,,
+2020-03-05,New York,22.0,,,
+2020-03-05,North Carolina,1.0,,,
+2020-03-05,Oregon,2.0,,,
+2020-03-05,Rhode Island,2.0,,,
+2020-03-05,Tennessee,1.0,,,
+2020-03-05,Texas,16.0,,,
+2020-03-05,Utah,1.0,,,
+2020-03-05,Washington,75.0,,,
+2020-03-05,Wisconsin,1.0,,,
+2020-03-06,Arizona,3.0,,,
+2020-03-06,California,81.0,,,
+2020-03-06,Colorado,8.0,,,
+2020-03-06,Florida,7.0,,,
+2020-03-06,Georgia,3.0,,,
+2020-03-06,Hawaii,1.0,,,
+2020-03-06,Illinois,6.0,,,
+2020-03-06,Indiana,1.0,,,
+2020-03-06,Kentucky,1.0,,,
+2020-03-06,Maryland,3.0,,,
+2020-03-06,Massachusetts,8.0,,,
+2020-03-06,Minnesota,1.0,,,
+2020-03-06,Nebraska,14.0,,,
+2020-03-06,Nevada,2.0,,,
+2020-03-06,New Hampshire,2.0,,,
+2020-03-06,New Jersey,4.0,,,
+2020-03-06,New York,44.0,,,
+2020-03-06,North Carolina,2.0,,,
+2020-03-06,Oklahoma,1.0,,,
+2020-03-06,Oregon,2.0,,,
+2020-03-06,Pennsylvania,2.0,,,
+2020-03-06,Rhode Island,3.0,,,
+2020-03-06,South Carolina,2.0,,,
+2020-03-06,Tennessee,1.0,,,
+2020-03-06,Texas,19.0,,,
+2020-03-06,Utah,3.0,,,
+2020-03-06,Washington,86.0,,,
+2020-03-06,Wisconsin,1.0,,,
+2020-03-07,Arizona,5.0,,,
+2020-03-07,California,100.0,,,
+2020-03-07,Colorado,8.0,,,
+2020-03-07,District of Columbia,1.0,,,
+2020-03-07,Florida,12.0,,,
+2020-03-07,Georgia,7.0,,,
+2020-03-07,Hawaii,1.0,,,
+2020-03-07,Illinois,6.0,,,
+2020-03-07,Indiana,1.0,,,
+2020-03-07,Kansas,1.0,,,
+2020-03-07,Kentucky,1.0,,,
+2020-03-07,Maryland,3.0,,,
+2020-03-07,Massachusetts,13.0,,,
+2020-03-07,Minnesota,1.0,,,
+2020-03-07,Missouri,1.0,,,
+2020-03-07,Nebraska,14.0,,,
+2020-03-07,Nevada,2.0,,,
+2020-03-07,New Hampshire,4.0,,,
+2020-03-07,New Jersey,4.0,,,
+2020-03-07,New York,89.0,,,
+2020-03-07,North Carolina,2.0,,,
+2020-03-07,Oklahoma,1.0,,,
+2020-03-07,Oregon,6.0,,,
+2020-03-07,Pennsylvania,4.0,,,
+2020-03-07,Rhode Island,3.0,,,
+2020-03-07,South Carolina,2.0,,,
+2020-03-07,Tennessee,1.0,,,
+2020-03-07,Texas,19.0,,,
+2020-03-07,Utah,3.0,,,
+2020-03-07,Vermont,1.0,,,
+2020-03-07,Virginia,1.0,,,
+2020-03-07,Washington,110.0,,,
+2020-03-07,Wisconsin,1.0,,,
+2020-03-08,Arizona,5.0,,,
+2020-03-08,California,112.0,,,
+2020-03-08,Colorado,8.0,,,
+2020-03-08,Connecticut,1.0,,,
+2020-03-08,District of Columbia,1.0,,,
+2020-03-08,Florida,13.0,,,
+2020-03-08,Georgia,11.0,,,
+2020-03-08,Hawaii,2.0,,,
+2020-03-08,Illinois,7.0,,,
+2020-03-08,Indiana,2.0,,,
+2020-03-08,Iowa,3.0,,,
+2020-03-08,Kansas,1.0,,,
+2020-03-08,Kentucky,4.0,,,
+2020-03-08,Maryland,5.0,,,
+2020-03-08,Massachusetts,28.0,,,
+2020-03-08,Minnesota,2.0,,,
+2020-03-08,Missouri,1.0,,,
+2020-03-08,Nebraska,16.0,,,
+2020-03-08,Nevada,4.0,,,
+2020-03-08,New Hampshire,4.0,,,
+2020-03-08,New Jersey,6.0,,,
+2020-03-08,New York,106.0,,,
+2020-03-08,North Carolina,2.0,,,
+2020-03-08,Oklahoma,1.0,,,
+2020-03-08,Oregon,13.0,,,
+2020-03-08,Pennsylvania,6.0,,,
+2020-03-08,Rhode Island,3.0,,,
+2020-03-08,South Carolina,6.0,,,
+2020-03-08,Tennessee,3.0,,,
+2020-03-08,Texas,23.0,,,
+2020-03-08,Utah,3.0,,,
+2020-03-08,Vermont,1.0,,,
+2020-03-08,Virginia,2.0,,,
+2020-03-08,Washington,141.0,,,
+2020-03-08,Wisconsin,1.0,,,
+2020-03-09,Arizona,6.0,,,
+2020-03-09,California,172.0,,,
+2020-03-09,Colorado,12.0,,,
+2020-03-09,Connecticut,2.0,,,
+2020-03-09,District of Columbia,4.0,,,
+2020-03-09,Florida,14.0,,,
+2020-03-09,Georgia,17.0,,,
+2020-03-09,Hawaii,2.0,,,
+2020-03-09,Illinois,11.0,,,
+2020-03-09,Indiana,4.0,,,
+2020-03-09,Iowa,8.0,,,
+2020-03-09,Kansas,1.0,,,
+2020-03-09,Kentucky,5.0,,,
+2020-03-09,Louisiana,1.0,,,
+2020-03-09,Maryland,6.0,,,
+2020-03-09,Massachusetts,41.0,,,
+2020-03-09,Minnesota,2.0,,,
+2020-03-09,Missouri,1.0,,,
+2020-03-09,Nebraska,16.0,,,
+2020-03-09,Nevada,4.0,,,
+2020-03-09,New Hampshire,4.0,,,
+2020-03-09,New Jersey,11.0,,,
+2020-03-09,New York,142.0,,,
+2020-03-09,North Carolina,7.0,,,
+2020-03-09,Ohio,3.0,,,
+2020-03-09,Oklahoma,1.0,,,
+2020-03-09,Oregon,13.0,,,
+2020-03-09,Pennsylvania,10.0,,,
+2020-03-09,Rhode Island,3.0,,,
+2020-03-09,South Carolina,7.0,,,
+2020-03-09,Tennessee,4.0,,,
+2020-03-09,Texas,24.0,,,
+2020-03-09,Utah,3.0,,,
+2020-03-09,Vermont,1.0,,,
+2020-03-09,Virginia,5.0,,,
+2020-03-09,Washington,179.0,,,
+2020-03-09,Wisconsin,2.0,,,
+2020-03-10,Arizona,6.0,,,
+2020-03-10,California,179.0,,,
+2020-03-10,Colorado,17.0,,,
+2020-03-10,Connecticut,2.0,,,
+2020-03-10,District of Columbia,4.0,,,
+2020-03-10,Florida,23.0,,,
+2020-03-10,Georgia,22.0,,,
+2020-03-10,Hawaii,2.0,,,
+2020-03-10,Illinois,19.0,,,
+2020-03-10,Indiana,6.0,,,
+2020-03-10,Iowa,13.0,,,
+2020-03-10,Kansas,1.0,,,
+2020-03-10,Kentucky,7.0,,,
+2020-03-10,Louisiana,6.0,,,
+2020-03-10,Maryland,9.0,,,
+2020-03-10,Massachusetts,92.0,,,
+2020-03-10,Michigan,2.0,,,
+2020-03-10,Minnesota,3.0,,,
+2020-03-10,Missouri,1.0,,,
+2020-03-10,Nebraska,17.0,,,
+2020-03-10,Nevada,4.0,,,
+2020-03-10,New Hampshire,5.0,,,
+2020-03-10,New Jersey,15.0,,,
+2020-03-10,New York,173.0,,,
+2020-03-10,North Carolina,7.0,,,
+2020-03-10,Ohio,3.0,,,
+2020-03-10,Oklahoma,2.0,,,
+2020-03-10,Oregon,14.0,,,
+2020-03-10,Pennsylvania,12.0,,,
+2020-03-10,Rhode Island,5.0,,,
+2020-03-10,South Carolina,9.0,,,
+2020-03-10,South Dakota,5.0,,,
+2020-03-10,Tennessee,7.0,,,
+2020-03-10,Texas,31.0,,,
+2020-03-10,Utah,4.0,,,
+2020-03-10,Vermont,1.0,,,
+2020-03-10,Virginia,8.0,,,
+2020-03-10,Washington,279.0,,,
+2020-03-10,Wisconsin,3.0,,,
+2020-03-11,Arizona,9.0,,,
+2020-03-11,Arkansas,1.0,,,
+2020-03-11,California,202.0,,,
+2020-03-11,Colorado,34.0,,,
+2020-03-11,Connecticut,3.0,,,
+2020-03-11,Delaware,1.0,,,
+2020-03-11,District of Columbia,10.0,,,
+2020-03-11,Florida,26.0,,,
+2020-03-11,Georgia,31.0,,,
+2020-03-11,Hawaii,2.0,,,
+2020-03-11,Illinois,25.0,,,
+2020-03-11,Indiana,11.0,,,
+2020-03-11,Iowa,14.0,,,
+2020-03-11,Kansas,1.0,,,
+2020-03-11,Kentucky,7.0,,,
+2020-03-11,Louisiana,13.0,,,
+2020-03-11,Maryland,13.0,,,
+2020-03-11,Massachusetts,95.0,,,
+2020-03-11,Michigan,2.0,,,
+2020-03-11,Minnesota,5.0,,,
+2020-03-11,Mississippi,1.0,,,
+2020-03-11,Missouri,1.0,,,
+2020-03-11,Nebraska,23.0,,,
+2020-03-11,Nevada,7.0,,,
+2020-03-11,New Hampshire,5.0,,,
+2020-03-11,New Jersey,23.0,,,
+2020-03-11,New Mexico,4.0,,,
+2020-03-11,New York,217.0,,,
+2020-03-11,North Carolina,8.0,,,
+2020-03-11,North Dakota,1.0,,,
+2020-03-11,Ohio,4.0,,,
+2020-03-11,Oklahoma,2.0,,,
+2020-03-11,Oregon,20.0,,,
+2020-03-11,Pennsylvania,16.0,,,
+2020-03-11,Rhode Island,5.0,,,
+2020-03-11,South Carolina,10.0,,,
+2020-03-11,South Dakota,8.0,,,
+2020-03-11,Tennessee,8.0,,,
+2020-03-11,Texas,33.0,,,
+2020-03-11,Utah,5.0,,,
+2020-03-11,Vermont,2.0,,,
+2020-03-11,Virginia,10.0,,,
+2020-03-11,Washington,338.0,,,
+2020-03-11,Wisconsin,6.0,,,
+2020-03-11,Wyoming,1.0,,,
+2020-03-12,Alaska,1.0,,,
+2020-03-12,Arizona,9.0,,,
+2020-03-12,Arkansas,6.0,,,
+2020-03-12,California,252.0,,,
+2020-03-12,Colorado,49.0,,,
+2020-03-12,Connecticut,6.0,,,
+2020-03-12,Delaware,4.0,,,
+2020-03-12,District of Columbia,10.0,,,
+2020-03-12,Florida,46.0,,,
+2020-03-12,Georgia,31.0,,,
+2020-03-12,Hawaii,2.0,,,
+2020-03-12,Illinois,32.0,,,
+2020-03-12,Indiana,12.0,,,
+2020-03-12,Iowa,16.0,,,
+2020-03-12,Kansas,5.0,,,
+2020-03-12,Kentucky,11.0,,,
+2020-03-12,Louisiana,14.0,,,
+2020-03-12,Maine,1.0,,,
+2020-03-12,Maryland,13.0,,,
+2020-03-12,Massachusetts,108.0,,,
+2020-03-12,Michigan,12.0,,,
+2020-03-12,Minnesota,9.0,,,
+2020-03-12,Mississippi,1.0,,,
+2020-03-12,Missouri,2.0,,,
+2020-03-12,Nebraska,24.0,,,
+2020-03-12,Nevada,11.0,,,
+2020-03-12,New Hampshire,6.0,,,
+2020-03-12,New Jersey,29.0,,,
+2020-03-12,New Mexico,6.0,,,
+2020-03-12,New York,326.0,,,
+2020-03-12,North Carolina,16.0,,,
+2020-03-12,North Dakota,1.0,,,
+2020-03-12,Ohio,5.0,,,
+2020-03-12,Oklahoma,2.0,,,
+2020-03-12,Oregon,30.0,,,
+2020-03-12,Pennsylvania,22.0,,,
+2020-03-12,Rhode Island,5.0,,,
+2020-03-12,South Carolina,12.0,,,
+2020-03-12,South Dakota,8.0,,,
+2020-03-12,Tennessee,18.0,,,
+2020-03-12,Texas,41.0,,,
+2020-03-12,Utah,7.0,,,
+2020-03-12,Vermont,2.0,,,
+2020-03-12,Virginia,17.0,,,
+2020-03-12,Washington,419.0,,,
+2020-03-12,Wisconsin,8.0,,,
+2020-03-12,Wyoming,1.0,,,
+2020-03-13,Alabama,6.0,,,
+2020-03-13,Alaska,1.0,,,
+2020-03-13,Arizona,9.0,,,
+2020-03-13,Arkansas,7.0,,,
+2020-03-13,California,320.0,,,
+2020-03-13,Colorado,78.0,,,
+2020-03-13,Connecticut,11.0,,,
+2020-03-13,Delaware,4.0,,,
+2020-03-13,District of Columbia,10.0,,,
+2020-03-13,Florida,70.0,,,
+2020-03-13,Georgia,41.0,,,
+2020-03-13,Hawaii,2.0,,,
+2020-03-13,Idaho,1.0,,,
+2020-03-13,Illinois,46.0,,,
+2020-03-13,Indiana,12.0,,,
+2020-03-13,Iowa,17.0,,,
+2020-03-13,Kansas,6.0,,,
+2020-03-13,Kentucky,11.0,,,
+2020-03-13,Louisiana,36.0,,,
+2020-03-13,Maine,2.0,,,
+2020-03-13,Maryland,18.0,,,
+2020-03-13,Massachusetts,123.0,,,
+2020-03-13,Michigan,25.0,,,
+2020-03-13,Minnesota,14.0,,,
+2020-03-13,Mississippi,6.0,,,
+2020-03-13,Missouri,4.0,,,
+2020-03-13,Montana,4.0,,,
+2020-03-13,Nebraska,27.0,,,
+2020-03-13,Nevada,19.0,,,
+2020-03-13,New Hampshire,7.0,,,
+2020-03-13,New Jersey,50.0,,,
+2020-03-13,New Mexico,10.0,,,
+2020-03-13,New York,421.0,,,
+2020-03-13,North Carolina,18.0,,,
+2020-03-13,North Dakota,1.0,,,
+2020-03-13,Ohio,13.0,,,
+2020-03-13,Oklahoma,3.0,,,
+2020-03-13,Oregon,30.0,,,
+2020-03-13,Pennsylvania,41.0,,,
+2020-03-13,Puerto Rico,3.0,,,
+2020-03-13,Rhode Island,20.0,,,
+2020-03-13,South Carolina,13.0,,,
+2020-03-13,South Dakota,9.0,,,
+2020-03-13,Tennessee,26.0,,,
+2020-03-13,Texas,58.0,,,
+2020-03-13,Utah,7.0,,,
+2020-03-13,Vermont,2.0,,,
+2020-03-13,Virginia,30.0,,,
+2020-03-13,Washington,511.0,,,
+2020-03-13,Wisconsin,19.0,,,
+2020-03-13,Wyoming,2.0,,,
+2020-03-14,Alabama,12.0,,,
+2020-03-14,Alaska,1.0,,,
+2020-03-14,Arizona,12.0,,,
+2020-03-14,Arkansas,9.0,,,
+2020-03-14,California,381.0,,,
+2020-03-14,Colorado,103.0,,,
+2020-03-14,Connecticut,20.0,,,
+2020-03-14,Delaware,4.0,,,
+2020-03-14,District of Columbia,16.0,,,
+2020-03-14,Florida,70.0,,,
+2020-03-14,Georgia,65.0,,,
+2020-03-14,Hawaii,4.0,,,
+2020-03-14,Idaho,5.0,,,
+2020-03-14,Illinois,66.0,,,
+2020-03-14,Indiana,15.0,,,
+2020-03-14,Iowa,18.0,,,
+2020-03-14,Kansas,8.0,,,
+2020-03-14,Kentucky,18.0,,,
+2020-03-14,Louisiana,77.0,,,
+2020-03-14,Maine,3.0,,,
+2020-03-14,Maryland,27.0,,,
+2020-03-14,Massachusetts,138.0,,,
+2020-03-14,Michigan,33.0,,,
+2020-03-14,Minnesota,21.0,,,
+2020-03-14,Mississippi,6.0,,,
+2020-03-14,Missouri,5.0,,,
+2020-03-14,Montana,6.0,,,
+2020-03-14,Nebraska,29.0,,,
+2020-03-14,Nevada,21.0,,,
+2020-03-14,New Hampshire,7.0,,,
+2020-03-14,New Jersey,75.0,,,
+2020-03-14,New Mexico,13.0,,,
+2020-03-14,New York,610.0,,,
+2020-03-14,North Carolina,25.0,,,
+2020-03-14,North Dakota,1.0,,,
+2020-03-14,Ohio,26.0,,,
+2020-03-14,Oklahoma,4.0,,,
+2020-03-14,Oregon,36.0,,,
+2020-03-14,Pennsylvania,47.0,,,
+2020-03-14,Puerto Rico,4.0,,,
+2020-03-14,Rhode Island,20.0,,,
+2020-03-14,South Carolina,19.0,,,
+2020-03-14,South Dakota,9.0,,,
+2020-03-14,Tennessee,32.0,,,
+2020-03-14,Texas,69.0,,,
+2020-03-14,Utah,21.0,,,
+2020-03-14,Vermont,5.0,,,
+2020-03-14,Virgin Islands,1.0,,,
+2020-03-14,Virginia,42.0,,,
+2020-03-14,Washington,609.0,,,
+2020-03-14,Wisconsin,27.0,,,
+2020-03-14,Wyoming,3.0,,,
+2020-03-15,Alabama,23.0,,,
+2020-03-15,Alaska,1.0,,,
+2020-03-15,Arizona,13.0,,,
+2020-03-15,Arkansas,16.0,,,
+2020-03-15,California,478.0,,,
+2020-03-15,Colorado,136.0,,,
+2020-03-15,Connecticut,26.0,,,
+2020-03-15,Delaware,7.0,,,
+2020-03-15,District of Columbia,17.0,,,
+2020-03-15,Florida,109.0,,,
+2020-03-15,Georgia,97.0,,,
+2020-03-15,Guam,3.0,,,
+2020-03-15,Hawaii,7.0,,,
+2020-03-15,Idaho,5.0,,,
+2020-03-15,Illinois,94.0,,,
+2020-03-15,Indiana,19.0,,,
+2020-03-15,Iowa,22.0,,,
+2020-03-15,Kansas,9.0,,,
+2020-03-15,Kentucky,21.0,,,
+2020-03-15,Louisiana,103.0,,,
+2020-03-15,Maine,12.0,,,
+2020-03-15,Maryland,32.0,,,
+2020-03-15,Massachusetts,164.0,,,
+2020-03-15,Michigan,53.0,,,
+2020-03-15,Minnesota,35.0,,,
+2020-03-15,Mississippi,10.0,,,
+2020-03-15,Missouri,5.0,,,
+2020-03-15,Montana,6.0,,,
+2020-03-15,Nebraska,31.0,,,
+2020-03-15,Nevada,26.0,,,
+2020-03-15,New Hampshire,13.0,,,
+2020-03-15,New Jersey,98.0,,,
+2020-03-15,New Mexico,17.0,,,
+2020-03-15,New York,732.0,,,
+2020-03-15,North Carolina,32.0,,,
+2020-03-15,North Dakota,1.0,,,
+2020-03-15,Ohio,37.0,,,
+2020-03-15,Oklahoma,8.0,,,
+2020-03-15,Oregon,39.0,,,
+2020-03-15,Pennsylvania,68.0,,,
+2020-03-15,Puerto Rico,5.0,,,
+2020-03-15,Rhode Island,20.0,,,
+2020-03-15,South Carolina,28.0,,,
+2020-03-15,South Dakota,9.0,,,
+2020-03-15,Tennessee,39.0,,,
+2020-03-15,Texas,80.0,,,
+2020-03-15,Utah,29.0,,,
+2020-03-15,Vermont,8.0,,,
+2020-03-15,Virgin Islands,1.0,,,
+2020-03-15,Virginia,45.0,,,
+2020-03-15,Washington,675.0,,,
+2020-03-15,Wisconsin,33.0,,,
+2020-03-15,Wyoming,3.0,,,
+2020-03-16,Alabama,29.0,,,
+2020-03-16,Alaska,3.0,,,
+2020-03-16,Arizona,18.0,,,
+2020-03-16,Arkansas,22.0,,,
+2020-03-16,California,588.0,,,
+2020-03-16,Colorado,161.0,,,
+2020-03-16,Connecticut,41.0,,,
+2020-03-16,Delaware,8.0,,,
+2020-03-16,District of Columbia,22.0,,,
+2020-03-16,Florida,141.0,,,
+2020-03-16,Georgia,118.0,,,
+2020-03-16,Guam,3.0,,,
+2020-03-16,Hawaii,10.0,,,
+2020-03-16,Idaho,5.0,,,
+2020-03-16,Illinois,104.0,,,
+2020-03-16,Indiana,24.0,,,
+2020-03-16,Iowa,22.0,,,
+2020-03-16,Kansas,11.0,,,
+2020-03-16,Kentucky,22.0,,,
+2020-03-16,Louisiana,137.0,,,
+2020-03-16,Maine,17.0,,,
+2020-03-16,Maryland,39.0,,,
+2020-03-16,Massachusetts,197.0,,,
+2020-03-16,Michigan,54.0,,,
+2020-03-16,Minnesota,54.0,,,
+2020-03-16,Mississippi,12.0,,,
+2020-03-16,Missouri,9.0,,,
+2020-03-16,Montana,8.0,,,
+2020-03-16,Nebraska,33.0,,,
+2020-03-16,Nevada,45.0,,,
+2020-03-16,New Hampshire,17.0,,,
+2020-03-16,New Jersey,176.0,,,
+2020-03-16,New Mexico,21.0,,,
+2020-03-16,New York,950.0,,,
+2020-03-16,North Carolina,34.0,,,
+2020-03-16,North Dakota,1.0,,,
+2020-03-16,Ohio,50.0,,,
+2020-03-16,Oklahoma,10.0,,,
+2020-03-16,Oregon,46.0,,,
+2020-03-16,Pennsylvania,81.0,,,
+2020-03-16,Puerto Rico,5.0,,,
+2020-03-16,Rhode Island,21.0,,,
+2020-03-16,South Carolina,33.0,,,
+2020-03-16,South Dakota,10.0,,,
+2020-03-16,Tennessee,52.0,,,
+2020-03-16,Texas,87.0,,,
+2020-03-16,Utah,40.0,,,
+2020-03-16,Vermont,12.0,,,
+2020-03-16,Virgin Islands,2.0,,,
+2020-03-16,Virginia,51.0,,,
+2020-03-16,Washington,794.0,,,
+2020-03-16,Wisconsin,47.0,,,
+2020-03-16,Wyoming,10.0,,,
+2020-03-17,Alabama,39.0,,,
+2020-03-17,Alaska,6.0,,,
+2020-03-17,Arizona,20.0,,,
+2020-03-17,Arkansas,22.0,,,
+2020-03-17,California,732.0,,,
+2020-03-17,Colorado,183.0,,,
+2020-03-17,Connecticut,68.0,,,
+2020-03-17,Delaware,16.0,,,
+2020-03-17,District of Columbia,31.0,,,
+2020-03-17,Florida,210.0,,,
+2020-03-17,Georgia,142.0,,,
+2020-03-17,Guam,3.0,,,
+2020-03-17,Hawaii,14.0,,,
+2020-03-17,Idaho,9.0,,,
+2020-03-17,Illinois,159.0,,,
+2020-03-17,Indiana,30.0,,,
+2020-03-17,Iowa,29.0,,,
+2020-03-17,Kansas,17.0,,,
+2020-03-17,Kentucky,26.0,,,
+2020-03-17,Louisiana,196.0,,,
+2020-03-17,Maine,32.0,,,
+2020-03-17,Maryland,57.0,,,
+2020-03-17,Massachusetts,218.0,,,
+2020-03-17,Michigan,65.0,,,
+2020-03-17,Minnesota,60.0,,,
+2020-03-17,Mississippi,21.0,,,
+2020-03-17,Missouri,16.0,,,
+2020-03-17,Montana,8.0,,,
+2020-03-17,Nebraska,36.0,,,
+2020-03-17,Nevada,55.0,,,
+2020-03-17,New Hampshire,26.0,,,
+2020-03-17,New Jersey,268.0,,,
+2020-03-17,New Mexico,23.0,,,
+2020-03-17,New York,1374.0,,,
+2020-03-17,North Carolina,42.0,,,
+2020-03-17,North Dakota,5.0,,,
+2020-03-17,Ohio,67.0,,,
+2020-03-17,Oklahoma,18.0,,,
+2020-03-17,Oregon,66.0,,,
+2020-03-17,Pennsylvania,101.0,,,
+2020-03-17,Puerto Rico,5.0,,,
+2020-03-17,Rhode Island,23.0,,,
+2020-03-17,South Carolina,47.0,,,
+2020-03-17,South Dakota,11.0,,,
+2020-03-17,Tennessee,73.0,,,
+2020-03-17,Texas,106.0,,,
+2020-03-17,Utah,51.0,,,
+2020-03-17,Vermont,14.0,,,
+2020-03-17,Virgin Islands,2.0,,,
+2020-03-17,Virginia,67.0,,,
+2020-03-17,Washington,908.0,,,
+2020-03-17,West Virginia,1.0,,,
+2020-03-17,Wisconsin,72.0,,,
+2020-03-17,Wyoming,15.0,,,
+2020-03-18,Alabama,51.0,,,
+2020-03-18,Alaska,9.0,,,
+2020-03-18,Arizona,28.0,,,
+2020-03-18,Arkansas,33.0,,,
+2020-03-18,California,893.0,,,
+2020-03-18,Colorado,216.0,,,
+2020-03-18,Connecticut,96.0,,,
+2020-03-18,Delaware,26.0,,,
+2020-03-18,District of Columbia,36.0,,,
+2020-03-18,Florida,326.0,,,
+2020-03-18,Georgia,193.0,,,
+2020-03-18,Guam,8.0,,,
+2020-03-18,Hawaii,16.0,,,
+2020-03-18,Idaho,11.0,,,
+2020-03-18,Illinois,286.0,,,
+2020-03-18,Indiana,39.0,,,
+2020-03-18,Iowa,38.0,,,
+2020-03-18,Kansas,22.0,,,
+2020-03-18,Kentucky,35.0,,,
+2020-03-18,Louisiana,280.0,,,
+2020-03-18,Maine,43.0,,,
+2020-03-18,Maryland,85.0,,,
+2020-03-18,Massachusetts,256.0,,,
+2020-03-18,Michigan,80.0,,,
+2020-03-18,Minnesota,77.0,,,
+2020-03-18,Mississippi,34.0,,,
+2020-03-18,Missouri,21.0,,,
+2020-03-18,Montana,12.0,,,
+2020-03-18,Nebraska,43.0,,,
+2020-03-18,Nevada,82.0,,,
+2020-03-18,New Hampshire,39.0,,,
+2020-03-18,New Jersey,427.0,,,
+2020-03-18,New Mexico,28.0,,,
+2020-03-18,New York,2382.0,,,
+2020-03-18,North Carolina,66.0,,,
+2020-03-18,North Dakota,7.0,,,
+2020-03-18,Ohio,90.0,,,
+2020-03-18,Oklahoma,29.0,,,
+2020-03-18,Oregon,74.0,,,
+2020-03-18,Pennsylvania,139.0,,,
+2020-03-18,Puerto Rico,5.0,,,
+2020-03-18,Rhode Island,33.0,,,
+2020-03-18,South Carolina,60.0,,,
+2020-03-18,South Dakota,11.0,,,
+2020-03-18,Tennessee,98.0,,,
+2020-03-18,Texas,166.0,,,
+2020-03-18,Utah,65.0,,,
+2020-03-18,Vermont,19.0,,,
+2020-03-18,Virgin Islands,3.0,,,
+2020-03-18,Virginia,78.0,,,
+2020-03-18,Washington,1026.0,,,
+2020-03-18,West Virginia,2.0,,,
+2020-03-18,Wisconsin,106.0,,,
+2020-03-18,Wyoming,17.0,,,
+2020-03-19,Alabama,78.0,,,
+2020-03-19,Alaska,12.0,,,
+2020-03-19,Arizona,47.0,,,
+2020-03-19,Arkansas,62.0,,,
+2020-03-19,California,1067.0,,,
+2020-03-19,Colorado,278.0,,,
+2020-03-19,Connecticut,159.0,,,
+2020-03-19,Delaware,30.0,,,
+2020-03-19,District of Columbia,39.0,,,
+2020-03-19,Florida,434.0,,,
+2020-03-19,Georgia,282.0,,,
+2020-03-19,Guam,12.0,,,
+2020-03-19,Hawaii,26.0,,,
+2020-03-19,Idaho,23.0,,,
+2020-03-19,Illinois,420.0,,,
+2020-03-19,Indiana,56.0,,,
+2020-03-19,Iowa,44.0,,,
+2020-03-19,Kansas,35.0,,,
+2020-03-19,Kentucky,47.0,,,
+2020-03-19,Louisiana,392.0,,,
+2020-03-19,Maine,52.0,,,
+2020-03-19,Maryland,108.0,,,
+2020-03-19,Massachusetts,328.0,,,
+2020-03-19,Michigan,334.0,,,
+2020-03-19,Minnesota,89.0,,,
+2020-03-19,Mississippi,50.0,,,
+2020-03-19,Missouri,35.0,,,
+2020-03-19,Montana,19.0,,,
+2020-03-19,Nebraska,47.0,,,
+2020-03-19,Nevada,99.0,,,
+2020-03-19,New Hampshire,44.0,,,
+2020-03-19,New Jersey,735.0,,,
+2020-03-19,New Mexico,35.0,,,
+2020-03-19,New York,4152.0,,,
+2020-03-19,North Carolina,104.0,,,
+2020-03-19,North Dakota,19.0,,,
+2020-03-19,Ohio,120.0,,,
+2020-03-19,Oklahoma,44.0,,,
+2020-03-19,Oregon,87.0,,,
+2020-03-19,Pennsylvania,187.0,,,
+2020-03-19,Puerto Rico,6.0,,,
+2020-03-19,Rhode Island,44.0,,,
+2020-03-19,South Carolina,81.0,,,
+2020-03-19,South Dakota,14.0,,,
+2020-03-19,Tennessee,155.0,,,
+2020-03-19,Texas,248.0,,,
+2020-03-19,Utah,80.0,,,
+2020-03-19,Vermont,22.0,,,
+2020-03-19,Virgin Islands,3.0,,,
+2020-03-19,Virginia,94.0,,,
+2020-03-19,Washington,1228.0,,,
+2020-03-19,West Virginia,5.0,,,
+2020-03-19,Wisconsin,155.0,,,
+2020-03-19,Wyoming,18.0,,,
+2020-03-20,Alabama,106.0,,,
+2020-03-20,Alaska,14.0,,,
+2020-03-20,Arizona,70.0,,,
+2020-03-20,Arkansas,100.0,,,
+2020-03-20,California,1283.0,,,
+2020-03-20,Colorado,364.0,,,
+2020-03-20,Connecticut,194.0,,,
+2020-03-20,Delaware,39.0,,,
+2020-03-20,District of Columbia,71.0,,,
+2020-03-20,Florida,564.0,,,
+2020-03-20,Georgia,482.0,,,
+2020-03-20,Guam,14.0,,,
+2020-03-20,Hawaii,37.0,,,
+2020-03-20,Idaho,31.0,,,
+2020-03-20,Illinois,583.0,,,
+2020-03-20,Indiana,79.0,,,
+2020-03-20,Iowa,45.0,,,
+2020-03-20,Kansas,49.0,,,
+2020-03-20,Kentucky,63.0,,,
+2020-03-20,Louisiana,537.0,,,
+2020-03-20,Maine,57.0,,,
+2020-03-20,Maryland,150.0,,,
+2020-03-20,Massachusetts,413.0,,,
+2020-03-20,Michigan,548.0,,,
+2020-03-20,Minnesota,115.0,,,
+2020-03-20,Mississippi,80.0,,,
+2020-03-20,Missouri,73.0,,,
+2020-03-20,Montana,19.0,,,
+2020-03-20,Nebraska,53.0,,,
+2020-03-20,Nevada,165.0,,,
+2020-03-20,New Hampshire,55.0,,,
+2020-03-20,New Jersey,896.0,,,
+2020-03-20,New Mexico,43.0,,,
+2020-03-20,New York,7102.0,,,
+2020-03-20,North Carolina,144.0,,,
+2020-03-20,North Dakota,27.0,,,
+2020-03-20,Ohio,169.0,,,
+2020-03-20,Oklahoma,49.0,,,
+2020-03-20,Oregon,114.0,,,
+2020-03-20,Pennsylvania,269.0,,,
+2020-03-20,Puerto Rico,14.0,,,
+2020-03-20,Rhode Island,44.0,,,
+2020-03-20,South Carolina,126.0,,,
+2020-03-20,South Dakota,14.0,,,
+2020-03-20,Tennessee,237.0,,,
+2020-03-20,Texas,377.0,,,
+2020-03-20,Utah,112.0,,,
+2020-03-20,Vermont,29.0,,,
+2020-03-20,Virgin Islands,6.0,,,
+2020-03-20,Virginia,115.0,,,
+2020-03-20,Washington,1404.0,,,
+2020-03-20,West Virginia,8.0,,,
+2020-03-20,Wisconsin,216.0,,,
+2020-03-20,Wyoming,22.0,,,
+2020-03-21,Alabama,131.0,,,
+2020-03-21,Alaska,21.0,,,
+2020-03-21,Arizona,104.0,,,
+2020-03-21,Arkansas,118.0,,,
+2020-03-21,California,1544.0,,,
+2020-03-21,Colorado,475.0,,,
+2020-03-21,Connecticut,223.0,,,
+2020-03-21,Delaware,45.0,,,
+2020-03-21,District of Columbia,77.0,,,
+2020-03-21,Florida,764.0,,,
+2020-03-21,Georgia,552.0,,,
+2020-03-21,Guam,15.0,,,
+2020-03-21,Hawaii,48.0,,,
+2020-03-21,Idaho,42.0,,,
+2020-03-21,Illinois,751.0,,,
+2020-03-21,Indiana,126.0,,,
+2020-03-21,Iowa,68.0,,,
+2020-03-21,Kansas,57.0,,,
+2020-03-21,Kentucky,84.0,,,
+2020-03-21,Louisiana,763.0,,,
+2020-03-21,Maine,70.0,,,
+2020-03-21,Maryland,195.0,,,
+2020-03-21,Massachusetts,525.0,,,
+2020-03-21,Michigan,787.0,,,
+2020-03-21,Minnesota,138.0,,,
+2020-03-21,Mississippi,140.0,,,
+2020-03-21,Missouri,93.0,,,
+2020-03-21,Montana,29.0,,,
+2020-03-21,Nebraska,61.0,,,
+2020-03-21,Nevada,165.0,,,
+2020-03-21,New Hampshire,65.0,,,
+2020-03-21,New Jersey,1336.0,,,
+2020-03-21,New Mexico,57.0,,,
+2020-03-21,New York,10356.0,,,
+2020-03-21,North Carolina,184.0,,,
+2020-03-21,North Dakota,28.0,,,
+2020-03-21,Ohio,247.0,,,
+2020-03-21,Oklahoma,53.0,,,
+2020-03-21,Oregon,137.0,,,
+2020-03-21,Pennsylvania,388.0,,,
+2020-03-21,Puerto Rico,21.0,,,
+2020-03-21,Rhode Island,66.0,,,
+2020-03-21,South Carolina,172.0,,,
+2020-03-21,South Dakota,14.0,,,
+2020-03-21,Tennessee,312.0,,,
+2020-03-21,Texas,547.0,,,
+2020-03-21,Utah,138.0,,,
+2020-03-21,Vermont,49.0,,,
+2020-03-21,Virgin Islands,6.0,,,
+2020-03-21,Virginia,152.0,,,
+2020-03-21,Washington,1655.0,,,
+2020-03-21,West Virginia,12.0,,,
+2020-03-21,Wisconsin,281.0,,,
+2020-03-21,Wyoming,24.0,,,
+2020-03-22,Alabama,157.0,,,
+2020-03-22,Alaska,22.0,,,
+2020-03-22,Arizona,153.0,,,
+2020-03-22,Arkansas,165.0,,,
+2020-03-22,California,1851.0,,,
+2020-03-22,Colorado,591.0,,,
+2020-03-22,Connecticut,327.0,,,
+2020-03-22,Delaware,56.0,,,
+2020-03-22,District of Columbia,98.0,,,
+2020-03-22,Florida,1000.0,,,
+2020-03-22,Georgia,620.0,,,
+2020-03-22,Guam,27.0,,,
+2020-03-22,Hawaii,56.0,,,
+2020-03-22,Idaho,47.0,,,
+2020-03-22,Illinois,1047.0,,,
+2020-03-22,Indiana,201.0,,,
+2020-03-22,Iowa,90.0,,,
+2020-03-22,Kansas,66.0,,,
+2020-03-22,Kentucky,103.0,,,
+2020-03-22,Louisiana,837.0,,,
+2020-03-22,Maine,89.0,,,
+2020-03-22,Maryland,245.0,,,
+2020-03-22,Massachusetts,646.0,,,
+2020-03-22,Michigan,1033.0,,,
+2020-03-22,Minnesota,171.0,,,
+2020-03-22,Mississippi,207.0,,,
+2020-03-22,Missouri,130.0,,,
+2020-03-22,Montana,34.0,,,
+2020-03-22,Nebraska,62.0,,,
+2020-03-22,Nevada,190.0,,,
+2020-03-22,New Hampshire,78.0,,,
+2020-03-22,New Jersey,1914.0,,,
+2020-03-22,New Mexico,65.0,,,
+2020-03-22,New York,15168.0,,,
+2020-03-22,North Carolina,269.0,,,
+2020-03-22,North Dakota,30.0,,,
+2020-03-22,Ohio,351.0,,,
+2020-03-22,Oklahoma,67.0,,,
+2020-03-22,Oregon,161.0,,,
+2020-03-22,Pennsylvania,504.0,,,
+2020-03-22,Puerto Rico,23.0,,,
+2020-03-22,Rhode Island,83.0,,,
+2020-03-22,South Carolina,194.0,,,
+2020-03-22,South Dakota,21.0,,,
+2020-03-22,Tennessee,424.0,,,
+2020-03-22,Texas,632.0,,,
+2020-03-22,Utah,182.0,,,
+2020-03-22,Vermont,52.0,,,
+2020-03-22,Virgin Islands,17.0,,,
+2020-03-22,Virginia,219.0,,,
+2020-03-22,Washington,1844.0,,,
+2020-03-22,West Virginia,16.0,,,
+2020-03-22,Wisconsin,382.0,,,
+2020-03-22,Wyoming,26.0,,,
+2020-03-23,Alabama,196.0,,,
+2020-03-23,Alaska,36.0,,,
+2020-03-23,Arizona,234.0,,,
+2020-03-23,Arkansas,201.0,,,
+2020-03-23,California,2240.0,,,
+2020-03-23,Colorado,721.0,,,
+2020-03-23,Connecticut,415.0,,,
+2020-03-23,Delaware,87.0,,,
+2020-03-23,District of Columbia,116.0,,,
+2020-03-23,Florida,1222.0,,,
+2020-03-23,Georgia,800.0,,,
+2020-03-23,Guam,29.0,,,
+2020-03-23,Hawaii,77.0,,,
+2020-03-23,Idaho,50.0,,,
+2020-03-23,Illinois,1285.0,,,
+2020-03-23,Indiana,259.0,,,
+2020-03-23,Iowa,105.0,,,
+2020-03-23,Kansas,82.0,,,
+2020-03-23,Kentucky,124.0,,,
+2020-03-23,Louisiana,1172.0,,,
+2020-03-23,Maine,107.0,,,
+2020-03-23,Maryland,290.0,,,
+2020-03-23,Massachusetts,777.0,,,
+2020-03-23,Michigan,1324.0,,,
+2020-03-23,Minnesota,235.0,,,
+2020-03-23,Mississippi,249.0,,,
+2020-03-23,Missouri,183.0,,,
+2020-03-23,Montana,45.0,,,
+2020-03-23,Nebraska,73.0,,,
+2020-03-23,Nevada,265.0,,,
+2020-03-23,New Hampshire,101.0,,,
+2020-03-23,New Jersey,2844.0,,,
+2020-03-23,New Mexico,83.0,,,
+2020-03-23,New York,20875.0,,,
+2020-03-23,North Carolina,303.0,,,
+2020-03-23,North Dakota,32.0,,,
+2020-03-23,Ohio,444.0,,,
+2020-03-23,Oklahoma,81.0,,,
+2020-03-23,Oregon,191.0,,,
+2020-03-23,Pennsylvania,644.0,,,
+2020-03-23,Puerto Rico,31.0,,,
+2020-03-23,Rhode Island,106.0,,,
+2020-03-23,South Carolina,299.0,,,
+2020-03-23,South Dakota,28.0,,,
+2020-03-23,Tennessee,522.0,,,
+2020-03-23,Texas,728.0,,,
+2020-03-23,Utah,257.0,,,
+2020-03-23,Vermont,75.0,,,
+2020-03-23,Virgin Islands,17.0,,,
+2020-03-23,Virginia,254.0,,,
+2020-03-23,Washington,2101.0,,,
+2020-03-23,West Virginia,16.0,,,
+2020-03-23,Wisconsin,418.0,,,
+2020-03-23,Wyoming,28.0,,,
+2020-03-24,Alabama,242.0,,,
+2020-03-24,Alaska,42.0,,,
+2020-03-24,Arizona,326.0,,,
+2020-03-24,Arkansas,232.0,,,
+2020-03-24,California,2644.0,,,
+2020-03-24,Colorado,912.0,,,
+2020-03-24,Connecticut,618.0,,,
+2020-03-24,Delaware,104.0,,,
+2020-03-24,District of Columbia,137.0,,,
+2020-03-24,Florida,1467.0,,,
+2020-03-24,Georgia,1097.0,,,
+2020-03-24,Guam,32.0,,,
+2020-03-24,Hawaii,90.0,,,
+2020-03-24,Idaho,73.0,,,
+2020-03-24,Illinois,1535.0,,,
+2020-03-24,Indiana,366.0,,,
+2020-03-24,Iowa,124.0,,,
+2020-03-24,Kansas,99.0,,,
+2020-03-24,Kentucky,157.0,,,
+2020-03-24,Louisiana,1388.0,,,
+2020-03-24,Maine,118.0,,,
+2020-03-24,Maryland,349.0,,,
+2020-03-24,Massachusetts,1159.0,,,
+2020-03-24,Michigan,1791.0,,,
+2020-03-24,Minnesota,262.0,,,
+2020-03-24,Mississippi,320.0,,,
+2020-03-24,Missouri,255.0,,,
+2020-03-24,Montana,51.0,,,
+2020-03-24,Nebraska,77.0,,,
+2020-03-24,Nevada,315.0,,,
+2020-03-24,New Hampshire,108.0,,,
+2020-03-24,New Jersey,3675.0,,,
+2020-03-24,New Mexico,100.0,,,
+2020-03-24,New York,25665.0,,,
+2020-03-24,North Carolina,399.0,,,
+2020-03-24,North Dakota,36.0,,,
+2020-03-24,Ohio,564.0,,,
+2020-03-24,Oklahoma,106.0,,,
+2020-03-24,Oregon,209.0,,,
+2020-03-24,Pennsylvania,851.0,,,
+2020-03-24,Puerto Rico,39.0,,,
+2020-03-24,Rhode Island,124.0,,,
+2020-03-24,South Carolina,342.0,,,
+2020-03-24,South Dakota,30.0,,,
+2020-03-24,Tennessee,679.0,,,
+2020-03-24,Texas,857.0,,,
+2020-03-24,Utah,298.0,,,
+2020-03-24,Vermont,95.0,,,
+2020-03-24,Virgin Islands,17.0,,,
+2020-03-24,Virginia,290.0,,,
+2020-03-24,Washington,2469.0,,,
+2020-03-24,West Virginia,39.0,,,
+2020-03-24,Wisconsin,481.0,,,
+2020-03-24,Wyoming,37.0,,,
+2020-03-25,Alabama,386.0,,,
+2020-03-25,Alaska,59.0,,,
+2020-03-25,Arizona,402.0,,,
+2020-03-25,Arkansas,308.0,,,
+2020-03-25,California,3183.0,,,
+2020-03-25,Colorado,1086.0,,,
+2020-03-25,Connecticut,875.0,,,
+2020-03-25,Delaware,119.0,,,
+2020-03-25,District of Columbia,183.0,,,
+2020-03-25,Florida,1965.0,,,
+2020-03-25,Georgia,1387.0,,,
+2020-03-25,Guam,32.0,,,
+2020-03-25,Hawaii,95.0,,,
+2020-03-25,Idaho,123.0,,,
+2020-03-25,Illinois,1875.0,,,
+2020-03-25,Indiana,479.0,,,
+2020-03-25,Iowa,145.0,,,
+2020-03-25,Kansas,132.0,,,
+2020-03-25,Kentucky,198.0,,,
+2020-03-25,Louisiana,1795.0,,,
+2020-03-25,Maine,142.0,,,
+2020-03-25,Maryland,423.0,,,
+2020-03-25,Massachusetts,1838.0,,,
+2020-03-25,Michigan,2294.0,,,
+2020-03-25,Minnesota,287.0,,,
+2020-03-25,Mississippi,377.0,,,
+2020-03-25,Missouri,377.0,,,
+2020-03-25,Montana,65.0,,,
+2020-03-25,Nebraska,84.0,,,
+2020-03-25,Nevada,405.0,,,
+2020-03-25,New Hampshire,137.0,,,
+2020-03-25,New Jersey,4402.0,,,
+2020-03-25,New Mexico,112.0,,,
+2020-03-25,New York,33066.0,,,
+2020-03-25,North Carolina,563.0,,,
+2020-03-25,North Dakota,45.0,,,
+2020-03-25,Ohio,706.0,,,
+2020-03-25,Oklahoma,164.0,,,
+2020-03-25,Oregon,266.0,,,
+2020-03-25,Pennsylvania,1151.0,,,
+2020-03-25,Puerto Rico,51.0,,,
+2020-03-25,Rhode Island,132.0,,,
+2020-03-25,South Carolina,424.0,,,
+2020-03-25,South Dakota,41.0,,,
+2020-03-25,Tennessee,806.0,,,
+2020-03-25,Texas,1119.0,,,
+2020-03-25,Utah,346.0,,,
+2020-03-25,Vermont,123.0,,,
+2020-03-25,Virgin Islands,17.0,,,
+2020-03-25,Virginia,391.0,,,
+2020-03-25,Washington,2585.0,,,
+2020-03-25,West Virginia,51.0,,,
+2020-03-25,Wisconsin,623.0,,,
+2020-03-25,Wyoming,49.0,,,
+2020-03-26,Alabama,538.0,,,
+2020-03-26,Alaska,69.0,,,
+2020-03-26,Arizona,508.0,,,
+2020-03-26,Arkansas,351.0,,,
+2020-03-26,California,4060.0,,,
+2020-03-26,Colorado,1432.0,,,
+2020-03-26,Connecticut,1012.0,,,
+2020-03-26,Delaware,143.0,,,
+2020-03-26,District of Columbia,231.0,,,
+2020-03-26,Florida,2477.0,,,
+2020-03-26,Georgia,1643.0,,,
+2020-03-26,Guam,49.0,,,
+2020-03-26,Hawaii,106.0,,,
+2020-03-26,Idaho,189.0,,,
+2020-03-26,Illinois,2538.0,,,
+2020-03-26,Indiana,656.0,,,
+2020-03-26,Iowa,179.0,,,
+2020-03-26,Kansas,171.0,,,
+2020-03-26,Kentucky,248.0,,,
+2020-03-26,Louisiana,2305.0,,,
+2020-03-26,Maine,155.0,,,
+2020-03-26,Maryland,581.0,,,
+2020-03-26,Massachusetts,2417.0,,,
+2020-03-26,Michigan,2878.0,,,
+2020-03-26,Minnesota,346.0,,,
+2020-03-26,Mississippi,487.0,,,
+2020-03-26,Missouri,507.0,,,
+2020-03-26,Montana,90.0,,,
+2020-03-26,Nebraska,92.0,,,
+2020-03-26,Nevada,535.0,,,
+2020-03-26,New Hampshire,158.0,,,
+2020-03-26,New Jersey,6876.0,,,
+2020-03-26,New Mexico,136.0,,,
+2020-03-26,New York,38987.0,,,
+2020-03-26,North Carolina,638.0,,,
+2020-03-26,North Dakota,58.0,,,
+2020-03-26,Ohio,867.0,,,
+2020-03-26,Oklahoma,248.0,,,
+2020-03-26,Oregon,316.0,,,
+2020-03-26,Pennsylvania,1690.0,,,
+2020-03-26,Puerto Rico,64.0,,,
+2020-03-26,Rhode Island,165.0,,,
+2020-03-26,South Carolina,456.0,,,
+2020-03-26,South Dakota,46.0,,,
+2020-03-26,Tennessee,981.0,,,
+2020-03-26,Texas,1543.0,,,
+2020-03-26,Utah,402.0,,,
+2020-03-26,Vermont,158.0,,,
+2020-03-26,Virgin Islands,17.0,,,
+2020-03-26,Virginia,604.0,,,
+2020-03-26,Washington,3208.0,,,
+2020-03-26,West Virginia,76.0,,,
+2020-03-26,Wisconsin,754.0,,,
+2020-03-26,Wyoming,56.0,,,
+2020-03-27,Alabama,639.0,,,
+2020-03-27,Alaska,85.0,,,
+2020-03-27,Arizona,665.0,,,
+2020-03-27,Arkansas,386.0,,,
+2020-03-27,California,4914.0,,,
+2020-03-27,Colorado,1735.0,,,
+2020-03-27,Connecticut,1291.0,,,
+2020-03-27,Delaware,165.0,,,
+2020-03-27,District of Columbia,267.0,,,
+2020-03-27,Florida,3198.0,,,
+2020-03-27,Georgia,2198.0,,,
+2020-03-27,Guam,53.0,,,
+2020-03-27,Hawaii,120.0,,,
+2020-03-27,Idaho,231.0,,,
+2020-03-27,Illinois,3029.0,,,
+2020-03-27,Indiana,982.0,,,
+2020-03-27,Iowa,235.0,,,
+2020-03-27,Kansas,212.0,,,
+2020-03-27,Kentucky,302.0,,,
+2020-03-27,Louisiana,2746.0,,,
+2020-03-27,Maine,168.0,,,
+2020-03-27,Maryland,775.0,,,
+2020-03-27,Massachusetts,3240.0,,,
+2020-03-27,Michigan,3657.0,,,
+2020-03-27,Minnesota,398.0,,,
+2020-03-27,Mississippi,579.0,,,
+2020-03-27,Missouri,671.0,,,
+2020-03-27,Montana,121.0,,,
+2020-03-27,Nebraska,100.0,,,
+2020-03-27,Nevada,621.0,,,
+2020-03-27,New Hampshire,187.0,,,
+2020-03-27,New Jersey,8825.0,,,
+2020-03-27,New Mexico,191.0,,,
+2020-03-27,New York,44635.0,,,
+2020-03-27,North Carolina,783.0,,,
+2020-03-27,North Dakota,68.0,,,
+2020-03-27,Ohio,1144.0,,,
+2020-03-27,Oklahoma,322.0,,,
+2020-03-27,Oregon,414.0,,,
+2020-03-27,Pennsylvania,2218.0,,,
+2020-03-27,Puerto Rico,79.0,,,
+2020-03-27,Rhode Island,203.0,,,
+2020-03-27,South Carolina,539.0,,,
+2020-03-27,South Dakota,58.0,,,
+2020-03-27,Tennessee,1180.0,,,
+2020-03-27,Texas,1942.0,,,
+2020-03-27,Utah,480.0,,,
+2020-03-27,Vermont,184.0,,,
+2020-03-27,Virgin Islands,19.0,,,
+2020-03-27,Virginia,606.0,,,
+2020-03-27,Washington,3770.0,,,
+2020-03-27,West Virginia,96.0,,,
+2020-03-27,Wisconsin,930.0,,,
+2020-03-27,Wyoming,73.0,,,
+2020-03-28,Alabama,720.0,,,
+2020-03-28,Alaska,102.0,,,
+2020-03-28,Arizona,773.0,,,
+2020-03-28,Arkansas,409.0,,,
+2020-03-28,California,5565.0,,,
+2020-03-28,Colorado,2061.0,,,
+2020-03-28,Connecticut,1524.0,,,
+2020-03-28,Delaware,214.0,,,
+2020-03-28,District of Columbia,304.0,,,
+2020-03-28,Florida,4038.0,,,
+2020-03-28,Georgia,2447.0,,,
+2020-03-28,Guam,57.0,,,
+2020-03-28,Hawaii,151.0,,,
+2020-03-28,Idaho,261.0,,,
+2020-03-28,Illinois,3547.0,,,
+2020-03-28,Indiana,1232.0,,,
+2020-03-28,Iowa,298.0,,,
+2020-03-28,Kansas,271.0,,,
+2020-03-28,Kentucky,394.0,,,
+2020-03-28,Louisiana,3315.0,,,
+2020-03-28,Maine,211.0,,,
+2020-03-28,Maryland,1066.0,,,
+2020-03-28,Massachusetts,4257.0,,,
+2020-03-28,Michigan,4635.0,,,
+2020-03-28,Minnesota,441.0,,,
+2020-03-28,Mississippi,669.0,,,
+2020-03-28,Missouri,838.0,,,
+2020-03-28,Montana,147.0,,,
+2020-03-28,Nebraska,122.0,,,
+2020-03-28,Nevada,738.0,,,
+2020-03-28,New Hampshire,214.0,,,
+2020-03-28,New Jersey,11124.0,,,
+2020-03-28,New Mexico,208.0,,,
+2020-03-28,New York,53363.0,,,
+2020-03-28,North Carolina,972.0,,,
+2020-03-28,North Dakota,94.0,,,
+2020-03-28,Northern Mariana Islands,2.0,,,
+2020-03-28,Ohio,1406.0,,,
+2020-03-28,Oklahoma,377.0,,,
+2020-03-28,Oregon,479.0,,,
+2020-03-28,Pennsylvania,2815.0,,,
+2020-03-28,Puerto Rico,100.0,,,
+2020-03-28,Rhode Island,239.0,,,
+2020-03-28,South Carolina,660.0,,,
+2020-03-28,South Dakota,68.0,,,
+2020-03-28,Tennessee,1364.0,,,
+2020-03-28,Texas,2161.0,,,
+2020-03-28,Utah,608.0,,,
+2020-03-28,Vermont,211.0,,,
+2020-03-28,Virgin Islands,19.0,,,
+2020-03-28,Virginia,740.0,,,
+2020-03-28,Washington,4311.0,,,
+2020-03-28,West Virginia,113.0,,,
+2020-03-28,Wisconsin,1042.0,,,
+2020-03-28,Wyoming,84.0,,,
+2020-03-29,Alabama,830.0,,,
+2020-03-29,Alaska,114.0,,,
+2020-03-29,Arizona,929.0,,,
+2020-03-29,Arkansas,449.0,,,
+2020-03-29,California,6266.0,,,
+2020-03-29,Colorado,2315.0,,,
+2020-03-29,Connecticut,1993.0,,,
+2020-03-29,Delaware,232.0,,,
+2020-03-29,District of Columbia,342.0,,,
+2020-03-29,Florida,4942.0,,,
+2020-03-29,Georgia,2683.0,,,
+2020-03-29,Guam,58.0,,,
+2020-03-29,Hawaii,175.0,,,
+2020-03-29,Idaho,310.0,,,
+2020-03-29,Illinois,4613.0,,,
+2020-03-29,Indiana,1514.0,,,
+2020-03-29,Iowa,336.0,,,
+2020-03-29,Kansas,332.0,,,
+2020-03-29,Kentucky,439.0,,,
+2020-03-29,Louisiana,3540.0,,,
+2020-03-29,Maine,253.0,,,
+2020-03-29,Maryland,1244.0,,,
+2020-03-29,Massachusetts,4955.0,,,
+2020-03-29,Michigan,5486.0,,,
+2020-03-29,Minnesota,504.0,,,
+2020-03-29,Mississippi,759.0,,,
+2020-03-29,Missouri,903.0,,,
+2020-03-29,Montana,161.0,,,
+2020-03-29,Nebraska,137.0,,,
+2020-03-29,Nevada,920.0,,,
+2020-03-29,New Hampshire,258.0,,,
+2020-03-29,New Jersey,13386.0,,,
+2020-03-29,New Mexico,237.0,,,
+2020-03-29,New York,59568.0,,,
+2020-03-29,North Carolina,1167.0,,,
+2020-03-29,North Dakota,98.0,,,
+2020-03-29,Northern Mariana Islands,2.0,,,
+2020-03-29,Ohio,1665.0,,,
+2020-03-29,Oklahoma,429.0,,,
+2020-03-29,Oregon,548.0,,,
+2020-03-29,Pennsylvania,3441.0,,,
+2020-03-29,Puerto Rico,127.0,,,
+2020-03-29,Rhode Island,294.0,,,
+2020-03-29,South Carolina,774.0,,,
+2020-03-29,South Dakota,90.0,,,
+2020-03-29,Tennessee,1570.0,,,
+2020-03-29,Texas,2712.0,,,
+2020-03-29,Utah,719.0,,,
+2020-03-29,Vermont,235.0,,,
+2020-03-29,Virgin Islands,23.0,,,
+2020-03-29,Virginia,890.0,,,
+2020-03-29,Washington,4896.0,,,
+2020-03-29,West Virginia,124.0,,,
+2020-03-29,Wisconsin,1120.0,,,
+2020-03-29,Wyoming,87.0,,,
+2020-03-30,Alabama,947.0,,,
+2020-03-30,Alaska,119.0,,,
+2020-03-30,Arizona,1169.0,,,
+2020-03-30,Arkansas,508.0,,,
+2020-03-30,California,7421.0,,,
+2020-03-30,Colorado,2628.0,,,
+2020-03-30,Connecticut,2571.0,,,
+2020-03-30,Delaware,264.0,,,
+2020-03-30,District of Columbia,401.0,,,
+2020-03-30,Florida,5694.0,,,
+2020-03-30,Georgia,3032.0,,,
+2020-03-30,Guam,60.0,,,
+2020-03-30,Hawaii,204.0,,,
+2020-03-30,Idaho,415.0,,,
+2020-03-30,Illinois,5070.0,,,
+2020-03-30,Indiana,1788.0,,,
+2020-03-30,Iowa,424.0,,,
+2020-03-30,Kansas,373.0,,,
+2020-03-30,Kentucky,480.0,,,
+2020-03-30,Louisiana,4025.0,,,
+2020-03-30,Maine,275.0,,,
+2020-03-30,Maryland,1414.0,,,
+2020-03-30,Massachusetts,5752.0,,,
+2020-03-30,Michigan,6508.0,,,
+2020-03-30,Minnesota,576.0,,,
+2020-03-30,Mississippi,848.0,,,
+2020-03-30,Missouri,1050.0,,,
+2020-03-30,Montana,177.0,,,
+2020-03-30,Nebraska,185.0,,,
+2020-03-30,Nevada,1044.0,,,
+2020-03-30,New Hampshire,314.0,,,
+2020-03-30,New Jersey,16636.0,,,
+2020-03-30,New Mexico,281.0,,,
+2020-03-30,New York,67174.0,,,
+2020-03-30,North Carolina,1304.0,,,
+2020-03-30,North Dakota,109.0,,,
+2020-03-30,Northern Mariana Islands,2.0,,,
+2020-03-30,Ohio,1933.0,,,
+2020-03-30,Oklahoma,481.0,,,
+2020-03-30,Oregon,606.0,,,
+2020-03-30,Pennsylvania,4156.0,,,
+2020-03-30,Puerto Rico,174.0,,,
+2020-03-30,Rhode Island,408.0,,,
+2020-03-30,South Carolina,925.0,,,
+2020-03-30,South Dakota,101.0,,,
+2020-03-30,Tennessee,1721.0,,,
+2020-03-30,Texas,3043.0,,,
+2020-03-30,Utah,806.0,,,
+2020-03-30,Vermont,256.0,,,
+2020-03-30,Virgin Islands,30.0,,,
+2020-03-30,Virginia,1021.0,,,
+2020-03-30,Washington,5179.0,,,
+2020-03-30,West Virginia,145.0,,,
+2020-03-30,Wisconsin,1267.0,,,
+2020-03-30,Wyoming,95.0,,,
+2020-03-31,Alabama,999.0,,,
+2020-03-31,Alaska,133.0,,,
+2020-03-31,Arizona,1298.0,,,
+2020-03-31,Arkansas,564.0,,,
+2020-03-31,California,8582.0,,,
+2020-03-31,Colorado,2990.0,,,
+2020-03-31,Connecticut,3128.0,,,
+2020-03-31,Delaware,319.0,,,
+2020-03-31,District of Columbia,495.0,,,
+2020-03-31,Florida,6741.0,,,
+2020-03-31,Georgia,4117.0,,,
+2020-03-31,Guam,139.0,,,
+2020-03-31,Hawaii,224.0,,,
+2020-03-31,Idaho,526.0,,,
+2020-03-31,Illinois,5994.0,,,
+2020-03-31,Indiana,2159.0,,,
+2020-03-31,Iowa,498.0,,,
+2020-03-31,Kansas,434.0,,,
+2020-03-31,Kentucky,590.0,,,
+2020-03-31,Louisiana,5237.0,,,
+2020-03-31,Maine,303.0,,,
+2020-03-31,Maryland,1662.0,,,
+2020-03-31,Massachusetts,6620.0,,,
+2020-03-31,Michigan,7630.0,,,
+2020-03-31,Minnesota,629.0,,,
+2020-03-31,Mississippi,937.0,,,
+2020-03-31,Missouri,1351.0,,,
+2020-03-31,Montana,198.0,,,
+2020-03-31,Nebraska,193.0,,,
+2020-03-31,Nevada,1113.0,,,
+2020-03-31,New Hampshire,367.0,,,
+2020-03-31,New Jersey,18696.0,,,
+2020-03-31,New Mexico,315.0,,,
+2020-03-31,New York,75832.0,,,
+2020-03-31,North Carolina,1528.0,,,
+2020-03-31,North Dakota,126.0,,,
+2020-03-31,Northern Mariana Islands,2.0,,,
+2020-03-31,Ohio,2199.0,,,
+2020-03-31,Oklahoma,566.0,,,
+2020-03-31,Oregon,690.0,,,
+2020-03-31,Pennsylvania,4997.0,,,
+2020-03-31,Puerto Rico,239.0,,,
+2020-03-31,Rhode Island,488.0,,,
+2020-03-31,South Carolina,1083.0,,,
+2020-03-31,South Dakota,108.0,,,
+2020-03-31,Tennessee,2049.0,,,
+2020-03-31,Texas,3576.0,,,
+2020-03-31,Utah,887.0,,,
+2020-03-31,Vermont,293.0,,,
+2020-03-31,Virgin Islands,30.0,,,
+2020-03-31,Virginia,1250.0,,,
+2020-03-31,Washington,5292.0,,,
+2020-03-31,West Virginia,162.0,,,
+2020-03-31,Wisconsin,1351.0,,,
+2020-03-31,Wyoming,120.0,,,
+2020-04-01,Alabama,1106.0,,,
+2020-04-01,Alaska,143.0,,,
+2020-04-01,Arizona,1413.0,,,
+2020-04-01,Arkansas,624.0,,,
+2020-04-01,California,9816.0,,,
+2020-04-01,Colorado,3346.0,,,
+2020-04-01,Connecticut,3557.0,,,
+2020-04-01,Delaware,368.0,,,
+2020-04-01,District of Columbia,586.0,,,
+2020-04-01,Florida,7765.0,,,
+2020-04-01,Georgia,4748.0,,,
+2020-04-01,Guam,147.0,,,
+2020-04-01,Hawaii,258.0,,,
+2020-04-01,Idaho,669.0,,,
+2020-04-01,Illinois,6980.0,,,
+2020-04-01,Indiana,2565.0,,,
+2020-04-01,Iowa,549.0,,,
+2020-04-01,Kansas,488.0,,,
+2020-04-01,Kentucky,682.0,,,
+2020-04-01,Louisiana,6424.0,,,
+2020-04-01,Maine,344.0,,,
+2020-04-01,Maryland,1985.0,,,
+2020-04-01,Massachusetts,7738.0,,,
+2020-04-01,Michigan,9293.0,,,
+2020-04-01,Minnesota,689.0,,,
+2020-04-01,Mississippi,1073.0,,,
+2020-04-01,Missouri,1581.0,,,
+2020-04-01,Montana,217.0,,,
+2020-04-01,Nebraska,249.0,,,
+2020-04-01,Nevada,1279.0,,,
+2020-04-01,New Hampshire,415.0,,,
+2020-04-01,New Jersey,22255.0,,,
+2020-04-01,New Mexico,363.0,,,
+2020-04-01,New York,83889.0,,,
+2020-04-01,North Carolina,1582.0,,,
+2020-04-01,North Dakota,147.0,,,
+2020-04-01,Northern Mariana Islands,6.0,,,
+2020-04-01,Ohio,2547.0,,,
+2020-04-01,Oklahoma,719.0,,,
+2020-04-01,Oregon,736.0,,,
+2020-04-01,Pennsylvania,5805.0,,,
+2020-04-01,Puerto Rico,286.0,,,
+2020-04-01,Rhode Island,566.0,,,
+2020-04-01,South Carolina,1293.0,,,
+2020-04-01,South Dakota,129.0,,,
+2020-04-01,Tennessee,2690.0,,,
+2020-04-01,Texas,4261.0,,,
+2020-04-01,Utah,1012.0,,,
+2020-04-01,Vermont,321.0,,,
+2020-04-01,Virgin Islands,30.0,,,
+2020-04-01,Virginia,1511.0,,,
+2020-04-01,Washington,5588.0,,,
+2020-04-01,West Virginia,191.0,,,
+2020-04-01,Wisconsin,1550.0,,,
+2020-04-01,Wyoming,137.0,,,
+2020-04-02,Alabama,1270.0,,,
+2020-04-02,Alaska,146.0,,,
+2020-04-02,Arizona,1600.0,,,
+2020-04-02,Arkansas,683.0,,,
+2020-04-02,California,11190.0,,,
+2020-04-02,Colorado,3728.0,,,
+2020-04-02,Connecticut,3824.0,,,
+2020-04-02,Delaware,393.0,,,
+2020-04-02,District of Columbia,653.0,,,
+2020-04-02,Florida,9000.0,,,
+2020-04-02,Georgia,5444.0,,,
+2020-04-02,Guam,152.0,,,
+2020-04-02,Hawaii,283.0,,,
+2020-04-02,Idaho,891.0,,,
+2020-04-02,Illinois,7695.0,,,
+2020-04-02,Indiana,3039.0,,,
+2020-04-02,Iowa,614.0,,,
+2020-04-02,Kansas,554.0,,,
+2020-04-02,Kentucky,755.0,,,
+2020-04-02,Louisiana,9150.0,,,
+2020-04-02,Maine,376.0,,,
+2020-04-02,Maryland,2331.0,,,
+2020-04-02,Massachusetts,8966.0,,,
+2020-04-02,Michigan,10791.0,,,
+2020-04-02,Minnesota,742.0,,,
+2020-04-02,Mississippi,1177.0,,,
+2020-04-02,Missouri,1834.0,,,
+2020-04-02,Montana,241.0,,,
+2020-04-02,Nebraska,273.0,,,
+2020-04-02,Nevada,1458.0,,,
+2020-04-02,New Hampshire,479.0,,,
+2020-04-02,New Jersey,25590.0,,,
+2020-04-02,New Mexico,403.0,,,
+2020-04-02,New York,92381.0,,,
+2020-04-02,North Carolina,1857.0,,,
+2020-04-02,North Dakota,159.0,,,
+2020-04-02,Northern Mariana Islands,8.0,,,
+2020-04-02,Ohio,2902.0,,,
+2020-04-02,Oklahoma,879.0,,,
+2020-04-02,Oregon,826.0,,,
+2020-04-02,Pennsylvania,7016.0,,,
+2020-04-02,Puerto Rico,316.0,,,
+2020-04-02,Rhode Island,657.0,,,
+2020-04-02,South Carolina,1554.0,,,
+2020-04-02,South Dakota,165.0,,,
+2020-04-02,Tennessee,2869.0,,,
+2020-04-02,Texas,4880.0,,,
+2020-04-02,Utah,1074.0,,,
+2020-04-02,Vermont,338.0,,,
+2020-04-02,Virgin Islands,37.0,,,
+2020-04-02,Virginia,1706.0,,,
+2020-04-02,Washington,6585.0,,,
+2020-04-02,West Virginia,217.0,,,
+2020-04-02,Wisconsin,1730.0,,,
+2020-04-02,Wyoming,153.0,,,
+2020-04-03,Alabama,1535.0,,,
+2020-04-03,Alaska,156.0,,,
+2020-04-03,Arizona,1769.0,,,
+2020-04-03,Arkansas,738.0,,,
+2020-04-03,California,12569.0,,,
+2020-04-03,Colorado,4182.0,,,
+2020-04-03,Connecticut,4915.0,,,
+2020-04-03,Delaware,450.0,,,
+2020-04-03,District of Columbia,757.0,,,
+2020-04-03,Florida,10260.0,,,
+2020-04-03,Georgia,5967.0,,,
+2020-04-03,Guam,154.0,,,
+2020-04-03,Hawaii,317.0,,,
+2020-04-03,Idaho,1013.0,,,
+2020-04-03,Illinois,8904.0,,,
+2020-04-03,Indiana,3437.0,,,
+2020-04-03,Iowa,699.0,,,
+2020-04-03,Kansas,624.0,,,
+2020-04-03,Kentucky,770.0,,,
+2020-04-03,Louisiana,10297.0,,,
+2020-04-03,Maine,432.0,,,
+2020-04-03,Maryland,2758.0,,,
+2020-04-03,Massachusetts,10402.0,,,
+2020-04-03,Michigan,12670.0,,,
+2020-04-03,Minnesota,789.0,,,
+2020-04-03,Mississippi,1358.0,,,
+2020-04-03,Missouri,2113.0,,,
+2020-04-03,Montana,262.0,,,
+2020-04-03,Nebraska,296.0,,,
+2020-04-03,Nevada,1549.0,,,
+2020-04-03,New Hampshire,540.0,,,
+2020-04-03,New Jersey,29895.0,,,
+2020-04-03,New Mexico,495.0,,,
+2020-04-03,New York,102870.0,,,
+2020-04-03,North Carolina,2093.0,,,
+2020-04-03,North Dakota,173.0,,,
+2020-04-03,Northern Mariana Islands,8.0,,,
+2020-04-03,Ohio,3312.0,,,
+2020-04-03,Oklahoma,988.0,,,
+2020-04-03,Oregon,899.0,,,
+2020-04-03,Pennsylvania,8420.0,,,
+2020-04-03,Puerto Rico,378.0,,,
+2020-04-03,Rhode Island,711.0,,,
+2020-04-03,South Carolina,1700.0,,,
+2020-04-03,South Dakota,187.0,,,
+2020-04-03,Tennessee,3032.0,,,
+2020-04-03,Texas,5669.0,,,
+2020-04-03,Utah,1260.0,,,
+2020-04-03,Vermont,389.0,,,
+2020-04-03,Virgin Islands,38.0,,,
+2020-04-03,Virginia,2012.0,,,
+2020-04-03,Washington,6966.0,,,
+2020-04-03,West Virginia,242.0,,,
+2020-04-03,Wisconsin,1916.0,,,
+2020-04-03,Wyoming,166.0,,,
+2020-04-04,Alabama,1633.0,,,
+2020-04-04,Alaska,169.0,,,
+2020-04-04,Arizona,2019.0,,,
+2020-04-04,Arkansas,743.0,,,
+2020-04-04,California,13796.0,,,
+2020-04-04,Colorado,4574.0,,,
+2020-04-04,Connecticut,5276.0,,,
+2020-04-04,Delaware,593.0,,,
+2020-04-04,District of Columbia,902.0,,,
+2020-04-04,Florida,11537.0,,,
+2020-04-04,Georgia,6383.0,,,
+2020-04-04,Guam,223.0,,,
+2020-04-04,Hawaii,349.0,,,
+2020-04-04,Idaho,1077.0,,,
+2020-04-04,Illinois,10357.0,,,
+2020-04-04,Indiana,3953.0,,,
+2020-04-04,Iowa,786.0,,,
+2020-04-04,Kansas,701.0,,,
+2020-04-04,Kentucky,917.0,,,
+2020-04-04,Louisiana,12496.0,,,
+2020-04-04,Maine,456.0,,,
+2020-04-04,Maryland,3125.0,,,
+2020-04-04,Massachusetts,11736.0,,,
+2020-04-04,Michigan,14225.0,,,
+2020-04-04,Minnesota,865.0,,,
+2020-04-04,Mississippi,1455.0,,,
+2020-04-04,Missouri,2291.0,,,
+2020-04-04,Montana,281.0,,,
+2020-04-04,Nebraska,339.0,,,
+2020-04-04,Nevada,1758.0,,,
+2020-04-04,New Hampshire,621.0,,,
+2020-04-04,New Jersey,34124.0,,,
+2020-04-04,New Mexico,543.0,,,
+2020-04-04,New York,114996.0,,,
+2020-04-04,North Carolina,2402.0,,,
+2020-04-04,North Dakota,186.0,,,
+2020-04-04,Northern Mariana Islands,8.0,,,
+2020-04-04,Ohio,3739.0,,,
+2020-04-04,Oklahoma,1159.0,,,
+2020-04-04,Oregon,999.0,,,
+2020-04-04,Pennsylvania,10109.0,,,
+2020-04-04,Puerto Rico,452.0,,,
+2020-04-04,Rhode Island,806.0,,,
+2020-04-04,South Carolina,1917.0,,,
+2020-04-04,South Dakota,212.0,,,
+2020-04-04,Tennessee,3265.0,,,
+2020-04-04,Texas,6566.0,,,
+2020-04-04,Utah,1428.0,,,
+2020-04-04,Vermont,461.0,,,
+2020-04-04,Virgin Islands,42.0,,,
+2020-04-04,Virginia,2407.0,,,
+2020-04-04,Washington,7498.0,,,
+2020-04-04,West Virginia,282.0,,,
+2020-04-04,Wisconsin,2112.0,,,
+2020-04-04,Wyoming,187.0,,,
+2020-04-05,Alabama,1841.0,,,
+2020-04-05,Alaska,185.0,,,
+2020-04-05,Arizona,2269.0,,,
+2020-04-05,Arkansas,853.0,,,
+2020-04-05,California,15076.0,,,
+2020-04-05,Colorado,4950.0,,,
+2020-04-05,Connecticut,5675.0,,,
+2020-04-05,Delaware,673.0,,,
+2020-04-05,District of Columbia,998.0,,,
+2020-04-05,Florida,12342.0,,,
+2020-04-05,Georgia,6742.0,,,
+2020-04-05,Guam,265.0,,,
+2020-04-05,Hawaii,369.0,,,
+2020-04-05,Idaho,1101.0,,,
+2020-04-05,Illinois,11276.0,,,
+2020-04-05,Indiana,4411.0,,,
+2020-04-05,Iowa,868.0,,,
+2020-04-05,Kansas,763.0,,,
+2020-04-05,Kentucky,1048.0,,,
+2020-04-05,Louisiana,13010.0,,,
+2020-04-05,Maine,470.0,,,
+2020-04-05,Maryland,3609.0,,,
+2020-04-05,Massachusetts,12500.0,,,
+2020-04-05,Michigan,15635.0,,,
+2020-04-05,Minnesota,935.0,,,
+2020-04-05,Mississippi,1638.0,,,
+2020-04-05,Missouri,2367.0,,,
+2020-04-05,Montana,298.0,,,
+2020-04-05,Nebraska,377.0,,,
+2020-04-05,Nevada,1880.0,,,
+2020-04-05,New Hampshire,669.0,,,
+2020-04-05,New Jersey,37505.0,,,
+2020-04-05,New Mexico,624.0,,,
+2020-04-05,New York,122911.0,,,
+2020-04-05,North Carolina,2585.0,,,
+2020-04-05,North Dakota,207.0,,,
+2020-04-05,Northern Mariana Islands,8.0,,,
+2020-04-05,Ohio,4043.0,,,
+2020-04-05,Oklahoma,1252.0,,,
+2020-04-05,Oregon,1068.0,,,
+2020-04-05,Pennsylvania,11589.0,,,
+2020-04-05,Puerto Rico,475.0,,,
+2020-04-05,Rhode Island,922.0,,,
+2020-04-05,South Carolina,2049.0,,,
+2020-04-05,South Dakota,240.0,,,
+2020-04-05,Tennessee,3538.0,,,
+2020-04-05,Texas,7091.0,,,
+2020-04-05,Utah,1605.0,,,
+2020-04-05,Vermont,512.0,,,
+2020-04-05,Virgin Islands,42.0,,,
+2020-04-05,Virginia,2637.0,,,
+2020-04-05,Washington,7984.0,,,
+2020-04-05,West Virginia,324.0,,,
+2020-04-05,Wisconsin,2267.0,,,
+2020-04-05,Wyoming,200.0,,,
+2020-04-06,Alabama,2006.0,,,
+2020-04-06,Alaska,189.0,,,
+2020-04-06,Arizona,2465.0,,,
+2020-04-06,Arkansas,927.0,,,
+2020-04-06,California,16284.0,,,
+2020-04-06,Colorado,5172.0,,,
+2020-04-06,Connecticut,6906.0,,,
+2020-04-06,Delaware,783.0,,,
+2020-04-06,District of Columbia,1097.0,,,
+2020-04-06,Florida,13621.0,,,
+2020-04-06,Georgia,7558.0,,,
+2020-04-06,Guam,266.0,,,
+2020-04-06,Hawaii,385.0,,,
+2020-04-06,Idaho,1170.0,,,
+2020-04-06,Illinois,12262.0,,,
+2020-04-06,Indiana,4956.0,,,
+2020-04-06,Iowa,946.0,,,
+2020-04-06,Kansas,853.0,,,
+2020-04-06,Kentucky,1057.0,,,
+2020-04-06,Louisiana,14867.0,,,
+2020-04-06,Maine,499.0,,,
+2020-04-06,Maryland,4045.0,,,
+2020-04-06,Massachusetts,13837.0,,,
+2020-04-06,Michigan,17130.0,,,
+2020-04-06,Minnesota,986.0,,,
+2020-04-06,Mississippi,1738.0,,,
+2020-04-06,Missouri,2722.0,,,
+2020-04-06,Montana,319.0,,,
+2020-04-06,Nebraska,438.0,,,
+2020-04-06,Nevada,1971.0,,,
+2020-04-06,New Hampshire,715.0,,,
+2020-04-06,New Jersey,41090.0,,,
+2020-04-06,New Mexico,686.0,,,
+2020-04-06,New York,130689.0,,,
+2020-04-06,North Carolina,2870.0,,,
+2020-04-06,North Dakota,225.0,,,
+2020-04-06,Northern Mariana Islands,8.0,,,
+2020-04-06,Ohio,4450.0,,,
+2020-04-06,Oklahoma,1327.0,,,
+2020-04-06,Oregon,1132.0,,,
+2020-04-06,Pennsylvania,13074.0,,,
+2020-04-06,Puerto Rico,513.0,,,
+2020-04-06,Rhode Island,1082.0,,,
+2020-04-06,South Carolina,2232.0,,,
+2020-04-06,South Dakota,288.0,,,
+2020-04-06,Tennessee,3753.0,,,
+2020-04-06,Texas,8104.0,,,
+2020-04-06,Utah,1675.0,,,
+2020-04-06,Vermont,543.0,,,
+2020-04-06,Virgin Islands,43.0,,,
+2020-04-06,Virginia,2878.0,,,
+2020-04-06,Washington,8384.0,,,
+2020-04-06,West Virginia,345.0,,,
+2020-04-06,Wisconsin,2440.0,,,
+2020-04-06,Wyoming,212.0,,,
+2020-04-07,Alabama,2197.0,,,
+2020-04-07,Alaska,211.0,,,
+2020-04-07,Arizona,2575.0,,,
+2020-04-07,Arkansas,997.0,,,
+2020-04-07,California,17540.0,,,
+2020-04-07,Colorado,5429.0,,,
+2020-04-07,Connecticut,7781.0,,,
+2020-04-07,Delaware,928.0,,,
+2020-04-07,District of Columbia,1211.0,,,
+2020-04-07,Florida,14739.0,,,
+2020-04-07,Georgia,9156.0,,,
+2020-04-07,Guam,274.0,,,
+2020-04-07,Hawaii,408.0,,,
+2020-04-07,Idaho,1210.0,,,
+2020-04-07,Illinois,13549.0,,,
+2020-04-07,Indiana,5507.0,,,
+2020-04-07,Iowa,1048.0,,,
+2020-04-07,Kansas,905.0,,,
+2020-04-07,Kentucky,1289.0,,,
+2020-04-07,Louisiana,16284.0,,,
+2020-04-07,Maine,519.0,,,
+2020-04-07,Maryland,4371.0,,,
+2020-04-07,Massachusetts,15202.0,,,
+2020-04-07,Michigan,18852.0,,,
+2020-04-07,Minnesota,1069.0,,,
+2020-04-07,Mississippi,1915.0,,,
+2020-04-07,Missouri,3037.0,,,
+2020-04-07,Montana,319.0,,,
+2020-04-07,Nebraska,490.0,,,
+2020-04-07,Nevada,2101.0,,,
+2020-04-07,New Hampshire,747.0,,,
+2020-04-07,New Jersey,44416.0,,,
+2020-04-07,New Mexico,794.0,,,
+2020-04-07,New York,140081.0,,,
+2020-04-07,North Carolina,3220.0,,,
+2020-04-07,North Dakota,237.0,,,
+2020-04-07,Northern Mariana Islands,8.0,,,
+2020-04-07,Ohio,4782.0,,,
+2020-04-07,Oklahoma,1472.0,,,
+2020-04-07,Oregon,1181.0,,,
+2020-04-07,Pennsylvania,14582.0,,,
+2020-04-07,Puerto Rico,573.0,,,
+2020-04-07,Rhode Island,1229.0,,,
+2020-04-07,South Carolina,2417.0,,,
+2020-04-07,South Dakota,320.0,,,
+2020-04-07,Tennessee,4010.0,,,
+2020-04-07,Texas,8968.0,,,
+2020-04-07,Utah,1752.0,,,
+2020-04-07,Vermont,575.0,,,
+2020-04-07,Virgin Islands,45.0,,,
+2020-04-07,Virginia,3333.0,,,
+2020-04-07,Washington,8682.0,,,
+2020-04-07,West Virginia,412.0,,,
+2020-04-07,Wisconsin,2578.0,,,
+2020-04-07,Wyoming,221.0,,,
+2020-04-08,Alabama,2499.0,,,
+2020-04-08,Alaska,224.0,,,
+2020-04-08,Arizona,2726.0,,,
+2020-04-08,Arkansas,1077.0,,,
+2020-04-08,California,19043.0,,,
+2020-04-08,Colorado,5655.0,,,
+2020-04-08,Connecticut,8781.0,,,
+2020-04-08,Delaware,1116.0,,,
+2020-04-08,District of Columbia,1440.0,,,
+2020-04-08,Florida,15690.0,,,
+2020-04-08,Georgia,10204.0,,,
+2020-04-08,Guam,409.0,,,
+2020-04-08,Hawaii,433.0,,,
+2020-04-08,Idaho,1232.0,,,
+2020-04-08,Illinois,15078.0,,,
+2020-04-08,Indiana,5943.0,,,
+2020-04-08,Iowa,1145.0,,,
+2020-04-08,Kansas,1055.0,,,
+2020-04-08,Kentucky,1393.0,,,
+2020-04-08,Louisiana,17030.0,,,
+2020-04-08,Maine,537.0,,,
+2020-04-08,Maryland,5529.0,,,
+2020-04-08,Massachusetts,16790.0,,,
+2020-04-08,Michigan,20220.0,,,
+2020-04-08,Minnesota,1154.0,,,
+2020-04-08,Mississippi,2003.0,,,
+2020-04-08,Missouri,3327.0,,,
+2020-04-08,Montana,332.0,,,
+2020-04-08,Nebraska,538.0,,,
+2020-04-08,Nevada,2318.0,,,
+2020-04-08,New Hampshire,788.0,,,
+2020-04-08,New Jersey,47437.0,,,
+2020-04-08,New Mexico,865.0,,,
+2020-04-08,New York,149401.0,,,
+2020-04-08,North Carolina,3423.0,,,
+2020-04-08,North Dakota,251.0,,,
+2020-04-08,Northern Mariana Islands,11.0,,,
+2020-04-08,Ohio,5148.0,,,
+2020-04-08,Oklahoma,1524.0,,,
+2020-04-08,Oregon,1239.0,,,
+2020-04-08,Pennsylvania,16414.0,,,
+2020-04-08,Puerto Rico,620.0,,,
+2020-04-08,Rhode Island,1450.0,,,
+2020-04-08,South Carolina,2552.0,,,
+2020-04-08,South Dakota,393.0,,,
+2020-04-08,Tennessee,4246.0,,,
+2020-04-08,Texas,9897.0,,,
+2020-04-08,Utah,1875.0,,,
+2020-04-08,Vermont,605.0,,,
+2020-04-08,Virgin Islands,45.0,,,
+2020-04-08,Virginia,3645.0,,,
+2020-04-08,Washington,9097.0,,,
+2020-04-08,West Virginia,483.0,,,
+2020-04-08,Wisconsin,2756.0,,,
+2020-04-08,Wyoming,230.0,,,
+2020-04-09,Alabama,2838.0,,,
+2020-04-09,Alaska,233.0,,,
+2020-04-09,Arizona,3018.0,,,
+2020-04-09,Arkansas,1146.0,,,
+2020-04-09,California,20191.0,,,
+2020-04-09,Colorado,6202.0,,,
+2020-04-09,Connecticut,9784.0,,,
+2020-04-09,Delaware,1209.0,,,
+2020-04-09,District of Columbia,1523.0,,,
+2020-04-09,Florida,16819.0,,,
+2020-04-09,Georgia,10885.0,,,
+2020-04-09,Guam,542.0,,,
+2020-04-09,Hawaii,440.0,,,
+2020-04-09,Idaho,1353.0,,,
+2020-04-09,Illinois,16422.0,,,
+2020-04-09,Indiana,6351.0,,,
+2020-04-09,Iowa,1270.0,,,
+2020-04-09,Kansas,1116.0,,,
+2020-04-09,Kentucky,1525.0,,,
+2020-04-09,Louisiana,18283.0,,,
+2020-04-09,Maine,560.0,,,
+2020-04-09,Maryland,6185.0,,,
+2020-04-09,Massachusetts,18941.0,,,
+2020-04-09,Michigan,21375.0,,,
+2020-04-09,Minnesota,1242.0,,,
+2020-04-09,Mississippi,2260.0,,,
+2020-04-09,Missouri,3539.0,,,
+2020-04-09,Montana,354.0,,,
+2020-04-09,Nebraska,594.0,,,
+2020-04-09,Nevada,2456.0,,,
+2020-04-09,New Hampshire,819.0,,,
+2020-04-09,New Jersey,51027.0,,,
+2020-04-09,New Mexico,989.0,,,
+2020-04-09,New York,159937.0,,,
+2020-04-09,North Carolina,3651.0,,,
+2020-04-09,North Dakota,269.0,,,
+2020-04-09,Northern Mariana Islands,11.0,,,
+2020-04-09,Ohio,5512.0,,,
+2020-04-09,Oklahoma,1684.0,,,
+2020-04-09,Oregon,1321.0,,,
+2020-04-09,Pennsylvania,18379.0,,,
+2020-04-09,Puerto Rico,683.0,,,
+2020-04-09,Rhode Island,1727.0,,,
+2020-04-09,South Carolina,2792.0,,,
+2020-04-09,South Dakota,447.0,,,
+2020-04-09,Tennessee,4456.0,,,
+2020-04-09,Texas,11372.0,,,
+2020-04-09,Utah,1980.0,,,
+2020-04-09,Vermont,628.0,,,
+2020-04-09,Virgin Islands,46.0,,,
+2020-04-09,Virginia,4042.0,,,
+2020-04-09,Washington,9608.0,,,
+2020-04-09,West Virginia,524.0,,,
+2020-04-09,Wisconsin,2885.0,,,
+2020-04-09,Wyoming,239.0,,,
+2020-04-10,Alabama,3008.0,,,
+2020-04-10,Alaska,244.0,,,
+2020-04-10,Arizona,3112.0,,,
+2020-04-10,Arkansas,1202.0,,,
+2020-04-10,California,21366.0,,,
+2020-04-10,Colorado,6510.0,,,
+2020-04-10,Connecticut,10538.0,,,
+2020-04-10,Delaware,1326.0,,,
+2020-04-10,District of Columbia,1660.0,,,
+2020-04-10,Florida,17960.0,,,
+2020-04-10,Georgia,11859.0,,,
+2020-04-10,Guam,577.0,,,
+2020-04-10,Hawaii,463.0,,,
+2020-04-10,Idaho,1397.0,,,
+2020-04-10,Illinois,17887.0,,,
+2020-04-10,Indiana,6907.0,,,
+2020-04-10,Iowa,1388.0,,,
+2020-04-10,Kansas,1180.0,,,
+2020-04-10,Kentucky,1702.0,,,
+2020-04-10,Louisiana,19253.0,,,
+2020-04-10,Maine,586.0,,,
+2020-04-10,Maryland,6968.0,,,
+2020-04-10,Massachusetts,20974.0,,,
+2020-04-10,Michigan,22646.0,,,
+2020-04-10,Minnesota,1335.0,,,
+2020-04-10,Mississippi,2469.0,,,
+2020-04-10,Missouri,3799.0,,,
+2020-04-10,Montana,365.0,,,
+2020-04-10,Nebraska,679.0,,,
+2020-04-10,Nevada,2606.0,,,
+2020-04-10,New Hampshire,885.0,,,
+2020-04-10,New Jersey,54588.0,,,
+2020-04-10,New Mexico,1091.0,,,
+2020-04-10,New York,170512.0,,,
+2020-04-10,North Carolina,3906.0,,,
+2020-04-10,North Dakota,278.0,,,
+2020-04-10,Northern Mariana Islands,11.0,,,
+2020-04-10,Ohio,5878.0,,,
+2020-04-10,Oklahoma,1794.0,,,
+2020-04-10,Oregon,1371.0,,,
+2020-04-10,Pennsylvania,20128.0,,,
+2020-04-10,Puerto Rico,725.0,,,
+2020-04-10,Rhode Island,2015.0,,,
+2020-04-10,South Carolina,3065.0,,,
+2020-04-10,South Dakota,536.0,,,
+2020-04-10,Tennessee,4793.0,,,
+2020-04-10,Texas,12290.0,,,
+2020-04-10,Utah,2103.0,,,
+2020-04-10,Vermont,679.0,,,
+2020-04-10,Virgin Islands,46.0,,,
+2020-04-10,Virginia,4509.0,,,
+2020-04-10,Washington,9887.0,,,
+2020-04-10,West Virginia,537.0,,,
+2020-04-10,Wisconsin,3068.0,,,
+2020-04-10,Wyoming,253.0,,,
+2020-04-11,Alabama,3262.0,,,
+2020-04-11,Alaska,255.0,,,
+2020-04-11,Arizona,3393.0,,,
+2020-04-11,Arkansas,1228.0,,,
+2020-04-11,California,22421.0,,,
+2020-04-11,Colorado,6893.0,,,
+2020-04-11,Connecticut,11510.0,,,
+2020-04-11,Delaware,1479.0,,,
+2020-04-11,District of Columbia,1778.0,,,
+2020-04-11,Florida,18978.0,,,
+2020-04-11,Georgia,12261.0,,,
+2020-04-11,Guam,681.0,,,
+2020-04-11,Hawaii,484.0,,,
+2020-04-11,Idaho,1407.0,,,
+2020-04-11,Illinois,19180.0,,,
+2020-04-11,Indiana,7435.0,,,
+2020-04-11,Iowa,1510.0,,,
+2020-04-11,Kansas,1283.0,,,
+2020-04-11,Kentucky,1851.0,,,
+2020-04-11,Louisiana,20014.0,,,
+2020-04-11,Maine,616.0,,,
+2020-04-11,Maryland,7694.0,,,
+2020-04-11,Massachusetts,22860.0,,,
+2020-04-11,Michigan,23853.0,,,
+2020-04-11,Minnesota,1427.0,,,
+2020-04-11,Mississippi,2642.0,,,
+2020-04-11,Missouri,4024.0,,,
+2020-04-11,Montana,377.0,,,
+2020-04-11,Nebraska,719.0,,,
+2020-04-11,Nevada,2720.0,,,
+2020-04-11,New Hampshire,929.0,,,
+2020-04-11,New Jersey,58151.0,,,
+2020-04-11,New Mexico,1174.0,,,
+2020-04-11,New York,180458.0,,,
+2020-04-11,North Carolina,4310.0,,,
+2020-04-11,North Dakota,293.0,,,
+2020-04-11,Northern Mariana Islands,11.0,,,
+2020-04-11,Ohio,6250.0,,,
+2020-04-11,Oklahoma,1868.0,,,
+2020-04-11,Oregon,1447.0,,,
+2020-04-11,Pennsylvania,21774.0,,,
+2020-04-11,Puerto Rico,788.0,,,
+2020-04-11,Rhode Island,2349.0,,,
+2020-04-11,South Carolina,3207.0,,,
+2020-04-11,South Dakota,626.0,,,
+2020-04-11,Tennessee,4983.0,,,
+2020-04-11,Texas,13208.0,,,
+2020-04-11,Utah,2206.0,,,
+2020-04-11,Vermont,711.0,,,
+2020-04-11,Virgin Islands,51.0,,,
+2020-04-11,Virginia,5077.0,,,
+2020-04-11,Washington,10224.0,,,
+2020-04-11,West Virginia,593.0,,,
+2020-04-11,Wisconsin,3213.0,,,
+2020-04-11,Wyoming,261.0,,,
+2020-04-12,Alabama,3583.0,,,
+2020-04-12,Alaska,270.0,,,
+2020-04-12,Arizona,3539.0,,,
+2020-04-12,Arkansas,1280.0,,,
+2020-04-12,California,23323.0,,,
+2020-04-12,Colorado,7303.0,,,
+2020-04-12,Connecticut,12035.0,,,
+2020-04-12,Delaware,1625.0,,,
+2020-04-12,District of Columbia,1875.0,,,
+2020-04-12,Florida,19855.0,,,
+2020-04-12,Georgia,12103.0,,,
+2020-04-12,Guam,716.0,,,
+2020-04-12,Hawaii,497.0,,,
+2020-04-12,Idaho,1426.0,,,
+2020-04-12,Illinois,20852.0,,,
+2020-04-12,Indiana,7928.0,,,
+2020-04-12,Iowa,1587.0,,,
+2020-04-12,Kansas,1338.0,,,
+2020-04-12,Kentucky,1963.0,,,
+2020-04-12,Louisiana,20595.0,,,
+2020-04-12,Maine,633.0,,,
+2020-04-12,Maryland,8225.0,,,
+2020-04-12,Massachusetts,25475.0,,,
+2020-04-12,Michigan,24494.0,,,
+2020-04-12,Minnesota,1621.0,,,
+2020-04-12,Mississippi,2781.0,,,
+2020-04-12,Missouri,4160.0,,,
+2020-04-12,Montana,387.0,,,
+2020-04-12,Nebraska,806.0,,,
+2020-04-12,Nevada,2860.0,,,
+2020-04-12,New Hampshire,985.0,,,
+2020-04-12,New Jersey,61850.0,,,
+2020-04-12,New Mexico,1245.0,,,
+2020-04-12,New York,188694.0,,,
+2020-04-12,North Carolina,4520.0,,,
+2020-04-12,North Dakota,308.0,,,
+2020-04-12,Northern Mariana Islands,11.0,,,
+2020-04-12,Ohio,6604.0,,,
+2020-04-12,Oklahoma,1970.0,,,
+2020-04-12,Oregon,1527.0,,,
+2020-04-12,Pennsylvania,22955.0,,,
+2020-04-12,Puerto Rico,897.0,,,
+2020-04-12,Rhode Island,2665.0,,,
+2020-04-12,South Carolina,3319.0,,,
+2020-04-12,South Dakota,730.0,,,
+2020-04-12,Tennessee,5144.0,,,
+2020-04-12,Texas,13776.0,,,
+2020-04-12,Utah,2303.0,,,
+2020-04-12,Vermont,727.0,,,
+2020-04-12,Virgin Islands,51.0,,,
+2020-04-12,Virginia,5274.0,,,
+2020-04-12,Washington,10411.0,,,
+2020-04-12,West Virginia,615.0,,,
+2020-04-12,Wisconsin,3341.0,,,
+2020-04-12,Wyoming,270.0,,,
+2020-04-13,Alabama,3805.0,,,
+2020-04-13,Alaska,275.0,,,
+2020-04-13,Arizona,3702.0,,,
+2020-04-13,Arkansas,1475.0,,,
+2020-04-13,California,24334.0,,,
+2020-04-13,Colorado,7691.0,,,
+2020-04-13,Connecticut,13381.0,,,
+2020-04-13,Delaware,1761.0,,,
+2020-04-13,District of Columbia,1955.0,,,
+2020-04-13,Florida,21011.0,,,
+2020-04-13,Georgia,13125.0,,,
+2020-04-13,Guam,719.0,,,
+2020-04-13,Hawaii,502.0,,,
+2020-04-13,Idaho,1453.0,,,
+2020-04-13,Illinois,22025.0,,,
+2020-04-13,Indiana,8236.0,,,
+2020-04-13,Iowa,1710.0,,,
+2020-04-13,Kansas,1383.0,,,
+2020-04-13,Kentucky,2048.0,,,
+2020-04-13,Louisiana,21016.0,,,
+2020-04-13,Maine,698.0,,,
+2020-04-13,Maryland,8936.0,,,
+2020-04-13,Massachusetts,26867.0,,,
+2020-04-13,Michigan,25487.0,,,
+2020-04-13,Minnesota,1650.0,,,
+2020-04-13,Mississippi,2942.0,,,
+2020-04-13,Missouri,4388.0,,,
+2020-04-13,Montana,394.0,,,
+2020-04-13,Nebraska,871.0,,,
+2020-04-13,Nevada,3036.0,,,
+2020-04-13,New Hampshire,1020.0,,,
+2020-04-13,New Jersey,64584.0,,,
+2020-04-13,New Mexico,1345.0,,,
+2020-04-13,New York,195031.0,,,
+2020-04-13,North Carolina,4788.0,,,
+2020-04-13,North Dakota,331.0,,,
+2020-04-13,Northern Mariana Islands,11.0,,,
+2020-04-13,Ohio,6975.0,,,
+2020-04-13,Oklahoma,2069.0,,,
+2020-04-13,Oregon,1584.0,,,
+2020-04-13,Pennsylvania,24295.0,,,
+2020-04-13,Puerto Rico,903.0,,,
+2020-04-13,Rhode Island,2976.0,,,
+2020-04-13,South Carolina,3439.0,,,
+2020-04-13,South Dakota,868.0,,,
+2020-04-13,Tennessee,5483.0,,,
+2020-04-13,Texas,14487.0,,,
+2020-04-13,Utah,2363.0,,,
+2020-04-13,Vermont,748.0,,,
+2020-04-13,Virgin Islands,51.0,,,
+2020-04-13,Virginia,5747.0,,,
+2020-04-13,Washington,10538.0,,,
+2020-04-13,West Virginia,638.0,,,
+2020-04-13,Wisconsin,3428.0,,,
+2020-04-13,Wyoming,275.0,,,
+2020-04-14,Alabama,3953.0,,,
+2020-04-14,Alaska,283.0,,,
+2020-04-14,Arizona,3806.0,,,
+2020-04-14,Arkansas,1498.0,,,
+2020-04-14,California,25758.0,,,
+2020-04-14,Colorado,7941.0,,,
+2020-04-14,Connecticut,13989.0,,,
+2020-04-14,Delaware,1926.0,,,
+2020-04-14,District of Columbia,2058.0,,,
+2020-04-14,Florida,21620.0,,,
+2020-04-14,Georgia,13913.0,,,
+2020-04-14,Guam,721.0,,,
+2020-04-14,Hawaii,511.0,,,
+2020-04-14,Idaho,1464.0,,,
+2020-04-14,Illinois,23247.0,,,
+2020-04-14,Indiana,8527.0,,,
+2020-04-14,Iowa,1899.0,,,
+2020-04-14,Kansas,1439.0,,,
+2020-04-14,Kentucky,2210.0,,,
+2020-04-14,Louisiana,21518.0,,,
+2020-04-14,Maine,734.0,,,
+2020-04-14,Maryland,9472.0,,,
+2020-04-14,Massachusetts,28163.0,,,
+2020-04-14,Michigan,26844.0,,,
+2020-04-14,Minnesota,1695.0,,,
+2020-04-14,Mississippi,3087.0,,,
+2020-04-14,Missouri,4686.0,,,
+2020-04-14,Montana,399.0,,,
+2020-04-14,Nebraska,931.0,,,
+2020-04-14,Nevada,3137.0,,,
+2020-04-14,New Hampshire,1091.0,,,
+2020-04-14,New Jersey,68824.0,,,
+2020-04-14,New Mexico,1407.0,,,
+2020-04-14,New York,202208.0,,,
+2020-04-14,North Carolina,4992.0,,,
+2020-04-14,North Dakota,341.0,,,
+2020-04-14,Northern Mariana Islands,13.0,,,
+2020-04-14,Ohio,7280.0,,,
+2020-04-14,Oklahoma,2184.0,,,
+2020-04-14,Oregon,1633.0,,,
+2020-04-14,Pennsylvania,25591.0,,,
+2020-04-14,Puerto Rico,923.0,,,
+2020-04-14,Rhode Island,3251.0,,,
+2020-04-14,South Carolina,3553.0,,,
+2020-04-14,South Dakota,988.0,,,
+2020-04-14,Tennessee,5654.0,,,
+2020-04-14,Texas,15303.0,,,
+2020-04-14,Utah,2418.0,,,
+2020-04-14,Vermont,752.0,,,
+2020-04-14,Virgin Islands,51.0,,,
+2020-04-14,Virginia,6171.0,,,
+2020-04-14,Washington,10694.0,,,
+2020-04-14,West Virginia,697.0,,,
+2020-04-14,Wisconsin,3555.0,,,
+2020-04-14,Wyoming,282.0,,,
+2020-04-15,Alabama,4241.0,,,
+2020-04-15,Alaska,291.0,,,
+2020-04-15,Arizona,3962.0,,,
+2020-04-15,Arkansas,1599.0,,,
+2020-04-15,California,27107.0,,,
+2020-04-15,Colorado,8280.0,,,
+2020-04-15,Connecticut,14755.0,,,
+2020-04-15,Delaware,2014.0,,,
+2020-04-15,District of Columbia,2197.0,,,
+2020-04-15,Florida,22526.0,,,
+2020-04-15,Georgia,14583.0,,,
+2020-04-15,Guam,750.0,,,
+2020-04-15,Hawaii,524.0,,,
+2020-04-15,Idaho,1507.0,,,
+2020-04-15,Illinois,24593.0,,,
+2020-04-15,Indiana,8955.0,,,
+2020-04-15,Iowa,1995.0,,,
+2020-04-15,Kansas,1502.0,,,
+2020-04-15,Kentucky,2295.0,,,
+2020-04-15,Louisiana,21951.0,,,
+2020-04-15,Maine,770.0,,,
+2020-04-15,Maryland,10032.0,,,
+2020-04-15,Massachusetts,29918.0,,,
+2020-04-15,Michigan,27893.0,,,
+2020-04-15,Minnesota,1809.0,,,
+2020-04-15,Mississippi,3360.0,,,
+2020-04-15,Missouri,4895.0,,,
+2020-04-15,Montana,404.0,,,
+2020-04-15,Nebraska,995.0,,,
+2020-04-15,Nevada,3212.0,,,
+2020-04-15,New Hampshire,1139.0,,,
+2020-04-15,New Jersey,71030.0,,,
+2020-04-15,New Mexico,1484.0,,,
+2020-04-15,New York,213779.0,,,
+2020-04-15,North Carolina,5123.0,,,
+2020-04-15,North Dakota,365.0,,,
+2020-04-15,Northern Mariana Islands,13.0,,,
+2020-04-15,Ohio,7791.0,,,
+2020-04-15,Oklahoma,2263.0,,,
+2020-04-15,Oregon,1663.0,,,
+2020-04-15,Pennsylvania,26804.0,,,
+2020-04-15,Puerto Rico,974.0,,,
+2020-04-15,Rhode Island,3529.0,,,
+2020-04-15,South Carolina,3656.0,,,
+2020-04-15,South Dakota,1168.0,,,
+2020-04-15,Tennessee,5878.0,,,
+2020-04-15,Texas,16106.0,,,
+2020-04-15,Utah,2549.0,,,
+2020-04-15,Vermont,759.0,,,
+2020-04-15,Virgin Islands,51.0,,,
+2020-04-15,Virginia,6500.0,,,
+2020-04-15,Washington,10783.0,,,
+2020-04-15,West Virginia,725.0,,,
+2020-04-15,Wisconsin,3721.0,,,
+2020-04-15,Wyoming,288.0,,,
+2020-04-16,Alabama,4404.0,,,
+2020-04-16,Alaska,298.0,,,
+2020-04-16,Arizona,4234.0,,,
+2020-04-16,Arkansas,1620.0,,,
+2020-04-16,California,28142.0,,,
+2020-04-16,Colorado,8675.0,,,
+2020-04-16,Connecticut,15884.0,,,
+2020-04-16,Delaware,2075.0,,,
+2020-04-16,District of Columbia,2350.0,,,
+2020-04-16,Florida,23332.0,,,
+2020-04-16,Georgia,15644.0,,,
+2020-04-16,Guam,790.0,,,
+2020-04-16,Hawaii,535.0,,,
+2020-04-16,Idaho,1528.0,,,
+2020-04-16,Illinois,25734.0,,,
+2020-04-16,Indiana,9542.0,,,
+2020-04-16,Iowa,2141.0,,,
+2020-04-16,Kansas,1594.0,,,
+2020-04-16,Kentucky,2429.0,,,
+2020-04-16,Louisiana,22532.0,,,
+2020-04-16,Maine,796.0,,,
+2020-04-16,Maryland,10784.0,,,
+2020-04-16,Massachusetts,32181.0,,,
+2020-04-16,Michigan,29119.0,,,
+2020-04-16,Minnesota,1912.0,,,
+2020-04-16,Mississippi,3624.0,,,
+2020-04-16,Missouri,5111.0,,,
+2020-04-16,Montana,415.0,,,
+2020-04-16,Nebraska,1094.0,,,
+2020-04-16,Nevada,3321.0,,,
+2020-04-16,New Hampshire,1211.0,,,
+2020-04-16,New Jersey,75317.0,,,
+2020-04-16,New Mexico,1597.0,,,
+2020-04-16,New York,222284.0,,,
+2020-04-16,North Carolina,5463.0,,,
+2020-04-16,North Dakota,393.0,,,
+2020-04-16,Northern Mariana Islands,13.0,,,
+2020-04-16,Ohio,8414.0,,,
+2020-04-16,Oklahoma,2357.0,,,
+2020-04-16,Oregon,1736.0,,,
+2020-04-16,Pennsylvania,28314.0,,,
+2020-04-16,Puerto Rico,1043.0,,,
+2020-04-16,Rhode Island,3838.0,,,
+2020-04-16,South Carolina,3931.0,,,
+2020-04-16,South Dakota,1311.0,,,
+2020-04-16,Tennessee,6090.0,,,
+2020-04-16,Texas,16928.0,,,
+2020-04-16,Utah,2683.0,,,
+2020-04-16,Vermont,768.0,,,
+2020-04-16,Virgin Islands,51.0,,,
+2020-04-16,Virginia,6889.0,,,
+2020-04-16,Washington,11152.0,,,
+2020-04-16,West Virginia,739.0,,,
+2020-04-16,Wisconsin,3875.0,,,
+2020-04-16,Wyoming,296.0,,,
+2020-04-17,Alabama,4572.0,,,
+2020-04-17,Alaska,307.0,,,
+2020-04-17,Arizona,4507.0,,,
+2020-04-17,Arkansas,1695.0,,,
+2020-04-17,California,29398.0,,,
+2020-04-17,Colorado,9047.0,,,
+2020-04-17,Connecticut,16809.0,,,
+2020-04-17,Delaware,2323.0,,,
+2020-04-17,District of Columbia,2476.0,,,
+2020-04-17,Florida,24745.0,,,
+2020-04-17,Georgia,16658.0,,,
+2020-04-17,Guam,796.0,,,
+2020-04-17,Hawaii,547.0,,,
+2020-04-17,Idaho,1566.0,,,
+2020-04-17,Illinois,27575.0,,,
+2020-04-17,Indiana,10154.0,,,
+2020-04-17,Iowa,2332.0,,,
+2020-04-17,Kansas,1731.0,,,
+2020-04-17,Kentucky,2522.0,,,
+2020-04-17,Louisiana,23118.0,,,
+2020-04-17,Maine,827.0,,,
+2020-04-17,Maryland,11572.0,,,
+2020-04-17,Massachusetts,34402.0,,,
+2020-04-17,Michigan,29952.0,,,
+2020-04-17,Minnesota,2071.0,,,
+2020-04-17,Mississippi,3793.0,,,
+2020-04-17,Missouri,5283.0,,,
+2020-04-17,Montana,422.0,,,
+2020-04-17,Nebraska,1216.0,,,
+2020-04-17,Nevada,3524.0,,,
+2020-04-17,New Hampshire,1287.0,,,
+2020-04-17,New Jersey,78467.0,,,
+2020-04-17,New Mexico,1711.0,,,
+2020-04-17,New York,229642.0,,,
+2020-04-17,North Carolina,5859.0,,,
+2020-04-17,North Dakota,439.0,,,
+2020-04-17,Northern Mariana Islands,14.0,,,
+2020-04-17,Ohio,9107.0,,,
+2020-04-17,Oklahoma,2465.0,,,
+2020-04-17,Oregon,1785.0,,,
+2020-04-17,Pennsylvania,30121.0,,,
+2020-04-17,Puerto Rico,1068.0,,,
+2020-04-17,Rhode Island,4177.0,,,
+2020-04-17,South Carolina,4086.0,,,
+2020-04-17,South Dakota,1411.0,,,
+2020-04-17,Tennessee,6438.0,,,
+2020-04-17,Texas,18131.0,,,
+2020-04-17,Utah,2813.0,,,
+2020-04-17,Vermont,779.0,,,
+2020-04-17,Virgin Islands,51.0,,,
+2020-04-17,Virginia,7491.0,,,
+2020-04-17,Washington,11445.0,,,
+2020-04-17,West Virginia,776.0,,,
+2020-04-17,Wisconsin,4045.0,,,
+2020-04-17,Wyoming,305.0,,,
+2020-04-18,Alabama,4723.0,,,
+2020-04-18,Alaska,312.0,,,
+2020-04-18,Arizona,4719.0,,,
+2020-04-18,Arkansas,1777.0,,,
+2020-04-18,California,30829.0,,,
+2020-04-18,Colorado,9433.0,,,
+2020-04-18,Connecticut,17550.0,,,
+2020-04-18,Delaware,2538.0,,,
+2020-04-18,District of Columbia,2666.0,,,
+2020-04-18,Florida,25484.0,,,
+2020-04-18,Georgia,17014.0,,,
+2020-04-18,Guam,805.0,,,
+2020-04-18,Hawaii,568.0,,,
+2020-04-18,Idaho,1577.0,,,
+2020-04-18,Illinois,29160.0,,,
+2020-04-18,Indiana,10641.0,,,
+2020-04-18,Iowa,2513.0,,,
+2020-04-18,Kansas,1820.0,,,
+2020-04-18,Kentucky,2707.0,,,
+2020-04-18,Louisiana,23580.0,,,
+2020-04-18,Maine,847.0,,,
+2020-04-18,Maryland,12308.0,,,
+2020-04-18,Massachusetts,36372.0,,,
+2020-04-18,Michigan,30717.0,,,
+2020-04-18,Minnesota,2213.0,,,
+2020-04-18,Mississippi,3974.0,,,
+2020-04-18,Missouri,5517.0,,,
+2020-04-18,Montana,426.0,,,
+2020-04-18,Nebraska,1348.0,,,
+2020-04-18,Nevada,3626.0,,,
+2020-04-18,New Hampshire,1342.0,,,
+2020-04-18,New Jersey,81420.0,,,
+2020-04-18,New Mexico,1798.0,,,
+2020-04-18,New York,236763.0,,,
+2020-04-18,North Carolina,6140.0,,,
+2020-04-18,North Dakota,528.0,,,
+2020-04-18,Northern Mariana Islands,14.0,,,
+2020-04-18,Ohio,10222.0,,,
+2020-04-18,Oklahoma,2570.0,,,
+2020-04-18,Oregon,1844.0,,,
+2020-04-18,Pennsylvania,31742.0,,,
+2020-04-18,Puerto Rico,1118.0,,,
+2020-04-18,Rhode Island,4491.0,,,
+2020-04-18,South Carolina,4246.0,,,
+2020-04-18,South Dakota,1542.0,,,
+2020-04-18,Tennessee,6637.0,,,
+2020-04-18,Texas,18927.0,,,
+2020-04-18,Utah,2942.0,,,
+2020-04-18,Vermont,803.0,,,
+2020-04-18,Virgin Islands,53.0,,,
+2020-04-18,Virginia,8053.0,,,
+2020-04-18,Washington,11802.0,,,
+2020-04-18,West Virginia,825.0,,,
+2020-04-18,Wisconsin,4199.0,,,
+2020-04-18,Wyoming,309.0,,,
+2020-04-19,Alabama,4903.0,,,
+2020-04-19,Alaska,317.0,,,
+2020-04-19,Arizona,4929.0,,,
+2020-04-19,Arkansas,1781.0,,,
+2020-04-19,California,31544.0,,,
+2020-04-19,Colorado,9730.0,,,
+2020-04-19,Connecticut,17962.0,,,
+2020-04-19,Delaware,2538.0,,,
+2020-04-19,District of Columbia,2793.0,,,
+2020-04-19,Florida,26306.0,,,
+2020-04-19,Georgia,17619.0,,,
+2020-04-19,Guam,808.0,,,
+2020-04-19,Hawaii,574.0,,,
+2020-04-19,Idaho,1581.0,,,
+2020-04-19,Illinois,30357.0,,,
+2020-04-19,Indiana,11210.0,,,
+2020-04-19,Iowa,2915.0,,,
+2020-04-19,Kansas,1898.0,,,
+2020-04-19,Kentucky,2960.0,,,
+2020-04-19,Louisiana,23928.0,,,
+2020-04-19,Maine,867.0,,,
+2020-04-19,Maryland,12830.0,,,
+2020-04-19,Massachusetts,38077.0,,,
+2020-04-19,Michigan,31348.0,,,
+2020-04-19,Minnesota,2356.0,,,
+2020-04-19,Mississippi,4274.0,,,
+2020-04-19,Missouri,5667.0,,,
+2020-04-19,Montana,433.0,,,
+2020-04-19,Nebraska,1474.0,,,
+2020-04-19,Nevada,3741.0,,,
+2020-04-19,New Hampshire,1392.0,,,
+2020-04-19,New Jersey,85301.0,,,
+2020-04-19,New Mexico,1845.0,,,
+2020-04-19,New York,242817.0,,,
+2020-04-19,North Carolina,6493.0,,,
+2020-04-19,North Dakota,585.0,,,
+2020-04-19,Northern Mariana Islands,14.0,,,
+2020-04-19,Ohio,11602.0,,,
+2020-04-19,Oklahoma,2599.0,,,
+2020-04-19,Oregon,1910.0,,,
+2020-04-19,Pennsylvania,32992.0,,,
+2020-04-19,Puerto Rico,1213.0,,,
+2020-04-19,Rhode Island,4706.0,,,
+2020-04-19,South Carolina,4377.0,,,
+2020-04-19,South Dakota,1635.0,,,
+2020-04-19,Tennessee,6845.0,,,
+2020-04-19,Texas,19441.0,,,
+2020-04-19,Utah,3071.0,,,
+2020-04-19,Vermont,812.0,,,
+2020-04-19,Virgin Islands,53.0,,,
+2020-04-19,Virginia,8537.0,,,
+2020-04-19,Washington,11805.0,,,
+2020-04-19,West Virginia,890.0,,,
+2020-04-19,Wisconsin,4346.0,,,
+2020-04-19,Wyoming,313.0,,,
+2020-04-20,Alabama,5078.0,,,
+2020-04-20,Alaska,319.0,,,
+2020-04-20,Arizona,5064.0,,,
+2020-04-20,Arkansas,1971.0,,,
+2020-04-20,California,33862.0,,,
+2020-04-20,Colorado,10106.0,,,
+2020-04-20,Connecticut,19815.0,,,
+2020-04-20,Delaware,2745.0,,,
+2020-04-20,District of Columbia,2927.0,,,
+2020-04-20,Florida,27050.0,,,
+2020-04-20,Georgia,18447.0,,,
+2020-04-20,Guam,811.0,,,
+2020-04-20,Hawaii,578.0,,,
+2020-04-20,Idaho,1638.0,,,
+2020-04-20,Illinois,31508.0,,,
+2020-04-20,Indiana,11686.0,,,
+2020-04-20,Iowa,3175.0,,,
+2020-04-20,Kansas,2031.0,,,
+2020-04-20,Kentucky,3050.0,,,
+2020-04-20,Louisiana,24523.0,,,
+2020-04-20,Maine,875.0,,,
+2020-04-20,Maryland,13684.0,,,
+2020-04-20,Massachusetts,39643.0,,,
+2020-04-20,Michigan,31927.0,,,
+2020-04-20,Minnesota,2470.0,,,
+2020-04-20,Mississippi,4512.0,,,
+2020-04-20,Missouri,5807.0,,,
+2020-04-20,Montana,433.0,,,
+2020-04-20,Nebraska,1648.0,,,
+2020-04-20,Nevada,3830.0,,,
+2020-04-20,New Hampshire,1447.0,,,
+2020-04-20,New Jersey,88806.0,,,
+2020-04-20,New Mexico,1971.0,,,
+2020-04-20,New York,247543.0,,,
+2020-04-20,North Carolina,6764.0,,,
+2020-04-20,North Dakota,627.0,,,
+2020-04-20,Northern Mariana Islands,14.0,,,
+2020-04-20,Ohio,12919.0,,,
+2020-04-20,Oklahoma,2680.0,,,
+2020-04-20,Oregon,1956.0,,,
+2020-04-20,Pennsylvania,34005.0,,,
+2020-04-20,Puerto Rico,1252.0,,,
+2020-04-20,Rhode Island,5090.0,,,
+2020-04-20,South Carolina,4439.0,,,
+2020-04-20,South Dakota,1685.0,,,
+2020-04-20,Tennessee,7015.0,,,
+2020-04-20,Texas,20035.0,,,
+2020-04-20,Utah,3213.0,,,
+2020-04-20,Vermont,816.0,,,
+2020-04-20,Virgin Islands,54.0,,,
+2020-04-20,Virginia,8990.0,,,
+2020-04-20,Washington,12191.0,,,
+2020-04-20,West Virginia,908.0,,,
+2020-04-20,Wisconsin,4499.0,,,
+2020-04-20,Wyoming,317.0,,,
+2020-04-21,Alabama,5327.0,,,
+2020-04-21,Alaska,327.0,,,
+2020-04-21,Arizona,5251.0,,,
+2020-04-21,Arkansas,2262.0,,,
+2020-04-21,California,35844.0,,,
+2020-04-21,Colorado,10447.0,,,
+2020-04-21,Connecticut,20360.0,,,
+2020-04-21,Delaware,2931.0,,,
+2020-04-21,District of Columbia,3098.0,,,
+2020-04-21,Florida,27861.0,,,
+2020-04-21,Georgia,19189.0,,,
+2020-04-21,Guam,852.0,,,
+2020-04-21,Hawaii,580.0,,,
+2020-04-21,Idaho,1659.0,,,
+2020-04-21,Illinois,33059.0,,,
+2020-04-21,Indiana,12097.0,,,
+2020-04-21,Iowa,3641.0,,,
+2020-04-21,Kansas,2115.0,,,
+2020-04-21,Kentucky,3193.0,,,
+2020-04-21,Louisiana,24854.0,,,
+2020-04-21,Maine,888.0,,,
+2020-04-21,Maryland,14193.0,,,
+2020-04-21,Massachusetts,41199.0,,,
+2020-04-21,Michigan,32935.0,,,
+2020-04-21,Minnesota,2567.0,,,
+2020-04-21,Mississippi,4716.0,,,
+2020-04-21,Missouri,5941.0,,,
+2020-04-21,Montana,437.0,,,
+2020-04-21,Nebraska,1727.0,,,
+2020-04-21,Nevada,3937.0,,,
+2020-04-21,New Hampshire,1491.0,,,
+2020-04-21,New Jersey,92387.0,,,
+2020-04-21,New Mexico,2072.0,,,
+2020-04-21,New York,251720.0,,,
+2020-04-21,North Carolina,6951.0,,,
+2020-04-21,North Dakota,644.0,,,
+2020-04-21,Northern Mariana Islands,14.0,,,
+2020-04-21,Ohio,13725.0,,,
+2020-04-21,Oklahoma,2807.0,,,
+2020-04-21,Oregon,2002.0,,,
+2020-04-21,Pennsylvania,35384.0,,,
+2020-04-21,Puerto Rico,915.0,,,
+2020-04-21,Rhode Island,5500.0,,,
+2020-04-21,South Carolina,4608.0,,,
+2020-04-21,South Dakota,1755.0,,,
+2020-04-21,Tennessee,7341.0,,,
+2020-04-21,Texas,20949.0,,,
+2020-04-21,Utah,3301.0,,,
+2020-04-21,Vermont,818.0,,,
+2020-04-21,Virgin Islands,54.0,,,
+2020-04-21,Virginia,9630.0,,,
+2020-04-21,Washington,12345.0,,,
+2020-04-21,West Virginia,929.0,,,
+2020-04-21,Wisconsin,4620.0,,,
+2020-04-21,Wyoming,322.0,,,
+2020-04-22,Alabama,5610.0,,,
+2020-04-22,Alaska,333.0,,,
+2020-04-22,Arizona,5459.0,,,
+2020-04-22,Arkansas,2392.0,,,
+2020-04-22,California,37573.0,,,
+2020-04-22,Colorado,10878.0,,,
+2020-04-22,Connecticut,22469.0,,,
+2020-04-22,Delaware,3200.0,,,
+2020-04-22,District of Columbia,3206.0,,,
+2020-04-22,Florida,28301.0,,,
+2020-04-22,Georgia,20099.0,,,
+2020-04-22,Guam,911.0,,,
+2020-04-22,Hawaii,586.0,,,
+2020-04-22,Idaho,1688.0,,,
+2020-04-22,Illinois,35108.0,,,
+2020-04-22,Indiana,12438.0,,,
+2020-04-22,Iowa,3764.0,,,
+2020-04-22,Kansas,2292.0,,,
+2020-04-22,Kentucky,3373.0,,,
+2020-04-22,Louisiana,25258.0,,,
+2020-04-22,Maine,907.0,,,
+2020-04-22,Maryland,14775.0,,,
+2020-04-22,Massachusetts,42944.0,,,
+2020-04-22,Michigan,33929.0,,,
+2020-04-22,Minnesota,2721.0,,,
+2020-04-22,Mississippi,4894.0,,,
+2020-04-22,Missouri,6137.0,,,
+2020-04-22,Montana,439.0,,,
+2020-04-22,Nebraska,1827.0,,,
+2020-04-22,Nevada,4081.0,,,
+2020-04-22,New Hampshire,1588.0,,,
+2020-04-22,New Jersey,95865.0,,,
+2020-04-22,New Mexico,2210.0,,,
+2020-04-22,New York,257246.0,,,
+2020-04-22,North Carolina,7220.0,,,
+2020-04-22,North Dakota,679.0,,,
+2020-04-22,Northern Mariana Islands,14.0,,,
+2020-04-22,Ohio,14117.0,,,
+2020-04-22,Oklahoma,2894.0,,,
+2020-04-22,Oregon,2059.0,,,
+2020-04-22,Pennsylvania,36763.0,,,
+2020-04-22,Puerto Rico,915.0,,,
+2020-04-22,Rhode Island,5841.0,,,
+2020-04-22,South Carolina,4761.0,,,
+2020-04-22,South Dakota,1858.0,,,
+2020-04-22,Tennessee,7704.0,,,
+2020-04-22,Texas,21769.0,,,
+2020-04-22,Utah,3451.0,,,
+2020-04-22,Vermont,823.0,,,
+2020-04-22,Virgin Islands,54.0,,,
+2020-04-22,Virginia,10266.0,,,
+2020-04-22,Washington,12539.0,,,
+2020-04-22,West Virginia,939.0,,,
+2020-04-22,Wisconsin,4845.0,,,
+2020-04-22,Wyoming,326.0,,,
+2020-04-23,Alabama,5832.0,,,
+2020-04-23,Alaska,335.0,,,
+2020-04-23,Arizona,5769.0,,,
+2020-04-23,Arkansas,2599.0,,,
+2020-04-23,California,39534.0,,,
+2020-04-23,Colorado,11262.0,,,
+2020-04-23,Connecticut,23100.0,,,
+2020-04-23,Delaware,3308.0,,,
+2020-04-23,District of Columbia,3361.0,,,
+2020-04-23,Florida,29640.0,,,
+2020-04-23,Georgia,20905.0,,,
+2020-04-23,Guam,975.0,,,
+2020-04-23,Hawaii,590.0,,,
+2020-04-23,Idaho,1721.0,,,
+2020-04-23,Illinois,36935.0,,,
+2020-04-23,Indiana,13039.0,,,
+2020-04-23,Iowa,3939.0,,,
+2020-04-23,Kansas,2615.0,,,
+2020-04-23,Kentucky,3548.0,,,
+2020-04-23,Louisiana,25739.0,,,
+2020-04-23,Maine,937.0,,,
+2020-04-23,Maryland,15737.0,,,
+2020-04-23,Massachusetts,46023.0,,,
+2020-04-23,Michigan,35252.0,,,
+2020-04-23,Minnesota,2942.0,,,
+2020-04-23,Mississippi,5153.0,,,
+2020-04-23,Missouri,6321.0,,,
+2020-04-23,Montana,442.0,,,
+2020-04-23,Nebraska,2191.0,,,
+2020-04-23,Nevada,4208.0,,,
+2020-04-23,New Hampshire,1670.0,,,
+2020-04-23,New Jersey,99989.0,,,
+2020-04-23,New Mexico,2379.0,,,
+2020-04-23,New York,263460.0,,,
+2020-04-23,North Carolina,7608.0,,,
+2020-04-23,North Dakota,709.0,,,
+2020-04-23,Northern Mariana Islands,14.0,,,
+2020-04-23,Ohio,14694.0,,,
+2020-04-23,Oklahoma,3017.0,,,
+2020-04-23,Oregon,2127.0,,,
+2020-04-23,Pennsylvania,38334.0,,,
+2020-04-23,Puerto Rico,1230.0,,,
+2020-04-23,Rhode Island,6256.0,,,
+2020-04-23,South Carolina,4917.0,,,
+2020-04-23,South Dakota,1956.0,,,
+2020-04-23,Tennessee,8230.0,,,
+2020-04-23,Texas,22706.0,,,
+2020-04-23,Utah,3621.0,,,
+2020-04-23,Vermont,825.0,,,
+2020-04-23,Virgin Islands,54.0,,,
+2020-04-23,Virginia,11000.0,,,
+2020-04-23,Washington,12906.0,,,
+2020-04-23,West Virginia,981.0,,,
+2020-04-23,Wisconsin,5052.0,,,
+2020-04-23,Wyoming,332.0,,,
+2020-04-24,Alabama,6026.0,,,
+2020-04-24,Alaska,337.0,,,
+2020-04-24,Arizona,6045.0,,,
+2020-04-24,Arkansas,2810.0,,,
+2020-04-24,California,41368.0,,,
+2020-04-24,Colorado,12255.0,,,
+2020-04-24,Connecticut,23921.0,,,
+2020-04-24,Delaware,3442.0,,,
+2020-04-24,District of Columbia,3528.0,,,
+2020-04-24,Florida,30525.0,,,
+2020-04-24,Georgia,21575.0,,,
+2020-04-24,Guam,997.0,,,
+2020-04-24,Hawaii,595.0,,,
+2020-04-24,Idaho,1750.0,,,
+2020-04-24,Illinois,39658.0,,,
+2020-04-24,Indiana,13680.0,,,
+2020-04-24,Iowa,4459.0,,,
+2020-04-24,Kansas,2830.0,,,
+2020-04-24,Kentucky,3779.0,,,
+2020-04-24,Louisiana,26140.0,,,
+2020-04-24,Maine,965.0,,,
+2020-04-24,Maryland,16618.0,,,
+2020-04-24,Massachusetts,50969.0,,,
+2020-04-24,Michigan,36627.0,,,
+2020-04-24,Minnesota,3185.0,,,
+2020-04-24,Mississippi,5434.0,,,
+2020-04-24,Missouri,6625.0,,,
+2020-04-24,Montana,444.0,,,
+2020-04-24,Nebraska,2475.0,,,
+2020-04-24,Nevada,4398.0,,,
+2020-04-24,New Hampshire,1720.0,,,
+2020-04-24,New Jersey,102196.0,,,
+2020-04-24,New Mexico,2524.0,,,
+2020-04-24,New York,271621.0,,,
+2020-04-24,North Carolina,8052.0,,,
+2020-04-24,North Dakota,748.0,,,
+2020-04-24,Northern Mariana Islands,14.0,,,
+2020-04-24,Ohio,15169.0,,,
+2020-04-24,Oklahoma,3121.0,,,
+2020-04-24,Oregon,2177.0,,,
+2020-04-24,Pennsylvania,40298.0,,,
+2020-04-24,Puerto Rico,1276.0,,,
+2020-04-24,Rhode Island,6699.0,,,
+2020-04-24,South Carolina,5070.0,,,
+2020-04-24,South Dakota,2040.0,,,
+2020-04-24,Tennessee,8679.0,,,
+2020-04-24,Texas,23650.0,,,
+2020-04-24,Utah,3782.0,,,
+2020-04-24,Vermont,827.0,,,
+2020-04-24,Virgin Islands,54.0,,,
+2020-04-24,Virginia,11596.0,,,
+2020-04-24,Washington,13120.0,,,
+2020-04-24,West Virginia,1010.0,,,
+2020-04-24,Wisconsin,5356.0,,,
+2020-04-24,Wyoming,349.0,,,
+2020-04-24,Washington,,13120.0,13120.0,13120.0
+2020-04-25,Washington,,13376.624433845689,13142.862964647953,13610.385903043423
+2020-04-26,Washington,,13636.019105022711,13158.190510231594,14113.847699813829
+2020-04-27,Washington,,13898.184013531067,13166.400503234563,14629.967523827572
+2020-04-28,Washington,,14163.119159370759,13167.863759827447,15158.374558914069
+2020-04-29,Washington,,14433.300290521547,13167.863759827447,15698.736821215647
+2020-04-30,Washington,,14709.309290164543,13167.863759827447,16250.75482050164
+2020-05-01,Washington,,14991.010170856529,13167.863759827447,16814.15658188561
+2020-05-02,Washington,,15278.278716963443,13167.863759827447,17388.69367409944
+2020-05-03,Washington,,15571.000878343777,13167.863759827447,17974.137996860107
+2020-05-04,Washington,,15869.071455111736,13167.863759827447,18570.279150396025
+2020-05-05,Washington,,16172.393008982204,13167.863759827447,19176.92225813696
+2020-05-06,Washington,,16480.87495335185,13167.863759827447,19793.886146876248
+2020-05-07,Washington,,16794.432786068523,13167.863759827447,20421.001812309598
+2020-05-08,Washington,,17112.987437347816,13167.863759827447,21058.11111486819
+2020-05-09,Washington,,17436.464711526743,13167.863759827447,21705.065663226036
+2020-04-24,Illinois,,39658.0,39658.0,39658.0
+2020-04-25,Illinois,,41944.64166630538,41561.2498570455,42328.03347556526
+2020-04-26,Illinois,,44256.41986563157,43446.585844165034,45066.2538870981
+2020-04-27,Illinois,,46593.334597978566,45317.972230118554,47868.69696583858
+2020-04-28,Illinois,,48955.38586334638,47178.44566280236,50732.3260638904
+2020-04-29,Illinois,,51342.573661735005,49030.4288244546,53654.71849901542
+2020-04-30,Illinois,,53754.89799314445,50875.913068953916,56633.88291733497
+2020-05-01,Illinois,,56192.35885757469,52716.57299079743,59668.14472435195
+2020-05-02,Illinois,,58654.956255025754,54553.84243747662,62756.07007257489
+2020-05-03,Illinois,,61142.690185497624,56388.96719933323,65896.41317166202
+2020-05-04,Illinois,,63655.56064899031,58223.0428426447,69088.07845533591
+2020-05-05,Illinois,,66193.5676455038,60057.04267381897,72330.09261718864
+2020-05-06,Illinois,,68756.71117503812,61891.838916825,75621.58343325123
+2020-05-07,Illinois,,71344.99123759323,63728.21908528698,78961.76338989948
+2020-05-08,Illinois,,73958.40783316917,65566.89886640178,82349.91679993656
+2020-05-09,Illinois,,76596.96096176592,67408.5324177352,85785.38950579663
+2020-04-24,California,,41368.0,41368.0,41368.0
+2020-04-25,California,,43258.11832412543,42886.798023400894,43629.43862484998
+2020-04-26,California,,45169.27011172673,44389.33470024763,45949.20552320583
+2020-04-27,California,,47101.45536280388,45878.74026373313,48324.17046187462
+2020-04-28,California,,49054.67407735689,47357.468309515345,50751.879845198426
+2020-04-29,California,,51028.926255385755,48827.50928402197,53230.34322674954
+2020-04-30,California,,53024.211896890476,50290.520108572004,55757.90368520895
+2020-05-01,California,,55040.53100187105,51747.90806951877,58333.15393422333
+2020-05-02,California,,57077.883570327496,53200.88784020162,60954.879300453365
+2020-05-03,California,,59136.26960225979,54650.52177991202,63622.017424607555
+2020-05-04,California,,61215.68909766794,56097.749332322375,66333.62886301351
+2020-05-05,California,,63316.14205655195,57543.40904460245,69088.87506850145
+2020-05-06,California,,65437.62847891182,58988.25543060256,71887.00152722107
+2020-05-07,California,,67580.14836474754,60432.97213372004,74727.32459577505
+2020-05-08,California,,69743.70171405912,61878.18237224227,77609.22105587597
+2020-05-09,California,,71928.28852684656,63324.45734859113,80532.119705102
+2020-04-24,Arizona,,6045.0,6045.0,6045.0
+2020-04-25,Arizona,,6298.774811443216,6220.174395859831,6377.375227026601
+2020-04-26,Arizona,,6555.441151630989,6394.572663723584,6716.309639538395
+2020-04-27,Arizona,,6814.999020563319,6568.351478581278,7061.646562545361
+2020-04-28,Arizona,,7077.448418240207,6741.649002963383,7413.247833517029
+2020-04-29,Arizona,,7342.789344661651,6914.588268653009,7770.990420670291
+2020-04-30,Arizona,,7611.021799827651,7087.279751979556,8134.763847675746
+2020-05-01,Arizona,,7882.145783738208,7259.823374285702,8504.468193190714
+2020-05-02,Arizona,,8156.161296393323,7432.310082712234,8880.012510074412
+2020-05-03,Arizona,,8433.068337792994,7604.8231181435785,9261.31355744241
+2020-05-04,Arizona,,8712.866907937223,7777.43904568116,9648.294770193286
+2020-05-05,Arizona,,8995.55700682601,7950.228601940831,10040.885411711186
+2020-05-06,Arizona,,9281.13863445935,8123.257399026901,10439.0198698918
+2020-05-07,Arizona,,9569.61179083725,8296.586514924053,10842.637066750449
+2020-05-08,Arizona,,9860.976475959706,8470.272992836077,11251.679959083336
+2020-05-09,Arizona,,10155.232689826718,8644.37026676814,11666.095112885298
+2020-04-24,Massachusetts,,50969.0,50969.0,50969.0
+2020-04-25,Massachusetts,,56437.74039445126,55807.11360316674,57068.367185735784
+2020-04-26,Massachusetts,,61971.448301406024,60293.233224353404,63649.663378458645
+2020-04-27,Massachusetts,,67570.12372086427,64551.31463999422,70588.93280173434
+2020-04-28,Massachusetts,,73233.76665282602,68634.7856352149,77832.74767043714
+2020-04-29,Massachusetts,,78962.37709729126,72575.46587515404,85349.28831942847
+2020-04-30,Massachusetts,,84755.95505425999,76395.10222132233,93116.80788719765
+2020-05-01,Massachusetts,,90614.5005237322,80109.7734991867,101119.2275482777
+2020-05-02,Massachusetts,,96538.01350570792,83731.99388437363,109344.0331270422
+2020-05-03,Massachusetts,,102526.49400018713,87271.86279621511,117781.12520415915
+2020-05-04,Massachusetts,,108579.94200716983,90737.75408899417,126422.12992534549
+2020-05-05,Massachusetts,,114698.35752665601,94136.75775739692,135259.9572959151
+2020-05-06,Massachusetts,,120881.7405586457,97474.9778973177,144288.5032199737
+2020-05-07,Massachusetts,,127130.09110313888,100757.74199913238,153502.44020714538
+2020-05-08,Massachusetts,,133443.40916013555,103989.75286346045,162897.06545681064
+2020-05-09,Massachusetts,,139821.69472963572,107175.20190689419,172468.18755237726
+2020-04-24,Wisconsin,,5356.0,5356.0,5356.0
+2020-04-25,Wisconsin,,5616.263832430515,5561.350181390963,5671.177483470066
+2020-04-26,Wisconsin,,5903.8139858176955,5787.618772990191,6020.0091986452
+2020-04-27,Wisconsin,,6182.808970631448,5992.777781021014,6372.840160241883
+2020-04-28,Wisconsin,,6471.336189867556,6199.96291330573,6742.709466429381
+2020-04-29,Wisconsin,,6760.267837973819,6399.2446403665,7121.291035581138
+2020-04-30,Wisconsin,,7054.210260826326,6596.618815436483,7511.801706216169
+2020-05-01,Wisconsin,,7350.838866582183,6789.904885939579,7911.772847224787
+2020-05-02,Wisconsin,,7651.326760210364,6980.846200569481,8321.807319851247
+2020-05-03,Wisconsin,,7955.081934441963,7169.110814508634,8741.053054375294
+2020-05-04,Wisconsin,,8262.403145667678,7355.323921869362,9169.482369465994
+2020-05-05,Wisconsin,,8573.13962651408,7539.567047411715,9606.712205616444
+2020-05-06,Wisconsin,,8887.367461716418,7722.144596554044,10052.590326878792
+2020-05-07,Wisconsin,,9205.048255123016,7903.208699268548,10506.887810977485
+2020-05-08,Wisconsin,,9526.20138334679,8082.955000730528,10969.447765963052
+2020-05-09,Wisconsin,,9850.817067982569,8261.529801966197,11440.104333998941
+2020-04-24,Texas,,23650.0,23650.0,23650.0
+2020-04-25,Texas,,24574.741020488633,24284.391714712543,24865.09032626472
+2020-04-26,Texas,,25512.371421575015,24905.253667560297,26119.48917558973
+2020-04-27,Texas,,26462.89120325914,25514.625709644173,27411.15669687411
+2020-04-28,Texas,,27426.30036554102,26114.13748162322,28738.463249458826
+2020-04-29,Texas,,28402.598908420652,26705.12985909141,30100.067957749892
+2020-04-30,Texas,,29391.78683189803,27288.731328728278,31494.84233506778
+2020-05-01,Texas,,30393.864135973155,27865.90875992301,32921.8195120233
+2020-05-02,Texas,,31408.830820646035,28437.50265290855,34380.15898838352
+2020-05-03,Texas,,32436.686885916657,29004.252480048006,35869.12129178531
+2020-05-04,Texas,,33477.432331785036,29566.815436401834,37388.04922716824
+2020-05-05,Texas,,34531.06715825116,30125.780652205263,38936.35366429706
+2020-05-06,Texas,,35597.591365315035,30681.68018874485,40513.50254188522
+2020-05-07,Texas,,36677.004952976655,31234.997697174847,42119.01220877847
+2020-05-08,Texas,,37769.30792123603,31786.1753425951,43752.44049987696
+2020-05-09,Texas,,38874.50027009315,32335.619416193902,45413.381123992396
+2020-04-24,Nebraska,,2475.0,2475.0,2475.0
+2020-04-25,Nebraska,,2704.3145777715604,2640.3265941905775,2768.3025613525433
+2020-04-26,Nebraska,,2955.52908740195,2814.0541268873953,3097.0040479165054
+2020-04-27,Nebraska,,3198.0283054905544,2977.0802965109606,3418.9763144701483
+2020-04-28,Nebraska,,3452.4500583280924,3144.576093612256,3760.324023043929
+2020-04-29,Nebraska,,3704.8823169728666,3306.9927991601685,4102.771834785564
+2020-04-30,Nebraska,,3964.703227482907,3471.492023646473,4457.914431319341
+2020-05-01,Nebraska,,4225.590949682756,3633.5805977985665,4817.601301566946
+2020-05-02,Nebraska,,4491.807057550548,3796.6567455717463,5186.957369529349
+2020-05-03,Nebraska,,4760.478809563709,3958.6715979863043,5562.286021141113
+2020-05-04,Nebraska,,5033.542730559742,4121.255883925885,5945.829577193599
+2020-05-05,Nebraska,,5309.693402554887,4283.507262717347,6335.879542392427
+2020-05-06,Nebraska,,5589.810812254877,4446.226282793177,6733.395341716578
+2020-05-07,Nebraska,,5873.301757626416,4609.03890868443,7137.564606568402
+2020-05-08,Nebraska,,6160.566118179063,4772.354653052646,7548.777583305479
+2020-05-09,Nebraska,,6451.334333774466,4936.038870277474,7966.629797271459
+2020-04-24,Utah,,3782.0,3782.0,3782.0
+2020-04-25,Utah,,3937.449116735181,3883.659209020966,3991.2390244493963
+2020-04-26,Utah,,4093.050504229952,3979.3681155730633,4206.732892886841
+2020-04-27,Utah,,4250.565741330559,4074.3845499696886,4426.746932691429
+2020-04-28,Utah,,4410.538940999451,4170.0273543111725,4651.05052768773
+2020-04-29,Utah,,4573.138167763824,4266.697111313462,4879.579224214185
+2020-04-30,Utah,,4738.41533305981,4364.536598812541,5112.294067307079
+2020-05-01,Utah,,4906.386471188324,4463.610693397799,5349.16224897885
+2020-05-02,Utah,,5077.056534792267,4563.9594024730695,5590.153667111464
+2020-05-03,Utah,,5250.427053634105,4665.613982484958,5835.240124783252
+2020-05-04,Utah,,5426.498500223821,4768.601950443132,6084.39505000451
+2020-05-05,Utah,,5605.271020509355,4872.948708754531,6337.5933322641795
+2020-05-06,Utah,,5786.744659570818,4978.678126019013,6594.811193122623
+2020-05-07,Utah,,5970.919431332462,5085.8127891376025,6856.026073527321
+2020-05-08,Utah,,6157.795340095184,5194.374146498525,7121.216533691842
+2020-05-09,Utah,,6347.372387187435,5304.382610576795,7390.362163798076
+2020-04-24,Oregon,,2177.0,2177.0,2177.0
+2020-04-25,Oregon,,2239.3360703953695,2210.2679512075374,2268.404189583202
+2020-04-26,Oregon,,2295.9773671490325,2235.540775855045,2356.41395844302
+2020-04-27,Oregon,,2357.640879391492,2258.8555868971357,2456.4261718858484
+2020-04-28,Oregon,,2417.9567524566464,2277.635597942812,2558.27790697048
+2020-04-29,Oregon,,2480.71103557653,2294.468570678246,2666.953500474813
+2020-04-30,Oregon,,2543.653415433372,2308.293762372925,2779.013068493819
+2020-05-01,Oregon,,2608.1214102995946,2320.2018504275848,2896.040970171605
+2020-05-02,Oregon,,2673.320039709618,2329.860713325714,3016.779366093522
+2020-05-03,Oregon,,2739.72181604229,2337.7539888122114,3141.689643272368
+2020-05-04,Oregon,,2807.0458922103776,2343.824553862133,3270.267230558622
+2020-05-05,Oregon,,2875.459195240426,2348.311599383796,3402.606791097057
+2020-05-06,Oregon,,2944.862508749366,2351.2493480254016,3538.4756694733305
+2020-05-07,Oregon,,3015.314803958773,2352.77533596272,3677.854271954826
+2020-05-08,Oregon,,3086.7810301555833,2352.94797607188,3820.6140842392865
+2020-05-09,Oregon,,3159.826371378057,2352.94797607188,3966.7047666842345
+2020-04-24,Florida,,30525.0,30525.0,30525.0
+2020-04-25,Florida,,31725.57745872727,31340.52867316321,32110.626244291332
+2020-04-26,Florida,,32753.530166234486,31956.034815593455,33551.02551687552
+2020-04-27,Florida,,33918.26876389744,32607.639288902446,35228.89823889243
+2020-04-28,Florida,,35023.40285620109,33157.50776589279,36889.2979465094
+2020-04-29,Florida,,36193.292507575316,33706.43329052465,38680.151724625975
+2020-04-30,Florida,,37348.89595040296,34195.29484030868,40502.49706049724
+2020-05-01,Florida,,38540.15737483351,34666.60145181269,42413.713297854316
+2020-05-02,Florida,,39735.22535917983,35096.301539407534,44374.149178952124
+2020-05-03,Florida,,40954.11864058116,35502.393570050364,46405.84371111196
+2020-05-04,Florida,,42183.962830051016,35875.449811247614,48492.47584885442
+2020-05-05,Florida,,43432.74250203783,36223.226039637644,50642.258964438006
+2020-05-06,Florida,,44695.21465408182,36542.22351355745,52848.20579460618
+2020-05-07,Florida,,45974.52446616614,36835.9058465626,55113.14308576969
+2020-05-08,Florida,,47268.49780656751,37103.1185689011,57433.877044233916
+2020-05-09,Florida,,48578.3337507172,37345.50332279772,59811.16417863667
+2020-04-24,New York,,271621.0,271621.0,271621.0
+2020-04-25,New York,,279782.0,276992.72868394223,282571.27131605777
+2020-04-26,New York,,287943.0,281209.10335963505,294676.89664036495
+2020-04-27,New York,,296104.0,284538.9437241284,307669.0562758716
+2020-04-28,New York,,304265.0,287121.4010920129,321408.5989079871
+2020-04-29,New York,,312426.0,289045.40082161734,335806.59917838266
+2020-04-30,New York,,320587.0,290374.10934309446,350799.8906569056
+2020-05-01,New York,,328748.0,291155.3911017197,366340.6088982803
+2020-05-02,New York,,336909.0,291427.1404531053,382390.8595468947
+2020-05-03,New York,,345173.40697408665,291427.1404531053,398919.67349506804
+2020-05-04,New York,,353664.13215954567,291427.1404531053,415901.123865986
+2020-05-05,New York,,362370.1153564779,291427.1404531053,433313.09025985055
+2020-05-06,New York,,371281.77499198454,291427.1404531053,451136.40953086375
+2020-05-07,New York,,380390.7053675982,291427.1404531053,469354.27028209105
+2020-05-08,New York,,389689.45417932037,291427.1404531053,487951.76790553535
+2020-05-09,New York,,399171.3548568933,291427.1404531053,506915.5692606812
+2020-04-24,Rhode Island,,6699.0,6699.0,6699.0
+2020-04-25,Rhode Island,,7152.721897608202,7091.126428215556,7214.317367000849
+2020-04-26,Rhode Island,,7619.531523548425,7480.118288315815,7758.9447587810355
+2020-04-27,Rhode Island,,8105.286362603142,7881.59245853995,8328.980266666335
+2020-04-28,Rhode Island,,8599.425119972351,8266.086275869227,8932.763964075475
+2020-04-29,Rhode Island,,9101.947795656053,8638.452143762519,9565.443447549587
+2020-04-30,Rhode Island,,9612.854389654247,9001.508893824306,10224.199885484188
+2020-05-01,Rhode Island,,10132.144901966934,9357.158463552782,10907.131340381087
+2020-05-02,Rhode Island,,10659.819332594114,9706.795988377598,11612.84267681063
+2020-05-03,Rhode Island,,11195.877681535785,10051.501465468573,12340.253897602997
+2020-05-04,Rhode Island,,11740.319948791948,10392.14308674112,13088.496810842778
+2020-05-05,Rhode Island,,12293.146134362607,10729.438566747189,13856.853701978023
+2020-05-06,Rhode Island,,12854.356238247754,11063.994160906634,14644.718315588874
+2020-05-07,Rhode Island,,13423.950260447396,11396.33083650384,15451.569684390952
+2020-05-08,Rhode Island,,14001.928200961529,11726.902572054034,16276.953829869024
+2020-05-09,Rhode Island,,14588.290059790155,12056.109590382839,17120.47052919747
+2020-04-24,Georgia,,21575.0,21575.0,21575.0
+2020-04-25,Georgia,,22047.162597901835,21575.0,22519.32519580367
+2020-04-26,Georgia,,22546.96547254544,21575.0,23518.93094509088
+2020-04-27,Georgia,,23087.83791236434,21575.0,24600.675824728678
+2020-04-28,Georgia,,23669.877325645102,21575.0,25764.754651290208
+2020-04-29,Georgia,,24251.916738925866,21575.0,26928.833477851735
+2020-04-30,Georgia,,24833.956152206632,21575.0,28092.912304413265
+2020-05-01,Georgia,,25415.995565487396,21575.0,29256.99113097479
+2020-05-02,Georgia,,25998.034978768163,21575.0,30421.06995753632
+2020-05-03,Georgia,,26580.074392048926,21575.0,31585.14878409785
+2020-05-04,Georgia,,27162.11380532969,21575.0,32749.227610659378
+2020-05-05,Georgia,,27744.153218610452,21575.0,33913.306437220905
+2020-05-06,Georgia,,28326.192631891216,21575.0,35077.38526378243
+2020-05-07,Georgia,,28908.232045171982,21575.0,36241.464090343965
+2020-05-08,Georgia,,29490.271458452746,21575.0,37405.54291690549
+2020-05-09,Georgia,,30072.310871733513,21575.0,38569.621743467025
+2020-04-24,New Hampshire,,1720.0,1720.0,1720.0
+2020-04-25,New Hampshire,,1788.8698974834429,1763.2221437091537,1814.5176512577318
+2020-04-26,New Hampshire,,1859.0598000654472,1806.4793900018562,1911.6402101290382
+2020-04-27,New Hampshire,,1930.5697077460136,1849.8303084262582,2011.3091070657692
+2020-04-28,New Hampshire,,2003.399620525142,1893.326121985197,2113.473119065087
+2020-04-29,New Hampshire,,2077.549538402832,1937.0121255019412,2218.0869513037223
+2020-04-30,New Hampshire,,2153.0194613790836,1980.9287478691895,2325.110174888978
+2020-05-01,New Hampshire,,2229.8093894538974,2025.1123655048675,2434.506413402927
+2020-05-02,New Hampshire,,2307.919322627273,2069.5959372696043,2546.2427079849413
+2020-05-03,New Hampshire,,2387.34926089921,2114.409508275239,2660.2890135231805
+2020-05-04,New Hampshire,,2468.099204269709,2159.5806154668157,2776.6177930726026
+2020-05-05,New Hampshire,,2550.16915273877,2205.134618309647,2895.203687167893
+2020-05-06,New Hampshire,,2633.5591063063926,2251.0949714772005,3016.0232411355846
+2020-05-07,New Hampshire,,2718.269064972577,2297.483451998094,3139.0546779470596
+2020-05-08,New Hampshire,,2804.299028737323,2344.320350197984,3264.277707276662
+2020-05-09,New Hampshire,,2891.6489976006314,2391.624631534391,3391.6733636668714
+2020-04-24,North Carolina,,8052.0,8052.0,8052.0
+2020-04-25,North Carolina,,8408.999390189172,8282.376015521028,8535.622764857315
+2020-04-26,North Carolina,,8773.374426971257,8518.853219760647,9027.895634181867
+2020-04-27,North Carolina,,9145.125110346256,8761.444187567007,9528.806033125507
+2020-04-28,North Carolina,,9524.251440314172,9010.161128752965,10038.341751875378
+2020-04-29,North Carolina,,9910.753416875,9265.01590542259,10556.490928327412
+2020-04-30,North Carolina,,10304.631040028744,9526.02004816769,11083.2420318898
+2020-05-01,North Carolina,,10705.884309775403,9793.184771227401,11618.583848323404
+2020-05-02,North Carolina,,11114.513226114976,10066.520986694646,12162.505465535305
+2020-05-03,North Carolina,,11530.517789047462,10346.039317845169,12714.996260249758
+2020-05-04,North Carolina,,11953.897998572866,10631.750111657595,13276.045885488134
+2020-05-05,North Carolina,,12384.653854691183,10923.663450586606,13845.644258795759
+2020-05-06,North Carolina,,12822.785357402414,11221.789163645499,14423.781551159329
+2020-05-07,North Carolina,,13268.292506706559,11526.136836849433,15010.448176563685
+2020-05-08,North Carolina,,13721.17530260362,11836.715823065946,15605.634782141293
+2020-05-09,North Carolina,,14181.433745093595,12153.535251315343,16209.332238871846
+2020-04-24,New Jersey,,102196.0,102196.0,102196.0
+2020-04-25,New Jersey,,105937.06775433113,104864.3799389701,107009.75556969218
+2020-04-26,New Jersey,,108638.02570669723,106473.13827213286,110802.91314126161
+2020-04-27,New Jersey,,111721.8194597254,108141.51949535027,115302.11942410053
+2020-04-28,New Jersey,,114607.98252684322,109457.33628737876,119758.62876630768
+2020-04-29,New Jersey,,117408.9776064856,110467.75410103954,124350.20111193167
+2020-04-30,New Jersey,,120195.3434492494,111232.23708656644,129158.44981193234
+2020-05-01,New Jersey,,122858.07880149258,111643.78460631447,134072.3729966707
+2020-05-02,New Jersey,,125477.71267088086,111757.68574644049,139197.73959532124
+2020-05-03,New Jersey,,128122.70031131983,111757.68574644049,144487.71487619917
+2020-05-04,New Jersey,,130866.1014805545,111757.68574644049,149974.5172146685
+2020-05-05,New Jersey,,133708.91094187344,111757.68574644049,155660.13613730643
+2020-05-06,New Jersey,,136653.88525742013,111757.68574644049,161550.08476839974
+2020-05-07,New Jersey,,139706.38524049794,111757.68574644049,167655.0847345554
+2020-05-08,New Jersey,,142868.27954633188,111757.68574644049,173978.87334622326
+2020-05-09,New Jersey,,146143.68158914038,111757.68574644049,180529.67743184027
+2020-04-24,Colorado,,12255.0,12255.0,12255.0
+2020-04-25,Colorado,,12972.549998398246,12765.020628834958,13180.079367961534
+2020-04-26,Colorado,,13894.851490826051,13457.307793262098,14332.395188390004
+2020-04-27,Colorado,,14763.029775885061,14044.189055461142,15481.87049630898
+2020-04-28,Colorado,,15718.483501177283,14688.969011634883,16747.997990719683
+2020-04-29,Colorado,,16685.828857280827,15310.425238942133,18061.232475619523
+2020-04-30,Colorado,,17707.088386684776,15956.660970522358,19457.515802847192
+2020-05-01,Colorado,,18760.698990962977,16605.40836558638,20915.98961633957
+2020-05-02,Colorado,,19859.534666997948,17271.749864826892,22447.319469169
+2020-05-03,Colorado,,20997.818761679082,17950.269667999553,24045.367855358607
+2020-05-04,Colorado,,22179.875553523372,18646.343842375958,25713.40726467079
+2020-05-05,Colorado,,23404.558797512014,19359.321731851065,27449.795863172963
+2020-05-06,Colorado,,24673.685007791297,20091.650863010775,29255.71915257182
+2020-05-07,Colorado,,25987.466109511057,20843.980490840808,31130.95172818131
+2020-05-08,Colorado,,27346.983050817635,21617.831017300086,33076.13508433518
+2020-05-09,Colorado,,28752.846129136142,22414.169297375505,35091.52296089678
+2020-04-24,Maryland,,16618.0,16618.0,16618.0
+2020-04-25,Maryland,,17447.751753114055,17171.23452294125,17724.26898328686
+2020-04-26,Maryland,,18294.581624180522,17730.664345247682,18858.49890311336
+2020-04-27,Maryland,,19158.489613199392,18296.686790018266,20020.292436380518
+2020-04-28,Maryland,,20039.475720170674,18869.65860037829,21209.29283996306
+2020-04-29,Maryland,,20937.539945094366,19449.902410032984,22425.177480155748
+2020-04-30,Maryland,,21852.682287970463,20037.71185537725,23667.65272056368
+2020-05-01,Maryland,,22784.902748798973,20633.355675228675,24936.449822369275
+2020-05-02,Maryland,,23734.201327579893,21237.081042234942,26231.321612924843
+2020-05-03,Maryland,,24700.578024313218,21849.116301734244,27552.039746892195
+2020-05-04,Maryland,,25684.032838998955,22469.67324706015,28898.39243093776
+2020-05-05,Maryland,,26684.5657716371,23098.94902753724,30270.18251573696
+2020-05-06,Maryland,,27702.176822227655,23737.127762061325,31667.225882393985
+2020-05-07,Maryland,,28736.865990770617,24384.38191422039,33089.35006732085
+2020-05-08,Maryland,,29788.633277265988,25040.87347243837,34536.39308209361
+2020-05-09,Maryland,,30857.47868171377,25706.754969308742,36008.202394118794
+2020-04-24,Nevada,,4398.0,4398.0,4398.0
+2020-04-25,Nevada,,4550.9527946342805,4475.054860875677,4626.850728392885
+2020-04-26,Nevada,,4707.0359158135325,4552.39987206109,4861.671959565974
+2020-04-27,Nevada,,4866.249363537752,4630.13397527409,5102.364751801414
+2020-04-28,Nevada,,5028.593137806941,4708.346440278805,5348.839835335077
+2020-04-29,Nevada,,5194.067238621101,4787.118344955088,5601.016132287113
+2020-04-30,Nevada,,5362.671665980228,4866.523756446847,5858.819575513609
+2020-05-01,Nevada,,5534.406419884326,4946.630686802181,6122.182152966472
+2020-05-02,Nevada,,5709.271500333394,5027.501875615356,6391.041125051432
+2020-05-03,Nevada,,5887.26690732743,5109.195437967474,6665.338376687387
+2020-05-04,Nevada,,6068.392640866437,5191.765406083992,6945.019875648882
+2020-05-05,Nevada,,6252.648700950413,5275.262186125935,7230.035215774891
+2020-05-06,Nevada,,6440.035087579357,5359.732946481873,7520.337228676843
+2020-05-07,Nevada,,6630.551800753274,5445.221950227554,7815.881651278993
+2020-05-08,Nevada,,6824.198840472158,5531.770841669646,8116.62683927467
+2020-05-09,Nevada,,7020.976206736012,5619.418894818762,8422.533518653261
+2020-04-24,Tennessee,,8679.0,8679.0,8679.0
+2020-04-25,Tennessee,,9078.03405656978,8907.325506216268,9248.742606923295
+2020-04-26,Tennessee,,9466.332705481887,9115.411116202227,9817.25429476155
+2020-04-27,Tennessee,,9856.447446662112,9324.057139988741,10388.837753335483
+2020-04-28,Tennessee,,10252.394033331373,9538.307629773013,10966.480436889735
+2020-04-29,Tennessee,,10655.457274000742,9759.619702842709,11551.294845158776
+2020-04-30,Tennessee,,11066.048233000945,9988.443635830241,12143.65283017165
+2020-05-01,Tennessee,,11484.29842711642,10224.92186455515,12743.674989677691
+2020-05-02,Tennessee,,11910.249934103118,10469.09979379693,13351.400074409306
+2020-05-03,Tennessee,,12343.916216406566,10720.991933421124,13966.840499392007
+2020-05-04,Tennessee,,12785.301581229827,10980.602924000814,14590.00023845884
+2020-05-05,Tennessee,,13234.407406628488,11247.934250072185,15220.880563184794
+2020-05-06,Tennessee,,13691.234133500548,11522.986386582596,15859.481880418502
+2020-05-07,Tennessee,,14155.781902907835,11805.759485485847,16505.804320329822
+2020-05-08,Tennessee,,14628.050759981965,12096.253595398186,17159.847924565744
+2020-05-09,Tennessee,,15108.040719162444,12394.468731873998,17821.61270645089
+2020-04-24,Hawaii,,595.0,595.0,595.0
+2020-04-25,Hawaii,,603.8077402386832,595.0,612.6154804773664
+2020-04-26,Hawaii,,613.3962582274278,595.0,631.7925164548556
+2020-04-27,Hawaii,,623.69629260757,595.0,652.3925852151399
+2020-04-28,Hawaii,,634.6551938374522,595.0,674.3103876749044
+2020-04-29,Hawaii,,646.2311856939773,595.0,697.4623713879545
+2020-04-30,Hawaii,,658.3900695622053,595.0,721.7801391244105
+2020-05-01,Hawaii,,671.103177814337,595.0,747.2063556286738
+2020-05-02,Hawaii,,684.3460264334728,595.0,773.6920528669458
+2020-05-03,Hawaii,,698.097386765608,595.0,801.1947735312161
+2020-05-04,Hawaii,,712.3386223261418,595.0,829.6772446522837
+2020-05-05,Hawaii,,727.0532006288707,595.0,859.1064012577415
+2020-05-06,Hawaii,,742.226324780639,595.0,889.4526495612779
+2020-05-07,Hawaii,,757.8446495195894,595.0,920.6892990391789
+2020-05-08,Hawaii,,773.8960583298061,595.0,952.7921166596122
+2020-05-09,Hawaii,,790.3694857134992,595.0,985.7389714269985
+2020-04-24,Indiana,,13680.0,13680.0,13680.0
+2020-04-25,Indiana,,14321.0,14165.15674357441,14476.84325642559
+2020-04-26,Indiana,,14962.0,14585.761096732951,15338.238903267049
+2020-04-27,Indiana,,15603.0,14956.832658586844,16249.167341413156
+2020-04-28,Indiana,,16244.0,15286.146145735662,17201.853854264336
+2020-04-29,Indiana,,16885.0,15578.67003053311,18191.32996946689
+2020-04-30,Indiana,,17526.0,15837.933572436697,19214.066427563303
+2020-05-01,Indiana,,18167.0,16066.611072428117,20267.388927571883
+2020-05-02,Indiana,,18808.0,16266.8197787452,21349.1802212548
+2020-05-03,Indiana,,19449.0,16440.29000946843,22457.70999053157
+2020-05-04,Indiana,,20090.0,16588.470361185893,23591.529638814107
+2020-05-05,Indiana,,20731.0,16712.596753515063,24749.403246484937
+2020-05-06,Indiana,,21372.0,16813.739877222848,25930.260122777152
+2020-05-07,Indiana,,22013.0,16892.8390252451,27133.1609747549
+2020-05-08,Indiana,,22654.0,16950.726953661382,28357.273046338618
+2020-05-09,Indiana,,23295.0,16988.14861690634,29601.85138309366
+2020-04-24,Kentucky,,3779.0,3779.0,3779.0
+2020-04-25,Kentucky,,3941.6513119483457,3872.870819975437,4010.4318039212544
+2020-04-26,Kentucky,,4130.066549860368,3992.408386109996,4267.724713610739
+2020-04-27,Kentucky,,4324.618474918232,4116.212591686831,4533.024358149634
+2020-04-28,Kentucky,,4513.848070820903,4231.521161532971,4796.174980108834
+2020-04-29,Kentucky,,4716.73772957574,4359.052840063925,5074.422619087553
+2020-04-30,Kentucky,,4916.980168381383,4483.155276880523,5350.805059882243
+2020-05-01,Kentucky,,5125.438625049179,4615.380405364961,5635.496844733397
+2020-05-02,Kentucky,,5336.137136827595,4749.789259698294,5922.485013956896
+2020-05-03,Kentucky,,5551.711636917318,4889.079430849167,6214.3438429854705
+2020-05-04,Kentucky,,5771.40715151356,5032.493660887834,6510.320642139286
+2020-05-05,Kentucky,,5995.121711060096,5179.9198655774635,6810.323556542727
+2020-05-06,Kentucky,,6223.224012889783,5331.738097923751,7114.709927855814
+2020-05-07,Kentucky,,6455.355800844673,5487.582031108401,7423.129570580944
+2020-05-08,Kentucky,,6691.772367925778,5647.712520319446,7735.832215532109
+2020-05-09,Kentucky,,6932.324677200986,5811.977893561729,8052.6714608402435
+2020-04-24,Minnesota,,3185.0,3185.0,3185.0
+2020-04-25,Minnesota,,3354.558146924469,3298.7201275202888,3410.3961663286486
+2020-04-26,Minnesota,,3502.685786300748,3387.889730760626,3617.4818418408695
+2020-04-27,Minnesota,,3667.754777770141,3493.452352449605,3842.057203090677
+2020-04-28,Minnesota,,3829.0903061134277,3594.9473177230284,4063.2332945038274
+2020-04-29,Minnesota,,3997.831992614139,3703.8463309461567,4291.817654282121
+2020-04-30,Minnesota,,4167.9777927062305,3814.0978520746244,4521.857733337836
+2020-05-01,Minnesota,,4342.761616955948,3928.9998607919197,4756.523373119975
+2020-05-02,Minnesota,,4520.441029525736,4046.7862649175136,4994.0957941339575
+2020-05-03,Minnesota,,4701.954857444296,4168.411788751153,5235.497926137439
+2020-05-04,Minnesota,,4886.797259307989,4293.362940518064,5480.231578097915
+2020-05-05,Minnesota,,5075.240783219729,4421.916655953879,5728.564910485578
+2020-05-06,Minnesota,,5267.138579855069,4553.923798786253,5980.353360923884
+2020-05-07,Minnesota,,5462.569771849094,4689.464746246208,6235.674797451979
+2020-05-08,Minnesota,,5661.491727807983,4828.496197460901,6494.487258155064
+2020-05-09,Minnesota,,5863.9274175903265,4971.041484891721,6756.813350288932
+2020-04-24,Oklahoma,,3121.0,3121.0,3121.0
+2020-04-25,Oklahoma,,3220.5965101736406,3164.781970524527,3276.411049822754
+2020-04-26,Oklahoma,,3336.4795485356194,3216.2220476507314,3456.7370494205074
+2020-04-27,Oklahoma,,3444.5376369134483,3258.8414267837265,3630.2338470431705
+2020-04-28,Oklahoma,,3562.0443180408947,3305.819081272247,3818.269554809543
+2020-04-29,Oklahoma,,3676.6247687552823,3348.1627418558446,4005.08679565472
+2020-04-30,Oklahoma,,3797.1443533115153,3392.7878302167496,4201.50087640628
+2020-05-01,Oklahoma,,3917.2518954269954,3434.9440194676467,4399.559771386344
+2020-05-02,Oklahoma,,4041.497398802961,3478.2684737244917,4604.72632388143
+2020-05-03,Oklahoma,,4166.621225734502,3520.292452146708,4812.949999322297
+2020-05-04,Oklahoma,,4294.958591457682,3562.9366001694084,5026.980582745955
+2020-05-05,Oklahoma,,4424.836540051501,3604.9358521997515,5244.737227903251
+2020-05-06,Oklahoma,,4557.453582672611,3647.311987712254,5467.595177632968
+2020-05-07,Oklahoma,,4691.951101963205,3689.42829728176,5694.473906644649
+2020-05-08,Oklahoma,,4828.944214239084,3731.8357030050215,5926.052725473148
+2020-05-09,Oklahoma,,4967.992248136544,3774.222957592052,6161.761538681036
+2020-04-24,Pennsylvania,,40298.0,40298.0,40298.0
+2020-04-25,Pennsylvania,,42324.613737109554,41973.994559835795,42675.232914383305
+2020-04-26,Pennsylvania,,44414.74340789994,43563.3355334628,45266.15128233709
+2020-04-27,Pennsylvania,,46569.291208942464,45098.55535830425,48040.02705958069
+2020-04-28,Pennsylvania,,48789.159336808414,46596.43464756523,50981.88402605159
+2020-04-29,Pennsylvania,,51075.249988069074,48067.72952748011,54082.77044865803
+2020-04-30,Pennsylvania,,53428.46535929573,49520.144950435424,57336.785768156034
+2020-05-01,Pennsylvania,,55849.70764705968,50959.59617927691,60739.81911484245
+2020-05-02,Pennsylvania,,58339.87904793222,52390.847297206405,64288.910798658035
+2020-05-03,Pennsylvania,,60899.88175848464,53817.8731322438,67981.89038472547
+2020-05-04,Pennsylvania,,63530.61797528821,55244.08139389119,71817.15455668523
+2020-05-05,Pennsylvania,,66232.98989491424,56672.45733415426,75793.52245567423
+2020-05-06,Pennsylvania,,69007.89971393402,58105.66238334037,79910.13704452768
+2020-05-07,Pennsylvania,,71856.24962891884,59546.10391936764,84166.39533847004
+2020-05-08,Pennsylvania,,74778.94183643999,60995.986123946044,88561.89754893394
+2020-05-09,Pennsylvania,,77776.87853306875,62457.347993244766,93096.40907289274
+2020-04-24,South Carolina,,5070.0,5070.0,5070.0
+2020-04-25,South Carolina,,5228.73663230221,5136.7440448291845,5320.729219775235
+2020-04-26,South Carolina,,5390.735987033013,5200.687248410869,5580.784725655157
+2020-04-27,South Carolina,,5555.9980641924085,5262.183332073478,5849.81279631134
+2020-04-28,South Carolina,,5724.522863780399,5321.530505590134,6127.515221970664
+2020-04-29,South Carolina,,5896.310385796982,5378.984626263241,6413.636145330724
+2020-04-30,South Carolina,,6071.3606302421595,5434.768365389594,6707.952895094724
+2020-05-01,South Carolina,,6249.673597115929,5489.077816510134,7010.269377721725
+2020-05-02,South Carolina,,6431.249286418293,5542.087396174855,7320.411176661731
+2020-05-03,South Carolina,,6616.08769814925,5593.953565781545,7638.221830516955
+2020-05-04,South Carolina,,6804.1888323088,5644.817715845147,7963.559948772452
+2020-05-05,South Carolina,,6995.552688896943,5694.808440502405,8296.296937291483
+2020-05-06,South Carolina,,7190.179267913681,5744.043358616102,8636.31517721126
+2020-05-07,South Carolina,,7388.068569359012,5792.630591461091,8983.506547256933
+2020-05-08,South Carolina,,7589.220593232936,5840.6699760248075,9337.771210441064
+2020-05-09,South Carolina,,7793.635339535453,5888.254071800286,9699.01660727062
+2020-04-24,District of Columbia,,3528.0,3528.0,3528.0
+2020-04-25,District of Columbia,,3689.819250748862,3634.156157678557,3745.482343819167
+2020-04-26,District of Columbia,,3855.151646931671,3742.6556945618536,3967.6475993014883
+2020-04-27,District of Columbia,,4023.9971885484265,3853.5222066751503,4194.472170421703
+2020-04-28,District of Columbia,,4196.355875599128,3966.7779172511623,4425.933833947093
+2020-04-29,District of Columbia,,4372.227708083776,4082.443804895019,4662.011611272533
+2020-04-30,District of Columbia,,4551.6126860023705,4200.53971559786,4902.685656406881
+2020-05-01,District of Columbia,,4734.5108093549115,4321.084461125443,5147.93715758438
+2020-05-02,District of Columbia,,4920.922078141399,4444.095905841303,5397.748250441496
+2020-05-03,District of Columbia,,5110.846492361833,4569.591043655809,5652.101941067857
+2020-05-04,District of Columbia,,5304.2840520162135,4697.586066499671,5910.982037532757
+2020-05-05,District of Columbia,,5501.234757104541,4828.096425485641,6174.373088723441
+2020-05-06,District of Columbia,,5701.698607626814,4961.136885732687,6442.260329520941
+2020-05-07,District of Columbia,,5905.675603583035,5096.72157567273,6714.629631493339
+2020-05-08,District of Columbia,,6113.165744973201,5234.864031533997,6991.467458412404
+2020-05-09,District of Columbia,,6324.169031797313,5375.577237591191,7272.760826003436
+2020-04-24,Kansas,,2830.0,2830.0,2830.0
+2020-04-25,Kansas,,3067.3202379700074,3000.549963828932,3134.0905121110827
+2020-04-26,Kansas,,3367.1511101861806,3226.590205321385,3507.7120150509763
+2020-04-27,Kansas,,3651.0464388134046,3433.2037823005653,3868.889095326244
+2020-04-28,Kansas,,3945.2702701262783,3638.266032958075,4252.274507294482
+2020-04-29,Kansas,,4270.413671554172,3866.6262346840444,4674.201108424299
+2020-04-30,Kansas,,4604.356957829649,4098.232344115522,5110.481571543776
+2020-05-01,Kansas,,4950.958189647452,4334.977441936194,5566.938937358709
+2020-05-02,Kansas,,5318.479751727067,4585.780054900395,6051.179448553739
+2020-05-03,Kansas,,5701.390868321627,4845.941836098351,6556.839900544903
+2020-05-04,Kansas,,6099.820462700969,5115.19972029111,7084.441205110828
+2020-05-05,Kansas,,6516.821352848849,5396.733444869067,7636.909260828631
+2020-05-06,Kansas,,6951.360720034218,5689.82844652214,8212.892993546295
+2020-05-07,Kansas,,7403.373426538791,5994.391697277055,8812.355155800527
+2020-05-08,Kansas,,7874.050296956699,6311.667339828613,9436.433254084784
+2020-05-09,Kansas,,8363.46771387093,6641.865765094652,10085.06966264721
+2020-04-24,Missouri,,6625.0,6625.0,6625.0
+2020-04-25,Missouri,,6862.684270279447,6743.286473057021,6982.082067501874
+2020-04-26,Missouri,,7105.3848416828205,6858.496078936038,7352.2736044296025
+2020-04-27,Missouri,,7353.101714210121,6971.112771600035,7735.090656820206
+2020-04-28,Missouri,,7605.834887861347,7081.542850035937,8130.126925686756
+2020-04-29,Missouri,,7863.584362636499,7190.13374069128,8537.034984581718
+2020-04-30,Missouri,,8126.3501385355785,7297.186975266961,8955.513301804196
+2020-05-01,Missouri,,8394.132215558584,7402.967484908179,9385.296946208988
+2020-05-02,Missouri,,8666.930593705514,7507.710455100114,9826.150732310914
+2020-05-03,Missouri,,8944.745272976372,7611.626507430778,10277.864038521968
+2020-05-04,Missouri,,9227.576253371157,7714.905699306345,10740.246807435968
+2020-05-05,Missouri,,9515.423534889867,7817.720667243848,11213.126402535887
+2020-05-06,Missouri,,9808.287117532504,7920.229136012497,11696.34509905251
+2020-05-07,Missouri,,10106.167001299067,8022.575949208521,12189.758053389614
+2020-05-08,Missouri,,10409.063186189556,8124.894732591492,12693.23163978762
+2020-05-09,Missouri,,10716.975672203971,8227.309271403818,13206.642073004126
+2020-04-24,Vermont,,827.0,827.0,827.0
+2020-04-25,Vermont,,839.1806982817411,827.0,851.3613965634823
+2020-04-26,Vermont,,855.9925934285802,827.0,884.9851868571603
+2020-04-27,Vermont,,876.3581309166524,827.0,925.7162618333048
+2020-04-28,Vermont,,899.7195274801327,827.0,972.4390549602655
+2020-04-29,Vermont,,925.7203288740187,827.0,1024.4406577480374
+2020-04-30,Vermont,,954.1073346322945,827.0,1081.214669264589
+2020-05-01,Vermont,,984.6886817698257,827.0,1142.3773635396515
+2020-05-02,Vermont,,1017.3124720635024,827.0,1207.6249441270047
+2020-05-03,Vermont,,1051.8545669087223,827.0,1276.7091338174446
+2020-05-04,Vermont,,1088.2110393101516,827.0,1349.4220786203032
+2020-05-05,Vermont,,1126.2932204048543,827.0,1425.5864408097086
+2020-05-06,Vermont,,1166.0242953809975,827.0,1505.048590761995
+2020-05-07,Vermont,,1207.336876331303,827.0,1587.6737526626061
+2020-05-08,Vermont,,1250.171218646466,827.0,1673.342437292932
+2020-05-09,Vermont,,1294.4738768906145,827.0,1761.947753781229
+2020-04-24,Virginia,,11596.0,11596.0,11596.0
+2020-04-25,Virginia,,12239.710223696642,12077.260738752826,12402.159708640456
+2020-04-26,Virginia,,12897.42916127871,12568.557608268928,13226.300714288493
+2020-04-27,Virginia,,13569.156812746205,13069.983250587393,14068.33037490502
+2020-04-28,Virginia,,14254.89317809913,13581.6241136979,14928.162242500359
+2020-04-29,Virginia,,14954.63825733748,14103.561112462157,15805.715402212802
+2020-04-30,Virginia,,15668.392050461256,14635.870194826086,16700.913906096426
+2020-05-01,Virginia,,16396.154557470458,15178.62283008903,17613.686284851887
+2020-05-02,Virginia,,17137.92577836509,15731.886432505231,18543.965124224953
+2020-05-03,Virginia,,17893.70571314515,16295.724730829692,19491.68669546061
+2020-05-04,Virginia,,18663.494361810634,16870.19809236666,20456.79063125461
+2020-05-05,Virginia,,19447.291724361545,17455.363808478898,21439.219640244195
+2020-05-06,Virginia,,20245.097800797885,18051.27634725793,22438.919254337838
+2020-05-07,Virginia,,21056.912591119653,18657.98757805763,23455.837604181674
+2020-05-08,Virginia,,21882.736095326843,19275.546971795768,24489.92521885792
+2020-05-09,Virginia,,22722.568313419462,19904.00178028578,25541.13484655315
+2020-04-24,Connecticut,,23921.0,23921.0,23921.0
+2020-04-25,Connecticut,,25642.458166435194,25109.82113668325,26175.095196187132
+2020-04-26,Connecticut,,26232.209327692362,25149.482379009656,27314.93627637507
+2020-04-27,Connecticut,,27997.90895227054,26350.655550713556,29645.162353827523
+2020-04-28,Connecticut,,28843.046338318323,26602.575041754742,31083.5176348819
+2020-04-29,Connecticut,,30359.160377222892,27520.12350769073,33198.19724675505
+2020-04-30,Connecticut,,31571.973199454318,28072.756971150073,35071.18942775857
+2020-05-01,Connecticut,,32868.78382773886,28704.12320374628,37033.44445173143
+2020-05-02,Connecticut,,34327.45861693476,29462.49652132276,39192.420712546766
+2020-05-03,Connecticut,,35567.88195817619,30002.557731346,41133.206185006384
+2020-05-04,Connecticut,,37109.71392397857,30833.99051391092,43385.43733404622
+2020-05-05,Connecticut,,38428.24234419902,31435.718296332707,45420.76639206533
+2020-05-06,Connecticut,,39961.087293557255,32249.544587367305,47672.6299997472
+2020-05-07,Connecticut,,41405.22934319555,32962.77633494245,49847.682351448646
+2020-05-08,Connecticut,,42920.0664347748,33745.30821474969,52094.824654799915
+2020-05-09,Connecticut,,44471.167217183385,34553.65615063117,54388.6782837356
+2020-04-24,Iowa,,4459.0,4459.0,4459.0
+2020-04-25,Iowa,,4729.180289224115,4594.817847440454,4863.542731007776
+2020-04-26,Iowa,,5063.002664035308,4794.271271355901,5331.734056714715
+2020-04-27,Iowa,,5403.838014411116,4996.218824963194,5811.457203859038
+2020-04-28,Iowa,,5751.686340351537,5200.802971090233,6302.5697096128415
+2020-04-29,Iowa,,6106.547641856574,5408.153492162143,6804.941791551004
+2020-04-30,Iowa,,6468.421918926224,5618.389266633084,7318.454571219365
+2020-05-01,Iowa,,6837.30917156049,5831.619715378898,7842.998627742081
+2020-05-02,Iowa,,7213.20939975937,6047.94599293684,8378.4728065819
+2020-05-03,Iowa,,7596.122603522865,6267.461978702153,8924.783228343576
+2020-05-04,Iowa,,7986.048782850974,6490.255109305796,9481.84245639615
+2020-05-05,Iowa,,8382.987937743697,6716.4070834667,10049.568792020695
+2020-05-06,Iowa,,8786.940068201035,6945.994463390245,10627.885673011826
+2020-05-07,Iowa,,9197.905174222988,7179.089191453694,11216.721156992282
+2020-05-08,Iowa,,9615.883255809556,7415.759036929792,11816.007474689319
+2020-05-09,Iowa,,10040.874312960736,7656.067984476716,12425.680641444756
+2020-04-24,Louisiana,,26140.0,26140.0,26140.0
+2020-04-25,Louisiana,,26743.766689592696,26140.0,27347.533379185395
+2020-04-26,Louisiana,,27347.76499019219,26140.0,28555.529980384377
+2020-04-27,Louisiana,,28068.13105043269,26140.0,29996.262100865377
+2020-04-28,Louisiana,,28811.142746882288,26140.0,31482.28549376458
+2020-04-29,Louisiana,,29624.916599338216,26140.0,33109.83319867643
+2020-04-30,Louisiana,,30470.435129092853,26140.0,34800.87025818571
+2020-05-01,Louisiana,,31368.090117368647,26140.0,36596.180234737294
+2020-05-02,Louisiana,,32300.16928677359,26140.0,38460.33857354718
+2020-05-03,Louisiana,,33275.17382110913,26140.0,40410.34764221826
+2020-05-04,Louisiana,,34284.57258463829,26140.0,42429.145169276584
+2020-05-05,Louisiana,,35331.69410529056,26140.0,44523.38821058113
+2020-05-06,Louisiana,,36412.164193887096,26140.0,46684.32838777419
+2020-05-07,Louisiana,,37527.063986951085,26140.0,48914.12797390217
+2020-05-08,Louisiana,,38673.97184532699,26140.0,51207.94369065397
+2020-05-09,Louisiana,,39853.01065071565,26140.0,53566.021301431305
+2020-04-24,Ohio,,15169.0,15169.0,15169.0
+2020-04-25,Ohio,,15465.983874051146,15232.082833362954,15699.884914739338
+2020-04-26,Ohio,,15820.388929953553,15232.082833362954,16408.695026544152
+2020-04-27,Ohio,,16215.187083857141,15232.082833362954,17198.29133435133
+2020-04-28,Ohio,,16632.538473571713,15232.082833362954,18032.99411378047
+2020-04-29,Ohio,,17063.297752396065,15232.082833362954,18894.51267142918
+2020-04-30,Ohio,,17502.260830339997,15232.082833362954,19772.438827317037
+2020-05-01,Ohio,,17946.32027934678,15232.082833362954,20660.557725330604
+2020-05-02,Ohio,,18393.572608248392,15232.082833362954,21555.06238313383
+2020-05-03,Ohio,,18842.834788079585,15232.082833362954,22453.58674279621
+2020-05-04,Ohio,,19293.365300843925,15232.082833362954,23354.647768324896
+2020-05-05,Ohio,,19744.697050979878,15232.082833362954,24257.3112685968
+2020-05-06,Ohio,,20196.534977802,15232.082833362954,25160.987122241044
+2020-05-07,Ohio,,20648.692428684226,15232.082833362954,26065.302024005498
+2020-05-08,Ohio,,21101.0512739561,15232.082833362954,26970.01971454925
+2020-05-09,Ohio,,21553.536769733437,15232.082833362954,27874.99070610392
+2020-04-24,Michigan,,36627.0,36627.0,36627.0
+2020-04-25,Michigan,,38017.6349934997,37573.60971995977,38461.66026703963
+2020-04-26,Michigan,,39423.260376137194,38344.45838602483,40502.06236624956
+2020-04-27,Michigan,,40843.23154355058,38978.711034120104,42707.75205298106
+2020-04-28,Michigan,,42276.90389137796,39495.65045401713,45058.15732873879
+2020-04-29,Michigan,,43723.63281525743,39906.96498207335,47540.30064844151
+2020-04-30,Michigan,,45182.77371082708,40220.5015812575,50145.04584039666
+2020-05-01,Michigan,,46653.68197372501,40441.856947265085,52865.50700018494
+2020-05-02,Michigan,,48135.712999589334,40575.182234916996,55696.243764261664
+2020-05-03,Michigan,,49628.22218405812,40623.638835545564,58632.80553257068
+2020-05-04,Michigan,,51147.54539622734,40623.638835545564,61671.45195690911
+2020-05-05,Michigan,,52716.304951989325,40623.638835545564,64808.97106843308
+2020-05-06,Michigan,,54333.09710568469,40623.638835545564,68042.55537582381
+2020-05-07,Michigan,,55996.676568171766,40623.638835545564,71369.71430079798
+2020-05-08,Michigan,,57705.92462145354,40623.638835545564,74788.2104073615
+2020-05-09,Michigan,,59459.82530852895,40623.638835545564,78296.01178151232
+2020-04-24,South Dakota,,2040.0,2040.0,2040.0
+2020-04-25,South Dakota,,2130.379546703515,2090.8931499408295,2169.8659434662004
+2020-04-26,South Dakota,,2222.713528208757,2134.2661763574515,2311.1608800600625
+2020-04-27,South Dakota,,2317.001348291562,2171.369274943409,2462.633421639715
+2020-04-28,South Dakota,,2413.2424107277648,2202.9734487755763,2623.5113726799536
+2020-04-29,South Dakota,,2511.4361192932006,2229.608229169403,2793.2640094169983
+2020-04-30,South Dakota,,2611.581877763705,2251.662048482828,2971.501707044582
+2020-05-01,South Dakota,,2713.679089915113,2269.4328724760517,3157.9253073541745
+2020-05-02,South Dakota,,2817.7271595232596,2283.1568222312535,3352.297496815266
+2020-05-03,South Dakota,,2923.7254903639805,2293.025700175425,3554.4252805525366
+2020-05-04,South Dakota,,3031.6734862131107,2299.198379314602,3764.1485931116194
+2020-05-05,South Dakota,,3141.570550846485,2301.808553558064,3981.3325481349057
+2020-05-06,South Dakota,,3253.835260036413,2301.808553558064,4205.861966514762
+2020-05-07,South Dakota,,3369.722974317409,2301.808553558064,4437.637395076754
+2020-05-08,South Dakota,,3489.1903448403787,2301.808553558064,4676.572136122693
+2020-05-09,South Dakota,,3612.1992685539713,2301.808553558064,4922.5899835498785
+2020-04-24,Arkansas,,2810.0,2810.0,2810.0
+2020-04-25,Arkansas,,2988.7938307581344,2893.2131896219453,3084.374471894324
+2020-04-26,Arkansas,,3171.722778940907,2978.444802887491,3365.0007549943234
+2020-04-27,Arkansas,,3358.7868445483177,3065.7397372976593,3651.833951798976
+2020-04-28,Arkansas,,3549.9860275803667,3155.140149071032,3944.8319060897015
+2020-04-29,Arkansas,,3745.3203280370535,3246.6857212394307,4243.954934834676
+2020-04-30,Arkansas,,3944.7897459183782,3340.4138964118492,4549.165595424907
+2020-05-01,Arkansas,,4148.394281224341,3436.360079977004,4860.428482471679
+2020-05-02,Arkansas,,4356.133933954942,3534.5578184032097,5177.710049506674
+2020-05-03,Arkansas,,4568.0087041101815,3635.038956427186,5500.978451793177
+2020-05-04,Arkansas,,4784.018591690058,3737.8337762408028,5830.203407139314
+2020-05-05,Arkansas,,5004.163596694574,3842.971121242853,6165.3560721462945
+2020-05-06,Arkansas,,5228.443719123727,3950.478506489192,6506.40893175826
+2020-05-07,Arkansas,,5456.858958977518,4060.3822176249296,6853.335700330106
+2020-05-08,Arkansas,,5689.4093162559475,4172.707399798417,7206.111232713477
+2020-05-09,Arkansas,,5926.094790959014,4287.478137824831,7564.711444093197
+2020-04-24,Delaware,,3442.0,3442.0,3442.0
+2020-04-25,Delaware,,3660.914685671656,3585.8726874909034,3735.9566838524083
+2020-04-26,Delaware,,3912.6011541517446,3761.5204354081716,4063.6818728953176
+2020-04-27,Delaware,,4106.646024043293,3879.5152905910777,4333.77675749551
+2020-04-28,Delaware,,4258.645607860157,3947.456230976285,4569.834984744028
+2020-04-29,Delaware,,4450.968273901717,4048.1885452608453,4853.748002542589
+2020-04-30,Delaware,,4699.864831983264,4205.191962184206,5194.537701782321
+2020-05-01,Delaware,,4941.203512049518,4354.576387191318,5527.830636907718
+2020-05-02,Delaware,,5138.217895540212,4458.024577353525,5818.4112137268985
+2020-05-03,Delaware,,5332.205765184608,4552.492210943048,6111.919319426167
+2020-05-04,Delaware,,5569.179570283757,4687.479992369829,6450.879148197684
+2020-05-05,Delaware,,5830.544225088706,4846.779057351236,6814.309392826176
+2020-05-06,Delaware,,6070.564898539476,4984.470393094663,7156.659403984289
+2020-05-07,Delaware,,6288.655876534171,5097.443383875719,7479.8683691926235
+2020-05-08,Delaware,,6523.447618517589,5223.652501855528,7823.2427351796505
+2020-05-09,Delaware,,6789.27102889078,5379.974020320863,8198.568037460698
+2020-04-24,Mississippi,,5434.0,5434.0,5434.0
+2020-04-25,Mississippi,,5675.840023998295,5587.029993684623,5764.650054311966
+2020-04-26,Mississippi,,5916.348544199131,5733.50241823556,6099.194670162702
+2020-04-27,Mississippi,,6155.540532478445,5873.815771323894,6437.265293632996
+2020-04-28,Mississippi,,6393.430792363371,6008.312167898596,6778.549416828147
+2020-04-29,Mississippi,,6630.033960925211,6137.290182023017,7122.777739827407
+2020-04-30,Mississippi,,6865.364510651123,6261.013877539811,7469.715143762435
+2020-05-01,Mississippi,,7099.436751294754,6379.719374317784,7819.154128271724
+2020-05-02,Mississippi,,7332.264831706079,6493.619756367433,8170.9099070447255
+2020-05-03,Mississippi,,7563.862741640649,6602.908826858392,8524.816656422907
+2020-05-04,Mississippi,,7794.2443135485055,6707.764038548592,8880.724588548419
+2020-05-05,Mississippi,,8023.423224342974,6808.3488202697135,9238.497628416235
+2020-05-06,Mississippi,,8251.412997149575,6904.814451805829,9598.011542493323
+2020-05-07,Mississippi,,8478.227003035263,6997.301594891649,9959.152411178879
+2020-05-08,Mississippi,,8703.878462718223,7085.941558129237,10321.815367307208
+2020-05-09,Mississippi,,8928.380448258442,7170.85735306443,10685.903543452456
+2020-04-24,New Mexico,,2524.0,2524.0,2524.0
+2020-04-25,New Mexico,,2654.3635659223046,2614.177335918279,2694.5497959263303
+2020-04-26,New Mexico,,2787.9603071307724,2707.5878216602546,2868.3327926012903
+2020-04-27,New Mexico,,2924.790223625403,2804.231457225943,3045.3489900248633
+2020-04-28,New Mexico,,3064.853315406197,2904.10824261536,3225.598388197034
+2020-04-29,New Mexico,,3208.149582473154,3007.218177828522,3409.080987117786
+2020-04-30,New Mexico,,3354.679024826274,3113.5612628654453,3595.796786787103
+2020-05-01,New Mexico,,3504.4416424655574,3223.1374977261457,3785.745787204969
+2020-05-02,New Mexico,,3657.437435391004,3335.94688241064,3978.927988371368
+2020-05-03,New Mexico,,3813.6664036026136,3451.989416918944,4175.3433902862835
+2020-05-04,New Mexico,,3973.128547100386,3571.2651012510732,4374.991992949699
+2020-05-05,New Mexico,,4135.823865884322,3693.7739354070445,4577.8737963615995
+2020-05-06,New Mexico,,4301.752359954421,3819.5159193868735,4783.988800521968
+2020-05-07,New Mexico,,4470.914029310683,3948.4910531905766,4993.337005430789
+2020-05-08,New Mexico,,4643.308873953108,4080.69933681817,5205.918411088045
+2020-05-09,New Mexico,,4818.936893881696,4216.14077026967,5421.733017493722
+2020-04-24,North Dakota,,748.0,748.0,748.0
+2020-04-25,North Dakota,,787.3243462864913,766.8716032834532,807.7770892895294
+2020-04-26,North Dakota,,827.2824199005308,783.6902335570757,870.8746062439861
+2020-04-27,North Dakota,,868.031614080244,800.5595164469833,935.5037117135048
+2020-04-28,North Dakota,,909.6520004141254,818.0645000188413,1001.2395008094095
+2020-04-29,North Dakota,,952.184314192715,836.3967372342075,1067.9718911512223
+2020-04-30,North Dakota,,995.6492789201491,855.6275187073917,1135.6710391329063
+2020-05-01,North Dakota,,1040.0574373866716,875.7864517394837,1204.3284230338597
+2020-05-02,North Dakota,,1085.4141530880215,896.8868854740822,1273.941420701961
+2020-05-03,North Dakota,,1131.7221546269573,918.9351688918282,1344.5091403620863
+2020-05-04,North Dakota,,1178.9828301416212,941.9344176375905,1416.031242645652
+2020-05-05,North Dakota,,1227.1968858277016,965.8861871843452,1488.507584471058
+2020-05-06,North Dakota,,1276.364680952288,990.7912612068202,1561.9381006977555
+2020-05-07,North Dakota,,1326.4863982874413,1016.650036408791,1636.3227601660915
+2020-05-08,North Dakota,,1377.5621308158682,1043.4627140953746,1711.6615475363617
+2020-05-09,North Dakota,,1429.5919258412082,1071.2293965451145,1787.9544551373021
+2020-04-24,Wyoming,,349.0,349.0,349.0
+2020-04-25,Wyoming,,359.1253196413097,349.88429989044084,368.36633939217853
+2020-04-26,Wyoming,,369.2047311755195,349.88429989044084,388.52516246059815
+2020-04-27,Wyoming,,379.64824863964583,349.88429989044084,409.4121973888508
+2020-04-28,Wyoming,,390.42910216692326,349.88429989044084,430.97390444340573
+2020-04-29,Wyoming,,401.5242348665808,349.88429989044084,453.16416984272075
+2020-04-30,Wyoming,,412.91327280699045,349.88429989044084,475.94224572354005
+2020-05-01,Wyoming,,424.5778470712081,349.88429989044084,499.2713942519754
+2020-05-02,Wyoming,,436.501127989325,349.88429989044084,523.1179560882092
+2020-05-03,Wyoming,,448.6674939011464,349.88429989044084,547.4506879118519
+2020-05-04,Wyoming,,461.0622888015115,349.88429989044084,572.2402777125822
+2020-05-05,Wyoming,,473.67164074422215,349.88429989044084,597.4589815980034
+2020-05-06,Wyoming,,486.48232298789276,349.88429989044084,623.0803460853447
+2020-05-07,Wyoming,,499.4816459549576,349.88429989044084,649.0789920194744
+2020-05-08,Wyoming,,512.6573718793732,349.88429989044084,675.4304438683056
+2020-05-09,Wyoming,,525.9976464722753,349.88429989044084,702.1109930541097
+2020-04-24,Alaska,,337.0,337.0,337.0
+2020-04-25,Alaska,,342.9610766646101,337.0,348.92215332922024
+2020-04-26,Alaska,,347.8651744858131,337.0,358.7303489716262
+2020-04-27,Alaska,,353.2584601913673,337.0,369.5169203827346
+2020-04-28,Alaska,,359.9062823273557,337.0,382.8125646547114
+2020-04-29,Alaska,,367.59594283271264,337.0,398.1918856654253
+2020-04-30,Alaska,,376.19775378689434,337.0,415.3955075737887
+2020-05-01,Alaska,,385.62196713775273,337.0,434.24393427550547
+2020-05-02,Alaska,,395.8017052712861,337.0,454.60341054257225
+2020-05-03,Alaska,,406.6846363762553,337.0,476.3692727525106
+2020-05-04,Alaska,,418.2283601606025,337.0,499.456720321205
+2020-05-05,Alaska,,430.39761493660376,337.0,523.7952298732075
+2020-05-06,Alaska,,443.1624743592979,337.0,549.3249487185958
+2020-05-07,Alaska,,456.4971239701066,337.0,575.9942479402132
+2020-05-08,Alaska,,470.37899783017406,337.0,603.7579956603481
+2020-05-09,Alaska,,484.78814945662725,337.0,632.5762989132545
+2020-04-24,Maine,,965.0,965.0,965.0
+2020-04-25,Maine,,990.695801024918,967.7077857676994,1013.6838162821364
+2020-04-26,Maine,,1016.9323329903548,969.5039262118399,1064.3607397688697
+2020-04-27,Maine,,1043.709595896311,970.4700165376438,1116.949175254978
+2020-04-28,Maine,,1071.027589742786,970.675273115253,1171.3799063703188
+2020-04-29,Maine,,1099.1342615994595,970.675273115253,1227.593250083666
+2020-04-30,Maine,,1128.106161838216,970.675273115253,1285.537050561179
+2020-05-01,Maine,,1157.9202458441123,970.675273115253,1345.1652185729715
+2020-05-02,Maine,,1188.5559562286803,970.675273115253,1406.4366393421074
+2020-05-03,Maine,,1219.9948052129248,970.675273115253,1469.3143373105963
+2020-05-04,Maine,,1252.2200490453592,970.675273115253,1533.7648249754652
+2020-05-05,Maine,,1285.2164299112155,970.675273115253,1599.7575867071782
+2020-05-06,Maine,,1318.96996834421,970.675273115253,1667.264663573167
+2020-05-07,Maine,,1353.4677941036898,970.675273115253,1736.2603150921263
+2020-05-08,Maine,,1388.6980068112575,970.675273115253,1806.7207405072622
+2020-05-09,Maine,,1424.6495599345712,970.675273115253,1878.6238467538892
+2020-04-24,Alabama,,6026.0,6026.0,6026.0
+2020-04-25,Alabama,,6242.822833282876,6129.480183943309,6356.165482622442
+2020-04-26,Alabama,,6459.09054497511,6226.464766664846,6691.716323285373
+2020-04-27,Alabama,,6674.533362562297,6316.719962948027,7032.346762176567
+2020-04-28,Alabama,,6888.881513530033,6400.007082773985,7377.755944286081
+2020-04-29,Alabama,,7101.865225363912,6476.083396567797,7727.647054160028
+2020-04-30,Alabama,,7313.214725549531,6544.702814070366,8081.726637028697
+2020-05-01,Alabama,,7522.660241572486,6605.616423789454,8439.704059355518
+2020-05-02,Alabama,,7729.9320009183675,6658.572926555691,8801.291075281044
+2020-05-03,Alabama,,7934.760231072775,6703.318987546441,9166.20147459911
+2020-05-04,Alabama,,8136.8751595213025,6739.59952476248,9534.150794280125
+2020-05-05,Alabama,,8336.007013749546,6767.157947423783,9904.856080075308
+2020-05-06,Alabama,,8531.8860212431,6785.736354497468,10278.03568798873
+2020-05-07,Alabama,,8724.242409487557,6795.075701194668,10653.409117780448
+2020-05-08,Alabama,,8912.886286808705,6795.075701194668,11030.696872422744
+2020-05-09,Alabama,,9102.34801997194,6795.075701194668,11409.620338749211
+2020-04-24,Idaho,,1750.0,1750.0,1750.0
+2020-04-25,Idaho,,1800.0714859237016,1750.0,1850.1429718474033
+2020-04-26,Idaho,,1864.8771637507646,1750.0,1979.7543275015291
+2020-04-27,Idaho,,1940.9887846713377,1750.0,2131.9775693426755
+2020-04-28,Idaho,,2026.631756518742,1750.0,2303.263513037484
+2020-04-29,Idaho,,2120.672017104817,1750.0,2491.3440342096337
+2020-04-30,Idaho,,2222.3040070104817,1750.0,2694.6080140209633
+2020-05-01,Idaho,,2330.917312529632,1750.0,2911.8346250592645
+2020-05-02,Idaho,,2446.028668183759,1750.0,3142.0573363675176
+2020-05-03,Idaho,,2567.2431259548657,1750.0,3384.4862519097314
+2020-05-04,Idaho,,2694.230041230383,1750.0,3638.460082460766
+2020-05-05,Idaho,,2826.707313274712,1750.0,3903.414626549424
+2020-05-06,Idaho,,2964.4305551158586,1750.0,4178.861110231717
+2020-05-07,Idaho,,3107.185371558213,1750.0,4464.370743116426
+2020-05-08,Idaho,,3254.781684623159,1750.0,4759.563369246318
+2020-05-09,Idaho,,3407.049457205509,1750.0,5064.098914411018
+2020-04-24,Montana,,444.0,444.0,444.0
+2020-04-25,Montana,,451.03369235580647,444.0,458.0673847116129
+2020-04-26,Montana,,458.8787766969692,444.0,473.7575533939385
+2020-04-27,Montana,,467.4500753046225,444.0,490.9001506092449
+2020-04-28,Montana,,476.68515394458666,444.0,509.3703078891733
+2020-04-29,Montana,,486.5357056307074,444.0,529.0714112614148
+2020-04-30,Montana,,496.96291135070993,444.0,549.9258227014199
+2020-05-01,Montana,,507.9346891904884,444.0,571.8693783809769
+2020-05-02,Montana,,519.4239453565817,444.0,594.8478907131633
+2020-05-03,Montana,,531.4074016914029,444.0,618.8148033828058
+2020-05-04,Montana,,543.8647761912043,444.0,643.7295523824088
+2020-05-05,Montana,,556.7781906073594,444.0,669.5563812147188
+2020-05-06,Montana,,570.1317301114375,444.0,696.2634602228751
+2020-05-07,Montana,,583.9111082401826,444.0,723.8222164803651
+2020-05-08,Montana,,598.103406811151,444.0,752.206813622302
+2020-05-09,Montana,,612.6968705278447,444.0,781.3937410556894
+2020-04-24,Puerto Rico,,1276.0,1276.0,1276.0
+2020-04-25,Puerto Rico,,1276.0,1276.0,1276.0
+2020-04-26,Puerto Rico,,1326.2091386209613,1276.0,1376.4182772419229
+2020-04-27,Puerto Rico,,1546.590237875429,1360.2624915100637,1732.917984240794
+2020-04-28,Puerto Rico,,1638.2185015428872,1360.2624915100637,1916.1745115757105
+2020-04-29,Puerto Rico,,1640.309888533614,1360.2624915100637,1920.3572855571642
+2020-04-30,Puerto Rico,,1713.5617315931538,1360.2624915100637,2066.860971676244
+2020-05-01,Puerto Rico,,1875.1173126787078,1360.2624915100637,2389.972133847352
+2020-05-02,Puerto Rico,,1981.3491517484426,1360.2624915100637,2602.4358119868216
+2020-05-03,Puerto Rico,,2020.6800798374882,1360.2624915100637,2681.0976681649126
+2020-05-04,Puerto Rico,,2105.581318163856,1360.2624915100637,2850.900144817648
+2020-05-05,Puerto Rico,,2252.561902637836,1360.2624915100637,3144.861313765608
+2020-05-06,Puerto Rico,,2364.5683439998984,1360.2624915100637,3368.8741964897335
+2020-05-07,Puerto Rico,,2428.0214657654587,1360.2624915100637,3495.7804400208533
+2020-05-08,Puerto Rico,,2520.4729262454002,1360.2624915100637,3680.6833609807363
+2020-05-09,Puerto Rico,,2656.7831937836536,1360.2624915100637,3953.303896057243
+2020-04-24,Virgin Islands,,54.0,54.0,54.0
+2020-04-25,Virgin Islands,,56.63845868268772,54.0,59.27691736537544
+2020-04-26,Virgin Islands,,59.26107311072382,54.0,64.52214622144764
+2020-04-27,Virgin Islands,,61.86784328410831,54.0,69.73568656821662
+2020-04-28,Virgin Islands,,64.45876920284118,54.0,74.91753840568235
+2020-04-29,Virgin Islands,,67.0338508669224,54.0,80.06770173384481
+2020-04-30,Virgin Islands,,69.59308827635202,54.0,85.18617655270404
+2020-05-01,Virgin Islands,,72.13648143113,54.0,90.27296286225997
+2020-05-02,Virgin Islands,,74.66403033125631,54.0,95.32806066251263
+2020-05-03,Virgin Islands,,77.17573497673101,54.0,100.35146995346201
+2020-05-04,Virgin Islands,,79.67159536755403,54.0,105.34319073510808
+2020-05-05,Virgin Islands,,82.15161150372542,54.0,110.30322300745084
+2020-05-06,Virgin Islands,,84.61578338524515,54.0,115.23156677049029
+2020-05-07,Virgin Islands,,87.0641110121132,54.0,120.1282220242264
+2020-05-08,Virgin Islands,,89.4965943843296,54.0,124.9931887686592
+2020-05-09,Virgin Islands,,91.91323350189433,54.0,129.82646700378865
+2020-04-24,Guam,,997.0,997.0,997.0
+2020-04-25,Guam,,1045.1865726826575,997.0,1093.373145365315
+2020-04-26,Guam,,1101.897143400211,997.0,1206.7942868004222
+2020-04-27,Guam,,1159.11748198042,997.0,1321.2349639608403
+2020-04-28,Guam,,1216.8475884232846,997.0,1436.6951768465692
+2020-04-29,Guam,,1275.0874627288044,997.0,1553.1749254576087
+2020-04-30,Guam,,1333.8371048969793,997.0,1670.6742097939589
+2020-05-01,Guam,,1393.09651492781,997.0,1789.1930298556197
+2020-05-02,Guam,,1452.8656928212954,997.0,1908.731385642591
+2020-05-03,Guam,,1513.1446385774366,997.0,2029.289277154873
+2020-05-04,Guam,,1573.9333521962326,997.0,2150.866704392465
+2020-05-05,Guam,,1635.2318336776839,997.0,2273.4636673553678
+2020-05-06,Guam,,1697.0400830217905,997.0,2397.080166043581
+2020-05-07,Guam,,1759.3581002285523,997.0,2521.7162004571046
+2020-05-08,Guam,,1822.185885297969,997.0,2647.371770595938
+2020-05-09,Guam,,1885.523438230041,997.0,2774.046876460082
+2020-04-24,West Virginia,,1010.0,1010.0,1010.0
+2020-04-25,West Virginia,,1044.6495963504724,1012.7572728246432,1076.5419198763016
+2020-04-26,West Virginia,,1080.1321149495177,1015.5719863759365,1144.6922435230988
+2020-04-27,West Virginia,,1116.447555797136,1018.462127323633,1214.432984270639
+2020-04-28,West Virginia,,1153.5959188933273,1021.4444859685939,1285.7473518180607
+2020-04-29,West Virginia,,1191.5772042380916,1024.5347832659656,1358.6196252102175
+2020-04-30,West Virginia,,1230.3914118314287,1027.7477797326424,1433.0350439302151
+2020-05-01,West Virginia,,1270.0385416733388,1031.0973694313577,1508.9797139153202
+2020-05-02,West Virginia,,1310.5185937638223,1034.5966615619832,1586.4405259656614
+2020-05-03,West Virginia,,1351.8315681028785,1038.2580516850942,1665.4050845206625
+2020-05-04,West Virginia,,1393.9774646905075,1042.0932842125405,1745.8616451684745
+2020-05-05,West Virginia,,1436.9562835267097,1046.1135074953354,1827.799059558084
+2020-05-06,West Virginia,,1480.7680246114846,1050.3293225995787,1911.2067266233908
+2020-05-07,West Virginia,,1525.412687944833,1054.7508266709106,1996.0745492187552
+2020-05-08,West Virginia,,1570.8902735267538,1059.38765163578,2082.3928954177277
+2020-05-09,West Virginia,,1617.200781357248,1064.24899886511,2170.152563849386
