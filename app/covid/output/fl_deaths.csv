@@ -1,1056 +1,1075 @@
 case,county,age,gender,traveled,where,contacted,resident,date,datetime
-948,Santa Rosa,71,Male,Yes,EGYPT; ISRAEL; JORDAN,No,FL resident,03/05/20,2020-03-05
-612,Lee,77,Female,Yes,DOMINICAN REPUBLIC,Yes,FL resident,03/07/20,2020-03-07
-613,Lee,77,Male,No,NaN,Yes,FL resident,03/13/20,2020-03-13
-746,Palm Beach,73,Male,Yes,EGYPT; GERMANY,Yes,FL resident,03/13/20,2020-03-13
-530,Duval,83,Male,No,NaN,Yes,FL resident,03/13/20,2020-03-13
-738,Orange,68,Female,Yes,KPHILIPPINES; SOUTH OPHILIPPINES; SOUTH RPHILIPPINES; SOUTH EPHILIPPINES; SOUTH A,Unknown,Not diagnosed/isolated in FL,03/13/20,2020-03-13
-901,Pasco,67,Male,Yes,FL; NY,Yes,FL resident,03/14/20,2020-03-14
-202,Clay,70,Male,No,NaN,Yes,FL resident,03/14/20,2020-03-14
-531,Duval,88,Male,No,NaN,Yes,FL resident,03/15/20,2020-03-15
-614,Lee,65,Female,Yes,FL; JAMAICA,Yes,FL resident,03/15/20,2020-03-15
-17,Broward,74,Male,No,NaN,Yes,FL resident,03/15/20,2020-03-15
-709,Orange,79,Female,Unknown,NaN,Yes,FL resident,03/15/20,2020-03-15
-231,Dade,56,Male,Yes,NY,Yes,FL resident,03/16/20,2020-03-16
-18,Broward,77,Male,No,NaN,Yes,FL resident,03/16/20,2020-03-16
-652,Manatee,70,Male,No,NaN,Yes,FL resident,03/16/20,2020-03-16
-747,Palm Beach,76,Female,Yes,FRANCE,Unknown,FL resident,03/16/20,2020-03-16
-653,Manatee,75,Male,No,NaN,No,FL resident,03/17/20,2020-03-17
-654,Manatee,71,Male,No,NaN,Yes,FL resident,03/17/20,2020-03-17
-232,Dade,88,Male,Unknown,NaN,Unknown,FL resident,03/17/20,2020-03-17
-710,Orange,73,Male,No,NaN,Yes,FL resident,03/17/20,2020-03-17
-20,Broward,93,Male,No,NaN,Yes,FL resident,03/18/20,2020-03-18
-19,Broward,57,Male,No,NaN,Yes,FL resident,03/18/20,2020-03-18
-532,Duval,83,Male,No,NaN,Yes,FL resident,03/18/20,2020-03-18
-193,Citrus,80,Male,Yes,DE,Yes,FL resident,03/18/20,2020-03-18
-748,Palm Beach,72,Male,No,NaN,No,FL resident,03/18/20,2020-03-18
-905,Pinellas,52,Male,Yes,BULGARIA; GERMANY; UT,Yes,FL resident,03/18/20,2020-03-18
-21,Broward,96,Female,No,NaN,Yes,FL resident,03/19/20,2020-03-19
-22,Broward,94,Male,No,NaN,Unknown,FL resident,03/19/20,2020-03-19
-615,Lee,67,Male,No,NaN,Yes,FL resident,03/19/20,2020-03-19
-750,Palm Beach,81,Male,Yes,NY,Yes,FL resident,03/20/20,2020-03-20
-711,Orange,82,Female,No,NaN,Yes,FL resident,03/20/20,2020-03-20
-749,Palm Beach,72,Male,Yes,CANADA; FL,No,FL resident,03/20/20,2020-03-20
-929,Polk,77,Female,No,NaN,No,FL resident,03/20/20,2020-03-20
-203,Clay,82,Male,No,NaN,Yes,FL resident,03/20/20,2020-03-20
-233,Dade,71,Female,No,NaN,Unknown,FL resident,03/20/20,2020-03-20
-234,Dade,69,Male,No,NaN,Yes,FL resident,03/20/20,2020-03-20
-24,Broward,75,Male,No,NaN,Yes,FL resident,03/20/20,2020-03-20
-23,Broward,92,Male,No,NaN,Yes,FL resident,03/20/20,2020-03-20
-994,St. Johns,67,Male,No,NaN,Yes,FL resident,03/21/20,2020-03-21
-930,Polk,60,Male,No,NaN,Yes,FL resident,03/21/20,2020-03-21
-533,Duval,84,Male,No,NaN,Yes,FL resident,03/21/20,2020-03-21
-1017,Sumter,67,Female,Yes,MBELIZE; FL; HONDURAS; EBELIZE; FL; HONDURAS; XBELIZE; FL; HONDURAS; IBELIZE; FL; HONDURAS; CBELIZE; FL; HONDURAS; O,Yes,FL resident,03/21/20,2020-03-21
-751,Palm Beach,88,Male,No,NaN,Yes,FL resident,03/21/20,2020-03-21
-739,Osceola,58,Male,No,NaN,No,FL resident,03/21/20,2020-03-21
-954,Sarasota,75,Male,Yes,NJ; NY,No,FL resident,03/21/20,2020-03-21
-955,Sarasota,87,Male,No,NaN,Yes,FL resident,03/21/20,2020-03-21
-752,Palm Beach,83,Male,No,NaN,No,FL resident,03/21/20,2020-03-21
-906,Pinellas,67,Male,No,NaN,No,FL resident,03/21/20,2020-03-21
-534,Duval,84,Male,No,NaN,Unknown,FL resident,03/21/20,2020-03-21
-26,Broward,86,Male,No,NaN,Yes,FL resident,03/21/20,2020-03-21
-25,Broward,95,Male,No,NaN,Unknown,FL resident,03/21/20,2020-03-21
-535,Duval,84,Female,No,NaN,Yes,FL resident,03/21/20,2020-03-21
-236,Dade,83,Male,No,NaN,Yes,FL resident,03/22/20,2020-03-22
-237,Dade,67,Male,No,NaN,Yes,FL resident,03/22/20,2020-03-22
-753,Palm Beach,76,Male,No,NaN,No,FL resident,03/22/20,2020-03-22
-754,Palm Beach,85,Female,No,NaN,Yes,FL resident,03/22/20,2020-03-22
-559,Flagler,72,Female,Unknown,NaN,Yes,FL resident,03/22/20,2020-03-22
-238,Dade,40,Male,No,NaN,Yes,FL resident,03/22/20,2020-03-22
-235,Dade,83,Male,No,NaN,Yes,FL resident,03/22/20,2020-03-22
-536,Duval,82,Female,No,NaN,Yes,FL resident,03/22/20,2020-03-22
-204,Clay,68,Female,No,NaN,Yes,FL resident,03/22/20,2020-03-22
-240,Dade,74,Female,No,NaN,Yes,FL resident,03/22/20,2020-03-22
-2,Baker,66,Male,No,NaN,Yes,FL resident,03/22/20,2020-03-22
-239,Dade,57,Male,No,NaN,Unknown,FL resident,03/22/20,2020-03-22
-902,Pasco,71,Female,Yes,VA,Yes,FL resident,03/22/20,2020-03-22
-27,Broward,75,Male,Yes,FL; HONDURAS,No,FL resident,03/22/20,2020-03-22
-28,Broward,70,Male,Unknown,NaN,Unknown,FL resident,03/22/20,2020-03-22
-998,St. Lucie,77,Male,Yes,TDOMINICAN REPUBLIC; FL; UDOMINICAN REPUBLIC; FL; RDOMINICAN REPUBLIC; FL; KDOMINICAN REPUBLIC; FL; SDOMINICAN REPUBLIC; FL;  DOMINICAN REPUBLIC; FL; ADOMINICAN REPUBLIC; FL; NDOMINICAN REPUBLIC; FL; DDOMINICAN REPUBLIC; FL;  DOMINICAN REPUBLIC; FL; CDOMINICAN REPUBLIC; FL; ADOMINICAN REPUBLIC; FL; IDOMINICAN REPUBLIC; FL; CDOMINICAN REPUBLIC; FL; ODOMINICAN REPUBLIC; FL; S,No,FL resident,03/22/20,2020-03-22
-574,Hillsborough,69,Male,Unknown,NaN,No,FL resident,03/23/20,2020-03-23
-602,Lake,70,Female,Yes,FL; NY,Yes,FL resident,03/23/20,2020-03-23
-712,Orange,70,Male,No,NaN,Unknown,FL resident,03/23/20,2020-03-23
-907,Pinellas,83,Female,No,NaN,Yes,FL resident,03/23/20,2020-03-23
-956,Sarasota,81,Male,Yes,NY,No,FL resident,03/23/20,2020-03-23
-29,Broward,80,Female,No,NaN,No,FL resident,03/23/20,2020-03-23
-1018,Sumter,68,Male,No,NaN,No,FL resident,03/23/20,2020-03-23
-32,Broward,76,Male,No,NaN,No,FL resident,03/23/20,2020-03-23
-537,Duval,87,Female,Unknown,NaN,Unknown,FL resident,03/23/20,2020-03-23
-655,Manatee,68,Male,Yes,FRANCE,Yes,FL resident,03/23/20,2020-03-23
-995,St. Johns,52,Male,Yes,FL; MN,Yes,FL resident,03/23/20,2020-03-23
-31,Broward,83,Female,Yes,CA; FL,Yes,FL resident,03/23/20,2020-03-23
-30,Broward,96,Female,No,NaN,Yes,FL resident,03/23/20,2020-03-23
-755,Palm Beach,38,Male,Yes,COLOMBIA,Unknown,FL resident,03/24/20,2020-03-24
-957,Sarasota,82,Male,No,NaN,Yes,FL resident,03/24/20,2020-03-24
-205,Clay,65,Male,No,NaN,Yes,FL resident,03/24/20,2020-03-24
-713,Orange,90,Male,No,NaN,No,FL resident,03/24/20,2020-03-24
-1019,Sumter,84,Female,No,NaN,Yes,FL resident,03/24/20,2020-03-24
-567,Highlands,78,Female,Yes,CARIBBEAN; FL,Yes,FL resident,03/24/20,2020-03-24
-244,Dade,61,Male,No,NaN,No,FL resident,03/24/20,2020-03-24
-616,Lee,67,Male,No,NaN,No,FL resident,03/24/20,2020-03-24
-575,Hillsborough,73,Male,Yes,ISRAEL,Unknown,FL resident,03/24/20,2020-03-24
-576,Hillsborough,63,Male,Unknown,NaN,Yes,FL resident,03/24/20,2020-03-24
-577,Hillsborough,86,Female,No,NaN,Yes,FL resident,03/24/20,2020-03-24
-1040,Volusia,78,Female,No,NaN,No,FL resident,03/24/20,2020-03-24
-3,Baker,77,Female,No,NaN,Yes,FL resident,03/24/20,2020-03-24
-241,Dade,78,Male,No,NaN,No,FL resident,03/24/20,2020-03-24
-242,Dade,94,Male,No,NaN,Unknown,FL resident,03/24/20,2020-03-24
-243,Dade,63,Male,Yes,NC,No,FL resident,03/24/20,2020-03-24
-33,Broward,78,Male,Unknown,NaN,Yes,FL resident,03/24/20,2020-03-24
-34,Broward,84,Female,No,NaN,Yes,FL resident,03/24/20,2020-03-24
-35,Broward,38,Female,No,NaN,Unknown,FL resident,03/24/20,2020-03-24
-42,Broward,67,Female,Unknown,NaN,Yes,FL resident,03/25/20,2020-03-25
-1020,Sumter,85,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
-958,Sarasota,62,Male,No,NaN,No,FL resident,03/25/20,2020-03-25
-207,Clay,54,Male,No,NaN,No,FL resident,03/25/20,2020-03-25
-37,Broward,79,Male,Yes,PERU,Yes,FL resident,03/25/20,2020-03-25
-703,Monroe,55,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
-704,Monroe,75,Male,No,NaN,No,FL resident,03/25/20,2020-03-25
-38,Broward,93,Female,Unknown,NaN,Yes,FL resident,03/25/20,2020-03-25
-39,Broward,67,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
-759,Palm Beach,45,Male,No,NaN,No,FL resident,03/25/20,2020-03-25
-36,Broward,83,Male,No,NaN,Unknown,FL resident,03/25/20,2020-03-25
-617,Lee,39,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
-248,Dade,81,Female,No,NaN,Yes,FL resident,03/25/20,2020-03-25
-249,Dade,61,Male,Unknown,NaN,Unknown,FL resident,03/25/20,2020-03-25
-43,Broward,75,Male,Yes,NY,Yes,FL resident,03/25/20,2020-03-25
-760,Palm Beach,84,Male,Unknown,NaN,Unknown,FL resident,03/25/20,2020-03-25
-40,Broward,71,Male,Unknown,NaN,Unknown,FL resident,03/25/20,2020-03-25
-247,Dade,75,Male,No,NaN,Unknown,FL resident,03/25/20,2020-03-25
-246,Dade,84,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
-245,Dade,69,Female,No,NaN,Unknown,FL resident,03/25/20,2020-03-25
-756,Palm Beach,74,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
-603,Lake,74,Female,Yes,EUROPE,Yes,FL resident,03/25/20,2020-03-25
-757,Palm Beach,81,Male,No,NaN,Unknown,FL resident,03/25/20,2020-03-25
-758,Palm Beach,67,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
-578,Hillsborough,68,Female,Yes,EGYPT,No,FL resident,03/25/20,2020-03-25
-44,Broward,79,Female,Unknown,NaN,Yes,FL resident,03/25/20,2020-03-25
-206,Clay,77,Female,No,NaN,No,FL resident,03/25/20,2020-03-25
-45,Broward,78,Female,No,NaN,Yes,FL resident,03/25/20,2020-03-25
-41,Broward,97,Male,Unknown,NaN,Unknown,FL resident,03/25/20,2020-03-25
-949,Santa Rosa,81,Female,Yes,FL; IN,No,FL resident,03/26/20,2020-03-26
-705,Monroe,55,Male,No,NaN,Yes,FL resident,03/26/20,2020-03-26
-908,Pinellas,64,Male,No,NaN,Yes,FL resident,03/26/20,2020-03-26
-715,Orange,71,Male,Yes,PHILIPPINES,Unknown,FL resident,03/26/20,2020-03-26
-714,Orange,87,Female,No,NaN,Yes,FL resident,03/26/20,2020-03-26
-909,Pinellas,82,Male,Yes,FL; OH,Yes,FL resident,03/26/20,2020-03-26
-1041,Volusia,65,Male,No,NaN,No,FL resident,03/26/20,2020-03-26
-46,Broward,65,Male,Unknown,NaN,Unknown,FL resident,03/26/20,2020-03-26
-910,Pinellas,78,Female,Yes,DC; FL,Yes,FL resident,03/26/20,2020-03-26
-911,Pinellas,76,Female,No,NaN,Yes,FL resident,03/26/20,2020-03-26
-251,Dade,77,Male,No,NaN,Yes,FL resident,03/26/20,2020-03-26
-250,Dade,71,Male,No,NaN,No,FL resident,03/26/20,2020-03-26
-538,Duval,91,Female,No,NaN,Yes,FL resident,03/26/20,2020-03-26
-47,Broward,94,Female,Unknown,NaN,Unknown,FL resident,03/26/20,2020-03-26
-539,Duval,87,Female,No,NaN,Yes,FL resident,03/26/20,2020-03-26
-252,Dade,68,Female,No,NaN,Yes,FL resident,03/26/20,2020-03-26
-579,Hillsborough,71,Female,No,NaN,No,FL resident,03/26/20,2020-03-26
-999,St. Lucie,95,Female,No,NaN,No,FL resident,03/26/20,2020-03-26
-560,Flagler,77,Male,Yes,NJ,Yes,FL resident,03/26/20,2020-03-26
-618,Lee,94,Male,No,NaN,No,FL resident,03/26/20,2020-03-26
-761,Palm Beach,90,Female,No,NaN,Yes,FL resident,03/26/20,2020-03-26
-548,Escambia,73,Female,Yes,EGYPT,Unknown,FL resident,03/26/20,2020-03-26
-769,Palm Beach,89,Male,No,NaN,No,FL resident,03/27/20,2020-03-27
-768,Palm Beach,84,Female,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-767,Palm Beach,72,Female,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-766,Palm Beach,81,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-765,Palm Beach,84,Female,Unknown,NaN,Yes,FL resident,03/27/20,2020-03-27
-764,Palm Beach,85,Male,Unknown,NaN,No,FL resident,03/27/20,2020-03-27
-716,Orange,80,Female,No,NaN,No,FL resident,03/27/20,2020-03-27
-762,Palm Beach,89,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-216,Collier,94,Female,Yes,VFL; PUERTO RICO; U.S. IFL; PUERTO RICO; U.S. RFL; PUERTO RICO; U.S. GFL; PUERTO RICO; U.S. IFL; PUERTO RICO; U.S. NFL; PUERTO RICO; U.S.  FL; PUERTO RICO; U.S. IFL; PUERTO RICO; U.S. SFL; PUERTO RICO; U.S. LFL; PUERTO RICO; U.S. AFL; PUERTO RICO; U.S. NFL; PUERTO RICO; U.S. DFL; PUERTO RICO; U.S. S,No,FL resident,03/27/20,2020-03-27
-254,Dade,72,Male,No,NaN,Unknown,FL resident,03/27/20,2020-03-27
-255,Dade,79,Male,Unknown,NaN,Unknown,FL resident,03/27/20,2020-03-27
-256,Dade,75,Female,No,NaN,No,FL resident,03/27/20,2020-03-27
-257,Dade,76,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-258,Dade,49,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-259,Dade,75,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-260,Dade,80,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-261,Dade,66,Male,No,NaN,Unknown,FL resident,03/27/20,2020-03-27
-194,Citrus,87,Male,No,NaN,No,FL resident,03/27/20,2020-03-27
-262,Dade,85,Male,Yes,FL; SPAIN,Yes,FL resident,03/27/20,2020-03-27
-774,Palm Beach,74,Female,Yes,FL; NY,Yes,FL resident,03/27/20,2020-03-27
-773,Palm Beach,83,Female,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-772,Palm Beach,41,Male,Unknown,NaN,Yes,FL resident,03/27/20,2020-03-27
-253,Dade,71,Male,Yes,ECUADOR; FL,Yes,FL resident,03/27/20,2020-03-27
-763,Palm Beach,92,Male,No,NaN,No,FL resident,03/27/20,2020-03-27
-771,Palm Beach,39,Female,Unknown,NaN,Unknown,FL resident,03/27/20,2020-03-27
-540,Duval,87,Female,Unknown,NaN,Yes,FL resident,03/27/20,2020-03-27
-541,Duval,80,Male,Unknown,NaN,Unknown,FL resident,03/27/20,2020-03-27
-54,Broward,83,Male,Yes,CO; FL,Yes,FL resident,03/27/20,2020-03-27
-1000,St. Lucie,59,Male,No,NaN,No,FL resident,03/27/20,2020-03-27
-694,Marion,88,Male,Yes,GERMANY,Unknown,FL resident,03/27/20,2020-03-27
-912,Pinellas,75,Male,Yes,NY,No,FL resident,03/27/20,2020-03-27
-996,St. Johns,56,Male,Yes,LA,Yes,FL resident,03/27/20,2020-03-27
-620,Lee,77,Male,Yes,FL; NY,Yes,FL resident,03/27/20,2020-03-27
-959,Sarasota,74,Female,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-770,Palm Beach,84,Female,No,NaN,Unknown,FL resident,03/27/20,2020-03-27
-619,Lee,65,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-53,Broward,64,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-542,Duval,74,Female,Unknown,NaN,No,FL resident,03/27/20,2020-03-27
-9,Brevard,74,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-706,Okaloosa,87,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-49,Broward,39,Male,Yes,FL; IL,Unknown,FL resident,03/27/20,2020-03-27
-48,Broward,74,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-50,Broward,67,Male,Yes,CHINA; NY,Yes,FL resident,03/27/20,2020-03-27
-51,Broward,94,Female,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-52,Broward,80,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-526,Desoto,91,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
-58,Broward,68,Male,Unknown,NaN,Unknown,FL resident,03/28/20,2020-03-28
-57,Broward,34,Male,No,NaN,Unknown,FL resident,03/28/20,2020-03-28
-56,Broward,68,Female,Unknown,NaN,Unknown,FL resident,03/28/20,2020-03-28
-621,Lee,62,Female,No,NaN,Yes,FL resident,03/28/20,2020-03-28
-55,Broward,63,Female,No,NaN,Yes,FL resident,03/28/20,2020-03-28
-263,Dade,74,Female,Unknown,NaN,Yes,FL resident,03/28/20,2020-03-28
-264,Dade,49,Male,Unknown,NaN,Yes,FL resident,03/28/20,2020-03-28
-265,Dade,81,Male,No,NaN,Yes,FL resident,03/28/20,2020-03-28
-59,Broward,62,Male,Unknown,NaN,Unknown,FL resident,03/28/20,2020-03-28
-913,Pinellas,58,Male,No,NaN,No,FL resident,03/28/20,2020-03-28
-267,Dade,101,Female,Unknown,NaN,Yes,FL resident,03/28/20,2020-03-28
-268,Dade,79,Male,No,NaN,Unknown,FL resident,03/28/20,2020-03-28
-269,Dade,74,Male,No,NaN,Unknown,FL resident,03/28/20,2020-03-28
-270,Dade,71,Male,No,NaN,Yes,FL resident,03/28/20,2020-03-28
-783,Palm Beach,76,Female,No,NaN,No,FL resident,03/28/20,2020-03-28
-782,Palm Beach,75,Female,No,NaN,Yes,FL resident,03/28/20,2020-03-28
-781,Palm Beach,77,Female,No,NaN,Unknown,FL resident,03/28/20,2020-03-28
-780,Palm Beach,88,Female,Unknown,NaN,Unknown,FL resident,03/28/20,2020-03-28
-779,Palm Beach,88,Male,No,NaN,Unknown,FL resident,03/28/20,2020-03-28
-778,Palm Beach,64,Female,Unknown,NaN,Yes,FL resident,03/28/20,2020-03-28
-777,Palm Beach,59,Female,No,NaN,No,FL resident,03/28/20,2020-03-28
-776,Palm Beach,88,Male,Unknown,NaN,Unknown,FL resident,03/28/20,2020-03-28
-775,Palm Beach,76,Male,No,NaN,No,FL resident,03/28/20,2020-03-28
-604,Lake,60,Female,Yes,TN,Yes,FL resident,03/28/20,2020-03-28
-266,Dade,71,Male,Unknown,NaN,Yes,FL resident,03/28/20,2020-03-28
-784,Palm Beach,80,Male,Yes,NY,No,FL resident,03/28/20,2020-03-28
-181,Charlotte,77,Male,Unknown,NaN,Yes,FL resident,03/28/20,2020-03-28
-1021,Sumter,83,Female,No,NaN,No,FL resident,03/28/20,2020-03-28
-960,Sarasota,28,Male,Yes,FL; IL,No,FL resident,03/28/20,2020-03-28
-717,Orange,81,Male,No,NaN,Yes,FL resident,03/28/20,2020-03-28
-180,Charlotte,78,Female,Yes,IL,Yes,FL resident,03/28/20,2020-03-28
-179,Charlotte,93,Female,No,NaN,Yes,FL resident,03/28/20,2020-03-28
-656,Manatee,57,Male,No,NaN,No,FL resident,03/28/20,2020-03-28
-741,Osceola,55,Male,No,NaN,No,FL resident,03/28/20,2020-03-28
-1001,St. Lucie,31,Female,No,NaN,No,FL resident,03/28/20,2020-03-28
-740,Osceola,91,Male,Yes,ECUADOR,No,FL resident,03/28/20,2020-03-28
-208,Clay,92,Female,No,NaN,Yes,FL resident,03/29/20,2020-03-29
-793,Palm Beach,87,Male,Unknown,NaN,Yes,FL resident,03/29/20,2020-03-29
-788,Palm Beach,77,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
-657,Manatee,81,Male,No,NaN,No,FL resident,03/29/20,2020-03-29
-787,Palm Beach,75,Male,No,NaN,Yes,FL resident,03/29/20,2020-03-29
-785,Palm Beach,63,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
-794,Palm Beach,79,Female,No,NaN,No,FL resident,03/29/20,2020-03-29
-271,Dade,77,Male,Yes,FL; NY,Unknown,FL resident,03/29/20,2020-03-29
-273,Dade,73,Female,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
-795,Palm Beach,85,Male,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
-274,Dade,62,Male,Yes,FL; NY,Yes,FL resident,03/29/20,2020-03-29
-275,Dade,94,Female,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
-276,Dade,89,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
-277,Dade,74,Male,No,NaN,Yes,FL resident,03/29/20,2020-03-29
-278,Dade,88,Female,No,NaN,Yes,FL resident,03/29/20,2020-03-29
-279,Dade,91,Female,No,NaN,No,FL resident,03/29/20,2020-03-29
-280,Dade,48,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
-281,Dade,86,Male,No,NaN,No,FL resident,03/29/20,2020-03-29
-282,Dade,82,Female,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
-283,Dade,60,Male,No,NaN,No,FL resident,03/29/20,2020-03-29
-284,Dade,70,Female,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
-786,Palm Beach,82,Male,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
-792,Palm Beach,93,Female,No,NaN,Yes,FL resident,03/29/20,2020-03-29
-272,Dade,86,Male,No,NaN,No,FL resident,03/29/20,2020-03-29
-60,Broward,55,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
-61,Broward,65,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
-543,Duval,83,Male,Unknown,NaN,No,FL resident,03/29/20,2020-03-29
-796,Palm Beach,42,Male,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
-7,Bradford,78,Female,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
-605,Lake,84,Male,Yes,ECUADOR; FL,Yes,FL resident,03/29/20,2020-03-29
-606,Lake,70,Female,No,NaN,No,FL resident,03/29/20,2020-03-29
-1042,Volusia,79,Male,Yes,ARUBA; CURACAO; FL,No,FL resident,03/29/20,2020-03-29
-790,Palm Beach,77,Male,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
-561,Glades,89,Male,No,NaN,Yes,FL resident,03/29/20,2020-03-29
-568,Highlands,82,Male,No,NaN,Yes,FL resident,03/29/20,2020-03-29
-580,Hillsborough,62,Male,No,NaN,Yes,FL resident,03/29/20,2020-03-29
-581,Hillsborough,77,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
-931,Polk,73,Female,No,NaN,Yes,FL resident,03/29/20,2020-03-29
-961,Sarasota,82,Male,No,NaN,Yes,FL resident,03/29/20,2020-03-29
-62,Broward,82,Female,No,NaN,Yes,FL resident,03/29/20,2020-03-29
-789,Palm Beach,89,Male,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
-718,Orange,88,Female,No,NaN,Yes,FL resident,03/29/20,2020-03-29
-217,Collier,61,Male,Yes,HAITI; MEXICO,Yes,FL resident,03/29/20,2020-03-29
-719,Orange,87,Male,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
-791,Palm Beach,74,Male,Unknown,NaN,No,FL resident,03/29/20,2020-03-29
-182,Charlotte,92,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
-915,Pinellas,40,Female,No,NaN,Yes,FL resident,03/30/20,2020-03-30
-932,Polk,49,Female,No,NaN,No,FL resident,03/30/20,2020-03-30
-720,Orange,68,Male,No,NaN,Unknown,FL resident,03/30/20,2020-03-30
-721,Orange,88,Male,No,NaN,Unknown,FL resident,03/30/20,2020-03-30
-291,Dade,94,Female,No,NaN,No,FL resident,03/30/20,2020-03-30
-962,Sarasota,80,Female,No,NaN,No,FL resident,03/30/20,2020-03-30
-914,Pinellas,56,Female,No,NaN,Yes,FL resident,03/30/20,2020-03-30
-293,Dade,49,Male,No,NaN,No,FL resident,03/30/20,2020-03-30
-292,Dade,89,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
-290,Dade,89,Male,Yes,NY,Unknown,FL resident,03/30/20,2020-03-30
-1023,Sumter,65,Female,No,NaN,Yes,FL resident,03/30/20,2020-03-30
-288,Dade,86,Male,No,NaN,No,FL resident,03/30/20,2020-03-30
-1022,Sumter,83,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
-797,Palm Beach,81,Male,No,NaN,No,FL resident,03/30/20,2020-03-30
-798,Palm Beach,94,Male,No,NaN,No,FL resident,03/30/20,2020-03-30
-799,Palm Beach,79,Female,No,NaN,Yes,FL resident,03/30/20,2020-03-30
-624,Lee,83,Male,Unknown,NaN,No,FL resident,03/30/20,2020-03-30
-623,Lee,71,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
-622,Lee,71,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
-220,Collier,79,Female,Unknown,NaN,Yes,FL resident,03/30/20,2020-03-30
-219,Collier,73,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
-218,Collier,81,Male,Yes,VFL; PUERTO RICO; U.S. IFL; PUERTO RICO; U.S. RFL; PUERTO RICO; U.S. GFL; PUERTO RICO; U.S. IFL; PUERTO RICO; U.S. NFL; PUERTO RICO; U.S.  FL; PUERTO RICO; U.S. IFL; PUERTO RICO; U.S. SFL; PUERTO RICO; U.S. LFL; PUERTO RICO; U.S. AFL; PUERTO RICO; U.S. NFL; PUERTO RICO; U.S. DFL; PUERTO RICO; U.S. S,Unknown,FL resident,03/30/20,2020-03-30
-800,Palm Beach,78,Male,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
-582,Hillsborough,93,Female,Unknown,NaN,Yes,FL resident,03/30/20,2020-03-30
-289,Dade,84,Female,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
-583,Hillsborough,92,Female,No,NaN,No,FL resident,03/30/20,2020-03-30
-802,Palm Beach,91,Male,No,NaN,Unknown,FL resident,03/30/20,2020-03-30
-67,Broward,67,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
-66,Broward,77,Male,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
-65,Broward,49,Female,No,NaN,Unknown,FL resident,03/30/20,2020-03-30
-64,Broward,75,Female,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
-63,Broward,56,Male,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
-1002,St. Lucie,86,Male,No,NaN,No,FL resident,03/30/20,2020-03-30
-658,Manatee,77,Male,No,NaN,No,FL resident,03/30/20,2020-03-30
-285,Dade,82,Male,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
-286,Dade,65,Male,No,NaN,Unknown,FL resident,03/30/20,2020-03-30
-287,Dade,90,Female,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
-801,Palm Beach,90,Female,No,NaN,Unknown,FL resident,03/30/20,2020-03-30
-68,Broward,57,Male,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
-803,Palm Beach,87,Female,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
-804,Palm Beach,71,Male,No,NaN,No,FL resident,03/31/20,2020-03-31
-805,Palm Beach,87,Male,No,NaN,Yes,FL resident,03/31/20,2020-03-31
-298,Dade,76,Male,Yes,SPAIN,Unknown,FL resident,03/31/20,2020-03-31
-308,Dade,92,Female,Yes,NJ,Unknown,FL resident,03/31/20,2020-03-31
-584,Hillsborough,74,Male,Unknown,NaN,Yes,FL resident,03/31/20,2020-03-31
-564,Hernando,75,Male,Yes,SPAIN,Yes,FL resident,03/31/20,2020-03-31
-625,Lee,96,Female,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
-69,Broward,72,Female,No,NaN,Yes,FL resident,03/31/20,2020-03-31
-544,Duval,50,Male,Unknown,NaN,Yes,FL resident,03/31/20,2020-03-31
-1024,Sumter,76,Male,No,NaN,No,FL resident,03/31/20,2020-03-31
-659,Manatee,69,Male,No,NaN,No,FL resident,03/31/20,2020-03-31
-309,Dade,55,Female,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
-722,Orange,62,Female,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
-71,Broward,30,Female,Unknown,NaN,Unknown,FL resident,03/31/20,2020-03-31
-294,Dade,68,Female,No,NaN,Yes,FL resident,03/31/20,2020-03-31
-70,Broward,76,Male,Unknown,NaN,Yes,FL resident,03/31/20,2020-03-31
-296,Dade,83,Male,No,NaN,Yes,FL resident,03/31/20,2020-03-31
-307,Dade,57,Male,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
-306,Dade,80,Male,Unknown,NaN,No,FL resident,03/31/20,2020-03-31
-305,Dade,70,Female,Unknown,NaN,Unknown,FL resident,03/31/20,2020-03-31
-304,Dade,80,Male,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
-303,Dade,77,Female,No,NaN,No,FL resident,03/31/20,2020-03-31
-302,Dade,62,Male,No,NaN,No,FL resident,03/31/20,2020-03-31
-295,Dade,66,Female,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
-301,Dade,66,Female,No,NaN,Yes,FL resident,03/31/20,2020-03-31
-300,Dade,56,Male,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
-299,Dade,72,Female,Unknown,NaN,Yes,FL resident,03/31/20,2020-03-31
-297,Dade,65,Male,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
-807,Palm Beach,88,Male,Yes,AUSTRALIA; FL,Yes,FL resident,04/01/20,2020-04-01
-607,Lake,86,Male,Yes,FL; FRANCE; PUERTO RICO,Yes,FL resident,04/01/20,2020-04-01
-808,Palm Beach,87,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
-810,Palm Beach,95,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-806,Palm Beach,82,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-809,Palm Beach,63,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
-661,Manatee,79,Female,No,NaN,No,FL resident,04/01/20,2020-04-01
-627,Lee,78,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
-660,Manatee,55,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-695,Marion,58,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
-811,Palm Beach,76,Female,No,NaN,Yes,FL resident,04/01/20,2020-04-01
-742,Osceola,70,Female,No,NaN,Yes,FL resident,04/01/20,2020-04-01
-743,Osceola,66,Female,No,NaN,No,FL resident,04/01/20,2020-04-01
-626,Lee,85,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
-812,Palm Beach,76,Female,No,NaN,Yes,FL resident,04/01/20,2020-04-01
-1055,Wakulla,65,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
-324,Dade,74,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-323,Dade,80,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
-322,Dade,44,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-321,Dade,69,Female,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
-320,Dade,47,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
-319,Dade,67,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-318,Dade,75,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-317,Dade,78,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
-316,Dade,86,Female,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
-315,Dade,78,Female,Unknown,NaN,Yes,FL resident,04/01/20,2020-04-01
-314,Dade,81,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-313,Dade,56,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
-312,Dade,93,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
-311,Dade,49,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-310,Dade,83,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-916,Pinellas,85,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
-947,Putnam,54,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
-1025,Sumter,69,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
-963,Sarasota,86,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
-1003,St. Lucie,65,Female,Yes,NY,No,FL resident,04/01/20,2020-04-01
-964,Sarasota,99,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-965,Sarasota,85,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-966,Sarasota,82,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
-967,Sarasota,85,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
-325,Dade,71,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-326,Dade,92,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-986,Seminole,91,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
-72,Broward,39,Male,Yes,BAHAMAS,Yes,FL resident,04/01/20,2020-04-01
-74,Broward,74,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
-75,Broward,53,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
-76,Broward,72,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-77,Broward,57,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
-78,Broward,49,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
-79,Broward,80,Female,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
-1043,Volusia,78,Female,Yes,ECUADOR,Yes,FL resident,04/01/20,2020-04-01
-10,Brevard,94,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
-73,Broward,77,Female,No,NaN,No,FL resident,04/01/20,2020-04-01
-81,Broward,65,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
-80,Broward,73,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
-82,Broward,82,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-327,Dade,88,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-328,Dade,87,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-329,Dade,90,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-330,Dade,78,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-331,Dade,58,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-826,Palm Beach,83,Female,No,NaN,No,FL resident,04/02/20,2020-04-02
-825,Palm Beach,82,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-565,Hernando,46,Female,Yes,IL,Yes,FL resident,04/02/20,2020-04-02
-332,Dade,55,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-968,Sarasota,88,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-1044,Volusia,83,Male,No,NaN,No,FL resident,04/02/20,2020-04-02
-5,Bay,72,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-987,Seminole,68,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-630,Lee,68,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-629,Lee,80,Female,Yes,FL; NJ,Yes,FL resident,04/02/20,2020-04-02
-934,Polk,66,Female,Yes,FL; GA,Yes,FL resident,04/02/20,2020-04-02
-595,Indian River,88,Female,No,NaN,No,FL resident,04/02/20,2020-04-02
-933,Polk,68,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-183,Charlotte,83,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-545,Duval,89,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-195,Citrus,74,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-628,Lee,85,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-723,Orange,60,Female,Unknown,NaN,No,FL resident,04/02/20,2020-04-02
-724,Orange,80,Male,Unknown,NaN,No,FL resident,04/02/20,2020-04-02
-744,Osceola,69,Male,No,NaN,No,FL resident,04/02/20,2020-04-02
-585,Hillsborough,74,Male,Yes,FL; MEXICO,Unknown,FL resident,04/02/20,2020-04-02
-333,Dade,87,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-824,Palm Beach,80,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-335,Dade,70,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-86,Broward,85,Female,Unknown,NaN,Unknown,FL resident,04/02/20,2020-04-02
-85,Broward,80,Female,Yes,NJ,Yes,FL resident,04/02/20,2020-04-02
-84,Broward,90,Female,Unknown,NaN,Unknown,FL resident,04/02/20,2020-04-02
-83,Broward,44,Male,Unknown,NaN,No,FL resident,04/02/20,2020-04-02
-813,Palm Beach,88,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-814,Palm Beach,92,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-815,Palm Beach,78,Male,Unknown,NaN,Yes,FL resident,04/02/20,2020-04-02
-816,Palm Beach,71,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-817,Palm Beach,94,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-818,Palm Beach,77,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-819,Palm Beach,90,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-820,Palm Beach,70,Female,No,NaN,No,FL resident,04/02/20,2020-04-02
-334,Dade,72,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-342,Dade,52,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-343,Dade,50,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-339,Dade,99,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-338,Dade,81,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-337,Dade,55,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-341,Dade,80,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
-340,Dade,87,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-823,Palm Beach,79,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-822,Palm Beach,72,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-821,Palm Beach,45,Male,No,NaN,No,FL resident,04/02/20,2020-04-02
-336,Dade,79,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
-550,Escambia,75,Female,No,NaN,No,FL resident,04/03/20,2020-04-03
-87,Broward,85,Female,Unknown,NaN,No,FL resident,04/03/20,2020-04-03
-546,Duval,68,Female,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
-184,Charlotte,86,Male,No,NaN,No,FL resident,04/03/20,2020-04-03
-88,Broward,69,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-549,Escambia,71,Male,No,NaN,No,FL resident,04/03/20,2020-04-03
-662,Manatee,75,Female,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-1030,Suwannee,78,Female,Unknown,NaN,Yes,FL resident,04/03/20,2020-04-03
-1029,Suwannee,80,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-12,Brevard,79,Male,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-11,Brevard,76,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-631,Lee,71,Female,No,NaN,No,FL resident,04/03/20,2020-04-03
-725,Orange,60,Male,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
-969,Sarasota,69,Male,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-6,Bay,93,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-527,Desoto,77,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-935,Polk,84,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-988,Seminole,85,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-726,Orange,45,Female,Yes,FL; MI,Yes,FL resident,04/03/20,2020-04-03
-832,Palm Beach,88,Female,Unknown,NaN,Yes,FL resident,04/03/20,2020-04-03
-349,Dade,55,Female,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
-350,Dade,42,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-351,Dade,70,Male,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-352,Dade,84,Male,No,NaN,No,FL resident,04/03/20,2020-04-03
-346,Dade,33,Female,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
-353,Dade,97,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-354,Dade,87,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-345,Dade,58,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-344,Dade,64,Male,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-831,Palm Beach,68,Female,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-95,Broward,72,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-833,Palm Beach,92,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-834,Palm Beach,85,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-835,Palm Beach,87,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-836,Palm Beach,84,Male,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-837,Palm Beach,87,Female,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-838,Palm Beach,90,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-827,Palm Beach,96,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-632,Lee,100,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-828,Palm Beach,74,Female,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-829,Palm Beach,99,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-94,Broward,69,Male,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-93,Broward,60,Male,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
-348,Dade,68,Female,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
-92,Broward,93,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-356,Dade,86,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-91,Broward,56,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
-90,Broward,97,Male,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
-839,Palm Beach,72,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-355,Dade,56,Male,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
-89,Broward,72,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
-830,Palm Beach,81,Male,Unknown,NaN,No,FL resident,04/03/20,2020-04-03
-347,Dade,89,Female,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
-97,Broward,70,Male,Yes,MEXICO,Yes,FL resident,04/04/20,2020-04-04
-1026,Sumter,89,Female,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-586,Hillsborough,73,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
-102,Broward,75,Male,Unknown,NaN,No,FL resident,04/04/20,2020-04-04
-101,Broward,70,Female,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-100,Broward,81,Male,No,NaN,No,FL resident,04/04/20,2020-04-04
-99,Broward,88,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
-98,Broward,90,Male,No,NaN,No,FL resident,04/04/20,2020-04-04
-1004,St. Lucie,76,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-96,Broward,89,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-364,Dade,61,Female,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-842,Palm Beach,75,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-196,Citrus,84,Male,Yes,CARIBBEAN,Yes,FL resident,04/04/20,2020-04-04
-360,Dade,63,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-363,Dade,89,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-359,Dade,76,Female,Unknown,NaN,Unknown,FL resident,04/04/20,2020-04-04
-358,Dade,68,Female,Unknown,NaN,Yes,FL resident,04/04/20,2020-04-04
-357,Dade,78,Male,Unknown,NaN,Unknown,FL resident,04/04/20,2020-04-04
-841,Palm Beach,92,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
-375,Dade,31,Male,Unknown,NaN,Unknown,FL resident,04/04/20,2020-04-04
-374,Dade,79,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
-950,Santa Rosa,84,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-362,Dade,40,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-372,Dade,58,Male,Unknown,NaN,Unknown,FL resident,04/04/20,2020-04-04
-373,Dade,55,Female,Unknown,NaN,Unknown,FL resident,04/04/20,2020-04-04
-371,Dade,84,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
-365,Dade,67,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-366,Dade,76,Male,Unknown,NaN,Unknown,FL resident,04/04/20,2020-04-04
-367,Dade,52,Male,No,NaN,No,FL resident,04/04/20,2020-04-04
-368,Dade,49,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
-663,Manatee,75,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-840,Palm Beach,75,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
-664,Manatee,80,Female,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-665,Manatee,75,Female,No,NaN,No,FL resident,04/04/20,2020-04-04
-369,Dade,90,Female,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
-696,Marion,49,Female,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
-698,Martin,82,Male,No,NaN,No,FL resident,04/04/20,2020-04-04
-370,Dade,78,Female,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
-361,Dade,89,Female,No,NaN,Yes,FL resident,04/04/20,2020-04-04
-221,Collier,99,Female,No,NaN,Yes,FL resident,04/05/20,2020-04-05
-569,Highlands,83,Male,Unknown,NaN,Yes,FL resident,04/05/20,2020-04-05
-222,Collier,83,Female,Yes,CARIBBEAN,Yes,FL resident,04/05/20,2020-04-05
-846,Palm Beach,79,Female,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
-383,Dade,69,Male,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
-382,Dade,83,Female,No,NaN,No,FL resident,04/05/20,2020-04-05
-381,Dade,63,Male,No,NaN,No,FL resident,04/05/20,2020-04-05
-380,Dade,72,Male,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
-379,Dade,67,Male,No,NaN,No,FL resident,04/05/20,2020-04-05
-378,Dade,87,Male,No,NaN,Unknown,FL resident,04/05/20,2020-04-05
-376,Dade,68,Female,No,NaN,No,FL resident,04/05/20,2020-04-05
-1033,Suwannee,74,Male,No,NaN,Yes,FL resident,04/05/20,2020-04-05
-384,Dade,61,Female,No,NaN,Yes,FL resident,04/05/20,2020-04-05
-377,Dade,68,Female,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
-600,Jefferson,93,Female,No,NaN,Yes,FL resident,04/05/20,2020-04-05
-844,Palm Beach,89,Female,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
-970,Sarasota,88,Female,No,NaN,No,FL resident,04/05/20,2020-04-05
-1005,St. Lucie,82,Male,No,NaN,Yes,FL resident,04/05/20,2020-04-05
-1006,St. Lucie,82,Male,No,NaN,No,FL resident,04/05/20,2020-04-05
-707,Okaloosa,88,Female,No,NaN,No,FL resident,04/05/20,2020-04-05
-936,Polk,86,Male,Unknown,NaN,No,FL resident,04/05/20,2020-04-05
-1031,Suwannee,67,Male,No,NaN,Yes,FL resident,04/05/20,2020-04-05
-1032,Suwannee,74,Male,No,NaN,Yes,FL resident,04/05/20,2020-04-05
-843,Palm Beach,68,Male,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
-105,Broward,80,Male,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
-104,Broward,88,Female,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
-185,Charlotte,85,Male,No,NaN,Yes,FL resident,04/05/20,2020-04-05
-106,Broward,66,Female,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
-547,Duval,67,Male,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
-103,Broward,70,Male,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
-727,Orange,72,Female,No,NaN,Yes,FL resident,04/05/20,2020-04-05
-845,Palm Beach,61,Male,No,NaN,Yes,FL resident,04/05/20,2020-04-05
-972,Sarasota,75,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
-633,Lee,62,Female,No,NaN,No,FL resident,04/06/20,2020-04-06
-971,Sarasota,85,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-666,Manatee,78,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
-699,Martin,77,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-973,Sarasota,82,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-1007,St. Lucie,74,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-851,Palm Beach,89,Male,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
-951,Santa Rosa,65,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-729,Orange,93,Male,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
-728,Orange,60,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-848,Palm Beach,75,Male,Unknown,NaN,Yes,FL resident,04/06/20,2020-04-06
-849,Palm Beach,74,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
-850,Palm Beach,75,Male,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
-847,Palm Beach,84,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-974,Sarasota,90,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
-528,Desoto,65,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-389,Dade,70,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
-4,Baker,71,Female,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
-395,Dade,73,Female,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
-108,Broward,86,Male,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
-393,Dade,78,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-392,Dade,80,Male,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
-553,Escambia,81,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-552,Escambia,91,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-551,Escambia,78,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-391,Dade,89,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-390,Dade,86,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
-388,Dade,89,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
-387,Dade,63,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
-386,Dade,90,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-385,Dade,82,Male,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
-209,Clay,76,Male,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
-396,Dade,72,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-397,Dade,82,Female,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
-394,Dade,82,Male,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
-399,Dade,52,Male,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
-186,Charlotte,78,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
-398,Dade,68,Male,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
-107,Broward,56,Male,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
-587,Hillsborough,78,Male,Unknown,NaN,Yes,FL resident,04/06/20,2020-04-06
-402,Dade,50,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-109,Broward,88,Male,Unknown,NaN,Yes,FL resident,04/07/20,2020-04-07
-400,Dade,76,Male,No,NaN,No,FL resident,04/07/20,2020-04-07
-110,Broward,88,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-975,Sarasota,94,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-111,Broward,61,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-112,Broward,53,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-113,Broward,80,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-114,Broward,76,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-115,Broward,67,Male,Unknown,NaN,No,FL resident,04/07/20,2020-04-07
-116,Broward,64,Male,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-411,Dade,56,Male,Yes,IL,Yes,FL resident,04/07/20,2020-04-07
-997,St. Johns,79,Male,Yes,PA,Yes,FL resident,04/07/20,2020-04-07
-409,Dade,91,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-408,Dade,82,Male,Unknown,NaN,Yes,FL resident,04/07/20,2020-04-07
-407,Dade,72,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-406,Dade,77,Male,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-405,Dade,48,Female,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-667,Manatee,82,Male,No,NaN,No,FL resident,04/07/20,2020-04-07
-668,Manatee,81,Female,No,NaN,No,FL resident,04/07/20,2020-04-07
-404,Dade,74,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-403,Dade,95,Male,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-401,Dade,91,Male,No,NaN,No,FL resident,04/07/20,2020-04-07
-410,Dade,85,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-730,Orange,85,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-857,Palm Beach,69,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-187,Charlotte,79,Female,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-210,Clay,75,Male,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-198,Citrus,88,Male,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-197,Citrus,73,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-852,Palm Beach,80,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-853,Palm Beach,89,Male,No,NaN,Unknown,FL resident,04/07/20,2020-04-07
-854,Palm Beach,67,Female,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-588,Hillsborough,55,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-858,Palm Beach,64,Female,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-8,Bradford,85,Female,No,NaN,Unknown,FL resident,04/07/20,2020-04-07
-570,Highlands,81,Male,No,NaN,No,FL resident,04/07/20,2020-04-07
-856,Palm Beach,93,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
-855,Palm Beach,71,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
-416,Dade,60,Male,Yes,VA,Yes,FL resident,04/08/20,2020-04-08
-412,Dade,88,Male,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
-414,Dade,73,Male,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
-413,Dade,90,Male,Unknown,NaN,Unknown,FL resident,04/08/20,2020-04-08
-989,Seminole,62,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
-937,Polk,84,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
-415,Dade,84,Female,No,NaN,Yes,FL resident,04/08/20,2020-04-08
-417,Dade,56,Female,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
-211,Clay,91,Female,No,NaN,No,FL resident,04/08/20,2020-04-08
-418,Dade,44,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
-419,Dade,57,Female,No,NaN,No,FL resident,04/08/20,2020-04-08
-1046,Volusia,84,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
-420,Dade,68,Female,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
-421,Dade,92,Male,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
-422,Dade,66,Female,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
-423,Dade,68,Male,No,NaN,No,FL resident,04/08/20,2020-04-08
-424,Dade,91,Female,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
-425,Dade,91,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
-426,Dade,82,Female,Unknown,NaN,Unknown,FL resident,04/08/20,2020-04-08
-700,Martin,81,Female,No,NaN,No,FL resident,04/08/20,2020-04-08
-122,Broward,96,Male,Unknown,NaN,Unknown,FL resident,04/08/20,2020-04-08
-119,Broward,91,Male,Unknown,NaN,Unknown,FL resident,04/08/20,2020-04-08
-1045,Volusia,72,Male,No,NaN,No,FL resident,04/08/20,2020-04-08
-636,Lee,74,Male,No,NaN,No,FL resident,04/08/20,2020-04-08
-635,Lee,94,Female,Yes,FL; NJ,Yes,FL resident,04/08/20,2020-04-08
-634,Lee,86,Male,Yes,NJ,Yes,FL resident,04/08/20,2020-04-08
-117,Broward,89,Male,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
-118,Broward,96,Female,No,NaN,No,FL resident,04/08/20,2020-04-08
-731,Orange,85,Female,No,NaN,No,FL resident,04/08/20,2020-04-08
-120,Broward,66,Male,Yes,NaN,NJ,FL resident,04/08/20,2020-04-08
-121,Broward,87,Female,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
-554,Escambia,69,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
-860,Palm Beach,59,Female,Unknown,NaN,Unknown,FL resident,04/08/20,2020-04-08
-669,Manatee,84,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
-861,Palm Beach,68,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
-862,Palm Beach,96,Male,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
-859,Palm Beach,50,Male,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
-566,Hernando,73,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
-571,Highlands,61,Male,Yes,FL; NJ,Unknown,FL resident,04/08/20,2020-04-08
-863,Palm Beach,88,Female,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
-732,Orange,66,Male,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
-918,Pinellas,80,Male,Yes,NY,Unknown,FL resident,04/09/20,2020-04-09
-434,Dade,76,Male,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
-433,Dade,67,Female,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
-432,Dade,38,Female,No,NaN,No,FL resident,04/09/20,2020-04-09
-431,Dade,94,Female,No,NaN,Unknown,FL resident,04/09/20,2020-04-09
-430,Dade,90,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-429,Dade,67,Male,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
-428,Dade,74,Male,No,NaN,No,FL resident,04/09/20,2020-04-09
-223,Collier,90,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-427,Dade,95,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-867,Palm Beach,74,Male,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
-868,Palm Beach,83,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-952,Santa Rosa,66,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-940,Polk,85,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-939,Polk,85,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-938,Polk,91,Male,No,NaN,Unknown,FL resident,04/09/20,2020-04-09
-865,Palm Beach,82,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-919,Pinellas,79,Male,No,NaN,No,FL resident,04/09/20,2020-04-09
-864,Palm Beach,82,Male,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
-212,Clay,77,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-866,Palm Beach,84,Female,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
-917,Pinellas,74,Male,No,NaN,No,FL resident,04/09/20,2020-04-09
-128,Broward,71,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-637,Lee,70,Male,No,NaN,No,FL resident,04/09/20,2020-04-09
-638,Lee,79,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-990,Seminole,79,Male,No,NaN,Unknown,FL resident,04/09/20,2020-04-09
-670,Manatee,74,Male,No,NaN,No,FL resident,04/09/20,2020-04-09
-671,Manatee,73,Male,No,NaN,No,FL resident,04/09/20,2020-04-09
-648,Leon,62,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-129,Broward,92,Male,No,NaN,Unknown,FL resident,04/09/20,2020-04-09
-701,Martin,79,Female,No,NaN,No,FL resident,04/09/20,2020-04-09
-127,Broward,88,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-126,Broward,61,Male,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
-572,Highlands,59,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-125,Broward,86,Male,No,NaN,Unknown,FL resident,04/09/20,2020-04-09
-124,Broward,55,Female,Unknown,NaN,Yes,FL resident,04/09/20,2020-04-09
-123,Broward,96,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-1008,St. Lucie,92,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-1047,Volusia,71,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
-1009,St. Lucie,80,Female,No,NaN,Yes,FL resident,04/10/20,2020-04-10
-135,Broward,88,Male,Unknown,NaN,Unknown,FL resident,04/10/20,2020-04-10
-439,Dade,75,Male,No,NaN,Unknown,FL resident,04/10/20,2020-04-10
-440,Dade,86,Male,No,NaN,Unknown,FL resident,04/10/20,2020-04-10
-976,Sarasota,83,Male,No,NaN,No,FL resident,04/10/20,2020-04-10
-441,Dade,92,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
-443,Dade,88,Male,No,NaN,No,FL resident,04/10/20,2020-04-10
-224,Collier,85,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
-213,Clay,79,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
-199,Citrus,75,Male,Yes,FL; UNKNOWN,Unknown,FL resident,04/10/20,2020-04-10
-436,Dade,75,Male,Unknown,NaN,Yes,FL resident,04/10/20,2020-04-10
-435,Dade,57,Male,Unknown,NaN,Unknown,FL resident,04/10/20,2020-04-10
-442,Dade,65,Male,Unknown,NaN,Unknown,FL resident,04/10/20,2020-04-10
-589,Hillsborough,64,Female,Yes,NJ,Yes,FL resident,04/10/20,2020-04-10
-437,Dade,81,Female,Yes,NY,Unknown,FL resident,04/10/20,2020-04-10
-134,Broward,91,Female,No,NaN,Yes,FL resident,04/10/20,2020-04-10
-953,Santa Rosa,69,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
-189,Charlotte,90,Male,No,NaN,No,FL resident,04/10/20,2020-04-10
-130,Broward,82,Female,Unknown,NaN,Unknown,FL resident,04/10/20,2020-04-10
-13,Brevard,91,Female,No,NaN,Unknown,FL resident,04/10/20,2020-04-10
-131,Broward,40,Female,Unknown,NaN,Unknown,FL resident,04/10/20,2020-04-10
-132,Broward,58,Male,Unknown,NaN,Unknown,FL resident,04/10/20,2020-04-10
-920,Pinellas,90,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
-133,Broward,72,Female,No,NaN,No,FL resident,04/10/20,2020-04-10
-188,Charlotte,81,Female,No,NaN,No,FL resident,04/10/20,2020-04-10
-870,Palm Beach,73,Male,No,NaN,Unknown,FL resident,04/10/20,2020-04-10
-869,Palm Beach,66,Male,Unknown,NaN,No,FL resident,04/10/20,2020-04-10
-438,Dade,71,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
-608,Lake,81,Female,No,NaN,Yes,FL resident,04/10/20,2020-04-10
-871,Palm Beach,86,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
-903,Pasco,82,Female,No,NaN,No,FL resident,04/10/20,2020-04-10
-673,Manatee,90,Male,No,NaN,No,FL resident,04/11/20,2020-04-11
-1034,Suwannee,77,Female,No,NaN,Yes,FL resident,04/11/20,2020-04-11
-639,Lee,93,Female,No,NaN,No,FL resident,04/11/20,2020-04-11
-597,Indian River,90,Male,No,NaN,Yes,FL resident,04/11/20,2020-04-11
-136,Broward,90,Male,No,NaN,Unknown,FL resident,04/11/20,2020-04-11
-672,Manatee,91,Male,No,NaN,Unknown,FL resident,04/11/20,2020-04-11
-445,Dade,90,Male,No,NaN,No,FL resident,04/11/20,2020-04-11
-675,Manatee,90,Male,No,NaN,Yes,FL resident,04/11/20,2020-04-11
-674,Manatee,81,Female,No,NaN,Unknown,FL resident,04/11/20,2020-04-11
-596,Indian River,83,Male,No,NaN,Yes,FL resident,04/11/20,2020-04-11
-601,Jefferson,89,Male,No,NaN,Yes,FL resident,04/11/20,2020-04-11
-733,Orange,49,Male,No,NaN,Yes,FL resident,04/11/20,2020-04-11
-875,Palm Beach,66,Female,No,NaN,Yes,FL resident,04/11/20,2020-04-11
-874,Palm Beach,93,Female,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
-745,Osceola,72,Female,No,NaN,Yes,FL resident,04/11/20,2020-04-11
-873,Palm Beach,62,Male,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
-872,Palm Beach,92,Male,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
-444,Dade,61,Male,No,NaN,Unknown,FL resident,04/11/20,2020-04-11
-14,Brevard,84,Male,No,NaN,Yes,FL resident,04/11/20,2020-04-11
-454,Dade,85,Female,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
-573,Highlands,62,Female,No,NaN,Unknown,FL resident,04/11/20,2020-04-11
-446,Dade,66,Male,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
-447,Dade,55,Female,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
-452,Dade,80,Female,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
-451,Dade,55,Male,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
-450,Dade,75,Male,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
-449,Dade,72,Male,No,NaN,Unknown,FL resident,04/11/20,2020-04-11
-448,Dade,71,Female,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
-453,Dade,69,Female,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
-1010,St. Lucie,93,Female,No,NaN,Yes,FL resident,04/12/20,2020-04-12
-190,Charlotte,88,Female,Unknown,NaN,No,FL resident,04/12/20,2020-04-12
-921,Pinellas,66,Male,No,NaN,No,FL resident,04/12/20,2020-04-12
-200,Citrus,87,Male,No,NaN,Yes,FL resident,04/12/20,2020-04-12
-922,Pinellas,84,Female,No,NaN,No,FL resident,04/12/20,2020-04-12
-591,Hillsborough,94,Female,Unknown,NaN,No,FL resident,04/12/20,2020-04-12
-590,Hillsborough,66,Male,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
-877,Palm Beach,93,Female,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
-878,Palm Beach,79,Male,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
-876,Palm Beach,79,Female,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
-225,Collier,101,Female,No,NaN,Yes,FL resident,04/12/20,2020-04-12
-1012,St. Lucie,82,Female,Yes,ECUADOR,No,FL resident,04/12/20,2020-04-12
-555,Escambia,85,Male,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
-529,Desoto,60,Male,No,NaN,Yes,FL resident,04/12/20,2020-04-12
-1011,St. Lucie,91,Female,No,NaN,Yes,FL resident,04/12/20,2020-04-12
-879,Palm Beach,97,Female,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
-676,Manatee,49,Female,No,NaN,Yes,FL resident,04/12/20,2020-04-12
-461,Dade,66,Female,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
-144,Broward,73,Female,Unknown,NaN,No,FL resident,04/12/20,2020-04-12
-455,Dade,81,Female,No,NaN,No,FL resident,04/12/20,2020-04-12
-143,Broward,77,Female,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
-458,Dade,98,Female,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
-459,Dade,54,Male,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
-460,Dade,84,Male,No,NaN,Yes,FL resident,04/12/20,2020-04-12
-142,Broward,74,Male,No,NaN,Yes,FL resident,04/12/20,2020-04-12
-141,Broward,96,Female,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
-462,Dade,88,Female,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
-140,Broward,84,Female,No,NaN,No,FL resident,04/12/20,2020-04-12
-139,Broward,66,Male,No,NaN,No,FL resident,04/12/20,2020-04-12
-138,Broward,83,Male,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
-456,Dade,61,Male,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
-977,Sarasota,96,Female,No,NaN,Yes,FL resident,04/12/20,2020-04-12
-137,Broward,66,Male,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
-457,Dade,81,Female,Unknown,NaN,Yes,FL resident,04/12/20,2020-04-12
-145,Broward,86,Female,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
-146,Broward,72,Male,Yes,COLOMBIA; FL,Yes,FL resident,04/12/20,2020-04-12
-978,Sarasota,68,Male,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
-923,Pinellas,84,Male,No,NaN,No,FL resident,04/13/20,2020-04-13
-592,Hillsborough,35,Female,Unknown,NaN,No,FL resident,04/13/20,2020-04-13
-147,Broward,46,Male,No,NaN,No,FL resident,04/13/20,2020-04-13
-941,Polk,90,Male,Unknown,NaN,No,FL resident,04/13/20,2020-04-13
-148,Broward,56,Female,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
-562,Hendry,77,Male,No,NaN,Yes,FL resident,04/13/20,2020-04-13
-880,Palm Beach,71,Female,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
-467,Dade,88,Male,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
-463,Dade,83,Male,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
-472,Dade,47,Male,No,NaN,Yes,FL resident,04/13/20,2020-04-13
-464,Dade,72,Female,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
-465,Dade,80,Male,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
-471,Dade,87,Female,No,NaN,Unknown,FL resident,04/13/20,2020-04-13
-470,Dade,59,Female,No,NaN,No,FL resident,04/13/20,2020-04-13
-469,Dade,89,Female,No,NaN,Unknown,FL resident,04/13/20,2020-04-13
-466,Dade,72,Male,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
-468,Dade,87,Female,No,NaN,Yes,FL resident,04/13/20,2020-04-13
-609,Lake,83,Female,No,NaN,No,FL resident,04/13/20,2020-04-13
-677,Manatee,52,Male,No,NaN,No,FL resident,04/13/20,2020-04-13
-226,Collier,85,Male,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
-151,Broward,51,Male,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
-678,Manatee,73,Male,Unknown,NaN,No,FL resident,04/13/20,2020-04-13
-1037,Suwannee,74,Male,No,NaN,Yes,FL resident,04/13/20,2020-04-13
-152,Broward,72,Male,No,NaN,Unknown,FL resident,04/13/20,2020-04-13
-1035,Suwannee,81,Male,No,NaN,Yes,FL resident,04/13/20,2020-04-13
-150,Broward,91,Male,No,NaN,Yes,FL resident,04/13/20,2020-04-13
-702,Martin,77,Male,No,NaN,Unknown,FL resident,04/13/20,2020-04-13
-979,Sarasota,83,Male,No,NaN,No,FL resident,04/13/20,2020-04-13
-640,Lee,97,Female,No,NaN,Yes,FL resident,04/13/20,2020-04-13
-1036,Suwannee,62,Female,No,NaN,Yes,FL resident,04/13/20,2020-04-13
-149,Broward,71,Female,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
-943,Polk,87,Male,No,NaN,Unknown,FL resident,04/14/20,2020-04-14
-1048,Volusia,73,Female,No,NaN,Yes,FL resident,04/14/20,2020-04-14
-679,Manatee,83,Male,No,NaN,Yes,FL resident,04/14/20,2020-04-14
-476,Dade,74,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-157,Broward,61,Female,Unknown,NaN,Yes,FL resident,04/14/20,2020-04-14
-942,Polk,82,Male,No,NaN,Yes,FL resident,04/14/20,2020-04-14
-1038,Suwannee,79,Male,Unknown,NaN,Yes,FL resident,04/14/20,2020-04-14
-485,Dade,81,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-484,Dade,54,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-477,Dade,58,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-478,Dade,81,Male,No,NaN,Yes,FL resident,04/14/20,2020-04-14
-479,Dade,87,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-480,Dade,69,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-481,Dade,98,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-486,Dade,69,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-156,Broward,66,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-883,Palm Beach,81,Male,No,NaN,Unknown,FL resident,04/14/20,2020-04-14
-882,Palm Beach,43,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-15,Brevard,73,Female,No,NaN,Yes,FL resident,04/14/20,2020-04-14
-155,Broward,91,Female,No,NaN,Unknown,FL resident,04/14/20,2020-04-14
-641,Lee,93,Male,No,NaN,Unknown,FL resident,04/14/20,2020-04-14
-154,Broward,71,Female,Unknown,NaN,Yes,FL resident,04/14/20,2020-04-14
-483,Dade,82,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-642,Lee,61,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-153,Broward,93,Female,No,NaN,Yes,FL resident,04/14/20,2020-04-14
-227,Collier,81,Female,No,NaN,Yes,FL resident,04/14/20,2020-04-14
-884,Palm Beach,85,Female,No,NaN,Unknown,FL resident,04/14/20,2020-04-14
-1013,St. Lucie,71,Female,No,NaN,Yes,FL resident,04/14/20,2020-04-14
-1027,Sumter,89,Male,No,NaN,Yes,FL resident,04/14/20,2020-04-14
-473,Dade,86,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-474,Dade,51,Female,Unknown,NaN,Yes,FL resident,04/14/20,2020-04-14
-475,Dade,60,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
-881,Palm Beach,67,Male,No,NaN,Yes,FL resident,04/14/20,2020-04-14
-482,Dade,89,Male,No,NaN,Unknown,FL resident,04/14/20,2020-04-14
-991,Seminole,76,Female,No,NaN,Yes,FL resident,04/15/20,2020-04-15
-981,Sarasota,89,Male,No,NaN,No,FL resident,04/15/20,2020-04-15
-16,Brevard,77,Female,No,NaN,Yes,FL resident,04/15/20,2020-04-15
-159,Broward,99,Female,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
-158,Broward,33,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
-980,Sarasota,79,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
-1049,Volusia,78,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
-992,Seminole,72,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
-598,Indian River,92,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
-888,Palm Beach,85,Male,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
-489,Dade,87,Male,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
-889,Palm Beach,81,Male,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
-734,Orange,83,Male,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
-887,Palm Beach,83,Female,No,NaN,Yes,FL resident,04/15/20,2020-04-15
-886,Palm Beach,89,Male,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
-885,Palm Beach,90,Male,No,NaN,Unknown,FL resident,04/15/20,2020-04-15
-556,Escambia,75,Female,No,NaN,Unknown,FL resident,04/15/20,2020-04-15
-557,Escambia,95,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
-490,Dade,72,Male,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
-610,Lake,71,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
-487,Dade,93,Female,Unknown,NaN,No,FL resident,04/15/20,2020-04-15
-228,Collier,88,Female,No,NaN,Yes,FL resident,04/15/20,2020-04-15
-488,Dade,86,Female,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
-491,Dade,60,Male,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
-492,Dade,55,Male,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
-493,Dade,69,Female,No,NaN,Unknown,FL resident,04/16/20,2020-04-16
-982,Sarasota,62,Male,No,NaN,Unknown,FL resident,04/16/20,2020-04-16
-687,Manatee,91,Male,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
-160,Broward,72,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-890,Palm Beach,62,Male,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
-993,Seminole,72,Male,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-201,Citrus,81,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-214,Clay,85,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-229,Collier,32,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-161,Broward,73,Male,Yes,HAITI,Unknown,FL resident,04/16/20,2020-04-16
-494,Dade,96,Female,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
-735,Orange,77,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-688,Manatee,84,Male,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-1050,Volusia,94,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-599,Indian River,91,Male,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-593,Hillsborough,57,Male,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-498,Dade,85,Female,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
-1039,Suwannee,63,Male,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-643,Lee,94,Male,No,NaN,Unknown,FL resident,04/16/20,2020-04-16
-924,Pinellas,96,Female,No,NaN,No,FL resident,04/16/20,2020-04-16
-925,Pinellas,92,Female,No,NaN,No,FL resident,04/16/20,2020-04-16
-495,Dade,70,Female,Yes,NY,Yes,FL resident,04/16/20,2020-04-16
-926,Pinellas,75,Male,No,NaN,No,FL resident,04/16/20,2020-04-16
-497,Dade,65,Female,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
-496,Dade,78,Male,No,NaN,Unknown,FL resident,04/16/20,2020-04-16
-680,Manatee,67,Female,No,NaN,No,FL resident,04/16/20,2020-04-16
-681,Manatee,81,Male,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
-682,Manatee,68,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-683,Manatee,66,Female,No,NaN,No,FL resident,04/16/20,2020-04-16
-684,Manatee,94,Female,No,NaN,No,FL resident,04/16/20,2020-04-16
-685,Manatee,58,Male,No,NaN,No,FL resident,04/16/20,2020-04-16
-686,Manatee,75,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
-499,Dade,94,Male,Unknown,NaN,Yes,FL resident,04/17/20,2020-04-17
-500,Dade,82,Female,Unknown,NaN,Unknown,FL resident,04/17/20,2020-04-17
-502,Dade,69,Male,No,NaN,Yes,FL resident,04/17/20,2020-04-17
-162,Broward,54,Male,No,NaN,Unknown,FL resident,04/17/20,2020-04-17
-501,Dade,96,Male,No,NaN,No,FL resident,04/17/20,2020-04-17
-611,Lake,85,Male,No,NaN,No,FL resident,04/17/20,2020-04-17
-927,Pinellas,90,Female,No,NaN,Yes,FL resident,04/17/20,2020-04-17
-944,Polk,82,Female,No,NaN,Yes,FL resident,04/17/20,2020-04-17
-891,Palm Beach,66,Female,Unknown,NaN,Unknown,FL resident,04/17/20,2020-04-17
-892,Palm Beach,89,Female,No,NaN,No,FL resident,04/17/20,2020-04-17
-893,Palm Beach,89,Female,Unknown,NaN,Unknown,FL resident,04/17/20,2020-04-17
-1028,Sumter,78,Female,No,NaN,Yes,FL resident,04/17/20,2020-04-17
-689,Manatee,80,Male,No,NaN,No,FL resident,04/17/20,2020-04-17
-504,Dade,96,Female,Unknown,NaN,Unknown,FL resident,04/18/20,2020-04-18
-563,Hendry,96,Male,No,NaN,Unknown,FL resident,04/18/20,2020-04-18
-558,Escambia,52,Female,No,NaN,Yes,FL resident,04/18/20,2020-04-18
-690,Manatee,80,Female,No,NaN,No,FL resident,04/18/20,2020-04-18
-503,Dade,72,Male,No,NaN,No,FL resident,04/18/20,2020-04-18
-691,Manatee,61,Female,No,NaN,No,FL resident,04/18/20,2020-04-18
-692,Manatee,90,Female,No,NaN,Yes,FL resident,04/18/20,2020-04-18
-506,Dade,96,Male,No,NaN,No,FL resident,04/18/20,2020-04-18
-505,Dade,26,Male,No,NaN,Unknown,FL resident,04/18/20,2020-04-18
-1014,St. Lucie,94,Female,No,NaN,No,FL resident,04/18/20,2020-04-18
-983,Sarasota,93,Female,No,NaN,Yes,FL resident,04/18/20,2020-04-18
-1,Alachua,67,Female,No,NaN,Yes,FL resident,04/18/20,2020-04-18
-894,Palm Beach,91,Male,Unknown,NaN,Unknown,FL resident,04/18/20,2020-04-18
-904,Pasco,85,Male,No,NaN,Yes,FL resident,04/18/20,2020-04-18
-984,Sarasota,81,Male,No,NaN,Yes,FL resident,04/18/20,2020-04-18
-508,Dade,66,Female,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
-511,Dade,74,Male,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
-512,Dade,80,Male,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
-513,Dade,81,Female,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
-164,Broward,60,Male,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
-163,Broward,91,Male,No,NaN,Yes,FL resident,04/19/20,2020-04-19
-895,Palm Beach,93,Male,No,NaN,Unknown,FL resident,04/19/20,2020-04-19
-509,Dade,72,Male,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
-985,Sarasota,69,Female,No,NaN,Yes,FL resident,04/19/20,2020-04-19
-644,Lee,92,Female,No,NaN,No,FL resident,04/19/20,2020-04-19
-507,Dade,94,Female,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
-737,Orange,95,Male,Unknown,NaN,Yes,FL resident,04/19/20,2020-04-19
-736,Orange,42,Male,No,NaN,Yes,FL resident,04/19/20,2020-04-19
-708,Okaloosa,90,Male,No,NaN,Yes,FL resident,04/19/20,2020-04-19
-649,Leon,81,Female,No,NaN,No,FL resident,04/19/20,2020-04-19
-510,Dade,82,Male,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
-650,Madison,89,Male,No,NaN,Yes,FL resident,04/20/20,2020-04-20
-651,Madison,86,Male,No,NaN,Yes,FL resident,04/20/20,2020-04-20
-1054,Volusia,90,Female,No,NaN,No,FL resident,04/20/20,2020-04-20
-1051,Volusia,88,Male,No,NaN,Yes,FL resident,04/20/20,2020-04-20
-1052,Volusia,68,Male,No,NaN,Yes,FL resident,04/20/20,2020-04-20
-515,Dade,95,Male,Unknown,NaN,Unknown,FL resident,04/20/20,2020-04-20
-514,Dade,76,Female,Unknown,NaN,Unknown,FL resident,04/20/20,2020-04-20
-1053,Volusia,75,Male,No,NaN,No,FL resident,04/20/20,2020-04-20
-516,Dade,92,Male,Unknown,NaN,Unknown,FL resident,04/20/20,2020-04-20
-693,Manatee,61,Female,No,NaN,No,FL resident,04/20/20,2020-04-20
-215,Clay,93,Female,No,NaN,Unknown,FL resident,04/20/20,2020-04-20
-166,Broward,48,Female,No,NaN,Unknown,FL resident,04/20/20,2020-04-20
-165,Broward,75,Female,No,NaN,Unknown,FL resident,04/20/20,2020-04-20
-946,Polk,96,Female,No,NaN,Yes,FL resident,04/20/20,2020-04-20
-945,Polk,44,Male,No,NaN,No,FL resident,04/20/20,2020-04-20
-896,Palm Beach,92,Female,No,NaN,Yes,FL resident,04/20/20,2020-04-20
-230,Collier,74,Male,No,NaN,Yes,FL resident,04/21/20,2020-04-21
-594,Hillsborough,92,Female,Unknown,NaN,Yes,FL resident,04/21/20,2020-04-21
-898,Palm Beach,92,Male,Unknown,NaN,Unknown,FL resident,04/21/20,2020-04-21
-645,Lee,90,Female,Unknown,NaN,Unknown,FL resident,04/21/20,2020-04-21
-168,Broward,53,Female,Unknown,NaN,Yes,FL resident,04/21/20,2020-04-21
-518,Dade,77,Male,Unknown,NaN,Unknown,FL resident,04/21/20,2020-04-21
-517,Dade,80,Male,Unknown,NaN,Unknown,FL resident,04/21/20,2020-04-21
-1015,St. Lucie,97,Female,No,NaN,Yes,FL resident,04/21/20,2020-04-21
-897,Palm Beach,83,Male,Unknown,NaN,Unknown,FL resident,04/21/20,2020-04-21
-167,Broward,99,Female,No,NaN,Yes,FL resident,04/21/20,2020-04-21
-175,Broward,69,Male,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
-171,Broward,81,Male,No,NaN,Yes,FL resident,04/22/20,2020-04-22
-172,Broward,86,Male,No,NaN,Unknown,FL resident,04/22/20,2020-04-22
-899,Palm Beach,78,Male,No,NaN,Unknown,FL resident,04/22/20,2020-04-22
-173,Broward,62,Male,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
-174,Broward,88,Female,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
-169,Broward,58,Male,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
-646,Lee,89,Male,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
-647,Lee,67,Male,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
-170,Broward,94,Male,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
-176,Broward,82,Male,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
-177,Broward,75,Female,No,NaN,Yes,FL resident,04/22/20,2020-04-22
-1016,St. Lucie,91,Female,No,NaN,Yes,FL resident,04/22/20,2020-04-22
-697,Marion,60,Female,No,NaN,Yes,FL resident,04/23/20,2020-04-23
-521,Dade,87,Male,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
-191,Charlotte,90,Female,No,NaN,Yes,FL resident,04/23/20,2020-04-23
-900,Palm Beach,94,Female,No,NaN,Unknown,FL resident,04/23/20,2020-04-23
-520,Dade,88,Female,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
-524,Dade,77,Male,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
-523,Dade,68,Female,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
-928,Pinellas,95,Male,No,NaN,No,FL resident,04/23/20,2020-04-23
-519,Dade,86,Male,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
-522,Dade,60,Male,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
-178,Broward,95,Female,No,NaN,Unknown,FL resident,04/23/20,2020-04-23
-192,Charlotte,96,Female,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
-525,Dade,96,Male,Unknown,NaN,Unknown,FL resident,04/24/20,2020-04-24
+965,Santa Rosa,71,Male,Yes,EGYPT; ISRAEL; JORDAN,No,FL resident,03/05/20,2020-03-05
+628,Lee,77,Female,Yes,DOMINICAN REPUBLIC,Yes,FL resident,03/07/20,2020-03-07
+546,Duval,83,Male,No,NaN,Yes,FL resident,03/13/20,2020-03-13
+763,Palm Beach,73,Male,Yes,EGYPT; GERMANY,Yes,FL resident,03/13/20,2020-03-13
+629,Lee,77,Male,No,NaN,Yes,FL resident,03/13/20,2020-03-13
+755,Orange,68,Female,Yes,PHILIPPINES; SOUTH KOREA,Unknown,Not diagnosed/isolated in FL,03/13/20,2020-03-13
+213,Clay,70,Male,No,NaN,Yes,FL resident,03/14/20,2020-03-14
+918,Pasco,67,Male,Yes,FL; NY,Yes,FL resident,03/14/20,2020-03-14
+630,Lee,65,Female,Yes,FL; JAMAICA,Yes,FL resident,03/15/20,2020-03-15
+726,Orange,79,Female,Unknown,NaN,Yes,FL resident,03/15/20,2020-03-15
+18,Broward,74,Male,No,NaN,Yes,FL resident,03/15/20,2020-03-15
+547,Duval,88,Male,No,NaN,Yes,FL resident,03/15/20,2020-03-15
+241,Dade,56,Male,Yes,NY,Yes,FL resident,03/16/20,2020-03-16
+19,Broward,77,Male,No,NaN,Yes,FL resident,03/16/20,2020-03-16
+764,Palm Beach,76,Female,Yes,FRANCE,Unknown,FL resident,03/16/20,2020-03-16
+669,Manatee,70,Male,No,NaN,Yes,FL resident,03/16/20,2020-03-16
+670,Manatee,75,Male,No,NaN,No,FL resident,03/17/20,2020-03-17
+242,Dade,88,Male,Unknown,NaN,Unknown,FL resident,03/17/20,2020-03-17
+671,Manatee,71,Male,No,NaN,Yes,FL resident,03/17/20,2020-03-17
+727,Orange,73,Male,No,NaN,Yes,FL resident,03/17/20,2020-03-17
+20,Broward,57,Male,No,NaN,Yes,FL resident,03/18/20,2020-03-18
+21,Broward,93,Male,No,NaN,Yes,FL resident,03/18/20,2020-03-18
+922,Pinellas,52,Male,Yes,BULGARIA; GERMANY; UT,Yes,FL resident,03/18/20,2020-03-18
+202,Citrus,80,Male,Yes,DE,Yes,FL resident,03/18/20,2020-03-18
+548,Duval,83,Male,No,NaN,Yes,FL resident,03/18/20,2020-03-18
+765,Palm Beach,72,Male,No,NaN,No,FL resident,03/18/20,2020-03-18
+22,Broward,96,Female,No,NaN,Yes,FL resident,03/19/20,2020-03-19
+23,Broward,94,Male,No,NaN,Yes,FL resident,03/19/20,2020-03-19
+631,Lee,67,Male,No,NaN,Yes,FL resident,03/19/20,2020-03-19
+946,Polk,77,Female,No,NaN,No,FL resident,03/20/20,2020-03-20
+244,Dade,69,Male,No,NaN,Yes,FL resident,03/20/20,2020-03-20
+243,Dade,71,Female,No,NaN,Unknown,FL resident,03/20/20,2020-03-20
+766,Palm Beach,72,Male,Yes,CANADA; FL,No,FL resident,03/20/20,2020-03-20
+214,Clay,82,Male,No,NaN,Yes,FL resident,03/20/20,2020-03-20
+767,Palm Beach,81,Male,Yes,NY,Yes,FL resident,03/20/20,2020-03-20
+728,Orange,82,Female,No,NaN,Yes,FL resident,03/20/20,2020-03-20
+24,Broward,92,Male,No,NaN,Yes,FL resident,03/20/20,2020-03-20
+25,Broward,75,Male,No,NaN,Yes,FL resident,03/20/20,2020-03-20
+1034,Sumter,67,Female,Yes,MBELIZE; FL; HONDURAS; EBELIZE; FL; HONDURAS; XBELIZE; FL; HONDURAS; IBELIZE; FL; HONDURAS; CBELIZE; FL; HONDURAS; O,Yes,FL resident,03/21/20,2020-03-21
+947,Polk,60,Male,No,NaN,Yes,FL resident,03/21/20,2020-03-21
+1011,St. Johns,67,Male,No,NaN,Yes,FL resident,03/21/20,2020-03-21
+923,Pinellas,67,Male,No,NaN,No,FL resident,03/21/20,2020-03-21
+26,Broward,95,Male,No,NaN,Unknown,FL resident,03/21/20,2020-03-21
+972,Sarasota,87,Male,No,NaN,Yes,FL resident,03/21/20,2020-03-21
+550,Duval,84,Male,No,NaN,Unknown,FL resident,03/21/20,2020-03-21
+971,Sarasota,75,Male,Yes,NJ; NY,No,FL resident,03/21/20,2020-03-21
+768,Palm Beach,88,Male,No,NaN,Yes,FL resident,03/21/20,2020-03-21
+551,Duval,84,Female,No,NaN,Yes,FL resident,03/21/20,2020-03-21
+27,Broward,86,Male,No,NaN,Yes,FL resident,03/21/20,2020-03-21
+769,Palm Beach,83,Male,No,NaN,No,FL resident,03/21/20,2020-03-21
+756,Osceola,58,Male,No,NaN,No,FL resident,03/21/20,2020-03-21
+549,Duval,84,Male,No,NaN,Yes,FL resident,03/21/20,2020-03-21
+575,Flagler,72,Female,Unknown,NaN,Yes,FL resident,03/22/20,2020-03-22
+215,Clay,68,Female,No,NaN,Yes,FL resident,03/22/20,2020-03-22
+248,Dade,40,Male,No,NaN,Yes,FL resident,03/22/20,2020-03-22
+919,Pasco,71,Female,Yes,VA,Yes,FL resident,03/22/20,2020-03-22
+3,Baker,66,Male,No,NaN,Yes,FL resident,03/22/20,2020-03-22
+245,Dade,83,Male,No,NaN,Yes,FL resident,03/22/20,2020-03-22
+246,Dade,83,Male,No,NaN,Yes,FL resident,03/22/20,2020-03-22
+1015,St. Lucie,77,Male,Yes,TDOMINICAN REPUBLIC; FL; UDOMINICAN REPUBLIC; FL; RDOMINICAN REPUBLIC; FL; KDOMINICAN REPUBLIC; FL; SDOMINICAN REPUBLIC; FL;  DOMINICAN REPUBLIC; FL; ADOMINICAN REPUBLIC; FL; NDOMINICAN REPUBLIC; FL; DDOMINICAN REPUBLIC; FL;  DOMINICAN REPUBLIC; FL; CDOMINICAN REPUBLIC; FL; ADOMINICAN REPUBLIC; FL; IDOMINICAN REPUBLIC; FL; CDOMINICAN REPUBLIC; FL; ODOMINICAN REPUBLIC; FL; S,No,FL resident,03/22/20,2020-03-22
+552,Duval,82,Female,No,NaN,Yes,FL resident,03/22/20,2020-03-22
+770,Palm Beach,76,Male,No,NaN,No,FL resident,03/22/20,2020-03-22
+250,Dade,74,Female,No,NaN,Yes,FL resident,03/22/20,2020-03-22
+247,Dade,67,Male,No,NaN,Yes,FL resident,03/22/20,2020-03-22
+28,Broward,75,Male,Yes,FL; HONDURAS,No,FL resident,03/22/20,2020-03-22
+249,Dade,57,Male,No,NaN,Unknown,FL resident,03/22/20,2020-03-22
+771,Palm Beach,85,Female,No,NaN,Yes,FL resident,03/22/20,2020-03-22
+29,Broward,70,Male,Unknown,NaN,Unknown,FL resident,03/22/20,2020-03-22
+1012,St. Johns,52,Male,Yes,FL; MN,Yes,FL resident,03/23/20,2020-03-23
+618,Lake,70,Female,Yes,FL; NY,Yes,FL resident,03/23/20,2020-03-23
+32,Broward,83,Female,Yes,CA; FL,Yes,FL resident,03/23/20,2020-03-23
+553,Duval,87,Female,Unknown,NaN,Unknown,FL resident,03/23/20,2020-03-23
+1035,Sumter,68,Male,No,NaN,No,FL resident,03/23/20,2020-03-23
+924,Pinellas,83,Female,No,NaN,Yes,FL resident,03/23/20,2020-03-23
+31,Broward,96,Female,No,NaN,Yes,FL resident,03/23/20,2020-03-23
+973,Sarasota,81,Male,Yes,NY,No,FL resident,03/23/20,2020-03-23
+30,Broward,80,Female,No,NaN,No,FL resident,03/23/20,2020-03-23
+672,Manatee,68,Male,Yes,FRANCE,Yes,FL resident,03/23/20,2020-03-23
+33,Broward,76,Male,No,NaN,No,FL resident,03/23/20,2020-03-23
+590,Hillsborough,69,Male,Unknown,NaN,No,FL resident,03/23/20,2020-03-23
+729,Orange,70,Male,No,NaN,Unknown,FL resident,03/23/20,2020-03-23
+772,Palm Beach,38,Male,Yes,COLOMBIA,Unknown,FL resident,03/24/20,2020-03-24
+216,Clay,65,Male,No,NaN,Yes,FL resident,03/24/20,2020-03-24
+253,Dade,63,Male,Yes,NC,No,FL resident,03/24/20,2020-03-24
+1036,Sumter,84,Female,No,NaN,Yes,FL resident,03/24/20,2020-03-24
+632,Lee,67,Male,No,NaN,No,FL resident,03/24/20,2020-03-24
+730,Orange,90,Male,No,NaN,No,FL resident,03/24/20,2020-03-24
+1057,Volusia,78,Female,No,NaN,No,FL resident,03/24/20,2020-03-24
+591,Hillsborough,73,Male,Yes,ISRAEL,Unknown,FL resident,03/24/20,2020-03-24
+251,Dade,78,Male,No,NaN,No,FL resident,03/24/20,2020-03-24
+36,Broward,38,Female,No,NaN,Unknown,FL resident,03/24/20,2020-03-24
+593,Hillsborough,86,Female,No,NaN,Yes,FL resident,03/24/20,2020-03-24
+35,Broward,84,Female,No,NaN,Yes,FL resident,03/24/20,2020-03-24
+592,Hillsborough,63,Male,Unknown,NaN,Yes,FL resident,03/24/20,2020-03-24
+974,Sarasota,82,Male,No,NaN,Yes,FL resident,03/24/20,2020-03-24
+583,Highlands,78,Female,Yes,CARIBBEAN; FL,Yes,FL resident,03/24/20,2020-03-24
+34,Broward,78,Male,Unknown,NaN,Yes,FL resident,03/24/20,2020-03-24
+254,Dade,61,Male,No,NaN,No,FL resident,03/24/20,2020-03-24
+4,Baker,77,Female,No,NaN,Yes,FL resident,03/24/20,2020-03-24
+252,Dade,94,Male,No,NaN,Unknown,FL resident,03/24/20,2020-03-24
+721,Monroe,75,Male,No,NaN,No,FL resident,03/25/20,2020-03-25
+43,Broward,67,Female,Unknown,NaN,Yes,FL resident,03/25/20,2020-03-25
+720,Monroe,55,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
+633,Lee,39,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
+37,Broward,83,Male,No,NaN,Unknown,FL resident,03/25/20,2020-03-25
+38,Broward,79,Male,Yes,PERU,Yes,FL resident,03/25/20,2020-03-25
+39,Broward,93,Female,Unknown,NaN,Yes,FL resident,03/25/20,2020-03-25
+40,Broward,67,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
+41,Broward,71,Male,Unknown,NaN,Unknown,FL resident,03/25/20,2020-03-25
+42,Broward,97,Male,Unknown,NaN,Unknown,FL resident,03/25/20,2020-03-25
+594,Hillsborough,68,Female,Yes,EGYPT,No,FL resident,03/25/20,2020-03-25
+45,Broward,79,Female,Unknown,NaN,Yes,FL resident,03/25/20,2020-03-25
+217,Clay,77,Female,No,NaN,No,FL resident,03/25/20,2020-03-25
+259,Dade,61,Male,Unknown,NaN,Unknown,FL resident,03/25/20,2020-03-25
+258,Dade,81,Female,No,NaN,Yes,FL resident,03/25/20,2020-03-25
+257,Dade,75,Male,No,NaN,Unknown,FL resident,03/25/20,2020-03-25
+256,Dade,84,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
+975,Sarasota,62,Male,No,NaN,No,FL resident,03/25/20,2020-03-25
+776,Palm Beach,45,Male,No,NaN,No,FL resident,03/25/20,2020-03-25
+44,Broward,75,Male,Yes,NY,Yes,FL resident,03/25/20,2020-03-25
+775,Palm Beach,67,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
+777,Palm Beach,84,Male,Unknown,NaN,Unknown,FL resident,03/25/20,2020-03-25
+255,Dade,69,Female,No,NaN,Unknown,FL resident,03/25/20,2020-03-25
+619,Lake,74,Female,Yes,EUROPE,Yes,FL resident,03/25/20,2020-03-25
+218,Clay,54,Male,No,NaN,No,FL resident,03/25/20,2020-03-25
+774,Palm Beach,81,Male,No,NaN,Unknown,FL resident,03/25/20,2020-03-25
+46,Broward,78,Female,No,NaN,Yes,FL resident,03/25/20,2020-03-25
+1037,Sumter,85,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
+773,Palm Beach,74,Male,No,NaN,Yes,FL resident,03/25/20,2020-03-25
+1016,St. Lucie,95,Female,No,NaN,No,FL resident,03/26/20,2020-03-26
+261,Dade,77,Male,No,NaN,Yes,FL resident,03/26/20,2020-03-26
+260,Dade,71,Male,No,NaN,No,FL resident,03/26/20,2020-03-26
+564,Escambia,73,Female,Yes,EGYPT,Unknown,FL resident,03/26/20,2020-03-26
+634,Lee,94,Male,No,NaN,No,FL resident,03/26/20,2020-03-26
+722,Monroe,55,Male,No,NaN,Yes,FL resident,03/26/20,2020-03-26
+595,Hillsborough,71,Female,No,NaN,No,FL resident,03/26/20,2020-03-26
+47,Broward,65,Male,Unknown,NaN,Unknown,FL resident,03/26/20,2020-03-26
+48,Broward,94,Female,Unknown,NaN,Unknown,FL resident,03/26/20,2020-03-26
+966,Santa Rosa,81,Female,Yes,FL; IN,No,FL resident,03/26/20,2020-03-26
+778,Palm Beach,90,Female,No,NaN,Yes,FL resident,03/26/20,2020-03-26
+262,Dade,68,Female,No,NaN,Yes,FL resident,03/26/20,2020-03-26
+927,Pinellas,78,Female,Yes,DC; FL,Yes,FL resident,03/26/20,2020-03-26
+926,Pinellas,82,Male,Yes,FL; OH,Yes,FL resident,03/26/20,2020-03-26
+576,Flagler,77,Male,Yes,NJ,Yes,FL resident,03/26/20,2020-03-26
+731,Orange,87,Female,No,NaN,Yes,FL resident,03/26/20,2020-03-26
+732,Orange,71,Male,Yes,PHILIPPINES,Unknown,FL resident,03/26/20,2020-03-26
+555,Duval,87,Female,No,NaN,Yes,FL resident,03/26/20,2020-03-26
+554,Duval,91,Female,No,NaN,Yes,FL resident,03/26/20,2020-03-26
+1058,Volusia,65,Male,No,NaN,No,FL resident,03/26/20,2020-03-26
+928,Pinellas,76,Female,No,NaN,Yes,FL resident,03/26/20,2020-03-26
+925,Pinellas,64,Male,No,NaN,Yes,FL resident,03/26/20,2020-03-26
+976,Sarasota,74,Female,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+203,Citrus,87,Male,No,NaN,No,FL resident,03/27/20,2020-03-27
+789,Palm Beach,41,Male,Unknown,NaN,Yes,FL resident,03/27/20,2020-03-27
+791,Palm Beach,74,Female,Yes,FL; NY,Yes,FL resident,03/27/20,2020-03-27
+635,Lee,65,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+790,Palm Beach,83,Female,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+270,Dade,80,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+1013,St. Johns,56,Male,Yes,LA,Yes,FL resident,03/27/20,2020-03-27
+782,Palm Beach,84,Female,Unknown,NaN,Yes,FL resident,03/27/20,2020-03-27
+781,Palm Beach,85,Male,Unknown,NaN,No,FL resident,03/27/20,2020-03-27
+226,Collier,94,Female,Yes,VFL; PUERTO RICO; U.S. IFL; PUERTO RICO; U.S. RFL; PUERTO RICO; U.S. GFL; PUERTO RICO; U.S. IFL; PUERTO RICO; U.S. NFL; PUERTO RICO; U.S.  FL; PUERTO RICO; U.S. IFL; PUERTO RICO; U.S. SFL; PUERTO RICO; U.S. LFL; PUERTO RICO; U.S. AFL; PUERTO RICO; U.S. NFL; PUERTO RICO; U.S. DFL; PUERTO RICO; U.S. S,No,FL resident,03/27/20,2020-03-27
+779,Palm Beach,89,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+55,Broward,83,Male,Yes,CO; FL,Yes,FL resident,03/27/20,2020-03-27
+54,Broward,64,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+53,Broward,80,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+783,Palm Beach,81,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+52,Broward,94,Female,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+50,Broward,39,Male,Yes,FL; IL,Unknown,FL resident,03/27/20,2020-03-27
+49,Broward,74,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+723,Okaloosa,87,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+780,Palm Beach,92,Male,No,NaN,No,FL resident,03/27/20,2020-03-27
+10,Brevard,74,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+711,Marion,88,Male,Yes,GERMANY,Unknown,FL resident,03/27/20,2020-03-27
+929,Pinellas,75,Male,Yes,NY,No,FL resident,03/27/20,2020-03-27
+51,Broward,67,Male,Yes,CHINA; NY,Yes,FL resident,03/27/20,2020-03-27
+636,Lee,77,Male,Yes,FL; NY,Yes,FL resident,03/27/20,2020-03-27
+784,Palm Beach,72,Female,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+786,Palm Beach,89,Male,No,NaN,No,FL resident,03/27/20,2020-03-27
+1017,St. Lucie,59,Male,No,NaN,No,FL resident,03/27/20,2020-03-27
+263,Dade,71,Male,Yes,ECUADOR; FL,Yes,FL resident,03/27/20,2020-03-27
+264,Dade,72,Male,No,NaN,Unknown,FL resident,03/27/20,2020-03-27
+265,Dade,79,Male,Unknown,NaN,Unknown,FL resident,03/27/20,2020-03-27
+266,Dade,75,Female,No,NaN,No,FL resident,03/27/20,2020-03-27
+267,Dade,76,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+268,Dade,49,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+785,Palm Beach,84,Female,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+269,Dade,75,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+272,Dade,85,Male,Yes,FL; SPAIN,Yes,FL resident,03/27/20,2020-03-27
+556,Duval,87,Female,Unknown,NaN,Yes,FL resident,03/27/20,2020-03-27
+557,Duval,80,Male,Unknown,NaN,Unknown,FL resident,03/27/20,2020-03-27
+558,Duval,74,Female,Unknown,NaN,No,FL resident,03/27/20,2020-03-27
+788,Palm Beach,39,Female,Unknown,NaN,Unknown,FL resident,03/27/20,2020-03-27
+787,Palm Beach,84,Female,No,NaN,Unknown,FL resident,03/27/20,2020-03-27
+733,Orange,80,Female,No,NaN,No,FL resident,03/27/20,2020-03-27
+271,Dade,66,Male,No,NaN,Unknown,FL resident,03/27/20,2020-03-27
+542,Desoto,91,Male,No,NaN,Yes,FL resident,03/27/20,2020-03-27
+620,Lake,60,Female,Yes,TN,Yes,FL resident,03/28/20,2020-03-28
+977,Sarasota,28,Male,Yes,FL; IL,No,FL resident,03/28/20,2020-03-28
+189,Charlotte,78,Female,Yes,IL,Yes,FL resident,03/28/20,2020-03-28
+56,Broward,63,Female,No,NaN,Yes,FL resident,03/28/20,2020-03-28
+57,Broward,68,Female,Unknown,NaN,Unknown,FL resident,03/28/20,2020-03-28
+58,Broward,34,Male,No,NaN,Unknown,FL resident,03/28/20,2020-03-28
+59,Broward,68,Male,Unknown,NaN,Unknown,FL resident,03/28/20,2020-03-28
+60,Broward,62,Male,Unknown,NaN,Unknown,FL resident,03/28/20,2020-03-28
+280,Dade,71,Male,No,NaN,Yes,FL resident,03/28/20,2020-03-28
+279,Dade,74,Male,No,NaN,Unknown,FL resident,03/28/20,2020-03-28
+278,Dade,79,Male,No,NaN,Unknown,FL resident,03/28/20,2020-03-28
+734,Orange,81,Male,No,NaN,Yes,FL resident,03/28/20,2020-03-28
+277,Dade,101,Female,Unknown,NaN,Yes,FL resident,03/28/20,2020-03-28
+276,Dade,71,Male,Unknown,NaN,Yes,FL resident,03/28/20,2020-03-28
+275,Dade,81,Male,No,NaN,Yes,FL resident,03/28/20,2020-03-28
+190,Charlotte,77,Male,Unknown,NaN,Yes,FL resident,03/28/20,2020-03-28
+273,Dade,74,Female,Unknown,NaN,Yes,FL resident,03/28/20,2020-03-28
+673,Manatee,57,Male,No,NaN,No,FL resident,03/28/20,2020-03-28
+274,Dade,49,Male,Unknown,NaN,Yes,FL resident,03/28/20,2020-03-28
+758,Osceola,55,Male,No,NaN,No,FL resident,03/28/20,2020-03-28
+188,Charlotte,93,Female,No,NaN,Yes,FL resident,03/28/20,2020-03-28
+792,Palm Beach,76,Male,No,NaN,No,FL resident,03/28/20,2020-03-28
+793,Palm Beach,88,Male,Unknown,NaN,Unknown,FL resident,03/28/20,2020-03-28
+794,Palm Beach,59,Female,No,NaN,No,FL resident,03/28/20,2020-03-28
+795,Palm Beach,64,Female,Unknown,NaN,Yes,FL resident,03/28/20,2020-03-28
+757,Osceola,91,Male,Yes,ECUADOR,No,FL resident,03/28/20,2020-03-28
+796,Palm Beach,88,Male,No,NaN,Unknown,FL resident,03/28/20,2020-03-28
+930,Pinellas,58,Male,No,NaN,No,FL resident,03/28/20,2020-03-28
+798,Palm Beach,77,Female,No,NaN,Unknown,FL resident,03/28/20,2020-03-28
+799,Palm Beach,75,Female,No,NaN,Yes,FL resident,03/28/20,2020-03-28
+637,Lee,62,Female,No,NaN,Yes,FL resident,03/28/20,2020-03-28
+1018,St. Lucie,31,Female,No,NaN,No,FL resident,03/28/20,2020-03-28
+800,Palm Beach,76,Female,No,NaN,No,FL resident,03/28/20,2020-03-28
+801,Palm Beach,80,Male,Yes,NY,No,FL resident,03/28/20,2020-03-28
+1038,Sumter,83,Female,No,NaN,No,FL resident,03/28/20,2020-03-28
+797,Palm Beach,88,Female,Unknown,NaN,Unknown,FL resident,03/28/20,2020-03-28
+281,Dade,77,Male,Yes,FL; NY,Unknown,FL resident,03/29/20,2020-03-29
+283,Dade,73,Female,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
+284,Dade,62,Male,Yes,FL; NY,Yes,FL resident,03/29/20,2020-03-29
+285,Dade,94,Female,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
+286,Dade,89,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
+282,Dade,86,Male,No,NaN,No,FL resident,03/29/20,2020-03-29
+288,Dade,88,Female,No,NaN,Yes,FL resident,03/29/20,2020-03-29
+290,Dade,48,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
+807,Palm Beach,77,Male,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
+808,Palm Beach,74,Male,Unknown,NaN,No,FL resident,03/29/20,2020-03-29
+1059,Volusia,79,Male,Yes,ARUBA; CURACAO; FL,No,FL resident,03/29/20,2020-03-29
+809,Palm Beach,93,Female,No,NaN,Yes,FL resident,03/29/20,2020-03-29
+810,Palm Beach,87,Male,Unknown,NaN,Yes,FL resident,03/29/20,2020-03-29
+811,Palm Beach,79,Female,No,NaN,No,FL resident,03/29/20,2020-03-29
+674,Manatee,81,Male,No,NaN,No,FL resident,03/29/20,2020-03-29
+812,Palm Beach,85,Male,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
+813,Palm Beach,42,Male,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
+806,Palm Beach,89,Male,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
+559,Duval,83,Male,Unknown,NaN,No,FL resident,03/29/20,2020-03-29
+735,Orange,88,Female,No,NaN,Yes,FL resident,03/29/20,2020-03-29
+577,Glades,89,Male,No,NaN,Yes,FL resident,03/29/20,2020-03-29
+584,Highlands,82,Male,No,NaN,Yes,FL resident,03/29/20,2020-03-29
+63,Broward,82,Female,No,NaN,Yes,FL resident,03/29/20,2020-03-29
+62,Broward,65,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
+61,Broward,55,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
+596,Hillsborough,62,Male,No,NaN,Yes,FL resident,03/29/20,2020-03-29
+8,Bradford,78,Female,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
+597,Hillsborough,77,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
+736,Orange,87,Male,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
+289,Dade,91,Female,No,NaN,No,FL resident,03/29/20,2020-03-29
+805,Palm Beach,77,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
+803,Palm Beach,82,Male,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
+291,Dade,86,Male,No,NaN,No,FL resident,03/29/20,2020-03-29
+802,Palm Beach,63,Male,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
+287,Dade,74,Male,No,NaN,Yes,FL resident,03/29/20,2020-03-29
+292,Dade,82,Female,No,NaN,Unknown,FL resident,03/29/20,2020-03-29
+227,Collier,61,Male,Yes,HAITI; MEXICO,Yes,FL resident,03/29/20,2020-03-29
+948,Polk,73,Female,No,NaN,Yes,FL resident,03/29/20,2020-03-29
+293,Dade,60,Male,No,NaN,No,FL resident,03/29/20,2020-03-29
+219,Clay,92,Female,No,NaN,Yes,FL resident,03/29/20,2020-03-29
+978,Sarasota,82,Male,No,NaN,Yes,FL resident,03/29/20,2020-03-29
+804,Palm Beach,75,Male,No,NaN,Yes,FL resident,03/29/20,2020-03-29
+294,Dade,70,Female,Unknown,NaN,Unknown,FL resident,03/29/20,2020-03-29
+622,Lake,70,Female,No,NaN,No,FL resident,03/29/20,2020-03-29
+621,Lake,84,Male,Yes,ECUADOR; FL,Yes,FL resident,03/29/20,2020-03-29
+598,Hillsborough,93,Female,Unknown,NaN,Yes,FL resident,03/30/20,2020-03-30
+295,Dade,82,Male,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
+297,Dade,90,Female,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
+298,Dade,86,Male,No,NaN,No,FL resident,03/30/20,2020-03-30
+299,Dade,84,Female,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
+300,Dade,89,Male,Yes,NY,Unknown,FL resident,03/30/20,2020-03-30
+302,Dade,89,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
+303,Dade,49,Male,No,NaN,No,FL resident,03/30/20,2020-03-30
+296,Dade,65,Male,No,NaN,Unknown,FL resident,03/30/20,2020-03-30
+301,Dade,94,Female,No,NaN,No,FL resident,03/30/20,2020-03-30
+931,Pinellas,56,Female,No,NaN,Yes,FL resident,03/30/20,2020-03-30
+230,Collier,79,Female,Unknown,NaN,Yes,FL resident,03/30/20,2020-03-30
+816,Palm Beach,79,Female,No,NaN,Yes,FL resident,03/30/20,2020-03-30
+815,Palm Beach,94,Male,No,NaN,No,FL resident,03/30/20,2020-03-30
+814,Palm Beach,81,Male,No,NaN,No,FL resident,03/30/20,2020-03-30
+932,Pinellas,40,Female,No,NaN,Yes,FL resident,03/30/20,2020-03-30
+675,Manatee,77,Male,No,NaN,No,FL resident,03/30/20,2020-03-30
+738,Orange,88,Male,No,NaN,Unknown,FL resident,03/30/20,2020-03-30
+737,Orange,68,Male,No,NaN,Unknown,FL resident,03/30/20,2020-03-30
+819,Palm Beach,91,Male,No,NaN,Unknown,FL resident,03/30/20,2020-03-30
+817,Palm Beach,78,Male,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
+68,Broward,67,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
+67,Broward,77,Male,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
+66,Broward,49,Female,No,NaN,Unknown,FL resident,03/30/20,2020-03-30
+65,Broward,75,Female,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
+69,Broward,57,Male,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
+1039,Sumter,83,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
+229,Collier,73,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
+228,Collier,81,Male,Yes,VFL; PUERTO RICO; U.S. IFL; PUERTO RICO; U.S. RFL; PUERTO RICO; U.S. GFL; PUERTO RICO; U.S. IFL; PUERTO RICO; U.S. NFL; PUERTO RICO; U.S.  FL; PUERTO RICO; U.S. IFL; PUERTO RICO; U.S. SFL; PUERTO RICO; U.S. LFL; PUERTO RICO; U.S. AFL; PUERTO RICO; U.S. NFL; PUERTO RICO; U.S. DFL; PUERTO RICO; U.S. S,Unknown,FL resident,03/30/20,2020-03-30
+949,Polk,49,Female,No,NaN,No,FL resident,03/30/20,2020-03-30
+191,Charlotte,92,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
+599,Hillsborough,92,Female,No,NaN,No,FL resident,03/30/20,2020-03-30
+979,Sarasota,80,Female,No,NaN,No,FL resident,03/30/20,2020-03-30
+638,Lee,71,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
+1040,Sumter,65,Female,No,NaN,Yes,FL resident,03/30/20,2020-03-30
+1019,St. Lucie,86,Male,No,NaN,No,FL resident,03/30/20,2020-03-30
+639,Lee,71,Male,No,NaN,Yes,FL resident,03/30/20,2020-03-30
+640,Lee,83,Male,Unknown,NaN,No,FL resident,03/30/20,2020-03-30
+64,Broward,56,Male,Unknown,NaN,Unknown,FL resident,03/30/20,2020-03-30
+818,Palm Beach,90,Female,No,NaN,Unknown,FL resident,03/30/20,2020-03-30
+820,Palm Beach,87,Female,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
+822,Palm Beach,87,Male,No,NaN,Yes,FL resident,03/31/20,2020-03-31
+72,Broward,30,Female,Unknown,NaN,Unknown,FL resident,03/31/20,2020-03-31
+580,Hernando,75,Male,Yes,SPAIN,Yes,FL resident,03/31/20,2020-03-31
+739,Orange,62,Female,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
+560,Duval,50,Male,Unknown,NaN,Yes,FL resident,03/31/20,2020-03-31
+71,Broward,76,Male,Unknown,NaN,Yes,FL resident,03/31/20,2020-03-31
+70,Broward,72,Female,No,NaN,Yes,FL resident,03/31/20,2020-03-31
+821,Palm Beach,71,Male,No,NaN,No,FL resident,03/31/20,2020-03-31
+676,Manatee,69,Male,No,NaN,No,FL resident,03/31/20,2020-03-31
+319,Dade,55,Female,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
+641,Lee,96,Female,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
+304,Dade,68,Female,No,NaN,Yes,FL resident,03/31/20,2020-03-31
+305,Dade,66,Female,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
+306,Dade,83,Male,No,NaN,Yes,FL resident,03/31/20,2020-03-31
+307,Dade,65,Male,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
+308,Dade,76,Male,Yes,SPAIN,Unknown,FL resident,03/31/20,2020-03-31
+1041,Sumter,76,Male,No,NaN,No,FL resident,03/31/20,2020-03-31
+310,Dade,56,Male,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
+311,Dade,66,Female,No,NaN,Yes,FL resident,03/31/20,2020-03-31
+309,Dade,72,Female,Unknown,NaN,Yes,FL resident,03/31/20,2020-03-31
+313,Dade,77,Female,No,NaN,No,FL resident,03/31/20,2020-03-31
+314,Dade,80,Male,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
+315,Dade,70,Female,Unknown,NaN,Unknown,FL resident,03/31/20,2020-03-31
+316,Dade,80,Male,Unknown,NaN,No,FL resident,03/31/20,2020-03-31
+317,Dade,57,Male,No,NaN,Unknown,FL resident,03/31/20,2020-03-31
+318,Dade,92,Female,Yes,NJ,Unknown,FL resident,03/31/20,2020-03-31
+312,Dade,62,Male,No,NaN,No,FL resident,03/31/20,2020-03-31
+600,Hillsborough,74,Male,Unknown,NaN,Yes,FL resident,03/31/20,2020-03-31
+824,Palm Beach,88,Male,Yes,AUSTRALIA; FL,Yes,FL resident,04/01/20,2020-04-01
+823,Palm Beach,82,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+825,Palm Beach,87,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
+826,Palm Beach,63,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
+827,Palm Beach,95,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+828,Palm Beach,76,Female,No,NaN,Yes,FL resident,04/01/20,2020-04-01
+829,Palm Beach,76,Female,No,NaN,Yes,FL resident,04/01/20,2020-04-01
+1074,Wakulla,65,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
+1042,Sumter,69,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
+324,Dade,81,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+759,Osceola,70,Female,No,NaN,Yes,FL resident,04/01/20,2020-04-01
+322,Dade,93,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
+321,Dade,49,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+320,Dade,83,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+74,Broward,77,Female,No,NaN,No,FL resident,04/01/20,2020-04-01
+933,Pinellas,85,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
+75,Broward,74,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
+76,Broward,53,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
+77,Broward,72,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+78,Broward,57,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
+79,Broward,49,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
+80,Broward,80,Female,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
+325,Dade,78,Female,Unknown,NaN,Yes,FL resident,04/01/20,2020-04-01
+964,Putnam,54,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
+81,Broward,73,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
+980,Sarasota,86,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
+981,Sarasota,99,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+982,Sarasota,85,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+983,Sarasota,82,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
+984,Sarasota,85,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
+82,Broward,65,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+1003,Seminole,91,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
+1020,St. Lucie,65,Female,Yes,NY,No,FL resident,04/01/20,2020-04-01
+642,Lee,85,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
+643,Lee,78,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
+678,Manatee,79,Female,No,NaN,No,FL resident,04/01/20,2020-04-01
+760,Osceola,66,Female,No,NaN,No,FL resident,04/01/20,2020-04-01
+623,Lake,86,Male,Yes,FL; FRANCE; PUERTO RICO,Yes,FL resident,04/01/20,2020-04-01
+326,Dade,86,Female,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
+323,Dade,56,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
+328,Dade,75,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+327,Dade,78,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
+712,Marion,58,Male,No,NaN,Yes,FL resident,04/01/20,2020-04-01
+336,Dade,92,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+335,Dade,71,Male,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+334,Dade,74,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+333,Dade,80,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
+332,Dade,44,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+677,Manatee,55,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+330,Dade,47,Male,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
+11,Brevard,94,Male,No,NaN,No,FL resident,04/01/20,2020-04-01
+329,Dade,67,Female,No,NaN,Unknown,FL resident,04/01/20,2020-04-01
+1060,Volusia,78,Female,Yes,ECUADOR,Yes,FL resident,04/01/20,2020-04-01
+73,Broward,39,Male,Yes,BAHAMAS,Yes,FL resident,04/01/20,2020-04-01
+331,Dade,69,Female,Unknown,NaN,Unknown,FL resident,04/01/20,2020-04-01
+843,Palm Beach,83,Female,No,NaN,No,FL resident,04/02/20,2020-04-02
+842,Palm Beach,82,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+741,Orange,80,Male,No,NaN,No,FL resident,04/02/20,2020-04-02
+740,Orange,60,Female,Unknown,NaN,No,FL resident,04/02/20,2020-04-02
+87,Broward,85,Female,Unknown,NaN,Unknown,FL resident,04/02/20,2020-04-02
+86,Broward,80,Female,Yes,NJ,Yes,FL resident,04/02/20,2020-04-02
+85,Broward,90,Female,Unknown,NaN,Unknown,FL resident,04/02/20,2020-04-02
+84,Broward,44,Male,Unknown,NaN,No,FL resident,04/02/20,2020-04-02
+841,Palm Beach,80,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+840,Palm Beach,79,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+838,Palm Beach,45,Male,No,NaN,No,FL resident,04/02/20,2020-04-02
+83,Broward,82,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+837,Palm Beach,70,Female,No,NaN,No,FL resident,04/02/20,2020-04-02
+836,Palm Beach,90,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+835,Palm Beach,77,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+834,Palm Beach,94,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+832,Palm Beach,78,Male,Unknown,NaN,Yes,FL resident,04/02/20,2020-04-02
+831,Palm Beach,92,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+830,Palm Beach,88,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+6,Bay,72,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+1061,Volusia,83,Male,No,NaN,No,FL resident,04/02/20,2020-04-02
+839,Palm Beach,72,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+833,Palm Beach,71,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+352,Dade,52,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+338,Dade,87,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+337,Dade,88,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+761,Osceola,69,Male,No,NaN,No,FL resident,04/02/20,2020-04-02
+339,Dade,90,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+581,Hernando,46,Female,Yes,IL,Yes,FL resident,04/02/20,2020-04-02
+340,Dade,78,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+341,Dade,58,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+350,Dade,87,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+342,Dade,55,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+344,Dade,72,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+345,Dade,70,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+346,Dade,79,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+347,Dade,55,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+348,Dade,81,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+349,Dade,99,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+343,Dade,87,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+601,Hillsborough,74,Male,Yes,FL; MEXICO,Unknown,FL resident,04/02/20,2020-04-02
+561,Duval,89,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+1004,Seminole,68,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+646,Lee,68,Male,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+645,Lee,80,Female,Yes,FL; NJ,Yes,FL resident,04/02/20,2020-04-02
+644,Lee,85,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+353,Dade,50,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+950,Polk,68,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+985,Sarasota,88,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+192,Charlotte,83,Female,No,NaN,Unknown,FL resident,04/02/20,2020-04-02
+351,Dade,80,Male,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+204,Citrus,74,Female,No,NaN,Yes,FL resident,04/02/20,2020-04-02
+611,Indian River,88,Female,No,NaN,No,FL resident,04/02/20,2020-04-02
+951,Polk,66,Female,Yes,FL; GA,Yes,FL resident,04/02/20,2020-04-02
+844,Palm Beach,96,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+845,Palm Beach,74,Female,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+846,Palm Beach,99,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+849,Palm Beach,88,Female,Unknown,NaN,Yes,FL resident,04/03/20,2020-04-03
+850,Palm Beach,92,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+851,Palm Beach,85,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+852,Palm Beach,87,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+848,Palm Beach,68,Female,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+847,Palm Beach,81,Male,Unknown,NaN,No,FL resident,04/03/20,2020-04-03
+679,Manatee,75,Female,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+565,Escambia,71,Male,No,NaN,No,FL resident,04/03/20,2020-04-03
+562,Duval,68,Female,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
+853,Palm Beach,84,Male,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+543,Desoto,77,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+647,Lee,71,Female,No,NaN,No,FL resident,04/03/20,2020-04-03
+648,Lee,100,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+742,Orange,60,Male,No,NaN,No,FL resident,04/03/20,2020-04-03
+743,Orange,45,Female,Yes,FL; MI,Yes,FL resident,04/03/20,2020-04-03
+566,Escambia,75,Female,No,NaN,No,FL resident,04/03/20,2020-04-03
+854,Palm Beach,87,Female,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+358,Dade,68,Female,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
+856,Palm Beach,72,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+364,Dade,87,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+363,Dade,97,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+362,Dade,84,Male,No,NaN,No,FL resident,04/03/20,2020-04-03
+361,Dade,70,Male,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+360,Dade,42,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+359,Dade,55,Female,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
+855,Palm Beach,90,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+356,Dade,33,Female,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
+355,Dade,58,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+354,Dade,64,Male,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+952,Polk,84,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+193,Charlotte,86,Male,No,NaN,No,FL resident,04/03/20,2020-04-03
+986,Sarasota,69,Male,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+365,Dade,56,Male,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
+1005,Seminole,85,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+1047,Suwannee,78,Female,Unknown,NaN,Yes,FL resident,04/03/20,2020-04-03
+96,Broward,72,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+95,Broward,69,Male,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+94,Broward,60,Male,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
+93,Broward,93,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+92,Broward,56,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+91,Broward,97,Male,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
+90,Broward,72,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+89,Broward,69,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+88,Broward,85,Female,Unknown,NaN,No,FL resident,04/03/20,2020-04-03
+13,Brevard,79,Male,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+12,Brevard,76,Female,No,NaN,Unknown,FL resident,04/03/20,2020-04-03
+7,Bay,93,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+1046,Suwannee,80,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+366,Dade,86,Male,No,NaN,Yes,FL resident,04/03/20,2020-04-03
+357,Dade,89,Female,Unknown,NaN,Unknown,FL resident,04/03/20,2020-04-03
+379,Dade,90,Female,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
+97,Broward,89,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+103,Broward,75,Male,Unknown,NaN,No,FL resident,04/04/20,2020-04-04
+385,Dade,31,Male,Unknown,NaN,Unknown,FL resident,04/04/20,2020-04-04
+384,Dade,79,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
+383,Dade,55,Female,Unknown,NaN,Unknown,FL resident,04/04/20,2020-04-04
+382,Dade,58,Male,Unknown,NaN,Unknown,FL resident,04/04/20,2020-04-04
+381,Dade,84,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
+380,Dade,78,Female,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
+102,Broward,70,Female,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+101,Broward,81,Male,No,NaN,No,FL resident,04/04/20,2020-04-04
+715,Martin,82,Male,No,NaN,No,FL resident,04/04/20,2020-04-04
+100,Broward,88,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
+602,Hillsborough,73,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
+378,Dade,49,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
+376,Dade,76,Male,Unknown,NaN,Unknown,FL resident,04/04/20,2020-04-04
+375,Dade,67,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+374,Dade,61,Female,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+373,Dade,89,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+372,Dade,40,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+371,Dade,89,Female,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+370,Dade,63,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+369,Dade,76,Female,Unknown,NaN,Unknown,FL resident,04/04/20,2020-04-04
+368,Dade,68,Female,Unknown,NaN,Yes,FL resident,04/04/20,2020-04-04
+367,Dade,78,Male,Unknown,NaN,Unknown,FL resident,04/04/20,2020-04-04
+99,Broward,90,Male,No,NaN,No,FL resident,04/04/20,2020-04-04
+98,Broward,70,Male,Yes,MEXICO,Yes,FL resident,04/04/20,2020-04-04
+377,Dade,52,Male,No,NaN,No,FL resident,04/04/20,2020-04-04
+1021,St. Lucie,76,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+1043,Sumter,89,Female,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+205,Citrus,84,Male,Yes,CARIBBEAN,Yes,FL resident,04/04/20,2020-04-04
+681,Manatee,80,Female,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+680,Manatee,75,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+858,Palm Beach,92,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
+682,Manatee,75,Female,No,NaN,No,FL resident,04/04/20,2020-04-04
+713,Marion,49,Female,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
+967,Santa Rosa,84,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+857,Palm Beach,75,Male,No,NaN,Unknown,FL resident,04/04/20,2020-04-04
+859,Palm Beach,75,Male,No,NaN,Yes,FL resident,04/04/20,2020-04-04
+861,Palm Beach,89,Female,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
+744,Orange,72,Female,No,NaN,Yes,FL resident,04/05/20,2020-04-05
+105,Broward,88,Female,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
+194,Charlotte,85,Male,No,NaN,Yes,FL resident,04/05/20,2020-04-05
+862,Palm Beach,61,Male,No,NaN,Yes,FL resident,04/05/20,2020-04-05
+987,Sarasota,88,Female,No,NaN,No,FL resident,04/05/20,2020-04-05
+1050,Suwannee,74,Male,No,NaN,Yes,FL resident,04/05/20,2020-04-05
+104,Broward,70,Male,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
+724,Okaloosa,88,Female,No,NaN,No,FL resident,04/05/20,2020-04-05
+953,Polk,86,Male,Unknown,NaN,No,FL resident,04/05/20,2020-04-05
+563,Duval,67,Male,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
+860,Palm Beach,68,Male,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
+1049,Suwannee,74,Male,No,NaN,Yes,FL resident,04/05/20,2020-04-05
+616,Jefferson,93,Female,No,NaN,Yes,FL resident,04/05/20,2020-04-05
+386,Dade,68,Female,No,NaN,No,FL resident,04/05/20,2020-04-05
+231,Collier,99,Female,No,NaN,Yes,FL resident,04/05/20,2020-04-05
+232,Collier,83,Female,Yes,CARIBBEAN,Yes,FL resident,04/05/20,2020-04-05
+1022,St. Lucie,82,Male,No,NaN,Yes,FL resident,04/05/20,2020-04-05
+1023,St. Lucie,82,Male,No,NaN,No,FL resident,04/05/20,2020-04-05
+585,Highlands,83,Male,Unknown,NaN,Yes,FL resident,04/05/20,2020-04-05
+107,Broward,66,Female,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
+1048,Suwannee,67,Male,No,NaN,Yes,FL resident,04/05/20,2020-04-05
+106,Broward,80,Male,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
+393,Dade,69,Male,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
+392,Dade,83,Female,No,NaN,No,FL resident,04/05/20,2020-04-05
+391,Dade,63,Male,No,NaN,No,FL resident,04/05/20,2020-04-05
+390,Dade,72,Male,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
+389,Dade,67,Male,No,NaN,No,FL resident,04/05/20,2020-04-05
+388,Dade,87,Male,No,NaN,Unknown,FL resident,04/05/20,2020-04-05
+387,Dade,68,Female,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
+394,Dade,61,Female,No,NaN,Yes,FL resident,04/05/20,2020-04-05
+863,Palm Beach,79,Female,Unknown,NaN,Unknown,FL resident,04/05/20,2020-04-05
+988,Sarasota,85,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+683,Manatee,78,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
+968,Santa Rosa,65,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+195,Charlotte,78,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+108,Broward,56,Male,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
+603,Hillsborough,78,Male,Unknown,NaN,Yes,FL resident,04/06/20,2020-04-06
+1024,St. Lucie,74,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+991,Sarasota,90,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
+868,Palm Beach,89,Male,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
+716,Martin,77,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+866,Palm Beach,74,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
+5,Baker,71,Female,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
+746,Orange,93,Male,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
+745,Orange,60,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+109,Broward,86,Male,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
+649,Lee,62,Female,No,NaN,No,FL resident,04/06/20,2020-04-06
+409,Dade,52,Male,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
+408,Dade,68,Male,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
+407,Dade,82,Female,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
+406,Dade,72,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+867,Palm Beach,75,Male,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
+405,Dade,73,Female,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
+404,Dade,82,Male,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
+403,Dade,78,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+402,Dade,80,Male,Unknown,NaN,Unknown,FL resident,04/06/20,2020-04-06
+990,Sarasota,82,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+544,Desoto,65,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+864,Palm Beach,84,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+865,Palm Beach,75,Male,Unknown,NaN,Yes,FL resident,04/06/20,2020-04-06
+401,Dade,89,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+989,Sarasota,75,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
+569,Escambia,81,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+567,Escambia,78,Male,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+568,Escambia,91,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+396,Dade,90,Female,No,NaN,Yes,FL resident,04/06/20,2020-04-06
+397,Dade,63,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
+398,Dade,89,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
+399,Dade,70,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
+400,Dade,86,Male,No,NaN,No,FL resident,04/06/20,2020-04-06
+395,Dade,82,Male,No,NaN,Unknown,FL resident,04/06/20,2020-04-06
+870,Palm Beach,89,Male,No,NaN,Unknown,FL resident,04/07/20,2020-04-07
+116,Broward,67,Male,Unknown,NaN,No,FL resident,04/07/20,2020-04-07
+117,Broward,64,Male,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+114,Broward,80,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+110,Broward,88,Male,Unknown,NaN,Yes,FL resident,04/07/20,2020-04-07
+113,Broward,53,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+112,Broward,61,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+871,Palm Beach,67,Female,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+111,Broward,88,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+869,Palm Beach,80,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+992,Sarasota,94,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+1014,St. Johns,79,Male,Yes,PA,Yes,FL resident,04/07/20,2020-04-07
+586,Highlands,81,Male,No,NaN,No,FL resident,04/07/20,2020-04-07
+873,Palm Beach,93,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+9,Bradford,85,Female,No,NaN,Unknown,FL resident,04/07/20,2020-04-07
+421,Dade,56,Male,Yes,IL,Yes,FL resident,04/07/20,2020-04-07
+420,Dade,85,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+419,Dade,91,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+418,Dade,82,Male,Unknown,NaN,Yes,FL resident,04/07/20,2020-04-07
+417,Dade,72,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+416,Dade,77,Male,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+415,Dade,48,Female,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+414,Dade,74,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+413,Dade,95,Male,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+872,Palm Beach,71,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+411,Dade,91,Male,No,NaN,No,FL resident,04/07/20,2020-04-07
+412,Dade,50,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+115,Broward,76,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+875,Palm Beach,64,Female,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+604,Hillsborough,55,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+685,Manatee,81,Female,No,NaN,No,FL resident,04/07/20,2020-04-07
+684,Manatee,82,Male,No,NaN,No,FL resident,04/07/20,2020-04-07
+220,Clay,75,Male,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+874,Palm Beach,69,Male,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+207,Citrus,88,Male,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+206,Citrus,73,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+196,Charlotte,79,Female,Unknown,NaN,Unknown,FL resident,04/07/20,2020-04-07
+410,Dade,76,Male,No,NaN,No,FL resident,04/07/20,2020-04-07
+747,Orange,85,Female,No,NaN,Yes,FL resident,04/07/20,2020-04-07
+686,Manatee,84,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
+1062,Volusia,72,Male,No,NaN,No,FL resident,04/08/20,2020-04-08
+1063,Volusia,84,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
+717,Martin,81,Female,No,NaN,No,FL resident,04/08/20,2020-04-08
+434,Dade,91,Female,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
+879,Palm Beach,96,Male,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
+878,Palm Beach,68,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
+748,Orange,85,Female,No,NaN,No,FL resident,04/08/20,2020-04-08
+880,Palm Beach,88,Female,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
+436,Dade,82,Female,Unknown,NaN,Unknown,FL resident,04/08/20,2020-04-08
+587,Highlands,61,Male,Yes,FL; NJ,Unknown,FL resident,04/08/20,2020-04-08
+582,Hernando,73,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
+570,Escambia,69,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
+422,Dade,88,Male,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
+423,Dade,90,Male,Unknown,NaN,Unknown,FL resident,04/08/20,2020-04-08
+424,Dade,73,Male,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
+425,Dade,84,Female,No,NaN,Yes,FL resident,04/08/20,2020-04-08
+426,Dade,60,Male,Yes,VA,Yes,FL resident,04/08/20,2020-04-08
+427,Dade,56,Female,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
+428,Dade,44,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
+429,Dade,57,Female,No,NaN,No,FL resident,04/08/20,2020-04-08
+430,Dade,68,Female,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
+431,Dade,92,Male,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
+432,Dade,66,Female,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
+433,Dade,68,Male,No,NaN,No,FL resident,04/08/20,2020-04-08
+877,Palm Beach,59,Female,Unknown,NaN,Unknown,FL resident,04/08/20,2020-04-08
+876,Palm Beach,50,Male,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
+954,Polk,84,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
+118,Broward,89,Male,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
+221,Clay,91,Female,No,NaN,No,FL resident,04/08/20,2020-04-08
+435,Dade,91,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
+119,Broward,96,Female,No,NaN,No,FL resident,04/08/20,2020-04-08
+120,Broward,91,Male,Unknown,NaN,Unknown,FL resident,04/08/20,2020-04-08
+121,Broward,66,Male,Yes,NaN,NJ,FL resident,04/08/20,2020-04-08
+122,Broward,87,Female,No,NaN,Unknown,FL resident,04/08/20,2020-04-08
+123,Broward,96,Male,Unknown,NaN,Unknown,FL resident,04/08/20,2020-04-08
+652,Lee,74,Male,No,NaN,No,FL resident,04/08/20,2020-04-08
+651,Lee,94,Female,Yes,FL; NJ,Yes,FL resident,04/08/20,2020-04-08
+1006,Seminole,62,Male,No,NaN,Yes,FL resident,04/08/20,2020-04-08
+650,Lee,86,Male,Yes,NJ,Yes,FL resident,04/08/20,2020-04-08
+935,Pinellas,80,Male,Yes,NY,Unknown,FL resident,04/09/20,2020-04-09
+1064,Volusia,71,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+718,Martin,79,Female,No,NaN,No,FL resident,04/09/20,2020-04-09
+1007,Seminole,79,Male,No,NaN,Unknown,FL resident,04/09/20,2020-04-09
+934,Pinellas,74,Male,No,NaN,No,FL resident,04/09/20,2020-04-09
+969,Santa Rosa,66,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+957,Polk,85,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+956,Polk,85,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+955,Polk,91,Male,No,NaN,Unknown,FL resident,04/09/20,2020-04-09
+885,Palm Beach,83,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+884,Palm Beach,74,Male,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
+883,Palm Beach,84,Female,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
+882,Palm Beach,82,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+881,Palm Beach,82,Male,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
+936,Pinellas,79,Male,No,NaN,No,FL resident,04/09/20,2020-04-09
+1025,St. Lucie,92,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+749,Orange,66,Male,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
+1,Alachua,78,Female,Unknown,NaN,No,FL resident,04/09/20,2020-04-09
+437,Dade,95,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+665,Leon,62,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+222,Clay,77,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+687,Manatee,74,Male,No,NaN,No,FL resident,04/09/20,2020-04-09
+688,Manatee,73,Male,No,NaN,No,FL resident,04/09/20,2020-04-09
+126,Broward,86,Male,No,NaN,Unknown,FL resident,04/09/20,2020-04-09
+125,Broward,55,Female,Unknown,NaN,Yes,FL resident,04/09/20,2020-04-09
+124,Broward,96,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+654,Lee,79,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+653,Lee,70,Male,No,NaN,No,FL resident,04/09/20,2020-04-09
+233,Collier,90,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+130,Broward,92,Male,No,NaN,Unknown,FL resident,04/09/20,2020-04-09
+444,Dade,76,Male,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
+128,Broward,88,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+443,Dade,67,Female,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
+438,Dade,74,Male,No,NaN,No,FL resident,04/09/20,2020-04-09
+439,Dade,67,Male,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
+440,Dade,90,Female,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+441,Dade,94,Female,No,NaN,Unknown,FL resident,04/09/20,2020-04-09
+127,Broward,61,Male,Unknown,NaN,Unknown,FL resident,04/09/20,2020-04-09
+129,Broward,71,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+588,Highlands,59,Male,No,NaN,Yes,FL resident,04/09/20,2020-04-09
+442,Dade,38,Female,No,NaN,No,FL resident,04/09/20,2020-04-09
+208,Citrus,75,Male,Yes,FL; UNKNOWN,Unknown,FL resident,04/10/20,2020-04-10
+920,Pasco,82,Female,No,NaN,No,FL resident,04/10/20,2020-04-10
+223,Clay,79,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
+605,Hillsborough,64,Female,Yes,NJ,Yes,FL resident,04/10/20,2020-04-10
+937,Pinellas,90,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
+132,Broward,40,Female,Unknown,NaN,Unknown,FL resident,04/10/20,2020-04-10
+624,Lake,81,Female,No,NaN,Yes,FL resident,04/10/20,2020-04-10
+14,Brevard,91,Female,No,NaN,Unknown,FL resident,04/10/20,2020-04-10
+131,Broward,82,Female,Unknown,NaN,Unknown,FL resident,04/10/20,2020-04-10
+234,Collier,85,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
+445,Dade,57,Male,Unknown,NaN,Unknown,FL resident,04/10/20,2020-04-10
+888,Palm Beach,86,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
+993,Sarasota,83,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
+1026,St. Lucie,80,Female,No,NaN,Yes,FL resident,04/10/20,2020-04-10
+453,Dade,88,Male,No,NaN,No,FL resident,04/10/20,2020-04-10
+452,Dade,65,Male,Unknown,NaN,Unknown,FL resident,04/10/20,2020-04-10
+133,Broward,58,Male,Unknown,NaN,Unknown,FL resident,04/10/20,2020-04-10
+450,Dade,86,Male,No,NaN,Unknown,FL resident,04/10/20,2020-04-10
+970,Santa Rosa,69,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
+449,Dade,75,Male,No,NaN,Unknown,FL resident,04/10/20,2020-04-10
+448,Dade,71,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
+447,Dade,81,Female,Yes,NY,Unknown,FL resident,04/10/20,2020-04-10
+451,Dade,92,Male,No,NaN,Yes,FL resident,04/10/20,2020-04-10
+886,Palm Beach,66,Male,Unknown,NaN,No,FL resident,04/10/20,2020-04-10
+887,Palm Beach,73,Male,No,NaN,Unknown,FL resident,04/10/20,2020-04-10
+136,Broward,88,Male,Unknown,NaN,Unknown,FL resident,04/10/20,2020-04-10
+135,Broward,91,Female,No,NaN,Yes,FL resident,04/10/20,2020-04-10
+197,Charlotte,81,Female,No,NaN,No,FL resident,04/10/20,2020-04-10
+134,Broward,72,Female,No,NaN,No,FL resident,04/10/20,2020-04-10
+446,Dade,75,Male,Unknown,NaN,Yes,FL resident,04/10/20,2020-04-10
+198,Charlotte,90,Male,No,NaN,No,FL resident,04/10/20,2020-04-10
+464,Dade,85,Female,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
+462,Dade,80,Female,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
+461,Dade,55,Male,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
+460,Dade,75,Male,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
+459,Dade,72,Male,No,NaN,Unknown,FL resident,04/11/20,2020-04-11
+458,Dade,71,Female,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
+455,Dade,90,Male,No,NaN,No,FL resident,04/11/20,2020-04-11
+456,Dade,66,Male,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
+454,Dade,61,Male,No,NaN,Unknown,FL resident,04/11/20,2020-04-11
+1051,Suwannee,77,Female,No,NaN,Yes,FL resident,04/11/20,2020-04-11
+890,Palm Beach,62,Male,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
+891,Palm Beach,93,Female,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
+15,Brevard,84,Male,No,NaN,Yes,FL resident,04/11/20,2020-04-11
+892,Palm Beach,66,Female,No,NaN,Yes,FL resident,04/11/20,2020-04-11
+457,Dade,55,Female,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
+889,Palm Beach,92,Male,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
+463,Dade,69,Female,Unknown,NaN,Unknown,FL resident,04/11/20,2020-04-11
+612,Indian River,83,Male,No,NaN,Yes,FL resident,04/11/20,2020-04-11
+613,Indian River,90,Male,No,NaN,Yes,FL resident,04/11/20,2020-04-11
+617,Jefferson,89,Male,No,NaN,Yes,FL resident,04/11/20,2020-04-11
+589,Highlands,62,Female,No,NaN,Unknown,FL resident,04/11/20,2020-04-11
+655,Lee,93,Female,No,NaN,No,FL resident,04/11/20,2020-04-11
+762,Osceola,72,Female,No,NaN,Yes,FL resident,04/11/20,2020-04-11
+137,Broward,90,Male,No,NaN,Unknown,FL resident,04/11/20,2020-04-11
+692,Manatee,90,Male,No,NaN,Yes,FL resident,04/11/20,2020-04-11
+691,Manatee,81,Female,No,NaN,Unknown,FL resident,04/11/20,2020-04-11
+690,Manatee,90,Male,No,NaN,No,FL resident,04/11/20,2020-04-11
+689,Manatee,91,Male,No,NaN,Unknown,FL resident,04/11/20,2020-04-11
+750,Orange,49,Male,No,NaN,Yes,FL resident,04/11/20,2020-04-11
+471,Dade,66,Female,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
+144,Broward,74,Male,No,NaN,Yes,FL resident,04/12/20,2020-04-12
+145,Broward,77,Female,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
+146,Broward,73,Female,Unknown,NaN,No,FL resident,04/12/20,2020-04-12
+994,Sarasota,96,Female,No,NaN,Yes,FL resident,04/12/20,2020-04-12
+143,Broward,96,Female,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
+995,Sarasota,68,Male,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
+465,Dade,81,Female,No,NaN,No,FL resident,04/12/20,2020-04-12
+466,Dade,61,Male,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
+467,Dade,81,Female,Unknown,NaN,Yes,FL resident,04/12/20,2020-04-12
+468,Dade,98,Female,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
+469,Dade,54,Male,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
+470,Dade,84,Male,No,NaN,Yes,FL resident,04/12/20,2020-04-12
+147,Broward,86,Female,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
+142,Broward,84,Female,No,NaN,No,FL resident,04/12/20,2020-04-12
+138,Broward,66,Male,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
+1028,St. Lucie,91,Female,No,NaN,Yes,FL resident,04/12/20,2020-04-12
+1029,St. Lucie,82,Female,Yes,ECUADOR,No,FL resident,04/12/20,2020-04-12
+141,Broward,66,Male,No,NaN,No,FL resident,04/12/20,2020-04-12
+140,Broward,64,Male,No,NaN,No,FL resident,04/12/20,2020-04-12
+139,Broward,83,Male,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
+199,Charlotte,88,Female,Unknown,NaN,No,FL resident,04/12/20,2020-04-12
+209,Citrus,84,Female,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
+210,Citrus,87,Male,No,NaN,Yes,FL resident,04/12/20,2020-04-12
+939,Pinellas,84,Female,No,NaN,No,FL resident,04/12/20,2020-04-12
+938,Pinellas,66,Male,No,NaN,No,FL resident,04/12/20,2020-04-12
+893,Palm Beach,79,Female,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
+894,Palm Beach,93,Female,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
+235,Collier,101,Female,No,NaN,Yes,FL resident,04/12/20,2020-04-12
+895,Palm Beach,79,Male,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
+1027,St. Lucie,93,Female,No,NaN,Yes,FL resident,04/12/20,2020-04-12
+472,Dade,88,Female,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
+896,Palm Beach,97,Female,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
+148,Broward,72,Male,Yes,COLOMBIA; FL,Yes,FL resident,04/12/20,2020-04-12
+545,Desoto,60,Male,No,NaN,Yes,FL resident,04/12/20,2020-04-12
+571,Escambia,85,Male,No,NaN,Unknown,FL resident,04/12/20,2020-04-12
+606,Hillsborough,66,Male,Unknown,NaN,Unknown,FL resident,04/12/20,2020-04-12
+607,Hillsborough,94,Female,Unknown,NaN,No,FL resident,04/12/20,2020-04-12
+693,Manatee,49,Female,No,NaN,Yes,FL resident,04/12/20,2020-04-12
+1053,Suwannee,62,Female,No,NaN,Yes,FL resident,04/13/20,2020-04-13
+897,Palm Beach,71,Female,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
+1052,Suwannee,81,Male,No,NaN,Yes,FL resident,04/13/20,2020-04-13
+578,Hendry,77,Male,No,NaN,Yes,FL resident,04/13/20,2020-04-13
+236,Collier,85,Male,Yes,NY,Unknown,FL resident,04/13/20,2020-04-13
+625,Lake,83,Female,No,NaN,No,FL resident,04/13/20,2020-04-13
+656,Lee,97,Female,No,NaN,Yes,FL resident,04/13/20,2020-04-13
+940,Pinellas,84,Male,No,NaN,No,FL resident,04/13/20,2020-04-13
+958,Polk,90,Male,Unknown,NaN,No,FL resident,04/13/20,2020-04-13
+694,Manatee,52,Male,No,NaN,No,FL resident,04/13/20,2020-04-13
+695,Manatee,73,Male,Unknown,NaN,No,FL resident,04/13/20,2020-04-13
+719,Martin,77,Male,No,NaN,Unknown,FL resident,04/13/20,2020-04-13
+996,Sarasota,83,Male,No,NaN,No,FL resident,04/13/20,2020-04-13
+155,Broward,72,Male,No,NaN,Unknown,FL resident,04/13/20,2020-04-13
+154,Broward,51,Male,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
+153,Broward,91,Male,No,NaN,Yes,FL resident,04/13/20,2020-04-13
+152,Broward,71,Female,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
+151,Broward,56,Female,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
+150,Broward,79,Female,No,NaN,Yes,FL resident,04/13/20,2020-04-13
+1054,Suwannee,74,Male,No,NaN,Yes,FL resident,04/13/20,2020-04-13
+149,Broward,46,Male,No,NaN,No,FL resident,04/13/20,2020-04-13
+608,Hillsborough,35,Female,Unknown,NaN,No,FL resident,04/13/20,2020-04-13
+475,Dade,80,Male,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
+474,Dade,72,Female,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
+473,Dade,83,Male,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
+476,Dade,72,Male,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
+477,Dade,88,Male,Unknown,NaN,Unknown,FL resident,04/13/20,2020-04-13
+478,Dade,87,Female,No,NaN,Yes,FL resident,04/13/20,2020-04-13
+479,Dade,89,Female,No,NaN,Unknown,FL resident,04/13/20,2020-04-13
+480,Dade,59,Female,No,NaN,No,FL resident,04/13/20,2020-04-13
+481,Dade,87,Female,No,NaN,Unknown,FL resident,04/13/20,2020-04-13
+482,Dade,47,Male,No,NaN,Yes,FL resident,04/13/20,2020-04-13
+485,Dade,60,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+1044,Sumter,89,Male,No,NaN,Yes,FL resident,04/14/20,2020-04-14
+658,Lee,61,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+484,Dade,51,Female,Unknown,NaN,Yes,FL resident,04/14/20,2020-04-14
+483,Dade,86,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+959,Polk,82,Male,No,NaN,Yes,FL resident,04/14/20,2020-04-14
+1065,Volusia,73,Female,No,NaN,Yes,FL resident,04/14/20,2020-04-14
+657,Lee,93,Male,No,NaN,Unknown,FL resident,04/14/20,2020-04-14
+237,Collier,81,Female,No,NaN,Yes,FL resident,04/14/20,2020-04-14
+960,Polk,87,Male,No,NaN,Unknown,FL resident,04/14/20,2020-04-14
+487,Dade,74,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+496,Dade,81,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+495,Dade,54,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+494,Dade,82,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+493,Dade,89,Male,No,NaN,Unknown,FL resident,04/14/20,2020-04-14
+492,Dade,98,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+491,Dade,69,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+156,Broward,93,Female,No,NaN,Yes,FL resident,04/14/20,2020-04-14
+486,Dade,80,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+157,Broward,71,Female,Unknown,NaN,Yes,FL resident,04/14/20,2020-04-14
+159,Broward,66,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+160,Broward,61,Female,Unknown,NaN,Yes,FL resident,04/14/20,2020-04-14
+490,Dade,87,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+489,Dade,81,Male,No,NaN,Yes,FL resident,04/14/20,2020-04-14
+1030,St. Lucie,71,Female,No,NaN,Yes,FL resident,04/14/20,2020-04-14
+696,Manatee,83,Male,No,NaN,Yes,FL resident,04/14/20,2020-04-14
+488,Dade,58,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+158,Broward,91,Female,No,NaN,Unknown,FL resident,04/14/20,2020-04-14
+901,Palm Beach,85,Female,No,NaN,Unknown,FL resident,04/14/20,2020-04-14
+497,Dade,69,Female,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+1055,Suwannee,79,Male,Unknown,NaN,Yes,FL resident,04/14/20,2020-04-14
+16,Brevard,73,Female,No,NaN,Yes,FL resident,04/14/20,2020-04-14
+898,Palm Beach,67,Male,No,NaN,Yes,FL resident,04/14/20,2020-04-14
+899,Palm Beach,43,Male,Unknown,NaN,Unknown,FL resident,04/14/20,2020-04-14
+900,Palm Beach,81,Male,No,NaN,Unknown,FL resident,04/14/20,2020-04-14
+1067,Volusia,78,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+614,Indian River,92,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+238,Collier,88,Female,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+499,Dade,78,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+626,Lake,71,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+902,Palm Beach,90,Male,No,NaN,Unknown,FL resident,04/15/20,2020-04-15
+751,Orange,83,Male,Unknown,NaN,No,FL resident,04/15/20,2020-04-15
+162,Broward,99,Female,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
+997,Sarasota,79,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+998,Sarasota,89,Male,No,NaN,No,FL resident,04/15/20,2020-04-15
+161,Broward,33,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+1008,Seminole,76,Female,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+1009,Seminole,72,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+500,Dade,86,Female,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
+498,Dade,93,Female,Unknown,NaN,No,FL resident,04/15/20,2020-04-15
+501,Dade,87,Male,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
+502,Dade,72,Male,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
+1066,Volusia,97,Female,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+17,Brevard,77,Female,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+906,Palm Beach,81,Male,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
+905,Palm Beach,85,Male,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
+573,Escambia,95,Male,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+572,Escambia,75,Female,No,NaN,Unknown,FL resident,04/15/20,2020-04-15
+904,Palm Beach,83,Female,No,NaN,Yes,FL resident,04/15/20,2020-04-15
+903,Palm Beach,89,Male,Unknown,NaN,Unknown,FL resident,04/15/20,2020-04-15
+1068,Volusia,94,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+999,Sarasota,62,Male,No,NaN,Unknown,FL resident,04/16/20,2020-04-16
+907,Palm Beach,62,Male,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
+752,Orange,77,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+163,Broward,72,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+164,Broward,35,Male,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+1056,Suwannee,63,Male,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+165,Broward,73,Male,Yes,HAITI,Unknown,FL resident,04/16/20,2020-04-16
+705,Manatee,84,Male,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+704,Manatee,91,Male,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
+703,Manatee,75,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+702,Manatee,58,Male,No,NaN,No,FL resident,04/16/20,2020-04-16
+701,Manatee,94,Female,No,NaN,No,FL resident,04/16/20,2020-04-16
+700,Manatee,66,Female,No,NaN,No,FL resident,04/16/20,2020-04-16
+697,Manatee,67,Female,No,NaN,No,FL resident,04/16/20,2020-04-16
+211,Citrus,81,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+698,Manatee,81,Male,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
+511,Dade,85,Female,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
+508,Dade,84,Male,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
+503,Dade,60,Male,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
+609,Hillsborough,57,Male,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+504,Dade,55,Male,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
+239,Collier,32,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+505,Dade,69,Female,No,NaN,Unknown,FL resident,04/16/20,2020-04-16
+506,Dade,96,Female,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
+615,Indian River,91,Male,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+507,Dade,70,Female,Yes,NY,Yes,FL resident,04/16/20,2020-04-16
+659,Lee,94,Male,No,NaN,Unknown,FL resident,04/16/20,2020-04-16
+1010,Seminole,72,Male,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+699,Manatee,68,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+941,Pinellas,96,Female,No,NaN,No,FL resident,04/16/20,2020-04-16
+942,Pinellas,92,Female,No,NaN,No,FL resident,04/16/20,2020-04-16
+943,Pinellas,75,Male,No,NaN,No,FL resident,04/16/20,2020-04-16
+509,Dade,78,Male,No,NaN,Unknown,FL resident,04/16/20,2020-04-16
+510,Dade,65,Female,Unknown,NaN,Unknown,FL resident,04/16/20,2020-04-16
+224,Clay,85,Female,No,NaN,Yes,FL resident,04/16/20,2020-04-16
+514,Dade,82,Female,Unknown,NaN,Unknown,FL resident,04/17/20,2020-04-17
+513,Dade,85,Female,Unknown,NaN,Unknown,FL resident,04/17/20,2020-04-17
+166,Broward,54,Male,No,NaN,Unknown,FL resident,04/17/20,2020-04-17
+706,Manatee,80,Male,No,NaN,No,FL resident,04/17/20,2020-04-17
+908,Palm Beach,66,Female,Unknown,NaN,Unknown,FL resident,04/17/20,2020-04-17
+909,Palm Beach,89,Female,No,NaN,No,FL resident,04/17/20,2020-04-17
+512,Dade,94,Male,Unknown,NaN,Yes,FL resident,04/17/20,2020-04-17
+516,Dade,69,Male,No,NaN,Yes,FL resident,04/17/20,2020-04-17
+910,Palm Beach,89,Female,Unknown,NaN,Unknown,FL resident,04/17/20,2020-04-17
+517,Dade,85,Male,Unknown,NaN,Unknown,FL resident,04/17/20,2020-04-17
+1069,Volusia,33,Male,Yes,CA; NV; TX,No,FL resident,04/17/20,2020-04-17
+627,Lake,85,Male,No,NaN,No,FL resident,04/17/20,2020-04-17
+944,Pinellas,90,Female,No,NaN,Yes,FL resident,04/17/20,2020-04-17
+1045,Sumter,78,Female,No,NaN,Yes,FL resident,04/17/20,2020-04-17
+961,Polk,82,Female,No,NaN,Yes,FL resident,04/17/20,2020-04-17
+515,Dade,96,Male,No,NaN,No,FL resident,04/17/20,2020-04-17
+1031,St. Lucie,94,Female,No,NaN,No,FL resident,04/18/20,2020-04-18
+709,Manatee,90,Female,No,NaN,Yes,FL resident,04/18/20,2020-04-18
+521,Dade,96,Male,No,NaN,No,FL resident,04/18/20,2020-04-18
+1001,Sarasota,81,Male,No,NaN,Yes,FL resident,04/18/20,2020-04-18
+2,Alachua,67,Female,No,NaN,Yes,FL resident,04/18/20,2020-04-18
+574,Escambia,52,Female,No,NaN,Yes,FL resident,04/18/20,2020-04-18
+921,Pasco,85,Male,No,NaN,Yes,FL resident,04/18/20,2020-04-18
+1000,Sarasota,93,Female,No,NaN,Yes,FL resident,04/18/20,2020-04-18
+708,Manatee,61,Female,No,NaN,No,FL resident,04/18/20,2020-04-18
+520,Dade,26,Male,No,NaN,Unknown,FL resident,04/18/20,2020-04-18
+518,Dade,72,Male,No,NaN,No,FL resident,04/18/20,2020-04-18
+579,Hendry,96,Male,No,NaN,Unknown,FL resident,04/18/20,2020-04-18
+707,Manatee,80,Female,No,NaN,No,FL resident,04/18/20,2020-04-18
+911,Palm Beach,91,Male,Unknown,NaN,Unknown,FL resident,04/18/20,2020-04-18
+519,Dade,96,Female,Unknown,NaN,Unknown,FL resident,04/18/20,2020-04-18
+528,Dade,81,Female,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
+527,Dade,80,Male,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
+526,Dade,74,Male,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
+525,Dade,82,Male,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
+912,Palm Beach,93,Male,No,NaN,Unknown,FL resident,04/19/20,2020-04-19
+725,Okaloosa,90,Male,No,NaN,Yes,FL resident,04/19/20,2020-04-19
+524,Dade,72,Male,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
+753,Orange,42,Male,No,NaN,Yes,FL resident,04/19/20,2020-04-19
+661,Lee,92,Female,No,NaN,No,FL resident,04/19/20,2020-04-19
+1002,Sarasota,69,Female,No,NaN,Yes,FL resident,04/19/20,2020-04-19
+666,Leon,81,Female,No,NaN,No,FL resident,04/19/20,2020-04-19
+754,Orange,95,Male,Unknown,NaN,Yes,FL resident,04/19/20,2020-04-19
+523,Dade,66,Female,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
+168,Broward,60,Male,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
+522,Dade,94,Female,Unknown,NaN,Unknown,FL resident,04/19/20,2020-04-19
+167,Broward,91,Male,No,NaN,Yes,FL resident,04/19/20,2020-04-19
+212,Citrus,72,Female,No,NaN,Yes,FL resident,04/19/20,2020-04-19
+660,Lee,80,Male,No,NaN,Unknown,FL resident,04/19/20,2020-04-19
+1070,Volusia,88,Male,No,NaN,Yes,FL resident,04/20/20,2020-04-20
+1072,Volusia,75,Male,No,NaN,No,FL resident,04/20/20,2020-04-20
+1071,Volusia,68,Male,No,NaN,Yes,FL resident,04/20/20,2020-04-20
+710,Manatee,61,Female,No,NaN,No,FL resident,04/20/20,2020-04-20
+170,Broward,48,Female,No,NaN,Unknown,FL resident,04/20/20,2020-04-20
+225,Clay,93,Female,No,NaN,Unknown,FL resident,04/20/20,2020-04-20
+169,Broward,75,Female,No,NaN,Unknown,FL resident,04/20/20,2020-04-20
+913,Palm Beach,92,Female,No,NaN,Yes,FL resident,04/20/20,2020-04-20
+529,Dade,76,Female,Unknown,NaN,Unknown,FL resident,04/20/20,2020-04-20
+530,Dade,95,Male,Unknown,NaN,Unknown,FL resident,04/20/20,2020-04-20
+962,Polk,44,Male,No,NaN,No,FL resident,04/20/20,2020-04-20
+532,Dade,92,Male,Unknown,NaN,Unknown,FL resident,04/20/20,2020-04-20
+531,Dade,82,Male,Unknown,NaN,Unknown,FL resident,04/20/20,2020-04-20
+1073,Volusia,90,Female,No,NaN,No,FL resident,04/20/20,2020-04-20
+667,Madison,89,Male,No,NaN,Yes,FL resident,04/20/20,2020-04-20
+668,Madison,86,Male,No,NaN,Yes,FL resident,04/20/20,2020-04-20
+963,Polk,96,Female,No,NaN,Yes,FL resident,04/20/20,2020-04-20
+534,Dade,77,Male,Unknown,NaN,Unknown,FL resident,04/21/20,2020-04-21
+610,Hillsborough,92,Female,Unknown,NaN,Yes,FL resident,04/21/20,2020-04-21
+662,Lee,90,Female,Unknown,NaN,Unknown,FL resident,04/21/20,2020-04-21
+914,Palm Beach,83,Male,Unknown,NaN,Unknown,FL resident,04/21/20,2020-04-21
+915,Palm Beach,92,Male,No,NaN,Unknown,FL resident,04/21/20,2020-04-21
+533,Dade,80,Male,Unknown,NaN,Unknown,FL resident,04/21/20,2020-04-21
+240,Collier,74,Male,No,NaN,Yes,FL resident,04/21/20,2020-04-21
+171,Broward,99,Female,No,NaN,Yes,FL resident,04/21/20,2020-04-21
+172,Broward,53,Female,Unknown,NaN,Yes,FL resident,04/21/20,2020-04-21
+1032,St. Lucie,97,Female,No,NaN,Yes,FL resident,04/21/20,2020-04-21
+178,Broward,62,Male,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
+177,Broward,86,Male,No,NaN,Unknown,FL resident,04/22/20,2020-04-22
+175,Broward,94,Male,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
+179,Broward,88,Female,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
+180,Broward,69,Male,No,NaN,Unknown,FL resident,04/22/20,2020-04-22
+1033,St. Lucie,91,Female,No,NaN,Yes,FL resident,04/22/20,2020-04-22
+181,Broward,82,Male,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
+182,Broward,75,Female,No,NaN,Yes,FL resident,04/22/20,2020-04-22
+916,Palm Beach,78,Male,No,NaN,Unknown,FL resident,04/22/20,2020-04-22
+174,Broward,58,Male,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
+173,Broward,81,Female,No,NaN,Unknown,FL resident,04/22/20,2020-04-22
+663,Lee,89,Male,No,NaN,Unknown,FL resident,04/22/20,2020-04-22
+664,Lee,67,Male,Unknown,NaN,Unknown,FL resident,04/22/20,2020-04-22
+176,Broward,81,Male,No,NaN,Yes,FL resident,04/22/20,2020-04-22
+538,Dade,68,Female,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
+539,Dade,77,Male,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
+536,Dade,88,Female,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
+537,Dade,87,Male,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
+714,Marion,60,Female,No,NaN,Yes,FL resident,04/23/20,2020-04-23
+917,Palm Beach,94,Female,No,NaN,Unknown,FL resident,04/23/20,2020-04-23
+183,Broward,91,Male,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
+945,Pinellas,95,Male,No,NaN,No,FL resident,04/23/20,2020-04-23
+184,Broward,60,Male,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
+201,Charlotte,96,Female,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
+200,Charlotte,90,Female,No,NaN,Yes,FL resident,04/23/20,2020-04-23
+185,Broward,95,Female,No,NaN,Unknown,FL resident,04/23/20,2020-04-23
+535,Dade,86,Male,Unknown,NaN,Unknown,FL resident,04/23/20,2020-04-23
+540,Dade,83,Female,Unknown,NaN,Unknown,FL resident,04/24/20,2020-04-24
+541,Dade,96,Male,Unknown,NaN,Unknown,FL resident,04/24/20,2020-04-24
+187,Broward,57,Male,No,NaN,No,FL resident,04/25/20,2020-04-25
+186,Broward,80,Female,No,NaN,Yes,FL resident,04/25/20,2020-04-25

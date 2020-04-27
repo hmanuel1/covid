@@ -24,7 +24,8 @@ def get_pdf_name(url, class_dict):
         download = s.get(url)
         html = download.text
 
-    soup = BeautifulSoup(html, features='lxml')
+    #soup = BeautifulSoup(html, features='lxml')
+    soup = BeautifulSoup(html, features="html.parser")
     body = soup.find('div', class_dict)
     paragraphs = body.find_all('p')
 
@@ -206,7 +207,6 @@ def download_fldem():
     df = fl_clean_data(download=True)
     df.to_csv(join(cwd(), 'data', 'flclean.csv'), index=False)
 
-if __name__ == "__main__":
-
+if False:
     # unit test
     download_fldem()
