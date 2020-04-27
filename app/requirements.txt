@@ -25,7 +25,6 @@ Jinja2==2.11.2
 kiwisolver==1.2.0
 MarkupSafe==1.1.1
 matplotlib==3.2.1
-mkl-random==1.1.0
 mkl-service==2.3.0
 multidict==4.7.5
 munch==2.5.0
