@@ -1,6 +1,7 @@
 setup:
   config: {}
 build:
+  packages:
     - gdal-bin
   languages:
     - python
