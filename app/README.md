@@ -8,7 +8,7 @@
 
 Map section is an interactive US map showing COVID19 cases by US county.
 
-<img src="images/maps.png" width="500" alt="Maps"/>
+<img src="images/maps.PNG" width="500" alt="Maps"/>
 
 
 ### Trends
@@ -17,7 +17,7 @@ Map section is an interactive US map showing COVID19 cases by US county.
 
 Trends section include interactive line graphs showing COVID19 cases and deaths by State. In addition is showing 15-days prediction based on previous trends for each State. You can select one or multiple States from a selection list on the left.
 
-<img src="images/trends.png" width="500" alt="Trends"/>
+<img src="images/trends.PNG" width="500" alt="Trends"/>
 
 ### Histograms
 
@@ -25,7 +25,7 @@ Trends section include interactive line graphs showing COVID19 cases and deaths 
 
 Histograms section is base on data released by the State of Florida Division of Emergency Management. It explores distributions of COVID19 accross different age groups and gender.
 
-<img src="images/histograms.png" width="500" alt="Histograms"/>
+<img src="images/histograms.PNG" width="500" alt="Histograms"/>
 
 
 ### Models
@@ -34,7 +34,7 @@ Histograms section is base on data released by the State of Florida Division of 
 
 Models section explores COVID19 deaths correlation with age, and density population in Florida using multiple classification models.
 
-<img src="images/models.png" width="500" alt="Models"/>
+<img src="images/models.PNG" width="500" alt="Models"/>
 
 
 ### Data Sources
