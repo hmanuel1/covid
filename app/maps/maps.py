@@ -144,7 +144,7 @@ def choropleth_map(state_map, us_map, palette, legend_location=None,
                 tooltips=[('County', '@NAME'),
                 ('Cases', '@c{0,0}'),
                 ('Deaths', '@d{0,0}'),
-                ('Population', '@pop{0,0}')]))
+                ('Population', '@population{0,0}')]))
 
     # build custom legend
     # for custom legend
