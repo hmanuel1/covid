@@ -1,0 +1,53 @@
+
+### Access Live
+[https://hbap-analytics.com](https://hbap-analytics.com)
+
+### Maps
+
+---
+
+Map section is an interactive US map showing COVID19 cases by US county.
+
+<img src="images/maps.png" width="500" alt="Maps"/>
+
+
+### Trends
+
+---
+
+Trends section include interactive line graphs showing COVID19 cases and deaths by State. In addition is showing 15-days prediction based on previous trends for each State. You can select one or multiple States from a selection list on the left.
+
+<img src="images/trends.png" width="500" alt="Maps"/>
+
+### Histograms
+
+---
+
+Histograms section is base on data released by the State of Florida Division of Emergency Management. It explores distributions of COVID19 accross different age groups and gender.
+
+<img src="images/histograms.png" width="500" alt="Maps"/>
+
+
+### Models
+
+---
+
+Models section explores COVID19 deaths correlation with age, and density population in Florida using multiple classification models.
+
+<img src="images/models.png" width="500" alt="Maps"/>
+
+
+### Data Sources
+
+* [New York Times](https://www.nytimes.com/)
+* [Florida Division of Emergency Management](https://floridadisaster.org/covid19/)
+
+
+### Technologies
+
+* Python
+* Bokeh
+* HTML
+* JavaScript
+* AJAX
+* AI and ML
