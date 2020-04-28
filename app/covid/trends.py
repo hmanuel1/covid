@@ -12,14 +12,18 @@ from bokeh.models import (ColumnDataSource, Select, CustomJS,
                         WheelZoomTool, PanTool, HoverTool, SaveTool,
                         BoxZoomTool, ResetTool)
 
+side = 'client'
+
 def cases_trends(df, y_var, palette=Purples[3], title=None, plot_width=600,
         plot_height=600):
     # state category
     cats = sorted(list(df['state'].unique()))
 
+    figure_settings = dict(plot_width=plot_width, plot_height=plot_height,
+                           tools='save, box_zoom, reset')
+
     # plot
-    p = figure(x_axis_type='datetime', plot_width=plot_width,
-            plot_height=plot_height, title=title)
+    p = figure(x_axis_type='datetime', title=title, **figure_settings)
 
     source = dict()
     ly_var = dict()
@@ -197,8 +201,14 @@ def show_predictions(cases, deaths, start_date, palette=Purples[3]):
         out_deaths['vareaf'][cat].visible = True
 
     # add multiselect
-    mselect = multi_select_server(value=top10_cases,
-            glyphs=[out_cases, out_deaths])
+    if side == 'server':
+        mselect = multi_select_server(value=top10_cases,
+                glyphs=[out_cases, out_deaths])
+
+    if side == 'client':
+        mselect = multi_select_client(value=top10_cases,
+                glyphs=[out_cases, out_deaths])
+
     mselect.max_width = 180
     mselect.min_height = 500-40
 
