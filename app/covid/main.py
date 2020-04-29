@@ -27,7 +27,6 @@ from maps import build_us_map
 from trends import show_predictions
 from fits import models_result
 
-# pylint: disable=invalid-name
 
 def refresh():
     """
@@ -87,8 +86,7 @@ def get_data_sets():
                       dtype={'statefp': 'str'})
     sel = sel.loc[sel['statefp'].isin(
         us_map['STATEFP'].unique())].copy(deep=True)
-    options = [(x, y) for x, y in zip(sel['statefp'], sel['name'])]
-    options = [('a', 'USA')] + options
+    options = [('a', 'USA')] + list(zip(sel['statefp'], sel['name']))
 
     return df, us_map, state_map, data, roc, fi, options, cases, deaths
 

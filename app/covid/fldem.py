@@ -13,7 +13,6 @@ import requests
 from bs4 import BeautifulSoup
 import PyPDF2
 
-# pylint: disable=invalid-name
 
 def cwd():
     """
@@ -35,9 +34,9 @@ def get_pdf_name(url, class_dict):
         Get pdf name from URL.
     """
 
-    with requests.Session() as s:
-        s.trust_env = False
-        download = s.get(url)
+    with requests.Session() as session:
+        session.trust_env = False
+        download = session.get(url)
         html = download.text
 
     #soup = BeautifulSoup(html, features='lxml')
@@ -85,8 +84,8 @@ def pdf_to_text(path, marker, read_from):
                         'Contact|confirmed|Jurisdiction|Date|counted|'
                         'today|Coronavirus|case'), re.IGNORECASE)
 
-    pageList = [page.split('\n') for page in pages]
-    lines = [line for page in pageList for line in page
+    pages = [page.split('\n') for page in pages]
+    lines = [line for page in pages for line in page
              if not re.search(regex, line)]
 
     return lines
@@ -108,8 +107,7 @@ def read_data(path, marker, read_from='memory'):
                 while inner:
                     if inner[0].replace(',', '').strip().isnumeric():
                         break
-                    else:
-                        del inner[0]
+                    del inner[0]
                 if len(inner) == 7:
                     inner.insert(4, 'Unknown')
                 if len(inner) == 8:
@@ -151,9 +149,9 @@ def get_data(download=False):
         pdf_url = base_url + pdfname
 
         # get report in pdf from pdf_url
-        with requests.Session() as s:
-            s.trust_env = False
-            response = s.get(pdf_url)
+        with requests.Session() as session:
+            session.trust_env = False
+            response = session.get(pdf_url)
             pdffile = response.content
 
         # tabulate data

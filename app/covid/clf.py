@@ -24,8 +24,7 @@ from sklearn.metrics import roc_auc_score
 from sklearn.pipeline import make_pipeline
 from sklearn import metrics
 
-# pylint: disable=invalid-name
-# pylint: disable=E1121, R0913, R0914, R0915
+# pylint: disable=too-many-locals, too-many-statements
 
 np.random.seed(10)
 

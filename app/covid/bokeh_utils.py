@@ -7,9 +7,7 @@ from bokeh.plotting import figure
 from bokeh.models import (ColumnDataSource, HoverTool, Legend,
                           NumeralTickFormatter)
 
-# pylint: disable=invalid-name
-# pylint: disable=E1121, R0913, R0914
-
+# pylint: disable=too-many-locals, too-many-arguments, too-many-function-args
 
 def plot_lines(df, x=None, y=None, cat=None, title=None,
                x_axis_type='auto', y_axis_type='auto',
@@ -43,7 +41,7 @@ def plot_lines(df, x=None, y=None, cat=None, title=None,
     categories = df[cat].unique()
     lines = dict()
 
-    for category, c in zip(categories, palette):
+    for category, color in zip(categories, palette):
         data = df[df[cat] == category]
 
         source = ColumnDataSource(data)
@@ -51,14 +49,15 @@ def plot_lines(df, x=None, y=None, cat=None, title=None,
         if line_color != 'auto':
             temp_color = data[line_color].head(1).values[0]
             if temp_color != 'auto':
-                c = temp_color
+                color = temp_color
 
-        ld = line_dash
-        if ld != 'solid':
-            ld = data[line_dash].head(1).values[0]
+        temp_line_dash = line_dash
+        if line_dash != 'solid':
+            temp_line_dash = data[line_dash].head(1).values[0]
 
-        line_settings = dict(source=source, line_color=c, line_width=line_width,
-                             line_dash=ld, muted_color=c, muted_alpha=0.2)
+        line_settings = dict(source=source, line_color=color, line_width=line_width,
+                             line_dash=temp_line_dash, muted_color=color,
+                             muted_alpha=0.2)
 
         lines[category] = p.line(x, y, **line_settings)
 

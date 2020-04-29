@@ -1,5 +1,6 @@
 """
    Fit ARIMA model to cases and deaths for each US State
+   pylint: disable=invalid-name
 """
 from os import getcwd
 from os.path import dirname, join
@@ -8,7 +9,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import pmdarima as pm
 
-# pylint: disable=invalid-name
+
 
 def cwd():
     """
@@ -86,25 +87,25 @@ def run_arima(data, states, y_var, show_results=False):
     df = data.copy(deep=True)
 
     # run arima model
-    rs = arima_model(df, states, y_var)
+    arima = arima_model(df, states, y_var)
 
     # merge prediction with data and plotted
-    rs['start'] = rs['state'].map(data.groupby(['state']).min()['date'])
-    rs['date'] = rs['start'] + pd.to_timedelta(rs['index'], 'days')
-    rs = rs[['date', 'state', 'upper', 'lower', 'predict']].copy(deep=True)
-    rs[y_var] = np.nan
+    arima['start'] = arima['state'].map(data.groupby(['state']).min()['date'])
+    arima['date'] = arima['start'] + pd.to_timedelta(arima['index'], 'days')
+    arima = arima[['date', 'state', 'upper', 'lower', 'predict']].copy(deep=True)
+    arima[y_var] = np.nan
 
     df['upper'], df['lower'], df['predict'] = np.nan, np.nan, np.nan
-    df = pd.concat([df, rs], axis=0, ignore_index=True)
+    df = pd.concat([df, arima], axis=0, ignore_index=True)
 
     if show_results:
         for state in ['Florida', 'Georgia', 'Alabama', 'New York']:
-            a = df[df['state'] == state]
-            plt.plot(a['date'], a[y_var], color='blue')
-            plt.plot(a['date'], a['predict'], color='green')
-            plt.fill_between(a['date'],
-                             a['lower'],
-                             a['upper'],
+            df_state = df[df['state'] == state]
+            plt.plot(df_state['date'], df_state[y_var], color='blue')
+            plt.plot(df_state['date'], df_state['predict'], color='green')
+            plt.fill_between(df_state['date'],
+                             df_state['lower'],
+                             df_state['upper'],
                              color='k', alpha=.15)
         plt.show()
 
@@ -114,7 +115,7 @@ def run_arima(data, states, y_var, show_results=False):
 
 def predict():
     """
-    get covid19 state data
+        get covid19 state data
     """
 
     data = pd.read_csv(join(cwd(), 'data', 'us-states.csv'),

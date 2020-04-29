@@ -1,39 +1,41 @@
 """
    Data cleaning and formating module
 """
-
+from os import getcwd
+from os.path import dirname
+from os.path import join
 from warnings import simplefilter
 import re
 
 import pandas as pd
 import geopandas as gpd
-import matplotlib.pyplot as plt
 from shapely.geometry import Polygon, MultiPolygon
 from shapely.wkt import loads
 
 
-# pylint: disable=invalid-name, R0915, R0914
+# pylint: disable=too-many-statements, too-many-locals
 
-# path to files
-inputpath = './input/'
-outputpath = './output/'
-datapath = './data/'
-shapepath = './shapes/'
-htmlpath = './docs/'
+def cwd():
+    """
+        Return current working dictory when __file__ is available
+        otherwise request info from OS.
+    """
 
-# covid19 data
-covidpath = datapath + 'us-counties.csv'
+    try:
+        __file__
+    except NameError:
+        current_working_dir = getcwd()
+    else:
+        current_working_dir = dirname(__file__)
+    return current_working_dir
 
-# census shape files
-countiespath = shapepath + 'counties_500k/cb_2018_us_county_500k.shx'
-statepath = shapepath + 'states_500k/cb_2018_us_state_500k.shx'
 
-# clean shape files
-us_map_path = shapepath + 'us_map/us_map.shx'
-state_map_path = shapepath + 'state_map/state_map.shx'
+# us census shape file paths
+COUNTY_SHAPES = join(cwd(), 'shapes', 'counties_500k', 'cb_2018_us_county_500k.shx')
+STATE_SHAPES = join(cwd(), 'shapes', 'states_500k', 'cb_2018_us_state_500k.shx')
 
 # lookup files
-lookuppath = inputpath + 'fips-county-lookup.csv'
+LOOKUP_FIPS = join(cwd(), 'input', 'fips-county-lookup.csv')
 
 
 def merge_data(df, us_map, levels, days):
@@ -156,9 +158,7 @@ def get_maps(us_map, state_map):
     """
 
     # read shape files
-    us_map = gpd.read_file(countiespath)
-    state_map = gpd.read_file(statepath)
-    lookup = pd.read_csv(lookuppath)
+    lookup = pd.read_csv(LOOKUP_FIPS)
 
     # remove unwanted states
     drop = ['72', '78', '69', '66', '60']
@@ -167,10 +167,9 @@ def get_maps(us_map, state_map):
     state_fp_dict = dict(zip(state_map.STATEFP, state_map.STUSPS))
 
     # coordinate reference system
-    CRS = 'EPSG:3395'
     simplefilter(action='ignore', category=FutureWarning)
-    us_map = us_map.to_crs(CRS)
-    state_map = state_map.to_crs(CRS)
+    us_map = us_map.to_crs('EPSG:3395')
+    state_map = state_map.to_crs('EPSG:3395')
     simplefilter(action='default')
 
     # remove islands (first pass)
@@ -184,31 +183,31 @@ def get_maps(us_map, state_map):
 
     # transform alaska and hawaii
     texas = state_map['STATEFP'] == '48'
-    [(xt, yt)] = list(state_map.loc[texas, 'geometry'].iat[0].centroid.coords)
+    [(xc_tx, yc_tx)] = list(state_map.loc[texas, 'geometry'].iat[0].centroid.coords)
 
     alaska = state_map['STATEFP'] == '02'
-    xa = state_map.loc[alaska, 'xc'].iat[0]
-    ya = state_map.loc[alaska, 'yc'].iat[0]
+    xc_ak = state_map.loc[alaska, 'xc'].iat[0]
+    yc_ak = state_map.loc[alaska, 'yc'].iat[0]
 
     hawaii = state_map['STATEFP'] == '15'
-    xh = state_map.loc[hawaii, 'xc'].iat[0]
-    yh = state_map.loc[hawaii, 'yc'].iat[0]
+    xc_hi = state_map.loc[hawaii, 'xc'].iat[0]
+    yc_hi = state_map.loc[hawaii, 'yc'].iat[0]
 
     state_map.loc[alaska, 'geometry'] = state_map[alaska].scale(
         xfact=0.19, yfact=0.19, zfact=1.0, origin='centroid')
     state_map.loc[alaska, 'geometry'] = state_map[alaska].translate(
-        xoff=xt - xa - 2.7e6, yoff=yt - ya - 5.0e5, zoff=0.0)
+        xoff=xc_tx - xc_ak - 2.7e6, yoff=yc_tx - yc_ak - 5.0e5, zoff=0.0)
     state_map.loc[hawaii, 'geometry'] = state_map[hawaii].translate(
-        xoff=xt - xh - 1.5e6, yoff=yt - yh - 7.5e5, zoff=0.0)
+        xoff=xc_tx - xc_hi - 1.5e6, yoff=yc_tx - yc_hi - 7.5e5, zoff=0.0)
 
     alaska_ct = us_map['STATEFP'] == '02'
     hawaii_ct = us_map['STATEFP'] == '15'
     us_map.loc[alaska_ct, 'geometry'] = us_map[alaska_ct].scale(
-        xfact=0.19, yfact=0.19, zfact=1.0, origin=(xa, ya, 0))
+        xfact=0.19, yfact=0.19, zfact=1.0, origin=(xc_ak, yc_ak, 0))
     us_map.loc[alaska_ct, 'geometry'] = us_map[alaska_ct].translate(
-        xoff=xt - xa - 2.7e6, yoff=yt - ya - 5.0e5, zoff=0.0)
+        xoff=xc_tx - xc_ak - 2.7e6, yoff=yc_tx - yc_ak - 5.0e5, zoff=0.0)
     us_map.loc[hawaii_ct, 'geometry'] = us_map[hawaii_ct].translate(
-        xoff=xt - xh - 1.5e6, yoff=yt - yh - 7.5e5, zoff=0.0)
+        xoff=xc_tx - xc_hi - 1.5e6, yoff=yc_tx - yc_hi - 7.5e5, zoff=0.0)
 
     # remove small island (second pass)
     us_map = remove_islands(us_map)
@@ -286,68 +285,17 @@ def create_lookups():
         Helper function to create lookup table
     """
 
-    df = pd.read_csv(inputpath + 'state-lookup.csv', dtype={'STATEFP': object})
-    df1 = pd.read_csv(inputpath + 'abbr-name.csv')
+    df = pd.read_csv(join(cwd(), 'input', 'state-lookup.csv'), dtype={'STATEFP': object})
+    df1 = pd.read_csv(join(cwd(), 'input', 'abbr-name.csv'))
     df1['name'] = df1['name'].str.lower()
     df['abbr'] = df['NAME'].str.lower().map(df1.set_index('name')['abbr'])
-    df.to_csv(inputpath + 'abbr-name.csv', index=False)
+    df.to_csv(join(cwd(), 'input', 'abbr-name.csv'), index=False)
 
 
-def unit_testing(us_map, state_map):
-    """
-        Unit testing to geo maninpulation
-    """
-
-    texas = state_map['STATEFP'] == '48'
-    [(xt, yt)] = list(state_map.loc[texas, 'geometry'].iat[0].centroid.coords)
-
-    alaska = state_map['STATEFP'] == '02'
-    xa = state_map.loc[alaska, 'xc'].iat[0]
-    ya = state_map.loc[alaska, 'yc'].iat[0]
-
-    hawaii = state_map['STATEFP'] == '15'
-    xh = state_map.loc[hawaii, 'xc'].iat[0]
-    yh = state_map.loc[hawaii, 'yc'].iat[0]
-
-    # state map scale and translate alaska and hawaii
-    state_map.loc[alaska, 'geometry'] = state_map[alaska].scale(
-        xfact=0.19, yfact=0.19, zfact=1.0, origin='centroid')
-    state_map.loc[alaska, 'geometry'] = state_map[alaska].translate(
-        xoff=xt - xa - 2.7e6, yoff=yt - ya - 5.0e5, zoff=0.0)
-    state_map.loc[hawaii, 'geometry'] = state_map[hawaii].translate(
-        xoff=xt - xh - 1.5e6, yoff=yt - yh - 7.5e5, zoff=0.0)
-
-    # us map scale and translate alaska and hawaii
-    alaska_ct = us_map['STATEFP'] == '02'
-    hawaii_ct = us_map['STATEFP'] == '15'
-    us_map.loc[alaska_ct, 'geometry'] = us_map[alaska_ct].scale(
-        xfact=0.19, yfact=0.19, zfact=1.0, origin=(xa, ya, 0))
-    us_map.loc[alaska_ct, 'geometry'] = us_map[alaska_ct].translate(
-        xoff=xt - xa - 2.7e6, yoff=yt - ya - 5.0e5, zoff=0.0)
-    us_map.loc[hawaii_ct, 'geometry'] = us_map[hawaii_ct].translate(
-        xoff=xt - xh - 1.5e6, yoff=yt - yh - 7.5e5, zoff=0.0)
-
-    # remove small island in alaska
-    us_map = remove_islands(us_map)
-    state_map = remove_islands(state_map)
-
-    # create the plot for Arkansas
-    _, ax = plt.subplots(figsize=(10, 6))
-    state_map[~(alaska | hawaii)].plot(column='NAME', ax=ax)
-    state_map[alaska].plot(ax=ax, color='black')
-    state_map[hawaii].plot(ax=ax, color='blue')
-    plt.axis('equal')
-
-    _, ax = plt.subplots(figsize=(10, 6))
-    us_map[~(alaska_ct | hawaii_ct)].plot(column='NAME', ax=ax)
-    us_map[alaska_ct].plot(ax=ax, color='black')
-    us_map[hawaii_ct].plot(ax=ax, color='blue')
-    plt.axis('equal')
 
 if __name__ == "__main__":
 
     # unit test
-    us, state = get_maps(gpd.read_file(countiespath),
-                         gpd.read_file('./shapes/state_map/state_alaska.shx'))
-    us.to_file(shapepath + 'us_map/us_map.shp')
-    state.to_file(shapepath + 'state_map/state_map.shp')
+    us, state = get_maps(gpd.read_file(COUNTY_SHAPES), gpd.read_file(STATE_SHAPES))
+    us.to_file(join(cwd(), 'shapes', 'us_map', 'us_map.shp'))
+    state.to_file(join(cwd(), 'state_map', 'state_map.shp'))

@@ -12,7 +12,6 @@ from bokeh.palettes import Purples
 
 import bokeh_utils as bu
 
-# pylint: disable=invalid-name
 
 def age_cases_histogram(df, color, hover_color):
     """
@@ -72,13 +71,13 @@ def age_gender_histograms(df, color, hover_color):
         Build layout with all distributions
     """
 
-    p1 = age_cases_histogram(df, color, hover_color)
-    p2 = age_deaths_histogram(df, color, hover_color)
-    p3 = gender_cases_histogram(df, color, hover_color)
-    p4 = gender_deaths_histogram(df, color, hover_color)
-
-    layout = gridplot([p1, p2, p3, p4], ncols=2, plot_width=400,
-                      plot_height=250, toolbar_location=None)
+    layout = gridplot([age_cases_histogram(df, color, hover_color),
+                       age_deaths_histogram(df, color, hover_color),
+                       gender_cases_histogram(df, color, hover_color),
+                       gender_deaths_histogram(df, color, hover_color)],
+                      ncols=2, plot_width=400,
+                      plot_height=250,
+                      toolbar_location=None)
     return layout
 
 STAND_ALONG = False

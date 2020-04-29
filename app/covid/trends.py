@@ -2,6 +2,7 @@
     Visualize trends of COVID-19 cases and deaths
 """
 
+from functools import partial
 import pandas as pd
 from bokeh.palettes import Purples
 from bokeh.layouts import gridplot, row
@@ -9,8 +10,7 @@ from bokeh.plotting import figure
 from bokeh.models import (ColumnDataSource, CustomJS, MultiSelect,
                           NumeralTickFormatter, HoverTool, Legend)
 
-# pylint: disable=invalid-name
-# pylint: disable=E1121, E1133, R0913, R0914, W0613
+# pylint: disable=too-many-locals, too-many-function-args, too-many-arguments
 
 SIDE = 'client'
 
@@ -144,7 +144,7 @@ def multi_select_server(value, glyphs):
     mselect = MultiSelect(title='States:', value=value,
                           options=glyphs[0]['cats'])
 
-    def callback(attr, old, new):
+    def callback(new):
         """
            Call back function to select trend line for
            selected states.
@@ -157,7 +157,7 @@ def multi_select_server(value, glyphs):
             lower = glyph['llower']
             varea = glyph['vareaf']
 
-            for option in mselect.options:
+            for option in list(mselect.options):
                 y_var[option].visible = False
                 predi[option].visible = False
                 upper[option].visible = False
@@ -171,7 +171,7 @@ def multi_select_server(value, glyphs):
                 lower[selection].visible = True
                 varea[selection].visible = True
 
-    mselect.on_change('value', callback)
+    mselect.on_change(partial(callback, new='value'))
 
     return mselect
 

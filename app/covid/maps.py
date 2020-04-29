@@ -1,5 +1,16 @@
+"""
+   Visualize map with COVID-19 cases
+"""
+
+from functools import partial
+import datetime as dt
+from os import getcwd
+from os.path import dirname, join
+
 import numpy as np
 import pandas as pd
+import geopandas as gpd
+
 from bokeh.plotting import figure
 from bokeh.models import DateSlider
 from bokeh.models import (CustomJS, GeoJSONDataSource, HoverTool, Legend,
@@ -7,21 +18,29 @@ from bokeh.models import (CustomJS, GeoJSONDataSource, HoverTool, Legend,
                           ColumnDataSource, Button, Label)
 from bokeh.layouts import column, row
 from bokeh.io import curdoc
-import datetime as dt
+from bokeh.palettes import Purples
+
+from wrangler import covid_data, merge_data
+
+# pylint: disable=too-many-locals, too-many-arguments, too-many-function-args
 
 # 'client' or 'server'
-side = 'client'
+SIDE = 'client'
 
 
 def select_server(options, plot_width,
-                  ugeosource, ufilter, uview_off, uview_on, upatch,
-                  sgeosource, sfilter, sview_off, sview_on, slines,
+                  ugeosource, ufilter, uview_off, upatch,
+                  sgeosource, sfilter, sview_off, slines,
                   lsource, lfilter, items):
+
+    """
+        Select control implemented on the browser(client) side
+    """
 
     # select control
     select = Select(value='a', options=options, max_width=plot_width - 40)
 
-    def update(attr, old, new):
+    def update(new):
         if new != 'a':
             ufilter.group = new
             upatch.update(view=CDSView(source=ugeosource, filters=[ufilter]))
@@ -37,7 +56,7 @@ def select_server(options, plot_width,
             upatch.update(view=uview_off)
             slines.update(view=sview_off)
 
-    select.on_change('value', update)
+    select.on_change(partial(update, new='value'))
 
     return select
 
@@ -46,12 +65,16 @@ def select_client(options, plot_width,
                   ugeosource, ufilter, uview_off, uview_on, upatch,
                   sgeosource, sfilter, sview_off, sview_on, slines,
                   lsource, lfilter):
+    """
+        Select control implemented on the serve side
+    """
 
     # select control
     select = Select(value='a', options=options, max_width=plot_width - 40)
 
     us_callback = CustomJS(args=dict(source=ugeosource,
-                                     filter=ufilter, view_off=uview_off, view_on=uview_on, glyth=upatch),
+                                     filter=ufilter, view_off=uview_off,
+                                     view_on=uview_on, glyth=upatch),
                            code="""
         if (cb_obj.value != 'a')
         {
@@ -66,7 +89,8 @@ def select_client(options, plot_width,
         """)
 
     state_callback = CustomJS(args=dict(source=sgeosource,
-                                        filter=sfilter, view_off=sview_off, view_on=sview_on, glyth=slines),
+                                        filter=sfilter, view_off=sview_off,
+                                        view_on=sview_on, glyth=slines),
                               code="""
         if (cb_obj.value != 'a')
         {
@@ -98,7 +122,7 @@ def select_client(options, plot_width,
 
 
 def choropleth_map(state_map, us_map, palette, legend_location=None,
-                   legend_title=None, legend_names=None, options=[],
+                   legend_title=None, legend_names=None, options=None,
                    plot_height=600, plot_width=950):
     """ Build Choropleth Map
         Inputs: us_map, geopandas dataframe with us state map geometry,
@@ -175,15 +199,15 @@ def choropleth_map(state_map, us_map, palette, legend_location=None,
     p.toolbar.autohide = False
     p.toolbar.logo = None
 
-    if side == 'client':
+    if SIDE == 'client':
         select = select_client(options, plot_width,
                                ugeosource, ufilter, uview_off, uview_on, upatch,
                                sgeosource, sfilter, sview_off, sview_on, slines,
                                lsource, lfilter)
-    if side == 'server':
+    if SIDE == 'server':
         select = select_server(options, plot_width,
-                               ugeosource, ufilter, uview_off, uview_on, upatch,
-                               sgeosource, sfilter, sview_off, sview_on, slines,
+                               ugeosource, ufilter, uview_off, upatch,
+                               sgeosource, sfilter, sview_off, slines,
                                lsource, lfilter, items)
 
     return p, ugeosource, select, rdate
@@ -191,10 +215,17 @@ def choropleth_map(state_map, us_map, palette, legend_location=None,
 
 def map_slider_server(mapsource, date_start, date_end, date_value, width, us_map):
 
+    """
+        Map slider control implemented in the server side
+    """
+
     slider = DateSlider(start=date_start, end=date_end,
                         value=date_value, title='Reported Date', width=width)
 
-    def update(attr, old, new):
+    def update(new):
+        """
+            Slider callback funtion
+        """
 
         # number of days
         day = int((slider.end - new) / (1000 * 60 * 60 * 24))
@@ -206,12 +237,15 @@ def map_slider_server(mapsource, date_start, date_end, date_value, width, us_map
             us_map['day'] = day
             mapsource.geojson = us_map.to_json()
 
-    slider.on_change('value', update)
+    slider.on_change(partial(update, new='value'))
 
     return slider
 
 
 def map_slider_client(mapsource, date_start, date_end, date_value, width):
+    """
+        Map slider control implemented in the browser (client) side
+    """
 
     slider = DateSlider(start=date_start, end=date_end,
                         value=date_value, title='Reported Date', width=width)
@@ -249,6 +283,9 @@ def map_slider_client(mapsource, date_start, date_end, date_value, width):
 
 
 def map_button_server(slider, rdate, width=80, height=60):
+    """
+        Map button control implemented in the server side
+    """
 
     # play button
     button = Button(label='► Play', width=width, height=height)
@@ -256,8 +293,6 @@ def map_button_server(slider, rdate, width=80, height=60):
     looop = None
 
     def increment_slider():
-        global looop
-
         if button.label == '► Play':
             rdate.update(text="")
             curdoc().remove_periodic_callback(looop)
@@ -270,13 +305,11 @@ def map_button_server(slider, rdate, width=80, height=60):
             slider.update(value=temp)
 
             # add date label to graph
-            d = temp + 1000 * 60 * 60 * 24
+            date_in_ms = temp + 1000 * 60 * 60 * 24
             rdate.update(text=dt.date.fromtimestamp(
-                d / 1000.0).strftime('%d %b %Y'))
+                date_in_ms / 1000.0).strftime('%d %b %Y'))
 
     def update():
-        global looop
-
         if button.label == '► Play':
             button.update(label='❚❚ Pause')
             rdate.update(text=dt.date.fromtimestamp(
@@ -291,7 +324,11 @@ def map_button_server(slider, rdate, width=80, height=60):
 
     return button
 
+
 def map_button_client(slider, rdate, width=80, height=60):
+    """
+        Map button control implemented in the client side
+    """
 
     # play button
     button = Button(label='► Play', width=width, height=height)
@@ -352,6 +389,10 @@ def map_button_client(slider, rdate, width=80, height=60):
 
 
 def build_us_map(us_map, state_map, palette, levels, dates, options):
+    """
+        Build the map layout with slider, select, and buttom controls
+    """
+
     # names for custom legend
     names = []
     for level, lead_level in zip(levels, levels[1:] + [np.nan]):
@@ -364,14 +405,14 @@ def build_us_map(us_map, state_map, palette, levels, dates, options):
             break
 
     # build us map with covid19 data
-    map, source, select, rdate = choropleth_map(state_map, us_map,
-                                                palette, legend_names=names,
-                                                legend_title='Cases by County:',
-                                                options=options,
-                                                legend_location='bottom_right',
-                                                plot_height=400, plot_width=800)
+    map_fig, source, select, rdate = choropleth_map(state_map, us_map,
+                                                    palette, legend_names=names,
+                                                    legend_title='Cases by County:',
+                                                    options=options,
+                                                    legend_location='bottom_right',
+                                                    plot_height=400, plot_width=800)
 
-    if side == 'client':
+    if SIDE == 'client':
         slider = map_slider_client(mapsource=source, date_start=dates[-1].date(),
                                    date_end=dates[0].date(),
                                    date_value=dates[0].date(),
@@ -379,27 +420,19 @@ def build_us_map(us_map, state_map, palette, levels, dates, options):
 
         button = map_button_client(slider, rdate, width=80, height=60)
 
-    if side == 'server':
+    if SIDE == 'server':
         slider = map_slider_server(mapsource=source, date_start=dates[-1].date(),
                                    date_end=dates[0].date(), date_value=dates[0].date(),
                                    width=800 - 40 - 84, us_map=us_map)
 
         button = map_button_server(slider, rdate, width=80, height=60)
 
-    layout = column(select, map, row(slider, button))
+    layout = column(select, map_fig, row(slider, button))
     return layout
 
 
-if False:
-    import numpy as np
-    import geopandas as gpd
-    import pandas as pd
-    from os import getcwd
-    from os.path import dirname, join
-    from bokeh.io import curdoc
-    from bokeh.palettes import Purples
-    from wrangler import covid_data, merge_data
-
+STAND_ALONE = False
+if STAND_ALONE:
     try:
         __file__
     except NameError:
@@ -413,27 +446,26 @@ if False:
 
     # get data sets
     df = covid_data(df, lookup)
-    us_map = gpd.read_file(join(cwd, 'shapes', 'us_map', 'us_map.shx'))
-    state_map = gpd.read_file(
-        join(cwd, 'shapes', 'state_map', 'state_map.shx'))
+    us_map_in = gpd.read_file(join(cwd, 'shapes', 'us_map', 'us_map.shx'))
+    state_map_in = gpd.read_file(join(cwd, 'shapes', 'state_map', 'state_map.shx'))
 
     # merge covid19 data with map data
-    levels = [0, 1, 10, 100, 250, 500, 5000, 10000, np.inf]
-    us_map, dates = merge_data(df, us_map, levels, days=15)
+    levels_in = [0, 1, 10, 100, 250, 500, 5000, 10000, np.inf]
+    us_map_in, dates_in = merge_data(df, us_map_in, levels_in, days=15)
 
     # create palettes
-    palette = list(reversed(Purples[8]))
+    palette_in = list(reversed(Purples[8]))
 
     # state drop-down options
     sel = pd.read_csv(join(cwd, 'input', 'statefp-name-abbr.csv'),
                       dtype={'statefp': 'str'})
     sel = sel.loc[sel['statefp'].isin(
-        us_map['STATEFP'].unique())].copy(deep=True)
-    options = [(x, y) for x, y in zip(sel['statefp'], sel['name'])]
-    options = [('a', 'USA')] + options
+        us_map_in['STATEFP'].unique())].copy(deep=True)
+    options_in = [('a', 'USA')] + list(zip(sel['statefp'], sel['name']))
 
     # build us map and fl map layouts
-    usmap = build_us_map(us_map, state_map, palette, levels, dates, options)
+    us_map_layout = build_us_map(us_map_in, state_map_in, palette_in, levels_in,
+                                 dates_in, options_in)
 
-    curdoc().add_root(usmap)
+    curdoc().add_root(us_map_layout)
     curdoc().title = 'maps'

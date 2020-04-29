@@ -15,7 +15,6 @@ from bokeh.palettes import Purples
 
 import bokeh_utils as bu
 
-# pylint: disable=invalid-name
 
 def roc(df, palette, plot_width=400, plot_height=400):
     """
@@ -80,20 +79,21 @@ def models_result(df, fi, palette, color, hover_color):
         Module function call to build Models Layout
     """
 
-    p1 = roc(df, palette, plot_width=400, plot_height=400)
-    p2 = logloss(df, color, hover_color, plot_width=400, plot_height=200)
-    p3 = feature_importance(fi, color, hover_color,
-                            plot_width=400, plot_height=200)
-    layout = row(p1, column(p2, p3))
+    layout = row(roc(df, palette, plot_width=400, plot_height=400),
+                 column(logloss(df, color, hover_color,
+                                plot_width=400, plot_height=200),
+                        feature_importance(fi, color, hover_color,
+                                           plot_width=400,
+                                           plot_height=200)))
     return layout
 
 
 STAND_ALONE = False
 if STAND_ALONE:
 
-    palette = list(reversed(Purples[8]))
-    color = palette[2]
-    hover_color = palette[4]
+    palette_in = list(reversed(Purples[8]))
+    color_in = palette_in[2]
+    hover_color_in = palette_in[4]
 
     try:
         __file__
@@ -106,5 +106,6 @@ if STAND_ALONE:
     df_in = pd.read_csv(join(cwd, 'output', 'fl_roc_models.csv'))
     fi_in = pd.read_csv(join(cwd, 'output', 'fl_fi_models.csv'))
 
-    curdoc().add_root(models_result(df_in, fi_in, palette, color, hover_color))
+    curdoc().add_root(models_result(df_in, fi_in, palette_in,
+                                    color_in, hover_color_in))
     curdoc().title = 'models'
