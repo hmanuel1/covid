@@ -1,7 +1,13 @@
+"""
+    App to test hosting setup
+"""
+
 from bokeh.plotting import figure
 from bokeh.models import ColumnDataSource, Select
 from bokeh.io import curdoc
 from bokeh.layouts import column
+
+# pylint: disable=invalid-name, E1121, W0613
 
 x = [0, 2, 4]
 y1 = [4, 10, 20]
@@ -18,6 +24,10 @@ lines['line2'] = p.line('x', 'y2', source=source, visible=True)
 select = Select(value='line1', options=['line1', 'line2'])
 
 def update(attr, old, new):
+    """
+        Callback function to handle select changes
+    """
+
     lines[old].visible = not lines[old].visible
     lines[new].visible = not lines[new].visible
 

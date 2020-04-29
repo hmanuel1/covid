@@ -1,21 +1,26 @@
-# %%
-import numpy as np
-import pandas as pd
-import re
-from bokeh.io import show, output_file
-from bokeh.palettes import Purples
-from bokeh.layouts import gridplot, column, row
-from bokeh.plotting import figure
-from bokeh.models import (ColumnDataSource, Select, CustomJS,
-                        GroupFilter, CDSView, MultiSelect,
-                        NumeralTickFormatter, HoverTool, Legend,
-                        WheelZoomTool, PanTool, HoverTool, SaveTool,
-                        BoxZoomTool, ResetTool)
+"""
+    Visualize trends of COVID-19 cases and deaths
+"""
 
-side = 'client'
+import pandas as pd
+from bokeh.palettes import Purples
+from bokeh.layouts import gridplot, row
+from bokeh.plotting import figure
+from bokeh.models import (ColumnDataSource, CustomJS, MultiSelect,
+                          NumeralTickFormatter, HoverTool, Legend)
+
+# pylint: disable=invalid-name
+# pylint: disable=E1121, E1133, R0913, R0914, W0613
+
+SIDE = 'client'
+
 
 def cases_trends(df, y_var, palette=Purples[3], title=None, plot_width=600,
-        plot_height=600):
+                 plot_height=600):
+    """
+        Plot cases for the selected states.
+    """
+
     # state category
     cats = sorted(list(df['state'].unique()))
 
@@ -35,48 +40,49 @@ def cases_trends(df, y_var, palette=Purples[3], title=None, plot_width=600,
         source[cat] = ColumnDataSource(df[df['state'] == cat])
 
         ly_var[cat] = p.line('date', y_var, source=source[cat],
-            line_color= palette[0], visible=False)
+                             line_color=palette[0], visible=False)
 
         p.add_tools(HoverTool(renderers=[ly_var[cat]], toggleable=False,
-            tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
-            (y_var.title(), f"@{y_var}"+"{0,0}")],
-            formatters={'@date': 'datetime'}))
+                              tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
+                                        (y_var.title(), f"@{y_var}" + "{0,0}")],
+                              formatters={'@date': 'datetime'}))
 
         lpredi[cat] = p.line('date', 'predict', source=source[cat],
-            line_color=palette[0], line_dash='dashed', visible=False)
+                             line_color=palette[0], line_dash='dashed', visible=False)
 
         p.add_tools(HoverTool(renderers=[lpredi[cat]], toggleable=False,
-            tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
-            (f"Predicted {y_var.title()}", '@predict{0,0}')],
-            formatters={'@date': 'datetime'}))
+                              tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
+                                        (f"Predicted {y_var.title()}", '@predict{0,0}')],
+                              formatters={'@date': 'datetime'}))
 
         lupper[cat] = p.line('date', 'upper', source=source[cat],
-            line_color=palette[1], visible=False)
+                             line_color=palette[1], visible=False)
 
         p.add_tools(HoverTool(renderers=[lupper[cat]], toggleable=False,
-            tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
-            ('Upper 95% Limit', '@upper{0,0}')],
-            formatters={'@date': 'datetime'}))
+                              tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
+                                        ('Upper 95% Limit', '@upper{0,0}')],
+                              formatters={'@date': 'datetime'}))
 
         llower[cat] = p.line('date', 'lower', source=source[cat],
-            line_color=palette[1], visible=False)
+                             line_color=palette[1], visible=False)
 
         p.add_tools(HoverTool(renderers=[llower[cat]], toggleable=False,
-            tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
-            ('Lower 95% Limit', '@lower{0,0}')],
-            formatters={'@date': 'datetime'}))
+                              tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
+                                        ('Lower 95% Limit', '@lower{0,0}')],
+                              formatters={'@date': 'datetime'}))
 
         vareaf[cat] = p.varea(x='date', y1='lower', y2='upper',
-            fill_color=palette[2], source=source[cat], fill_alpha=0.5, visible=False)
+                              fill_color=palette[2], source=source[cat],
+                              fill_alpha=0.5, visible=False)
 
     # build legend
-    items = [('Actual', [ly_var[cat]]),
-            ('Predicted', [lpredi[cat]]),
-            ('95% Confidence', [vareaf[cat]])]
+    items = [('Actual', [ly_var[cats[0]]]),
+             ('Predicted', [lpredi[cats[0]]]),
+             ('95% Confidence', [vareaf[cats[0]]])]
 
     p.add_layout(Legend(items=items, location='top_left',
-            background_fill_alpha=0, background_fill_color=None,
-            border_line_color=None, label_text_font_size='8pt'))
+                        background_fill_alpha=0, background_fill_color=None,
+                        border_line_color=None, label_text_font_size='8pt'))
 
     p.xaxis.ticker.desired_num_ticks = 10
     p.y_range.only_visible = True
@@ -88,7 +94,7 @@ def cases_trends(df, y_var, palette=Purples[3], title=None, plot_width=600,
     p.yaxis.formatter = NumeralTickFormatter(format='0,0')
 
     out = dict(ly_var=ly_var, lpredi=lpredi, lupper=lupper, llower=llower,
-            vareaf=vareaf, sources=source, cats=cats)
+               vareaf=vareaf, sources=source, cats=cats)
 
     return p, out
 
@@ -97,15 +103,15 @@ def multi_select_client(value, glyphs):
     """ multi state select """
 
     mselect = MultiSelect(title='States:', value=value,
-            options=glyphs[0]['cats'])
+                          options=glyphs[0]['cats'])
 
     callbacks = []
     for i, glyph in enumerate(glyphs):
         callbacks.append(CustomJS(args=dict(source=glyph['sources'],
-            y_var=glyph['ly_var'], predi=glyph['lpredi'],
-            upper=glyph['lupper'], lower=glyph['llower'],
-            varea=glyph['vareaf'], mselect=mselect),
-            code = '''
+                                            y_var=glyph['ly_var'], predi=glyph['lpredi'],
+                                            upper=glyph['lupper'], lower=glyph['llower'],
+                                            varea=glyph['vareaf'], mselect=mselect),
+                                  code='''
             var selections = cb_obj.value;
             var options = mselect.options;
             for (var i=0; i < options.length; i++)
@@ -131,15 +137,20 @@ def multi_select_client(value, glyphs):
 
     return mselect
 
+
 def multi_select_server(value, glyphs):
     """ multi state select """
 
     mselect = MultiSelect(title='States:', value=value,
-            options=glyphs[0]['cats'])
+                          options=glyphs[0]['cats'])
 
-    def callback(attrname, old, new):
+    def callback(attr, old, new):
+        """
+           Call back function to select trend line for
+           selected states.
+        """
+
         for glyph in glyphs:
-            source = glyph['sources']
             y_var = glyph['ly_var']
             predi = glyph['lpredi']
             upper = glyph['lupper']
@@ -166,6 +177,10 @@ def multi_select_server(value, glyphs):
 
 
 def render_cases(df, y_var, date, palette=Purples[3]):
+    """
+        Show 10 top state by cases
+    """
+
     df = df[df['date'] > pd.to_datetime(date)]
 
     # select top 10 state by number of cases
@@ -175,16 +190,19 @@ def render_cases(df, y_var, date, palette=Purples[3]):
 
     # render lines
     p, out = cases_trends(df, y_var, palette,
-                title=f"Cumulative {y_var.title()} by State",
-                plot_width=600, plot_height=300)
+                          title=f"Cumulative {y_var.title()} by State",
+                          plot_width=600, plot_height=300)
     return p, top10, out
 
 
 def show_predictions(cases, deaths, start_date, palette=Purples[3]):
+    """
+        Make visible line of selected states
+    """
+
     p_cases, top10_cases, out_cases = render_cases(cases,
-        'cases', start_date, palette)
-    p_deaths, top10_deaths, out_deaths = render_cases(deaths,
-        'deaths', start_date, palette)
+                                                   'cases', start_date, palette)
+    p_deaths, _, out_deaths = render_cases(deaths, 'deaths', start_date, palette)
 
     # show top 10 states by cases
     for cat in top10_cases:
@@ -201,41 +219,47 @@ def show_predictions(cases, deaths, start_date, palette=Purples[3]):
         out_deaths['vareaf'][cat].visible = True
 
     # add multiselect
-    if side == 'server':
+    if SIDE == 'server':
         mselect = multi_select_server(value=top10_cases,
-                glyphs=[out_cases, out_deaths])
+                                      glyphs=[out_cases, out_deaths])
 
-    if side == 'client':
+    if SIDE == 'client':
         mselect = multi_select_client(value=top10_cases,
-                glyphs=[out_cases, out_deaths])
+                                      glyphs=[out_cases, out_deaths])
 
     mselect.max_width = 180
-    mselect.min_height = 500-40
+    mselect.min_height = 500 - 40
 
     graphs = gridplot([p_cases, p_deaths], ncols=1,
-            plot_width=800-mselect.max_width-40,
-            plot_height=250, toolbar_location='right',
-            toolbar_options=dict(logo=None))
+                      plot_width=800 - mselect.max_width - 40,
+                      plot_height=250, toolbar_location='right',
+                      toolbar_options=dict(logo=None))
 
-    layout = row(mselect, graphs)
-    return  layout
+    return row(mselect, graphs)
 
-if False:
+
+STAND_ALONE = False
+if STAND_ALONE:
     from os import getcwd
     from os.path import dirname, join
     from bokeh.io import curdoc
 
-    palette = Purples[3]
+    palette_in = Purples[3]
 
-    try: __file__
-    except NameError: cwd = getcwd()
-    else: cwd = dirname(__file__)
+    try:
+        __file__
+    except NameError:
+        cwd = getcwd()
+    else:
+        cwd = dirname(__file__)
 
-    cases = pd.read_csv(join(cwd, 'output', 'arima-cases.csv'), parse_dates=['date'])
-    deaths = pd.read_csv(join(cwd, 'output', 'arima-deaths.csv'), parse_dates=['date'])
+    cases_in = pd.read_csv(
+        join(cwd, 'output', 'arima-cases.csv'), parse_dates=['date'])
+    deaths_in = pd.read_csv(
+        join(cwd, 'output', 'arima-deaths.csv'), parse_dates=['date'])
 
-    layout = show_predictions(cases=cases, deaths=deaths,
-            start_date='3/15/2020', palette=palette)
+    layout = show_predictions(cases=cases_in, deaths=deaths_in,
+                              start_date='3/15/2020', palette=palette_in)
 
     curdoc().add_root(layout)
     curdoc().title = "trends"

@@ -1,11 +1,19 @@
-# %%
+"""
+    Run the following classification models:
+     1) Random Trees and Logistic Regression
+     2) Random Forest and Logistic Regression
+     3) Gradient Boosting Trees
+     4) Gradient Boosting Trees and Logistic Regression
+     5) Random Forest
+"""
+
+from os import getcwd
+from os.path import dirname, join
+
 import numpy as np
 import pandas as pd
-np.random.seed(10)
-
 import matplotlib.pyplot as plt
 
-from sklearn.datasets import make_classification
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import (RandomTreesEmbedding, RandomForestClassifier,
                               GradientBoostingClassifier)
@@ -15,17 +23,30 @@ from sklearn.metrics import roc_curve
 from sklearn.metrics import roc_auc_score
 from sklearn.pipeline import make_pipeline
 from sklearn import metrics
-from os import getcwd
-from os.path import dirname, join
+
+# pylint: disable=invalid-name
+# pylint: disable=E1121, R0913, R0914, R0915
+
+np.random.seed(10)
+
 
 def cwd():
-    try: __file__
-    except NameError: cwd = getcwd()
-    else: cwd = dirname(__file__)
-    return cwd
+    """
+        Return current working directory base on __file__ or OS
+    """
+    try:
+        file__
+    except NameError:
+        current_working_dir = getcwd()
+    else:
+        current_working_dir = dirname(__file__)
+    return current_working_dir
+
 
 def classify(show_results=False):
-    # select number of estimator
+    """
+        Run classification models
+    """
     y_var = 'died'
     n_estimator = 10
 
@@ -39,14 +60,14 @@ def classify(show_results=False):
     X = df.loc[:, df.columns != y_var]
     y = df.loc[:, df.columns == y_var]
     X_train, X_test, y_train, y_test = train_test_split(X.values,
-            y.values.ravel(), test_size=0.5)
+                                                        y.values.ravel(), test_size=0.5)
 
     # It is important to train the ensemble of trees on a different subset
     # of the training data than the linear regression model to avoid
     # overfitting, in particular if the total number of leaves is
     # similar to the number of training samples
     X_train, X_train_lr, y_train, y_train_lr = train_test_split(X_train,
-            y_train, test_size=0.5)
+                                                                y_train, test_size=0.5)
 
     # Unsupervised transformation based on totally random trees
     rt = RandomTreesEmbedding(max_depth=3, n_estimators=n_estimator,
@@ -54,7 +75,6 @@ def classify(show_results=False):
     rt_lm = LogisticRegression(max_iter=1000, solver='lbfgs')
     pipeline = make_pipeline(rt, rt_lm)
     pipeline.fit(X_train, y_train)
-    pipeline.get_params
 
     # RT
     y_pred_rt = pipeline.predict_proba(X_test)[:, 1]
@@ -69,7 +89,8 @@ def classify(show_results=False):
     rf_lm.fit(rf_enc.transform(rf.apply(X_train_lr)), y_train_lr)
 
     # RF + LR
-    y_pred_rf_lm = rf_lm.predict_proba(rf_enc.transform(rf.apply(X_test)))[:, 1]
+    y_pred_rf_lm = rf_lm.predict_proba(
+        rf_enc.transform(rf.apply(X_test)))[:, 1]
     fpr_rf_lm, tpr_rf_lm, _ = roc_curve(y_test, y_pred_rf_lm)
 
     # Supervised transformation based on gradient boosted trees
@@ -82,7 +103,7 @@ def classify(show_results=False):
 
     # GBT + LR
     y_pred_grd_lm = grd_lm.predict_proba(
-            grd_enc.transform(grd.apply(X_test)[:, :, 0]))[:, 1]
+        grd_enc.transform(grd.apply(X_test)[:, :, 0]))[:, 1]
     fpr_grd_lm, tpr_grd_lm, _ = roc_curve(y_test, y_pred_grd_lm)
 
     # GBT - The gradient boosted model by itself
@@ -98,7 +119,7 @@ def classify(show_results=False):
                        'importance': rf.feature_importances_})
     fi.sort_values('importance', ascending=False, inplace=True)
     if show_results:
-        fig = plt.figure(figsize=(4, 4))
+        plt.figure(figsize=(4, 4))
         ax = plt.subplot(111)
         ax.barh(fi['feature'], fi['importance'])
         plt.gca().invert_yaxis()
@@ -169,7 +190,7 @@ def classify(show_results=False):
                         'auc': roc_grd_lm, 'x': fpr_grd_lm, 'y': tpr_grd_lm})
 
     df6 = pd.DataFrame({'model': 'Random',
-                        'abbrev': 'Random', 'logloss': -1*np.log10(0.5),
+                        'abbrev': 'Random', 'logloss': -1 * np.log10(0.5),
                         'auc': 0.5, 'x': np.linspace(0, 1, 100),
                         'y': np.linspace(0, 1, 100)})
 
@@ -177,7 +198,8 @@ def classify(show_results=False):
     df['x'] = df['x'].round(3)
     df['y'] = df['y'].round(3)
 
-    df = df.rename(columns={'x': 'False_Positive_Rate', 'y': 'True_Positive_Rate'})
+    df = df.rename(columns={'x': 'False_Positive_Rate',
+                            'y': 'True_Positive_Rate'})
 
     # output datasets
     df.to_csv(join(cwd(), 'output', 'fl_roc_models.csv'), index=False)

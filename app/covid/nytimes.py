@@ -1,15 +1,21 @@
-import pandas as pd
-import numpy as np
-import datetime as dt
-import requests
-from bs4 import BeautifulSoup
+"""
+    Download COVID-19 data from NY Times
+"""
+
 from io import StringIO
-from pathlib import Path
 from os import getcwd
 from os.path import dirname, join
 
+import pandas as pd
+import requests
+
+# pylint: disable=invalid-name
 
 def download_nytimes():
+    """
+        Read NY Times data from github
+    """
+
     # read data from url
     url_ct = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv'
     url_st = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv'
@@ -21,9 +27,12 @@ def download_nytimes():
         download = s.get(url_st)
         html_states = download.text
 
-    try: __file__
-    except NameError: cwd = getcwd()
-    else: cwd = dirname(__file__)
+    try:
+        __file__
+    except NameError:
+        cwd = getcwd()
+    else:
+        cwd = dirname(__file__)
 
     # save it
     df = pd.read_csv(StringIO(html_counties))
