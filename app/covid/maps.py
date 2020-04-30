@@ -2,10 +2,9 @@
    Visualize map with COVID-19 cases
 """
 
+from os.path import join
 from functools import partial
 import datetime as dt
-from os import getcwd
-from os.path import dirname, join
 
 import numpy as np
 import pandas as pd
@@ -19,8 +18,10 @@ from bokeh.models import (CustomJS, GeoJSONDataSource, HoverTool, Legend,
 from bokeh.layouts import column, row
 from bokeh.io import curdoc
 from bokeh.palettes import Purples
+from bokeh.themes import Theme
 
 from wrangler import covid_data, merge_data
+from utilities import cwd
 
 # pylint: disable=too-many-locals, too-many-arguments, too-many-function-args
 
@@ -148,7 +149,6 @@ def choropleth_map(state_map, us_map, palette, legend_location=None,
 
     # all state
     p = figure(plot_height=plot_height, plot_width=plot_width,
-               background_fill_color='white', background_fill_alpha=1,
                toolbar_location='right', match_aspect=True,
                tools="box_zoom, wheel_zoom, pan, reset, save")
 
@@ -187,17 +187,10 @@ def choropleth_map(state_map, us_map, palette, legend_location=None,
                                                 fill_color=palette[i])])]
 
         p.add_layout(Legend(items=items, location=legend_location,
-                            background_fill_alpha=0, background_fill_color=None,
-                            title=legend_title, border_line_color=None, spacing=0))
+                            title=legend_title))
 
-    p.legend.label_text_font_size = '8pt'
-    p.min_border = 0
-    p.xgrid.grid_line_color = None
-    p.ygrid.grid_line_color = None
     p.axis.visible = False
-    p.toolbar.active_drag = None
-    p.toolbar.autohide = False
-    p.toolbar.logo = None
+
 
     if SIDE == 'client':
         select = select_client(options, plot_width,
@@ -433,21 +426,14 @@ def build_us_map(us_map, state_map, palette, levels, dates, options):
 
 STAND_ALONE = False
 if STAND_ALONE:
-    try:
-        __file__
-    except NameError:
-        cwd = getcwd()
-    else:
-        cwd = dirname(__file__)
-
     # read covid-19 data from file
-    df = pd.read_csv(join(cwd, 'data', 'us-counties.csv'), parse_dates=[0])
-    lookup = pd.read_csv(join(cwd, 'input', 'statefp-name-abbr.csv'))
+    df = pd.read_csv(join(cwd(), 'data', 'us-counties.csv'), parse_dates=[0])
+    lookup = pd.read_csv(join(cwd(), 'input', 'statefp-name-abbr.csv'))
 
     # get data sets
     df = covid_data(df, lookup)
-    us_map_in = gpd.read_file(join(cwd, 'shapes', 'us_map', 'us_map.shx'))
-    state_map_in = gpd.read_file(join(cwd, 'shapes', 'state_map', 'state_map.shx'))
+    us_map_in = gpd.read_file(join(cwd(), 'shapes', 'us_map', 'us_map.shx'))
+    state_map_in = gpd.read_file(join(cwd(), 'shapes', 'state_map', 'state_map.shx'))
 
     # merge covid19 data with map data
     levels_in = [0, 1, 10, 100, 250, 500, 5000, 10000, np.inf]
@@ -457,7 +443,7 @@ if STAND_ALONE:
     palette_in = list(reversed(Purples[8]))
 
     # state drop-down options
-    sel = pd.read_csv(join(cwd, 'input', 'statefp-name-abbr.csv'),
+    sel = pd.read_csv(join(cwd(), 'input', 'statefp-name-abbr.csv'),
                       dtype={'statefp': 'str'})
     sel = sel.loc[sel['statefp'].isin(
         us_map_in['STATEFP'].unique())].copy(deep=True)
@@ -469,3 +455,4 @@ if STAND_ALONE:
 
     curdoc().add_root(us_map_layout)
     curdoc().title = 'maps'
+    curdoc().theme = Theme(filename=join(cwd(), "theme.yaml"))

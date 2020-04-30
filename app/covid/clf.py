@@ -7,8 +7,7 @@
      5) Random Forest
 """
 
-from os import getcwd
-from os.path import dirname, join
+from os.path import join
 
 import numpy as np
 import pandas as pd
@@ -24,22 +23,11 @@ from sklearn.metrics import roc_auc_score
 from sklearn.pipeline import make_pipeline
 from sklearn import metrics
 
+from utilities import cwd
+
 # pylint: disable=too-many-locals, too-many-statements
 
 np.random.seed(10)
-
-
-def cwd():
-    """
-        Return current working directory base on __file__ or OS
-    """
-    try:
-        file__
-    except NameError:
-        current_working_dir = getcwd()
-    else:
-        current_working_dir = dirname(__file__)
-    return current_working_dir
 
 
 def classify(show_results=False):

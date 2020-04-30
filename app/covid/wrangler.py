@@ -1,8 +1,7 @@
 """
    Data cleaning and formating module
 """
-from os import getcwd
-from os.path import dirname
+
 from os.path import join
 from warnings import simplefilter
 import re
@@ -12,23 +11,9 @@ import geopandas as gpd
 from shapely.geometry import Polygon, MultiPolygon
 from shapely.wkt import loads
 
+from utilities import cwd
 
 # pylint: disable=too-many-statements, too-many-locals
-
-def cwd():
-    """
-        Return current working dictory when __file__ is available
-        otherwise request info from OS.
-    """
-
-    try:
-        __file__
-    except NameError:
-        current_working_dir = getcwd()
-    else:
-        current_working_dir = dirname(__file__)
-    return current_working_dir
-
 
 # us census shape file paths
 COUNTY_SHAPES = join(cwd(), 'shapes', 'counties_500k', 'cb_2018_us_county_500k.shx')
@@ -36,7 +21,6 @@ STATE_SHAPES = join(cwd(), 'shapes', 'states_500k', 'cb_2018_us_state_500k.shx')
 
 # lookup files
 LOOKUP_FIPS = join(cwd(), 'input', 'fips-county-lookup.csv')
-
 
 def merge_data(df, us_map, levels, days):
     """
@@ -76,7 +60,6 @@ def merge_data(df, us_map, levels, days):
 
     return us_map, dates
 
-
 def covid_data(df, lookup):
     """
         Cleanup COVID-19 data from NY Times
@@ -112,7 +95,6 @@ def covid_data(df, lookup):
     df['name'] = df['county'] + ', ' + df['state'].str.lower().map(abbr)
     return df
 
-
 def remove_islands(map_file, min_area=100000000):
     """ Remove small polygons
         Removes polygons with area less than min_area.
@@ -142,7 +124,6 @@ def remove_islands(map_file, min_area=100000000):
     new_map = gpd.GeoDataFrame(records)
 
     return new_map
-
 
 def mround(match):
     """
@@ -277,9 +258,6 @@ def get_maps(us_map, state_map):
 
     return us_map, state_map
 
-# %% create lookup
-
-
 def create_lookups():
     """
         Helper function to create lookup table
@@ -290,7 +268,6 @@ def create_lookups():
     df1['name'] = df1['name'].str.lower()
     df['abbr'] = df['NAME'].str.lower().map(df1.set_index('name')['abbr'])
     df.to_csv(join(cwd(), 'input', 'abbr-name.csv'), index=False)
-
 
 
 if __name__ == "__main__":

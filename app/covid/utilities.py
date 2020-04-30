@@ -2,10 +2,25 @@
    Bokeh based functions for line, histogram and bar charts
 """
 
+import os
+
 import numpy as np
 from bokeh.plotting import figure
 from bokeh.models import (ColumnDataSource, HoverTool, Legend,
                           NumeralTickFormatter)
+
+def cwd():
+    """
+        Return current working directory from __file__ or OS
+    """
+
+    try:
+        __file__
+    except NameError:
+        cur_working_dir = os.getcwd()
+    else:
+        cur_working_dir = os.path.dirname(__file__)
+    return cur_working_dir
 
 # pylint: disable=too-many-locals, too-many-arguments, too-many-function-args
 
@@ -66,8 +81,6 @@ def plot_lines(df, x=None, y=None, cat=None, title=None,
 
     p.xaxis.axis_label = x_label
     p.yaxis.axis_label = y_label
-    p.grid.grid_line_color = None
-    p.toolbar.active_drag = None
 
     if y_axis_formatter:
         p.yaxis.formatter = NumeralTickFormatter(format=y_axis_formatter)
@@ -76,7 +89,6 @@ def plot_lines(df, x=None, y=None, cat=None, title=None,
         legend = Legend(items=[(x, [lines[x]]) for x in lines],
                         location=legend_location)
         p.add_layout(legend)
-        p.legend.label_text_font_size = '8pt'
         p.legend.click_policy = 'mute'
 
     return p
@@ -106,8 +118,6 @@ def histogram(x, density=False, bins=None, title='Histogram',
     p.y_range.start = 0
     p.xaxis.axis_label = x_label
     p.yaxis.axis_label = y_label
-    p.grid.grid_line_color = None
-    p.toolbar.logo = None
     return p
 
 
@@ -143,6 +153,5 @@ def vbar(title, x_range, counts, x_label='x', y_label='y', fill_color='navy',
     p.y_range.start = 0
     p.xaxis.axis_label = x_label
     p.yaxis.axis_label = y_label
-    p.grid.grid_line_color = None
-    p.toolbar.logo = None
+
     return p

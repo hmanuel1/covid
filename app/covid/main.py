@@ -1,9 +1,8 @@
 """
-    Application to analyze COVID-19 cases and deaths in the US.
+    Analyze COVID-19 cases and deaths in the US.
 """
 
-from os import getcwd
-from os.path import dirname, join
+from os.path import join
 import sys
 
 import numpy as np
@@ -15,6 +14,7 @@ from bokeh.plotting import curdoc
 from bokeh.palettes import Purples
 from bokeh.models import Div
 from bokeh.layouts import column, row, Spacer
+from bokeh.themes import Theme
 
 # internal modules
 from nytimes import download_nytimes
@@ -26,6 +26,7 @@ from distros import age_gender_histograms
 from maps import build_us_map
 from trends import show_predictions
 from fits import models_result
+from utilities import cwd
 
 
 def refresh():
@@ -43,19 +44,6 @@ def refresh():
     predict()
     print('done.')
 
-
-def cwd():
-    """
-        return current working directory from __file__ or from OS.
-    """
-
-    try:
-        __file__
-    except NameError:
-        current_working_dir = getcwd()
-    else:
-        current_working_dir = dirname(__file__)
-    return current_working_dir
 
 def get_data_sets():
     """
@@ -151,6 +139,7 @@ def covid():
 
     curdoc().add_root(layout)
     curdoc().title = 'COVID-19'
+    curdoc().theme = Theme(filename=join(cwd(), "theme.yaml"))
 
 
 try:

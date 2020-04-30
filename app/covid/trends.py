@@ -3,16 +3,24 @@
 """
 
 from functools import partial
+from os.path import join
+
 import pandas as pd
+
+from bokeh.io import curdoc
 from bokeh.palettes import Purples
 from bokeh.layouts import gridplot, row
 from bokeh.plotting import figure
+from bokeh.themes import Theme
 from bokeh.models import (ColumnDataSource, CustomJS, MultiSelect,
                           NumeralTickFormatter, HoverTool, Legend)
+
+from utilities import cwd
 
 # pylint: disable=too-many-locals, too-many-function-args, too-many-arguments
 
 SIDE = 'client'
+
 
 
 def cases_trends(df, y_var, palette=Purples[3], title=None, plot_width=600,
@@ -80,17 +88,11 @@ def cases_trends(df, y_var, palette=Purples[3], title=None, plot_width=600,
              ('Predicted', [lpredi[cats[0]]]),
              ('95% Confidence', [vareaf[cats[0]]])]
 
-    p.add_layout(Legend(items=items, location='top_left',
-                        background_fill_alpha=0, background_fill_color=None,
-                        border_line_color=None, label_text_font_size='8pt'))
+    p.add_layout(Legend(items=items, location='top_left'))
 
     p.xaxis.ticker.desired_num_ticks = 10
-    p.y_range.only_visible = True
     p.yaxis.axis_label = y_var.title()
     p.xaxis.axis_label = 'Date'
-    p.grid.grid_line_color = None
-    p.toolbar.active_drag = None
-    p.toolbar.logo = None
     p.yaxis.formatter = NumeralTickFormatter(format='0,0')
 
     out = dict(ly_var=ly_var, lpredi=lpredi, lupper=lupper, llower=llower,
@@ -240,26 +242,16 @@ def show_predictions(cases, deaths, start_date, palette=Purples[3]):
 
 STAND_ALONE = False
 if STAND_ALONE:
-    from os import getcwd
-    from os.path import dirname, join
-    from bokeh.io import curdoc
-
     palette_in = Purples[3]
 
-    try:
-        __file__
-    except NameError:
-        cwd = getcwd()
-    else:
-        cwd = dirname(__file__)
-
     cases_in = pd.read_csv(
-        join(cwd, 'output', 'arima-cases.csv'), parse_dates=['date'])
+        join(cwd(), 'output', 'arima-cases.csv'), parse_dates=['date'])
     deaths_in = pd.read_csv(
-        join(cwd, 'output', 'arima-deaths.csv'), parse_dates=['date'])
+        join(cwd(), 'output', 'arima-deaths.csv'), parse_dates=['date'])
 
     layout = show_predictions(cases=cases_in, deaths=deaths_in,
                               start_date='3/15/2020', palette=palette_in)
 
     curdoc().add_root(layout)
     curdoc().title = "trends"
+    curdoc().theme = Theme(filename=join(cwd(), "theme.yaml"))

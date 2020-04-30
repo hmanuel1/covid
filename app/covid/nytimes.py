@@ -2,12 +2,13 @@
     Download COVID-19 data from NY Times
 """
 
+from os.path import join
 from io import StringIO
-from os import getcwd
-from os.path import dirname, join
 
 import pandas as pd
 import requests
+
+from utilities import cwd
 
 
 def download_nytimes():
@@ -26,20 +27,13 @@ def download_nytimes():
         download = session.get(url_st)
         html_states = download.text
 
-    try:
-        __file__
-    except NameError:
-        cwd = getcwd()
-    else:
-        cwd = dirname(__file__)
-
     # save it
     df = pd.read_csv(StringIO(html_counties))
-    df.to_csv(join(cwd, 'data', 'us-counties.csv'), index=False)
+    df.to_csv(join(cwd(), 'data', 'us-counties.csv'), index=False)
 
     # save it
     df = pd.read_csv(StringIO(html_states))
-    df.to_csv(join(cwd, 'data', 'us-states.csv'), index=False)
+    df.to_csv(join(cwd(), 'data', 'us-states.csv'), index=False)
 
 
 if __name__ == "__main__":

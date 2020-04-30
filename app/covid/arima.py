@@ -2,27 +2,15 @@
    Fit ARIMA model to cases and deaths for each US State
    pylint: disable=invalid-name
 """
-from os import getcwd
-from os.path import dirname, join
+
+from os.path import join
+
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 import pmdarima as pm
 
-
-
-def cwd():
-    """
-       Return current working directiory from __file__ or OS
-    """
-
-    try:
-        __file__
-    except NameError:
-        current_working_dir = getcwd()
-    else:
-        current_working_dir = dirname(__file__)
-    return current_working_dir
+from utilities import cwd
 
 
 def arima_model(data, states, y_var):

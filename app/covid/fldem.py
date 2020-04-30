@@ -1,32 +1,19 @@
 """
-    This module read pdf COVID-19 file from Florida Division of Emergency
+    Read pdf COVID-19 file from Florida Division of Emergency
     Management and save it into a CSV format
 """
 
+from os.path import join
 from io import BytesIO
-from os import getcwd
-from os.path import dirname, join
 import re
+
 import numpy as np
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import PyPDF2
 
-
-def cwd():
-    """
-        Return current working dictory when __file__ is available
-        otherwise request info from OS.
-    """
-
-    try:
-        __file__
-    except NameError:
-        current_working_dir = getcwd()
-    else:
-        current_working_dir = dirname(__file__)
-    return current_working_dir
+from utilities import cwd
 
 
 def get_pdf_name(url, class_dict):

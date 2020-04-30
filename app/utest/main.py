@@ -2,12 +2,15 @@
     App to test hosting setup
 """
 
+from os.path import dirname, join
+
 from bokeh.plotting import figure
 from bokeh.models import ColumnDataSource, Select
 from bokeh.io import curdoc
 from bokeh.layouts import column
+from bokeh.themes import Theme
 
-# pylint: disable=invalid-name, E1121, W0613
+# pylint: disable=too-many-function-args, unused-argument
 
 x = [0, 2, 4]
 y1 = [4, 10, 20]
@@ -15,9 +18,9 @@ y2 = [8, 20, 40]
 
 source = ColumnDataSource(data=dict(x=x, y1=y1, y2=y2))
 
-lines = dict()
 
-p = figure()
+lines = dict()
+p = figure(title='test')
 lines['line1'] = p.line('x', 'y1', source=source, visible=False)
 lines['line2'] = p.line('x', 'y2', source=source, visible=True)
 
@@ -36,3 +39,4 @@ select.on_change('value', update)
 # add to document
 curdoc().add_root(column(select, p))
 curdoc().title = "test"
+curdoc().theme = Theme(filename=join(dirname(__file__), "theme.yaml"))
