@@ -17,26 +17,22 @@ from bokeh.models import (ColumnDataSource, CustomJS, MultiSelect,
 
 from utilities import cwd
 
-# pylint: disable=too-many-locals, too-many-function-args, too-many-arguments
-
 SIDE = 'client'
 
-
-
-def cases_trends(df, y_var, palette=Purples[3], title=None, plot_width=600,
-                 plot_height=600):
+def cases_trends(df, y_var, palette=Purples[3], **kwargs):
     """
         Plot cases for the selected states.
     """
 
-    # state category
-    cats = sorted(list(df['state'].unique()))
+    figure_settings = dict(title=None, plot_width=600, plot_height=600,
+                           x_axis_type='datetime', tools='save, box_zoom, reset')
 
-    figure_settings = dict(plot_width=plot_width, plot_height=plot_height,
-                           tools='save, box_zoom, reset')
+    for key, value in kwargs.items():
+        if key in figure_settings:
+            figure_settings[key] = value
 
     # plot
-    p = figure(x_axis_type='datetime', title=title, **figure_settings)
+    plot = figure(**figure_settings)
 
     source = dict()
     ly_var = dict()
@@ -44,61 +40,59 @@ def cases_trends(df, y_var, palette=Purples[3], title=None, plot_width=600,
     lupper = dict()
     llower = dict()
     vareaf = dict()
-    for cat in cats:
+    for cat in sorted(list(df['state'].unique())):
         source[cat] = ColumnDataSource(df[df['state'] == cat])
 
-        ly_var[cat] = p.line('date', y_var, source=source[cat],
-                             line_color=palette[0], visible=False)
+        ly_var[cat] = plot.line(x='date', y=y_var, source=source[cat],
+                                line_color=palette[0], visible=False)
 
-        p.add_tools(HoverTool(renderers=[ly_var[cat]], toggleable=False,
-                              tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
-                                        (y_var.title(), f"@{y_var}" + "{0,0}")],
-                              formatters={'@date': 'datetime'}))
+        plot.add_tools(HoverTool(renderers=[ly_var[cat]], toggleable=False,
+                                 tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
+                                           (y_var.title(), f"@{y_var}" + "{0,0}")],
+                                 formatters={'@date': 'datetime'}))
 
-        lpredi[cat] = p.line('date', 'predict', source=source[cat],
-                             line_color=palette[0], line_dash='dashed', visible=False)
+        lpredi[cat] = plot.line(x='date', y='predict', source=source[cat],
+                                line_color=palette[0], line_dash='dashed', visible=False)
 
-        p.add_tools(HoverTool(renderers=[lpredi[cat]], toggleable=False,
-                              tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
-                                        (f"Predicted {y_var.title()}", '@predict{0,0}')],
-                              formatters={'@date': 'datetime'}))
+        plot.add_tools(HoverTool(renderers=[lpredi[cat]], toggleable=False,
+                                 tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
+                                           (f"Predicted {y_var.title()}", '@predict{0,0}')],
+                                 formatters={'@date': 'datetime'}))
 
-        lupper[cat] = p.line('date', 'upper', source=source[cat],
-                             line_color=palette[1], visible=False)
+        lupper[cat] = plot.line(x='date', y='upper', source=source[cat],
+                                line_color=palette[1], visible=False)
 
-        p.add_tools(HoverTool(renderers=[lupper[cat]], toggleable=False,
-                              tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
-                                        ('Upper 95% Limit', '@upper{0,0}')],
-                              formatters={'@date': 'datetime'}))
+        plot.add_tools(HoverTool(renderers=[lupper[cat]], toggleable=False,
+                                 tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
+                                           ('Upper 95% Limit', '@upper{0,0}')],
+                                 formatters={'@date': 'datetime'}))
 
-        llower[cat] = p.line('date', 'lower', source=source[cat],
-                             line_color=palette[1], visible=False)
+        llower[cat] = plot.line(x='date', y='lower', source=source[cat],
+                                line_color=palette[1], visible=False)
 
-        p.add_tools(HoverTool(renderers=[llower[cat]], toggleable=False,
-                              tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
-                                        ('Lower 95% Limit', '@lower{0,0}')],
-                              formatters={'@date': 'datetime'}))
+        plot.add_tools(HoverTool(renderers=[llower[cat]], toggleable=False,
+                                 tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
+                                           ('Lower 95% Limit', '@lower{0,0}')],
+                                 formatters={'@date': 'datetime'}))
 
-        vareaf[cat] = p.varea(x='date', y1='lower', y2='upper',
-                              fill_color=palette[2], source=source[cat],
-                              fill_alpha=0.5, visible=False)
+        vareaf[cat] = plot.varea(x='date', y1='lower', y2='upper',
+                                 fill_color=palette[2], source=source[cat],
+                                 fill_alpha=0.5, visible=False)
 
-    # build legend
-    items = [('Actual', [ly_var[cats[0]]]),
-             ('Predicted', [lpredi[cats[0]]]),
-             ('95% Confidence', [vareaf[cats[0]]])]
+    # lengend
+    plot.add_layout(Legend(items=[('Actual', [ly_var[df['state'].iat[0]]]),
+                                  ('Predicted', [lpredi[df['state'].iat[0]]]),
+                                  ('95% Confidence', [vareaf[df['state'].iat[0]]])],
+                           location='top_left'))
 
-    p.add_layout(Legend(items=items, location='top_left'))
+    plot.xaxis.ticker.desired_num_ticks = 10
+    plot.yaxis.axis_label = y_var.title()
+    plot.xaxis.axis_label = 'Date'
+    plot.yaxis.formatter = NumeralTickFormatter(format='0,0')
 
-    p.xaxis.ticker.desired_num_ticks = 10
-    p.yaxis.axis_label = y_var.title()
-    p.xaxis.axis_label = 'Date'
-    p.yaxis.formatter = NumeralTickFormatter(format='0,0')
-
-    out = dict(ly_var=ly_var, lpredi=lpredi, lupper=lupper, llower=llower,
-               vareaf=vareaf, sources=source, cats=cats)
-
-    return p, out
+    return plot, dict(ly_var=ly_var, lpredi=lpredi, lupper=lupper, llower=llower,
+                      vareaf=vareaf, sources=source,
+                      cats=sorted(list(df['state'].unique())))
 
 
 def multi_select_client(value, glyphs):
@@ -191,10 +185,12 @@ def render_cases(df, y_var, date, palette=Purples[3]):
     top10 = list(top10.index)[:10]
 
     # render lines
-    p, out = cases_trends(df, y_var, palette,
-                          title=f"Cumulative {y_var.title()} by State",
-                          plot_width=600, plot_height=300)
-    return p, top10, out
+    kwargs = dict(title=f"Cumulative {y_var.title()} by State",
+                  plot_width=600, plot_height=300)
+
+    plot, out = cases_trends(df, y_var, palette, **kwargs)
+
+    return plot, top10, out
 
 
 def show_predictions(cases, deaths, start_date, palette=Purples[3]):

@@ -5,13 +5,15 @@
 from os.path import join
 
 import pandas as pd
+from bokeh.plotting import figure
+from bokeh.models import ColumnDataSource, HoverTool, Legend
 from bokeh.layouts import column
 from bokeh.layouts import row
 from bokeh.io import curdoc
 from bokeh.palettes import Purples
 from bokeh.themes import Theme
 
-from utilities import cwd, plot_lines, vbar
+from utilities import cwd, vbar
 
 
 def roc(df, palette, plot_width=400, plot_height=400):
@@ -19,21 +21,45 @@ def roc(df, palette, plot_width=400, plot_height=400):
         Plot ROC
     """
 
-    df['line_dash'] = 'solid'
-    df.loc[df['model'] == 'Random', 'line_dash'] = 'dashed'
-    df['line_color'] = 'auto'
-    df.loc[df['model'] == 'Random', 'line_color'] = 'black'
+    figure_settings = dict(title='Receiver Operating Curve (ROC) in Florida',
+                           plot_width=plot_width, plot_height=plot_height,
+                           toolbar_location=None,
+                           tools='save, pan, box_zoom, reset, wheel_zoom')
 
-    p = plot_lines(df, x='False_Positive_Rate', y='True_Positive_Rate',
-                   cat='abbrev', title='Receiver Operating Curve (ROC) in Florida',
-                   line_color='line_color', line_dash='line_dash',
-                   add_tooltips=[('AUC', '@auc{0.0000}'),
-                                 ('LogLoss', '@logloss{0.0000}'),
-                                 ('Model', '@model')],
-                   x_label='False Positive Rate', y_label='True Positive Rate',
-                   legend_location='bottom_right', plot_width=plot_width,
-                   plot_height=plot_height, palette=palette)
-    return p
+    # plot
+    plot = figure(**figure_settings)
+
+    lines = dict()
+    for category, color in zip(df['abbrev'].unique(), palette):
+
+        source = ColumnDataSource(df[df['abbrev'] == category])
+
+        line_settings = dict(line_color=color, line_width=2, line_dash='solid',
+                             muted_color=color, muted_alpha=0.2)
+
+        if category == 'Random':
+            line_settings = dict(line_color='black', line_width=2, line_dash='dashed',
+                                 muted_color='black', muted_alpha=0.2)
+
+        lines[category] = plot.line(x='False_Positive_Rate', y='True_Positive_Rate',
+                                    source=source, **line_settings)
+
+        plot.add_tools(HoverTool(renderers=[lines[category]],
+                                 tooltips=[('Abreviation', '@abbrev'),
+                                           ('False Positive Rate', '@False_Positive_Rate'),
+                                           ('True Positive Rate', '@True_Positive_Rate'),
+                                           ('AUC', '@auc{0.0000}'),
+                                           ('LogLoss', '@logloss{0.0000}'),
+                                           ('Model', '@model')]))
+
+    legend = Legend(items=[(x, [lines[x]]) for x in lines], location='bottom_right')
+    plot.add_layout(legend)
+
+    plot.legend.click_policy = 'mute'
+    plot.xaxis.axis_label = 'False Positive Rate'
+    plot.yaxis.axis_label = 'True Positive Rate'
+
+    return plot
 
 
 def logloss(df, color, hover_color, plot_width=450, plot_height=250):
@@ -44,15 +70,17 @@ def logloss(df, color, hover_color, plot_width=450, plot_height=250):
     df.drop_duplicates(['abbrev'], inplace=True)
     df.sort_values('logloss', inplace=True)
 
-    p = vbar('LogLoss for All Fitted Models',
-             x_range=df['abbrev'], counts=df['logloss'],
-             x_label='Model', y_label='LogLoss',
-             user_tooltips=[('Model', '@x'), ('LogLoss', '@top{0.0000}')],
-             user_tooltip_formatters={'Logloss': 'numeral'},
-             plot_width=plot_width, plot_height=plot_height,
-             fill_color=color,
-             hover_fill_color=hover_color, y_axis_formatter='0.0000')
-    return p
+    kwargs = dict(title='LogLoss for All Fitted Models',
+                  user_tooltips=[('Model', '@x'),
+                                 ('LogLoss', '@top{0.0000}')],
+                  user_formatters={'Logloss': 'numeral'},
+                  plot_width=plot_width, plot_height=plot_height,
+                  fill_color=color, hover_fill_color=hover_color,
+                  yaxis_formatter='0.0000')
+
+    plot = vbar(x=df['abbrev'], y=df['logloss'], xlabel='Model', ylabel='LogLoss',
+                **kwargs)
+    return plot
 
 
 def feature_importance(df, color, hover_color, plot_width=450, plot_height=250):
@@ -60,16 +88,18 @@ def feature_importance(df, color, hover_color, plot_width=450, plot_height=250):
         Plot Feature Importance
     """
 
-    p = vbar('Feature Importance for Random Forest Model',
-             x_range=df['feature'], counts=df['importance'],
-             x_label='Feature', y_label='Importance',
-             user_tooltips=[('Feature', '@x'),
-                            ('Importance', '@top{0.0%}')],
-             user_tooltip_formatters={'Importance': 'numeral'},
-             plot_width=plot_width, plot_height=plot_height,
-             fill_color=color,
-             hover_fill_color=hover_color, y_axis_formatter='0%')
-    return p
+    kwargs = dict(title='Feature Importance for Random Forest Model',
+                  user_tooltips=[('Feature', '@x'),
+                                 ('Importance', '@top{0.0%}')],
+                  user_formatters={'Importance': 'numeral'},
+                  plot_width=plot_width, plot_height=plot_height,
+                  fill_color=color, hover_fill_color=hover_color,
+                  yaxis_formatter='0%')
+
+    plot = vbar(x=df['feature'], y=df['importance'], xlabel='Feature',
+                ylabel='Importance', **kwargs)
+
+    return plot
 
 
 def models_result(df, fi, palette, color, hover_color):

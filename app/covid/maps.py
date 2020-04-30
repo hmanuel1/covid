@@ -23,17 +23,12 @@ from bokeh.themes import Theme
 from wrangler import covid_data, merge_data
 from utilities import cwd
 
-# pylint: disable=too-many-locals, too-many-arguments, too-many-function-args
 
 # 'client' or 'server'
 SIDE = 'client'
 
 
-def select_server(options, plot_width,
-                  ugeosource, ufilter, uview_off, upatch,
-                  sgeosource, sfilter, sview_off, slines,
-                  lsource, lfilter, items):
-
+def select_server(options, plot_width, us_settings, state_settings, legend_settings):
     """
         Select control implemented on the browser(client) side
     """
@@ -43,29 +38,30 @@ def select_server(options, plot_width,
 
     def update(new):
         if new != 'a':
-            ufilter.group = new
-            upatch.update(view=CDSView(source=ugeosource, filters=[ufilter]))
+            us_settings['filter'].group = new
+            us_settings['glyph'].update(
+                view=CDSView(source=us_settings['source'],
+                             filters=[us_settings['filter']]))
 
-            sfilter.group = new
-            slines.update(view=CDSView(source=sgeosource, filters=[sfilter]))
+            state_settings['filter'].group = new
+            state_settings['glyph'].update(
+                view=CDSView(source=state_settings['source'],
+                             filters=[state_settings['filter']]))
 
-            lfilter.group = new
-            for item in items:
-                item[1][0].update(view=CDSView(
-                    source=lsource, filters=[lfilter]))
+            legend_settings['filter'].group = new
+            for item in legend_settings['items']:
+                item[1][0].update(view=CDSView(source=legend_settings['source'],
+                                               filters=[legend_settings['filter']]))
         else:
-            upatch.update(view=uview_off)
-            slines.update(view=sview_off)
+            us_settings['glyph'].update(view=us_settings['view_off'])
+            state_settings['glyph'].update(view=state_settings['view_off'])
 
     select.on_change(partial(update, new='value'))
 
     return select
 
 
-def select_client(options, plot_width,
-                  ugeosource, ufilter, uview_off, uview_on, upatch,
-                  sgeosource, sfilter, sview_off, sview_on, slines,
-                  lsource, lfilter):
+def select_client(options, plot_width, us_settings, state_settings, legend_settings):
     """
         Select control implemented on the serve side
     """
@@ -73,39 +69,35 @@ def select_client(options, plot_width,
     # select control
     select = Select(value='a', options=options, max_width=plot_width - 40)
 
-    us_callback = CustomJS(args=dict(source=ugeosource,
-                                     filter=ufilter, view_off=uview_off,
-                                     view_on=uview_on, glyth=upatch),
+    us_callback = CustomJS(args=us_settings,
                            code="""
         if (cb_obj.value != 'a')
         {
             filter.group = cb_obj.value;
-            glyth.view = view_on;
+            glyph.view = view_on;
         }
         else
         {
-            glyth.view = view_off;
+            glyph.view = view_off;
         }
         source.change.emit();
         """)
 
-    state_callback = CustomJS(args=dict(source=sgeosource,
-                                        filter=sfilter, view_off=sview_off,
-                                        view_on=sview_on, glyth=slines),
+    state_callback = CustomJS(args=state_settings,
                               code="""
         if (cb_obj.value != 'a')
         {
             filter.group = cb_obj.value;
-            glyth.view = view_on;
+            glyph.view = view_on;
         }
         else
         {
-            glyth.view = view_off;
+            glyph.view = view_off;
         }
         source.change.emit();
         """)
 
-    legend_callback = CustomJS(args=dict(source=lsource, filter=lfilter),
+    legend_callback = CustomJS(args=legend_settings,
                                code="""
         var state = cb_obj.value;
         if (state != 'a')
@@ -122,9 +114,7 @@ def select_client(options, plot_width,
     return select
 
 
-def choropleth_map(state_map, us_map, palette, legend_location=None,
-                   legend_title=None, legend_names=None, options=None,
-                   plot_height=600, plot_width=950):
+def choropleth_map(state_map, us_map, palette, legend_names, **kwargs):
     """ Build Choropleth Map
         Inputs: us_map, geopandas dataframe with us state map geometry,
                 county, geopandas dataframe with us counties map geometry.
@@ -132,88 +122,135 @@ def choropleth_map(state_map, us_map, palette, legend_location=None,
         outputs:
     """
 
-    # color mapper
-    color_mapper = LinearColorMapper(palette=palette, low=0, high=9)
+    figure_settings = dict(plot_height=600, plot_width=950)
+    legend_settings = dict(title=None, location=None)
+    misc_settings = dict(options=None)
 
-    # us data source and views
-    ugeosource = GeoJSONDataSource(geojson=us_map.to_json())
-    ufilter = GroupFilter(column_name='STATEFP', group='12')
-    uview_on = CDSView(source=ugeosource, filters=[ufilter])
-    uview_off = CDSView(source=ugeosource, filters=[])
+    # uddate settings
+    for key, value in kwargs.items():
+        if key in figure_settings:
+            figure_settings[key] = value
 
-    # state data source
-    sgeosource = GeoJSONDataSource(geojson=state_map.to_json())
-    sfilter = GroupFilter(column_name='STATEFP', group='12')
-    sview_off = CDSView(source=sgeosource, filters=[])
-    sview_on = CDSView(source=sgeosource, filters=[sfilter])
+        if key in legend_settings:
+            legend_settings[key] = value
 
-    # all state
-    p = figure(plot_height=plot_height, plot_width=plot_width,
-               toolbar_location='right', match_aspect=True,
-               tools="box_zoom, wheel_zoom, pan, reset, save")
+        if key in misc_settings:
+            misc_settings[key] = value
 
-    upatch = p.patches('xs', 'ys', source=ugeosource, view=uview_off,
-                       fill_color={'field': 'm', 'transform': color_mapper},
-                       line_color='darkgrey', line_width=0.5)
+    # local variables
+    srcs = dict(ugeosource=GeoJSONDataSource(geojson=us_map.to_json()),
+                sgeosource=GeoJSONDataSource(geojson=state_map.to_json()),
+                lsource=ColumnDataSource(state_map[['STATEFP', 'xc', 'yc']]))
 
-    slines = p.multi_line('xs', 'ys', source=sgeosource, view=sview_off,
-                          line_color='darkgrey', line_width=0.5)
+    gfilter = GroupFilter(column_name='STATEFP', group='12')
 
-    rdate = Label(x=0.35 * plot_width, y=0.01 * plot_height, x_units='screen',
-                  y_units='screen', text='', render_mode='css',
-                  text_font_size=f"{0.10*plot_height}px", text_color='#eeeeee')
+    views = dict(uview_on=CDSView(source=srcs['ugeosource'], filters=[gfilter]),
+                 uview_off=CDSView(source=srcs['ugeosource'], filters=[]),
+                 sview_on=CDSView(
+                     source=srcs['sgeosource'], filters=[gfilter]),
+                 sview_off=CDSView(source=srcs['sgeosource'], filters=[]),
+                 lview=CDSView(source=srcs['lsource'], filters=[gfilter]))
 
-    p.add_layout(rdate)
+    def build_figure_controls():
+        """
+           Build map figure and controls
+        """
 
-    # create hover tool
-    p.add_tools(HoverTool(renderers=[upatch],
-                          tooltips=[('County', '@NAME'),
-                                    ('Cases', '@c{0,0}'),
-                                    ('Deaths', '@d{0,0}'),
-                                    ('Population', '@population{0,0}')]))
+        # all state
+        plot = figure(**figure_settings,
+                      toolbar_location='right', match_aspect=True,
+                      tools="box_zoom, wheel_zoom, pan, reset, save")
 
-    # build custom legend
-    # for custom legend
-    lsource = ColumnDataSource(state_map[['STATEFP', 'xc', 'yc']])
-    lfilter = GroupFilter(column_name='STATEFP', group='12')
-    lview = CDSView(source=lsource, filters=[lfilter])
+        upatch = plot.patches(
+            xs='xs', ys='ys', source=srcs['ugeosource'], view=views['uview_off'],
+            fill_color=dict(field='m', transform=LinearColorMapper(palette=palette,
+                                                                   low=0, high=9)),
+            line_color='darkgrey', line_width=0.5)
 
-    if legend_location:
-        items = []
-        for i in reversed(range(len(palette))):
-            items += [(legend_names[i], [p.quad(top='yc', bottom='yc', left='xc',
-                                                right='xc', source=lsource,
-                                                view=lview, visible=False,
-                                                fill_color=palette[i])])]
+        slines = plot.multi_line(xs='xs', ys='ys', source=srcs['sgeosource'],
+                                 view=views['sview_off'],
+                                 line_color='darkgrey', line_width=0.5)
 
-        p.add_layout(Legend(items=items, location=legend_location,
-                            title=legend_title))
+        rdate = Label(x=0.35 * figure_settings['plot_width'],
+                      y=0.01 * figure_settings['plot_height'],
+                      x_units='screen',
+                      y_units='screen',
+                      text='', render_mode='css',
+                      text_font_size=f"{0.10*figure_settings['plot_height']}px",
+                      text_color='#eeeeee')
 
-    p.axis.visible = False
+        plot.add_layout(rdate)
+
+        plot.add_tools(HoverTool(renderers=[upatch],
+                                 tooltips=[('County', '@NAME'),
+                                           ('Cases', '@c{0,0}'),
+                                           ('Deaths', '@d{0,0}'),
+                                           ('Population', '@population{0,0}')]))
+
+        if legend_settings['location']:
+            items = []
+            for i in reversed(range(len(palette))):
+                items += [(legend_names[i], [plot.quad(top='yc', bottom='yc', left='xc',
+                                                       right='xc', source=srcs['lsource'],
+                                                       view=views['lview'],
+                                                       visible=False,
+                                                       fill_color=palette[i])])]
+
+            plot.add_layout(Legend(items=items, **legend_settings))
+
+        if SIDE == 'client':
+            select = select_client(misc_settings['options'],
+                                   figure_settings['plot_width'],
+                                   dict(source=srcs['ugeosource'],
+                                        filter=gfilter,
+                                        view_off=views['uview_off'],
+                                        view_on=views['uview_on'],
+                                        glyph=upatch),
+                                   dict(source=srcs['sgeosource'],
+                                        filter=gfilter,
+                                        view_off=views['sview_off'],
+                                        view_on=views['sview_on'],
+                                        glyph=slines),
+                                   dict(source=srcs['lsource'],
+                                        filter=gfilter))
+        if SIDE == 'server':
+            select = select_server(misc_settings['options'],
+                                   figure_settings['plot_width'],
+                                   dict(source=srcs['ugeosource'],
+                                        filter=gfilter,
+                                        view_off=views['uview_off'],
+                                        view_on=views['uview_on'],
+                                        glyph=upatch),
+                                   dict(source=srcs['sgeosource'],
+                                        filter=gfilter,
+                                        view_off=views['sview_off'],
+                                        view_on=views['sview_on'],
+                                        glyph=slines),
+                                   dict(source=srcs['lsource'],
+                                        filter=gfilter,
+                                        items=items))
+
+        plot.axis.visible = False
+
+        return plot, srcs['ugeosource'], select, rdate
+
+    return build_figure_controls()
 
 
-    if SIDE == 'client':
-        select = select_client(options, plot_width,
-                               ugeosource, ufilter, uview_off, uview_on, upatch,
-                               sgeosource, sfilter, sview_off, sview_on, slines,
-                               lsource, lfilter)
-    if SIDE == 'server':
-        select = select_server(options, plot_width,
-                               ugeosource, ufilter, uview_off, upatch,
-                               sgeosource, sfilter, sview_off, slines,
-                               lsource, lfilter, items)
-
-    return p, ugeosource, select, rdate
-
-
-def map_slider_server(mapsource, date_start, date_end, date_value, width, us_map):
-
+def map_slider_server(mapsource, us_map, **kwargs):
     """
         Map slider control implemented in the server side
     """
 
-    slider = DateSlider(start=date_start, end=date_end,
-                        value=date_value, title='Reported Date', width=width)
+    slider_settings = dict(start=0, end=0, value=0,
+                           width=100, title='Reported Date')
+
+    # update slider setting
+    for key, value in kwargs.items():
+        if key in slider_settings:
+            slider_settings[key] = value
+
+    slider = DateSlider(**slider_settings)
 
     def update(new):
         """
@@ -235,13 +272,20 @@ def map_slider_server(mapsource, date_start, date_end, date_value, width, us_map
     return slider
 
 
-def map_slider_client(mapsource, date_start, date_end, date_value, width):
+def map_slider_client(mapsource, **kwargs):
     """
         Map slider control implemented in the browser (client) side
     """
 
-    slider = DateSlider(start=date_start, end=date_end,
-                        value=date_value, title='Reported Date', width=width)
+    slider_settings = dict(start=0, end=0, value=0,
+                           width=100, title='Reported Date')
+
+    # update slider setting
+    for key, value in kwargs.items():
+        if key in slider_settings:
+            slider_settings[key] = value
+
+    slider = DateSlider(**slider_settings)
 
     callback = CustomJS(args=dict(source=mapsource, date=slider),
                         code="""
@@ -381,14 +425,21 @@ def map_button_client(slider, rdate, width=80, height=60):
     return button
 
 
-def build_us_map(us_map, state_map, palette, levels, dates, options):
+def build_us_map(us_map, state_map, **kwargs):
     """
         Build the map layout with slider, select, and buttom controls
     """
 
+    settings = dict(palette=[], levels=[], dates=[], options=[])
+
+    # update settings
+    for key, value in kwargs.items():
+        if key in settings:
+            settings[key] = value
+
     # names for custom legend
     names = []
-    for level, lead_level in zip(levels, levels[1:] + [np.nan]):
+    for level, lead_level in zip(settings['levels'], settings['levels'][1:] + [np.nan]):
         if level == 0:
             names.append(f'{level:,.0f}')
         elif not np.isinf(lead_level):
@@ -397,31 +448,37 @@ def build_us_map(us_map, state_map, palette, levels, dates, options):
             names.append(f'{level:,.0f}+')
             break
 
-    # build us map with covid19 data
-    map_fig, source, select, rdate = choropleth_map(state_map, us_map,
-                                                    palette, legend_names=names,
-                                                    legend_title='Cases by County:',
-                                                    options=options,
-                                                    legend_location='bottom_right',
-                                                    plot_height=400, plot_width=800)
+    def map_layout():
+        """
+            Build map layout with map plot and controls
+        """
 
-    if SIDE == 'client':
-        slider = map_slider_client(mapsource=source, date_start=dates[-1].date(),
-                                   date_end=dates[0].date(),
-                                   date_value=dates[0].date(),
-                                   width=800 - 40 - 84)
+        # build us map with covid19 data
+        plot_settings = dict(title='Cases by County:', options=settings['options'],
+                             location='bottom_right', plot_height=400, plot_width=800)
 
-        button = map_button_client(slider, rdate, width=80, height=60)
+        (plot, source, select, rdate) = choropleth_map(state_map, us_map,
+                                                       settings['palette'],
+                                                       legend_names=names,
+                                                       **plot_settings)
 
-    if SIDE == 'server':
-        slider = map_slider_server(mapsource=source, date_start=dates[-1].date(),
-                                   date_end=dates[0].date(), date_value=dates[0].date(),
-                                   width=800 - 40 - 84, us_map=us_map)
+        slider_settings = dict(start=settings['dates'][-1].date(),
+                               end=settings['dates'][0].date(),
+                               value=settings['dates'][0].date(),
+                               width=800 - 40 - 84)
 
-        button = map_button_server(slider, rdate, width=80, height=60)
+        if SIDE == 'client':
+            slider = map_slider_client(mapsource=source, **slider_settings)
+            button = map_button_client(slider, rdate, width=80, height=60)
 
-    layout = column(select, map_fig, row(slider, button))
-    return layout
+        if SIDE == 'server':
+            slider = map_slider_server(mapsource=source, us_map=us_map,
+                                       **slider_settings)
+            button = map_button_server(slider, rdate, width=80, height=60)
+
+        return column(select, plot, row(slider, button))
+
+    return map_layout()
 
 
 STAND_ALONE = False
@@ -433,7 +490,8 @@ if STAND_ALONE:
     # get data sets
     df = covid_data(df, lookup)
     us_map_in = gpd.read_file(join(cwd(), 'shapes', 'us_map', 'us_map.shx'))
-    state_map_in = gpd.read_file(join(cwd(), 'shapes', 'state_map', 'state_map.shx'))
+    state_map_in = gpd.read_file(
+        join(cwd(), 'shapes', 'state_map', 'state_map.shx'))
 
     # merge covid19 data with map data
     levels_in = [0, 1, 10, 100, 250, 500, 5000, 10000, np.inf]
@@ -445,13 +503,13 @@ if STAND_ALONE:
     # state drop-down options
     sel = pd.read_csv(join(cwd(), 'input', 'statefp-name-abbr.csv'),
                       dtype={'statefp': 'str'})
-    sel = sel.loc[sel['statefp'].isin(
-        us_map_in['STATEFP'].unique())].copy(deep=True)
+    sel = sel.loc[sel['statefp'].isin(us_map_in['STATEFP'].unique())].copy(deep=True)
     options_in = [('a', 'USA')] + list(zip(sel['statefp'], sel['name']))
 
     # build us map and fl map layouts
-    us_map_layout = build_us_map(us_map_in, state_map_in, palette_in, levels_in,
-                                 dates_in, options_in)
+    settings_in = dict(palette=palette_in, levels=levels_in, dates=dates_in,
+                       options=options_in)
+    us_map_layout = build_us_map(us_map_in, state_map_in, **settings_in)
 
     curdoc().add_root(us_map_layout)
     curdoc().title = 'maps'

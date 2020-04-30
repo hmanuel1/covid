@@ -61,7 +61,7 @@ def get_data_sets():
     # dataset for models
     data = pd.read_csv(join(cwd(), 'data', 'flclean.csv'))
     roc = pd.read_csv(join(cwd(), 'output', 'fl_roc_models.csv'))
-    fi = pd.read_csv(join(cwd(), 'output', 'fl_fi_models.csv'))
+    importance = pd.read_csv(join(cwd(), 'output', 'fl_fi_models.csv'))
 
     # datasets for predictions
     cases = pd.read_csv(
@@ -76,7 +76,7 @@ def get_data_sets():
         us_map['STATEFP'].unique())].copy(deep=True)
     options = [('a', 'USA')] + list(zip(sel['statefp'], sel['name']))
 
-    return df, us_map, state_map, data, roc, fi, options, cases, deaths
+    return df, us_map, state_map, data, roc, importance, options, cases, deaths
 
 def covid():
     """
@@ -86,7 +86,7 @@ def covid():
     print('Bokeh Version:', __version__)
 
     # get all datasets for this app
-    df, us_map, state_map, data, roc, fi, options, cases, deaths = get_data_sets()
+    df, us_map, state_map, data, roc, importance, options, cases, deaths = get_data_sets()
 
     # merge covid19 data with map data
     levels = [0, 1, 10, 100, 250, 500, 5000, 10000, np.inf]
@@ -102,16 +102,16 @@ def covid():
     # hold page layouts
     page = dict()
 
-    # build us map and fl map layouts
-    page['usmap'] = build_us_map(us_map, state_map, palette['theme'], levels,
-                                 dates, options)
-
     # histograms
     page['histograms'] = age_gender_histograms(data, palette['color'],
                                                palette['hover'])
 
+    # build us map and fl map layouts
+    data = dict(palette=palette['theme'], levels=levels, dates=dates, options=options)
+    page['usmap'] = build_us_map(us_map, state_map, **data)
+
     # model result for florida
-    page['modeling'] = models_result(roc, fi, palette['theme'][2:],
+    page['modeling'] = models_result(roc, importance, palette['theme'][2:],
                                      palette['color'], palette['hover'])
 
     # predictions based on arima since 3/15/2020

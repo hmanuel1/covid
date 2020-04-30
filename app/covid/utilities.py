@@ -6,8 +6,8 @@ import os
 
 import numpy as np
 from bokeh.plotting import figure
-from bokeh.models import (ColumnDataSource, HoverTool, Legend,
-                          NumeralTickFormatter)
+from bokeh.models import HoverTool, NumeralTickFormatter
+
 
 def cwd():
     """
@@ -22,136 +22,103 @@ def cwd():
         cur_working_dir = os.path.dirname(__file__)
     return cur_working_dir
 
-# pylint: disable=too-many-locals, too-many-arguments, too-many-function-args
 
-def plot_lines(df, x=None, y=None, cat=None, title=None,
-               x_axis_type='auto', y_axis_type='auto',
-               x_label=None, y_label=None, add_tooltips=None,
-               line_color='auto', line_dash='solid',
-               line_width=2, plot_width=950, plot_height=600,
-               tools='save, pan, box_zoom, reset, wheel_zoom',
-               legend_location=None, toolbar_location=None,
-               y_axis_formatter=None, palette=None):
-    '''
-       Plot multipe lines by category
-    '''
+def histogram(x, xlabel='x', ylabel='y', **kwargs):
+    """
+        plot histogram
+    """
 
-    p = figure(x_axis_type=x_axis_type, y_axis_type=y_axis_type,
-               plot_width=plot_width,
-               plot_height=plot_height, title=title,
-               toolbar_location=toolbar_location, tools=tools)
+    # plot settings
+    figure_settings = dict(title=None, tools='', background_fill_color=None)
 
-    if x_axis_type == 'datetime':
-        x_tool_text = f"@{x}" + "{%m/%d/%Y}"
-        x_formatter = {f"@{x}": 'datetime'}
-    else:
-        x_tool_text = f"@{x}"
-        x_formatter = {f"@{x}": 'numeral'}
+    quad_settings = dict(fill_color='navy', hover_fill_color='grey',
+                         line_color="white", alpha=0.5, hover_fill_alpha=1.0)
 
-    tooltips = [(cat.title(), f"@{cat}"),
-                (x.title(), x_tool_text), (y.title(), f"@{y}")]
-    if add_tooltips:
-        tooltips = tooltips + add_tooltips
+    misc_settings = dict(density=False, bins='auto')
 
-    categories = df[cat].unique()
-    lines = dict()
+    # update plot settings
+    for key, value in kwargs.items():
+        if key in figure_settings:
+            figure_settings[key] = value
 
-    for category, color in zip(categories, palette):
-        data = df[df[cat] == category]
+        if key in quad_settings:
+            quad_settings[key] = value
 
-        source = ColumnDataSource(data)
-
-        if line_color != 'auto':
-            temp_color = data[line_color].head(1).values[0]
-            if temp_color != 'auto':
-                color = temp_color
-
-        temp_line_dash = line_dash
-        if line_dash != 'solid':
-            temp_line_dash = data[line_dash].head(1).values[0]
-
-        line_settings = dict(source=source, line_color=color, line_width=line_width,
-                             line_dash=temp_line_dash, muted_color=color,
-                             muted_alpha=0.2)
-
-        lines[category] = p.line(x, y, **line_settings)
-
-        p.add_tools(HoverTool(renderers=[lines[category]],
-                              tooltips=tooltips, formatters=x_formatter))
-
-    p.xaxis.axis_label = x_label
-    p.yaxis.axis_label = y_label
-
-    if y_axis_formatter:
-        p.yaxis.formatter = NumeralTickFormatter(format=y_axis_formatter)
-
-    if legend_location:
-        legend = Legend(items=[(x, [lines[x]]) for x in lines],
-                        location=legend_location)
-        p.add_layout(legend)
-        p.legend.click_policy = 'mute'
-
-    return p
-
-
-def histogram(x, density=False, bins=None, title='Histogram',
-              x_label='x', y_label='y', fill_color='navy',
-              hover_fill_color='grey'):
-    """ plot histogram """
+        if key in misc_settings:
+            misc_settings[key] = value
 
     # calculate bin size using Sturge’s rule
-    if bins is None:
-        bins = int(1 + 3.322 * np.log10(len(x)))
+    if misc_settings['bins'] == 'auto':
+        misc_settings['bins'] = int(1 + 3.322 * np.log10(len(x)))
 
-    hist, edges = np.histogram(x, density=density, bins=bins)
+    hist, edges = np.histogram(x, density=misc_settings['density'],
+                               bins=misc_settings['bins'])
 
-    p = figure(title=title, tools='', background_fill_color=None)
+    plot = figure(**figure_settings)
 
-    quad = p.quad(top=hist, bottom=0, left=edges[:-1], right=edges[1:],
-                  fill_color=fill_color, line_color="white", alpha=0.5,
-                  hover_fill_alpha=1.0, hover_fill_color=hover_fill_color)
+    quad = plot.quad(top=hist, bottom=0, left=edges[:-1], right=edges[1:],
+                     **quad_settings)
 
-    p.add_tools(HoverTool(renderers=[quad],
-                          tooltips=[(f"{x_label.title()} Range", '@left{int} to @right{int}'),
-                                    (y_label.title(), '@top')]))
+    plot.add_tools(HoverTool(renderers=[quad],
+                             tooltips=[(f"{xlabel.title()} Range", '@left{int} to @right{int}'),
+                                       (ylabel.title(), '@top')]))
 
-    p.y_range.start = 0
-    p.xaxis.axis_label = x_label
-    p.yaxis.axis_label = y_label
-    return p
+    plot.y_range.start = 0
+    plot.xaxis.axis_label = xlabel
+    plot.yaxis.axis_label = ylabel
+
+    return plot
 
 
-def vbar(title, x_range, counts, x_label='x', y_label='y', fill_color='navy',
-         plot_width=950, plot_height=600, hover_fill_color='grey',
-         user_tooltips='auto', user_tooltip_formatters='auto',
-         y_axis_formatter='auto'):
-    """ plot vertical bar """
+def vbar(x, y, xlabel='x', ylabel='y', **kwargs):
+    """
+        Plot vertical bars
+    """
 
-    p = figure(x_range=x_range, plot_height=plot_height, plot_width=plot_width,
-               title=title, toolbar_location=None, tools='')
+    # figure and vbar settings
+    figure_settings = dict(x_range=x, plot_height=600, plot_width=950,
+                           title=None, toolbar_location=None, tools='')
 
-    vbar_glyph = p.vbar(x=x_range, top=counts, width=0.9,
-                        fill_color=fill_color, line_color='white', alpha=0.5,
-                        hover_fill_color=hover_fill_color, hover_fill_alpha=1.0)
+    vbar_settings = dict(width=0.9, fill_color='navy', line_color='white',
+                         alpha=0.5, hover_fill_color='grey', hover_fill_alpha=1.0)
 
-    if user_tooltips == 'auto':
-        tooltips = [(x_label.title(), '@x'), (y_label.title(), '@top')]
-    else:
-        tooltips = user_tooltips
+    misc_settings = dict(yaxis_formatter='auto', user_tooltips='auto',
+                         user_formatters='auto')
 
-    if user_tooltip_formatters == 'auto':
-        formatters = {y_label.title(): 'printf'}
-    else:
-        formatters = user_tooltip_formatters
+    # update settings
+    for key, value in kwargs.items():
+        if key in figure_settings:
+            figure_settings[key] = value
 
-    p.add_tools(HoverTool(renderers=[vbar_glyph],
-                          tooltips=tooltips, formatters=formatters))
+        if key in vbar_settings:
+            vbar_settings[key] = value
 
-    if y_axis_formatter != 'auto':
-        p.yaxis.formatter = NumeralTickFormatter(format=y_axis_formatter)
+        if key in misc_settings:
+            misc_settings[key] = value
 
-    p.y_range.start = 0
-    p.xaxis.axis_label = x_label
-    p.yaxis.axis_label = y_label
+    plot = figure(**figure_settings)
 
-    return p
+    vbar_glyph = plot.vbar(x=x, top=y, **vbar_settings)
+
+    # tooltips
+    tooltips = [(xlabel.title(), '@x'), (ylabel.title(), '@top')]
+    if misc_settings['user_tooltips'] != 'auto':
+        tooltips = misc_settings['user_tooltips']
+
+    # tooltip formatters
+    formatters = {ylabel.title(): 'numeral'}
+    if misc_settings['user_formatters'] != 'auto':
+        formatters = misc_settings['user_formatters']
+
+    plot.add_tools(HoverTool(renderers=[vbar_glyph],
+                             tooltips=tooltips,
+                             formatters=formatters))
+
+    if misc_settings['yaxis_formatter'] != 'auto':
+        plot.yaxis.formatter = NumeralTickFormatter(format=misc_settings['yaxis_formatter'])
+
+    plot.y_range.start = 0
+    plot.xaxis.axis_label = xlabel
+    plot.yaxis.axis_label = ylabel
+
+    return plot

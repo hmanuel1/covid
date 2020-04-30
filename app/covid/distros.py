@@ -18,12 +18,12 @@ def age_cases_histogram(df, color, hover_color):
         Plot distribution of cases among age groups
     """
 
-    x = df['age'].values
-    p = histogram(x, density=False,
-                  title='Age Distribution of Cases in Florida',
-                  x_label='Age', y_label='Cases', fill_color=color,
+    kwargs = dict(title='Age Distribution of Cases in Florida', fill_color=color,
                   hover_fill_color=hover_color)
-    return p
+
+    plot = histogram(x=df['age'].values, xlabel='Age', ylabel='Cases', **kwargs)
+
+    return plot
 
 
 def age_deaths_histogram(df, color, hover_color):
@@ -31,12 +31,12 @@ def age_deaths_histogram(df, color, hover_color):
         Plot distribution of deaths among age groups
     """
 
-    x = df[df['died'] == 1]['age'].values
-    p = histogram(x, density=False,
-                  title='Age Distribution of Deaths in Florida',
-                  x_label='Age', y_label='Deaths', fill_color=color,
+    kwargs = dict(title='Age Distribution of Deaths in Florida', fill_color=color,
                   hover_fill_color=hover_color)
-    return p
+
+    plot = histogram(x=df[df['died'] == 1]['age'], xlabel='Age', ylabel='Deaths', **kwargs)
+
+    return plot
 
 
 def gender_cases_histogram(df, color, hover_color):
@@ -44,12 +44,15 @@ def gender_cases_histogram(df, color, hover_color):
         Plot distribution of cases by gender
     """
 
-    counts = [df['Male'].sum(), len(df) - df['Male'].sum()]
-    x_range = ['Male', 'Female']
-    p = vbar('Gender Distribution of Cases in Florida',
-             x_range, counts, x_label='Gender', y_label='Cases',
-             fill_color=color, hover_fill_color=hover_color)
-    return p
+    x = ['Male', 'Female']
+    y = [df['Male'].sum(), len(df) - df['Male'].sum()]
+
+    kwargs = dict(title='Gender Distribution of Cases in Florida', fill_color=color,
+                  hover_fill_color=hover_color)
+
+    plot = vbar(x=x, y=y, xlabel='Gender', ylabel='Cases', **kwargs)
+
+    return plot
 
 
 def gender_deaths_histogram(df, color, hover_color):
@@ -57,13 +60,16 @@ def gender_deaths_histogram(df, color, hover_color):
         Plot distribution of deaths by gender
     """
 
-    df = df[df['died'] == 1]
-    counts = [df['Male'].sum(), len(df) - df['Male'].sum()]
-    x_range = ['Male', 'Female']
-    p = vbar('Gender Distribution of Deaths in Florida',
-             x_range, counts, x_label='Gender', y_label='Deaths',
-             fill_color=color, hover_fill_color=hover_color)
-    return p
+    df_died = df[df['died'] == 1]
+    x = ['Male', 'Female']
+    y = [df_died['Male'].sum(), len(df_died) - df_died['Male'].sum()]
+
+    kwargs = dict(title='Gender Distribution of Deaths in Florida', fill_color=color,
+                  hover_fill_color=hover_color)
+
+    plot = vbar(x=x, y=y, xlabel='Gender', ylabel='Deaths', **kwargs)
+
+    return plot
 
 
 def age_gender_histograms(df, color, hover_color):

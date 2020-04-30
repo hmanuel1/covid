@@ -13,7 +13,6 @@ from shapely.wkt import loads
 
 from utilities import cwd
 
-# pylint: disable=too-many-statements, too-many-locals
 
 # us census shape file paths
 COUNTY_SHAPES = join(cwd(), 'shapes', 'counties_500k', 'cb_2018_us_county_500k.shx')
@@ -132,6 +131,41 @@ def mround(match):
 
     return "{:.2f}".format(float(match.group()))
 
+def transform_alaska_hawaii(us_map, state_map):
+    """
+        Transform Alaska and Hawaii
+    """
+
+    # transform alaska and hawaii
+    texas = state_map['STATEFP'] == '48'
+    [(xc_tx, yc_tx)] = list(state_map.loc[texas, 'geometry'].iat[0].centroid.coords)
+
+    alaska = state_map['STATEFP'] == '02'
+    xc_ak = state_map.loc[alaska, 'xc'].iat[0]
+    yc_ak = state_map.loc[alaska, 'yc'].iat[0]
+
+    hawaii = state_map['STATEFP'] == '15'
+    xc_hi = state_map.loc[hawaii, 'xc'].iat[0]
+    yc_hi = state_map.loc[hawaii, 'yc'].iat[0]
+
+    state_map.loc[alaska, 'geometry'] = state_map[alaska].scale(
+        xfact=0.19, yfact=0.19, zfact=1.0, origin='centroid')
+    state_map.loc[alaska, 'geometry'] = state_map[alaska].translate(
+        xoff=xc_tx - xc_ak - 2.7e6, yoff=yc_tx - yc_ak - 5.0e5, zoff=0.0)
+    state_map.loc[hawaii, 'geometry'] = state_map[hawaii].translate(
+        xoff=xc_tx - xc_hi - 1.5e6, yoff=yc_tx - yc_hi - 7.5e5, zoff=0.0)
+
+    alaska_ct = us_map['STATEFP'] == '02'
+    hawaii_ct = us_map['STATEFP'] == '15'
+    us_map.loc[alaska_ct, 'geometry'] = us_map[alaska_ct].scale(
+        xfact=0.19, yfact=0.19, zfact=1.0, origin=(xc_ak, yc_ak, 0))
+    us_map.loc[alaska_ct, 'geometry'] = us_map[alaska_ct].translate(
+        xoff=xc_tx - xc_ak - 2.7e6, yoff=yc_tx - yc_ak - 5.0e5, zoff=0.0)
+    us_map.loc[hawaii_ct, 'geometry'] = us_map[hawaii_ct].translate(
+        xoff=xc_tx - xc_hi - 1.5e6, yoff=yc_tx - yc_hi - 7.5e5, zoff=0.0)
+
+    return us_map, state_map
+
 
 def get_maps(us_map, state_map):
     """
@@ -162,33 +196,8 @@ def get_maps(us_map, state_map):
     state_map['xc'] = [point.coords[0][0] for point in points]
     state_map['yc'] = [point.coords[0][1] for point in points]
 
-    # transform alaska and hawaii
-    texas = state_map['STATEFP'] == '48'
-    [(xc_tx, yc_tx)] = list(state_map.loc[texas, 'geometry'].iat[0].centroid.coords)
-
-    alaska = state_map['STATEFP'] == '02'
-    xc_ak = state_map.loc[alaska, 'xc'].iat[0]
-    yc_ak = state_map.loc[alaska, 'yc'].iat[0]
-
-    hawaii = state_map['STATEFP'] == '15'
-    xc_hi = state_map.loc[hawaii, 'xc'].iat[0]
-    yc_hi = state_map.loc[hawaii, 'yc'].iat[0]
-
-    state_map.loc[alaska, 'geometry'] = state_map[alaska].scale(
-        xfact=0.19, yfact=0.19, zfact=1.0, origin='centroid')
-    state_map.loc[alaska, 'geometry'] = state_map[alaska].translate(
-        xoff=xc_tx - xc_ak - 2.7e6, yoff=yc_tx - yc_ak - 5.0e5, zoff=0.0)
-    state_map.loc[hawaii, 'geometry'] = state_map[hawaii].translate(
-        xoff=xc_tx - xc_hi - 1.5e6, yoff=yc_tx - yc_hi - 7.5e5, zoff=0.0)
-
-    alaska_ct = us_map['STATEFP'] == '02'
-    hawaii_ct = us_map['STATEFP'] == '15'
-    us_map.loc[alaska_ct, 'geometry'] = us_map[alaska_ct].scale(
-        xfact=0.19, yfact=0.19, zfact=1.0, origin=(xc_ak, yc_ak, 0))
-    us_map.loc[alaska_ct, 'geometry'] = us_map[alaska_ct].translate(
-        xoff=xc_tx - xc_ak - 2.7e6, yoff=yc_tx - yc_ak - 5.0e5, zoff=0.0)
-    us_map.loc[hawaii_ct, 'geometry'] = us_map[hawaii_ct].translate(
-        xoff=xc_tx - xc_hi - 1.5e6, yoff=yc_tx - yc_hi - 7.5e5, zoff=0.0)
+    # scale Alaska and move Alaska and Hawii under California
+    us_map, state_map = transform_alaska_hawaii(us_map, state_map)
 
     # remove small island (second pass)
     us_map = remove_islands(us_map)

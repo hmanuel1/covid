@@ -25,17 +25,160 @@ from sklearn import metrics
 
 from utilities import cwd
 
-# pylint: disable=too-many-locals, too-many-statements
 
 np.random.seed(10)
 
 
-def classify(show_results=False):
+def rt_log_reg(X_train, X_test, y_train, y_test, n_estimators):
+    """
+       Random Trees and Logistic Regression classifier
+    """
+
+    # Unsupervised transformation based on totally random trees
+    clf_rt = RandomTreesEmbedding(max_depth=3, n_estimators=n_estimators,
+                                  random_state=0)
+
+    clf_lm = LogisticRegression(max_iter=1000, solver='lbfgs')
+
+    # fit model
+    pipeline = make_pipeline(clf_rt, clf_lm)
+    pipeline.fit(X_train, y_train)
+
+    # predict
+    y_pred = pipeline.predict_proba(X_test)[:, 1]
+
+    # model metrics
+    roc_fpr, roc_tpr, _ = roc_curve(y_test, y_pred)
+    roc_auc = roc_auc_score(y_test, y_pred)
+    logloss = metrics.log_loss(y_test, y_pred)
+
+    return dict(x=roc_fpr, y=roc_tpr, auc=roc_auc, logloss=logloss)
+
+
+def rf_log_reg(X_train, X_test, y_train, y_test, n_estimators):
+    """
+       Random Forest and Logistic Regression classifier
+    """
+
+    # Unsupervised transformation based on totally random trees
+    clf_rf = RandomForestClassifier(max_depth=3, n_estimators=n_estimators)
+    rf_enc = OneHotEncoder(categories='auto')
+    clf_lm = LogisticRegression(max_iter=1000, solver='lbfgs')
+
+    clf_rf.fit(X_train, y_train)
+    rf_enc.fit(clf_rf.apply(X_train))
+    clf_lm.fit(rf_enc.transform(clf_rf.apply(X_train)), y_train)
+
+    # predict
+    y_pred = clf_lm.predict_proba(rf_enc.transform(clf_rf.apply(X_test)))[:, 1]
+
+    # model metrics
+    roc_fpr, roc_tpr, _ = roc_curve(y_test, y_pred)
+    roc_auc = roc_auc_score(y_test, y_pred)
+    logloss = metrics.log_loss(y_test, y_pred)
+
+    return dict(x=roc_fpr, y=roc_tpr, auc=roc_auc, logloss=logloss)
+
+
+def gbt_log_reg(X_train, X_test, y_train, y_test, n_estimators):
+    """
+       Gradient Boosting Trees and Logistic Regression classifier
+    """
+
+    # Supervised transformation based on gradient boosted trees
+    clf_grd = GradientBoostingClassifier(n_estimators=n_estimators)
+    grd_enc = OneHotEncoder(categories='auto')
+    clf_lm = LogisticRegression(max_iter=1000, solver='lbfgs')
+
+    clf_grd.fit(X_train, y_train)
+    grd_enc.fit(clf_grd.apply(X_train)[:, :, 0])
+    clf_lm.fit(grd_enc.transform(clf_grd.apply(X_train)[:, :, 0]), y_train)
+
+    # prediction
+    y_pred = clf_lm.predict_proba(grd_enc.transform(clf_grd.apply(X_test)[:, :, 0]))[:, 1]
+
+    # model metrics
+    roc_fpr, roc_tpr, _ = roc_curve(y_test, y_pred)
+    roc_auc = roc_auc_score(y_test, y_pred)
+    logloss = metrics.log_loss(y_test, y_pred)
+
+    return dict(x=roc_fpr, y=roc_tpr, auc=roc_auc, logloss=logloss)
+
+
+def grd_boosting_trees(X_train, X_test, y_train, y_test, n_estimators):
+    """
+       Gradient Boosting Trees classifier
+    """
+
+    # Supervised transformation based on gradient boosted trees
+    clf_grd = GradientBoostingClassifier(n_estimators=n_estimators)
+    grd_enc = OneHotEncoder(categories='auto')
+
+    # fit model
+    clf_grd.fit(X_train, y_train)
+    grd_enc.fit(clf_grd.apply(X_train)[:, :, 0])
+
+    # predict
+    y_pred = clf_grd.predict_proba(X_test)[:, 1]
+
+    # model metrics
+    roc_fpr, roc_tpr, _ = roc_curve(y_test, y_pred)
+    roc_auc = roc_auc_score(y_test, y_pred)
+    logloss = metrics.log_loss(y_test, y_pred)
+
+    return dict(x=roc_fpr, y=roc_tpr, auc=roc_auc, logloss=logloss)
+
+
+def random_forest(X_train, X_test, y_train, y_test, n_estimators):
+    """
+       Random Forest classifier
+    """
+
+    # Unsupervised transformation based on totally random trees
+    clf_rf = RandomForestClassifier(max_depth=3, n_estimators=n_estimators)
+    rf_enc = OneHotEncoder(categories='auto')
+
+    # fit
+    clf_rf.fit(X_train, y_train)
+    rf_enc.fit(clf_rf.apply(X_train))
+
+    # predict
+    y_pred = clf_rf.predict_proba(X_test)[:, 1]
+
+    # model metrics
+    roc_fpr, roc_tpr, _ = roc_curve(y_test, y_pred)
+    roc_auc = roc_auc_score(y_test, y_pred)
+    logloss = metrics.log_loss(y_test, y_pred)
+
+    return dict(x=roc_fpr, y=roc_tpr, auc=roc_auc, logloss=logloss)
+
+
+def feature_importance(X_train, y_train, col_names, n_estimators):
+    """
+        Feature importance using Random Forest classifier
+    """
+
+    # Unsupervised transformation based on totally random trees
+    clf_rf = RandomForestClassifier(max_depth=3, n_estimators=n_estimators)
+
+    # fit
+    clf_rf.fit(X_train, y_train)
+
+    # feature importances
+    df = pd.DataFrame({'feature': col_names,
+                       'importance': clf_rf.feature_importances_})
+
+    df.sort_values('importance', ascending=False, inplace=True)
+    return df
+
+
+def classify():
     """
         Run classification models
     """
+
     y_var = 'died'
-    n_estimator = 10
+    n_estimators = 10
 
     df = pd.read_csv(join(cwd(), 'data', 'flclean.csv'), low_memory=False)
     df.drop(['datetime', 'fips', 'dx', 'dy'], axis=1, inplace=True)
@@ -47,153 +190,88 @@ def classify(show_results=False):
     X = df.loc[:, df.columns != y_var]
     y = df.loc[:, df.columns == y_var]
     X_train, X_test, y_train, y_test = train_test_split(X.values,
-                                                        y.values.ravel(), test_size=0.5)
+                                                        y.values.ravel(),
+                                                        test_size=0.5)
+    # classification models
+    rt_lr = dict(model='Random Trees and Logistic Regression', abbrev='RT + LR',
+                 **rt_log_reg(X_train, X_test, y_train, y_test, n_estimators))
 
-    # It is important to train the ensemble of trees on a different subset
-    # of the training data than the linear regression model to avoid
-    # overfitting, in particular if the total number of leaves is
-    # similar to the number of training samples
-    X_train, X_train_lr, y_train, y_train_lr = train_test_split(X_train,
-                                                                y_train, test_size=0.5)
+    rf_lr = dict(model='Random Forest and Logistic Regression', abbrev='RF + LR',
+                 **rf_log_reg(X_train, X_test, y_train, y_test, n_estimators))
 
-    # Unsupervised transformation based on totally random trees
-    rt = RandomTreesEmbedding(max_depth=3, n_estimators=n_estimator,
-                              random_state=0)
-    rt_lm = LogisticRegression(max_iter=1000, solver='lbfgs')
-    pipeline = make_pipeline(rt, rt_lm)
-    pipeline.fit(X_train, y_train)
+    rforest = dict(model='Random Forest', abbrev='RF',
+                   **random_forest(X_train, X_test, y_train, y_test, n_estimators))
 
-    # RT
-    y_pred_rt = pipeline.predict_proba(X_test)[:, 1]
-    fpr_rt_lm, tpr_rt_lm, _ = roc_curve(y_test, y_pred_rt)
+    gbt = dict(model='Gradient Boosting Trees', abbrev='GBT',
+               **grd_boosting_trees(X_train, X_test, y_train, y_test, n_estimators))
 
-    # Supervised transformation based on random forests
-    rf = RandomForestClassifier(max_depth=3, n_estimators=n_estimator)
-    rf_enc = OneHotEncoder(categories='auto')
-    rf_lm = LogisticRegression(max_iter=1000, solver='lbfgs')
-    rf.fit(X_train, y_train)
-    rf_enc.fit(rf.apply(X_train))
-    rf_lm.fit(rf_enc.transform(rf.apply(X_train_lr)), y_train_lr)
+    gbt_lr = dict(model='Gradient Boosting Trees and Linear Regression',
+                  abbrev='GBT + LR',
+                  **gbt_log_reg(X_train, X_test, y_train, y_test, n_estimators))
 
-    # RF + LR
-    y_pred_rf_lm = rf_lm.predict_proba(
-        rf_enc.transform(rf.apply(X_test)))[:, 1]
-    fpr_rf_lm, tpr_rf_lm, _ = roc_curve(y_test, y_pred_rf_lm)
+    rand = dict(model='Random', abbrev='Random', logloss=-1 * np.log10(0.5),
+                auc=0.5, x=np.linspace(0, 1, 100), y=np.linspace(0, 1, 100))
 
-    # Supervised transformation based on gradient boosted trees
-    grd = GradientBoostingClassifier(n_estimators=n_estimator)
-    grd_enc = OneHotEncoder(categories='auto')
-    grd_lm = LogisticRegression(max_iter=1000, solver='lbfgs')
-    grd.fit(X_train, y_train)
-    grd_enc.fit(grd.apply(X_train)[:, :, 0])
-    grd_lm.fit(grd_enc.transform(grd.apply(X_train_lr)[:, :, 0]), y_train_lr)
-
-    # GBT + LR
-    y_pred_grd_lm = grd_lm.predict_proba(
-        grd_enc.transform(grd.apply(X_test)[:, :, 0]))[:, 1]
-    fpr_grd_lm, tpr_grd_lm, _ = roc_curve(y_test, y_pred_grd_lm)
-
-    # GBT - The gradient boosted model by itself
-    y_pred_grd = grd.predict_proba(X_test)[:, 1]
-    fpr_grd, tpr_grd, _ = roc_curve(y_test, y_pred_grd)
-
-    # RF - The random forest model by itself
-    y_pred_rf = rf.predict_proba(X_test)[:, 1]
-    fpr_rf, tpr_rf, _ = roc_curve(y_test, y_pred_rf)
-
-    # feature importances
-    fi = pd.DataFrame({'feature': list(X.columns),
-                       'importance': rf.feature_importances_})
-    fi.sort_values('importance', ascending=False, inplace=True)
-    if show_results:
-        plt.figure(figsize=(4, 4))
-        ax = plt.subplot(111)
-        ax.barh(fi['feature'], fi['importance'])
-        plt.gca().invert_yaxis()
-        ax.set_ylabel('features')
-        plt.title('Feature Importance')
-        plt.show()
-
-    # logloss
-    logloss_rt_lm = metrics.log_loss(y_test, y_pred_rt)
-    logloss_rf_lm = metrics.log_loss(y_test, y_pred_rf_lm)
-    logloss_grd_lm = metrics.log_loss(y_test, y_pred_grd_lm)
-    logloss_grd = metrics.log_loss(y_test, y_pred_grd)
-    logloss_rf = metrics.log_loss(y_test, y_pred_rf)
-    if show_results:
-        print("=== Log loss ===")
-        print(f"RT  + LR = {logloss_rt_lm:.4f}")
-        print(f"RF  + LR = {logloss_rf_lm:.4f}")
-        print(f"GBT + LR = {logloss_grd_lm:.4f}")
-        print(f"GBT      = {logloss_grd:.4f}")
-        print(f"RF       = {logloss_rf:.4f}")
-
-    # ROC AUC
-    roc_rt_lm = roc_auc_score(y_test, y_pred_rt)
-    roc_rf_lm = roc_auc_score(y_test, y_pred_rf_lm)
-    roc_grd_lm = roc_auc_score(y_test, y_pred_grd_lm)
-    roc_grd = roc_auc_score(y_test, y_pred_grd)
-    roc_rf = roc_auc_score(y_test, y_pred_rf)
-    if show_results:
-        print("=== ROC ===")
-        print(f"RT  + LR = {roc_rt_lm:.4f}")
-        print(f"RF  + LR = {roc_rf_lm:.4f}")
-        print(f"GBT + LR = {roc_grd_lm:.4f}")
-        print(f"GBT      = {roc_grd:.4f}")
-        print(f"RF       = {roc_rf:.4f}")
-
-        plt.figure(1)
-        plt.plot([0, 1], [0, 1], 'k--')
-        plt.plot(fpr_rt_lm, tpr_rt_lm, label='RT + LR')
-        plt.plot(fpr_rf, tpr_rf, label='RF')
-        plt.plot(fpr_rf_lm, tpr_rf_lm, label='RF + LR')
-        plt.plot(fpr_grd, tpr_grd, label='GBT')
-        plt.plot(fpr_grd_lm, tpr_grd_lm, label='GBT + LR')
-        plt.xlabel('False positive rate')
-        plt.ylabel('True positive rate')
-        plt.title('ROC curve')
-        plt.legend(loc='best')
-        plt.show()
-
-    # create dataframe with ROC Curves
-    df1 = pd.DataFrame({'model': 'Random Trees and Logistic Regression',
-                        'abbrev': 'RT + LR', 'logloss': logloss_rt_lm,
-                        'auc': roc_rt_lm, 'x': fpr_rt_lm, 'y': tpr_rt_lm})
-
-    df2 = pd.DataFrame({'model': 'Random Forest',
-                        'abbrev': 'RF', 'logloss': logloss_rf,
-                        'auc': roc_rf, 'x': fpr_rf, 'y': tpr_rf})
-
-    df3 = pd.DataFrame({'model': 'Random Forest and Logistic Regression',
-                        'abbrev': 'RF + LR', 'logloss': logloss_rf_lm,
-                        'auc': roc_rf_lm, 'x': fpr_rf_lm, 'y': tpr_rf_lm})
-
-    df4 = pd.DataFrame({'model': 'Gradient Boosting Trees',
-                        'abbrev': 'GBT', 'logloss': logloss_grd,
-                        'auc': roc_grd, 'x': fpr_grd, 'y': tpr_grd})
-
-    df5 = pd.DataFrame({'model': 'Gradient Boosting Trees and Logistic Regression',
-                        'abbrev': 'GBT + LR', 'logloss': logloss_grd_lm,
-                        'auc': roc_grd_lm, 'x': fpr_grd_lm, 'y': tpr_grd_lm})
-
-    df6 = pd.DataFrame({'model': 'Random',
-                        'abbrev': 'Random', 'logloss': -1 * np.log10(0.5),
-                        'auc': 0.5, 'x': np.linspace(0, 1, 100),
-                        'y': np.linspace(0, 1, 100)})
-
-    df = pd.concat([df1, df2, df3, df4, df5, df6], axis=0, ignore_index=True)
-    df['x'] = df['x'].round(3)
-    df['y'] = df['y'].round(3)
+    # conbine result of all models
+    df = pd.concat([pd.DataFrame(rt_lr), pd.DataFrame(rf_lr), pd.DataFrame(gbt),
+                    pd.DataFrame(rforest), pd.DataFrame(gbt_lr), pd.DataFrame(rand)],
+                   axis=0, ignore_index=True)
 
     df = df.rename(columns={'x': 'False_Positive_Rate',
                             'y': 'True_Positive_Rate'})
 
-    # output datasets
+    # output models metrics
     df.to_csv(join(cwd(), 'output', 'fl_roc_models.csv'), index=False)
-    fi.to_csv(join(cwd(), 'output', 'fl_fi_models.csv'), index=False)
+
+    # output feature importance
+    df = feature_importance(X_train, y_train, list(X.columns), n_estimators)
+    df.to_csv(join(cwd(), 'output', 'fl_fi_models.csv'), index=False)
+
+
+def utest_models():
+    """
+        Plot model results
+    """
+
+    data = pd.read_csv(join(cwd(), 'output', 'fl_roc_models.csv'))
+    plt.figure(1)
+
+    for cat in data['abbrev'].unique():
+        xdata = data[data['abbrev'] == cat]['False_Positive_Rate']
+        ydata = data[data['abbrev'] == cat]['True_Positive_Rate']
+        if cat == 'Random':
+            plt.plot(xdata, ydata, color='black', linestyle='--', label=cat)
+        else:
+            plt.plot(xdata, ydata, label=cat)
+
+    plt.xlabel('False positive rate')
+    plt.ylabel('True positive rate')
+    plt.title('ROC curve')
+    plt.legend(loc='best')
+    plt.show()
+
+def utest_feature_importance():
+    """
+        Plot feature importance
+    """
+
+    data = pd.read_csv(join(cwd(), 'output', 'fl_fi_models.csv'))
+    plt.figure(figsize=(4, 4))
+    ax = plt.subplot(111)
+    ax.barh(data['feature'], data['importance'])
+    plt.gca().invert_yaxis()
+    ax.set_ylabel('features')
+    plt.title('Feature Importance')
+    plt.show()
 
 
 if __name__ == "__main__":
 
-    # unit test
-    classify(show_results=True)
+    # unit testing
+    classify()
+
+    # %% plot model results
+    utest_models()
+
+    # %% plot feature importances
+    utest_feature_importance()
