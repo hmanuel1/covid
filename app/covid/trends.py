@@ -2,7 +2,6 @@
     Visualize trends of COVID-19 cases and deaths
 """
 
-from functools import partial
 from os.path import join
 
 import pandas as pd
@@ -140,7 +139,7 @@ def multi_select_server(value, glyphs):
     mselect = MultiSelect(title='States:', value=value,
                           options=glyphs[0]['cats'])
 
-    def callback(new):
+    def callback(_attr, _old, new):
         """
            Call back function to select trend line for
            selected states.
@@ -167,7 +166,7 @@ def multi_select_server(value, glyphs):
                 lower[selection].visible = True
                 varea[selection].visible = True
 
-    mselect.on_change(partial(callback, new='value'))
+    mselect.on_change('value', callback)
 
     return mselect
 

@@ -3,7 +3,6 @@
 """
 
 from os.path import join
-from functools import partial
 import datetime as dt
 
 import numpy as np
@@ -36,7 +35,7 @@ def select_server(options, plot_width, us_settings, state_settings, legend_setti
     # select control
     select = Select(value='a', options=options, max_width=plot_width - 40)
 
-    def update(new):
+    def update(_attr, _old, new):
         if new != 'a':
             us_settings['filter'].group = new
             us_settings['glyph'].update(
@@ -56,7 +55,7 @@ def select_server(options, plot_width, us_settings, state_settings, legend_setti
             us_settings['glyph'].update(view=us_settings['view_off'])
             state_settings['glyph'].update(view=state_settings['view_off'])
 
-    select.on_change(partial(update, new='value'))
+    select.on_change('value', update)
 
     return select
 
@@ -252,7 +251,7 @@ def map_slider_server(mapsource, us_map, **kwargs):
 
     slider = DateSlider(**slider_settings)
 
-    def update(new):
+    def update(_attr, _old, new):
         """
             Slider callback funtion
         """
@@ -267,7 +266,7 @@ def map_slider_server(mapsource, us_map, **kwargs):
             us_map['day'] = day
             mapsource.geojson = us_map.to_json()
 
-    slider.on_change(partial(update, new='value'))
+    slider.on_change('value', update)
 
     return slider
 
@@ -330,6 +329,8 @@ def map_button_server(slider, rdate, width=80, height=60):
     looop = None
 
     def increment_slider():
+        nonlocal looop
+
         if button.label == '► Play':
             rdate.update(text="")
             curdoc().remove_periodic_callback(looop)
@@ -347,6 +348,8 @@ def map_button_server(slider, rdate, width=80, height=60):
                 date_in_ms / 1000.0).strftime('%d %b %Y'))
 
     def update():
+        nonlocal looop
+
         if button.label == '► Play':
             button.update(label='❚❚ Pause')
             rdate.update(text=dt.date.fromtimestamp(
@@ -454,13 +457,14 @@ def build_us_map(us_map, state_map, **kwargs):
         """
 
         # build us map with covid19 data
-        plot_settings = dict(title='Cases by County:', options=settings['options'],
-                             location='bottom_right', plot_height=400, plot_width=800)
-
-        (plot, source, select, rdate) = choropleth_map(state_map, us_map,
-                                                       settings['palette'],
-                                                       legend_names=names,
-                                                       **plot_settings)
+        plot, source, select, rdate = choropleth_map(state_map, us_map,
+                                                     settings['palette'],
+                                                     legend_names=names,
+                                                     title='Cases by County:',
+                                                     options=settings['options'],
+                                                     location='bottom_right',
+                                                     plot_height=400,
+                                                     plot_width=800)
 
         slider_settings = dict(start=settings['dates'][-1].date(),
                                end=settings['dates'][0].date(),

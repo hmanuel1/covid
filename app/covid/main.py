@@ -107,8 +107,9 @@ def covid():
                                                palette['hover'])
 
     # build us map and fl map layouts
-    data = dict(palette=palette['theme'], levels=levels, dates=dates, options=options)
-    page['usmap'] = build_us_map(us_map, state_map, **data)
+    page['usmap'] = build_us_map(us_map=us_map, state_map=state_map,
+                                 palette=palette['theme'], levels=levels,
+                                 dates=dates, options=options)
 
     # model result for florida
     page['modeling'] = models_result(roc, importance, palette['theme'][2:],
