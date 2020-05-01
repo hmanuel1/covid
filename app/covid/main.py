@@ -11,7 +11,7 @@ import geopandas as gpd
 
 from bokeh import __version__
 from bokeh.plotting import curdoc
-from bokeh.palettes import Purples
+from bokeh.palettes import Greens
 from bokeh.models import Div
 from bokeh.layouts import column, row, Spacer
 from bokeh.themes import Theme
@@ -94,10 +94,10 @@ def covid():
 
     # create palettes
     palette = dict()
-    palette['theme'] = list(reversed(Purples[8]))
+    palette['theme'] = list(reversed(Greens[8]))
     palette['color'] = palette['theme'][2]
     palette['hover'] = palette['theme'][4]
-    palette['trends'] = Purples[3]
+    palette['trends'] = Greens[3]
 
     # hold page layouts
     page = dict()
