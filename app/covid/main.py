@@ -5,10 +5,7 @@
 from os.path import join
 import sys
 
-import numpy as np
 import pandas as pd
-import geopandas as gpd
-
 from bokeh import __version__
 from bokeh.plotting import curdoc
 from bokeh.palettes import Greens
@@ -21,9 +18,8 @@ from nytimes import download_nytimes
 from fldem import download_fldem
 from clf import classify
 from arima import predict
-from wrangler import covid_data, merge_data
 from distros import age_gender_histograms
-from maps import build_us_map
+from maps import Map
 from trends import show_predictions
 from fits import models_result
 from utilities import cwd
@@ -50,14 +46,6 @@ def get_data_sets():
         get data sets
     """
 
-    df = pd.read_csv(join(cwd(), 'data', 'us-counties.csv'), parse_dates=[0])
-    lookup = pd.read_csv(join(cwd(), 'input', 'statefp-name-abbr.csv'))
-
-    df = covid_data(df, lookup)
-    us_map = gpd.read_file(join(cwd(), 'shapes', 'us_map', 'us_map.shx'))
-    state_map = gpd.read_file(
-        join(cwd(), 'shapes', 'state_map', 'state_map.shx'))
-
     # dataset for models
     data = pd.read_csv(join(cwd(), 'data', 'flclean.csv'))
     roc = pd.read_csv(join(cwd(), 'output', 'fl_roc_models.csv'))
@@ -69,14 +57,7 @@ def get_data_sets():
     deaths = pd.read_csv(
         join(cwd(), 'output', 'arima-deaths.csv'), parse_dates=['date'])
 
-    # options for map drop-down menu
-    sel = pd.read_csv(join(cwd(), 'input', 'statefp-name-abbr.csv'),
-                      dtype={'statefp': 'str'})
-    sel = sel.loc[sel['statefp'].isin(
-        us_map['STATEFP'].unique())].copy(deep=True)
-    options = [('a', 'USA')] + list(zip(sel['statefp'], sel['name']))
-
-    return df, us_map, state_map, data, roc, importance, options, cases, deaths
+    return data, roc, importance, cases, deaths
 
 def covid():
     """
@@ -86,11 +67,7 @@ def covid():
     print('Bokeh Version:', __version__)
 
     # get all datasets for this app
-    df, us_map, state_map, data, roc, importance, options, cases, deaths = get_data_sets()
-
-    # merge covid19 data with map data
-    levels = [0, 1, 10, 100, 250, 500, 5000, 10000, np.inf]
-    us_map, dates = merge_data(df, us_map, levels, days=15)
+    data, roc, importance, cases, deaths = get_data_sets()
 
     # create palettes
     palette = dict()
@@ -107,9 +84,10 @@ def covid():
                                                palette['hover'])
 
     # build us map and fl map layouts
-    page['usmap'] = build_us_map(us_map=us_map, state_map=state_map,
-                                 palette=palette['theme'], levels=levels,
-                                 dates=dates, options=options)
+    plot = Map(plot_width=800, plot_height=400, palette=palette['theme'])
+    page['usmap'] = column(plot.controls['select'],
+                           plot.plot,
+                           row(plot.controls['slider'], plot.controls['button']))
 
     # model result for florida
     page['modeling'] = models_result(roc, importance, palette['theme'][2:],
