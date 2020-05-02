@@ -1,11 +1,12 @@
 """
    Data cleaning and formating module
 """
-
+# %%
 from os.path import join
 from warnings import simplefilter
 import re
 
+import numpy as np
 import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Polygon, MultiPolygon
@@ -104,21 +105,14 @@ def remove_islands(map_file, min_area=100000000):
 
     # convert to dictionary for speed
     records = map_file.to_dict(orient='records')
-
     for record in records:
-        newgeometry = []
-        max_area = 0
         if record['geometry'].type == 'MultiPolygon':
-            for geometry in record['geometry']:
-                area = geometry.area
-                if max_area < geometry.area:
-                    max_area = area
-                if area > min_area:
-                    newgeometry.append(geometry)
-            if newgeometry:
-                record['geometry'] = MultiPolygon(newgeometry)
+            multipoly = list(record['geometry'])
+            polies = [poly for poly in multipoly if poly.area > min_area]
+            if polies:
+                record['geometry'] = MultiPolygon(polies)
             else:
-                record['geometry'] = Polygon()
+                record['geometry'] = max(record['geometry'], key=lambda a: a.area)
 
     new_map = gpd.GeoDataFrame(records)
 
@@ -278,10 +272,38 @@ def create_lookups():
     df['abbr'] = df['NAME'].str.lower().map(df1.set_index('name')['abbr'])
     df.to_csv(join(cwd(), 'input', 'abbr-name.csv'), index=False)
 
+def get_clean_data(days):
+    """
+        This function returns
+        1) COVID-19 data added to US County Shapes
+        2) Additional metadata
+    """
+    # read county shapes
+    path = join(cwd(), 'shapes', 'us_map', 'us_map.shx')
+    us_map = gpd.read_file(path)
+
+    # get covid data
+    path = join(cwd(), 'data', 'us-counties.csv')
+    data = pd.read_csv(path, parse_dates=[0])
+    path = join(cwd(), 'input', 'statefp-name-abbr.csv')
+    data = covid_data(data, pd.read_csv(path))
+
+    # merge covid data and county shapes
+    levels = [0, 1, 10, 100, 250, 500, 5000, 10000, np.inf]
+    us_map, dates = merge_data(data, us_map, levels, days)
+
+    # states options
+    path = join(cwd(), 'input', 'statefp-name-abbr.csv')
+    options = pd.read_csv(path, dtype={'statefp': 'str'})
+    sel = options['statefp'].isin(us_map['STATEFP'].unique())
+    sel = options[sel].copy(deep=True)
+    options = [('a', 'USA')] + list(zip(sel['statefp'], sel['name']))
+
+    return us_map, dict(levels=levels, dates=dates, options=options)
 
 if __name__ == "__main__":
 
-    # unit test
-    us, state = get_maps(gpd.read_file(COUNTY_SHAPES), gpd.read_file(STATE_SHAPES))
+    us, state = get_maps(gpd.read_file(COUNTY_SHAPES, encoding='UTF-8'),
+                         gpd.read_file(STATE_SHAPES, encoding='UTF-8'))
     us.to_file(join(cwd(), 'shapes', 'us_map', 'us_map.shp'))
-    state.to_file(join(cwd(), 'state_map', 'state_map.shp'))
+    state.to_file(join(cwd(), 'shapes', 'state_map', 'state_map.shp'))

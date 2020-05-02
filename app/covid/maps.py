@@ -5,7 +5,6 @@
 from os.path import join
 
 import numpy as np
-import pandas as pd
 import geopandas as gpd
 
 from bokeh.plotting import figure
@@ -18,7 +17,7 @@ from bokeh.io import curdoc
 from bokeh.palettes import Purples
 from bokeh.themes import Theme
 
-from wrangler import covid_data, merge_data
+from wrangler import get_clean_data
 from utilities import cwd
 
 
@@ -32,31 +31,12 @@ class Map:
         # needs at least width and height
         self.palette = kwargs.pop('palette')
 
-        # read county shapes
-        _path = join(cwd(), 'shapes', 'us_map', 'us_map.shx')
-        _counties = gpd.read_file(_path)
-
         # read state shapes
         _path = join(cwd(), 'shapes', 'state_map', 'state_map.shx')
-        _states = gpd.read_file(_path)
+        self.states = gpd.read_file(_path)
 
-        # get covid data
-        _path = join(cwd(), 'data', 'us-counties.csv')
-        _data = pd.read_csv(_path, parse_dates=[0])
-        _path = join(cwd(), 'input', 'statefp-name-abbr.csv')
-        _data = covid_data(_data, pd.read_csv(_path))
-
-        # merge covid data and county shapes
-        self.levels = [0, 1, 10, 100, 250, 500, 5000, 10000, np.inf]
-        _counties, self.dates = merge_data(_data, _counties,
-                                           self.levels, 15)
-
-        # states options
-        _path = join(cwd(), 'input', 'statefp-name-abbr.csv')
-        self.options = pd.read_csv(_path, dtype={'statefp': 'str'})
-        _sel = self.options['statefp'].isin(_counties['STATEFP'].unique())
-        _sel = self.options[_sel].copy(deep=True)
-        self.options = [('a', 'USA')] + list(zip(_sel['statefp'], _sel['name']))
+        # read state shapes with covid-19 and metadata
+        self.counties, self.meta = get_clean_data(15)
 
         # init plot
         self.plot = figure(match_aspect=True, toolbar_location='right',
@@ -67,8 +47,8 @@ class Map:
 
         # init class variables
         self.controls = dict()
-        self.srcs = dict(count=GeoJSONDataSource(geojson=_counties.to_json()),
-                         stat=GeoJSONDataSource(geojson=_states.to_json()))
+        self.srcs = dict(count=GeoJSONDataSource(geojson=self.counties.to_json()),
+                         stat=GeoJSONDataSource(geojson=self.states.to_json()))
 
         # build map
         self.plot_map()
@@ -119,9 +99,11 @@ class Map:
     def __add_legend(self):
         """ add date label """
 
+        _levels = self.meta['levels']
+
          # names for custom legend
         _names = []
-        for _level, _lead in zip(self.levels, self.levels[1:] + [np.nan]):
+        for _level, _lead in zip(_levels, _levels[1:] + [np.nan]):
             if _level == 0:
                 _names.append(f'{_level:,.0f}')
 
@@ -150,7 +132,7 @@ class Map:
         """ add state selection """
 
         # select control
-        self.controls['select'] = Select(value='a', options=self.options,
+        self.controls['select'] = Select(value='a', options=self.meta['options'],
                                          max_width=self.plot.plot_width-40)
 
         # map views
@@ -187,9 +169,9 @@ class Map:
 
     def add_slider(self):
         """ add slider """
-        self.controls['slider'] = DateSlider(start=self.dates[-1].date(),
-                                             end=self.dates[0].date(),
-                                             value=self.dates[0].date(),
+        self.controls['slider'] = DateSlider(start=self.meta['dates'][-1].date(),
+                                             end=self.meta['dates'][0].date(),
+                                             value=self.meta['dates'][0].date(),
                                              width=self.plot.plot_width-40-84,
                                              title='Reported Date')
 
@@ -282,7 +264,7 @@ class Map:
         self.add_slider()
         self.add_button()
 
-STAND_ALONE = False
+STAND_ALONE = True
 if STAND_ALONE:
 
     # unit test module in stand alone mode
