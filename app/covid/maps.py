@@ -264,7 +264,7 @@ class Map:
         self.add_slider()
         self.add_button()
 
-STAND_ALONE = True
+STAND_ALONE = False
 if STAND_ALONE:
 
     # unit test module in stand alone mode
