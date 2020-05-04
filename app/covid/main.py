@@ -27,7 +27,7 @@ from utilities import cwd
 
 def refresh():
     """
-        Refresh covid-19 data used by this appp
+        Refresh covid-19 data used by this app
     """
 
     print('downloading ny times data...', end='')
@@ -85,9 +85,9 @@ def covid():
 
     # build us map and fl map layouts
     plot = Map(plot_width=800, plot_height=400, palette=palette['theme'])
-    page['usmap'] = column(plot.controls['select'],
-                           plot.plot,
-                           row(plot.controls['slider'], plot.controls['button']))
+    page['us_map'] = column(plot.controls['select'],
+                            plot.plot,
+                            row(plot.controls['slider'], plot.controls['button']))
 
     # model result for florida
     page['modeling'] = models_result(roc, importance, palette['theme'][2:],
@@ -104,7 +104,7 @@ def covid():
 
     layout = column(
         row(Spacer(width=10), Div(text="<b>Map</b>", **headings_attr)),
-        row(Spacer(width=10), page['usmap']),
+        row(Spacer(width=10), page['us_map']),
         row(Spacer(width=10), Spacer(height=160)),
         row(Spacer(width=10), Div(text="<b>Trends</b>", **headings_attr)),
         row(Spacer(width=10), page['trends']),

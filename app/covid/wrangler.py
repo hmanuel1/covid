@@ -89,7 +89,7 @@ def covid_data(df, lookup):
     df.sort_values(['fips', 'date'], ascending=True, inplace=True)
     df.reset_index(drop=True, inplace=True)
 
-    # add name [county, State Abrevation]
+    # add name [county, State Abbreviation]
     lookup['name'] = lookup['name'].str.lower()
     abbr = lookup.set_index('name')['abbr']
     df['name'] = df['county'] + ', ' + df['state'].str.lower().map(abbr)
@@ -190,7 +190,7 @@ def get_maps(us_map, state_map):
     state_map['xc'] = [point.coords[0][0] for point in points]
     state_map['yc'] = [point.coords[0][1] for point in points]
 
-    # scale Alaska and move Alaska and Hawii under California
+    # scale Alaska and move Alaska and Hawaii under California
     us_map, state_map = transform_alaska_hawaii(us_map, state_map)
 
     # remove small island (second pass)
@@ -207,18 +207,18 @@ def get_maps(us_map, state_map):
         x.buffer(dist, join_style=1).buffer(-1 * dist, join_style=1))
                                            for x in state_map['geometry']])
 
-    # symplify geometry
+    # simplify geometry
     tolerance = 2000
     us_map['geometry'] = us_map['geometry'].simplify(tolerance)
     state_map['geometry'] = state_map['geometry'].simplify(tolerance)
 
-    # disolve us map by county
-    us_map['DISOLVE'] = (us_map['NAME'].str.strip() + ', ' +
-                         us_map['STATEFP'].str.strip())
-    us_map = us_map.dissolve('DISOLVE')
+    # dissolve us map by county
+    us_map['DISSOLVE'] = (us_map['NAME'].str.strip() + ', ' +
+                          us_map['STATEFP'].str.strip())
+    us_map = us_map.dissolve('DISSOLVE')
     us_map.reset_index(drop=True, inplace=True)
 
-    # disolve state map by state
+    # dissolve state map by state
     state_map = state_map.dissolve('STATEFP')
     state_map.reset_index(inplace=True)
 

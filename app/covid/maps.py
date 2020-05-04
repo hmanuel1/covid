@@ -225,7 +225,7 @@ class Map:
             var increment_slider = function(){
                 if (button.label == '► Play'){
                     label.text = ""
-                    clearInterval(looop);
+                    clearInterval(interval);
                 }
                 else{
                     // update slider value
@@ -243,11 +243,11 @@ class Map:
             };
             if (button.label == '► Play'){
                 button.label = '❚❚ Pause';
-                var looop = setInterval(increment_slider, 750, slider);
+                var interval = setInterval(increment_slider, 750, slider);
             }
             else{
                 button.label = '► Play';
-                clearInterval(looop);
+                clearInterval(interval);
             };
             """)
 

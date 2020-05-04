@@ -78,7 +78,7 @@ def cases_trends(df, y_var, palette=Purples[3], **kwargs):
                                  fill_color=palette[2], source=source[cat],
                                  fill_alpha=0.5, visible=False)
 
-    # lengend
+    # legend
     plot.add_layout(Legend(items=[('Actual', [ly_var[df['state'].iat[0]]]),
                                   ('Predicted', [lpredi[df['state'].iat[0]]]),
                                   ('95% Confidence', [vareaf[df['state'].iat[0]]])],

@@ -45,7 +45,7 @@ def roc(df, palette, plot_width=400, plot_height=400):
                                     source=source, **line_settings)
 
         plot.add_tools(HoverTool(renderers=[lines[category]],
-                                 tooltips=[('Abreviation', '@abbrev'),
+                                 tooltips=[('Abbreviation', '@abbrev'),
                                            ('False Positive Rate', '@False_Positive_Rate'),
                                            ('True Positive Rate', '@True_Positive_Rate'),
                                            ('AUC', '@auc{0.0000}'),
@@ -102,7 +102,7 @@ def feature_importance(df, color, hover_color, plot_width=450, plot_height=250):
     return plot
 
 
-def models_result(df, fi, palette, color, hover_color):
+def models_result(df, importance, palette, color, hover_color):
     """
         Module function call to build Models Layout
     """
@@ -110,7 +110,7 @@ def models_result(df, fi, palette, color, hover_color):
     layout = row(roc(df, palette, plot_width=400, plot_height=400),
                  column(logloss(df, color, hover_color,
                                 plot_width=400, plot_height=200),
-                        feature_importance(fi, color, hover_color,
+                        feature_importance(importance, color, hover_color,
                                            plot_width=400,
                                            plot_height=200)))
     return layout
