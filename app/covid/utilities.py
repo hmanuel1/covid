@@ -8,7 +8,6 @@ import numpy as np
 from bokeh.plotting import figure
 from bokeh.models import HoverTool, NumeralTickFormatter
 
-
 def cwd():
     """
         Return current working directory from __file__ or OS

@@ -61,7 +61,7 @@ def get_data_sets():
 
 def covid():
     """
-        Create Serve Application
+        Create Server Application
     """
 
     print('Bokeh Version:', __version__)

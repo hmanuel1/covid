@@ -182,8 +182,8 @@ def classify():
 
     df = pd.read_csv(join(cwd(), 'data', 'flclean.csv'), low_memory=False)
     df.drop(['datetime', 'fips', 'dx', 'dy'], axis=1, inplace=True)
-    df.rename(columns={'Male': 'gender', 'land_sqkm': 'landsqkm',
-                       'water_sqkm': 'watersqkm'}, inplace=True)
+    df.rename(columns={'Male': 'gender', 'land_sqkm': 'land_area',
+                       'water_sqkm': 'water_area'}, inplace=True)
     df.dropna(inplace=True)
 
     # divide data set
