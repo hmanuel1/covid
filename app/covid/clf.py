@@ -164,7 +164,7 @@ def feature_importance(X_train, y_train, col_names, n_estimators):
     # fit
     clf_rf.fit(X_train, y_train)
 
-    # feature importances
+    # feature importance
     df = pd.DataFrame({'feature': col_names,
                        'importance': clf_rf.feature_importances_})
 

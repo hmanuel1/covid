@@ -1,4 +1,3 @@
-
 ## Interactive COVID-19 App
 
 ### URL

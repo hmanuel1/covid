@@ -2,7 +2,7 @@
     Read pdf COVID-19 file from Florida Division of Emergency
     Management and save it into a CSV format
 """
-
+# %%
 from os.path import join
 from io import BytesIO
 import re
@@ -16,112 +16,138 @@ import PyPDF2
 from utilities import cwd
 
 
-def get_pdf_name(url, class_dict):
+# base url
+BASE_URL = 'https://floridadisaster.org'
+
+# covid19 url
+COVID19_URL = 'https://floridadisaster.org/covid19/'
+
+
+class PdfScraper:
     """
-        Get pdf name from URL.
-    """
-
-    with requests.Session() as session:
-        session.trust_env = False
-        download = session.get(url)
-        html = download.text
-
-    #soup = BeautifulSoup(html, features='lxml')
-    soup = BeautifulSoup(html, features="html.parser")
-    body = soup.find('div', class_dict)
-    paragraphs = body.find_all('p')
-
-    data = []
-    for paragraph in paragraphs:
-        sentences = paragraph.find_all('a')
-        data.append(str(sentences[0]))
-
-    line = [line for line in data if
-            re.search(r'COVID-19 Data - Daily Report', line)][0]
-
-    try:
-        pdfname = re.search(r'\"(.+?)\"', line).group(1)
-    except AttributeError:
-        # ", " not found in the original string
-        pdfname = 'NA'
-    return pdfname
-
-
-def pdf_to_text(path, marker, read_from):
-    """
-        Return text from pdf file
+        This class read a pdf file from an url and transform text
+        into a pandas dataframe.
     """
 
-    if read_from == 'memory':
-        # creating a pdf file object
-        with open(path, 'rb') as pdf:
-            reader = PyPDF2.PdfFileReader(pdf)
-    elif read_from == 'url':
-        reader = PyPDF2.PdfFileReader(path)
+    def __init__(self):
+        self.url = None
+        self.pages = None
+        self.lines = None
+        self.data = None
 
-    # extract text from each pdf page
-    pages = []
-    for page in range(reader.numPages):
-        pagetext = reader.getPage(page).extractText()
-        if re.search(marker, pagetext):
-            pages.append(pagetext)
+        # get pdf file url
+        self.__get_url(COVID19_URL)
 
-    # unwanted lines contains these words
-    regex = re.compile(('Data|Death|County|Age|Gender|Travel|related|'
-                        'Contact|confirmed|Jurisdiction|Date|counted|'
-                        'today|Coronavirus|case'), re.IGNORECASE)
+    def __get_url(self, url):
+        """ get url of pdf file
+        """
 
-    pages = [page.split('\n') for page in pages]
-    lines = [line for page in pages for line in page
-             if not re.search(regex, line)]
+        # get html
+        _response = requests.get(url)
+        _html = _response.text
+        _soup = BeautifulSoup(_html, features='html.parser')
+        _body = _soup.find('div', {'class': 'panel-body'})
+        _paragraphs = _body.find_all('p')
 
-    return lines
+        _data = []
+        for _paragraph in _paragraphs:
+            _sentences = _paragraph.find_all('a')
+            _data.append(str(_sentences[0]))
+
+        _line = [x for x in _data if re.search(r'Daily Report', x)][0]
+
+        # find sub url of pdf file
+        _match = re.search(r'\"(.+?)\"', _line)
+        if _match:
+            self.url = BASE_URL + _match.group(1)
+        else:
+            self.url = 'NA'
+
+    def get_pages(self):
+        """
+            get pdf pages in text
+        """
+
+        # read pdf file from url
+        _response = requests.get(self.url)
+        _pdffile = _response.content
+
+        # read pdf content
+        _reader = PyPDF2.PdfFileReader(BytesIO(_pdffile))
+
+        # extract text from each pdf page
+        self.pages = []
+        for _page in range(_reader.numPages):
+            self.pages.append(_reader.getPage(_page).extractText())
 
 
-def read_data(path, marker, read_from='memory'):
-    """
-        read pdf file and convert content to dataframe
-    """
+    def __get_lines(self, marker):
+        """
+            get pdf in text format
+        """
 
-    lines = pdf_to_text(path, marker, read_from)
+        # remove non-data pages
+        _pages = [page for page in self.pages if re.search(marker, page[:100])]
 
-    outter = []
-    inner = []
-    for line in lines:
-        if line != "":
-            inner.append(line)
-            if re.search(r'\d{2}\/', line):
-                while inner:
-                    if inner[0].replace(',', '').strip().isnumeric():
-                        break
-                    del inner[0]
-                if len(inner) == 7:
-                    inner.insert(4, 'Unknown')
-                if len(inner) == 8:
-                    inner.insert(5, 'NaN')
-                if len(inner) == 10:
-                    inner[5] = inner[5].join(inner[6])
-                    del inner[6]
-                outter.append(inner)
-                inner = []
+        # unwanted lines contains these words
+        _regex = re.compile(('Data|Death|County|Age|Gender|Travel|related|'
+                             'Contact|confirmed|Jurisdiction|Date|counted|'
+                             'today|Coronavirus|case|verified|Deaths'), re.IGNORECASE)
 
-    # create dataframe with extracted data
-    rows = [row for row in outter if len(row) == 9]
-    df = pd.DataFrame(rows,
-                      columns=['case', 'county', 'age', 'gender', 'traveled',
-                               'where', 'contacted', 'resident', 'date'])
+        _pages = [page.split('\n') for page in _pages]
+        self.lines = [line for page in _pages for line in page
+                      if not re.search(_regex, line)]
 
-    # format data
-    df['case'] = pd.to_numeric(
-        df['case'].str.replace(',', ''), errors='coerce')
-    df['age'] = pd.to_numeric(df['age'], errors='coerce')
-    df['datetime'] = pd.to_datetime(df['date'], format='%m/%d/%y')
+    def get_data(self, marker):
+        """ read pdf file from url """
 
-    # sort by datetime
-    df.sort_values('datetime', inplace=True)
-    df.reset_index(drop=True, inplace=True)
+        # get pages that contain specified <marker>
+        self.__get_lines(marker)
 
-    return df
+        # tag start of row by date
+        _tags = [(x, 'e') if re.search(r'\d{2}\/', x) else (x, 'b')
+                 for x in self.lines]
+
+        # rows
+        _rows = []
+        _cells = []
+        for _cell in _tags:
+            if _cell[1] == 'b':
+                _cells.append(_cell[0])
+            else:
+                _cells.append(_cell[0])
+                _rows.append(_cells)
+                _cells = []
+
+        #  fill missing data
+        for _row in _rows:
+            if not _row[0].replace(',', '').isnumeric():
+                del _row[0]
+            if not _row[1]:
+                _row[1] = 'Unknown'
+            if len(_row) == 7:
+                _row.insert(4, 'Unknown')
+            if len(_row) == 8:
+                _row.insert(5, 'NaN')
+            if len(_row) == 10:
+                _row[5] = _row[5].join(_row[6])
+                del _row[6]
+
+        # create dataframe with extracted data
+        _rows = [_row for _row in _rows if len(_row) == 9]
+        _cols = ['case', 'county', 'age', 'gender', 'traveled', 'where',
+                 'contacted', 'resident', 'date']
+
+        # enter data in data frame and format
+        self.data = pd.DataFrame(_rows, columns=_cols)
+        self.data['age'] = pd.to_numeric(self.data['age'], errors='coerce')
+        self.data['datetime'] = pd.to_datetime(self.data['date'], format='%m/%d/%y')
+
+        # sort by datetime
+        self.data.sort_values('datetime', inplace=True)
+        self.data.reset_index(drop=True, inplace=True)
+
+        return self.data
 
 
 def get_data(download=False):
@@ -130,24 +156,16 @@ def get_data(download=False):
     """
 
     if download:
-        base_url = 'https://floridadisaster.org'
-        pdfname = get_pdf_name(url=base_url + '/covid19/',
-                               class_dict={'class': 'panel-body'})
-        pdf_url = base_url + pdfname
+        # instantiate covid19 pdf scraper
+        pdf = PdfScraper()
+        pdf.get_pages()
 
-        # get report in pdf from pdf_url
-        with requests.Session() as session:
-            session.trust_env = False
-            response = session.get(pdf_url)
-            pdffile = response.content
-
-        # tabulate data
-        cases = read_data(path=BytesIO(pdffile),
-                          marker='line list of cases', read_from='url')
+        # covid19 cases
+        cases = pdf.get_data(marker='line list of cases')
         cases.to_csv(join(cwd(), 'output', 'fl_cases.csv'), index=False)
 
-        deaths = read_data(path=BytesIO(pdffile),
-                           marker='line list of death', read_from='url')
+        # covid19 deaths
+        deaths = pdf.get_data(marker='line list of deaths')
         deaths.to_csv(join(cwd(), 'output', 'fl_deaths.csv'), index=False)
     else:
         # read data from memory
@@ -172,10 +190,10 @@ def add_deaths(cases, deaths):
                   (cases['traveled'] == row.traveled) &
                   (cases['contacted'] == row.contacted))
 
-        numrows = len(cases.loc[slicer, :])
-        if numrows == 1:
+        num_rows = len(cases.loc[slicer, :])
+        if num_rows == 1:
             cases.loc[slicer, 'died'] = 1
-        elif numrows > 1:
+        elif num_rows > 1:
             cases.loc[cases[slicer].tail(1).index, 'died'] = 1
         else:
             print('Error: case not found!')
@@ -217,7 +235,7 @@ def fl_clean_data(download=False):
     df = pd.concat([df, pd.get_dummies(df['gender'], drop_first=True)], axis=1)
     df.drop(['gender'], axis=1, inplace=True)
 
-    # lat, lon - convert to cartesian cordinates
+    # lat, lon - convert to cartesian coordinates
     df['dx'] = (df['lon'] - df['lat'])
     df['dx'] = df['dx'] * 40000 * \
         np.cos((df['lat'] - df['lon']) * np.pi / 360) / 360
@@ -230,7 +248,6 @@ def fl_clean_data(download=False):
 
     return df
 
-
 def download_fldem():
     """
         main function of module to download, clean and save data
@@ -239,7 +256,7 @@ def download_fldem():
     df = fl_clean_data(download=True)
     df.to_csv(join(cwd(), 'data', 'flclean.csv'), index=False)
 
-STAND_ALONE = False
-if STAND_ALONE:
+if __name__ == "__main__":
+
     # unit test
     download_fldem()
