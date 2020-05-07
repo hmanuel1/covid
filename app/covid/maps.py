@@ -18,7 +18,8 @@ from bokeh.models import (
     GroupFilter,
     CDSView,
     Button,
-    Label)
+    Label
+)
 from bokeh.layouts import column, row
 from bokeh.io import curdoc
 from bokeh.palettes import Purples

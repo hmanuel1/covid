@@ -2,8 +2,8 @@
   "canvas": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 55.20000076293945,
-    "scrollLeft": 4.800000190734863,
+    "scrollTop": 38.880001068115234,
+    "scrollLeft": 72,
     "show": {
       "tableComment": true,
       "columnComment": false,
@@ -25,8 +25,8 @@
   "table": {
     "tables": [
       {
-        "name": "states",
-        "comment": "us states information",
+        "name": "state_map",
+        "comment": "us map by state",
         "columns": [
           {
             "name": "state_id",
@@ -169,17 +169,17 @@
         ],
         "ui": {
           "active": false,
-          "left": 52.53252452910562,
-          "top": 350.645326245671,
-          "zIndex": 1376,
-          "widthName": 60,
-          "widthComment": 122
+          "left": 22.53252381384983,
+          "top": 134.64532109582936,
+          "zIndex": 1450,
+          "widthName": 63,
+          "widthComment": 93
         },
         "id": "0401715b-e8e7-6cd6-ddbc-ab44c4dc06dd"
       },
       {
-        "name": "counties",
-        "comment": "us counties information",
+        "name": "us_map",
+        "comment": "us map by county",
         "columns": [
           {
             "name": "county_id",
@@ -345,11 +345,11 @@
         ],
         "ui": {
           "active": false,
-          "left": 1080.780825368223,
-          "top": 365.7487666426269,
-          "zIndex": 1424,
+          "left": 754.1408280655959,
+          "top": 244.0687623613925,
+          "zIndex": 1469,
           "widthName": 60,
-          "widthComment": 135
+          "widthComment": 104
         },
         "id": "9737b3ff-df78-6537-d2cc-cad95f5955ca"
       },
@@ -358,19 +358,42 @@
         "comment": "prediction of cases",
         "columns": [
           {
+            "name": "state",
+            "comment": "state area id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4cfefd78-8a66-c321-3520-d52c01dbf79a"
+          },
+          {
             "name": "date",
             "comment": "",
             "dataType": "DATE",
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -471,36 +494,13 @@
               "widthDefault": 60
             },
             "id": "e62775f4-7743-c7e1-a5cc-3f9a5c376ef3"
-          },
-          {
-            "name": "state_id",
-            "comment": "state area id",
-            "dataType": "TEXT",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 74,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "4cfefd78-8a66-c321-3520-d52c01dbf79a"
           }
         ],
         "ui": {
           "active": false,
-          "left": 386.01313517352344,
-          "top": 294.0038363953629,
-          "zIndex": 1430,
+          "left": 449.61313668986566,
+          "top": 271.20383585176836,
+          "zIndex": 1633,
           "widthName": 76,
           "widthComment": 110
         },
@@ -651,9 +651,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1538.2079994133305,
-          "top": 339.0368840322627,
-          "zIndex": 1415,
+          "left": 1343.2319915009746,
+          "top": 326.6528813647819,
+          "zIndex": 1650,
           "widthName": 63,
           "widthComment": 173
         },
@@ -664,19 +664,42 @@
         "comment": "pridiction  of deaths ",
         "columns": [
           {
+            "name": "state",
+            "comment": "state area id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d3dc4a5f-2499-1816-60c9-e75c82fdc8e9"
+          },
+          {
             "name": "date",
             "comment": "",
             "dataType": "DATE",
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -777,36 +800,13 @@
               "widthDefault": 60
             },
             "id": "2427a1be-b7bd-77ee-1dce-c86f0f5e85ce"
-          },
-          {
-            "name": "state_id",
-            "comment": "state area id",
-            "dataType": "TEXT",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 74,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "d3dc4a5f-2499-1816-60c9-e75c82fdc8e9"
           }
         ],
         "ui": {
           "active": false,
-          "left": 385.3366694499328,
-          "top": 89.04000225219735,
-          "zIndex": 1427,
+          "left": 450.13667099488515,
+          "top": 63.840001651382465,
+          "zIndex": 1638,
           "widthName": 81,
           "widthComment": 111
         },
@@ -823,13 +823,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -865,9 +865,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1645,
-          "top": 646.5884638637679,
-          "zIndex": 1407,
+          "left": 1341.735987719481,
+          "top": 528.2204558481428,
+          "zIndex": 1651,
           "widthName": 66,
           "widthComment": 259
         },
@@ -875,7 +875,7 @@
       },
       {
         "name": "us_counties",
-        "comment": "covid19 data by county from ny times",
+        "comment": "raw nytimes covid19 data by county ",
         "columns": [
           {
             "name": "date",
@@ -884,13 +884,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -909,7 +909,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -932,7 +932,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -953,13 +953,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -1014,44 +1014,21 @@
               "widthDefault": 60
             },
             "id": "1fa3665c-5471-0f6a-dc5c-f924632892b7"
-          },
-          {
-            "name": "countyfp",
-            "comment": "county area id",
-            "dataType": "TEXT",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 84,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "bf8f5c40-9a8f-0287-942d-47cd1fb17691"
           }
         ],
         "ui": {
           "active": false,
-          "left": 47.826565445598426,
-          "top": 715.4790033635783,
-          "zIndex": 1411,
+          "left": 719.7065889014103,
+          "top": 650.1590004522016,
+          "zIndex": 1648,
           "widthName": 72,
-          "widthComment": 217
+          "widthComment": 208
         },
         "id": "5791b7c2-de3f-0085-b682-6e8bc20908d4"
       },
       {
         "name": "us_states",
-        "comment": "covid19 data by state from ny times",
+        "comment": "raw nytimes covid19 data by state ",
         "columns": [
           {
             "name": "date",
@@ -1060,13 +1037,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -1085,7 +1062,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -1106,13 +1083,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -1167,59 +1144,36 @@
               "widthDefault": 60
             },
             "id": "a0614815-bb9b-1064-f0af-964bdb6de82e"
-          },
-          {
-            "name": "statefp",
-            "comment": "state area id",
-            "dataType": "TEXT",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 74,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "09822a18-9ded-212c-48d5-95c44804bbde"
           }
         ],
         "ui": {
           "active": false,
-          "left": 390.0287686325381,
-          "top": 714.140749358268,
-          "zIndex": 1412,
+          "left": 441.7487693466495,
+          "top": 473.22074012975236,
+          "zIndex": 1653,
           "widthName": 60,
-          "widthComment": 206
+          "widthComment": 198
         },
         "id": "744b4bf1-e74d-b4bb-8480-53ae22a89324"
       },
       {
         "name": "fldem_cases",
-        "comment": "florida dem cases",
+        "comment": "raw florida dem cases",
         "columns": [
           {
-            "name": "case",
+            "name": "case_id",
             "comment": "case id",
             "dataType": "TEXT",
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -1389,38 +1343,15 @@
               "widthDefault": 60
             },
             "id": "3ccdb48e-1915-0a2a-7937-515ff9a5cacc"
-          },
-          {
-            "name": "countyfp",
-            "comment": "county area id",
-            "dataType": "TEXT",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": false
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 84,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "800f785f-ab8d-9730-15c6-8830901d24c1"
           }
         ],
         "ui": {
           "active": false,
-          "left": 1126.895344557357,
-          "top": 616.6931224879753,
-          "zIndex": 1425,
+          "left": 1045.2953436418304,
+          "top": 423.7331161571021,
+          "zIndex": 1559,
           "widthName": 75,
-          "widthComment": 104
+          "widthComment": 129
         },
         "id": "70e39374-be14-8bda-a86c-d6f378b79119"
       },
@@ -1435,13 +1366,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -1458,13 +1389,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -1523,9 +1454,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 388.4351636642282,
-          "top": 495.0857434302729,
-          "zIndex": 1432,
+          "left": 84.59515124967707,
+          "top": 490.04574349550404,
+          "zIndex": 1646,
           "widthName": 88,
           "widthComment": 165
         },
@@ -1542,13 +1473,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -1588,13 +1519,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -1676,9 +1607,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1324.0419171572623,
-          "top": 106.87360889530068,
-          "zIndex": 1422,
+          "left": 1341.3219178164427,
+          "top": 121.27360944461712,
+          "zIndex": 1644,
           "widthName": 103,
           "widthComment": 207
         },
@@ -1943,14 +1874,213 @@
           }
         ],
         "ui": {
-          "active": true,
-          "left": 726.367979749634,
-          "top": 143.0559809591506,
-          "zIndex": 1433,
+          "active": false,
+          "left": 1047.487991175416,
+          "top": 120.01598059522851,
+          "zIndex": 1468,
           "widthName": 60,
           "widthComment": 115
         },
         "id": "a8c12679-1023-83e0-57a6-9ba80b9da36c"
+      },
+      {
+        "name": "fldem_deaths",
+        "comment": "raw florida dem deaths",
+        "columns": [
+          {
+            "name": "case_id",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "6d3bb611-494d-0edd-3fe0-03d9ffaa54a4"
+          },
+          {
+            "name": "county",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "fa8a48d5-3092-a3fa-5496-293ade4f9deb"
+          },
+          {
+            "name": "age",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4beb9c50-0abc-2753-96fc-63f9d306f7eb"
+          },
+          {
+            "name": "gender",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3a2e12aa-e0ae-46c4-e6ec-d64ec3bdd3c2"
+          },
+          {
+            "name": "traveled",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "49d13ff9-87b6-f13f-ed2d-7efbe1e2e43b"
+          },
+          {
+            "name": "contacted",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "715a9861-12db-cc9d-7116-a6bba3d763c4"
+          },
+          {
+            "name": "resident",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "7fa72dfc-013b-2523-e25e-d1af18c0c56d"
+          },
+          {
+            "name": "date",
+            "comment": "",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "f50d0b63-c9c1-5339-30ed-ee73147769e1"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1045.4000313476556,
+          "top": 659.1600213752762,
+          "zIndex": 1560,
+          "widthName": 80,
+          "widthComment": 134
+        },
+        "id": "2139810d-aafe-221a-5676-8904242c3531"
       }
     ]
   },
