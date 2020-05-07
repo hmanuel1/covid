@@ -4,7 +4,6 @@
 
 from os.path import join
 
-import pandas as pd
 from bokeh.plotting import figure
 from bokeh.models import ColumnDataSource, HoverTool, Legend
 from bokeh.layouts import column
@@ -14,13 +13,32 @@ from bokeh.palettes import Purples
 from bokeh.themes import Theme
 
 from utilities import cwd, vbar
+from database import DataBase
+from clf import (
+    MODELS_ROC_TABLE,
+    IMPORTANCE_TABLE
+)
 
 
-def roc(df, palette, plot_width=400, plot_height=400):
+# for unit testing
+UNIT_TESTING = False
+THEME = join(cwd(), 'theme.yaml')
+
+
+def roc(data, palette, plot_width=400, plot_height=400):
+    """Plot ROC curve for all the models
+
+    Arguments:
+        data {DataFrame} -- data with model roc values
+        palette {list} -- rgb color palette
+
+    Keyword Arguments:
+        plot_width {int} -- plot with (default: {400})
+        plot_height {int} -- plot height (default: {400})
+
+    Returns:
+        Bokeh Figure Object -- plot instance
     """
-        Plot ROC
-    """
-
     figure_settings = dict(title='Receiver Operating Curve (ROC) in Florida',
                            plot_width=plot_width, plot_height=plot_height,
                            toolbar_location=None,
@@ -30,9 +48,9 @@ def roc(df, palette, plot_width=400, plot_height=400):
     plot = figure(**figure_settings)
 
     lines = dict()
-    for category, color in zip(df['abbrev'].unique(), palette):
+    for category, color in zip(data['abbrev'].unique(), palette):
 
-        source = ColumnDataSource(df[df['abbrev'] == category])
+        source = ColumnDataSource(data[data['abbrev'] == category])
 
         line_settings = dict(line_color=color, line_width=2, line_dash='solid',
                              muted_color=color, muted_alpha=0.2)
@@ -46,13 +64,16 @@ def roc(df, palette, plot_width=400, plot_height=400):
 
         plot.add_tools(HoverTool(renderers=[lines[category]],
                                  tooltips=[('Abbreviation', '@abbrev'),
-                                           ('False Positive Rate', '@False_Positive_Rate'),
-                                           ('True Positive Rate', '@True_Positive_Rate'),
+                                           ('False Positive Rate',
+                                            '@False_Positive_Rate'),
+                                           ('True Positive Rate',
+                                            '@True_Positive_Rate'),
                                            ('AUC', '@auc{0.0000}'),
                                            ('LogLoss', '@logloss{0.0000}'),
                                            ('Model', '@model')]))
 
-    legend = Legend(items=[(x, [lines[x]]) for x in lines], location='bottom_right')
+    legend = Legend(items=[(x, [lines[x]])
+                           for x in lines], location='bottom_right')
     plot.add_layout(legend)
 
     plot.legend.click_policy = 'mute'
@@ -62,13 +83,23 @@ def roc(df, palette, plot_width=400, plot_height=400):
     return plot
 
 
-def logloss(df, color, hover_color, plot_width=450, plot_height=250):
-    """
-        Plot Logloss
-    """
+def logloss(data, color, hover_color, plot_width=450, plot_height=250):
+    """LogLoss bar chart for all models
 
-    df.drop_duplicates(['abbrev'], inplace=True)
-    df.sort_values('logloss', inplace=True)
+    Arguments:
+        data {DataFrame} -- data with logloss for all the models
+        color {rgb color} -- bar fill color
+        hover_color {rgb color} -- bar fill color when hovering over
+
+    Keyword Arguments:
+        plot_width {int} -- plot width (default: {450})
+        plot_height {int} -- plot height (default: {250})
+
+    Returns:
+        Bokeh Figure Object -- plot instance
+    """
+    data.drop_duplicates(['abbrev'], inplace=True)
+    data.sort_values('logloss', inplace=True)
 
     kwargs = dict(title='LogLoss for All Fitted Models',
                   user_tooltips=[('Model', '@x'),
@@ -78,16 +109,26 @@ def logloss(df, color, hover_color, plot_width=450, plot_height=250):
                   fill_color=color, hover_fill_color=hover_color,
                   yaxis_formatter='0.0000')
 
-    plot = vbar(x=df['abbrev'], y=df['logloss'], xlabel='Model', ylabel='LogLoss',
-                **kwargs)
+    plot = vbar(x=data['abbrev'], y=data['logloss'], xlabel='Model',
+                ylabel='LogLoss', **kwargs)
     return plot
 
 
-def feature_importance(df, color, hover_color, plot_width=450, plot_height=250):
-    """
-        Plot Feature Importance
-    """
+def feature_importance(data, color, hover_color, plot_width=450, plot_height=250):
+    """Plot feature importance from Random Forest Model
 
+    Arguments:
+        data {DataFrame} -- data with feature importance
+        color {rgb color} -- bar fill color
+        hover_color {rgb color} -- bar fill color when hovering over
+
+    Keyword Arguments:
+        plot_width {int} -- plot width (default: {450})
+        plot_height {int} -- plot height (default: {250})
+
+    Returns:
+        Bokeh Figure Object -- plot instance
+    """
     kwargs = dict(title='Feature Importance for Random Forest Model',
                   user_tooltips=[('Feature', '@x'),
                                  ('Importance', '@top{0.0%}')],
@@ -96,19 +137,27 @@ def feature_importance(df, color, hover_color, plot_width=450, plot_height=250):
                   fill_color=color, hover_fill_color=hover_color,
                   yaxis_formatter='0%')
 
-    plot = vbar(x=df['feature'], y=df['importance'], xlabel='Feature',
+    plot = vbar(x=data['feature'], y=data['importance'], xlabel='Feature',
                 ylabel='Importance', **kwargs)
 
     return plot
 
 
-def models_result(df, importance, palette, color, hover_color):
-    """
-        Module function call to build Models Layout
-    """
+def models_result(data, importance, palette, color, hover_color):
+    """Module main function to plot roc, logloss and feature importance
 
-    layout = row(roc(df, palette, plot_width=400, plot_height=400),
-                 column(logloss(df, color, hover_color,
+    Arguments:
+        data {DataFrame} -- data with roc and logloss
+        importance {DataFrame} -- data with feature importance
+        palette {list} -- rgb color palette
+        color {rgb color} -- bar fill color
+        hover_color {rgb color} -- bar fill color when hovering over
+
+    Returns:
+        [type] -- [description]
+    """
+    layout = row(roc(data, palette, plot_width=400, plot_height=400),
+                 column(logloss(data, color, hover_color,
                                 plot_width=400, plot_height=200),
                         feature_importance(importance, color, hover_color,
                                            plot_width=400,
@@ -116,18 +165,19 @@ def models_result(df, importance, palette, color, hover_color):
     return layout
 
 
-STAND_ALONE = False
-if STAND_ALONE:
+if UNIT_TESTING:
 
     palette_in = list(reversed(Purples[8]))
     color_in = palette_in[2]
     hover_color_in = palette_in[4]
 
     # dataset for models
-    df_in = pd.read_csv(join(cwd(), 'output', 'fl_roc_models.csv'))
-    fi_in = pd.read_csv(join(cwd(), 'output', 'fl_fi_models.csv'))
+    database = DataBase()
+    data_roc = database.get_table(MODELS_ROC_TABLE)
+    data_fi = database.get_table(IMPORTANCE_TABLE)
+    database.close()
 
-    curdoc().add_root(models_result(df_in, fi_in, palette_in,
+    curdoc().add_root(models_result(data_roc, data_fi, palette_in,
                                     color_in, hover_color_in))
     curdoc().title = 'models'
-    curdoc().theme = Theme(filename=join(cwd(), "theme.yaml"))
+    curdoc().theme = Theme(filename=THEME)

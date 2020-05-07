@@ -1,34 +1,43 @@
 """
    Fit ARIMA model to cases and deaths for each US State
-   pylint: disable=invalid-name
 """
-
-from os.path import join
 
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
 import pmdarima as pm
 
-from utilities import cwd
+from database import DataBase
+from nytimes import US_STATES_TABLE
+
+
+# output - database
+ARIMA_CASES_TABLE = 'arima_cases'
+ARIMA_DEATHS_TABLE = 'arima_deaths'
 
 
 def arima_model(data, states, y_var):
-    """
-        Run ARIMA models in all the states in the list
-    """
+    """Perform ARIMA and return results
 
+    Arguments:
+        data {DataFrame} -- data for model
+        states {list} -- us states to run model on
+        y_var {String} -- column name for independent variable 'ŷ'
+
+    Returns:
+        DataFrame -- prediction and confidence intervals
+    """
     results = dict(index=[], state=[], upper=[], lower=[], predict=[])
     for state in states:
         # select state data
-        df = data[data['state'] == state]
-        df = df.sort_values('date').reset_index(drop=True)
+        data_state = data[data['state'] == state]
+        data_state = data_state.sort_values('date').reset_index(drop=True)
 
         # Create Training and Test
         train = []
         train.append(0)
-        for i in range(len(df) - 1):
-            x = df[y_var][i + 1] - df[y_var][i]
+        for i in range(len(data_state) - 1):
+            x = data_state[y_var][i + 1] - data_state[y_var][i]
             train.append(x)
 
         # auto arima
@@ -54,28 +63,37 @@ def arima_model(data, states, y_var):
         upper = [x if x > 0 else 0 for x in confint[:, 1]]
 
         # convert to cumulative begining with the last actual value
-        lower = (df[y_var].iat[-1] + pd.Series(lower).cumsum())
-        upper = (df[y_var].iat[-1] + pd.Series(upper).cumsum())
+        lower = (data_state[y_var].iat[-1] + pd.Series(lower).cumsum())
+        upper = (data_state[y_var].iat[-1] + pd.Series(upper).cumsum())
 
         # save results for this state
         results['index'] += [index_of_fc[0] - 1] + list(index_of_fc)
         results['state'] += [state] * (len(index_of_fc) + 1)
-        results['upper'] += [df[y_var].iat[-1]] + list(upper)
-        results['lower'] += [df[y_var].iat[-1]] + list(lower)
-        results['predict'] += [df[y_var].iat[-1]] + list((lower + upper) / 2)
+        results['upper'] += [data_state[y_var].iat[-1]] + list(upper)
+        results['lower'] += [data_state[y_var].iat[-1]] + list(lower)
+        results['predict'] += [data_state[y_var].iat[-1]] + list((lower + upper) / 2)
 
     return pd.DataFrame(results)
 
 
 def run_arima(data, states, y_var, show_results=False):
-    """
-       Run ARIMA model
-    """
+    """Call ARIMA function and add predicted results to original data
 
-    df = data.copy(deep=True)
+    Arguments:
+        data {DataFrame} -- ny times cumulative covid19 cases and deaths
+        states {list} -- list of us states to run model on
+        y_var {String} -- column name of predicted variable 'ŷ'
+
+    Keyword Arguments:
+        show_results {bool} -- plot model results (default: {False})
+
+    Returns:
+        DataFrame -- prediction results
+    """
+    result = data.copy(deep=True)
 
     # run arima model
-    arima = arima_model(df, states, y_var)
+    arima = arima_model(result, states, y_var)
 
     # merge prediction with data and plotted
     arima['start'] = arima['state'].map(data.groupby(['state']).min()['date'])
@@ -83,40 +101,57 @@ def run_arima(data, states, y_var, show_results=False):
     arima = arima[['date', 'state', 'upper', 'lower', 'predict']].copy(deep=True)
     arima[y_var] = np.nan
 
-    df['upper'], df['lower'], df['predict'] = np.nan, np.nan, np.nan
-    df = pd.concat([df, arima], axis=0, ignore_index=True)
+    result['upper'] = np.nan
+    result['lower'] = np.nan
+    result['predict'] = np.nan
+    result = pd.concat([result, arima], axis=0, ignore_index=True)
 
     if show_results:
         for state in ['Florida', 'Georgia', 'Alabama', 'New York']:
-            df_state = df[df['state'] == state]
-            plt.plot(df_state['date'], df_state[y_var], color='blue')
-            plt.plot(df_state['date'], df_state['predict'], color='green')
-            plt.fill_between(df_state['date'],
-                             df_state['lower'],
-                             df_state['upper'],
+            result_state = result[result['state'] == state]
+            plt.plot(result_state['date'], result_state[y_var], color='blue')
+            plt.plot(result_state['date'], result_state['predict'], color='green')
+            plt.fill_between(result_state['date'],
+                             result_state['lower'],
+                             result_state['upper'],
                              color='k', alpha=.15)
         plt.show()
 
     cols = ['date', 'state', y_var, 'predict', 'lower', 'upper']
-    return df[cols]
+    return result[cols]
 
 
 def predict():
-    """
-        get covid19 state data
-    """
+    """main module function to predict covid19 cases and deaths
 
-    data = pd.read_csv(join(cwd(), 'data', 'us-states.csv'),
-                       parse_dates=['date'])
+    Inputs from databae:
+        US_STATES_TABLE {database table} -- nytimes covid19 data
+
+    Outputs to database:
+        ARIMA_CASES_TABLE {database table} -- cases[predict, upper, lower]
+        ARIMA_DEATHS_TABLE {database table } -- deaths[predict, upper, lower]
+    """
+    _db = DataBase()
+    cols = ['date', 'state', 'cases', 'deaths']
+    data = _db.get_table(US_STATES_TABLE, columns=cols, parse_dates=['date'])
+    _db.close()
+
+    # select states
     states = list(data['state'].unique())[:-1]
 
     # predict cases
-    df = run_arima(data, states, 'cases')
-    df.to_csv(join(cwd(), 'output', 'arima-cases.csv'), index=False)
+    result = run_arima(data, states, 'cases')
+
+    _db = DataBase()
+    _db.add_table(ARIMA_CASES_TABLE, data=result)
+    _db.close()
 
     # predict deaths
-    df = run_arima(data, states, 'deaths')
-    df.to_csv(join(cwd(), 'output', 'arima-deaths.csv'), index=False)
+    result = run_arima(data, states, 'deaths')
+
+    _db = DataBase()
+    _db.add_table(ARIMA_DEATHS_TABLE, data=result)
+    _db.close()
 
 
 if __name__ == "__main__":

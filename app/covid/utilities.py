@@ -6,7 +6,11 @@ import os
 
 import numpy as np
 from bokeh.plotting import figure
-from bokeh.models import HoverTool, NumeralTickFormatter
+from bokeh.models import (
+    HoverTool,
+    NumeralTickFormatter
+)
+
 
 def cwd():
     """

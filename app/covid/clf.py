@@ -1,21 +1,21 @@
+"""Run the following classification models:
+    1) Random Trees and Logistic Regression
+    2) Random Forest and Logistic Regression
+    3) Gradient Boosting Trees
+    4) Gradient Boosting Trees and Logistic Regression
+    5) Random Forest
 """
-    Run the following classification models:
-     1) Random Trees and Logistic Regression
-     2) Random Forest and Logistic Regression
-     3) Gradient Boosting Trees
-     4) Gradient Boosting Trees and Logistic Regression
-     5) Random Forest
-"""
-
-from os.path import join
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
 from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import (RandomTreesEmbedding, RandomForestClassifier,
-                              GradientBoostingClassifier)
+from sklearn.ensemble import (
+    RandomTreesEmbedding,
+    RandomForestClassifier,
+    GradientBoostingClassifier
+)
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_curve
@@ -23,17 +23,30 @@ from sklearn.metrics import roc_auc_score
 from sklearn.pipeline import make_pipeline
 from sklearn import metrics
 
-from utilities import cwd
+from database import DataBase
+from sql import FLDEM_VIEW_TABLE
+
+
+# outputs
+MODELS_ROC_TABLE = 'models_roc'
+IMPORTANCE_TABLE = 'importance'
 
 
 np.random.seed(10)
 
-
 def rt_log_reg(X_train, X_test, y_train, y_test, n_estimators):
-    """
-       Random Trees and Logistic Regression classifier
-    """
+    """Random Trees and Logistic Reqression classifier
 
+    Arguments:
+        X_train {array} -- training set for independent variables
+        X_test {array} -- testing set for independent variables
+        y_train {array} -- training set for dependent variable
+        y_test {array} -- testing set for dependent variable
+        n_estimators {integer} -- [description]
+
+    Returns:
+        dict -- model's roc[false pos rate, true pos rate], auc and logloss
+    """
     # Unsupervised transformation based on totally random trees
     clf_rt = RandomTreesEmbedding(max_depth=3, n_estimators=n_estimators,
                                   random_state=0)
@@ -58,8 +71,17 @@ def rt_log_reg(X_train, X_test, y_train, y_test, n_estimators):
 def rf_log_reg(X_train, X_test, y_train, y_test, n_estimators):
     """
        Random Forest and Logistic Regression classifier
-    """
 
+    Arguments:
+        X_train {array} -- training set for independent variables
+        X_test {array} -- testing set for independent variables
+        y_train {array} -- training set for dependent variable
+        y_test {array} -- testing set for dependent variable
+        n_estimators {integer} -- [description]
+
+    Returns:
+        dict -- model's roc[false pos rate, true pos rate], auc and logloss
+    """
     # Unsupervised transformation based on totally random trees
     clf_rf = RandomForestClassifier(max_depth=3, n_estimators=n_estimators)
     rf_enc = OneHotEncoder(categories='auto')
@@ -83,8 +105,17 @@ def rf_log_reg(X_train, X_test, y_train, y_test, n_estimators):
 def gbt_log_reg(X_train, X_test, y_train, y_test, n_estimators):
     """
        Gradient Boosting Trees and Logistic Regression classifier
-    """
 
+    Arguments:
+        X_train {array} -- training set for independent variables
+        X_test {array} -- testing set for independent variables
+        y_train {array} -- training set for dependent variable
+        y_test {array} -- testing set for dependent variable
+        n_estimators {integer} -- [description]
+
+    Returns:
+        dict -- model's roc[false pos rate, true pos rate], auc and logloss
+    """
     # Supervised transformation based on gradient boosted trees
     clf_grd = GradientBoostingClassifier(n_estimators=n_estimators)
     grd_enc = OneHotEncoder(categories='auto')
@@ -108,8 +139,17 @@ def gbt_log_reg(X_train, X_test, y_train, y_test, n_estimators):
 def grd_boosting_trees(X_train, X_test, y_train, y_test, n_estimators):
     """
        Gradient Boosting Trees classifier
-    """
 
+    Arguments:
+        X_train {array} -- training set for independent variables
+        X_test {array} -- testing set for independent variables
+        y_train {array} -- training set for dependent variable
+        y_test {array} -- testing set for dependent variable
+        n_estimators {integer} -- [description]
+
+    Returns:
+        dict -- model's roc[false pos rate, true pos rate], auc and logloss
+    """
     # Supervised transformation based on gradient boosted trees
     clf_grd = GradientBoostingClassifier(n_estimators=n_estimators)
     grd_enc = OneHotEncoder(categories='auto')
@@ -132,8 +172,17 @@ def grd_boosting_trees(X_train, X_test, y_train, y_test, n_estimators):
 def random_forest(X_train, X_test, y_train, y_test, n_estimators):
     """
        Random Forest classifier
-    """
 
+    Arguments:
+        X_train {array} -- training set for independent variables
+        X_test {array} -- testing set for independent variables
+        y_train {array} -- training set for dependent variable
+        y_test {array} -- testing set for dependent variable
+        n_estimators {integer} -- [description]
+
+    Returns:
+        dict -- model's roc[false pos rate, true pos rate], auc and logloss
+    """
     # Unsupervised transformation based on totally random trees
     clf_rf = RandomForestClassifier(max_depth=3, n_estimators=n_estimators)
     rf_enc = OneHotEncoder(categories='auto')
@@ -156,8 +205,17 @@ def random_forest(X_train, X_test, y_train, y_test, n_estimators):
 def feature_importance(X_train, y_train, col_names, n_estimators):
     """
         Feature importance using Random Forest classifier
-    """
 
+    Arguments:
+        X_train {array} -- training set for independent variables
+        X_test {array} -- testing set for independent variables
+        y_train {array} -- training set for dependent variable
+        y_test {array} -- testing set for dependent variable
+        n_estimators {integer} -- [description]
+
+    Returns:
+        dict -- model's roc[false pos rate, true pos rate], auc and logloss
+    """
     # Unsupervised transformation based on totally random trees
     clf_rf = RandomForestClassifier(max_depth=3, n_estimators=n_estimators)
 
@@ -165,75 +223,101 @@ def feature_importance(X_train, y_train, col_names, n_estimators):
     clf_rf.fit(X_train, y_train)
 
     # feature importance
-    df = pd.DataFrame({'feature': col_names,
-                       'importance': clf_rf.feature_importances_})
+    data = pd.DataFrame({'feature': col_names,
+                         'importance': clf_rf.feature_importances_})
 
-    df.sort_values('importance', ascending=False, inplace=True)
-    return df
+    data.sort_values('importance', ascending=False, inplace=True)
+    return data
 
-
+# %%
 def classify():
-    """
-        Run classification models
-    """
+    """Run classification models:
+        1) Random Trees and Logistic Regression
+        2) Random Forest and Logistic Regression
+        3) Gradient Boosting Trees
+        4) Gradient Boosting Trees and Logistic Regression
+        5) Random Forest
 
+    Input from databae:
+        FDEM_VIEW_NAME {database table} -- fldem data
+
+    Output to file:
+        MODELS_ROC_CSV {CSV file} -- models' ROC, LogLoss and AUC
+        IMPORTANCE_CSV {CSV file} -- random forest feature importances
+
+    Output to database:
+        MODELS_ROC_TABLE {database table} -- models' ROC, LogLoss and AUC
+        IMPORTANCE_TABLE {database table } -- random forest feature importances
+    """
     y_var = 'died'
     n_estimators = 10
 
-    df = pd.read_csv(join(cwd(), 'data', 'flclean.csv'), low_memory=False)
-    df.drop(['datetime', 'fips', 'dx', 'dy'], axis=1, inplace=True)
-    df.rename(columns={'Male': 'gender', 'land_sqkm': 'land_area',
-                       'water_sqkm': 'water_area'}, inplace=True)
-    df.dropna(inplace=True)
+    # get fldem from database
+    _db = DataBase()
+    cols = ['died', 'age', 'population', 'land_area', 'water_area', 'gender',
+            'density']
+
+    data = _db.get_table(FLDEM_VIEW_TABLE, columns=cols)
+    data.dropna(inplace=True)
+    _db.close()
 
     # divide data set
-    X = df.loc[:, df.columns != y_var]
-    y = df.loc[:, df.columns == y_var]
+    X = data.loc[:, data.columns != y_var]
+    y = data.loc[:, data.columns == y_var]
     X_train, X_test, y_train, y_test = train_test_split(X.values,
                                                         y.values.ravel(),
                                                         test_size=0.5)
     # classification models
-    rt_lr = dict(model='Random Trees and Logistic Regression', abbrev='RT + LR',
-                 **rt_log_reg(X_train, X_test, y_train, y_test, n_estimators))
+    models = dict(
+        rt_lr=dict(model='Random Trees and Logistic Regression', abbrev='RT + LR',
+                   **rt_log_reg(X_train, X_test, y_train, y_test, n_estimators)),
 
-    rf_lr = dict(model='Random Forest and Logistic Regression', abbrev='RF + LR',
-                 **rf_log_reg(X_train, X_test, y_train, y_test, n_estimators))
+        rf_lr=dict(model='Random Forest and Logistic Regression', abbrev='RF + LR',
+                   **rf_log_reg(X_train, X_test, y_train, y_test, n_estimators)),
 
-    rforest = dict(model='Random Forest', abbrev='RF',
-                   **random_forest(X_train, X_test, y_train, y_test, n_estimators))
+        rforest=dict(model='Random Forest', abbrev='RF',
+                     **random_forest(X_train, X_test, y_train, y_test, n_estimators)),
 
-    gbt = dict(model='Gradient Boosting Trees', abbrev='GBT',
-               **grd_boosting_trees(X_train, X_test, y_train, y_test, n_estimators))
+        gbt=dict(model='Gradient Boosting Trees', abbrev='GBT',
+                 **grd_boosting_trees(X_train, X_test, y_train, y_test, n_estimators)),
 
-    gbt_lr = dict(model='Gradient Boosting Trees and Linear Regression',
-                  abbrev='GBT + LR',
-                  **gbt_log_reg(X_train, X_test, y_train, y_test, n_estimators))
+        gbt_lr=dict(model='Gradient Boosting Trees and Linear Regression',
+                    abbrev='GBT + LR',
+                    **gbt_log_reg(X_train, X_test, y_train, y_test, n_estimators)),
 
-    rand = dict(model='Random', abbrev='Random', logloss=-1 * np.log10(0.5),
-                auc=0.5, x=np.linspace(0, 1, 100), y=np.linspace(0, 1, 100))
+        rand=dict(model='Random', abbrev='Random', logloss=-1 * np.log10(0.5),
+                  auc=0.5, x=np.linspace(0, 1, 100), y=np.linspace(0, 1, 100)))
 
     # conbine result of all models
-    df = pd.concat([pd.DataFrame(rt_lr), pd.DataFrame(rf_lr), pd.DataFrame(gbt),
-                    pd.DataFrame(rforest), pd.DataFrame(gbt_lr), pd.DataFrame(rand)],
-                   axis=0, ignore_index=True)
+    data = pd.concat([pd.DataFrame(models['rt_lr']), pd.DataFrame(models['rf_lr']),
+                      pd.DataFrame(models['gbt']), pd.DataFrame(models['rforest']),
+                      pd.DataFrame(models['gbt_lr']), pd.DataFrame(models['rand'])],
+                     axis=0, ignore_index=True)
 
-    df = df.rename(columns={'x': 'False_Positive_Rate',
-                            'y': 'True_Positive_Rate'})
+    data = data.rename(columns={'x': 'False_Positive_Rate',
+                                'y': 'True_Positive_Rate'})
 
-    # output models metrics
-    df.to_csv(join(cwd(), 'output', 'fl_roc_models.csv'), index=False)
+    # output to database
+    _db = DataBase()
+    _db.add_table(MODELS_ROC_TABLE, data)
+    _db.close()
 
     # output feature importance
-    df = feature_importance(X_train, y_train, list(X.columns), n_estimators)
-    df.to_csv(join(cwd(), 'output', 'fl_fi_models.csv'), index=False)
+    data = feature_importance(X_train, y_train, list(X.columns), n_estimators)
+
+    # output to database
+    _db = DataBase()
+    _db.add_table(IMPORTANCE_TABLE, data)
+    _db.close()
 
 
 def utest_models():
+    """Plot model results
     """
-        Plot model results
-    """
+    _db = DataBase()
+    data = _db.get_table(MODELS_ROC_TABLE)
+    _db.close()
 
-    data = pd.read_csv(join(cwd(), 'output', 'fl_roc_models.csv'))
     plt.figure(1)
 
     for cat in data['abbrev'].unique():
@@ -250,12 +334,14 @@ def utest_models():
     plt.legend(loc='best')
     plt.show()
 
-def utest_feature_importance():
-    """
-        Plot feature importance
-    """
 
-    data = pd.read_csv(join(cwd(), 'output', 'fl_fi_models.csv'))
+def utest_feature_importance():
+    """Plot feature importance
+    """
+    _db = DataBase()
+    data = _db.get_table(IMPORTANCE_TABLE)
+    _db.close()
+
     plt.figure(figsize=(4, 4))
     ax = plt.subplot(111)
     ax.barh(data['feature'], data['importance'])
@@ -270,8 +356,8 @@ if __name__ == "__main__":
     # unit testing
     classify()
 
-    # %% plot model results
+    # plot model results
     utest_models()
 
-    # %% plot feature importances
+    # plot feature importances
     utest_feature_importance()

@@ -1,99 +1,137 @@
-"""
-    Visualize histograms of cases and deaths by age and gender
+"""Visualize histograms of cases and deaths by age and gender
 """
 
 from os.path import join
 
-import pandas as pd
 from bokeh.layouts import gridplot
 from bokeh.io import curdoc
 from bokeh.palettes import Purples
 from bokeh.themes import Theme
 
 from utilities import cwd, histogram, vbar
+from database import DataBase
+from sql import FLDEM_VIEW_TABLE
 
 
-def age_cases_histogram(df, color, hover_color):
+# for unit test
+UNIT_TESTING = False
+THEME = join(cwd(), "theme.yaml")
+
+
+def age_cases_histogram(data, color, hover_color):
+    """Plot histogram of covid19 cases by age
+
+    Arguments:
+        data {DataFrame} -- data to plot histogram
+        color {rgb color} -- color of histogram bars
+        hover_color {rgb color} -- color of histogram bar when hovering over
+
+    Returns:
+        Bokeh Figure Object -- plot object
     """
-        Plot distribution of cases among age groups
-    """
-
     kwargs = dict(title='Age Distribution of Cases in Florida', fill_color=color,
                   hover_fill_color=hover_color)
-
-    plot = histogram(x=df['age'].values, xlabel='Age', ylabel='Cases', **kwargs)
+    plot = histogram(x=data['age'].values, xlabel='Age', ylabel='Cases', **kwargs)
 
     return plot
 
 
-def age_deaths_histogram(df, color, hover_color):
-    """
-        Plot distribution of deaths among age groups
-    """
+def age_deaths_histogram(data, color, hover_color):
+    """Plot histogram of covid19 deaths by age
 
+    Arguments:
+        data {DataFrame} -- data to plot histogram
+        color {rgb color} -- color of histogram bars
+        hover_color {rgb color} -- color of histogram bar when hovering over
+
+    Returns:
+        Bokeh Figure Object -- plot object
+    """
     kwargs = dict(title='Age Distribution of Deaths in Florida', fill_color=color,
                   hover_fill_color=hover_color)
-
-    plot = histogram(x=df[df['died'] == 1]['age'], xlabel='Age', ylabel='Deaths', **kwargs)
+    plot = histogram(x=data[data['died'] == 1]['age'], xlabel='Age',
+                     ylabel='Deaths', **kwargs)
 
     return plot
 
 
-def gender_cases_histogram(df, color, hover_color):
-    """
-        Plot distribution of cases by gender
-    """
+def gender_cases_histogram(data, color, hover_color):
+    """Plot histogram of covid19 cases by gender
 
+    Arguments:
+        data {DataFrame} -- data to plot histogram
+        color {rgb color} -- color of histogram bars
+        hover_color {rgb color} -- color of histogram bar when hovering over
+
+    Returns:
+        Bokeh Figure Object -- plot object
+    """
     x = ['Male', 'Female']
-    y = [df['Male'].sum(), len(df) - df['Male'].sum()]
+    y = [data['gender'].sum(), len(data) - data['gender'].sum()]
 
     kwargs = dict(title='Gender Distribution of Cases in Florida', fill_color=color,
                   hover_fill_color=hover_color)
-
     plot = vbar(x=x, y=y, xlabel='Gender', ylabel='Cases', **kwargs)
 
     return plot
 
 
-def gender_deaths_histogram(df, color, hover_color):
-    """
-        Plot distribution of deaths by gender
-    """
+def gender_deaths_histogram(data, color, hover_color):
+    """Plot histogram of covid19 deaths by gender
 
-    df_died = df[df['died'] == 1]
+    Arguments:
+        data {DataFrame} -- data to plot histogram
+        color {rgb color} -- color of histogram bars
+        hover_color {rgb color} -- color of histogram bar when hovering over
+
+    Returns:
+        Bokeh Figure Object -- plot object
+    """
+    died = data[data['died'] == 1]
     x = ['Male', 'Female']
-    y = [df_died['Male'].sum(), len(df_died) - df_died['Male'].sum()]
+    y = [died['gender'].sum(), len(died) - died['gender'].sum()]
 
     kwargs = dict(title='Gender Distribution of Deaths in Florida', fill_color=color,
                   hover_fill_color=hover_color)
-
     plot = vbar(x=x, y=y, xlabel='Gender', ylabel='Deaths', **kwargs)
 
     return plot
 
 
-def age_gender_histograms(df, color, hover_color):
-    """
-        Build layout with all distributions
-    """
+def age_gender_histograms(data, color, hover_color):
+    """Plot histograms
+        1) cases by age
+        2) deaths by age
+        3) cases by gender
+        4) deaths by gender
 
-    layout = gridplot([age_cases_histogram(df, color, hover_color),
-                       age_deaths_histogram(df, color, hover_color),
-                       gender_cases_histogram(df, color, hover_color),
-                       gender_deaths_histogram(df, color, hover_color)],
+    Arguments:
+        data {DataFrame} -- data to plot histogram
+        color {rgb color} -- color of histogram bars
+        hover_color {rgb color} -- color of histogram bar when hovering over
+
+    Returns:
+        Bokeh layout Object -- layout
+    """
+    layout = gridplot([age_cases_histogram(data, color, hover_color),
+                       age_deaths_histogram(data, color, hover_color),
+                       gender_cases_histogram(data, color, hover_color),
+                       gender_deaths_histogram(data, color, hover_color)],
                       ncols=2, plot_width=400,
                       plot_height=250,
                       toolbar_location=None)
     return layout
 
-STAND_ALONG = False
-if STAND_ALONG:
+
+if UNIT_TESTING:
 
     palette_in = list(reversed(Purples[8]))
 
     # dataset for models)
-    df_in = pd.read_csv(join(cwd(), 'data', 'flclean.csv'))
+    database = DataBase()
+    data_in = database.get_table(FLDEM_VIEW_TABLE)
+    database.close()
 
-    curdoc().add_root(age_gender_histograms(df_in, palette_in[2], palette_in[4]))
+    curdoc().add_root(age_gender_histograms(data_in, palette_in[2], palette_in[4]))
     curdoc().title = "distros"
-    curdoc().theme = Theme(filename=join(cwd(), "theme.yaml"))
+    curdoc().theme = Theme(filename=THEME)

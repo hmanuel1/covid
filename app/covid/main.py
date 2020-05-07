@@ -5,7 +5,6 @@
 from os.path import join
 import sys
 
-import pandas as pd
 from bokeh import __version__
 from bokeh.plotting import curdoc
 from bokeh.palettes import Greens
@@ -16,27 +15,40 @@ from bokeh.themes import Theme
 # internal modules
 from nytimes import download_nytimes
 from fldem import download_fldem
-from clf import classify
-from arima import predict
 from distros import age_gender_histograms
 from maps import Map
 from trends import show_predictions
 from fits import models_result
 from utilities import cwd
+from database import DataBase
+from wrangler import maps_to_database
+from clf import (
+    classify,
+    IMPORTANCE_TABLE,
+    MODELS_ROC_TABLE
+)
+from arima import (
+    predict,
+    ARIMA_CASES_TABLE,
+    ARIMA_DEATHS_TABLE
+)
+from sql import FLDEM_VIEW_TABLE
+
 
 
 def refresh():
     """
         Refresh covid-19 data used by this app
     """
-
-    print('downloading ny times data...', end='')
+    print('refreshing database maps...', end='')
+    maps_to_database()
+    print('done.\ndownloading nytimes data...', end='')
     download_nytimes()
-    print('done.\ndownloading fl dem data...', end='')
+    print('done.\ndownloading fldem data...', end='')
     download_fldem()
-    print('done.\nclassifying with fl dem data...', end='')
+    print('done.\nclassifying with fldem data...', end='')
     classify()
-    print('done.\npredicting with ny times data...', end='')
+    print('done.\npredicting with nytimes data...', end='')
     predict()
     print('done.')
 
@@ -45,17 +57,15 @@ def get_data_sets():
     """
         get data sets
     """
+    _db = DataBase()
 
-    # dataset for models
-    data = pd.read_csv(join(cwd(), 'data', 'flclean.csv'))
-    roc = pd.read_csv(join(cwd(), 'output', 'fl_roc_models.csv'))
-    importance = pd.read_csv(join(cwd(), 'output', 'fl_fi_models.csv'))
+    data = _db.get_table(FLDEM_VIEW_TABLE)
+    roc = _db.get_table(MODELS_ROC_TABLE)
+    importance = _db.get_table(IMPORTANCE_TABLE)
+    cases = _db.get_table(ARIMA_CASES_TABLE, parse_dates=['date'])
+    deaths = _db.get_table(ARIMA_DEATHS_TABLE, parse_dates=['date'])
 
-    # datasets for predictions
-    cases = pd.read_csv(
-        join(cwd(), 'output', 'arima-cases.csv'), parse_dates=['date'])
-    deaths = pd.read_csv(
-        join(cwd(), 'output', 'arima-deaths.csv'), parse_dates=['date'])
+    _db.close()
 
     return data, roc, importance, cases, deaths
 

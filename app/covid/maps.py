@@ -5,38 +5,71 @@
 from os.path import join
 
 import numpy as np
-import geopandas as gpd
 
 from bokeh.plotting import figure
 from bokeh.models import DateSlider
-from bokeh.models import (CustomJS, GeoJSONDataSource, HoverTool, Legend,
-                          LinearColorMapper, Select, GroupFilter, CDSView,
-                          Button, Label)
+from bokeh.models import (
+    CustomJS,
+    GeoJSONDataSource,
+    HoverTool,
+    Legend,
+    LinearColorMapper,
+    Select,
+    GroupFilter,
+    CDSView,
+    Button,
+    Label)
 from bokeh.layouts import column, row
 from bokeh.io import curdoc
 from bokeh.palettes import Purples
 from bokeh.themes import Theme
 
-from wrangler import get_clean_data
+from database import DataBase
 from utilities import cwd
+from sql import (
+    US_MAP_PIVOT_VIEW_TABLE,
+    OPTIONS_TABLE
+)
+from nytimes import (
+    LEVELS_TABLE,
+    DATES_TABLE
+)
+from wrangler import STATE_MAP_TABLE
+
+
+# for unit testing
+UNIT_TESTING = False
+TRACING = True
 
 
 class Map:
     """
         Map Layout Class
     """
-
     def __init__(self, **kwargs):
-
-        # needs at least width and height
         self.palette = kwargs.pop('palette')
 
-        # read state shapes
-        _path = join(cwd(), 'shapes', 'state_map', 'state_map.shx')
-        self.states = gpd.read_file(_path)
+        # init metadata dictionary
+        self.meta = dict()
 
-        # read state shapes with covid-19 and metadata
-        self.counties, self.meta = get_clean_data(15)
+        # get data and metadata from database
+        _db = DataBase()
+        self.counties = _db.get_geotable(US_MAP_PIVOT_VIEW_TABLE)
+
+        self.meta['levels'] = _db.get_table(LEVELS_TABLE)
+        self.meta['dates'] = _db.get_table(DATES_TABLE, parse_dates=['date'])
+        self.meta['options'] = _db.get_table(OPTIONS_TABLE)
+
+        _cols = ['state_id', 'geometry']
+        self.states = _db.get_geotable(STATE_MAP_TABLE, columns=_cols)
+        _db.close()
+
+        # format metadata
+        self.meta['levels'] = list(self.meta['levels']['level'])
+        self.meta['dates'] = list(self.meta['dates']['date'])
+
+        _id, _state = self.meta['options']['id'], self.meta['options']['state']
+        self.meta['options'] = list(zip(_id, _state))
 
         # init plot
         self.plot = figure(match_aspect=True, toolbar_location='right',
@@ -47,15 +80,15 @@ class Map:
 
         # init class variables
         self.controls = dict()
-        self.srcs = dict(count=GeoJSONDataSource(geojson=self.counties.to_json()),
-                         stat=GeoJSONDataSource(geojson=self.states.to_json()))
+        self.srcs = dict(counties=GeoJSONDataSource(geojson=self.counties.to_json()),
+                         states=GeoJSONDataSource(geojson=self.states.to_json()))
 
         # build map
         self.plot_map()
 
     def __add_counties(self):
-        """ add us counties to plot """
-
+        """Add county patches to figure
+        """
         # build county colors and line parameters
         _color_mapper = LinearColorMapper(palette=self.palette, low=0, high=9)
         _color = dict(field='m', transform=_color_mapper)
@@ -63,20 +96,24 @@ class Map:
         _params['name'] = 'counties'
 
         # add counties to plot
-        self.plot.patches(xs='xs', ys='ys', source=self.srcs['count'], **_params)
+        self.plot.patches(xs='xs', ys='ys', source=self.srcs['counties'], **_params)
+        if TRACING:
+            print('patches added')
 
     def __add_states(self):
-        """ add us states to plot """
-
+        """Add state lines to figure
+        """
         # build state colors and line parameters
         _params = dict(line_color='darkgrey', line_width=0.5, name='states')
 
         # add state to plot
-        self.plot.multi_line(xs='xs', ys='ys', source=self.srcs['stat'], **_params)
+        self.plot.multi_line(xs='xs', ys='ys', source=self.srcs['states'], **_params)
+        if TRACING:
+            print('state lines added')
 
     def __add_label(self):
-        """ add date label for animation """
-
+        """ Add date label for animation
+        """
         self.controls['label'] = Label(x=0.35 * self.plot.plot_width,
                                        y=0.01 * self.plot.plot_height,
                                        x_units='screen', y_units='screen',
@@ -85,20 +122,25 @@ class Map:
                                        text_color='#eeeeee')
 
         self.plot.add_layout(self.controls['label'])
+        if TRACING:
+            print('label added')
 
     def __add_hover(self):
-        """ add hover tool to plot """
+        """Add hove tool to figure
+        """
         _hover = HoverTool(renderers=self.plot.select('counties'),
-                           tooltips=[('County', '@NAME'),
+                           tooltips=[('County', '@name'),
                                      ('Cases', '@c{0,0}'),
                                      ('Deaths', '@d{0,0}'),
-                                     ('Population', '@population{0,0}')])
+                                     ('Population', '@pop{0,0}')])
 
         self.plot.add_tools(_hover)
+        if TRACING:
+            print('hover tool added')
 
     def __add_legend(self):
-        """ add date label """
-
+        """Add legend to plot
+        """
         _levels = self.meta['levels']
 
          # names for custom legend
@@ -127,22 +169,24 @@ class Map:
         self.plot.add_layout(Legend(items=_items, location='bottom_right'))
         self.plot.x_range.only_visible = True
         self.plot.y_range.only_visible = True
+        if TRACING:
+            print('legend added')
 
     def add_select(self):
-        """ add state selection """
-
+        """Build select control
+        """
         # select control
         self.controls['select'] = Select(value='a', options=self.meta['options'],
                                          max_width=self.plot.plot_width-40)
 
         # map views
-        _filter = GroupFilter(column_name='STATEFP', group='12')
-        _counties_on = CDSView(source=self.srcs['count'], filters=[_filter])
-        _counties_off = CDSView(source=self.srcs['count'], filters=[])
-        _states_on = CDSView(source=self.srcs['stat'], filters=[_filter])
-        _states_off = CDSView(source=self.srcs['stat'], filters=[])
+        _filter = GroupFilter(column_name='state_id', group='12')
+        _counties_on = CDSView(source=self.srcs['counties'], filters=[_filter])
+        _counties_off = CDSView(source=self.srcs['counties'], filters=[])
+        _states_on = CDSView(source=self.srcs['states'], filters=[_filter])
+        _states_off = CDSView(source=self.srcs['states'], filters=[])
 
-        _args = dict(counties_src=self.srcs['count'], states_src=self.srcs['stat'],
+        _args = dict(counties_src=self.srcs['counties'], states_src=self.srcs['states'],
                      counties_glyph=self.plot.select('counties')[0],
                      states_glyph=self.plot.select('states')[0], filter=_filter,
                      counties_view_on=_counties_on, states_view_on=_states_on,
@@ -166,16 +210,19 @@ class Map:
             """)
 
         self.controls['select'].js_on_change('value', _callback)
+        if TRACING:
+            print('select control added')
 
     def add_slider(self):
-        """ add slider """
+        """Build slider
+        """
         self.controls['slider'] = DateSlider(start=self.meta['dates'][-1].date(),
                                              end=self.meta['dates'][0].date(),
                                              value=self.meta['dates'][0].date(),
                                              width=self.plot.plot_width-40-84,
                                              title='Reported Date')
 
-        _callback = CustomJS(args=dict(source=self.srcs['count'],
+        _callback = CustomJS(args=dict(source=self.srcs['counties'],
                                        date=self.controls['slider']),
                              code="""
             // javascript code
@@ -203,9 +250,12 @@ class Map:
             """)
 
         self.controls['slider'].js_on_change('value', _callback)
+        if TRACING:
+            print('slider added')
 
     def add_button(self):
-        """ add button """
+        """Build animation button
+        """
         self.controls['button'] = Button(label='► Play', width=80, height=60)
 
         _callback = CustomJS(args=dict(button=self.controls['button'],
@@ -252,9 +302,12 @@ class Map:
             """)
 
         self.controls['button'].js_on_click(_callback)
+        if TRACING:
+            print('play button added')
 
     def plot_map(self):
-        """ plot map elements """
+        """ Build map elements
+        """
         self.__add_counties()
         self.__add_states()
         self.__add_hover()
@@ -264,8 +317,8 @@ class Map:
         self.add_slider()
         self.add_button()
 
-STAND_ALONE = False
-if STAND_ALONE:
+
+if UNIT_TESTING:
 
     # unit test module in stand alone mode
     palette = list(reversed(Purples[8]))

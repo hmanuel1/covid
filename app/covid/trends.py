@@ -11,18 +11,38 @@ from bokeh.palettes import Purples
 from bokeh.layouts import gridplot, row
 from bokeh.plotting import figure
 from bokeh.themes import Theme
-from bokeh.models import (ColumnDataSource, CustomJS, MultiSelect,
-                          NumeralTickFormatter, HoverTool, Legend)
+from bokeh.models import (
+    ColumnDataSource,
+    CustomJS,
+    MultiSelect,
+    NumeralTickFormatter,
+    HoverTool,
+    Legend
+)
 
 from utilities import cwd
+from database import DataBase
+from arima import ARIMA_CASES_TABLE, ARIMA_DEATHS_TABLE
 
 SIDE = 'client'
 
-def cases_trends(df, y_var, palette=Purples[3], **kwargs):
-    """
-        Plot cases for the selected states.
-    """
+# for unit testing
+UNIT_TESTING = False
 
+def cases_trends(data, y_var, palette=Purples[3], **kwargs):
+    """Plot covid19 case trend
+
+    Arguments:
+        data {DataFrame} -- data with covid case trend
+        y_var {String} -- predicted variable column name
+
+    Keyword Arguments:
+        palette {list} -- rgb color palette (default: {Purples[3]})
+
+    Returns:
+        Bokeh Figure Object -- plot instance
+        dict -- instances of plot elements (e.g. lines, datasources) for animation
+    """
     figure_settings = dict(title=None, plot_width=600, plot_height=600,
                            x_axis_type='datetime', tools='save, box_zoom, reset')
 
@@ -39,8 +59,8 @@ def cases_trends(df, y_var, palette=Purples[3], **kwargs):
     lupper = dict()
     llower = dict()
     vareaf = dict()
-    for cat in sorted(list(df['state'].unique())):
-        source[cat] = ColumnDataSource(df[df['state'] == cat])
+    for cat in sorted(list(data['state'].unique())):
+        source[cat] = ColumnDataSource(data[data['state'] == cat])
 
         ly_var[cat] = plot.line(x='date', y=y_var, source=source[cat],
                                 line_color=palette[0], visible=False)
@@ -79,9 +99,9 @@ def cases_trends(df, y_var, palette=Purples[3], **kwargs):
                                  fill_alpha=0.5, visible=False)
 
     # legend
-    plot.add_layout(Legend(items=[('Actual', [ly_var[df['state'].iat[0]]]),
-                                  ('Predicted', [lpredi[df['state'].iat[0]]]),
-                                  ('95% Confidence', [vareaf[df['state'].iat[0]]])],
+    plot.add_layout(Legend(items=[('Actual', [ly_var[data['state'].iat[0]]]),
+                                  ('Predicted', [lpredi[data['state'].iat[0]]]),
+                                  ('95% Confidence', [vareaf[data['state'].iat[0]]])],
                            location='top_left'))
 
     plot.xaxis.ticker.desired_num_ticks = 10
@@ -91,12 +111,19 @@ def cases_trends(df, y_var, palette=Purples[3], **kwargs):
 
     return plot, dict(ly_var=ly_var, lpredi=lpredi, lupper=lupper, llower=llower,
                       vareaf=vareaf, sources=source,
-                      cats=sorted(list(df['state'].unique())))
+                      cats=sorted(list(data['state'].unique())))
 
 
 def multi_select_client(value, glyphs):
-    """ multi state select """
+    """Multi-select control for state selection with client browser animation
 
+    Arguments:
+        value {list} -- starting selection options
+        glyphs {list} -- bokeh glyph elements
+
+    Returns:
+        Bokeh Multi-select Object -- multi-select object instance
+    """
     mselect = MultiSelect(title='States:', value=value,
                           options=glyphs[0]['cats'])
 
@@ -134,8 +161,15 @@ def multi_select_client(value, glyphs):
 
 
 def multi_select_server(value, glyphs):
-    """ multi state select """
+    """Multi-select control for state selection with server driven animation
 
+    Arguments:
+        value {list} -- starting selection options
+        glyphs {list} -- bokeh glyph elements
+
+    Returns:
+        Bokeh Multi-select Object -- multi-select object instance
+    """
     mselect = MultiSelect(title='States:', value=value,
                           options=glyphs[0]['cats'])
 
@@ -171,15 +205,25 @@ def multi_select_server(value, glyphs):
     return mselect
 
 
-def render_cases(df, y_var, date, palette=Purples[3]):
-    """
-        Show 10 top state by cases
-    """
+def render_cases(data, y_var, date, palette=Purples[3]):
+    """Select top 10 states by cases and make their plots visible
 
-    df = df[df['date'] > pd.to_datetime(date)]
+    Arguments:
+        data {DataFrame} -- cases data
+        y_var {String} -- predicted variable
+        date {TimeStamp} -- date
+
+    Keyword Arguments:
+        palette {list} -- rgb color palette (default: {Purples[3]})
+
+    Returns:
+        Bokeh Figure Object -- plot instance
+        list -- top-10 states by cases count
+    """
+    data = data[data['date'] > pd.to_datetime(date)]
 
     # select top 10 state by number of cases
-    top10 = df.groupby('state').max()[[y_var]]
+    top10 = data.groupby('state').max()[[y_var]]
     top10 = top10.sort_values(y_var, ascending=False)
     top10 = list(top10.index)[:10]
 
@@ -187,18 +231,26 @@ def render_cases(df, y_var, date, palette=Purples[3]):
     kwargs = dict(title=f"Cumulative {y_var.title()} by State",
                   plot_width=600, plot_height=300)
 
-    plot, out = cases_trends(df, y_var, palette, **kwargs)
+    plot, out = cases_trends(data, y_var, palette, **kwargs)
 
     return plot, top10, out
 
 
 def show_predictions(cases, deaths, start_date, palette=Purples[3]):
-    """
-        Make visible line of selected states
-    """
+    """Main module function to plot cases, deaths and add select control
 
-    p_cases, top10_cases, out_cases = render_cases(cases,
-                                                   'cases', start_date, palette)
+    Arguments:
+        cases {DataFrame} -- arima model prediction of cases by state
+        deaths {DataFrame} -- arima model prediction of deaths by state
+        start_date {date} -- date to show at startup
+
+    Keyword Arguments:
+        palette {list} -- rgb color palette (default: {Purples[3]})
+
+    Returns:
+        Bokeh Layout Object -- layout instance
+    """
+    p_cases, top10_cases, out_cases = render_cases(cases, 'cases', start_date, palette)
     p_deaths, _, out_deaths = render_cases(deaths, 'deaths', start_date, palette)
 
     # show top 10 states by cases
@@ -235,14 +287,13 @@ def show_predictions(cases, deaths, start_date, palette=Purples[3]):
     return row(mselect, graphs)
 
 
-STAND_ALONE = False
-if STAND_ALONE:
+if UNIT_TESTING:
     palette_in = Purples[3]
 
-    cases_in = pd.read_csv(
-        join(cwd(), 'output', 'arima-cases.csv'), parse_dates=['date'])
-    deaths_in = pd.read_csv(
-        join(cwd(), 'output', 'arima-deaths.csv'), parse_dates=['date'])
+    database = DataBase()
+    cases_in = database.get_table(ARIMA_CASES_TABLE, parse_dates=['date'])
+    deaths_in = database.get_table(ARIMA_DEATHS_TABLE, parse_dates=['date'])
+    database.close()
 
     layout = show_predictions(cases=cases_in, deaths=deaths_in,
                               start_date='3/15/2020', palette=palette_in)
