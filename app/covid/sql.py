@@ -42,26 +42,34 @@ FLDEM_VIEW = ("""
     CREATE VIEW
         fldem_view AS
     SELECT
-        fldem_cases.date,
-        fldem_cases.day,
-        fldem_cases.male AS 'gender',
-        fldem_cases.age,
+        m.date,
+        m.day,
+        m.male AS 'gender',
+        m.age,
         us_map.aland AS 'land_area',
         us_map.awater AS 'water_area',
         us_map.pop AS 'population',
         ROUND(us_map.pop / us_map.aland, 0) AS 'density',
-        IFNULL(fldem_deaths.case_id/fldem_deaths.case_id, 0) AS 'died'
+        IFNULL(e.died, 0) AS 'died'
     FROM
-        fldem_cases
-    INNER JOIN us_map ON us_map.county_id = fldem_cases.county_id
-    LEFT JOIN fldem_deaths ON
-        fldem_deaths.county_id = fldem_cases.county_id AND
-        fldem_deaths.age = fldem_cases.age AND
-        fldem_deaths.date = fldem_cases.date AND
-        fldem_deaths.male = fldem_cases.male AND
-        fldem_deaths.resident = fldem_cases.resident AND
-        fldem_deaths.traveled = fldem_cases.traveled AND
-        fldem_deaths.place = fldem_cases.place
+        fldem_cases m
+    INNER JOIN us_map ON us_map.county_id = m.county_id
+    LEFT JOIN
+        (
+            SELECT DISTINCT
+                fldem_cases.case_id,
+                fldem_cases.rowid/fldem_cases.rowid as 'died'
+            FROM
+                fldem_cases
+            INNER JOIN fldem_deaths ON
+                fldem_deaths.county_id = fldem_cases.county_id AND
+                fldem_deaths.age = fldem_cases.age AND
+                fldem_deaths.date = fldem_cases.date AND
+                fldem_deaths.male = fldem_cases.male AND
+                fldem_deaths.resident = fldem_cases.resident AND
+                fldem_deaths.traveled = fldem_cases.traveled AND
+                fldem_deaths.place = fldem_cases.place
+        ) e ON m.case_id = e.case_id
 """)
 
 FLDEM_VIEW_TABLE = 'fldem_view'
