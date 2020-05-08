@@ -13,8 +13,6 @@ from database import DataBase
 from sql import FLDEM_VIEW_TABLE
 
 
-# for unit test
-UNIT_TESTING = False
 THEME = join(cwd(), "theme.yaml")
 
 
@@ -123,7 +121,8 @@ def age_gender_histograms(data, color, hover_color):
     return layout
 
 
-if UNIT_TESTING:
+if __name__[:9] == 'bokeh_app':
+    print('unit testing...')
 
     palette_in = list(reversed(Purples[8]))
 

@@ -22,12 +22,14 @@ from bokeh.models import (
 
 from utilities import cwd
 from database import DataBase
-from arima import ARIMA_CASES_TABLE, ARIMA_DEATHS_TABLE
+from arima import (
+    ARIMA_CASES_TABLE,
+    ARIMA_DEATHS_TABLE
+)
+
 
 SIDE = 'client'
 
-# for unit testing
-UNIT_TESTING = False
 
 def cases_trends(data, y_var, palette=Purples[3], **kwargs):
     """Plot covid19 case trend
@@ -287,7 +289,9 @@ def show_predictions(cases, deaths, start_date, palette=Purples[3]):
     return row(mselect, graphs)
 
 
-if UNIT_TESTING:
+if __name__[:9] == 'bokeh_app':
+    print('unit testing...')
+
     palette_in = Purples[3]
 
     database = DataBase()

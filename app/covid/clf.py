@@ -299,7 +299,7 @@ def classify():
 
     # output to database
     _db = DataBase()
-    _db.add_table(MODELS_ROC_TABLE, data)
+    _db.add_table(MODELS_ROC_TABLE, data, index=False)
     _db.close()
 
     # output feature importance
@@ -307,7 +307,7 @@ def classify():
 
     # output to database
     _db = DataBase()
-    _db.add_table(IMPORTANCE_TABLE, data)
+    _db.add_table(IMPORTANCE_TABLE, data, index=False)
     _db.close()
 
 

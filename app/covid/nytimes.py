@@ -19,7 +19,6 @@ from sql import (
     DROP_US_MAP_PIVOT_VIEW,
     CREATE_OPTIONS_TABLE,
     INSERT_USA_OPTION,
-    INSERT_STATE_OPTIONS,
     DROP_OPTIONS_TABLE
 )
 
@@ -50,14 +49,14 @@ def download_nytimes():
     data = pd.read_csv(URL_COUNTIES, dtype={'fips': 'str'})
 
     _db = DataBase()
-    _db.add_table(US_COUNTIES_TABLE, data)
+    _db.add_table(US_COUNTIES_TABLE, data, index=False)
     _db.close()
 
     # read covid19 state by state data from url
     data = pd.read_csv(URL_STATES, dtype={'fips': 'str'})
 
     _db = DataBase()
-    _db.add_table(US_STATES_TABLE, data)
+    _db.add_table(US_STATES_TABLE, data, index=False)
     _db.close()
 
     clean_counties_data()
@@ -118,18 +117,17 @@ def clean_counties_data():
     cols = ['county_id', 'state_id', 'date', 'day', 'cases', 'deaths']
     data = data[cols].copy(deep=True)
     data.reset_index(drop=True, inplace=True)
-    data['case_id'] = data.index
 
-    data.set_index('case_id', inplace=True)
     data['case_level'] = pd.cut(data['cases'], LEVELS, labels=range(1, len(LEVELS)))
-    data['death_level'] = pd.cut(data['deaths'], LEVELS, labels=range(1, len(LEVELS)))
+    data['case_level'] = pd.to_numeric(data['case_level'], 'coerce').fillna(0)
+    data['case_level'] = data['case_level'].astype('Int32')
 
     # ignored lines
     print(f'ignored lines: {start-end}/{start} = {(100*(start-end)/start):.01f}%')
 
     # tables to database
     _db = DataBase()
-    _db.add_table(NYTIMES_COUNTIES_TABLE, data)
+    _db.add_table(NYTIMES_COUNTIES_TABLE, data.set_index(['county_id', 'day']))
     _db.update(DROP_COUNTIES_VIEW)
     _db.update(COUNTIES_VIEW)
     _db.close()
@@ -173,15 +171,13 @@ def clean_states_data():
     # ny times table
     data = data[['state_id', 'date', 'day', 'cases', 'deaths']].copy(deep=True)
     data.reset_index(drop=True, inplace=True)
-    data['case_id'] = data.index
-    data.set_index('case_id', inplace=True)
 
     # ignored lines
     print(f'ignored lines: {start-end}/{start} = {(100*(start-end)/start):.01f}%')
 
     # table to database
     _db = DataBase()
-    _db.add_table(NYTIMES_STATES_TABLE, data)
+    _db.add_table(NYTIMES_STATES_TABLE, data.set_index('state_id'))
     _db.update(DROP_STATES_VIEW)
     _db.update(STATES_VIEW)
     _db.close()
@@ -214,12 +210,11 @@ def add_metadata():
 
     # meta data
     _db = DataBase()
-    _db.add_table(LEVELS_TABLE, pd.DataFrame({'level': LEVELS}))
-    _db.add_table(DATES_TABLE, pd.DataFrame({'date': dates}))
+    _db.add_table(LEVELS_TABLE, pd.DataFrame({'level': LEVELS}), index=False)
+    _db.add_table(DATES_TABLE, pd.DataFrame({'date': dates}), index=False)
     _db.update(DROP_OPTIONS_TABLE)
     _db.update(CREATE_OPTIONS_TABLE)
     _db.update(INSERT_USA_OPTION)
-    _db.update(INSERT_STATE_OPTIONS)
     _db.close()
 
 

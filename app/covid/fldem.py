@@ -184,8 +184,8 @@ def get_data(download=False):
         deaths = pdf.get_data(marker='line list of deaths')
 
         _db = DataBase()
-        _db.add_table(FL_CASES_TABLE, cases)
-        _db.add_table(FL_DEATHS_TABLE, deaths)
+        _db.add_table(FL_CASES_TABLE, cases, index=False)
+        _db.add_table(FL_DEATHS_TABLE, deaths, index=False)
         _db.close()
 
     else:
@@ -246,7 +246,6 @@ def clean_data(table):
     data = data[['case', 'county_id', 'state_id', 'date', 'day', 'male', 'age',
                  'traveled', 'place', 'contacted', 'resident']]
     data = data.rename(columns={'case': 'case_id'})
-    data.set_index('case_id', inplace=True)
 
     end = len(data)
 
@@ -265,11 +264,11 @@ def download_fldem():
 
     # cases
     data = clean_data(FL_CASES_TABLE)
-    _db.add_table(FLDEM_CASES_TABLE, data)
+    _db.add_table(FLDEM_CASES_TABLE, data.set_index('case_id'))
 
     # deaths
     data = clean_data(FL_DEATHS_TABLE)
-    _db.add_table(FLDEM_DEATHS_TABLE, data)
+    _db.add_table(FLDEM_DEATHS_TABLE, data.set_index('case_id'))
 
     # view
     _db.update(DROP_FLDEM_VIEW)

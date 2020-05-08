@@ -252,8 +252,8 @@ def maps_to_database():
 
     # to database
     _db = DataBase()
-    _db.add_geotable(US_MAP_TABLE, us_map)
-    _db.add_geotable(STATE_MAP_TABLE, state_map)
+    _db.add_geotable(US_MAP_TABLE, us_map.set_index('county_id'))
+    _db.add_geotable(STATE_MAP_TABLE, state_map.set_index('state_id'))
     _db.close()
 
 

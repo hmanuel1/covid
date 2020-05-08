@@ -66,27 +66,29 @@ class DataBase:
         cursor.execute(sql_query + ';')
         return cursor.fetchall()
 
-    def add_table(self, name, data):
+    def add_table(self, name, data, index=True):
         """Add a pandas table to database
 
         Arguments:
             name {String} -- table name
             data {DataFrame} -- table data
+            index {bool} -- add index to table (default: {True})
         """
-        data.to_sql(name, con=self.conn, if_exists='replace')
+        data.to_sql(name, con=self.conn, if_exists='replace', index=index)
         if TRACING:
             print(f'table: {name} added')
 
-    def add_geotable(self, name, geodata):
+    def add_geotable(self, name, geodata, index=True):
         """Add a geopandas table to database
 
         Arguments:
             name {String} -- table name
             data {GeoDataFrame} -- table data
+            index {bool} -- add index to table (default: {True})
         """
         _geo = geodata.copy(deep=True)
         _geo['geometry'] = _geo['geometry'].apply(lambda x: x.wkb_hex)
-        _geo.to_sql(name, con=self.conn, if_exists='replace')
+        _geo.to_sql(name, con=self.conn, if_exists='replace', index=index)
         if TRACING:
             print(f'geotable: {name} added')
 
@@ -128,7 +130,7 @@ class DataBase:
             {GeoDataFrame} -- table data
         """
         _geo = self.get_table(name, index_col=index_col,
-                                  parse_dates=parse_dates, columns=columns)
+                              parse_dates=parse_dates, columns=columns)
         _geo['geometry'] = _geo['geometry'].apply(lambda x: wkb.loads(x, hex=True))
         if TRACING:
             print(f'geotable: {name} returned')

@@ -38,8 +38,6 @@ from nytimes import (
 from wrangler import STATE_MAP_TABLE
 
 
-# for unit testing
-UNIT_TESTING = False
 TRACING = True
 
 
@@ -324,7 +322,8 @@ class Map:
         self.add_button()
 
 
-if UNIT_TESTING:
+if __name__[:9] == 'bokeh_app':
+    print('unit testing...')
 
     # unit test module in stand alone mode
     palette = list(reversed(Purples[8]))

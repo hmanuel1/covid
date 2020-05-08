@@ -77,25 +77,18 @@ FLDEM_VIEW_TABLE = 'fldem_view'
 DROP_FLDEM_VIEW = 'DROP VIEW IF EXISTS fldem_view'
 
 CREATE_OPTIONS_TABLE = ("""
-    CREATE TABLE
-        options (id 'TEXT', state 'TEXT')
+    CREATE TABLE options AS
+    SELECT
+        state_id AS 'id',
+        name AS 'state'
+    FROM state_map
 """)
 
 INSERT_USA_OPTION = ("""
     INSERT INTO
-        options (id, state)
+        options (rowid, id, state)
     VALUES
-        ('00', 'USA')
-""")
-
-INSERT_STATE_OPTIONS = ("""
-    INSERT INTO
-	    options
-    SELECT
-        state_map.state_id AS 'id',
-        state_map.name AS 'state'
-    FROM
-        state_map
+        (0, '00', 'USA')
 """)
 
 DROP_OPTIONS_TABLE = 'DROP TABLE IF EXISTS options'

@@ -20,8 +20,6 @@ from clf import (
 )
 
 
-# for unit testing
-UNIT_TESTING = False
 THEME = join(cwd(), 'theme.yaml')
 
 
@@ -165,7 +163,8 @@ def models_result(data, importance, palette, color, hover_color):
     return layout
 
 
-if UNIT_TESTING:
+if __name__[:9] == 'bokeh_app':
+    print('unit testing...')
 
     palette_in = list(reversed(Purples[8]))
     color_in = palette_in[2]

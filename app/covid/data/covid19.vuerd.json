@@ -2,8 +2,8 @@
   "canvas": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 38.880001068115234,
-    "scrollLeft": 72,
+    "scrollTop": 44.400001525878906,
+    "scrollLeft": 0,
     "show": {
       "tableComment": true,
       "columnComment": false,
@@ -364,13 +364,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
+              "pk": false,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -387,13 +387,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
+              "pk": false,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -500,7 +500,7 @@
           "active": false,
           "left": 449.61313668986566,
           "top": 271.20383585176836,
-          "zIndex": 1633,
+          "zIndex": 1674,
           "widthName": 76,
           "widthComment": 110
         },
@@ -670,13 +670,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
+              "pk": false,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -693,13 +693,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
+              "pk": false,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -806,7 +806,7 @@
           "active": false,
           "left": 450.13667099488515,
           "top": 63.840001651382465,
-          "zIndex": 1638,
+          "zIndex": 1678,
           "widthName": 81,
           "widthComment": 111
         },
@@ -823,13 +823,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
+              "pk": false,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -867,7 +867,7 @@
           "active": false,
           "left": 1341.735987719481,
           "top": 528.2204558481428,
-          "zIndex": 1651,
+          "zIndex": 1664,
           "widthName": 66,
           "widthComment": 259
         },
@@ -1037,13 +1037,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
+              "pk": false,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -1083,13 +1083,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": true,
+              "primaryKey": false,
               "unique": false,
               "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": true,
+              "pk": false,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -1150,7 +1150,7 @@
           "active": false,
           "left": 441.7487693466495,
           "top": 473.22074012975236,
-          "zIndex": 1653,
+          "zIndex": 1670,
           "widthName": 60,
           "widthComment": 198
         },
@@ -1454,9 +1454,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 84.59515124967707,
-          "top": 490.04574349550404,
-          "zIndex": 1646,
+          "left": 25.79514984777575,
+          "top": 372.44574069170136,
+          "zIndex": 1679,
           "widthName": 88,
           "widthComment": 165
         },
@@ -1496,13 +1496,13 @@
             "default": "",
             "option": {
               "autoIncrement": false,
-              "primaryKey": false,
+              "primaryKey": true,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
-              "pk": false,
+              "pk": true,
               "fk": false,
               "pfk": false,
               "widthName": 60,
@@ -1609,7 +1609,7 @@
           "active": false,
           "left": 1341.3219178164427,
           "top": 121.27360944461712,
-          "zIndex": 1644,
+          "zIndex": 1654,
           "widthName": 103,
           "widthComment": 207
         },

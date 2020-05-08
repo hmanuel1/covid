@@ -143,14 +143,14 @@ def predict():
     result = run_arima(data, states, 'cases')
 
     _db = DataBase()
-    _db.add_table(ARIMA_CASES_TABLE, data=result)
+    _db.add_table(ARIMA_CASES_TABLE, data=result, index=False)
     _db.close()
 
     # predict deaths
     result = run_arima(data, states, 'deaths')
 
     _db = DataBase()
-    _db.add_table(ARIMA_DEATHS_TABLE, data=result)
+    _db.add_table(ARIMA_DEATHS_TABLE, data=result, index=False)
     _db.close()
 
 
