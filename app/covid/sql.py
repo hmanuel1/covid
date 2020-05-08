@@ -2,19 +2,6 @@
     Queries for Database
 """
 
-COUNTIES = ("""
-    SELECT
-        nytimes_counties.date,
-        us_map.name || ', ' || state_map.abbr AS 'county',
-        nytimes_counties.cases,
-        nytimes_counties.deaths,
-        nytimes_counties.case_level AS level
-    FROM
-            nytimes_counties
-    INNER JOIN us_map ON us_map.county_id = nytimes_counties.county_id
-    INNER JOIN state_map ON state_map.state_id = nytimes_counties.state_id
-""")
-
 COUNTIES_VIEW = ("""
     CREATE VIEW
             counties_view AS
@@ -34,17 +21,6 @@ COUNTIES_VIEW_TABLE = 'counties_view'
 
 DROP_COUNTIES_VIEW = 'DROP VIEW IF EXISTS counties_view'
 
-STATES = ("""
-    SELECT
-        nytimes_states.date,
-        state_map.name AS 'state',
-        nytimes_states.cases,
-        nytimes_states.deaths
-    FROM
-            nytimes_states
-    INNER JOIN state_map ON state_map.state_id = nytimes_states.state_id
-""")
-
 STATES_VIEW = ("""
     CREATE VIEW
             states_view AS
@@ -62,28 +38,6 @@ STATES_VIEW_TABLE = 'states_view'
 
 DROP_STATES_VIEW = 'DROP VIEW IF EXISTS states_view'
 
-FLDEM = ("""
-    SELECT
-        fldem_cases.date,
-        fldem_cases.day,
-        fldem_cases.male AS 'gender',
-        fldem_cases.age,
-        us_map.aland AS 'land_area',
-        us_map.awater AS 'water_area',
-        us_map.pop AS 'population',
-        ROUND(us_map.pop / us_map.aland, 0) AS 'density',
-        ifnull(fldem_deaths.case_id/fldem_deaths.case_id, 0) AS 'died'
-    FROM
-        fldem_cases
-    INNER JOIN us_map ON us_map.county_id = fldem_cases.county_id
-    LEFT JOIN fldem_deaths ON
-        fldem_deaths.age = fldem_cases.age AND
-        fldem_deaths.date = fldem_cases.date AND
-        fldem_deaths.male = fldem_cases.MALE AND
-        fldem_deaths.resident = fldem_cases.resident AND
-        fldem_deaths.traveled = fldem_cases.traveled
-""")
-
 FLDEM_VIEW = ("""
     CREATE VIEW
         fldem_view AS
@@ -96,16 +50,18 @@ FLDEM_VIEW = ("""
         us_map.awater AS 'water_area',
         us_map.pop AS 'population',
         ROUND(us_map.pop / us_map.aland, 0) AS 'density',
-        ifnull(fldem_deaths.case_id / fldem_deaths.case_id, 0) AS 'died'
+        IFNULL(fldem_deaths.case_id/fldem_deaths.case_id, 0) AS 'died'
     FROM
         fldem_cases
     INNER JOIN us_map ON us_map.county_id = fldem_cases.county_id
     LEFT JOIN fldem_deaths ON
+        fldem_deaths.county_id = fldem_cases.county_id AND
         fldem_deaths.age = fldem_cases.age AND
         fldem_deaths.date = fldem_cases.date AND
-        fldem_deaths.male = fldem_cases.MALE AND
+        fldem_deaths.male = fldem_cases.male AND
         fldem_deaths.resident = fldem_cases.resident AND
-        fldem_deaths.traveled = fldem_cases.traveled
+        fldem_deaths.traveled = fldem_cases.traveled AND
+        fldem_deaths.place = fldem_cases.place
 """)
 
 FLDEM_VIEW_TABLE = 'fldem_view'
@@ -121,7 +77,7 @@ INSERT_USA_OPTION = ("""
     INSERT INTO
         options (id, state)
     VALUES
-        ('a', 'USA')
+        ('00', 'USA')
 """)
 
 INSERT_STATE_OPTIONS = ("""
@@ -223,3 +179,7 @@ US_MAP_PIVOT_VIEW = ("""
 US_MAP_PIVOT_VIEW_TABLE = 'us_map_pivot_view'
 
 DROP_US_MAP_PIVOT_VIEW = 'DROP VIEW IF EXISTS us_map_pivot_view'
+
+VACUUM = 'VACUUM'
+
+REINDEX = 'REINDEX'

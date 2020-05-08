@@ -229,7 +229,7 @@ def feature_importance(X_train, y_train, col_names, n_estimators):
     data.sort_values('importance', ascending=False, inplace=True)
     return data
 
-# %%
+
 def classify():
     """Run classification models:
         1) Random Trees and Logistic Regression

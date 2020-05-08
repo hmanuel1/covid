@@ -32,7 +32,11 @@ from arima import (
     ARIMA_CASES_TABLE,
     ARIMA_DEATHS_TABLE
 )
-from sql import FLDEM_VIEW_TABLE
+from sql import (
+    FLDEM_VIEW_TABLE,
+    VACUUM,
+    REINDEX
+)
 
 
 
@@ -51,6 +55,11 @@ def refresh():
     print('done.\npredicting with nytimes data...', end='')
     predict()
     print('done.')
+
+    _db = DataBase()
+    _db.update(VACUUM)
+    _db.update(REINDEX)
+    _db.close()
 
 
 def get_data_sets():

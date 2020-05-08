@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 import pmdarima as pm
 
 from database import DataBase
-from nytimes import US_STATES_TABLE
+from sql import STATES_VIEW_TABLE
 
 
 # output - database
@@ -133,7 +133,7 @@ def predict():
     """
     _db = DataBase()
     cols = ['date', 'state', 'cases', 'deaths']
-    data = _db.get_table(US_STATES_TABLE, columns=cols, parse_dates=['date'])
+    data = _db.get_table(STATES_VIEW_TABLE, columns=cols, parse_dates=['date'])
     _db.close()
 
     # select states

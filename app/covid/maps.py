@@ -47,6 +47,7 @@ class Map:
     """
         Map Layout Class
     """
+
     def __init__(self, **kwargs):
         self.palette = kwargs.pop('palette')
 
@@ -76,7 +77,7 @@ class Map:
         self.plot = figure(match_aspect=True, toolbar_location='right',
                            tools="box_zoom, wheel_zoom, pan, reset, save",
                            **kwargs)
-         # hide axes
+        # hide axes
         self.plot.axis.visible = False
 
         # init class variables
@@ -93,11 +94,13 @@ class Map:
         # build county colors and line parameters
         _color_mapper = LinearColorMapper(palette=self.palette, low=0, high=9)
         _color = dict(field='m', transform=_color_mapper)
-        _params = dict(line_color='darkgrey', fill_color=_color, line_width=0.5)
+        _params = dict(line_color='darkgrey',
+                       fill_color=_color, line_width=0.5)
         _params['name'] = 'counties'
 
         # add counties to plot
-        self.plot.patches(xs='xs', ys='ys', source=self.srcs['counties'], **_params)
+        self.plot.patches(xs='xs', ys='ys',
+                          source=self.srcs['counties'], **_params)
         if TRACING:
             print('patches added')
 
@@ -108,7 +111,8 @@ class Map:
         _params = dict(line_color='darkgrey', line_width=0.5, name='states')
 
         # add state to plot
-        self.plot.multi_line(xs='xs', ys='ys', source=self.srcs['states'], **_params)
+        self.plot.multi_line(
+            xs='xs', ys='ys', source=self.srcs['states'], **_params)
         if TRACING:
             print('state lines added')
 
@@ -144,7 +148,7 @@ class Map:
         """
         _levels = self.meta['levels']
 
-         # names for custom legend
+        # names for custom legend
         _names = []
         for _level, _lead in zip(_levels, _levels[1:] + [np.nan]):
             if _level == 0:
@@ -189,13 +193,14 @@ class Map:
 
         _args = dict(counties_src=self.srcs['counties'], states_src=self.srcs['states'],
                      counties_glyph=self.plot.select('counties')[0],
-                     states_glyph=self.plot.select('states')[0], filter=_filter,
+                     states_glyph=self.plot.select(
+                         'states')[0], filter=_filter,
                      counties_view_on=_counties_on, states_view_on=_states_on,
                      counties_view_off=_counties_off, states_view_off=_states_off)
 
         _callback = CustomJS(args=_args,
                              code="""
-            if (cb_obj.value != 'a'){
+            if (cb_obj.value != '00'){
                 console.log(cb_obj.value);
                 filter.group = cb_obj.value;
                 counties_glyph.view = counties_view_on;

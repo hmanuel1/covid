@@ -149,7 +149,7 @@ def clean_states_data():
     """
     # covid19 data and metadata
     _db = DataBase()
-    data = _db.get_table(US_COUNTIES_TABLE, parse_dates=['date'])
+    data = _db.get_table(US_STATES_TABLE, parse_dates=['date'])
     states = _db.get_geotable(STATE_MAP_TABLE)
     _db.close()
 

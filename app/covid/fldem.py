@@ -150,7 +150,7 @@ class PdfScraper:
 
         # create dataframe with extracted data
         _rows = [_row for _row in _rows if len(_row) == 9]
-        _cols = ['case', 'county', 'age', 'gender', 'traveled', 'where',
+        _cols = ['case', 'county', 'age', 'gender', 'traveled', 'place',
                  'contacted', 'resident', 'date']
 
         # enter data in data frame and format
@@ -232,7 +232,7 @@ def clean_data(table):
     # traveled related and contact with known covid19 patient
     data['traveled'] = data['traveled'].map({'Yes': 1, 'No': 0})
     data['contacted'] = data['contacted'].map({'Yes': 1, 'No': 0})
-    data['where'] = [x if str(x) == 'nan' else str(x).upper() for x in data['where']]
+    data['place'] = [x if str(x) == 'nan' else str(x).upper() for x in data['place']]
 
     # florida residency
     resident = {'FL resident': 1, 'Non-Fl resident': 0}
@@ -244,7 +244,7 @@ def clean_data(table):
 
     # select columns and rename case to case_id
     data = data[['case', 'county_id', 'state_id', 'date', 'day', 'male', 'age',
-                 'traveled', 'where', 'contacted', 'resident']]
+                 'traveled', 'place', 'contacted', 'resident']]
     data = data.rename(columns={'case': 'case_id'})
     data.set_index('case_id', inplace=True)
 
