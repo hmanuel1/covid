@@ -51,7 +51,7 @@ class Map:
 
     def __init__(self, **kwargs):
         if TRACING:
-            self.ms = ElapsedMilliseconds()
+            self.time = ElapsedMilliseconds()
 
         self.palette = kwargs.pop('palette')
 
@@ -90,7 +90,7 @@ class Map:
                          states=GeoJSONDataSource(geojson=self.states.to_json()))
 
         if TRACING:
-            print(f'map init in {self.ms.elapsed()} ms')
+            print(f'map init in {self.time.elapsed()} ms')
 
         # build map
         self.plot_map()
@@ -109,7 +109,7 @@ class Map:
         self.plot.patches(xs='xs', ys='ys',
                           source=self.srcs['counties'], **_params)
         if TRACING:
-            print(f'patches added in {self.ms.elapsed()} ms')
+            print(f'patches added in {self.time.elapsed()} ms')
 
     def __add_states(self):
         """Add state lines to figure
@@ -121,7 +121,7 @@ class Map:
         self.plot.multi_line(
             xs='xs', ys='ys', source=self.srcs['states'], **_params)
         if TRACING:
-            print(f'state lines added {self.ms.elapsed()} ms')
+            print(f'state lines added {self.time.elapsed()} ms')
 
     def __add_label(self):
         """ Add date label for animation
@@ -135,7 +135,7 @@ class Map:
 
         self.plot.add_layout(self.controls['label'])
         if TRACING:
-           print(f'label added in {self.ms.elapsed()} ms')
+            print(f'label added in {self.time.elapsed()} ms')
 
     def __add_hover(self):
         """Add hove tool to figure
@@ -148,7 +148,7 @@ class Map:
 
         self.plot.add_tools(_hover)
         if TRACING:
-            print(f'hover tool added in {self.ms.elapsed()} ms')
+            print(f'hover tool added in {self.time.elapsed()} ms')
 
     def __add_legend(self):
         """Add legend to plot
@@ -182,7 +182,7 @@ class Map:
         self.plot.x_range.only_visible = True
         self.plot.y_range.only_visible = True
         if TRACING:
-            print(f'legend added added in {self.ms.elapsed()} ms')
+            print(f'legend added added in {self.time.elapsed()} ms')
 
     def add_select(self):
         """Build select control
@@ -224,7 +224,7 @@ class Map:
 
         self.controls['select'].js_on_change('value', _callback)
         if TRACING:
-            print(f'select control added in {self.ms.elapsed()} ms')
+            print(f'select control added in {self.time.elapsed()} ms')
 
     def add_slider(self):
         """Build slider
@@ -264,7 +264,7 @@ class Map:
 
         self.controls['slider'].js_on_change('value', _callback)
         if TRACING:
-            print(f'slider added in {self.ms.elapsed()} ms')
+            print(f'slider added in {self.time.elapsed()} ms')
 
     def add_button(self):
         """Build animation button
@@ -316,7 +316,7 @@ class Map:
 
         self.controls['button'].js_on_click(_callback)
         if TRACING:
-            print(f'button added in {self.ms.elapsed()} ms')
+            print(f'button added in {self.time.elapsed()} ms')
 
     def plot_map(self):
         """ Build map elements
