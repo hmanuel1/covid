@@ -46,9 +46,9 @@ def roc(data, palette, plot_width=400, plot_height=400):
     plot = figure(**figure_settings)
 
     lines = dict()
-    for category, color in zip(data['abbrev'].unique(), palette):
+    for category, color in zip(data['model'].unique(), palette):
 
-        source = ColumnDataSource(data[data['abbrev'] == category])
+        source = ColumnDataSource(data[data['model'] == category])
 
         line_settings = dict(line_color=color, line_width=2, line_dash='solid',
                              muted_color=color, muted_alpha=0.2)
@@ -57,18 +57,17 @@ def roc(data, palette, plot_width=400, plot_height=400):
             line_settings = dict(line_color='black', line_width=2, line_dash='dashed',
                                  muted_color='black', muted_alpha=0.2)
 
-        lines[category] = plot.line(x='False_Positive_Rate', y='True_Positive_Rate',
+        lines[category] = plot.line(x='fpr', y='tpr',
                                     source=source, **line_settings)
 
         plot.add_tools(HoverTool(renderers=[lines[category]],
-                                 tooltips=[('Abbreviation', '@abbrev'),
-                                           ('False Positive Rate',
-                                            '@False_Positive_Rate'),
-                                           ('True Positive Rate',
-                                            '@True_Positive_Rate'),
+                                 tooltips=[('Model', '@model'),
+                                           ('False Pos Rate',
+                                            '@fpr'),
+                                           ('True Pos Rate',
+                                            '@tpr'),
                                            ('AUC', '@auc{0.0000}'),
-                                           ('LogLoss', '@logloss{0.0000}'),
-                                           ('Model', '@model')]))
+                                           ('LogLoss', '@logloss{0.0000}')]))
 
     legend = Legend(items=[(x, [lines[x]])
                            for x in lines], location='bottom_right')
@@ -96,7 +95,7 @@ def logloss(data, color, hover_color, plot_width=450, plot_height=250):
     Returns:
         Bokeh Figure Object -- plot instance
     """
-    data.drop_duplicates(['abbrev'], inplace=True)
+    data.drop_duplicates(['model'], inplace=True)
     data.sort_values('logloss', inplace=True)
 
     kwargs = dict(title='LogLoss for All Fitted Models',
@@ -107,7 +106,7 @@ def logloss(data, color, hover_color, plot_width=450, plot_height=250):
                   fill_color=color, hover_fill_color=hover_color,
                   yaxis_formatter='0.0000')
 
-    plot = vbar(x=data['abbrev'], y=data['logloss'], xlabel='Model',
+    plot = vbar(x=data['model'], y=data['logloss'], xlabel='Model',
                 ylabel='LogLoss', **kwargs)
     return plot
 

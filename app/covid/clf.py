@@ -61,11 +61,11 @@ def rt_log_reg(X_train, X_test, y_train, y_test, n_estimators):
     y_pred = pipeline.predict_proba(X_test)[:, 1]
 
     # model metrics
-    roc_fpr, roc_tpr, _ = roc_curve(y_test, y_pred)
-    roc_auc = roc_auc_score(y_test, y_pred)
+    fpr, tpr, _ = roc_curve(y_test, y_pred)
+    auc = roc_auc_score(y_test, y_pred)
     logloss = metrics.log_loss(y_test, y_pred)
 
-    return dict(x=roc_fpr, y=roc_tpr, auc=roc_auc, logloss=logloss)
+    return dict(fpr=fpr, tpr=tpr, auc=auc, logloss=logloss)
 
 
 def rf_log_reg(X_train, X_test, y_train, y_test, n_estimators):
@@ -95,11 +95,11 @@ def rf_log_reg(X_train, X_test, y_train, y_test, n_estimators):
     y_pred = clf_lm.predict_proba(rf_enc.transform(clf_rf.apply(X_test)))[:, 1]
 
     # model metrics
-    roc_fpr, roc_tpr, _ = roc_curve(y_test, y_pred)
-    roc_auc = roc_auc_score(y_test, y_pred)
+    fpr, tpr, _ = roc_curve(y_test, y_pred)
+    auc = roc_auc_score(y_test, y_pred)
     logloss = metrics.log_loss(y_test, y_pred)
 
-    return dict(x=roc_fpr, y=roc_tpr, auc=roc_auc, logloss=logloss)
+    return dict(fpr=fpr, tpr=tpr, auc=auc, logloss=logloss)
 
 
 def gbt_log_reg(X_train, X_test, y_train, y_test, n_estimators):
@@ -129,11 +129,11 @@ def gbt_log_reg(X_train, X_test, y_train, y_test, n_estimators):
     y_pred = clf_lm.predict_proba(grd_enc.transform(clf_grd.apply(X_test)[:, :, 0]))[:, 1]
 
     # model metrics
-    roc_fpr, roc_tpr, _ = roc_curve(y_test, y_pred)
-    roc_auc = roc_auc_score(y_test, y_pred)
+    fpr, tpr, _ = roc_curve(y_test, y_pred)
+    auc = roc_auc_score(y_test, y_pred)
     logloss = metrics.log_loss(y_test, y_pred)
 
-    return dict(x=roc_fpr, y=roc_tpr, auc=roc_auc, logloss=logloss)
+    return dict(fpr=fpr, tpr=tpr, auc=auc, logloss=logloss)
 
 
 def grd_boosting_trees(X_train, X_test, y_train, y_test, n_estimators):
@@ -162,11 +162,11 @@ def grd_boosting_trees(X_train, X_test, y_train, y_test, n_estimators):
     y_pred = clf_grd.predict_proba(X_test)[:, 1]
 
     # model metrics
-    roc_fpr, roc_tpr, _ = roc_curve(y_test, y_pred)
-    roc_auc = roc_auc_score(y_test, y_pred)
+    fpr, tpr, _ = roc_curve(y_test, y_pred)
+    auc = roc_auc_score(y_test, y_pred)
     logloss = metrics.log_loss(y_test, y_pred)
 
-    return dict(x=roc_fpr, y=roc_tpr, auc=roc_auc, logloss=logloss)
+    return dict(fpr=fpr, tpr=tpr, auc=auc, logloss=logloss)
 
 
 def random_forest(X_train, X_test, y_train, y_test, n_estimators):
@@ -195,11 +195,11 @@ def random_forest(X_train, X_test, y_train, y_test, n_estimators):
     y_pred = clf_rf.predict_proba(X_test)[:, 1]
 
     # model metrics
-    roc_fpr, roc_tpr, _ = roc_curve(y_test, y_pred)
-    roc_auc = roc_auc_score(y_test, y_pred)
+    fpr, tpr, _ = roc_curve(y_test, y_pred)
+    auc = roc_auc_score(y_test, y_pred)
     logloss = metrics.log_loss(y_test, y_pred)
 
-    return dict(x=roc_fpr, y=roc_tpr, auc=roc_auc, logloss=logloss)
+    return dict(fpr=fpr, tpr=tpr, auc=auc, logloss=logloss)
 
 
 def feature_importance(X_train, y_train, col_names, n_estimators):
@@ -238,12 +238,8 @@ def classify():
         4) Gradient Boosting Trees and Logistic Regression
         5) Random Forest
 
-    Input from databae:
-        FDEM_VIEW_NAME {database table} -- fldem data
-
-    Output to file:
-        MODELS_ROC_CSV {CSV file} -- models' ROC, LogLoss and AUC
-        IMPORTANCE_CSV {CSV file} -- random forest feature importances
+    Input from database:
+        FDEM_VIEW_TABLE {database table} -- fldem cleaned data
 
     Output to database:
         MODELS_ROC_TABLE {database table} -- models' ROC, LogLoss and AUC
@@ -269,24 +265,23 @@ def classify():
                                                         test_size=0.5)
     # classification models
     models = dict(
-        rt_lr=dict(model='Random Trees and Logistic Regression', abbrev='RT + LR',
+        rt_lr=dict(model='RT + LR',
                    **rt_log_reg(X_train, X_test, y_train, y_test, n_estimators)),
 
-        rf_lr=dict(model='Random Forest and Logistic Regression', abbrev='RF + LR',
+        rf_lr=dict(model='RF + LR',
                    **rf_log_reg(X_train, X_test, y_train, y_test, n_estimators)),
 
-        rforest=dict(model='Random Forest', abbrev='RF',
+        rforest=dict(model='RF',
                      **random_forest(X_train, X_test, y_train, y_test, n_estimators)),
 
-        gbt=dict(model='Gradient Boosting Trees', abbrev='GBT',
+        gbt=dict(model='GBT',
                  **grd_boosting_trees(X_train, X_test, y_train, y_test, n_estimators)),
 
-        gbt_lr=dict(model='Gradient Boosting Trees and Linear Regression',
-                    abbrev='GBT + LR',
+        gbt_lr=dict(model='GBT + LR',
                     **gbt_log_reg(X_train, X_test, y_train, y_test, n_estimators)),
 
-        rand=dict(model='Random', abbrev='Random', logloss=-1 * np.log10(0.5),
-                  auc=0.5, x=np.linspace(0, 1, 100), y=np.linspace(0, 1, 100)))
+        rand=dict(model='Random', logloss=-1 * np.log10(0.5), auc=0.5,
+                  fpr=np.linspace(0, 1, 100), tpr=np.linspace(0, 1, 100)))
 
     # conbine result of all models
     data = pd.concat([pd.DataFrame(models['rt_lr']), pd.DataFrame(models['rf_lr']),
@@ -294,8 +289,7 @@ def classify():
                       pd.DataFrame(models['gbt_lr']), pd.DataFrame(models['rand'])],
                      axis=0, ignore_index=True)
 
-    data = data.rename(columns={'x': 'False_Positive_Rate',
-                                'y': 'True_Positive_Rate'})
+    data = data.round(4)
 
     # output to database
     _db = DataBase()
@@ -320,9 +314,9 @@ def utest_models():
 
     plt.figure(1)
 
-    for cat in data['abbrev'].unique():
-        xdata = data[data['abbrev'] == cat]['False_Positive_Rate']
-        ydata = data[data['abbrev'] == cat]['True_Positive_Rate']
+    for cat in data['model'].unique():
+        xdata = data[data['model'] == cat]['fpr']
+        ydata = data[data['model'] == cat]['tpr']
         if cat == 'Random':
             plt.plot(xdata, ydata, color='black', linestyle='--', label=cat)
         else:

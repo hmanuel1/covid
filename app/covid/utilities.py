@@ -3,6 +3,7 @@
 """
 
 import os
+import time
 
 import numpy as np
 from bokeh.plotting import figure
@@ -10,6 +11,36 @@ from bokeh.models import (
     HoverTool,
     NumeralTickFormatter
 )
+
+class ElapsedMilliseconds:
+    """Time execution time
+
+    Usage example:
+       _ms = ElapsedMilliseconds()
+       print(_ms.elapsed(), 'ms')
+       ...lenthy process...
+       print(_ms.elapsed(), 'ms')
+    """
+    def __init__(self):
+        self.last_elapsed = 0
+        self.last_local = int(round(time.time() * 1000))
+
+    def elapsed(self):
+        """Returns elapse time in milliseconds
+
+        Returns:
+            int -- elapsed time in milliseconds since last call
+                   to this method
+        """
+        self.last_elapsed = int(round(time.time() * 1000)) - self.last_local
+        self.last_local = int(round(time.time() * 1000))
+        return self.last_elapsed
+
+    def restart(self):
+        """Restart time reference
+        """
+        self.last_elapsed = 0
+        self.last_local = int(round(time.time() * 1000))
 
 
 def cwd():

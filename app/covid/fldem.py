@@ -156,11 +156,6 @@ class PdfScraper:
         # enter data in data frame and format
         self.data = pd.DataFrame(_rows, columns=_cols)
         self.data['age'] = pd.to_numeric(self.data['age'], errors='coerce')
-        self.data['datetime'] = pd.to_datetime(self.data['date'], format='%m/%d/%y')
-
-        # sort by datetime
-        self.data.sort_values('datetime', inplace=True)
-        self.data.reset_index(drop=True, inplace=True)
 
         return self.data
 

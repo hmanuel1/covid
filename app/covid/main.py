@@ -39,7 +39,6 @@ from sql import (
 )
 
 
-
 def refresh():
     """
         Refresh covid-19 data used by this app

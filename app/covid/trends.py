@@ -28,7 +28,7 @@ from arima import (
 )
 
 
-SIDE = 'client'
+SIDE = 'server'
 
 
 def cases_trends(data, y_var, palette=Purples[3], **kwargs):
@@ -61,44 +61,50 @@ def cases_trends(data, y_var, palette=Purples[3], **kwargs):
     lupper = dict()
     llower = dict()
     vareaf = dict()
-    for cat in sorted(list(data['state'].unique())):
-        source[cat] = ColumnDataSource(data[data['state'] == cat])
+
+    categories = sorted(list(data['state'].unique()))
+    data.set_index('state', inplace=True)
+    for cat in categories:
+
+        source[cat] = ColumnDataSource(data.loc[cat, :])
 
         ly_var[cat] = plot.line(x='date', y=y_var, source=source[cat],
-                                line_color=palette[0], visible=False)
+                                name=cat, line_color=palette[0], visible=False)
 
         plot.add_tools(HoverTool(renderers=[ly_var[cat]], toggleable=False,
-                                 tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
+                                 tooltips=[('State', '$name'), ('Date', '@date{%m/%d/%Y}'),
                                            (y_var.title(), f"@{y_var}" + "{0,0}")],
                                  formatters={'@date': 'datetime'}))
 
         lpredi[cat] = plot.line(x='date', y='predict', source=source[cat],
-                                line_color=palette[0], line_dash='dashed', visible=False)
+                                name=cat, line_color=palette[0], line_dash='dashed', visible=False)
 
         plot.add_tools(HoverTool(renderers=[lpredi[cat]], toggleable=False,
-                                 tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
+                                 tooltips=[('State', '$name'), ('Date', '@date{%m/%d/%Y}'),
                                            (f"Predicted {y_var.title()}", '@predict{0,0}')],
                                  formatters={'@date': 'datetime'}))
 
         lupper[cat] = plot.line(x='date', y='upper', source=source[cat],
-                                line_color=palette[1], visible=False)
+                                name=cat, line_color=palette[1], visible=False)
 
         plot.add_tools(HoverTool(renderers=[lupper[cat]], toggleable=False,
-                                 tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
+                                 tooltips=[('State', '$name'), ('Date', '@date{%m/%d/%Y}'),
                                            ('Upper 95% Limit', '@upper{0,0}')],
                                  formatters={'@date': 'datetime'}))
 
         llower[cat] = plot.line(x='date', y='lower', source=source[cat],
-                                line_color=palette[1], visible=False)
+                                name=cat, line_color=palette[1], visible=False)
 
         plot.add_tools(HoverTool(renderers=[llower[cat]], toggleable=False,
-                                 tooltips=[('State', '@state'), ('Date', '@date{%m/%d/%Y}'),
+                                 tooltips=[('State', '$name'), ('Date', '@date{%m/%d/%Y}'),
                                            ('Lower 95% Limit', '@lower{0,0}')],
                                  formatters={'@date': 'datetime'}))
 
         vareaf[cat] = plot.varea(x='date', y1='lower', y2='upper',
                                  fill_color=palette[2], source=source[cat],
                                  fill_alpha=0.5, visible=False)
+
+    data.reset_index(inplace=True)
 
     # legend
     plot.add_layout(Legend(items=[('Actual', [ly_var[data['state'].iat[0]]]),
@@ -113,7 +119,7 @@ def cases_trends(data, y_var, palette=Purples[3], **kwargs):
 
     return plot, dict(ly_var=ly_var, lpredi=lpredi, lupper=lupper, llower=llower,
                       vareaf=vareaf, sources=source,
-                      cats=sorted(list(data['state'].unique())))
+                      cats=categories)
 
 
 def multi_select_client(value, glyphs):
