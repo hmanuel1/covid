@@ -1,10 +1,8 @@
 """
     Visualize trends of COVID-19 cases and deaths
 """
-
+# %%
 from os.path import join
-
-import pandas as pd
 
 from bokeh.io import curdoc
 from bokeh.palettes import Purples
@@ -13,301 +11,333 @@ from bokeh.plotting import figure
 from bokeh.themes import Theme
 from bokeh.models import (
     ColumnDataSource,
-    CustomJS,
     MultiSelect,
     NumeralTickFormatter,
     HoverTool,
-    Legend
+    Legend,
+    Title
 )
 
-from utilities import cwd
 from database import DataBase
+from utilities import (
+    cwd,
+    ElapsedMilliseconds
+)
 from arima import (
     ARIMA_CASES_TABLE,
     ARIMA_DEATHS_TABLE
 )
 
 
-SIDE = 'server'
+TRACING = True
 
-
-def cases_trends(data, y_var, palette=Purples[3], **kwargs):
-    """Plot covid19 case trend
-
-    Arguments:
-        data {DataFrame} -- data with covid case trend
-        y_var {String} -- predicted variable column name
-
-    Keyword Arguments:
-        palette {list} -- rgb color palette (default: {Purples[3]})
-
-    Returns:
-        Bokeh Figure Object -- plot instance
-        dict -- instances of plot elements (e.g. lines, datasources) for animation
+class LinePlot:
+    """Line plot for covid19 cases and deaths by state
     """
-    figure_settings = dict(title=None, plot_width=600, plot_height=600,
-                           x_axis_type='datetime', tools='save, box_zoom, reset')
+    def __init__(self, table):
+        # data
+        _db = DataBase()
+        self.data = _db.get_table(table, parse_dates=['date'])
+        _db.close()
 
-    for key, value in kwargs.items():
-        if key in figure_settings:
-            figure_settings[key] = value
+        # options
+        _ids = self.data['state_id'].unique()
+        _states = self.data['state'].unique()
+        self.options = list(zip(_ids, _states))
 
-    # plot
-    plot = figure(**figure_settings)
+        self.data.set_index('state_id', inplace=True)
 
-    source = dict()
-    ly_var = dict()
-    lpredi = dict()
-    lupper = dict()
-    llower = dict()
-    vareaf = dict()
+        self.plot = None
 
-    categories = sorted(list(data['state'].unique()))
-    data.set_index('state', inplace=True)
-    for cat in categories:
+        # glyphs
+        self.actual = dict()
+        self.predict = dict()
+        self.lower = dict()
+        self.upper = dict()
+        self.area = dict()
 
-        source[cat] = ColumnDataSource(data.loc[cat, :])
+    def _add_figure(self):
+        _args = dict(x_axis_type='datetime', tools='save')
+        self.plot = figure(**_args)
+        self.plot.xaxis.ticker.desired_num_ticks = 10
+        self.plot.yaxis.formatter = NumeralTickFormatter(format='0,0')
+        self.plot.xaxis.axis_label = 'x'
+        self.plot.yaxis.axis_label = 'y'
 
-        ly_var[cat] = plot.line(x='date', y=y_var, source=source[cat],
-                                name=cat, line_color=palette[0], visible=False)
+    def _add_lines(self):
+        _args = dict(x='x', y='y', source=None, name=None, visible=False)
+        for _id, _state, in self.options:
+            _args['name'] = _state
 
-        plot.add_tools(HoverTool(renderers=[ly_var[cat]], toggleable=False,
-                                 tooltips=[('State', '$name'), ('Date', '@date{%m/%d/%Y}'),
-                                           (y_var.title(), f"@{y_var}" + "{0,0}")],
-                                 formatters={'@date': 'datetime'}))
+            _args['source'] = ColumnDataSource(data=dict(x=[], y=[]))
+            self.actual[_id] = self.plot.line(**_args)
 
-        lpredi[cat] = plot.line(x='date', y='predict', source=source[cat],
-                                name=cat, line_color=palette[0], line_dash='dashed', visible=False)
+            _args['source'] = ColumnDataSource(data=dict(x=[], y=[]))
+            self.predict[_id] = self.plot.line(**_args)
 
-        plot.add_tools(HoverTool(renderers=[lpredi[cat]], toggleable=False,
-                                 tooltips=[('State', '$name'), ('Date', '@date{%m/%d/%Y}'),
-                                           (f"Predicted {y_var.title()}", '@predict{0,0}')],
-                                 formatters={'@date': 'datetime'}))
+            _args['source'] = ColumnDataSource(data=dict(x=[], y=[]))
+            self.lower[_id] = self.plot.line(**_args)
 
-        lupper[cat] = plot.line(x='date', y='upper', source=source[cat],
-                                name=cat, line_color=palette[1], visible=False)
+            _args['source'] = ColumnDataSource(data=dict(x=[], y=[]))
+            self.upper[_id] = self.plot.line(**_args)
 
-        plot.add_tools(HoverTool(renderers=[lupper[cat]], toggleable=False,
-                                 tooltips=[('State', '$name'), ('Date', '@date{%m/%d/%Y}'),
-                                           ('Upper 95% Limit', '@upper{0,0}')],
-                                 formatters={'@date': 'datetime'}))
+    def _add_hover(self):
+        for _id, _state, in self.options:
+            _renderers = [self.actual[_id], self.predict[_id]]
+            _renderers += [self.upper[_id], self.lower[_id]]
+            _hover = HoverTool(renderers=_renderers,
+                               toggleable=False,
+                               tooltips=[('State', '$name'),
+                                         ('Date', '$x{%m/%d/%Y}'),
+                                         ('Count', '$y{0,0}')],
+                               formatters={'$x': 'datetime'})
+            self.plot.add_tools(_hover)
 
-        llower[cat] = plot.line(x='date', y='lower', source=source[cat],
-                                name=cat, line_color=palette[1], visible=False)
+    def _add_area(self):
+        for _id, _state, in self.options:
+            _source = ColumnDataSource(data=dict(x=[], y1=[], y2=[]))
+            _area_args = dict(x='x', y1='y1', y2='y2', source=_source,
+                              name=_state, visible=False)
+            self.area[_id] = self.plot.varea(**_area_args)
 
-        plot.add_tools(HoverTool(renderers=[llower[cat]], toggleable=False,
-                                 tooltips=[('State', '$name'), ('Date', '@date{%m/%d/%Y}'),
-                                           ('Lower 95% Limit', '@lower{0,0}')],
-                                 formatters={'@date': 'datetime'}))
+    def _add_legend(self):
+        _actual_renderer = self.actual[self.options[0][0]]
+        _predict_render = self.predict[self.options[0][0]]
+        _area_renderer = self.area[self.options[0][0]]
 
-        vareaf[cat] = plot.varea(x='date', y1='lower', y2='upper',
-                                 fill_color=palette[2], source=source[cat],
-                                 fill_alpha=0.5, visible=False)
+        _legend = Legend(items=[('Actual', [_actual_renderer]),
+                                ('Predicted', [_predict_render]),
+                                ('95% Conf.', [_area_renderer])],
+                         location='top_left')
 
-    data.reset_index(inplace=True)
+        self.plot.add_layout(_legend)
 
-    # legend
-    plot.add_layout(Legend(items=[('Actual', [ly_var[data['state'].iat[0]]]),
-                                  ('Predicted', [lpredi[data['state'].iat[0]]]),
-                                  ('95% Confidence', [vareaf[data['state'].iat[0]]])],
-                           location='top_left'))
+    def color_actual(self, line_color='navy', line_dash='solid'):
+        """Color actual line and change line dash style in all states
 
-    plot.xaxis.ticker.desired_num_ticks = 10
-    plot.yaxis.axis_label = y_var.title()
-    plot.xaxis.axis_label = 'Date'
-    plot.yaxis.formatter = NumeralTickFormatter(format='0,0')
-
-    return plot, dict(ly_var=ly_var, lpredi=lpredi, lupper=lupper, llower=llower,
-                      vareaf=vareaf, sources=source,
-                      cats=categories)
-
-
-def multi_select_client(value, glyphs):
-    """Multi-select control for state selection with client browser animation
-
-    Arguments:
-        value {list} -- starting selection options
-        glyphs {list} -- bokeh glyph elements
-
-    Returns:
-        Bokeh Multi-select Object -- multi-select object instance
-    """
-    mselect = MultiSelect(title='States:', value=value,
-                          options=glyphs[0]['cats'])
-
-    callbacks = []
-    for i, glyph in enumerate(glyphs):
-        callbacks.append(CustomJS(args=dict(source=glyph['sources'],
-                                            y_var=glyph['ly_var'], predi=glyph['lpredi'],
-                                            upper=glyph['lupper'], lower=glyph['llower'],
-                                            varea=glyph['vareaf'], mselect=mselect),
-                                  code='''
-            var selections = cb_obj.value;
-            var options = mselect.options;
-            for (var i=0; i < options.length; i++)
-            {
-                y_var[options[i]].visible = false;
-                predi[options[i]].visible = false;
-                upper[options[i]].visible = false;
-                lower[options[i]].visible = false;
-                varea[options[i]].visible = false;
-                source[options[i]].change.emit();
-            }
-            for (var i=0; i < selections.length; i++)
-            {
-                y_var[selections[i]].visible = true;
-                predi[selections[i]].visible = true;
-                upper[selections[i]].visible = true;
-                lower[selections[i]].visible = true;
-                varea[selections[i]].visible = true;
-                source[selections[i]].change.emit();
-            }
-            '''))
-        mselect.js_on_change('value', callbacks[i])
-
-    return mselect
-
-
-def multi_select_server(value, glyphs):
-    """Multi-select control for state selection with server driven animation
-
-    Arguments:
-        value {list} -- starting selection options
-        glyphs {list} -- bokeh glyph elements
-
-    Returns:
-        Bokeh Multi-select Object -- multi-select object instance
-    """
-    mselect = MultiSelect(title='States:', value=value,
-                          options=glyphs[0]['cats'])
-
-    def callback(_attr, _old, new):
+        Keyword Arguments:
+            line_color {rgb color} -- rgb color (default: {'navy'})
+            line_dash {'solid', 'dashed'} -- line style (default: {'solid'})
         """
-           Call back function to select trend line for
-           selected states.
+        for _id, _, in self.options:
+            self.actual[_id].glyph.line_color = line_color
+            self.actual[_id].glyph.line_dash = line_dash
+
+    def color_predict(self, line_color='red', line_dash='dashed'):
+        """Color predict line and change line dash style in all states
+
+        Keyword Arguments:
+            line_color {rgb color} -- rgb color (default: {'navy'})
+            line_dash {'solid', 'dashed'} -- line style (default: {'dashed'})
         """
+        for _id, _, in self.options:
+            self.predict[_id].glyph.line_color = line_color
+            self.predict[_id].glyph.line_dash = line_dash
 
-        for glyph in glyphs:
-            y_var = glyph['ly_var']
-            predi = glyph['lpredi']
-            upper = glyph['lupper']
-            lower = glyph['llower']
-            varea = glyph['vareaf']
+    def color_interval(self, line_color='navy', line_dash='solid'):
+        """Color interval lines and change line dash style in all states
 
-            for option in list(mselect.options):
-                y_var[option].visible = False
-                predi[option].visible = False
-                upper[option].visible = False
-                lower[option].visible = False
-                varea[option].visible = False
+        Keyword Arguments:
+            line_color {rgb color} -- rgb color (default: {'navy'})
+            line_dash {'solid', 'dashed'} -- line style (default: {'solid'})
+        """
+        for _id, _, in self.options:
+            self.lower[_id].glyph.line_color = line_color
+            self.lower[_id].glyph.line_dash = line_dash
 
-            for selection in new:
-                y_var[selection].visible = True
-                predi[selection].visible = True
-                upper[selection].visible = True
-                lower[selection].visible = True
-                varea[selection].visible = True
+            self.upper[_id].glyph.line_color = line_color
+            self.upper[_id].glyph.line_dash = line_dash
 
-    mselect.on_change('value', callback)
+    def color_area(self, fill_color='grey', fill_alpha=0.25):
+        """Color interval area fill color and fill alpha in all states
 
-    return mselect
+        Keyword Arguments:
+            fill_color {rgb color} -- rgb color (default: {'grey'})
+            fill_alpha {float} -- fill alpha (default: {0.25})
+        """
+        for _id, _, in self.options:
+            self.area[_id].glyph.fill_color = fill_color
+            self.area[_id].glyph.fill_alpha = fill_alpha
 
+    def color_palette(self, palette=Purples[3]):
+        """Color lines and interval area in all states
 
-def render_cases(data, y_var, date, palette=Purples[3]):
-    """Select top 10 states by cases and make their plots visible
+        Keyword Arguments:
+            palette {list} -- list of rgb color (default: {Purples[3]})
+        """
+        self.color_actual(line_color=palette[0])
+        self.color_predict(line_color=palette[0])
+        self.color_interval(line_color=palette[1])
+        self.color_area(fill_color=palette[2])
 
-    Arguments:
-        data {DataFrame} -- cases data
-        y_var {String} -- predicted variable
-        date {TimeStamp} -- date
+    def title(self, title=None):
+        """Plot title
 
-    Keyword Arguments:
-        palette {list} -- rgb color palette (default: {Purples[3]})
+        Keyword Arguments:
+            title {String} -- plot title (default: {None})
+        """
+        self.plot.title = Title(text=title)
 
-    Returns:
-        Bokeh Figure Object -- plot instance
-        list -- top-10 states by cases count
+    def axis_label(self, xlabel='x', ylabel='y'):
+        """Set x and y axis labels
+
+        Keyword Arguments:
+            xlabel {str} -- x axis label (default: {'x'})
+            ylabel {str} -- y axis label (default: {'y'})
+        """
+        self.plot.xaxis.axis_label = xlabel
+        self.plot.yaxis.axis_label = ylabel
+
+    def render_figure(self):
+        """Render figure, glyphs and color glyphs with default colors
+        """
+        self._add_figure()
+        self._add_lines()
+        self._add_area()
+        self._add_hover()
+        self._add_legend()
+        self.color_actual()
+        self.color_predict()
+        self.color_interval()
+        self.color_area()
+
+class Trends:
+    """Trends layout
     """
-    data = data[data['date'] > pd.to_datetime(date)]
+    def __init__(self, palette=Purples[3]):
+        time = ElapsedMilliseconds(log_time=TRACING)
 
-    # select top 10 state by number of cases
-    top10 = data.groupby('state').max()[[y_var]]
-    top10 = top10.sort_values(y_var, ascending=False)
-    top10 = list(top10.index)[:10]
+        self.cases = LinePlot(ARIMA_CASES_TABLE)
+        self.cases.render_figure()
+        self.cases.title("Cumulative Cases by State")
+        self.cases.axis_label('Date', 'Cases')
+        self.cases.color_palette(palette)
 
-    # render lines
-    kwargs = dict(title=f"Cumulative {y_var.title()} by State",
-                  plot_width=600, plot_height=300)
+        time.log('trends:state cases')
 
-    plot, out = cases_trends(data, y_var, palette, **kwargs)
+        self.deaths = LinePlot(ARIMA_DEATHS_TABLE)
+        self.deaths.render_figure()
+        self.deaths.title("Cumulative Deaths by State")
+        self.cases.axis_label('Date', 'Deaths')
+        self.deaths.color_palette(palette)
 
-    return plot, top10, out
+        time.log('trends:state deaths')
 
+        self.multiselect = None
+        self._add_multiselect()
+        self.multiselect.value = ['12', '34', '36']
 
-def show_predictions(cases, deaths, start_date, palette=Purples[3]):
-    """Main module function to plot cases, deaths and add select control
+        time.log('trends:render default states')
 
-    Arguments:
-        cases {DataFrame} -- arima model prediction of cases by state
-        deaths {DataFrame} -- arima model prediction of deaths by state
-        start_date {date} -- date to show at startup
+    def _add_multiselect(self):
+        self.multiselect = MultiSelect(title='States:', value=['01'],
+                                       options=self.cases.options)
+        self.multiselect.max_width = 180
+        self.multiselect.min_height = 500 - 40
+        self.multiselect.on_change('value', self._callback_cases)
+        self.multiselect.on_change('value', self._callback_deaths)
 
-    Keyword Arguments:
-        palette {list} -- rgb color palette (default: {Purples[3]})
+    def _callback_cases(self, _attr, _old, new):
+        for _id, _ in list(self.multiselect.options):
+            if self.cases.actual[_id].visible:
+                self.cases.actual[_id].visible = False
+                self.cases.predict[_id].visible = False
+                self.cases.lower[_id].visible = False
+                self.cases.upper[_id].visible = False
+                self.cases.area[_id].visible = False
 
-    Returns:
-        Bokeh Layout Object -- layout instance
-    """
-    p_cases, top10_cases, out_cases = render_cases(cases, 'cases', start_date, palette)
-    p_deaths, _, out_deaths = render_cases(deaths, 'deaths', start_date, palette)
+                self.cases.actual[_id].data_source.data = dict(x=[], y=[])
+                self.cases.predict[_id].data_source.data = dict(x=[], y=[])
+                self.cases.lower[_id].data_source.data = dict(x=[], y=[])
+                self.cases.upper[_id].data_source.data = dict(x=[], y=[])
+                self.cases.area[_id].data_source.data = dict(x=[], y1=[], y2=[])
 
-    # show top 10 states by cases
-    for cat in top10_cases:
-        out_cases['ly_var'][cat].visible = True
-        out_cases['lpredi'][cat].visible = True
-        out_cases['lupper'][cat].visible = True
-        out_cases['llower'][cat].visible = True
-        out_cases['vareaf'][cat].visible = True
+        for _id in new:
+            if not self.cases.actual[_id].visible:
+                _slice = self.cases.data.loc[_id, :]
+                _x = _slice['date'].to_list()
 
-        out_deaths['ly_var'][cat].visible = True
-        out_deaths['lpredi'][cat].visible = True
-        out_deaths['lupper'][cat].visible = True
-        out_deaths['llower'][cat].visible = True
-        out_deaths['vareaf'][cat].visible = True
+                _y = _slice['actual'].to_list()
+                self.cases.actual[_id].data_source.data = dict(x=_x, y=_y)
 
-    # add multiselect
-    if SIDE == 'server':
-        mselect = multi_select_server(value=top10_cases,
-                                      glyphs=[out_cases, out_deaths])
+                _y = _slice['predict'].to_list()
+                self.cases.predict[_id].data_source.data = dict(x=_x, y=_y)
 
-    if SIDE == 'client':
-        mselect = multi_select_client(value=top10_cases,
-                                      glyphs=[out_cases, out_deaths])
+                _y1 = _slice['lower'].to_list()
+                self.cases.lower[_id].data_source.data = dict(x=_x, y=_y1)
 
-    mselect.max_width = 180
-    mselect.min_height = 500 - 40
+                _y2 = _slice['upper'].to_list()
+                self.cases.upper[_id].data_source.data = dict(x=_x, y=_y2)
 
-    graphs = gridplot([p_cases, p_deaths], ncols=1,
-                      plot_width=800 - mselect.max_width - 40,
-                      plot_height=250, toolbar_location='right',
-                      toolbar_options=dict(logo=None))
+                self.cases.area[_id].data_source.data = dict(x=_x, y1=_y1, y2=_y2)
 
-    return row(mselect, graphs)
+                self.cases.actual[_id].visible = True
+                self.cases.predict[_id].visible = True
+                self.cases.lower[_id].visible = True
+                self.cases.upper[_id].visible = True
+                self.cases.area[_id].visible = True
+
+    def _callback_deaths(self, _attr, _old, new):
+        for _id, _ in list(self.multiselect.options):
+            if self.deaths.actual[_id].visible:
+                self.deaths.actual[_id].visible = False
+                self.deaths.predict[_id].visible = False
+                self.deaths.lower[_id].visible = False
+                self.deaths.upper[_id].visible = False
+                self.deaths.area[_id].visible = False
+
+                self.deaths.actual[_id].data_source.data = dict(x=[], y=[])
+                self.deaths.predict[_id].data_source.data = dict(x=[], y=[])
+                self.deaths.lower[_id].data_source.data = dict(x=[], y=[])
+                self.deaths.upper[_id].data_source.data = dict(x=[], y=[])
+                self.deaths.area[_id].data_source.data = dict(x=[], y1=[], y2=[])
+
+        for _id in new:
+            if not self.deaths.actual[_id].visible:
+                _slice = self.deaths.data.loc[_id, :]
+                _x = _slice['date'].to_list()
+
+                _y = _slice['actual'].to_list()
+                self.deaths.actual[_id].data_source.data = dict(x=_x, y=_y)
+
+                _y = _slice['predict'].to_list()
+                self.deaths.predict[_id].data_source.data = dict(x=_x, y=_y)
+
+                _y1 = _slice['lower'].to_list()
+                self.deaths.lower[_id].data_source.data = dict(x=_x, y=_y1)
+
+                _y2 = _slice['upper'].to_list()
+                self.deaths.upper[_id].data_source.data = dict(x=_x, y=_y2)
+
+                self.deaths.area[_id].data_source.data = dict(x=_x, y1=_y1, y2=_y2)
+
+                self.deaths.actual[_id].visible = True
+                self.deaths.predict[_id].visible = True
+                self.deaths.lower[_id].visible = True
+                self.deaths.upper[_id].visible = True
+                self.deaths.area[_id].visible = True
+
+    def layout(self):
+        """Build trend layout
+
+        Returns:
+            Bokeh Layout -- layout with cases, deaths and state selection
+        """
+        _graphs = gridplot([self.cases.plot, self.deaths.plot], ncols=1,
+                           plot_width=800 - self.multiselect.max_width - 40,
+                           plot_height=250, toolbar_location='right',
+                           toolbar_options=dict(logo=None))
+
+        _layout = row(self.multiselect, _graphs)
+
+        return _layout
 
 
 if __name__[:9] == 'bokeh_app':
     print('unit testing...')
 
-    palette_in = Purples[3]
+    trend = Trends(palette=Purples[3])
 
-    database = DataBase()
-    cases_in = database.get_table(ARIMA_CASES_TABLE, parse_dates=['date'])
-    deaths_in = database.get_table(ARIMA_DEATHS_TABLE, parse_dates=['date'])
-    database.close()
-
-    layout = show_predictions(cases=cases_in, deaths=deaths_in,
-                              start_date='3/15/2020', palette=palette_in)
-
-    curdoc().add_root(layout)
+    curdoc().add_root(trend.layout)
     curdoc().title = "trends"
     curdoc().theme = Theme(filename=join(cwd(), "theme.yaml"))

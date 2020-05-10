@@ -15,15 +15,20 @@ from bokeh.models import (
 class ElapsedMilliseconds:
     """Time execution time
 
-    Usage example:
-       _ms = ElapsedMilliseconds()
-       print(_ms.elapsed(), 'ms')
+    Usage example 1:
+       time = ElapsedMilliseconds()
        ...lenthy process...
-       print(_ms.elapsed(), 'ms')
+       print(time.elapsed(), 'ms')
+
+    Usage example 2:
+       time = ElapsedMilliseconds(log_time=True)
+       ...lenthy process...
+       time.log('your custom log msg')
     """
-    def __init__(self):
+    def __init__(self, log_time=False):
         self.last_elapsed = 0
         self.last_local = int(round(time.time() * 1000))
+        self.log_time = log_time
 
     def elapsed(self):
         """Returns elapse time in milliseconds
@@ -35,6 +40,15 @@ class ElapsedMilliseconds:
         self.last_elapsed = int(round(time.time() * 1000)) - self.last_local
         self.last_local = int(round(time.time() * 1000))
         return self.last_elapsed
+
+    def log(self, msg=''):
+        """Print elapsed time since last call
+
+        Keyword Arguments:
+            msg {String} -- optional message to print before time (default: {''})
+        """
+        if self.log_time:
+            print(f"{msg}: {self.elapsed()} ms")
 
     def restart(self):
         """Restart time reference
@@ -95,7 +109,7 @@ def histogram(x, xlabel='x', ylabel='y', **kwargs):
 
     plot.add_tools(HoverTool(renderers=[quad],
                              tooltips=[(f"{xlabel.title()} Range", '@left{int} to @right{int}'),
-                                       (ylabel.title(), '@top')]))
+                                       (ylabel.title(), '@top{0,0}')]))
 
     plot.y_range.start = 0
     plot.xaxis.axis_label = xlabel
@@ -135,7 +149,7 @@ def vbar(x, y, xlabel='x', ylabel='y', **kwargs):
     vbar_glyph = plot.vbar(x=x, top=y, **vbar_settings)
 
     # tooltips
-    tooltips = [(xlabel.title(), '@x'), (ylabel.title(), '@top')]
+    tooltips = [(xlabel.title(), '@x'), (ylabel.title(), '@top{0,0}')]
     if misc_settings['user_tooltips'] != 'auto':
         tooltips = misc_settings['user_tooltips']
 

@@ -26,6 +26,7 @@ STATES_VIEW = ("""
             states_view AS
     SELECT
         nytimes_states.date,
+        state_map.state_id,
         state_map.name AS 'state',
         nytimes_states.cases,
         nytimes_states.deaths

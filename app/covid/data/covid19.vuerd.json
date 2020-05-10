@@ -2,8 +2,8 @@
   "canvas": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 44.400001525878906,
-    "scrollLeft": 0,
+    "scrollTop": 88.80000305175781,
+    "scrollLeft": 212.40000915527344,
     "show": {
       "tableComment": true,
       "columnComment": false,
@@ -358,29 +358,6 @@
         "comment": "prediction of cases",
         "columns": [
           {
-            "name": "state",
-            "comment": "state area id",
-            "dataType": "TEXT",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 74,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "4cfefd78-8a66-c321-3520-d52c01dbf79a"
-          },
-          {
             "name": "date",
             "comment": "",
             "dataType": "DATE",
@@ -404,7 +381,53 @@
             "id": "102d0527-6fee-3c74-b38e-f1dfcd733757"
           },
           {
-            "name": "cases",
+            "name": "state_id",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "cfcf457a-d1c2-131a-4126-d21693003449"
+          },
+          {
+            "name": "state",
+            "comment": "state area id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4cfefd78-8a66-c321-3520-d52c01dbf79a"
+          },
+          {
+            "name": "actual",
             "comment": "",
             "dataType": "FLOAT",
             "default": "",
@@ -500,7 +523,7 @@
           "active": false,
           "left": 449.61313668986566,
           "top": 271.20383585176836,
-          "zIndex": 1674,
+          "zIndex": 1703,
           "widthName": 76,
           "widthComment": 110
         },
@@ -664,29 +687,6 @@
         "comment": "pridiction  of deaths ",
         "columns": [
           {
-            "name": "state",
-            "comment": "state area id",
-            "dataType": "TEXT",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": false,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 74,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "d3dc4a5f-2499-1816-60c9-e75c82fdc8e9"
-          },
-          {
             "name": "date",
             "comment": "",
             "dataType": "DATE",
@@ -710,7 +710,53 @@
             "id": "de9ddcd0-438d-6230-a80d-e23df663d4bd"
           },
           {
-            "name": "deaths",
+            "name": "state_id",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "fef42be5-5b5e-2291-e84e-08e9ab758570"
+          },
+          {
+            "name": "state",
+            "comment": "state area id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d3dc4a5f-2499-1816-60c9-e75c82fdc8e9"
+          },
+          {
+            "name": "actual",
             "comment": "",
             "dataType": "FLOAT",
             "default": "",
@@ -806,7 +852,7 @@
           "active": false,
           "left": 450.13667099488515,
           "top": 63.840001651382465,
-          "zIndex": 1678,
+          "zIndex": 1699,
           "widthName": 81,
           "widthComment": 111
         },

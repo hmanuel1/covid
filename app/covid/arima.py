@@ -1,7 +1,7 @@
 """
    Fit ARIMA model to cases and deaths for each US State
 """
-
+# %%
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
@@ -16,19 +16,19 @@ ARIMA_CASES_TABLE = 'arima_cases'
 ARIMA_DEATHS_TABLE = 'arima_deaths'
 
 
-def arima_model(data, states, y_var):
+def arima_model(data, y_var):
     """Perform ARIMA and return results
 
     Arguments:
         data {DataFrame} -- data for model
-        states {list} -- us states to run model on
         y_var {String} -- column name for independent variable 'ŷ'
 
     Returns:
         DataFrame -- prediction and confidence intervals
     """
-    results = dict(index=[], state=[], upper=[], lower=[], predict=[])
-    for state in states:
+    results = dict(index=[], state_id=[], state=[], upper=[], lower=[], predict=[])
+
+    for state_id, state in zip(data['state_id'].unique(), data['state'].unique()):
         # select state data
         data_state = data[data['state'] == state]
         data_state = data_state.sort_values('date').reset_index(drop=True)
@@ -68,6 +68,7 @@ def arima_model(data, states, y_var):
 
         # save results for this state
         results['index'] += [index_of_fc[0] - 1] + list(index_of_fc)
+        results['state_id'] += [state_id] * (len(index_of_fc) + 1)
         results['state'] += [state] * (len(index_of_fc) + 1)
         results['upper'] += [data_state[y_var].iat[-1]] + list(upper)
         results['lower'] += [data_state[y_var].iat[-1]] + list(lower)
@@ -76,12 +77,11 @@ def arima_model(data, states, y_var):
     return pd.DataFrame(results)
 
 
-def run_arima(data, states, y_var, show_results=False):
+def run_arima(data, y_var, show_results=False):
     """Call ARIMA function and add predicted results to original data
 
     Arguments:
         data {DataFrame} -- ny times cumulative covid19 cases and deaths
-        states {list} -- list of us states to run model on
         y_var {String} -- column name of predicted variable 'ŷ'
 
     Keyword Arguments:
@@ -93,14 +93,17 @@ def run_arima(data, states, y_var, show_results=False):
     result = data.copy(deep=True)
 
     # run arima model
-    arima = arima_model(result, states, y_var)
+    arima = arima_model(result, y_var)
 
     # merge prediction with data and plotted
     arima['start'] = arima['state'].map(data.groupby(['state']).min()['date'])
     arima['date'] = arima['start'] + pd.to_timedelta(arima['index'], 'days')
-    arima = arima[['date', 'state', 'upper', 'lower', 'predict']].copy(deep=True)
-    arima[y_var] = np.nan
+    arima['actual'] = np.nan
 
+    cols = ['date', 'state_id', 'state', 'actual', 'upper', 'lower', 'predict']
+    arima = arima[cols].copy(deep=True)
+
+    result = result.rename(columns={y_var: 'actual'})
     result['upper'] = np.nan
     result['lower'] = np.nan
     result['predict'] = np.nan
@@ -109,7 +112,7 @@ def run_arima(data, states, y_var, show_results=False):
     if show_results:
         for state in ['Florida', 'Georgia', 'Alabama', 'New York']:
             result_state = result[result['state'] == state]
-            plt.plot(result_state['date'], result_state[y_var], color='blue')
+            plt.plot(result_state['date'], result_state['actual'], color='blue')
             plt.plot(result_state['date'], result_state['predict'], color='green')
             plt.fill_between(result_state['date'],
                              result_state['lower'],
@@ -117,10 +120,9 @@ def run_arima(data, states, y_var, show_results=False):
                              color='k', alpha=.15)
         plt.show()
 
-    cols = ['date', 'state', y_var, 'predict', 'lower', 'upper']
-    return result[cols]
+    return result
 
-
+# %%
 def predict():
     """main module function to predict covid19 cases and deaths
 
@@ -132,22 +134,30 @@ def predict():
         ARIMA_DEATHS_TABLE {database table } -- deaths[predict, upper, lower]
     """
     _db = DataBase()
-    cols = ['date', 'state', 'cases', 'deaths']
-    data = _db.get_table(STATES_VIEW_TABLE, columns=cols, parse_dates=['date'])
+    data = _db.get_table(STATES_VIEW_TABLE, parse_dates=['date'])
     _db.close()
 
-    # select states
-    states = list(data['state'].unique())[:-1]
-
     # predict cases
-    result = run_arima(data, states, 'cases')
+    result = run_arima(data, 'cases')
+
+    # only data after 3/15/2020
+    slicer = result['date'] > pd.to_datetime('3/15/2020')
+    result = result.loc[slicer, :].copy(deep=True)
+    result.sort_values(['date', 'state'], inplace=True)
+    result = result.round(0)
 
     _db = DataBase()
     _db.add_table(ARIMA_CASES_TABLE, data=result, index=False)
     _db.close()
 
     # predict deaths
-    result = run_arima(data, states, 'deaths')
+    result = run_arima(data, 'deaths')
+
+     # only data after 3/15/2020
+    slicer = result['date'] > pd.to_datetime('3/15/2020')
+    result = result.loc[slicer, :].copy(deep=True)
+    result.sort_values(['date', 'state'], inplace=True)
+    result = result.round(0)
 
     _db = DataBase()
     _db.add_table(ARIMA_DEATHS_TABLE, data=result, index=False)

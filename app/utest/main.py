@@ -5,38 +5,58 @@
 from os.path import dirname, join
 
 from bokeh.plotting import figure
-from bokeh.models import ColumnDataSource, Select
+from bokeh.models import ColumnDataSource, MultiSelect
 from bokeh.io import curdoc
 from bokeh.layouts import column
 from bokeh.themes import Theme
 
-# pylint: disable=too-many-function-args, unused-argument
+from database import DataBase
 
-x = [0, 2, 4]
-y1 = [4, 10, 20]
-y2 = [8, 20, 40]
 
-source = ColumnDataSource(data=dict(x=x, y1=y1, y2=y2))
+database = DataBase()
+data = database.get_table('arima_cases', parse_dates=['date'])
+database.close()
 
+# x_axis_type='datetime'
+plot = figure(title='test', x_axis_type='datetime')
 
 lines = dict()
-p = figure(title='test')
-lines['line1'] = p.line('x', 'y1', source=source, visible=False)
-lines['line2'] = p.line('x', 'y2', source=source, visible=True)
+options = []
+for state_id, state in zip(data['state_id'].unique(), data['state'].unique()):
+    options.append((state_id, state))
+    lines[state_id] = plot.line(x='x',
+                                y='y',
+                                source=ColumnDataSource(data=dict(x=[], y=[])),
+                                visible=False,
+                                name=state)
 
-select = Select(value='line1', options=['line1', 'line2'])
+mselect = MultiSelect(value=['00'], options=options)
 
-def update(attr, old, new):
+data.set_index('state_id', inplace=True)
+
+def update(_attr, _old, new):
     """
         Callback function to handle select changes
     """
+    for line in lines:
+        if lines[line].visible and not line in new:
+            lines[line].visible = False
+            lines[line].data_source.data = dict(x=[], y=[])
 
-    lines[old].visible = not lines[old].visible
-    lines[new].visible = not lines[new].visible
+    for line in new:
+        if not lines[line].visible:
+            print(line)
+            source = dict(x=list(data.loc[line, 'date']),
+                          y=list(data.loc[line, 'cases']))
+            lines[line].data_source.data = source
+            lines[line].visible = True
 
-select.on_change('value', update)
+mselect.on_change('value', update)
 
-# add to document
-curdoc().add_root(column(select, p))
+top10 = data.loc[data['date'] == data['date'].max(), :]
+top10 = top10.sort_values('cases', ascending=False).head(10).index.to_list()
+mselect.value = top10
+
+curdoc().add_root(column(mselect, plot))
 curdoc().title = "test"
 curdoc().theme = Theme(filename=join(dirname(__file__), "theme.yaml"))

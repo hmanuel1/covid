@@ -1,0 +1,2093 @@
+{
+  "canvas": {
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 44.400001525878906,
+    "scrollLeft": 0,
+    "show": {
+      "tableComment": true,
+      "columnComment": false,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": true,
+      "columnPrimaryKey": true,
+      "columnUnique": true,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "covid19.sqlite3",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "snakeCase",
+    "columnCase": "snakeCase"
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "state_map",
+        "comment": "us map by state",
+        "columns": [
+          {
+            "name": "state_id",
+            "comment": "state area id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "2a545dd4-8f71-4a4f-6078-76d727e920b6"
+          },
+          {
+            "name": "name",
+            "comment": "state name",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 66,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "23fb4c0d-9942-9f96-e794-6964f178021c"
+          },
+          {
+            "name": "aland",
+            "comment": "state land area in sqkm",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 136,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d0fd6b5c-5df6-7087-2ded-73992f0c73ee"
+          },
+          {
+            "name": "awater",
+            "comment": "state water area in sqkm",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 144,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "1e1d1946-5a2f-5baf-4f55-a0f1bf72d99d"
+          },
+          {
+            "name": "pop",
+            "comment": "state population",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 94,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "7a547a94-1111-c8ee-bf03-37732d95f813"
+          },
+          {
+            "name": "geometry",
+            "comment": "state geometry",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 88,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "97f23182-5f4d-fd9c-0716-08798b0e8fc0"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 22.53252381384983,
+          "top": 134.64532109582936,
+          "zIndex": 1450,
+          "widthName": 63,
+          "widthComment": 93
+        },
+        "id": "0401715b-e8e7-6cd6-ddbc-ab44c4dc06dd"
+      },
+      {
+        "name": "us_map",
+        "comment": "us map by county",
+        "columns": [
+          {
+            "name": "county_id",
+            "comment": "county area id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 84,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "c6fb6bb7-bb24-f9a0-5cdd-2e3d2ef44d24"
+          },
+          {
+            "name": "state_id",
+            "comment": "state area id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a6f12dc0-e896-f50c-c60c-00b6748ed73c"
+          },
+          {
+            "name": "name",
+            "comment": "county name",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 76,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "0dedb082-3bbd-35d4-d476-63ed42de3663"
+          },
+          {
+            "name": "aland",
+            "comment": "county water area in sqkm",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 154,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a0862eda-2561-8405-8683-35efb0a1756b"
+          },
+          {
+            "name": "awater",
+            "comment": "county land area in sqkm",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 146,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "603312ed-a848-38c9-bfdd-193c06dc969c"
+          },
+          {
+            "name": "pop",
+            "comment": "county population",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 104,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "becc1e19-7672-ef1b-6bb6-1be267196ad2"
+          },
+          {
+            "name": "geometry",
+            "comment": "county geometry",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 98,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "ebce6725-6c76-0511-79eb-daa09d27d186"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 754.1408280655959,
+          "top": 244.0687623613925,
+          "zIndex": 1469,
+          "widthName": 60,
+          "widthComment": 104
+        },
+        "id": "9737b3ff-df78-6537-d2cc-cad95f5955ca"
+      },
+      {
+        "name": "arima_cases",
+        "comment": "prediction of cases",
+        "columns": [
+          {
+            "name": "state",
+            "comment": "state area id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4cfefd78-8a66-c321-3520-d52c01dbf79a"
+          },
+          {
+            "name": "date",
+            "comment": "",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "102d0527-6fee-3c74-b38e-f1dfcd733757"
+          },
+          {
+            "name": "cases",
+            "comment": "",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "cc525dcd-bb4f-ff37-c1ec-b94036435165"
+          },
+          {
+            "name": "predict",
+            "comment": "arima prediction",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 95,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4f960656-bccc-fa85-df33-2e61c26bf907"
+          },
+          {
+            "name": "lower",
+            "comment": "arima lower 95%",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 99,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "76cf4909-c1bf-7732-a8e4-0a4e7ad3d4d7"
+          },
+          {
+            "name": "upper",
+            "comment": "arima upper 95%",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 101,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e62775f4-7743-c7e1-a5cc-3f9a5c376ef3"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 449.61313668986566,
+          "top": 271.20383585176836,
+          "zIndex": 1674,
+          "widthName": 76,
+          "widthComment": 110
+        },
+        "id": "99cd4e1a-1bdb-cb16-090d-2530e1b7a7bc"
+      },
+      {
+        "name": "model_roc",
+        "comment": "classification model for florida",
+        "columns": [
+          {
+            "name": "name",
+            "comment": "model name",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b8816f3b-8aa1-0270-69a1-83f6f1e0d1d8"
+          },
+          {
+            "name": "abbr",
+            "comment": "model abbr",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 67,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "fb4947ac-7f20-c0cb-d82e-9a7d083e7f15"
+          },
+          {
+            "name": "false_pos_rate",
+            "comment": "false positive rate",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 87,
+              "widthComment": 103,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "542bec4a-69b6-4df6-9c45-eab83b023bf6"
+          },
+          {
+            "name": "true_pos_rate",
+            "comment": "true positive rate",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 82,
+              "widthComment": 98,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a60f2c31-ca17-a72b-76f2-abb5a6552c63"
+          },
+          {
+            "name": "auc",
+            "comment": "model auc",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 62,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "0d7f94b7-8576-f742-3231-ff12f911479c"
+          },
+          {
+            "name": "logloss",
+            "comment": "model logloss",
+            "dataType": "float",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 81,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a753d2bd-ce2a-613f-dc05-d0d11abaa88b"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1343.2319915009746,
+          "top": 326.6528813647819,
+          "zIndex": 1650,
+          "widthName": 63,
+          "widthComment": 173
+        },
+        "id": "82b1b2ec-3faa-2ad1-40d1-e9197d9a2f66"
+      },
+      {
+        "name": "arima_deaths",
+        "comment": "pridiction  of deaths ",
+        "columns": [
+          {
+            "name": "state",
+            "comment": "state area id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d3dc4a5f-2499-1816-60c9-e75c82fdc8e9"
+          },
+          {
+            "name": "date",
+            "comment": "",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "de9ddcd0-438d-6230-a80d-e23df663d4bd"
+          },
+          {
+            "name": "deaths",
+            "comment": "",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d00d0afe-dd11-a4ed-cb68-ffa0747eea18"
+          },
+          {
+            "name": "predict",
+            "comment": "arima prediction",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 94,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "fc040c0c-79a9-bbea-4473-96323e92b594"
+          },
+          {
+            "name": "upper",
+            "comment": "arima lower 95%",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 99,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "89f0a3dc-194f-6915-0af2-a14e2ffa40c5"
+          },
+          {
+            "name": "lower",
+            "comment": "arima upper 95%",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 100,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "2427a1be-b7bd-77ee-1dce-c86f0f5e85ce"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 450.13667099488515,
+          "top": 63.840001651382465,
+          "zIndex": 1678,
+          "widthName": 81,
+          "widthComment": 111
+        },
+        "id": "47c40840-4814-f553-991c-0e5064416aca"
+      },
+      {
+        "name": "importance",
+        "comment": "feature importances for random forest model",
+        "columns": [
+          {
+            "name": "feature",
+            "comment": "feature name",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 79,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "98e5c488-0852-2e44-d23e-bed5292e6414"
+          },
+          {
+            "name": "importance",
+            "comment": "percentage",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 66,
+              "widthComment": 67,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b7672089-c257-f68b-07ca-3cce947cfcb4"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1341.735987719481,
+          "top": 528.2204558481428,
+          "zIndex": 1664,
+          "widthName": 66,
+          "widthComment": 259
+        },
+        "id": "d5588e87-281b-57f8-a7a9-12f504436fb5"
+      },
+      {
+        "name": "us_counties",
+        "comment": "raw nytimes covid19 data by county ",
+        "columns": [
+          {
+            "name": "date",
+            "comment": "date",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a0b9c375-4650-e59f-7e4e-36d84c6c312e"
+          },
+          {
+            "name": "county",
+            "comment": "county name",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 76,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a5a703e2-9b06-dc47-73c0-56c89aff1814"
+          },
+          {
+            "name": "state",
+            "comment": "state name",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 67,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "70f4ee47-bc88-5ee5-390b-679398997308"
+          },
+          {
+            "name": "fips",
+            "comment": "county fips",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 64,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "781f3acd-8158-d0b9-943c-e3ad8d956d40"
+          },
+          {
+            "name": "cases",
+            "comment": "cumulative cases",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 102,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "dcf48cde-1332-e42b-d799-c6803fd2c37f"
+          },
+          {
+            "name": "deaths",
+            "comment": "cumulative cases",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 102,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "1fa3665c-5471-0f6a-dc5c-f924632892b7"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 719.7065889014103,
+          "top": 650.1590004522016,
+          "zIndex": 1648,
+          "widthName": 72,
+          "widthComment": 208
+        },
+        "id": "5791b7c2-de3f-0085-b682-6e8bc20908d4"
+      },
+      {
+        "name": "us_states",
+        "comment": "raw nytimes covid19 data by state ",
+        "columns": [
+          {
+            "name": "date",
+            "comment": "date",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "2ec22656-952b-fafc-edca-6175a9bfb3c1"
+          },
+          {
+            "name": "state",
+            "comment": "state name",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 67,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "af723b96-fafc-0a3d-4c71-21862bd6f4cc"
+          },
+          {
+            "name": "fips",
+            "comment": "state fips",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e9dc2373-95b8-8279-9c68-2e41eaad99f0"
+          },
+          {
+            "name": "cases",
+            "comment": "cumulative cases",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 102,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "dec07895-2796-774b-d3c5-670c90efa46e"
+          },
+          {
+            "name": "deaths",
+            "comment": "cumulative deaths",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 106,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a0614815-bb9b-1064-f0af-964bdb6de82e"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 441.7487693466495,
+          "top": 473.22074012975236,
+          "zIndex": 1670,
+          "widthName": 60,
+          "widthComment": 198
+        },
+        "id": "744b4bf1-e74d-b4bb-8480-53ae22a89324"
+      },
+      {
+        "name": "fldem_cases",
+        "comment": "raw florida dem cases",
+        "columns": [
+          {
+            "name": "case_id",
+            "comment": "case id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "9ddb47ab-f69c-c2d7-a266-bc9d97ac008c"
+          },
+          {
+            "name": "county",
+            "comment": "county name",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 76,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "2e0358c3-eb6e-09bf-5b0f-c14fbd4da76b"
+          },
+          {
+            "name": "age",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d59567d5-887d-abd9-e6b3-c4bb5f85e2e4"
+          },
+          {
+            "name": "gender",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "ed66f062-d203-0053-023a-7a03e8750939"
+          },
+          {
+            "name": "traveled",
+            "comment": "travelel ralated",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 87,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8cf4ddcf-d516-52fc-7628-5024b7c5ee05"
+          },
+          {
+            "name": "contacted",
+            "comment": "contacted covid19 patient",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 149,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "88731f3b-66b6-8ee6-b811-07f89e5173fd"
+          },
+          {
+            "name": "resident",
+            "comment": "fl resident or not",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 95,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "85d300f4-172a-b1f1-46c6-8d189b9a1263"
+          },
+          {
+            "name": "date",
+            "comment": "date",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3ccdb48e-1915-0a2a-7937-515ff9a5cacc"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1045.2953436418304,
+          "top": 423.7331161571021,
+          "zIndex": 1559,
+          "widthName": 75,
+          "widthComment": 129
+        },
+        "id": "70e39374-be14-8bda-a86c-d6f378b79119"
+      },
+      {
+        "name": "nytimes_states",
+        "comment": "cleaned covid19 state cases",
+        "columns": [
+          {
+            "name": "state_id",
+            "comment": "state area id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 74,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e7a4d5a8-6938-9122-6509-474a8902f2e3"
+          },
+          {
+            "name": "date",
+            "comment": "",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "99446761-f959-3d4e-ed77-a9134087b04b"
+          },
+          {
+            "name": "cases",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "da03fc50-34dd-354e-4511-c375a3dbdfa5"
+          },
+          {
+            "name": "deaths",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e17592e8-c51d-bd58-842e-161f216e9734"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 25.79514984777575,
+          "top": 372.44574069170136,
+          "zIndex": 1679,
+          "widthName": 88,
+          "widthComment": 165
+        },
+        "id": "1ec5f825-257c-68bf-af57-44f8b4cdba0c"
+      },
+      {
+        "name": "nytimes_counties",
+        "comment": "cleaned covid19 county deadth daa",
+        "columns": [
+          {
+            "name": "county_id",
+            "comment": "county area id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 84,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "33b9c753-c77f-b8b3-865d-a13c7f75105f"
+          },
+          {
+            "name": "state_id",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "637099d2-af4c-2ac6-c37e-16d523fa12a2"
+          },
+          {
+            "name": "date",
+            "comment": "",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8e97f7ab-1346-8e7a-11d8-52b439097452"
+          },
+          {
+            "name": "cases",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "12dcef68-b98d-8c1f-07a7-744f2fd1271e"
+          },
+          {
+            "name": "deaths",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4f66b1a2-8fd4-f2c7-8593-17394a625960"
+          },
+          {
+            "name": "level",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "762d8e04-eacb-09fd-d41a-8190d12a2c5c"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1341.3219178164427,
+          "top": 121.27360944461712,
+          "zIndex": 1654,
+          "widthName": 103,
+          "widthComment": 207
+        },
+        "id": "32539e58-6cda-3b33-5c7f-d67649eff66b"
+      },
+      {
+        "name": "fldem",
+        "comment": "florida covid19 data",
+        "columns": [
+          {
+            "name": "case_id",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "38fb85b3-020d-d35e-cee9-0ff4cfb5a814"
+          },
+          {
+            "name": "county_id",
+            "comment": "county area id",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 84,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "21acc7aa-965e-ddcb-cf62-972b19606357"
+          },
+          {
+            "name": "date",
+            "comment": "",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "83cd191f-b126-98bd-5bd7-732671620257"
+          },
+          {
+            "name": "day",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "897eed49-db6e-7a3e-4cdb-3d130079b28c"
+          },
+          {
+            "name": "age",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3fa8eb42-919c-85bf-26e3-df0975ca769d"
+          },
+          {
+            "name": "male",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b74f3aba-db4f-e3ff-aae7-2535ec045d41"
+          },
+          {
+            "name": "traveled",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "6f2d512b-b6fc-35d6-414f-42ff1474c7d5"
+          },
+          {
+            "name": "where",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "e098535b-1345-d94c-e77a-2d0204d5d1ce"
+          },
+          {
+            "name": "contacted",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "042032b4-5a72-072a-1ab0-44a011000673"
+          },
+          {
+            "name": "resident",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "540dbb81-7dba-4e02-727b-309e7ed934c7"
+          },
+          {
+            "name": "died",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d9e99d17-a35f-4212-2537-913d7eaec663"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1047.487991175416,
+          "top": 120.01598059522851,
+          "zIndex": 1468,
+          "widthName": 60,
+          "widthComment": 115
+        },
+        "id": "a8c12679-1023-83e0-57a6-9ba80b9da36c"
+      },
+      {
+        "name": "fldem_deaths",
+        "comment": "raw florida dem deaths",
+        "columns": [
+          {
+            "name": "case_id",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "6d3bb611-494d-0edd-3fe0-03d9ffaa54a4"
+          },
+          {
+            "name": "county",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "fa8a48d5-3092-a3fa-5496-293ade4f9deb"
+          },
+          {
+            "name": "age",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4beb9c50-0abc-2753-96fc-63f9d306f7eb"
+          },
+          {
+            "name": "gender",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3a2e12aa-e0ae-46c4-e6ec-d64ec3bdd3c2"
+          },
+          {
+            "name": "traveled",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "49d13ff9-87b6-f13f-ed2d-7efbe1e2e43b"
+          },
+          {
+            "name": "contacted",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "715a9861-12db-cc9d-7116-a6bba3d763c4"
+          },
+          {
+            "name": "resident",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "7fa72dfc-013b-2523-e25e-d1af18c0c56d"
+          },
+          {
+            "name": "date",
+            "comment": "",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "f50d0b63-c9c1-5339-30ed-ee73147769e1"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1045.4000313476556,
+          "top": 659.1600213752762,
+          "zIndex": 1560,
+          "widthName": 80,
+          "widthComment": 134
+        },
+        "id": "2139810d-aafe-221a-5676-8904242c3531"
+      }
+    ]
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": []
+  }
+}

@@ -17,26 +17,28 @@ from nytimes import download_nytimes
 from fldem import download_fldem
 from distros import age_gender_histograms
 from maps import Map
-from trends import show_predictions
+from trends import Trends
+from arima import predict
 from fits import models_result
-from utilities import cwd
 from database import DataBase
 from wrangler import maps_to_database
+from utilities import (
+    cwd,
+    ElapsedMilliseconds
+)
 from clf import (
     classify,
     IMPORTANCE_TABLE,
     MODELS_ROC_TABLE
-)
-from arima import (
-    predict,
-    ARIMA_CASES_TABLE,
-    ARIMA_DEATHS_TABLE
 )
 from sql import (
     FLDEM_VIEW_TABLE,
     VACUUM,
     REINDEX
 )
+
+
+TRACING = True
 
 
 def refresh():
@@ -61,22 +63,6 @@ def refresh():
     _db.close()
 
 
-def get_data_sets():
-    """
-        get data sets
-    """
-    _db = DataBase()
-
-    data = _db.get_table(FLDEM_VIEW_TABLE)
-    roc = _db.get_table(MODELS_ROC_TABLE)
-    importance = _db.get_table(IMPORTANCE_TABLE)
-    cases = _db.get_table(ARIMA_CASES_TABLE, parse_dates=['date'])
-    deaths = _db.get_table(ARIMA_DEATHS_TABLE, parse_dates=['date'])
-
-    _db.close()
-
-    return data, roc, importance, cases, deaths
-
 def covid():
     """
         Create Server Application
@@ -84,8 +70,16 @@ def covid():
 
     print('Bokeh Version:', __version__)
 
-    # get all datasets for this app
-    data, roc, importance, cases, deaths = get_data_sets()
+    time = ElapsedMilliseconds(log_time=TRACING)
+
+    # get datasets
+    _db = DataBase()
+    data = _db.get_table(FLDEM_VIEW_TABLE)
+    roc = _db.get_table(MODELS_ROC_TABLE)
+    importance = _db.get_table(IMPORTANCE_TABLE)
+    _db.close()
+
+    time.log('main.get_data_set')
 
     # create palettes
     palette = dict()
@@ -101,18 +95,27 @@ def covid():
     page['histograms'] = age_gender_histograms(data, palette['color'],
                                                palette['hover'])
 
+    time.log('main.histograms')
+
     # build us map and fl map layouts
     plot = Map(plot_width=800, plot_height=400, palette=palette['theme'])
     page['us_map'] = column(plot.controls['select'],
                             plot.plot,
                             row(plot.controls['slider'], plot.controls['button']))
 
+    time.log('main.us_map')
+
     # model result for florida
     page['modeling'] = models_result(roc, importance, palette['theme'][2:],
                                      palette['color'], palette['hover'])
 
+    time.log('main.modeling')
+
     # predictions based on arima since 3/15/2020
-    page['trends'] = show_predictions(cases, deaths, '3/15/2020', palette['trends'])
+    trend = Trends(palette['trends'])
+    page['trends'] = trend.layout()
+
+    time.log('main.trends')
 
     # build layout
     headings_attr = dict(height=40,
@@ -139,10 +142,13 @@ def covid():
     curdoc().theme = Theme(filename=join(cwd(), "theme.yaml"))
 
 
-try:
-    # refresh data
-    if sys.argv[1] == 'refresh':
-        refresh()
-except IndexError:
-    # run app
+if __name__[:9] == 'bokeh_app':
     covid()
+
+else:
+    if len(sys.argv) != 2:
+        sys.exit("Usage: python main.py refresh")
+        if sys.argv[1] == 'refresh':
+            refresh()
+        else:
+            sys.exit("Usage: python main.py refresh")
