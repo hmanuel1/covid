@@ -218,7 +218,7 @@ class Trends:
         self.deaths = LinePlot(ARIMA_DEATHS_TABLE)
         self.deaths.render_figure()
         self.deaths.title("Cumulative Deaths by State")
-        self.cases.axis_label('Date', 'Deaths')
+        self.deaths.axis_label('Date', 'Deaths')
         self.deaths.color_palette(palette)
 
         time.log('trends:state deaths')
