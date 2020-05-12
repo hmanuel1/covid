@@ -15,9 +15,10 @@ cryptography==2.9.2
 cycler==0.10.0
 Cython==0.29.17
 DateTime==4.3
-Fiona==1.8.4
+# Fiona==1.8.4 part of geopandas
 geopandas==0.6.1
 github.py==0.5.0
+gunicorn==20.0.4
 idna==2.9
 imbalanced-learn==0.5.0
 Jinja2==2.11.2
@@ -52,7 +53,13 @@ statsmodels==0.11.1
 tornado==6.0.4
 typing-extensions==3.7.4.2
 urllib3==1.25.9
+waitress==1.4.3
 win-inet-pton==1.1.0
 wincertstore==0.2
 yarl==1.4.2
 zope.interface==4.6.0
+
+# flask framework
+Werkzeug==1.0.1
+itsdangerous==1.1.0
+flask==1.1.2

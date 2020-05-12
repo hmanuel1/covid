@@ -8,7 +8,11 @@ from bokeh.io import curdoc
 from bokeh.palettes import Purples
 from bokeh.themes import Theme
 
-from utilities import cwd, histogram, vbar
+from utilities import (
+    cwd,
+    histogram,
+    vbar
+)
 from database import DataBase
 from sql import FLDEM_VIEW_TABLE
 

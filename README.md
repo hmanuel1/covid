@@ -40,17 +40,27 @@ Models section explores Florida COVID-19 death correlation with age, county dens
 
 1. Clone or download source files
 
-2. From the *covid-master* directory, install required Python packages:
+2. Install the geopandas python package. Using *pip install geopandas* will likely require intense user interaction as some geopandas dependencies (e.g., Fiona) require GDAL. If you have the Anaconda distribution installed, install geopandas from the **Anaconda PowerShell Prompt**:
+
+``` Anaconda
+conda install -c conda-forge geopandas
+```
+
+3. From the *covid-master* directory, install required Python packages:
 
 ``` python
 pip install -r requirements.txt
 ```
 
-3. From the *app* directory, run app:
+4. From the *app* directory, run app:
 
 ``` python
-bokeh serve --show covid
+python run.py
 ```
+
+If everything goes well, it will open a web page showing a 'busy spinner'.
+
+5. Finally, click on this link http://localhost:8000 or type the URL in your web browser.
 
 ### Data Sources
 
@@ -60,11 +70,13 @@ bokeh serve --show covid
 
 ### Technologies
 
+* AI and ML
+* AJAX
+* Bokeh
+* Flask
+* HTML
+* GIS
+* JavaScript
 * Python
 * Python Packages
-* Bokeh
 * SQLite
-* HTML
-* JavaScript
-* AJAX
-* AI and ML

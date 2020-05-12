@@ -62,10 +62,8 @@ def roc(data, palette, plot_width=400, plot_height=400):
 
         plot.add_tools(HoverTool(renderers=[lines[category]],
                                  tooltips=[('Model', '@model'),
-                                           ('False Pos Rate',
-                                            '@fpr'),
-                                           ('True Pos Rate',
-                                            '@tpr'),
+                                           ('False Pos Rate', '@fpr'),
+                                           ('True Pos Rate', '@tpr'),
                                            ('AUC', '@auc{0.0000}'),
                                            ('LogLoss', '@logloss{0.0000}')]))
 

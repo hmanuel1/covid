@@ -7,10 +7,58 @@ import time
 
 import numpy as np
 from bokeh.plotting import figure
+from bokeh.models.widgets import Div
 from bokeh.models import (
     HoverTool,
     NumeralTickFormatter
 )
+
+
+SPINNER_TEXT = """
+<!-- https://www.w3schools.com/howto/howto_css_loader.asp -->
+<div class="loader">
+<style scoped>
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+</div>
+"""
+
+class StartupSpinner:
+    """Busy spinner
+    """
+    def __init__(self):
+        self.spinner = Div(text="", width=120, height=120)
+
+    def show(self):
+        """Show spinner
+        """
+        self.spinner.text = SPINNER_TEXT
+
+    def hide(self):
+        """Hide spinner
+        """
+        self.spinner.text = ''
+
+    def control(self):
+        """Return model (Div) instance
+
+        Returns:
+            Bokeh Div -- Div instance
+        """
+        return self.spinner
+
 
 class ElapsedMilliseconds:
     """Time execution time
@@ -41,14 +89,16 @@ class ElapsedMilliseconds:
         self.last_local = int(round(time.time() * 1000))
         return self.last_elapsed
 
-    def log(self, msg=''):
+    def log(self, module='', function='', process=''):
         """Print elapsed time since last call
 
         Keyword Arguments:
-            msg {String} -- optional message to print before time (default: {''})
+            module {String} -- module name (default: {''})
+            function {String} -- function name (default: {''})
+            process {String} -- process name (default: {''})
         """
         if self.log_time:
-            print(f"{msg}: {self.elapsed()} ms")
+            print(f"{module}:{function}:{process}:{self.elapsed()}ms")
 
     def restart(self):
         """Restart time reference
@@ -72,10 +122,18 @@ def cwd():
 
 
 def histogram(x, xlabel='x', ylabel='y', **kwargs):
-    """
-        plot histogram
-    """
+    """Plot histogram
 
+    Arguments:
+        x {list, array, or series} -- data to plot histogram
+
+    Keyword Arguments:
+        xlabel {String} -- x axis label (default: {'x'})
+        ylabel {String} -- y axis label (default: {'y'})
+
+    Returns:
+        Bokeh figure -- plot
+    """
     # plot settings
     figure_settings = dict(title=None, tools='', background_fill_color=None)
 
@@ -109,7 +167,7 @@ def histogram(x, xlabel='x', ylabel='y', **kwargs):
 
     plot.add_tools(HoverTool(renderers=[quad],
                              tooltips=[(f"{xlabel.title()} Range", '@left{int} to @right{int}'),
-                                       (ylabel.title(), '@top')]))
+                                       (ylabel.title(), '@top{0,0}')]))
 
     plot.y_range.start = 0
     plot.xaxis.axis_label = xlabel
@@ -149,7 +207,7 @@ def vbar(x, y, xlabel='x', ylabel='y', **kwargs):
     vbar_glyph = plot.vbar(x=x, top=y, **vbar_settings)
 
     # tooltips
-    tooltips = [(xlabel.title(), '@x'), (ylabel.title(), '@top')]
+    tooltips = [(xlabel.title(), '@x'), (ylabel.title(), '@top{0,0}')]
     if misc_settings['user_tooltips'] != 'auto':
         tooltips = misc_settings['user_tooltips']
 

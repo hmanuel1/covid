@@ -1,16 +1,86 @@
 """
    Bokeh based functions for line, histogram and bar charts
 """
-
+# %%
 import os
 import time
 
 import numpy as np
+
+from bokeh.io import show
 from bokeh.plotting import figure
+from bokeh.layouts import gridplot
+from bokeh.models.widgets import Div
 from bokeh.models import (
+    Spacer,
     HoverTool,
     NumeralTickFormatter
 )
+
+
+SPINNER_TEXT = """
+<!-- https://www.w3schools.com/howto/howto_css_loader.asp -->
+<div class="loader">
+<style scoped>
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+</div>
+"""
+
+class BusySpinner:
+    """Busy spinner
+    """
+    def __init__(self):
+        self.spinner = Div(text="", width=120, height=120, name='spinner')
+
+    def show(self):
+        """Show busy spinner
+        """
+        self.spinner.text = SPINNER_TEXT
+
+    def hide(self):
+        """Hide busy spinner
+        """
+        self.spinner = Div(text="", width=120, height=120, name='spinner')
+
+    def text(self, text=''):
+        """Replace text of spinner
+
+        Keyword Arguments:
+            text {str} -- spinner text (default: {''})
+        """
+        self.spinner = Div(text=text, width=120, height=120, name='spinner')
+
+    def control(self):
+        """Return model (Div) instance
+
+        Returns:
+            Bokeh Div -- Div instance
+        """
+        spin = self.spinner
+        space = Spacer(width=200, height=200)
+        layout = gridplot([
+            [space, space, space, space, space],
+            [space, space, spin, space, space],
+            [space, space, space, space, space],
+        ],
+                          plot_width=50,
+                          plot_height=50,
+                          toolbar_location=None)
+        return layout
+
 
 class ElapsedMilliseconds:
     """Time execution time
@@ -41,14 +111,16 @@ class ElapsedMilliseconds:
         self.last_local = int(round(time.time() * 1000))
         return self.last_elapsed
 
-    def log(self, msg=''):
+    def log(self, module='', function='', process=''):
         """Print elapsed time since last call
 
         Keyword Arguments:
-            msg {String} -- optional message to print before time (default: {''})
+            module {String} -- module name (default: {''})
+            function {String} -- function name (default: {''})
+            process {String} -- process name (default: {''})
         """
         if self.log_time:
-            print(f"{msg}: {self.elapsed()} ms")
+            print(f"{module}:{function}:{process}:{self.elapsed()}ms")
 
     def restart(self):
         """Restart time reference
@@ -58,10 +130,12 @@ class ElapsedMilliseconds:
 
 
 def cwd():
-    """
-        Return current working directory from __file__ or OS
-    """
+    """Return current working directory if running from bokeh server,
+       jupiter or python.
 
+    Returns:
+        String -- path to current working directory
+    """
     try:
         __file__
     except NameError:
@@ -72,10 +146,18 @@ def cwd():
 
 
 def histogram(x, xlabel='x', ylabel='y', **kwargs):
-    """
-        plot histogram
-    """
+    """Plot histogram
 
+    Arguments:
+        x {list, array, or series} -- data to plot histogram
+
+    Keyword Arguments:
+        xlabel {String} -- x axis label (default: {'x'})
+        ylabel {String} -- y axis label (default: {'y'})
+
+    Returns:
+        Bokeh figure -- plot
+    """
     # plot settings
     figure_settings = dict(title=None, tools='', background_fill_color=None)
 
@@ -119,10 +201,20 @@ def histogram(x, xlabel='x', ylabel='y', **kwargs):
 
 
 def vbar(x, y, xlabel='x', ylabel='y', **kwargs):
-    """
-        Plot vertical bars
-    """
+    """Plot histogram
 
+    Arguments:
+        x {list, array, or series} -- x data for vertical bars
+        y {list, array, or series} -- y data for vertical bars
+
+    Keyword Arguments:
+        xlabel {String} -- x axis label (default: {'x'})
+        ylabel {String} -- y axis label (default: {'y'})
+
+    Returns:
+        Bokeh figure -- plot
+
+    """
     # figure and vbar settings
     figure_settings = dict(x_range=x, plot_height=600, plot_width=950,
                            title=None, toolbar_location=None, tools='')
@@ -170,3 +262,11 @@ def vbar(x, y, xlabel='x', ylabel='y', **kwargs):
     plot.yaxis.axis_label = ylabel
 
     return plot
+
+# %%
+
+spinner = BusySpinner()
+spinner.show()
+show(spinner.control())
+
+# %%
