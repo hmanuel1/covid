@@ -5,6 +5,8 @@ Returns:
 """
 import os
 
+import pprint
+
 from flask import (
     Flask,
     render_template,
@@ -50,6 +52,9 @@ def index():
     script, div = components(plot)
 
     return render_template('index.html', script=script, div=div, title='Test')
+
+print("User's Environment variable:")
+pprint.pprint(dict(os.environ), width=1)
 
 # with debug=True, flask server will auto-reload
 # when there are code changes
