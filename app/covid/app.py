@@ -143,7 +143,7 @@ def index():
 
     script = server_document('http://localhost:%d/bkapp' % port)
 
-    return render_template("embed.html", script=script, template="Flask")
+    return render_template("index.html", script=script, template="Flask")
 
 def bk_worker():
     """Worker thread
