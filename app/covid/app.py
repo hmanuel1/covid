@@ -3,6 +3,7 @@
 Returns:
     Bokeh Document -- Bokeh document
 """
+import os
 import asyncio
 from os.path import join
 from functools import partial
@@ -164,4 +165,4 @@ tread = Thread(target=bk_worker, daemon=True)
 tread.start()
 
 if __name__ == '__main__':
-    app.run(threaded=True, port=8000)
+    app.run(threaded=True, port=int(os.environ.get("PORT", 8000)))
