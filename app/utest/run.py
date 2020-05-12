@@ -1,10 +1,7 @@
 """Run Bokeh App
 """
-
+import os
 import waitress
-import flask_trends
+import app
 
-print('flask_trends:app running at: http://localhost:8000')
-
-waitress.serve(flask_trends.app, host='0.0.0.0', port=8000)
-
+waitress.serve(app.app, host='*', port=int(os.environ.get("PORT", 5000)))
