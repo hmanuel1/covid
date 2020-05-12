@@ -129,7 +129,7 @@ def bkapp(doc):
 bkapp = Application(FunctionHandler(bkapp))
 
 # each process will listen on its own port
-sockets, port = bind_sockets('localhost', 0)
+sockets, port = bind_sockets('0.0.0.0', 0)
 
 @app.route('/', methods=['GET'])
 def index():
@@ -141,7 +141,7 @@ def index():
     command = request.args.get('command')
     parse_command(command)
 
-    script = server_document('http://localhost:%d/bkapp' % port)
+    script = server_document('http://0.0.0.0:%d/bkapp' % port)
 
     return render_template("index.html", script=script, template="Flask")
 
