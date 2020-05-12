@@ -1,7 +1,7 @@
 """Print Hello, <name> in web browser
 
 Returns:
-    DOM -- web page
+    html -- web page
 """
 
 
@@ -14,11 +14,6 @@ from bokeh.embed import components
 from bokeh.layouts import row
 
 from trends import Trends
-from refresh import (
-    RefreshData,
-    Status
-)
-from utilities import BusySpinner
 
 app = Flask(__name__)
 
