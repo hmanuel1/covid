@@ -1,9 +1,8 @@
-"""Print Hello, <name> in web browser
+"""Embed Bokeh plot with Flask
 
 Returns:
     html -- web page
 """
-
 
 from flask import (
     Flask,
@@ -11,29 +10,24 @@ from flask import (
     request
 )
 from bokeh.embed import components
-from bokeh.layouts import row
+from bokeh.plotting import figure
 
-from trends import Trends
 
 app = Flask(__name__)
 
 
-
 # main app plot
 def create_figure():
-    """Plot histogram of Iris feature
-
-    Arguments:
-        feature_name {String} -- iris feature name
-        var2 {[type]} -- [description]
+    """Test Figure
 
     Returns:
-        [type] -- [description]
+        figure-- bokeh figure
     """
-    trend = Trends()
-
-    return row(trend.multiselect, trend.cases.plot, trend.deaths.plot)
-
+    x = [1, 2, 3, 5]
+    y = [6, 7, 8, 9]
+    plot = figure()
+    plot.line(x=x, y=y)
+    return plot
 
 # Index page
 @app.route('/')
@@ -54,7 +48,7 @@ def index():
     # embed plot into html via bokeh flask render
     script, div = components(plot)
 
-    return render_template('index.html', script=script, div=div)
+    return render_template('index.html', script=script, div=div, title='Test')
 
 # with debug=True, flask server will auto-reload
 # when there are code changes
