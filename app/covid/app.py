@@ -140,8 +140,8 @@ def index():
     Returns:
         flask rendered html -- flask rendered html
     """
-    # command = request.args.get('command')
-    # parse_command(command)
+    command = request.args.get('command')
+    parse_command(command)
 
     script = server_document('localhost:%d/bkapp' % port)
 

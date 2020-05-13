@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -b 0.0.0.0:$PORT --chdir app/covid app:app
+web: bokeh serve --port=$PORT --allow-websocket-origin=safe-scrubland-67589.herokuapp.com --address=0.0.0.0 --use-xheaders app/covid
