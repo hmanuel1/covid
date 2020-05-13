@@ -55,8 +55,8 @@ def bkapp(doc):
     Arguments:
         doc {Bokeh Document} -- document object with a plot and a slider
     """
-    df = sea_surface_temperature.copy()
-    source = ColumnDataSource(data=df)
+    dataframe = sea_surface_temperature.copy()
+    source = ColumnDataSource(data=dataframe)
 
     plot = figure(x_axis_type='datetime', y_range=(0, 25),
                   y_axis_label='Temperature (Celsius)',
@@ -65,9 +65,9 @@ def bkapp(doc):
 
     def callback(_attr, _old, new):
         if new == 0:
-            data = df
+            data = dataframe
         else:
-            data = df.rolling('{0}D'.format(new)).mean()
+            data = dataframe.rolling('{0}D'.format(new)).mean()
         source.data = ColumnDataSource.from_df(data)
 
     slider = Slider(start=0, end=30, value=0, step=1, title="Smoothing by N Days")
@@ -83,7 +83,6 @@ bkapp = Application(FunctionHandler(bkapp))
 # This is so that if this app is run using something like "gunicorn -w 4" then
 # each process will listen on its own port
 sockets, port = bind_sockets("localhost", 0)
-
 
 @app.route('/', methods=['GET'])
 def bkapp_page():
@@ -105,7 +104,9 @@ def bk_worker():
 
     env_port = os.environ.get('PORT', default='8000')
 
-    websocket_origins = [f"0.0.0.0:{env_port}", '127.0.0.1:8000']
+    websocket_origins = [f"0.0.0.0:{env_port}",
+                         '127.0.0.1:8000',
+                         f"safe-scrubland-67589.herokuapp.com:{env_port}"]
 
     bokeh_tornado = BokehTornado({'/bkapp': bkapp},
                                  extra_websocket_origins=websocket_origins)
