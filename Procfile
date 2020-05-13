@@ -1,1 +1,1 @@
-web: python utest/run.py
+web: python app/utest/run.py

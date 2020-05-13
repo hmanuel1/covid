@@ -12,7 +12,7 @@ PROXY_HEADERS = "x-forwarded-for x-forwarded-host x-forwarded-proto x-forwarded-
 NUM_THREADS = 4
 INACTIVITY_TIMEOUT = 660
 
-print(f"app served locally at http://127.0.0.1:8000")
+print("app served locally at http://127.0.0.1:8000")
 print(f"app served heroku at http://{HOST}:{PORT}")
 serve(app,
       threads=NUM_THREADS,
