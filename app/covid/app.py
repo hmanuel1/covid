@@ -143,7 +143,7 @@ def index():
     command = request.args.get('command')
     parse_command(command)
 
-    script = server_document('0.0.0.0:%d/bkapp' % port)
+    script = server_document('localhost:%d/bkapp' % port)
 
     return render_template("index.html", script=script, template="Flask")
 
