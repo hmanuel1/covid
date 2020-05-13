@@ -7,8 +7,8 @@ from app import app
 
 HOST = '0.0.0.0'
 PORT = int(os.environ.get('PORT', default=8000))
-# TRUSTED_PROXY = 'localhost'
-# PROXY_HEADERS = "x-forwarded-for x-forwarded-host x-forwarded-proto x-forwarded-port"
+TRUSTED_PROXY = 'localhost'
+PROXY_HEADERS = "x-forwarded-for x-forwarded-host x-forwarded-proto x-forwarded-port"
 NUM_THREADS = 4
 INACTIVITY_TIMEOUT = 660
 
@@ -19,7 +19,6 @@ serve(app,
       host=HOST,
       port=PORT,
       channel_timeout=INACTIVITY_TIMEOUT,
-      url_scheme='http')
-    #   trusted_proxy=TRUSTED_PROXY,
-    #   trusted_proxy_headers=PROXY_HEADERS,
-    #   log_untrusted_proxy_headers=True)
+      trusted_proxy=TRUSTED_PROXY,
+      trusted_proxy_headers=PROXY_HEADERS,
+      log_untrusted_proxy_headers=True)

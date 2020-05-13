@@ -14,6 +14,8 @@ except ImportError:
 from threading import Thread
 
 from flask import Flask, render_template
+from flask_cors import CORS, cross_origin
+
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
 
@@ -32,6 +34,8 @@ from bokeh.themes import Theme
 
 app = Flask(__name__)
 
+app.config['CORS_HEADERS'] = 'Content-Type'
+cors = CORS(app, resources={r"/bkapp": {"origins": "*"}})
 
 def cwd():
     """Return current working directory if running from bokeh server,
@@ -84,6 +88,11 @@ bkapp = Application(FunctionHandler(bkapp))
 # each process will listen on its own port
 sockets, port = bind_sockets("localhost", 0)
 
+@app.route('/bkapp')
+@cross_origin(origin='*', headers=['Content-Type'])
+def hello():
+    return 'bkapp'
+
 @app.route('/', methods=['GET'])
 def bkapp_page():
     """Flask index route
@@ -94,7 +103,7 @@ def bkapp_page():
         html document -- html render to the user browser
     """
     #script = server_document('http://localhost:%d/bkapp' % port)
-    script = server_document(f"https://safe-scrubland-67589.herokuapp.com:{port}/bkapp")
+    script = server_document(f"http://localhost:{port}/bkapp")
     return render_template("embed.html", script=script, template="Flask")
 
 def bk_worker():
