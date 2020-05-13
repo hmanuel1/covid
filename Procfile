@@ -1,1 +1,1 @@
-web: python app/utest/run.py
+web: gunicorn -w 4 --chdir app/utest app:app
