@@ -19,7 +19,7 @@ serve(app,
       host=HOST,
       port=PORT,
       channel_timeout=INACTIVITY_TIMEOUT,
-      url_scheme='https')
+      url_scheme='http')
     #   trusted_proxy=TRUSTED_PROXY,
     #   trusted_proxy_headers=PROXY_HEADERS,
     #   log_untrusted_proxy_headers=True)
