@@ -1,38 +1,10 @@
 attrs:
-  Plot:
-    min_border: 0
-
-  DataRange:
-      only_visible: True
-
-  Axis:
-    minor_tick_in: null
-    minor_tick_out: null
-    major_tick_in: null
-    major_label_text_font_size: '11px'
-    major_label_text_font_style: 'normal'
-    axis_label_text_font_size: '11px'
-
-    axis_line_color: '#AAAAAA'
-    major_tick_line_color: '#AAAAAA'
-    major_label_text_color: '#666666'
-
-    major_tick_line_cap: 'round'
-    axis_line_cap: 'round'
-    axis_line_width: 1
-    major_tick_line_width: 1
-
-  Grid:
-    grid_line_color: null
-
-  Legend:
-    label_text_font_size: '8pt'
-    background_fill_alpha: 0
-    background_fill_color: null
-    border_line_color: null
-    spacing: 0
-
-  Toolbar:
-    active_drag: null
-    autohide: False
-    logo: null
+    Figure:
+        background_fill_color: "#DDDDDD"
+        outline_line_color: white
+        toolbar_location: above
+        height: 500
+        width: 800
+    Grid:
+        grid_line_dash: [6, 4]
+        grid_line_color: white

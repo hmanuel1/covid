@@ -14,7 +14,6 @@ from flask import (
     render_template,
     request
 )
-from flask_cors import CORS
 
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
@@ -39,7 +38,6 @@ from refresh import (
 
 
 app = Flask(__name__)
-CORS(app)
 
 
 refresh = RefreshData()
@@ -167,4 +165,4 @@ tread = Thread(target=bk_worker, daemon=True)
 tread.start()
 
 if __name__ == '__main__':
-    app.run(threaded=True, port=int(os.environ.get("PORT", 8000)))
+    app.run(port=int(os.environ.get("PORT", 8000)), debug=True)

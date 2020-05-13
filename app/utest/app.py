@@ -1,62 +1,121 @@
-"""Embed Bokeh plot with Flask
-
-Returns:
-    html -- web page
 """
+    Embed bokeh server session into flask framework
+    Adapted from bokeh-master/examples/howto/serve_embed/flask_gunicorn_embed.py
+"""
+
 import os
+from os.path import join
 
-import pprint
+try:
+    import asyncio
+except ImportError:
+    raise RuntimeError("This example requires Python3 / asyncio")
 
-from flask import (
-    Flask,
-    render_template,
-    request
-)
-from bokeh.embed import components
+from threading import Thread
+
+from flask import Flask, render_template
+from tornado.httpserver import HTTPServer
+from tornado.ioloop import IOLoop
+
+from bokeh.application import Application
+from bokeh.application.handlers import FunctionHandler
+from bokeh.embed import server_document
+from bokeh.layouts import column
+from bokeh.models import ColumnDataSource, Slider
 from bokeh.plotting import figure
+from bokeh.sampledata.sea_surface_temperature import sea_surface_temperature
+from bokeh.server.server import BaseServer
+from bokeh.server.tornado import BokehTornado
+from bokeh.server.util import bind_sockets
+from bokeh.themes import Theme
 
 
 app = Flask(__name__)
 
 
-# main app plot
-def create_figure():
-    """Test Figure
+def cwd():
+    """Return current working directory if running from bokeh server,
+       jupiter or python.
 
     Returns:
-        figure-- bokeh figure
+        String -- path to current working directory
     """
-    x = [1, 2, 3, 5]
-    y = [6, 7, 8, 9]
-    plot = figure()
-    plot.line(x=x, y=y)
-    return plot
+    try:
+        __file__
+    except NameError:
+        cur_working_dir = os.getcwd()
+    else:
+        cur_working_dir = os.path.dirname(__file__)
+    return cur_working_dir
 
-# Index page
-@app.route('/')
-def index():
-    """Embed bokeh app with Flask
+
+def bkapp(doc):
+    """Bokeh test app
+
+    Arguments:
+        doc {Bokeh Document} -- document object with a plot and a slider
+    """
+    df = sea_surface_temperature.copy()
+    source = ColumnDataSource(data=df)
+
+    plot = figure(x_axis_type='datetime', y_range=(0, 25),
+                  y_axis_label='Temperature (Celsius)',
+                  title="Sea Surface Temperature at 43.18, -70.43")
+    plot.line(x='time', y='temperature', source=source)
+
+    def callback(_attr, _old, new):
+        if new == 0:
+            data = df
+        else:
+            data = df.rolling('{0}D'.format(new)).mean()
+        source.data = ColumnDataSource.from_df(data)
+
+    slider = Slider(start=0, end=30, value=0, step=1, title="Smoothing by N Days")
+    slider.on_change('value', callback)
+
+    doc.add_root(column(slider, plot))
+
+    doc.theme = Theme(filename=join(cwd(), "theme.yaml"))
+
+# can't use shortcuts here, since we are passing to low level BokehTornado
+bkapp = Application(FunctionHandler(bkapp))
+
+# This is so that if this app is run using something like "gunicorn -w 4" then
+# each process will listen on its own port
+sockets, port = bind_sockets("localhost", 0)
+
+
+@app.route('/', methods=['GET'])
+def bkapp_page():
+    """Flask index route
+        it takes the bokeh document from a tornado server and embeds its content
+        into a jinja2 template.
 
     Returns:
-        Flask rendered html -- flask rendered html
+        html document -- html render to the user browser
     """
-    # Determine the selected feature
-    command = request.args.get('command')
+    script = server_document('http://localhost:%d/bkapp' % port)
+    return render_template("embed.html", script=script, template="Flask")
 
-    print(command)
+def bk_worker():
+    """ Worker thread to run the bokeh server once, so Bokeh document can be
+        extracted for every http request.
+    """
+    asyncio.set_event_loop(asyncio.new_event_loop())
 
-    # create the plot
-    plot = create_figure()
+    env_port = os.environ.get('PORT', default='8000')
 
-    # embed plot into html via bokeh flask render
-    script, div = components(plot)
+    websocket_origins = [f"0.0.0.0:{env_port}", '127.0.0.1:8000']
 
-    return render_template('index.html', script=script, div=div, title='Test')
+    bokeh_tornado = BokehTornado({'/bkapp': bkapp},
+                                 extra_websocket_origins=websocket_origins)
+    bokeh_http = HTTPServer(bokeh_tornado)
+    bokeh_http.add_sockets(sockets)
 
-print("User's Environment variable:")
-pprint.pprint(dict(os.environ), width=1)
+    server = BaseServer(IOLoop.current(), bokeh_tornado, bokeh_http)
+    server.start()
+    server.io_loop.start()
 
-# with debug=True, flask server will auto-reload
-# when there are code changes
-if __name__ == '__main__':
-    app.run(port=int(os.environ.get("PORT", 5000)), debug=True)
+t = Thread(target=bk_worker)
+t.daemon = True
+t.start()
