@@ -4,7 +4,6 @@
 """
 
 import os
-from os.path import join
 
 try:
     import asyncio
@@ -14,46 +13,29 @@ except ImportError:
 from threading import Thread
 
 from flask import Flask, render_template
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
 
 from bokeh.application import Application
 from bokeh.application.handlers import FunctionHandler
-from bokeh.embed import server_document, components
-from bokeh.layouts import column
-from bokeh.models import ColumnDataSource, Slider
+from bokeh.embed import server_document
+from bokeh.models import ColumnDataSource
 from bokeh.plotting import figure
 from bokeh.sampledata.sea_surface_temperature import sea_surface_temperature
 from bokeh.server.server import BaseServer
 from bokeh.server.tornado import BokehTornado
 from bokeh.server.util import bind_sockets
-from bokeh.themes import Theme
 
 
 app = Flask(__name__)
 
 app.config['CORS_HEADERS'] = 'Content-Type'
-cors = CORS(app, resources={r"/graph": {"origins": "*"}})
-
-def cwd():
-    """Return current working directory if running from bokeh server,
-       jupiter or python.
-
-    Returns:
-        String -- path to current working directory
-    """
-    try:
-        __file__
-    except NameError:
-        cur_working_dir = os.getcwd()
-    else:
-        cur_working_dir = os.path.dirname(__file__)
-    return cur_working_dir
+cors = CORS(app)
 
 
-def graph():
+def graph_func(doc):
     dataframe = sea_surface_temperature.copy()
     source = ColumnDataSource(data=dataframe)
 
@@ -61,62 +43,31 @@ def graph():
                   y_axis_label='Temperature (Celsius)',
                   title="Sea Surface Temperature at 43.18, -70.43")
     plot.line(x='time', y='temperature', source=source)
-    return plot
+    return doc.add_root(plot)
 
 
-def bkapp(doc):
-    """Bokeh test app
-
-    Arguments:
-        doc {Bokeh Document} -- document object with a plot and a slider
-    """
-    dataframe = sea_surface_temperature.copy()
-    source = ColumnDataSource(data=dataframe)
-
-    plot = figure(x_axis_type='datetime', y_range=(0, 25),
-                  y_axis_label='Temperature (Celsius)',
-                  title="Sea Surface Temperature at 43.18, -70.43")
-    plot.line(x='time', y='temperature', source=source)
-
-
-    def callback(_attr, _old, new):
-        if new == 0:
-            data = dataframe
-        else:
-            data = dataframe.rolling('{0}D'.format(new)).mean()
-        source.data = ColumnDataSource.from_df(data)
-
-    slider = Slider(start=0, end=30, value=0, step=1, title="Smoothing by N Days")
-    slider.on_change('value', callback)
-
-    doc.add_root(column(slider, plot))
-
-    doc.theme = Theme(filename=join(cwd(), "theme.yaml"))
 
 # can't use shortcuts here, since we are passing to low level BokehTornado
-bkapp = Application(FunctionHandler(bkapp))
+graph_app = Application(FunctionHandler(graph_func))
 
-# This is so that if this app is run using something like "gunicorn -w 4" then
+
 # each process will listen on its own port
 sockets, port = bind_sockets("localhost", 0)
 
-@app.route('/graph')
-@cross_origin(origin='*', headers=['Content-Type'])
-def hello():
-    script, div = components(graph())
-    return render_template("embed.html", script=script, div=div, framework="Flask")
 
-@app.route('/', methods=['GET'])
-def bkapp_page():
-    """Flask index route
-        it takes the bokeh document from a tornado server and embeds its content
-        into a jinja2 template.
+@app.route('/graph', methods=['GET'])
+def graph_route():
+    script = server_document(f"http://localhost:{port}/graph")
+    return render_template("embed.html", script=script, framework="Flask")
 
-    Returns:
-        html document -- html render to the user browser
-    """
-    script = server_document(f"http://localhost:{port}/bkapp")
-    return render_template("embed.html", script=script, template="Flask")
+
+@app.route('/env', methods=['GET'])
+def env_route():
+    env = '<p>'
+    for  key, value in os.environ.items():
+        env += f"<br>{key}: {value}"
+    return env + '</p>'
+
 
 def bk_worker():
     """ Worker thread to run the bokeh server once, so Bokeh document can be
@@ -131,7 +82,7 @@ def bk_worker():
                          '127.0.0.1:8000',
                          f"safe-scrubland-67589.herokuapp.com:{env_port}"]
 
-    bokeh_tornado = BokehTornado({'/bkapp': bkapp},
+    bokeh_tornado = BokehTornado({'/graph': graph_app},
                                  extra_websocket_origins=websocket_origins)
     bokeh_http = HTTPServer(bokeh_tornado)
     bokeh_http.add_sockets(sockets)

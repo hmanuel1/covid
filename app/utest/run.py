@@ -5,7 +5,7 @@ import os
 from waitress import serve
 from app import app
 
-HOST = '0.0.0.0'
+HOST = '127.0.0.1'
 PORT = int(os.environ.get('PORT', default=8000))
 TRUSTED_PROXY = 'localhost'
 PROXY_HEADERS = "x-forwarded-for x-forwarded-host x-forwarded-proto x-forwarded-port"
