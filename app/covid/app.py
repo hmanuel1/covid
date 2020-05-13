@@ -14,7 +14,7 @@ from flask import (
     render_template,
     request
 )
-from flask_cors import cross_origin
+from flask_cors import CORS, cross_origin
 
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
@@ -39,7 +39,8 @@ from refresh import (
 
 
 app = Flask(__name__)
-
+CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 refresh = RefreshData()
 
