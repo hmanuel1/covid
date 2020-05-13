@@ -143,7 +143,7 @@ def index():
     command = request.args.get('command')
     parse_command(command)
 
-    script = server_document('safe-scrubland-67589.herokuapp.com:%d/bkapp' % port)
+    script = server_document('127.0.0.1:%d/bkapp' % port)
 
     return render_template("index.html", script=script, template="Flask")
 
