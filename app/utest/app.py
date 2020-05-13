@@ -105,6 +105,7 @@ def bk_worker():
     env_port = os.environ.get('PORT', default='8000')
 
     websocket_origins = [f"0.0.0.0:{env_port}",
+                         'localhost:{env_port}',
                          '127.0.0.1:8000',
                          f"safe-scrubland-67589.herokuapp.com:{env_port}"]
 
