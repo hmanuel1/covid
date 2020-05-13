@@ -1,1 +1,1 @@
-web: python app/utest/run.py
+web: gunicorn -w 2 -b :$PORT --chdir app/utest app:app
