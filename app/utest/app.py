@@ -21,7 +21,7 @@ from tornado.ioloop import IOLoop
 
 from bokeh.application import Application
 from bokeh.application.handlers import FunctionHandler
-from bokeh.embed import server_document
+from bokeh.embed import server_document, components
 from bokeh.layouts import column
 from bokeh.models import ColumnDataSource, Slider
 from bokeh.plotting import figure
@@ -35,7 +35,7 @@ from bokeh.themes import Theme
 app = Flask(__name__)
 
 app.config['CORS_HEADERS'] = 'Content-Type'
-cors = CORS(app, resources={r"/bkapp": {"origins": "*"}})
+cors = CORS(app, resources={r"/graph": {"origins": "*"}})
 
 def cwd():
     """Return current working directory if running from bokeh server,
@@ -53,6 +53,17 @@ def cwd():
     return cur_working_dir
 
 
+def graph():
+    dataframe = sea_surface_temperature.copy()
+    source = ColumnDataSource(data=dataframe)
+
+    plot = figure(x_axis_type='datetime', y_range=(0, 25),
+                  y_axis_label='Temperature (Celsius)',
+                  title="Sea Surface Temperature at 43.18, -70.43")
+    plot.line(x='time', y='temperature', source=source)
+    return plot
+
+
 def bkapp(doc):
     """Bokeh test app
 
@@ -66,6 +77,7 @@ def bkapp(doc):
                   y_axis_label='Temperature (Celsius)',
                   title="Sea Surface Temperature at 43.18, -70.43")
     plot.line(x='time', y='temperature', source=source)
+
 
     def callback(_attr, _old, new):
         if new == 0:
@@ -88,10 +100,11 @@ bkapp = Application(FunctionHandler(bkapp))
 # each process will listen on its own port
 sockets, port = bind_sockets("localhost", 0)
 
-@app.route('/bkapp')
+@app.route('/graph')
 @cross_origin(origin='*', headers=['Content-Type'])
 def hello():
-    return 'bkapp'
+    script, div = components(graph())
+    return render_template("embed.html", script=script, div=div, framework="Flask")
 
 @app.route('/', methods=['GET'])
 def bkapp_page():
@@ -102,7 +115,6 @@ def bkapp_page():
     Returns:
         html document -- html render to the user browser
     """
-    #script = server_document('http://localhost:%d/bkapp' % port)
     script = server_document(f"http://localhost:{port}/bkapp")
     return render_template("embed.html", script=script, template="Flask")
 
