@@ -14,7 +14,7 @@ from flask import (
     render_template,
     request
 )
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
@@ -40,7 +40,7 @@ from refresh import (
 
 app = Flask(__name__)
 CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+
 
 refresh = RefreshData()
 
@@ -134,7 +134,6 @@ bkapp = Application(FunctionHandler(bkapp))
 sockets, port = bind_sockets('localhost', 0)
 
 @app.route('/', methods=['GET'])
-@cross_origin()
 def index():
     """Embed Bokeh app into flask html page
 
