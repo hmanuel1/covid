@@ -1,1 +1,1 @@
-web: gunicorn -w 2 -b :$PORT --chdir app/utest app:app
+web: gunicorn -w 4 -b :$PORT --chdir app/covid app:app
