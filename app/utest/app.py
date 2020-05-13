@@ -94,7 +94,7 @@ def bkapp_page():
         html document -- html render to the user browser
     """
     #script = server_document('http://localhost:%d/bkapp' % port)
-    script = server_document('0.0.0.0:%d/bkapp' % port)
+    script = server_document(f"http://0.0.0.0:{port}/bkapp")
     return render_template("embed.html", script=script, template="Flask")
 
 def bk_worker():
