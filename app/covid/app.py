@@ -133,7 +133,7 @@ bkapp = Application(FunctionHandler(bkapp))
 # each process will listen on its own port
 sockets, port = bind_sockets('localhost', 0)
 
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
     """Embed Bokeh app into flask html page
 
@@ -143,7 +143,7 @@ def index():
     command = request.args.get('command')
     parse_command(command)
 
-    script = server_document('127.0.0.1:%d/bkapp' % port)
+    script = server_document('0.0.0.0:%d/bkapp' % port)
 
     return render_template("index.html", script=script, template="Flask")
 
