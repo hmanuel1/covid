@@ -108,7 +108,7 @@ graph_app = Application(FunctionHandler(graph_func))
 
 
 # each process will listen on its own port
-sockets, port = bind_sockets('localhost', 0)
+sockets, port = bind_sockets('0.0.0.0', 0)
 
 
 @app.route('/')
@@ -118,7 +118,8 @@ def index():
 
 @app.route('/graph', methods=['GET'])
 def graph_route():
-    script = server_document(f"http://localhost:{port}/graph_private")
+    script = server_document(f"https://{app_name}:{port}/graph_private",
+                             resources=False)
     return render_template("embed.html", script=script, framework="Flask")
 
 
@@ -147,13 +148,18 @@ def bk_worker():
     websocket_origins = [f"0.0.0.0:{env_port}",
                          f"0.0.0.0:{port}",
                          f"{app_name}:{env_port}",
+                         f"{app_name}:{port}",
                          f"localhost:{port}",
                          '127.0.0.1:8000',
                          'localhost:8000']
 
+    conf = {'use_xheaders': True}
     bokeh_tornado = BokehTornado({'/graph_private': graph_app},
-                                 extra_websocket_origins=websocket_origins)
-    bokeh_http = HTTPServer(bokeh_tornado)
+                                 extra_websocket_origins=websocket_origins,
+                                 **conf)
+
+
+    bokeh_http = HTTPServer(bokeh_tornado, xheaders=True)
     bokeh_http.add_sockets(sockets)
 
     server = BaseServer(IOLoop.current(), bokeh_tornado, bokeh_http)
