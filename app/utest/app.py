@@ -30,8 +30,8 @@ from bokeh.server.server import BaseServer
 from bokeh.server.tornado import BokehTornado
 from bokeh.server.util import bind_sockets
 
-#LOCAL_HOST = 'safe-scrubland-67589.herokuapp.com'
-LOCAL_HOST = 'localhost'
+LOCAL_HOST = 'safe-scrubland-67589.herokuapp.com'
+# LOCAL_HOST = 'localhost'
 
 app = Flask(__name__)
 
