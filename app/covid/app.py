@@ -35,10 +35,10 @@ from utilities import (
     cwd,
     BusySpinner
 )
-from refresh import (
-    RefreshData,
-    Status
-)
+# from refresh import (
+#     RefreshData,
+#     Status
+# )
 
 
 HEROKU_APP_NAME = 'safe-scrubland-67589.herokuapp.com'
@@ -79,13 +79,13 @@ def update(doc, layout=None):
         doc.add_root(layout)
 
     else:
-        duration = refresh.duration()
-        print(f'data refreshed in {duration} minutes')
+        #duration = refresh.duration()
+        #print(f'data refreshed in {duration} minutes')
         doc.clear()
 
         # show complete
         busy_spinner = BusySpinner()
-        busy_spinner.text(f'Data Refreshed in {duration} minutes')
+        #busy_spinner.text(f'Data Refreshed in {duration} minutes')
         doc.add_root(busy_spinner.control())
 
 
