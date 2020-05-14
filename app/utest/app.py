@@ -35,7 +35,7 @@ from bokeh.server.tornado import BokehTornado
 from bokeh.server.util import bind_sockets
 
 
-LOCAL_TESTING = True
+LOCAL_TESTING = False
 
 
 app = Flask(__name__)
@@ -85,7 +85,7 @@ sockets, port = bind_sockets(get_host(), 0)
 
 @app.route('/')
 def index():
-    return "Add /graph or /plot or /env to base URL"
+    return "Add /graph or /env to base URL"
 
 
 @app.route('/graph', methods=['GET'])
