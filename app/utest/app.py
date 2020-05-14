@@ -59,7 +59,7 @@ def cwd():
 
 
 # get heroku app name in .env file
-with open(join(cwd() + '\\.env'), 'r') as env_file:
+with open(join(cwd() + '/.env'), 'r') as env_file:
     app_name = env_file.read()
 
 if not re.match(r'HEROKU_APP_NAME', app_name):
