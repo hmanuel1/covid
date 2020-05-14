@@ -108,7 +108,7 @@ graph_app = Application(FunctionHandler(graph_func))
 
 
 # each process will listen on its own port
-sockets, port = bind_sockets('0.0.0.0', 0)
+sockets, port = bind_sockets('localhost', 0)
 
 
 @app.route('/')
@@ -118,7 +118,9 @@ def index():
 
 @app.route('/autoload', methods=['GET'])
 def autoload_route():
-    script = server_document(f"https://safe-scrubland-67589.herokuapp.com:{port}/graph_private")
+    script = server_document(url=f"http://localhost.com:{port}/graph_private",
+                             relative_urls=True,
+                             resources=None)
 
     script = script.replace('<', '[')
     script = script.replace('>', ']')
@@ -132,7 +134,9 @@ def autoload_route():
 
 @app.route('/graph', methods=['GET'])
 def graph_route():
-    script = server_document(f"https://safe-scrubland-67589.herokuapp.com:{port}/graph_private")
+    script = server_document(url=f"http://localhost:{port}/graph_private",
+                             relative_urls=True,
+                             resources=None)
     return render_template("embed.html", script=script, framework="Flask")
 
 
