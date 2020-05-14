@@ -47,8 +47,10 @@ cors = CORS(app)
 
 def get_host():
     host = 'safe-scrubland-67589.herokuapp.com'
+    sockets, port = bind_sockets('0.0.0.0', 0)
     if LOCAL_TESTING:
         host = '127.0.0.1'
+        sockets, port = bind_sockets(host, 0)
     return host
 
 
@@ -77,10 +79,6 @@ def bkapp(doc):
 
 # can't use shortcuts here, since we are passing to low level BokehTornado
 bkapp = Application(FunctionHandler(bkapp))
-
-
-# each process will listen on its own port
-sockets, port = bind_sockets(get_host(), 0)
 
 
 @app.route('/')
