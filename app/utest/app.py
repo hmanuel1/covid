@@ -47,10 +47,8 @@ cors = CORS(app)
 
 def get_host():
     host = 'safe-scrubland-67589.herokuapp.com'
-
     if LOCAL_TESTING:
         host = '127.0.0.1'
-        sockets, port = bind_sockets(host, 0)
     return host
 
 sockets, port = bind_sockets('0.0.0.0', 0)
@@ -147,9 +145,9 @@ if __name__ == '__main__':
     print(f"main server listening at {get_host()}:{get_port()}", file=sys.stderr)
     serve(app,
           threads=4,
-          host='*',
+          host='0.0.0.0',
           port=get_port(),
           channel_timeout=660,
-          trusted_proxy=get_host(),
+          trusted_proxy='0.0.0.0',
           trusted_proxy_headers="x-forwarded-for x-forwarded-host x-forwarded-proto x-forwarded-port",
           log_untrusted_proxy_headers=True)
