@@ -42,6 +42,8 @@ HEROKU_APP_NAME = 'safe-scrubland-67589.herokuapp.com'
 
 
 app = Flask(__name__)
+
+app.config['CORS_HEADERS'] = 'Content-Type'
 cors = CORS(app)
 
 refresh = RefreshData()
@@ -175,6 +177,3 @@ def bk_worker():
 
 tread = Thread(target=bk_worker, daemon=True)
 tread.start()
-
-if __name__ == '__main__':
-    app.run(port=int(os.environ.get("PORT", 8000)), debug=False)
