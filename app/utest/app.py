@@ -30,8 +30,7 @@ from bokeh.server.server import BaseServer
 from bokeh.server.tornado import BokehTornado
 from bokeh.server.util import bind_sockets
 
-LOCAL_HOST = 'safe-scrubland-67589.herokuapp.com'
-# LOCAL_HOST = 'localhost'
+HOST = 'safe-scrubland-67589.herokuapp.com'
 
 app = Flask(__name__)
 
@@ -69,12 +68,12 @@ graph_app = Application(FunctionHandler(graph_func))
 
 
 # each process will listen on its own port
-sockets, port = bind_sockets(LOCAL_HOST, 0)
+sockets, port = bind_sockets('localhost', 0)
 
 
 @app.route('/graph', methods=['GET'])
 def graph_route():
-    script = server_document(f"http://{LOCAL_HOST}:{port}/graph_private")
+    script = server_document(f"http://localhost:{port}/graph_private")
     return render_template("embed.html", script=script, framework="Flask")
 
 
@@ -103,8 +102,11 @@ def bk_worker():
     env_port = os.environ.get('PORT', default='8000')
 
     websocket_origins = [f"0.0.0.0:{env_port}",
-                         f"{LOCAL_HOST}:{env_port}",
-                         '127.0.0.1:8000']
+                         f"0.0.0.0:{port}",
+                         f"{HOST}:{env_port}",
+                         f"localhost:{port}",
+                         '127.0.0.1:8000',
+                         'localhost:8000']
 
     bokeh_tornado = BokehTornado({'/graph_private': graph_app},
                                  extra_websocket_origins=websocket_origins)
