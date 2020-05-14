@@ -68,7 +68,7 @@ else:
     app_name = re.sub(r'HEROKU_APP_NAME\s{0,}=', '', app_name).strip()
 
 
-def graph_func(doc):
+def bkapp(doc):
     """ Test plot with slider, callback
 
     Arguments:
@@ -104,7 +104,7 @@ def graph_plot():
 
 
 # can't use shortcuts here, since we are passing to low level BokehTornado
-graph_app = Application(FunctionHandler(graph_func))
+bkapp = Application(FunctionHandler(bkapp))
 
 
 # each process will listen on its own port
@@ -118,7 +118,7 @@ def index():
 
 @app.route('/graph', methods=['GET'])
 def graph_route():
-    script = server_document(f"https://{app_name}:{port}/graph_private",
+    script = server_document(f"https://{app_name}:{port}/bkapp",
                              resources=None)
     return render_template("embed.html", script=script, framework="Flask")
 
@@ -145,16 +145,10 @@ def bk_worker():
 
     env_port = os.environ.get('PORT', default='8000')
 
-    websocket_origins = [f"0.0.0.0:{env_port}",
-                         f"0.0.0.0:{port}",
-                         f"{app_name}:{env_port}",
-                         f"{app_name}:{port}",
-                         f"localhost:{port}",
-                         '127.0.0.1:8000',
-                         'localhost:8000']
+    websocket_origins = ["0.0.0.0", app_name, 'localhost']
 
     conf = {'use_xheaders': True}
-    bokeh_tornado = BokehTornado({'/graph_private': graph_app},
+    bokeh_tornado = BokehTornado({'/bkapp': bkapp},
                                  extra_websocket_origins=websocket_origins,
                                  **conf)
 

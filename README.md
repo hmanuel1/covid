@@ -55,12 +55,11 @@ pip install -r requirements.txt
 4. From the *app* directory, run app:
 
 ``` python
-python run.py
+bokeh serve --show covid
 ```
 
-If everything goes well, it will open a web page showing a 'busy spinner'.
+If everything goes well, it will open the COVID-19 page.
 
-5. Finally, click on this link http://localhost:8000 or type the URL in your web browser.
 
 ### Data Sources
 
@@ -73,7 +72,7 @@ If everything goes well, it will open a web page showing a 'busy spinner'.
 * AI and ML
 * AJAX
 * Bokeh
-* Flask
+* Flask (work-in-progesss)
 * HTML
 * GIS
 * JavaScript
