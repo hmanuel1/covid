@@ -108,7 +108,7 @@ graph_app = Application(FunctionHandler(graph_func))
 
 
 # each process will listen on its own port
-sockets, port = bind_sockets('localhost', 0)
+sockets, port = bind_sockets('0.0.0.0', 0)
 
 
 @app.route('/')
