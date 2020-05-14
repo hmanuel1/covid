@@ -119,7 +119,7 @@ def index():
 @app.route('/graph', methods=['GET'])
 def graph_route():
     script = server_document(f"https://{app_name}:{port}/graph_private",
-                             resources=False)
+                             resources=None)
     return render_template("embed.html", script=script, framework="Flask")
 
 
