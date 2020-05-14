@@ -1,13 +1,19 @@
 """Run Flask App
+   For Heroku set LOCAL_TESTING = FALSE
 """
 
 import os
 from waitress import serve
 from app import app
 
-#HOST = '127.0.0.1'
-HOST = '0.0.0.0'
-PORT = int(os.environ.get('PORT', default=8000))
+LOCAL_TESTING = False
+
+if LOCAL_TESTING:
+    HOST = '127.0.0.1'
+else:
+    HOST = '0.0.0.0'
+
+PORT = int(os.environ.get('PORT', default='8000'))
 TRUSTED_PROXY = 'localhost'
 PROXY_HEADERS = "x-forwarded-for x-forwarded-host x-forwarded-proto x-forwarded-port"
 NUM_THREADS = 4

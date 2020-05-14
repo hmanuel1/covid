@@ -1,5 +1,5 @@
 """
-    Embed bokeh server session into flask framework
+    Embed bokeh server session into a flask framework
     Adapted from bokeh-master/examples/howto/serve_embed/flask_gunicorn_embed.py
 """
 
@@ -42,6 +42,14 @@ get_sri_hashes_for_version(__version__)
 
 
 def graph_func(doc):
+    """ Test plot with slider, callback
+
+    Arguments:
+        doc {Bokeh Document} -- bokeh document
+
+    Returns:
+        Bokeh Document --bokeh document with plot and slider added
+    """
     dataframe = sea_surface_temperature.copy()
     source = ColumnDataSource(data=dataframe)
 
@@ -53,6 +61,11 @@ def graph_func(doc):
 
 
 def graph_plot():
+    """ Test plot with no callbacks, no controls
+
+    Returns:
+        [type] -- [description]
+    """
     dataframe = sea_surface_temperature.copy()
     source = ColumnDataSource(data=dataframe)
 
@@ -69,6 +82,11 @@ graph_app = Application(FunctionHandler(graph_func))
 
 # each process will listen on its own port
 sockets, port = bind_sockets('localhost', 0)
+
+
+@app.route('/')
+def index():
+    return "Add /graph or /plot or /env to base URL"
 
 
 @app.route('/graph', methods=['GET'])
@@ -95,15 +113,13 @@ def bk_worker():
     """ Worker thread to run the bokeh server once, so Bokeh document can be
         extracted for every http request.
     """
-    print('bokeh worker executed')
-
     asyncio.set_event_loop(asyncio.new_event_loop())
 
     env_port = os.environ.get('PORT', default='8000')
 
     websocket_origins = [f"0.0.0.0:{env_port}",
                          f"0.0.0.0:{port}",
-                         f"{HOST}:{env_port}",
+                         #f"{HOST}:{env_port}",
                          f"localhost:{port}",
                          '127.0.0.1:8000',
                          'localhost:8000']
