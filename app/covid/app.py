@@ -42,7 +42,7 @@ HEROKU_APP_NAME = 'safe-scrubland-67589.herokuapp.com'
 
 
 app = Flask(__name__)
-CORS(app)
+cors = CORS(app)
 
 refresh = RefreshData()
 
@@ -101,7 +101,7 @@ def refresh_worker(doc):
     doc.add_next_tick_callback(partial(update, doc=doc))
 
 
-def bkapp(doc):
+def bkapp_func(doc):
     """Bokeh application function handler COVID-19 App
 
     Arguments:
@@ -129,13 +129,13 @@ def bkapp(doc):
         doc.add_root(busy_spinner.control())
 
 # can't use shortcuts here, since we are passing to low level BokehTornado
-bkapp = Application(FunctionHandler(bkapp))
+bkapp = Application(FunctionHandler(bkapp_func))
 
 # each process will listen on its own port
 sockets, port = bind_sockets('localhost', 0)
 
 @app.route('/', methods=['GET'])
-def index():
+def bkapp_route():
     """Embed Bokeh app into flask html page
 
     Returns:
@@ -144,7 +144,7 @@ def index():
     command = request.args.get('command')
     parse_command(command)
 
-    script = server_document(f"localhost:{port}/bkapp")
+    script = server_document(f"localhost:{port}/bkapp_private")
 
     return render_template("embed.html", script=script, title="COVID-19")
 
@@ -162,7 +162,7 @@ def bk_worker():
                          '127.0.0.1:8000',
                          'localhost:8000']
 
-    bokeh_tornado = BokehTornado({'/bkapp': bkapp},
+    bokeh_tornado = BokehTornado({'/bkapp_private': bkapp},
                                  extra_websocket_origins=websocket_origins,
                                  session_token_expiration=660)
 
