@@ -146,7 +146,8 @@ def bk_worker():
 
     websocket_origins = [f"0.0.0.0:{env_port}",
                          f"0.0.0.0:{port}",
-                         f"{app_name}:{env_port}",
+                         f"safe-scrubland-67589.herokuapp.com:{port}",
+                         f"safe-scrubland-67589.herokuapp.com:{env_port}",
                          f"localhost:{port}",
                          '127.0.0.1:8000',
                          'localhost:8000']
