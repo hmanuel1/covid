@@ -1,1 +1,1 @@
-web: python app/utest/run.py
+web: python app/covid/run.py
