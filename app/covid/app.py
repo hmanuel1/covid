@@ -146,7 +146,7 @@ def bkapp_route():
     command = request.args.get('command')
     parse_command(command)
 
-    script = server_document(f"localhost:{port}/bkapp_private")
+    script = server_document(f"http://localhost:{port}/bkapp_private")
 
     return render_template("embed.html", script=script, title="COVID-19")
 
