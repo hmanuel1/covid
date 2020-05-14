@@ -4,6 +4,10 @@
 """
 
 import os
+import re
+import sys
+from os.path import join
+
 
 try:
     import asyncio
@@ -30,15 +34,38 @@ from bokeh.server.server import BaseServer
 from bokeh.server.tornado import BokehTornado
 from bokeh.server.util import bind_sockets
 
-HOST = 'safe-scrubland-67589.herokuapp.com'
 
 app = Flask(__name__)
 
 app.config['CORS_HEADERS'] = 'Content-Type'
 cors = CORS(app)
 
-# get
-get_sri_hashes_for_version(__version__)
+# get get_sri_hashes_for_version(__version__)
+
+def cwd():
+    """Return current working directory if running from bokeh server,
+       jupiter or python.
+
+    Returns:
+        String -- path to current working directory
+    """
+    try:
+        __file__
+    except NameError:
+        working_dir = os.getcwd()
+    else:
+        working_dir = os.path.dirname(__file__)
+    return working_dir
+
+
+# get heroku app name in .env file
+with open(join(cwd() + '\\.env'), 'r') as env_file:
+    app_name = env_file.read()
+
+if not re.match(r'HEROKU_APP_NAME', app_name):
+    sys.exit('ERROR: add HEROKU_APP_NAME to .env file')
+else:
+    app_name = re.sub(r'HEROKU_APP_NAME\s{0,}=', '', app_name).strip()
 
 
 def graph_func(doc):
@@ -119,7 +146,7 @@ def bk_worker():
 
     websocket_origins = [f"0.0.0.0:{env_port}",
                          f"0.0.0.0:{port}",
-                         #f"{HOST}:{env_port}",
+                         f"{app_name}:{env_port}",
                          f"localhost:{port}",
                          '127.0.0.1:8000',
                          'localhost:8000']

@@ -1,10 +1,12 @@
 """Run Flask App
-   For Heroku set LOCAL_TESTING = FALSE
+   To deploy to Heroku set LOCAL_TESTING = FALSE
+   To test in your computer set LOCAL_TEST = True
 """
 
 import os
 from waitress import serve
 from app import app
+
 
 LOCAL_TESTING = False
 
