@@ -14,6 +14,7 @@ from flask import (
     render_template,
     request
 )
+from flask_cors import CORS
 
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
@@ -37,11 +38,13 @@ from refresh import (
 )
 
 
-app = Flask(__name__)
+HEROKU_APP_NAME = 'safe-scrubland-67589.herokuapp.com'
 
+
+app = Flask(__name__)
+CORS(app)
 
 refresh = RefreshData()
-
 
 def parse_command(command):
     """Parse web maintenance commands
@@ -141,17 +144,26 @@ def index():
     command = request.args.get('command')
     parse_command(command)
 
-    script = server_document('localhost:%d/bkapp' % port)
+    script = server_document(f"localhost:{port}/bkapp")
 
-    return render_template("index.html", script=script, template="Flask")
+    return render_template("embed.html", script=script, title="COVID-19")
 
 def bk_worker():
     """Worker thread
     """
     asyncio.set_event_loop(asyncio.new_event_loop())
 
+    env_port = os.environ.get('PORT', default='8000')
+
+    websocket_origins = [f"0.0.0.0:{env_port}",
+                         f"0.0.0.0:{port}",
+                         f"{HEROKU_APP_NAME}:{env_port}",
+                         f"localhost:{port}",
+                         '127.0.0.1:8000',
+                         'localhost:8000']
+
     bokeh_tornado = BokehTornado({'/bkapp': bkapp},
-                                 extra_websocket_origins=["localhost:8000"],
+                                 extra_websocket_origins=websocket_origins,
                                  session_token_expiration=660)
 
     bokeh_http = HTTPServer(bokeh_tornado)
@@ -165,4 +177,4 @@ tread = Thread(target=bk_worker, daemon=True)
 tread.start()
 
 if __name__ == '__main__':
-    app.run(port=int(os.environ.get("PORT", 8000)), debug=True)
+    app.run(port=int(os.environ.get("PORT", 8000)), debug=False)
