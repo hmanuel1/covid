@@ -18,9 +18,11 @@ from flask_cors import CORS
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
 
+from bokeh import __version__
+from bokeh.resources import get_sri_hashes_for_version
 from bokeh.application import Application
 from bokeh.application.handlers import FunctionHandler
-from bokeh.embed import server_document
+from bokeh.embed import server_document, components
 from bokeh.models import ColumnDataSource
 from bokeh.plotting import figure
 from bokeh.sampledata.sea_surface_temperature import sea_surface_temperature
@@ -34,6 +36,9 @@ app = Flask(__name__)
 app.config['CORS_HEADERS'] = 'Content-Type'
 cors = CORS(app)
 
+# get
+get_sri_hashes_for_version(__version__)
+
 
 def graph_func(doc):
     dataframe = sea_surface_temperature.copy()
@@ -45,6 +50,16 @@ def graph_func(doc):
     plot.line(x='time', y='temperature', source=source)
     return doc.add_root(plot)
 
+
+def graph_plot():
+    dataframe = sea_surface_temperature.copy()
+    source = ColumnDataSource(data=dataframe)
+
+    plot = figure(x_axis_type='datetime', y_range=(0, 25),
+                  y_axis_label='Temperature (Celsius)',
+                  title="Sea Surface Temperature at 43.18, -70.43")
+    plot.line(x='time', y='temperature', source=source)
+    return plot
 
 
 # can't use shortcuts here, since we are passing to low level BokehTornado
@@ -59,6 +74,12 @@ sockets, port = bind_sockets("localhost", 0)
 def graph_route():
     script = server_document(f"http://localhost:{port}/graph")
     return render_template("embed.html", script=script, framework="Flask")
+
+
+@app.route('/plot', methods=['GET'])
+def plot_route():
+    script, div = components(graph_plot())
+    return render_template("embed.html", div=div, script=script, framework="Flask")
 
 
 @app.route('/env', methods=['GET'])
