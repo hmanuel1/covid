@@ -116,9 +116,23 @@ def index():
     return "Add /graph or /plot or /env to base URL"
 
 
+@app.route('/autoload', methods=['GET'])
+def autoload_route():
+    script = server_document(f"http://safe-scrubland-67589.herokuapp.com:{port}/graph_private")
+
+    script = script.replace('<', '[')
+    script = script.replace('>', ']')
+
+    # print script in broser
+    scriptline = '<p>'
+    for line in script.split('\n'):
+        scriptline += f"<br>{line}"
+    return scriptline + '</p>'
+
+
 @app.route('/graph', methods=['GET'])
 def graph_route():
-    script = server_document(f"http://localhost:{port}/graph_private")
+    script = server_document(f"http://safe-scrubland-67589.herokuapp.com:{port}/graph_private")
     return render_template("embed.html", script=script, framework="Flask")
 
 
