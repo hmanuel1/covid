@@ -118,7 +118,7 @@ def index():
 
 @app.route('/autoload', methods=['GET'])
 def autoload_route():
-    script = server_document(f"http://safe-scrubland-67589.herokuapp.com:{port}/graph_private")
+    script = server_document(f"https://safe-scrubland-67589.herokuapp.com:{port}/graph_private")
 
     script = script.replace('<', '[')
     script = script.replace('>', ']')
@@ -132,7 +132,7 @@ def autoload_route():
 
 @app.route('/graph', methods=['GET'])
 def graph_route():
-    script = server_document(f"http://safe-scrubland-67589.herokuapp.com:{port}/graph_private")
+    script = server_document(f"https://safe-scrubland-67589.herokuapp.com:{port}/graph_private")
     return render_template("embed.html", script=script, framework="Flask")
 
 
