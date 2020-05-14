@@ -26,6 +26,9 @@ from bokeh.server.server import BaseServer
 from bokeh.server.tornado import BokehTornado
 from bokeh.server.util import bind_sockets
 from bokeh.themes import Theme
+from bokeh.models import ColumnDataSource
+from bokeh.plotting import figure
+from bokeh.sampledata.sea_surface_temperature import sea_surface_temperature
 
 from applayout import covid_app
 from utilities import (
@@ -46,7 +49,7 @@ app = Flask(__name__)
 app.config['CORS_HEADERS'] = 'Content-Type'
 cors = CORS(app)
 
-refresh = RefreshData()
+#refresh = RefreshData()
 
 def parse_command(command):
     """Parse web maintenance commands
@@ -55,7 +58,8 @@ def parse_command(command):
         command {String} -- web maintenance commands
     """
     if command == 'refresh-data':
-        refresh.enable = True
+        pass
+        #refresh.enable = True
     elif command == 'test-connection':
         print()
         print('<<<<<<< testing connection  >>>>>>>')
@@ -97,7 +101,7 @@ def refresh_worker(doc):
 
     """
     print('refresh working thread started.')
-    refresh.data()
+    #refresh.data()
 
     # update in next tick
     doc.add_next_tick_callback(partial(update, doc=doc))
@@ -109,26 +113,27 @@ def bkapp_func(doc):
     Arguments:
         doc {Bokeh Document} -- DOM document
     """
+    pass
     # database refresh
-    if refresh.status != Status.busy and refresh.enable:
-        _tread = Thread(target=refresh_worker, args=[doc], daemon=True)
-        _tread.start()
+    # if refresh.status != Status.busy and refresh.enable:
+    #     _tread = Thread(target=refresh_worker, args=[doc], daemon=True)
+    #     _tread.start()
 
-        # show busy spinner
-        busy_spinner = BusySpinner()
-        busy_spinner.show()
-        doc.add_root(busy_spinner.control())
+    #     # show busy spinner
+    #     busy_spinner = BusySpinner()
+    #     busy_spinner.show()
+    #     doc.add_root(busy_spinner.control())
 
-    # application startup
-    else:
-        # show busy spinner until application is ready
-        _tread = Thread(target=startup_worker, args=[doc], daemon=True)
-        _tread.start()
+    # # application startup
+    # else:
+    #     # show busy spinner until application is ready
+    #     _tread = Thread(target=startup_worker, args=[doc], daemon=True)
+    #     _tread.start()
 
-        doc.clear()
-        busy_spinner = BusySpinner()
-        busy_spinner.show()
-        doc.add_root(busy_spinner.control())
+    #     doc.clear()
+    #     busy_spinner = BusySpinner()
+    #     busy_spinner.show()
+    #     doc.add_root(busy_spinner.control())
 
 
 def graph_func(doc):
@@ -194,5 +199,6 @@ def bk_worker():
     server.start()
     server.io_loop.start()
 
-tread = Thread(target=bk_worker, daemon=True)
-tread.start()
+t = Thread(target=bk_worker)
+t.daemon = True
+t.start()

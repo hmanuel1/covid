@@ -106,7 +106,3 @@ def refresh_maps():
     _db.update(VACUUM)
     _db.update(REINDEX)
     _db.close()
-
-
-if __name__ == '__main__':
-    refresh_data()
