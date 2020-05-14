@@ -130,13 +130,32 @@ def bkapp_func(doc):
         busy_spinner.show()
         doc.add_root(busy_spinner.control())
 
+
+def graph_func(doc):
+    """ Test plot with slider, callback
+
+    Arguments:
+        doc {Bokeh Document} -- bokeh document
+
+    Returns:
+        Bokeh Document --bokeh document with plot and slider added
+    """
+    dataframe = sea_surface_temperature.copy()
+    source = ColumnDataSource(data=dataframe)
+
+    plot = figure(x_axis_type='datetime', y_range=(0, 25),
+                  y_axis_label='Temperature (Celsius)',
+                  title="Sea Surface Temperature at 43.18, -70.43")
+    plot.line(x='time', y='temperature', source=source)
+    return doc.add_root(plot)
+
 # can't use shortcuts here, since we are passing to low level BokehTornado
-bkapp = Application(FunctionHandler(bkapp_func))
+bkapp = Application(FunctionHandler(graph_func))
 
 # each process will listen on its own port
 sockets, port = bind_sockets('localhost', 0)
 
-@app.route('/', methods=['GET'])
+@app.route('/hello', methods=['GET'])
 def bkapp_route():
     """Embed Bokeh app into flask html page
 
