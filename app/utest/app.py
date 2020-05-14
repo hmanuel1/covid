@@ -91,6 +91,7 @@ def index():
 @app.route('/graph', methods=['GET'])
 def graph_route():
     script = server_document(f"http://{get_host()}:{port}/bkapp")
+    script = script.replace('http:', 'https:')
     return render_template("embed.html", script=script, framework="Flask")
 
 
@@ -129,7 +130,7 @@ def bk_worker():
                                  extra_websocket_origins=websocket_origins,
                                  **conf)
 
-    bokeh_http = HTTPServer(bokeh_tornado, xheaders=True, protocol='https')
+    bokeh_http = HTTPServer(bokeh_tornado, xheaders=True)
     bokeh_http.add_sockets(sockets)
 
     server = BaseServer(IOLoop.current(), bokeh_tornado, bokeh_http)
