@@ -35,7 +35,7 @@ from bokeh.server.tornado import BokehTornado
 from bokeh.server.util import bind_sockets
 
 
-LOCAL_TESTING = True
+LOCAL_TESTING = False
 
 
 app = Flask(__name__)
