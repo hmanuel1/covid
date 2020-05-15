@@ -60,10 +60,6 @@ if LOCAL_TESTING:
     sockets, port = bind_sockets(get_host(), 0)
 
 
-def get_port():
-    return int(os.environ.get('PORT', default='8000'))
-
-
 def bkapp(doc):
     """ Test plot with slider, callback
 
@@ -95,12 +91,12 @@ def index():
 @app.route('/graph', methods=['GET'])
 def graph_route():
     print(f'get server document at port={port}', file=sys.stderr)
-    script = server_document(f"http://{get_host()}/bkapp")
+    script = server_document(f"https://{get_host()}/bkapp")
     return render_template("embed.html", script=script, framework="Flask")
 
 
 @app.route('/bkapp')
-def get_data():
+def bkapp_route():
     return "Hi, I'm here now"
     #return requests.get('http://example.com').content
 
