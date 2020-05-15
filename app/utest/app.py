@@ -51,7 +51,7 @@ def get_host():
         host = '127.0.0.1'
     return host
 
-sockets, port = bind_sockets('127.0.0.1', 0)
+sockets, port = bind_sockets('0.0.0.0', 0)
 if LOCAL_TESTING:
     sockets, port = bind_sockets(get_host(), 0)
 
@@ -90,7 +90,7 @@ def index():
 
 @app.route('/graph', methods=['GET'])
 def graph_route():
-    script = server_document(f"http://127.0.0.1:{port}/bkapp")
+    script = server_document(f"http://{get_host()}:{port}/bkapp")
     return render_template("embed.html", script=script, framework="Flask")
 
 
@@ -120,9 +120,11 @@ def bk_worker():
     websocket_origins = [f"{get_host()}:{port}",
                          f"{get_host()}:{get_port()}",
                          f"localhost:{port}",
-                         f"localhost:{get_port()}"
+                         f"localhost:{get_port()}",
                          f"127.0.0.1:{port}",
-                         f"127.0.0.1:{get_port()}"]
+                         f"127.0.0.1:{get_port()}",
+                         f"0.0.0.0:{port}",
+                         f"0.0.0.0:{get_port()}"]
 
     conf = {'use_xheaders': True}
     bokeh_tornado = BokehTornado({'/bkapp': bkapp},
@@ -141,10 +143,10 @@ t = Thread(target=bk_worker)
 t.daemon = True
 t.start()
 
-# if __name__ == '__main__':
-#     print(f"main server listening at {get_host()}:{get_port()}", file=sys.stderr)
-#     serve(app,
-#           threads=4,
-#           host='0.0.0.0',
-#           port=get_port(),
-#           channel_timeout=660)
+if __name__ == '__main__':
+    print(f"main server listening at {get_host()}:{get_port()}", file=sys.stderr)
+    serve(app,
+          threads=4,
+          host='0.0.0.0',
+          port=get_port(),
+          channel_timeout=660)
