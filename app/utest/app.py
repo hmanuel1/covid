@@ -90,7 +90,7 @@ def index():
 
 @app.route('/graph', methods=['GET'])
 def graph_route():
-    script = server_document(f"http://{get_host()}:{port}/bkapp")
+    script = server_document(f"http://127.0.0.1:{port}/bkapp")
     return render_template("embed.html", script=script, framework="Flask")
 
 
