@@ -55,7 +55,7 @@ def get_port():
     return int(os.environ.get('PORT', default='8000'))
 
 
-sockets, port = bind_sockets('0.0.0.0', get_port())
+sockets, port = bind_sockets('0.0.0.0', 0)
 if LOCAL_TESTING:
     sockets, port = bind_sockets(get_host(), 0)
 
@@ -95,8 +95,14 @@ def index():
 @app.route('/graph', methods=['GET'])
 def graph_route():
     print(f'get server document at port={port}', file=sys.stderr)
-    script = server_document(f"http://{get_host()}:{port}/bkapp")
+    script = server_document(f"http://{get_host()}/bkapp")
     return render_template("embed.html", script=script, framework="Flask")
+
+
+@app.route('/bkapp')
+def get_data():
+    return "Hi, I'm here now"
+    #return requests.get('http://example.com').content
 
 
 @app.route('/port', methods=['GET'])
