@@ -35,7 +35,7 @@ from bokeh.server.tornado import BokehTornado
 from bokeh.server.util import bind_sockets
 
 
-LOCAL_TESTING = False
+LOCAL_TESTING = True
 
 
 app = Flask(__name__)
@@ -141,10 +141,10 @@ t = Thread(target=bk_worker)
 t.daemon = True
 t.start()
 
-if __name__ == '__main__':
-    print(f"main server listening at {get_host()}:{get_port()}", file=sys.stderr)
-    serve(app,
-          threads=4,
-          host='0.0.0.0',
-          port=get_port(),
-          channel_timeout=660)
+# if __name__ == '__main__':
+#     print(f"main server listening at {get_host()}:{get_port()}", file=sys.stderr)
+#     serve(app,
+#           threads=4,
+#           host='0.0.0.0',
+#           port=get_port(),
+#           channel_timeout=660)
