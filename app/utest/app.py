@@ -51,7 +51,7 @@ def get_host():
         host = '127.0.0.1'
     return host
 
-sockets, port = bind_sockets('0.0.0.0', 5006)
+sockets, port = bind_sockets('0.0.0.0', 0)
 if LOCAL_TESTING:
     sockets, port = bind_sockets(get_host(), 0)
 
