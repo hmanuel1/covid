@@ -51,7 +51,7 @@ def get_host():
         host = '127.0.0.1'
     return host
 
-sockets, port = bind_sockets('0.0.0.0', 0)
+sockets, port = bind_sockets('127.0.0.1', 0)
 if LOCAL_TESTING:
     sockets, port = bind_sockets(get_host(), 0)
 
@@ -91,7 +91,6 @@ def index():
 @app.route('/graph', methods=['GET'])
 def graph_route():
     script = server_document(f"http://{get_host()}:{port}/bkapp")
-    script = script.replace('http:', 'https:')
     return render_template("embed.html", script=script, framework="Flask")
 
 
@@ -148,7 +147,4 @@ if __name__ == '__main__':
           threads=4,
           host='0.0.0.0',
           port=get_port(),
-          channel_timeout=660,
-          trusted_proxy='0.0.0.0',
-          trusted_proxy_headers="x-forwarded-for x-forwarded-host x-forwarded-proto x-forwarded-port",
-          log_untrusted_proxy_headers=True)
+          channel_timeout=660)
