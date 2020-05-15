@@ -16,6 +16,8 @@ except ImportError:
 
 from threading import Thread
 
+import requests
+
 from waitress import serve
 
 from flask import Flask, render_template
@@ -90,15 +92,17 @@ def index():
 
 @app.route('/graph', methods=['GET'])
 def graph_route():
-    print(f'get server document at port={port}', file=sys.stderr)
-    script = server_document(f"https://{get_host()}/bkapp")
-    return render_template("embed.html", script=script, framework="Flask")
+    print(f'get bokeh server document at port={port}', file=sys.stderr)
+    return requests.get('http://0.0.0.0:{port}/bkapp').content
+
+    # script = server_document(f"https://{get_host()}/bkapp")
+    # return render_template("embed.html", script=script, framework="Flask")
 
 
-@app.route('/bkapp')
-def bkapp_route():
-    return "Hi, I'm here now"
-    #return requests.get('http://example.com').content
+# @app.route('/bkapp')
+# def bkapp_route():
+#     return "Hi, I'm here now"
+#     #return requests.get('http://example.com').content
 
 
 @app.route('/port', methods=['GET'])
