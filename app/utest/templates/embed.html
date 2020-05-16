@@ -3,14 +3,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Embedding a Bokeh Server With {{ framework }}</title>
-  {{ resources }}
+  <title>Embedding a Bokeh Server with {{ template }}</title>
+  {{ resources|safe }}
 </head>
-
 <body>
   <div>
     This Bokeh app below served by a Bokeh server that has been embedded
-    in {{ framework }} framework.
+    in {{ template }} framework.
   </div>
   {{ script|safe }}
   {{ div|safe }}
