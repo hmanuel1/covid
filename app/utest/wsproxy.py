@@ -51,6 +51,10 @@ class WebSocketProxy(WebSocketHandler):
         self.uri = BOKEH_URI.replace('$PORT', get_bokeh_port())
         super().__init__(application, *args, **kwargs)
 
+    def initialize(self):
+        self.settings['websocket_ping_interval'] = 30
+        self.settings['websocket_ping_timeout'] = 90
+
     def check_origin(self, origin):
         return True
 
