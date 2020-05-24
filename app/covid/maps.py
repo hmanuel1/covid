@@ -3,6 +3,7 @@
 """
 
 from os.path import join
+import logging
 
 import numpy as np
 
@@ -26,10 +27,7 @@ from bokeh.palettes import Purples
 from bokeh.themes import Theme
 
 from database import DataBase
-from utilities import (
-    cwd,
-    ElapsedMilliseconds
-)
+from utilities import cwd
 from sql import (
     US_MAP_PIVOT_VIEW_TABLE,
     OPTIONS_TABLE
@@ -41,7 +39,8 @@ from nytimes import (
 from wrangler import STATE_MAP_TABLE
 
 
-TRACING = True
+logging.basicConfig(level=logging.INFO)
+log = logging.getLogger(__name__)
 
 
 class Map:
@@ -50,9 +49,6 @@ class Map:
     """
 
     def __init__(self, **kwargs):
-        if TRACING:
-            self.time = ElapsedMilliseconds()
-
         self.palette = kwargs.pop('palette')
 
         # init metadata dictionary
@@ -89,11 +85,10 @@ class Map:
         self.srcs = dict(counties=GeoJSONDataSource(geojson=self.counties.to_json()),
                          states=GeoJSONDataSource(geojson=self.states.to_json()))
 
-        if TRACING:
-            print(f'map init in {self.time.elapsed()} ms')
-
         # build map
         self.plot_map()
+
+        log.debug('map init')
 
     def __add_counties(self):
         """Add county patches to figure
@@ -108,8 +103,8 @@ class Map:
         # add counties to plot
         self.plot.patches(xs='xs', ys='ys',
                           source=self.srcs['counties'], **_params)
-        if TRACING:
-            print(f'patches added in {self.time.elapsed()} ms')
+
+        log.debug('patches added')
 
     def __add_states(self):
         """Add state lines to figure
@@ -120,8 +115,8 @@ class Map:
         # add state to plot
         self.plot.multi_line(
             xs='xs', ys='ys', source=self.srcs['states'], **_params)
-        if TRACING:
-            print(f'state lines added {self.time.elapsed()} ms')
+
+        log.debug('state lines added')
 
     def __add_label(self):
         """ Add date label for animation
@@ -134,8 +129,8 @@ class Map:
                                        text_color='#eeeeee')
 
         self.plot.add_layout(self.controls['label'])
-        if TRACING:
-            print(f'label added in {self.time.elapsed()} ms')
+
+        log.debug('label added')
 
     def __add_hover(self):
         """Add hove tool to figure
@@ -147,8 +142,8 @@ class Map:
                                      ('Population', '@pop{0,0}')])
 
         self.plot.add_tools(_hover)
-        if TRACING:
-            print(f'hover tool added in {self.time.elapsed()} ms')
+
+        log.debug('hover tool added')
 
     def __add_legend(self):
         """Add legend to plot
@@ -181,8 +176,8 @@ class Map:
         self.plot.add_layout(Legend(items=_items, location='bottom_right'))
         self.plot.x_range.only_visible = True
         self.plot.y_range.only_visible = True
-        if TRACING:
-            print(f'legend added added in {self.time.elapsed()} ms')
+
+        log.debug('legend added added')
 
     def add_select(self):
         """Build select control
@@ -223,8 +218,8 @@ class Map:
             """)
 
         self.controls['select'].js_on_change('value', _callback)
-        if TRACING:
-            print(f'select control added in {self.time.elapsed()} ms')
+
+        log.debug('select control added')
 
     def add_slider(self):
         """Build slider
@@ -263,8 +258,8 @@ class Map:
             """)
 
         self.controls['slider'].js_on_change('value', _callback)
-        if TRACING:
-            print(f'slider added in {self.time.elapsed()} ms')
+
+        log.debug('slider added')
 
     def add_button(self):
         """Build animation button
@@ -315,8 +310,8 @@ class Map:
             """)
 
         self.controls['button'].js_on_click(_callback)
-        if TRACING:
-            print(f'button added in {self.time.elapsed()} ms')
+
+        log.debug('button added')
 
     def plot_map(self):
         """ Build map elements

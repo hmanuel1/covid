@@ -3,6 +3,7 @@
 """
 # %%
 from os.path import join
+import logging
 
 from bokeh.io import curdoc
 from bokeh.palettes import Purples
@@ -19,17 +20,16 @@ from bokeh.models import (
 )
 
 from database import DataBase
-from utilities import (
-    cwd,
-    ElapsedMilliseconds
-)
+from utilities import cwd
 from arima import (
     ARIMA_CASES_TABLE,
     ARIMA_DEATHS_TABLE
 )
 
 
-TRACING = True
+logging.basicConfig(level=logging.INFO)
+log = logging.getLogger(__name__)
+
 
 class LinePlot:
     """Line plot for covid19 cases and deaths by state
@@ -68,16 +68,12 @@ class LinePlot:
         _args = dict(x='x', y='y', source=None, name=None, visible=False)
         for _id, _state, in self.options:
             _args['name'] = _state
-
             _args['source'] = ColumnDataSource(data=dict(x=[], y=[]))
             self.actual[_id] = self.plot.line(**_args)
-
             _args['source'] = ColumnDataSource(data=dict(x=[], y=[]))
             self.predict[_id] = self.plot.line(**_args)
-
             _args['source'] = ColumnDataSource(data=dict(x=[], y=[]))
             self.lower[_id] = self.plot.line(**_args)
-
             _args['source'] = ColumnDataSource(data=dict(x=[], y=[]))
             self.upper[_id] = self.plot.line(**_args)
 
@@ -205,15 +201,13 @@ class Trends:
     """Trends layout
     """
     def __init__(self, palette=Purples[3]):
-        time = ElapsedMilliseconds(log_time=TRACING)
-
         self.cases = LinePlot(ARIMA_CASES_TABLE)
         self.cases.render_figure()
         self.cases.title("Cumulative Cases by State")
         self.cases.axis_label('Date', 'Cases')
         self.cases.color_palette(palette)
 
-        time.log('trends:state cases')
+        log.debug('state cases')
 
         self.deaths = LinePlot(ARIMA_DEATHS_TABLE)
         self.deaths.render_figure()
@@ -221,13 +215,13 @@ class Trends:
         self.deaths.axis_label('Date', 'Deaths')
         self.deaths.color_palette(palette)
 
-        time.log('trends:state deaths')
+        log.debug('state deaths')
 
         self.multiselect = None
         self._add_multiselect()
         self.multiselect.value = ['12', '34', '36']
 
-        time.log('trends:render default states')
+        log.debug('render default states')
 
     def _add_multiselect(self):
         self.multiselect = MultiSelect(title='States:', value=['01'],
@@ -256,19 +250,14 @@ class Trends:
             if not self.cases.actual[_id].visible:
                 _slice = self.cases.data.loc[_id, :]
                 _x = _slice['date'].to_list()
-
                 _y = _slice['actual'].to_list()
                 self.cases.actual[_id].data_source.data = dict(x=_x, y=_y)
-
                 _y = _slice['predict'].to_list()
                 self.cases.predict[_id].data_source.data = dict(x=_x, y=_y)
-
                 _y1 = _slice['lower'].to_list()
                 self.cases.lower[_id].data_source.data = dict(x=_x, y=_y1)
-
                 _y2 = _slice['upper'].to_list()
                 self.cases.upper[_id].data_source.data = dict(x=_x, y=_y2)
-
                 self.cases.area[_id].data_source.data = dict(x=_x, y1=_y1, y2=_y2)
 
                 self.cases.actual[_id].visible = True
@@ -296,21 +285,15 @@ class Trends:
             if not self.deaths.actual[_id].visible:
                 _slice = self.deaths.data.loc[_id, :]
                 _x = _slice['date'].to_list()
-
                 _y = _slice['actual'].to_list()
                 self.deaths.actual[_id].data_source.data = dict(x=_x, y=_y)
-
                 _y = _slice['predict'].to_list()
                 self.deaths.predict[_id].data_source.data = dict(x=_x, y=_y)
-
                 _y1 = _slice['lower'].to_list()
                 self.deaths.lower[_id].data_source.data = dict(x=_x, y=_y1)
-
                 _y2 = _slice['upper'].to_list()
                 self.deaths.upper[_id].data_source.data = dict(x=_x, y=_y2)
-
                 self.deaths.area[_id].data_source.data = dict(x=_x, y1=_y1, y2=_y2)
-
                 self.deaths.actual[_id].visible = True
                 self.deaths.predict[_id].visible = True
                 self.deaths.lower[_id].visible = True

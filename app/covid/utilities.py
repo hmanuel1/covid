@@ -1,13 +1,12 @@
 """
    Bokeh based functions for line, histogram and bar charts
 """
-# %%
+
 import os
 import time
 
 import numpy as np
 
-from bokeh.io import show
 from bokeh.plotting import figure
 from bokeh.layouts import gridplot
 from bokeh.models.widgets import Div
@@ -17,38 +16,38 @@ from bokeh.models import (
     NumeralTickFormatter
 )
 
+SPINNER_TEXT = """
+    <!-- https://www.w3schools.com/howto/howto_css_loader.asp -->
+    <div class="loader">
+    <style scoped>
+    .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+    }
 
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    </style>
+    </div>
+"""
 
 class BusySpinner:
     """Busy spinner
     """
-    SPINNER_TEXT = """
-        <!-- https://www.w3schools.com/howto/howto_css_loader.asp -->
-        <div class="loader">
-        <style scoped>
-        .loader {
-            border: 16px solid #f3f3f3; /* Light grey */
-            border-top: 16px solid #3498db; /* Blue */
-            border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            animation: spin 2s linear infinite;
-        }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        </style>
-        </div>
-        """
     def __init__(self):
         self.spinner = Div(text="", width=120, height=120, name='spinner')
 
     def show(self):
         """Show busy spinner
         """
-        self.spinner.text = self.SPINNER_TEXT
+        self.spinner.text = SPINNER_TEXT
 
     def hide(self):
         """Hide busy spinner
@@ -262,11 +261,3 @@ def vbar(x, y, xlabel='x', ylabel='y', **kwargs):
     plot.yaxis.axis_label = ylabel
 
     return plot
-
-# %%
-
-spinner = BusySpinner()
-spinner.show()
-show(spinner.control())
-
-# %%

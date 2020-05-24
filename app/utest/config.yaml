@@ -1,0 +1,21 @@
+app:
+  bokeh:
+    path: "/bkapp"
+
+  flask:
+    path: "/"
+
+proxy:
+  bokeh:
+    address: "127.0.0.1"
+    port: 5006
+    path: "/bkapp/ws"
+
+  flask:
+    address: "127.0.0.1"
+    port: 8000
+    path: "/"
+
+cdn:
+  bokeh:
+    url: "https://cdn.bokeh.org/bokeh/release"

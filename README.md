@@ -72,8 +72,10 @@ If everything goes well, it will open the COVID-19 page.
 * AI and ML
 * AJAX
 * Bokeh
-* Flask (work-in-progesss)
+* Flask
+* Tornado
 * HTML
+* Web Sockets
 * GIS
 * JavaScript
 * Python

@@ -1,6 +1,7 @@
 """
     Analyze COVID-19 cases and deaths in the US.
 """
+import logging
 
 from bokeh import __version__
 from bokeh.palettes import Greens
@@ -12,7 +13,6 @@ from maps import Map
 from trends import Trends
 from fits import models_result
 from database import DataBase
-from utilities import ElapsedMilliseconds
 
 from sql import FLDEM_VIEW_TABLE
 from clf import (
@@ -20,8 +20,8 @@ from clf import (
     MODELS_ROC_TABLE
 )
 
-
-TRACING = True
+logging.basicConfig(level=logging.INFO)
+log = logging.getLogger(__name__)
 
 
 def covid_app():
@@ -31,8 +31,6 @@ def covid_app():
 
     print('Bokeh Version:', __version__)
 
-    time = ElapsedMilliseconds(log_time=TRACING)
-
     # get datasets
     _db = DataBase()
     data = _db.get_table(FLDEM_VIEW_TABLE)
@@ -40,7 +38,7 @@ def covid_app():
     importance = _db.get_table(IMPORTANCE_TABLE)
     _db.close()
 
-    time.log('main.get_data_set')
+    log.info('get_data_set')
 
     # create palettes
     palette = dict()
@@ -56,7 +54,7 @@ def covid_app():
     page['histograms'] = age_gender_histograms(data, palette['color'],
                                                palette['hover'])
 
-    time.log('main.histograms')
+    log.info('histograms')
 
     # build us map and fl map layouts
     plot = Map(plot_width=800, plot_height=400, palette=palette['theme'])
@@ -64,19 +62,19 @@ def covid_app():
                             plot.plot,
                             row(plot.controls['slider'], plot.controls['button']))
 
-    time.log('main.us_map')
+    log.info('main.us_map')
 
     # model result for florida
     page['modeling'] = models_result(roc, importance, palette['theme'][2:],
                                      palette['color'], palette['hover'])
 
-    time.log('main.modeling')
+    log.info('main.modeling')
 
     # predictions based on arima since 3/15/2020
     trend = Trends(palette['trends'])
     page['trends'] = trend.layout()
 
-    time.log('main.trends')
+    log.info('trends')
 
     # build layout
     headings_attr = dict(height=40,

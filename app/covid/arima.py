@@ -1,7 +1,7 @@
 """
    Fit ARIMA model to cases and deaths for each US State
 """
-# %%
+
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
@@ -122,7 +122,7 @@ def run_arima(data, y_var, show_results=False):
 
     return result
 
-# %%
+
 def predict():
     """main module function to predict covid19 cases and deaths
 
