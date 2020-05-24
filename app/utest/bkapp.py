@@ -3,6 +3,7 @@
     Adapted from bokeh-master/examples/howto/serve_embed/flask_gunicorn_embed.py
 """
 
+import os
 import time
 import asyncio
 import logging
@@ -25,6 +26,7 @@ from bokeh.layouts import column
 from bokeh.resources import get_sri_hashes_for_version
 
 from config import (
+    cwd,
     set_bokeh_port,
     FLASK_PORT,
     FLASK_ADDR,
@@ -72,7 +74,7 @@ def bkapp(doc):
     slider = Slider(start=0, end=30, value=0, step=1, title="Smoothing by N Days")
     slider.on_change('value', callback)
 
-    doc.theme = Theme(filename="theme.yaml")
+    doc.theme = Theme(filename=os.path.join(cwd(), 'theme.yaml'))
     return doc.add_root(column(slider, plot))
 
 
