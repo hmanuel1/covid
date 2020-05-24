@@ -47,7 +47,7 @@ python bkapp.py
 python app.py
 ```
 
-7. Open http//127.0.0.1:8000/ in your internet browser to see Bokeh server app embedded into Flask framework.
+7. Open http://127.0.0.1:8000/ in your internet browser to see Bokeh server app embedded into Flask framework.
 
 ## Design Diagrams
 
