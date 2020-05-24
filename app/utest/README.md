@@ -26,7 +26,7 @@ This application wraps the Flask App into Tornado framework. Implements a HTTP r
 python run.py
 ```
 
-5. Open http//127.0.0.1:8000/ in your internet browser to see Bokeh App embedded into Flask framework.
+5. Open http://127.0.0.1:8000/ in your internet browser to see Bokeh App embedded into Flask framework.
 
 ## Run Each Application Independently
 
