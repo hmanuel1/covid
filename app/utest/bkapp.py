@@ -107,8 +107,6 @@ def  get_sockets():
 
     Returns:
         sockets, port -- sockets and port bind to
-    Sets:
-        file -- port number in file
     """
     _sockets, _port = bind_sockets('0.0.0.0', 0)
     set_bokeh_port(_port)

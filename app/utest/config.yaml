@@ -1,20 +1,26 @@
+
 app:
   bokeh:
     path: "/bkapp"
-
   flask:
     path: "/"
 
 proxy:
   bokeh:
-    address: "127.0.0.1"
-    port: 5006
-    path: "/bkapp/ws"
-
+    local:
+      address: "127.0.0.1"
+      port: "$PORT"
+      path: "/bkapp/ws"
   flask:
-    address: "127.0.0.1"
-    port: 8000
-    path: "/"
+    local:
+      address: "127.0.0.1"
+      port: 8000
+      path: "/"
+    heroku:
+      domain: "safe-scrubland-67589.herokuapp.com"
+      address: "0.0.0.0"
+      port: "$PORT"
+      path: "/"
 
 cdn:
   bokeh:

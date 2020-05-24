@@ -61,7 +61,7 @@ def proxy(path):
     if request.query_string is not None:
         query = '?' + request.query_string.decode("utf-8")
 
-    bokeh_url = BOKEH_URL.replace('$PORT', str(get_bokeh_port()))
+    bokeh_url = BOKEH_URL.replace('$PORT', get_bokeh_port())
     request_url = f"{bokeh_url}/{path}{query}"
     resp = requests.get(request_url)
     excluded_headers = ['content-length', 'connection']

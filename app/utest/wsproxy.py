@@ -48,7 +48,7 @@ class WebSocketProxy(WebSocketHandler):
     """
     def __init__(self, application, *args, **kwargs):
         self.chan = ProxyChannel()
-        self.uri = BOKEH_URI.replace('$PORT', str(get_bokeh_port()))
+        self.uri = BOKEH_URI.replace('$PORT', get_bokeh_port())
         super().__init__(application, *args, **kwargs)
 
     def check_origin(self, origin):

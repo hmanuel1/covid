@@ -8,6 +8,11 @@ from functools import reduce
 import yaml
 
 
+# select 'local' to run application locally
+# select 'heroku' to run application at heroku
+ENV = 'heroku'
+
+
 class DotDict(dict):
     """ Map dictionary to use `dot` notation
 
@@ -76,46 +81,78 @@ def load_config():
 # in config.yaml expected in this directory.
 CONFIG = DotDict(load_config())
 
-# TODO public facing url in heroku this will be something
-# like `https//white-horse-58990.heroku.com`
-# in heroku this port is extracted from the
-# PORT environment variable
-FLASK_APP = CONFIG.app.flask.path
-FLASK_PORT = CONFIG.proxy.flask.port
-FLASK_ADDR = CONFIG.proxy.flask.address
 FLASK_PATH = CONFIG.app.flask.path
-FLASK_URL = f"http://{FLASK_ADDR}:{FLASK_PORT}"
+
+if ENV == 'local':
+    # when running locally, this listening port
+    # number is set to a constant in the config.yaml file.
+    # normally, it is set to 8000.
+    FLASK_PORT = CONFIG.proxy.flask.local.port
+    FLASK_ADDR = CONFIG.proxy.flask.local.address
+    FLASK_URL = f"http://{FLASK_ADDR}:{FLASK_PORT}"
+elif ENV == 'heroku':
+    # when running at heroku,
+    # heroku assigns a listening port number dynamically,
+    # at starts up. Then, it passes this value in
+    # the environment variable PORT to the application.
+    # Only one public facing listening port is available
+    # per heroku app.
+    FLASK_PORT = os.environ.get('PORT')
+    FLASK_DN = CONFIG.proxy.heroku.flask.domain
+    FLASK_ADDR = CONFIG.proxy.heroku.flask.address
+    FLASK_URL = f"https://{FLASK_DN}"
 
 
-# TODO bokeh_port must be passed to FLASK
-# in heroku. This can be set as a environment
-# variable save port to file
 def set_bokeh_port(port):
-    """Set bokeh port number in file
+    """ Set bokeh port number
+
+    When running locally, it sets internal bokeh port
+    number in .env file expected in this directory.
+
+    When running at heroku, it sets the environment
+    variable BOKEH_PORT.
+
+    This value is set only once at startup by bkapp.py
+    and used solely for communication between flask app
+    and bokeh app.
 
     Arguments:
         port {int} -- bokeh port number
     """
-    with open(os.path.join(cwd(), ".env"), 'w') as env_file:
-        env_file.write(str(port))
+    if ENV == 'local':
+        with open(os.path.join(cwd(), ".env"), 'w') as env_file:
+            env_file.write(str(port))
+    elif ENV == 'heroku':
+        os.environ['BOKEH_PORT'] = str(port)
 
-# TODO internal bokeh url and port
-# in heroku this port can be extracted
-# from a custom environment variable
+
 def get_bokeh_port():
-    """Get port bokeh number from file
+    """Get bokeh server port
+
+    When running locally, it returns internal bokeh
+    port number stored in the .env file.
+
+    When running at heroku, it returns port number
+    store in the environment variable BOKEH_PORT
+
+    This value is set only once at startup by bkapp.py
+    and used solely for communication between flask app
+    and bokeh app.
 
     Returns:
-        int -- bokeh port number
+        str -- bokeh port number
     """
-    with open(os.path.join(cwd(), ".env"), 'r') as env_file:
-        port = int(env_file.read())
+    if ENV == 'local':
+        with open(os.path.join(cwd(), ".env"), 'r') as env_file:
+            port = env_file.read()
+    elif ENV == 'heroku':
+        port = os.environ.get('BOKEH_PORT')
     return port
 
-BOKEH_ADDR = CONFIG.proxy.bokeh.address
 BOKEH_PATH = CONFIG.app.bokeh.path
-BOKEH_WS_PATH = CONFIG.proxy.bokeh.path
+BOKEH_CDN = CONFIG.cdn.bokeh.url
+
+BOKEH_ADDR = CONFIG.proxy.bokeh.local.address
+BOKEH_WS_PATH = CONFIG.proxy.bokeh.local.path
 BOKEH_URL = f"http://{BOKEH_ADDR}:$PORT"
 BOKEH_URI = f"ws://{BOKEH_ADDR}:$PORT{BOKEH_WS_PATH}"
-
-BOKEH_CDN = CONFIG.cdn.bokeh.url
