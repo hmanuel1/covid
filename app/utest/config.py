@@ -8,11 +8,6 @@ from functools import reduce
 import yaml
 
 
-# select 'local' to run application locally
-# select 'heroku' to run application at heroku
-ENV = 'heroku'
-
-
 class DotDict(dict):
     """ Map dictionary to use `dot` notation
 
@@ -83,14 +78,14 @@ CONFIG = DotDict(load_config())
 
 FLASK_PATH = CONFIG.app.flask.path
 
-if ENV == 'local':
+if CONFIG.environment == 'local':
     # when running locally, this listening port
     # number is set to a constant in the config.yaml file.
     # normally, it is set to 8000.
     FLASK_PORT = CONFIG.proxy.flask.local.port
     FLASK_ADDR = CONFIG.proxy.flask.local.address
     FLASK_URL = f"http://{FLASK_ADDR}:{FLASK_PORT}"
-elif ENV == 'heroku':
+elif CONFIG.environment == 'heroku':
     # when running at heroku,
     # heroku assigns a listening port number dynamically,
     # at starts up. Then, it passes this value in
@@ -98,8 +93,8 @@ elif ENV == 'heroku':
     # Only one public facing listening port is available
     # per heroku app.
     FLASK_PORT = os.environ.get('PORT')
-    FLASK_DN = CONFIG.proxy.heroku.flask.domain
-    FLASK_ADDR = CONFIG.proxy.heroku.flask.address
+    FLASK_DN = CONFIG.proxy.flask.heroku.domain
+    FLASK_ADDR = CONFIG.proxy.flask.heroku.address
     FLASK_URL = f"https://{FLASK_DN}"
 
 
@@ -119,10 +114,10 @@ def set_bokeh_port(port):
     Arguments:
         port {int} -- bokeh port number
     """
-    if ENV == 'local':
+    if CONFIG.environment == 'local':
         with open(os.path.join(cwd(), ".env"), 'w') as env_file:
             env_file.write(str(port))
-    elif ENV == 'heroku':
+    elif CONFIG.environment == 'heroku':
         os.environ['BOKEH_PORT'] = str(port)
 
 
@@ -142,10 +137,10 @@ def get_bokeh_port():
     Returns:
         str -- bokeh port number
     """
-    if ENV == 'local':
+    if CONFIG.environment == 'local':
         with open(os.path.join(cwd(), ".env"), 'r') as env_file:
             port = env_file.read()
-    elif ENV == 'heroku':
+    elif CONFIG.environment == 'heroku':
         port = os.environ.get('BOKEH_PORT')
     return port
 

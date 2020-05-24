@@ -18,32 +18,36 @@ This application wraps the Flask App into Tornado framework. Implements a HTTP r
 ## Run Application with a Single Command
 
 1. Clone or download repository.
-2. Navigate to the utest directory covid/app/utest
-3. In your terminal run the following command.
+2. Navigate to the utest directory covid/app/utest.
+3. Open config.yaml file and change "heroku" to "local" in first line and save it.
+4. In your terminal run the following command from the same directory.
 
 ``` Python
 python run.py
 ```
 
-4. Open http//127.0.0.1:8000/ in your internet browser.
+5. Open http//127.0.0.1:8000/ in your internet browser to see Bokeh App embedded into Flask framework.
 
 ## Run Each Application Independently
 
 1. Clone or download repository.
-2. Navigate to the utest directory covid/app/utest
-3. In your terminal run the following command.
+2. Navigate to the covid-master/app/utest directory
+3. Open config.yaml file and change "heroku" to "local" in first line and save it.
+4. In your terminal run the following command from the covid-master/app/utest directory.
 
 ``` Python
 python bkapp.py
 ```
 
-4. Open the url displayed in your terminal with your internet browser.
+5. Open the url displayed in your terminal with your internet browser to see the Bokeh server app.
+
+6. Open a second terminal session without closing the one running bkapp.py and run the following command from the same directory.
 
 ``` Python
 python app.py
 ```
 
-5. Open http//127.0.0.1:8000/ in your internet browser.
+7. Open http//127.0.0.1:8000/ in your internet browser to see Bokeh server app embedded into Flask framework.
 
 ## Design Diagrams
 
