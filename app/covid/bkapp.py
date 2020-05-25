@@ -50,6 +50,7 @@ logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
 
 
+
 class BokehApp:
     """
         Create Production Server Application
@@ -70,28 +71,40 @@ class BokehApp:
         self.palette['hover'] = self.palette['theme'][4]
         self.palette['trends'] = Greens[3]
 
-        self.doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
+    def add_heading(self, text, doc=None):
+        """Add heading to current document
 
-        _ = self.add_heading(doc, 'US COVID-19 Cases in Last 15 Days')
-        _ = self.add_map()
-        _ = self.add_footer(doc, 'Data Source: New York Times')
-        _ = self.add_footer(doc, 'Technology Stack: HTML, CSS, JavaScript, '\
-                                 'Python, AJAX, Flask, Tornado, Bokeh, '\
-                                 'GeoPandas, SQLite')
+        Arguments:
+            doc {Document} -- current bokeh document
+            text {String} -- heading text
 
-        self.add_link(doc, 'Source Code at GitHub',
-                     'https://github.com/hmanuel1/covid')
+        Returns:
+            Document -- updated bokeh document
+        """
+        if doc is None:
+            doc = self.doc
 
-    def add_heading(self, doc, text):
         attributes = dict(height=30, width=800, align=None,
                           style={'width': '800px',
                                  'font-size': '125%',
                                  'color': self.palette['hover'],
                                  'text-align': 'center'})
         doc.add_root(Div(text=f"<b>{text}</b>", **attributes))
-        return self.doc
+        return doc
 
-    def add_footer(self, doc, text):
+    def add_footer(self, text, doc=None):
+        """Add footer to current document
+
+        Arguments:
+            doc {Document} -- bokeh current document
+            text {String} -- footer text
+
+        Returns:
+            Document -- updated bokeh document
+        """
+        if doc is None:
+            doc = self.doc
+
         attributes = dict(height=15, width=800, align=None,
                           style={'width': '800px',
                                  'font-size': '100%',
@@ -100,9 +113,22 @@ class BokehApp:
                                  'color': 'darkgrey',
                                  'text-align': 'center'})
         doc.add_root(Div(text=f"<b>{text}</b>", **attributes))
-        return self.doc
+        return doc
 
-    def add_link(self, doc, text, link):
+    def add_link(self, text, link, doc=None):
+        """Add a link to current document
+
+        Arguments:
+            doc {Document} -- current bokeh document
+            text {String} -- link text
+            link {url} -- url to attached to text
+
+        Returns:
+            Document -- updated bokeh document
+        """
+        if doc is None:
+            doc = self.doc
+
         attributes = dict(height=15, width=800, align=None,
                           style={'width': '800px',
                                  'font-size': '100%',
@@ -116,17 +142,40 @@ class BokehApp:
 
         doc.add_root(Div(text=f"<a href=\"{link}\" {style}>{text}</a>",
                          **attributes))
-        return self.doc
+        return doc
 
-    def add_histograms(self):
-        self.doc.add_root(age_gender_histograms(
+    def add_histograms(self, doc=None):
+        """Add Histograms to current document
+
+        Arguments:
+            doc {Document} -- current bokeh document
+
+        Returns:
+            Document -- updated bokeh document
+        """
+        if doc is None:
+            doc = self.doc
+
+        doc.add_root(age_gender_histograms(
             self.data,
             self.palette['color'],
             self.palette['hover']
         ))
         log.info('histograms added')
+        return doc
 
-    def add_map(self):
+    def add_map(self, doc=None):
+        """Add interactive map to current document
+
+        Arguments:
+            doc {Document} -- current bokeh document
+
+        Returns:
+            Document -- updated bokeh document
+        """
+        if doc is None:
+            doc = self.doc
+
         plot = Map(plot_width=800,
                    plot_height=400,
                    palette=self.palette['theme'])
@@ -134,12 +183,23 @@ class BokehApp:
                         plot.plot,
                         row(plot.controls['slider'],
                             plot.controls['button']))
-        self.doc.add_root(layout)
+        doc.add_root(layout)
         log.info('us_map added')
-        return self.doc
+        return doc
 
-    def add_modeling(self):
-        self.doc.add_root(models_result(
+    def add_modeling(self, doc=None):
+        """Add covid-19 models to current document
+
+        Arguments:
+            doc {Document} -- current bokeh document
+
+        Returns:
+            Document -- updated bokeh document
+        """
+        if doc is None:
+            doc = self.doc
+
+        doc.add_root(models_result(
             self.roc,
             self.importance,
             self.palette['theme'][2:],
@@ -147,13 +207,75 @@ class BokehApp:
             self.palette['hover']
         ))
         log.info('modeling added')
-        return self.doc
+        return doc
 
-    def add_trends(self):
+    def add_trends(self, doc=None):
+        """Add covid-19 trends to current document
+
+        Arguments:
+            doc {Document} -- current bokeh document
+
+        Returns:
+            Document -- updated bokeh document
+        """
+        if doc is None:
+            doc = self.doc
+
         trend = Trends(self.palette['trends'])
-        self.doc.add_root(trend.layout())
+        doc.add_root(trend.layout())
         log.info('trends added')
-        return self.doc
+        return doc
+
+
+def bkapp(doc):
+    """Generate Landing Page
+
+    Arguments:
+        doc {Document} -- bokeh document
+
+    Returns:
+        Document -- updated bokeh document
+    """
+    app = BokehApp(doc)
+    app.add_heading('US COVID-19 Cases in Last 15 Days')
+    app.add_map()
+    app.add_footer('Data Source: New York Times')
+    app.add_footer('Technology Stack: HTML, CSS, JavaScript, '\
+                   'Python, AJAX, Flask, Tornado, Bokeh, '\
+                   'GeoPandas, SQLite')
+
+    doc = app.add_link('Source Code at GitHub',
+                       'https://github.com/hmanuel1/covid')
+
+    doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
+    return doc
+
+
+def bkapp_histograms(doc):
+    """Generate histogram Page
+
+    Arguments:
+        doc {Document} -- bokeh document
+
+    Returns:
+        Document -- updated bokeh document
+    """
+    app = BokehApp(doc)
+    app.add_heading('FL COVID-19 Distribution by Age and Gender')
+    app.add_histograms()
+    app.add_footer('Data Source: New York Times')
+    app.add_footer('Technology Stack: HTML, CSS, JavaScript, '\
+                   'Python, AJAX, Flask, Tornado, Bokeh, '\
+                   'GeoPandas, SQLite')
+
+    doc = app.add_link('Source Code at GitHub',
+                       'https://github.com/hmanuel1/covid')
+
+    doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
+    return doc
+
+
+bkapp = Application(FunctionHandler(bkapp))
 
 
 def  get_sockets():
@@ -169,11 +291,10 @@ def  get_sockets():
 
 def bk_worker(sockets, port):
     """ Worker thread to  run Bokeh Server """
-    _bkapp = Application(FunctionHandler(BokehApp))
     asyncio.set_event_loop(asyncio.new_event_loop())
 
     websocket_origins = [f"{BOKEH_ADDR}:{port}", f"{FLASK_ADDR}:{FLASK_PORT}"]
-    bokeh_tornado = BokehTornado({BOKEH_PATH: _bkapp},
+    bokeh_tornado = BokehTornado({BOKEH_PATH: bkapp},
                                  extra_websocket_origins=websocket_origins,
                                  **{'use_xheaders': True})
 
