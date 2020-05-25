@@ -11,13 +11,14 @@ from tornado.websocket import (
     websocket_connect
 )
 
+from config import (
+    get_bokeh_port,
+    BOKEH_URI
+)
+
+
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger(__name__)
-
-
-BOKEH_PORT = 5006
-BOKEH_ADDR = '127.0.0.1'
-BOKEH_PATH = '/bkapp/ws'
 
 
 class SocketConnection:
@@ -47,8 +48,13 @@ class WebSocketProxy(WebSocketHandler):
     """
     def __init__(self, application, *args, **kwargs):
         self.chan = ProxyChannel()
-        self.uri = f"ws://{BOKEH_ADDR}:{BOKEH_PORT}{BOKEH_PORT}"
+        self.uri = BOKEH_URI.replace('$PORT', get_bokeh_port())
         super().__init__(application, *args, **kwargs)
+
+    def initialize(self):
+        """ ping send to browser """
+        self.settings['websocket_ping_interval'] = 30
+        self.settings['websocket_ping_timeout'] = 90
 
     def check_origin(self, origin):
         return True
@@ -59,7 +65,7 @@ class WebSocketProxy(WebSocketHandler):
         return subprotocols[0]
 
     def open(self, *args, **kwargs):
-        log.info("ws opened")
+        log.info("ws connection opened")
         self.chan.client.conn = self.ws_connection
         protocols = self.request.headers['Sec-Websocket-Protocol'].split(', ')
         IOLoop.current().spawn_callback(
@@ -75,8 +81,8 @@ class WebSocketProxy(WebSocketHandler):
                 subprotocols=protocols,
                 on_message_callback=self._on_message_callback
             )
-        except Exception as exc:
-            log.error("ws failed to connect to server %r", exc, exc_info=True)
+        except Exception as e:
+            log.error("ws failed to connect to server %r", e, exc_info=True)
         else:
             self.chan.server.conn = connection
             log.info("ws proxy channel opened")
@@ -84,7 +90,7 @@ class WebSocketProxy(WebSocketHandler):
 
     # proxy to client (browser)
     def _on_message_callback(self, message):
-        if message is None:
+        if message is not None:
             IOLoop.current().spawn_callback(
                 self._send_to_client,
                 message,
@@ -96,8 +102,8 @@ class WebSocketProxy(WebSocketHandler):
     async def _send_to_client(self, message, binary):
         try:
             await self.write_message(message, binary)
-        except Exception as exc:
-            log.error("ws error sending to browser %r", exc, exc_info=True)
+        except Exception as e:
+            log.error("ws error sending to browser %r", e, exc_info=True)
         return None
 
     # proxy to server (bokeh)
@@ -114,9 +120,9 @@ class WebSocketProxy(WebSocketHandler):
     async def _send_to_server(self, message, binary):
         try:
             await self.chan.server.conn.write_message(message, binary)
-        except Exception as exc:
-            log.error("ws error sending to server %r", exc, exc_info=True)
+        except Exception as e:
+            log.error("ws error sending to server %r", e, exc_info=True)
         return None
 
     def on_close(self):
-        log.info("ws channel closed.")
+        log.info("ws connection closed.")

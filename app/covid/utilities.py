@@ -6,79 +6,50 @@ import os
 import time
 
 import numpy as np
-
+from bokeh import __version__ as bokeh_release_ver
 from bokeh.plotting import figure
-from bokeh.layouts import gridplot
-from bokeh.models.widgets import Div
+from bokeh.resources import get_sri_hashes_for_version
 from bokeh.models import (
-    Spacer,
     HoverTool,
     NumeralTickFormatter
 )
+from config import BOKEH_CDN
 
-SPINNER_TEXT = """
-    <!-- https://www.w3schools.com/howto/howto_css_loader.asp -->
-    <div class="loader">
-    <style scoped>
-    .loader {
-        border: 16px solid #f3f3f3; /* Light grey */
-        border-top: 16px solid #3498db; /* Blue */
-        border-radius: 50%;
-        width: 120px;
-        height: 120px;
-        animation: spin 2s linear infinite;
-    }
 
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-    </style>
-    </div>
+BOKEH_BROWSER_LOGGING = """
+    <script type="text/javascript">
+      Bokeh.set_log_level("info");
+    </script>
 """
 
-class BusySpinner:
-    """Busy spinner
-    """
+LOADER = """
+    #loader {
+      position: absolute;
+      left: 20%;
+      top: 30%;
+      z-index: 1000;
+      border: 16px solid #f3f3f3;
+      border-top: 16px solid #3498db;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+"""
 
-    def __init__(self):
-        self.spinner = Div(text="", width=120, height=120, name='spinner')
-
-    def show(self):
-        """Show busy spinner
-        """
-        self.spinner.text = SPINNER_TEXT
-
-    def hide(self):
-        """Hide busy spinner
-        """
-        self.spinner = Div(text="", width=120, height=120, name='spinner')
-
-    def text(self, text=''):
-        """Replace text of spinner
-
-        Keyword Arguments:
-            text {str} -- spinner text (default: {''})
-        """
-        self.spinner = Div(text=text, width=120, height=120, name='spinner')
-
-    def control(self):
-        """Return model (Div) instance
-
-        Returns:
-            Bokeh Div -- Div instance
-        """
-        spin = self.spinner
-        space = Spacer(width=200, height=200)
-        layout = gridplot([
-            [space, space, space, space, space],
-            [space, space, spin, space, space],
-            [space, space, space, space, space],
-        ],
-                          plot_width=50,
-                          plot_height=50,
-                          toolbar_location=None)
-        return layout
+PRELOADER = """
+    <script type="text/javascript">
+      function preloader(){
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }
+      window.onload = preloader;
+    </script>
+"""
 
 
 class ElapsedMilliseconds:
@@ -261,3 +232,28 @@ def vbar(x, y, xlabel='x', ylabel='y', **kwargs):
     plot.yaxis.axis_label = ylabel
 
     return plot
+
+def bokeh_cdn_resources():
+    """Create script to load Bokeh resources from CDN based on
+       installed bokeh version.
+
+    Returns:
+        script -- script to load resources from CDN
+    """
+    included_resources = [
+        f'bokeh-{bokeh_release_ver}.min.js',
+        f'bokeh-api-{bokeh_release_ver}.min.js',
+        f'bokeh-tables-{bokeh_release_ver}.min.js',
+        f'bokeh-widgets-{bokeh_release_ver}.min.js'
+    ]
+
+    resources = '\n    '
+    for key, value in get_sri_hashes_for_version(bokeh_release_ver).items():
+        if key in included_resources:
+            resources += '<script type="text/javascript" '
+            resources += f'src="{BOKEH_CDN}/{key}" '
+            resources += f'integrity="sha384-{value}" '
+            resources += 'crossorigin="anonymous"></script>\n    '
+
+    resources += BOKEH_BROWSER_LOGGING
+    return resources

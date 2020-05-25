@@ -31,7 +31,7 @@ python run.py
 ## Run Each Application Independently
 
 1. Clone or download repository.
-2. Navigate to the covid-master/app/utest directory
+2. Navigate to the covid-master/app/utest directory.
 3. Open config.yaml file and change "heroku" to "local" in first line and save it.
 4. In your terminal run the following command from the covid-master/app/utest directory.
 

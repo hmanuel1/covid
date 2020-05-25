@@ -51,14 +51,15 @@ conda install -c conda-forge geopandas
 ``` python
 pip install -r requirements.txt
 ```
+4. Navigate to *covid/app/covid/config.yaml* file and change 'heroku' to 'local' in the first line and save it.
 
-4. From the *app* directory, run app:
+5. From the *covid/app/covid* directory, using your terminal; run app by executing the following command:
 
 ``` python
-bokeh serve --show covid
+python run.py
 ```
 
-If everything goes well, it will open the COVID-19 page.
+Open http://127.0.0.1:8000/ in your internet browser to see the interactive US map app.
 
 
 ### Data Sources
@@ -75,9 +76,13 @@ If everything goes well, it will open the COVID-19 page.
 * Flask
 * Tornado
 * HTML
+* CSS
+* JavaScript
 * Web Sockets
 * GIS
-* JavaScript
 * Python
 * Python Packages
+* VS Code
 * SQLite
+* GitHub
+* Heroku
