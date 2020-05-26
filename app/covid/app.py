@@ -29,8 +29,6 @@ from config import (
     FLASK_URL,
 
     get_bokeh_port,
-    BOKEH_PATH,
-    BOKEH_WS_PATH,
     BOKEH_URL
 )
 
@@ -46,10 +44,35 @@ app.config['SECRET_KEY'] = 'secret!'
 
 
 @app.route('/', methods=['GET'])
-def index():
+@app.route('/maps', methods=['GET'])
+def maps():
     """ Index """
     resources = bokeh_cdn_resources()
-    script = server_document(FLASK_URL + BOKEH_PATH, resources=None)
+    script = server_document(FLASK_URL + '/bkapp-maps', resources=None)
+    return render_template("embed.html", resources=resources, script=script)
+
+
+@app.route('/trends', methods=['GET'])
+def trends():
+    """ trends page """
+    resources = bokeh_cdn_resources()
+    script = server_document(FLASK_URL + '/bkapp-trends', resources=None)
+    return render_template("embed.html", resources=resources, script=script)
+
+
+@app.route('/histograms', methods=['GET'])
+def histograms():
+    """ histograms page """
+    resources = bokeh_cdn_resources()
+    script = server_document(FLASK_URL + '/bkapp-histograms', resources=None)
+    return render_template("embed.html", resources=resources, script=script)
+
+
+@app.route('/models', methods=['GET'])
+def models():
+    """ models page """
+    resources = bokeh_cdn_resources()
+    script = server_document(FLASK_URL + '/bkapp-models', resources=None)
     return render_template("embed.html", resources=resources, script=script)
 
 
@@ -76,9 +99,13 @@ def start_tornado():
     """
     asyncio.set_event_loop(asyncio.new_event_loop())
     container = WSGIContainer(app)
-    server = Application([(BOKEH_WS_PATH, WebSocketProxy),
-                          (r'.*', FallbackHandler, dict(fallback=container))],
-                         **{'use_xheaders': True})
+    server = Application([
+        (r'/bkapp-maps/ws', WebSocketProxy, dict(path='/bkapp-maps')),
+        (r'/bkapp-trends/ws', WebSocketProxy, dict(path='/bkapp-trends')),
+        (r'/bkapp-histograms/ws', WebSocketProxy, dict(path='/bkapp-histograms')),
+        (r'/bkapp-models/ws', WebSocketProxy, dict(path='/bkapp-models')),
+        (r'.*', FallbackHandler, dict(fallback=container))
+    ], **{'use_xheaders': True})
     server.listen(port=FLASK_PORT)
     IOLoop.instance().start()
 

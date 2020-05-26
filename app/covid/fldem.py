@@ -2,7 +2,7 @@
     Read pdf COVID-19 file from Florida Division of Emergency
     Management and save it into a CSV format
 """
-
+# %%
 from io import BytesIO
 import re
 
@@ -98,6 +98,16 @@ class PdfScraper:
         # remove non-data pages
         _pages = [page for page in self.pages if re.search(marker, page[:100])]
 
+        # make sure these field are not joined
+        _pages = [page.replace('Male', '\nMale\n') for page in _pages]
+        _pages = [page.replace('Female', '\nFemale\n') for page in _pages]
+        _pages = [page.replace('Yes', '\nYes\n') for page in _pages]
+        _pages = [page.replace('NoFL', '\nNo\nFL') for page in _pages]
+        _pages = [re.sub(r'(No)([A-Z])+', r'\n\1\n\2', page) for page in _pages]
+        _pages = [page.replace('Unknown', '\nUnknown\n') for page in _pages]
+        _pages = [re.sub(r'(\d{1,4})([A-Z])', r'\n\1\n\2', page) for page in _pages]
+        _pages = [re.sub(r'\n+', '\n', page) for page in _pages]
+
         # unwanted lines contains these words
         _regex = re.compile(('Data|Death|County|Age|Gender|Travel|related|'
                              'Contact|confirmed|Jurisdiction|Date|counted|'
@@ -159,7 +169,7 @@ class PdfScraper:
 
         return self.data
 
-
+# %%
 def get_data(download=False):
     """Download data from web or from file
 

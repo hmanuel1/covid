@@ -42,7 +42,6 @@ from config import (
     FLASK_ADDR,
 
     BOKEH_ADDR,
-    BOKEH_PATH,
     BOKEH_URL
 )
 
@@ -92,7 +91,7 @@ class BokehApp:
         doc.add_root(Div(text=f"<b>{text}</b>", **attributes))
         return doc
 
-    def add_footer(self, text, doc=None):
+    def add_text(self, text, doc=None):
         """Add footer to current document
 
         Arguments:
@@ -144,6 +143,25 @@ class BokehApp:
                          **attributes))
         return doc
 
+    def add_footer(self, doc=None):
+        """Add page footer
+
+        Keyword Arguments:
+            doc {Document} -- bokeh document (default: {None})
+
+        Returns:
+            Document -- updated bokeh document
+        """
+        if doc is None:
+            doc = self.doc
+        self.add_text('Technology Stack: HTML, CSS, JavaScript, '\
+                      'Python, AJAX, Flask, Tornado, Bokeh, '\
+                      'GeoPandas, SQLite')
+        doc = self.add_link('Source Code at GitHub',
+                            'https://github.com/hmanuel1/covid')
+        return doc
+
+
     def add_histograms(self, doc=None):
         """Add Histograms to current document
 
@@ -187,7 +205,7 @@ class BokehApp:
         log.info('us_map added')
         return doc
 
-    def add_modeling(self, doc=None):
+    def add_models(self, doc=None):
         """Add covid-19 models to current document
 
         Arguments:
@@ -227,7 +245,7 @@ class BokehApp:
         return doc
 
 
-def bkapp(doc):
+def _bkapp_maps(doc):
     """Generate Landing Page
 
     Arguments:
@@ -239,19 +257,13 @@ def bkapp(doc):
     app = BokehApp(doc)
     app.add_heading('US COVID-19 Cases in Last 15 Days')
     app.add_map()
-    app.add_footer('Data Source: New York Times')
-    app.add_footer('Technology Stack: HTML, CSS, JavaScript, '\
-                   'Python, AJAX, Flask, Tornado, Bokeh, '\
-                   'GeoPandas, SQLite')
-
-    doc = app.add_link('Source Code at GitHub',
-                       'https://github.com/hmanuel1/covid')
-
+    app.add_text('Data Source: New York Times')
+    doc = app.add_footer()
     doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
     return doc
 
 
-def bkapp_histograms(doc):
+def _bkapp_histograms(doc):
     """Generate histogram Page
 
     Arguments:
@@ -261,21 +273,54 @@ def bkapp_histograms(doc):
         Document -- updated bokeh document
     """
     app = BokehApp(doc)
-    app.add_heading('FL COVID-19 Distribution by Age and Gender')
+    app.add_heading('FL COVID-19 Distributions by Age and Gender')
     app.add_histograms()
-    app.add_footer('Data Source: New York Times')
-    app.add_footer('Technology Stack: HTML, CSS, JavaScript, '\
-                   'Python, AJAX, Flask, Tornado, Bokeh, '\
-                   'GeoPandas, SQLite')
-
-    doc = app.add_link('Source Code at GitHub',
-                       'https://github.com/hmanuel1/covid')
-
+    app.add_text('Data Source: Florida Department of Emergency Management')
+    doc = app.add_footer()
     doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
     return doc
 
 
-bkapp = Application(FunctionHandler(bkapp))
+def _bkapp_trends(doc):
+    """Generate trends Page
+
+    Arguments:
+        doc {Document} -- bokeh document
+
+    Returns:
+        Document -- updated bokeh document
+    """
+    app = BokehApp(doc)
+    app.add_heading('FL COVID-19 Trends by State')
+    app.add_trends()
+    app.add_text('Data Source: New York Times')
+    doc = app.add_footer()
+    doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
+    return doc
+
+
+def _bkapp_models(doc):
+    """Generate models Page
+
+    Arguments:
+        doc {Document} -- bokeh document
+
+    Returns:
+        Document -- updated bokeh document
+    """
+    app = BokehApp(doc)
+    app.add_heading('FL COVID-19 Models')
+    app.add_models()
+    app.add_text('Data Source: Florida Department of Emergency Management')
+    doc = app.add_footer()
+    doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
+    return doc
+
+# bokeh applications
+bkapp_maps = Application(FunctionHandler(_bkapp_maps))
+bkapp_trends = Application(FunctionHandler(_bkapp_trends))
+bkapp_histograms = Application(FunctionHandler(_bkapp_histograms))
+bkapp_models = Application(FunctionHandler(_bkapp_models))
 
 
 def  get_sockets():
@@ -294,7 +339,10 @@ def bk_worker(sockets, port):
     asyncio.set_event_loop(asyncio.new_event_loop())
 
     websocket_origins = [f"{BOKEH_ADDR}:{port}", f"{FLASK_ADDR}:{FLASK_PORT}"]
-    bokeh_tornado = BokehTornado({BOKEH_PATH: bkapp},
+    bokeh_tornado = BokehTornado({'/bkapp-maps': bkapp_maps,
+                                  '/bkapp-trends': bkapp_trends,
+                                  '/bkapp-histograms': bkapp_histograms,
+                                  '/bkapp-models': bkapp_models},
                                  extra_websocket_origins=websocket_origins,
                                  **{'use_xheaders': True})
 

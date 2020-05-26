@@ -47,14 +47,20 @@ class WebSocketProxy(WebSocketHandler):
 
     """
     def __init__(self, application, *args, **kwargs):
+        self.uri = None
         self.chan = ProxyChannel()
-        self.uri = BOKEH_URI.replace('$PORT', get_bokeh_port())
         super().__init__(application, *args, **kwargs)
 
-    def initialize(self):
-        """ ping send to browser """
+    def initialize(self, path):
+        """ Set ping interval and ping timeout and bokeh uri
+
+        """
         self.settings['websocket_ping_interval'] = 30
         self.settings['websocket_ping_timeout'] = 90
+
+        self.uri = BOKEH_URI.replace('$PORT', get_bokeh_port())
+        self.uri = self.uri.replace('$PATH', path)
+        print(path)
 
     def check_origin(self, origin):
         return True

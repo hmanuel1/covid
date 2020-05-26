@@ -2,7 +2,7 @@ environment: 'heroku'
 
 app:
   bokeh:
-    path: "/bkapp"
+    path: "$PATH"
   flask:
     path: "/"
 
@@ -11,7 +11,7 @@ proxy:
     local:
       address: "127.0.0.1"
       port: "$PORT"
-      path: "/bkapp/ws"
+      path: "$PATH/ws"
   flask:
     local:
       address: "127.0.0.1"
