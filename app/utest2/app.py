@@ -48,8 +48,9 @@ app.config['SECRET_KEY'] = 'secret!'
 def blue():
     """ bk blue app """
     resources = bokeh_cdn_resources()
-    script = server_document(FLASK_URL + '/bkapp-blue', resources=None)
-    return render_template("embed.html", script=script, resources=resources)
+    blue_app = server_document(FLASK_URL + '/bkapp-blue', resources=None)
+    red_app = server_document(FLASK_URL + '/bkapp-red', resources=None)
+    return render_template("embed.html", blue=blue_app, red=red_app, resources=resources)
 
 
 @app.route('/red', methods=['GET'])

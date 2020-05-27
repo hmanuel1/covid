@@ -44,12 +44,19 @@ app.config['SECRET_KEY'] = 'secret!'
 
 
 @app.route('/', methods=['GET'])
-@app.route('/maps', methods=['GET'])
-def maps():
-    """ Index """
-    resources = bokeh_cdn_resources()
-    script = server_document(FLASK_URL + '/bkapp-maps', resources=None)
-    return render_template("embed.html", resources=resources, script=script)
+def index():
+    """ histograms page """
+    _resources = bokeh_cdn_resources()
+    _maps = server_document(FLASK_URL + '/bkapp-maps', resources=None)
+    _trends = server_document(FLASK_URL + '/bkapp-trends', resources=None)
+    _histograms = server_document(FLASK_URL + '/bkapp-histograms', resources=None)
+    _models = server_document(FLASK_URL + '/bkapp-models', resources=None)
+    return render_template("embed.html",
+                           resources=_resources,
+                           maps=_maps,
+                           trends=_trends,
+                           histograms=_histograms,
+                           models=_models)
 
 
 @app.route('/trends', methods=['GET'])

@@ -104,7 +104,7 @@ class BokehApp:
         if doc is None:
             doc = self.doc
 
-        attributes = dict(height=15, width=800, align=None,
+        attributes = dict(height=13, width=800, align=None,
                           style={'width': '800px',
                                  'font-size': '100%',
                                  'font-style': 'italic',
@@ -128,7 +128,7 @@ class BokehApp:
         if doc is None:
             doc = self.doc
 
-        attributes = dict(height=15, width=800, align=None,
+        attributes = dict(height=13, width=800, align=None,
                           style={'width': '800px',
                                  'font-size': '100%',
                                  'font-style': 'italic',
@@ -258,7 +258,7 @@ def _bkapp_maps(doc):
     app.add_heading('US COVID-19 Cases in Last 15 Days')
     app.add_map()
     app.add_text('Data Source: New York Times')
-    doc = app.add_footer()
+    doc = app.add_text('')
     doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
     return doc
 
@@ -276,7 +276,7 @@ def _bkapp_histograms(doc):
     app.add_heading('FL COVID-19 Distributions by Age and Gender')
     app.add_histograms()
     app.add_text('Data Source: Florida Department of Emergency Management')
-    doc = app.add_footer()
+    doc = app.add_text('')
     doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
     return doc
 
@@ -294,7 +294,7 @@ def _bkapp_trends(doc):
     app.add_heading('FL COVID-19 Trends by State')
     app.add_trends()
     app.add_text('Data Source: New York Times')
-    doc = app.add_footer()
+    doc = app.add_text('')
     doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
     return doc
 
@@ -312,6 +312,7 @@ def _bkapp_models(doc):
     app.add_heading('FL COVID-19 Models')
     app.add_models()
     app.add_text('Data Source: Florida Department of Emergency Management')
+    app.add_text('')
     doc = app.add_footer()
     doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
     return doc
