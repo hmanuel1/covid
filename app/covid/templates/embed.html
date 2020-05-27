@@ -3,13 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <title>COVID19</title>
-    {{ resources|safe }}
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+      body {
+        font-family: "Noto Sans", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        color: #fff;
+        background: #2f2f2f;
+      }
+    </style>
+    {{ js_resources|safe }} {{ css_resources|safe }}
   </head>
   <body>
-    {{ maps|safe }}
-    {{ trends|safe }}
-    {{ histograms|safe }}
-    {{ models|safe }}
-    {{ script|safe }}
+    <div align="center">{{ maps|safe }}</div>
+    <div align="center">{{ trends|safe }}</div>
+    <div align="center">{{ histograms|safe }}</div>
+    <div align="center">{{ models|safe }}</div>
   </body>
 </html>

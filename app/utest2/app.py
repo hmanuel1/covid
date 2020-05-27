@@ -14,6 +14,7 @@ from flask_cors import CORS, cross_origin
 
 from bokeh import __version__ as ver
 from bokeh.embed import server_document
+from bokeh.resources import Resources
 from tornado.wsgi import WSGIContainer
 from tornado.web import (
     Application,
@@ -47,10 +48,15 @@ app.config['SECRET_KEY'] = 'secret!'
 @app.route('/', methods=['GET'])
 def blue():
     """ bk blue app """
-    resources = bokeh_cdn_resources()
+    _js_resources = Resources(mode="cdn", log_level='trace').render_js()
+    _css_resources = Resources(mode="cdn", log_level='trace').render_css()
     blue_app = server_document(FLASK_URL + '/bkapp-blue', resources=None)
     red_app = server_document(FLASK_URL + '/bkapp-red', resources=None)
-    return render_template("embed.html", blue=blue_app, red=red_app, resources=resources)
+    return render_template("embed.html",
+                           js_resources=_js_resources,
+                           css_resources=_css_resources,
+                           blue=blue_app,
+                           red=red_app)
 
 
 @app.route('/red', methods=['GET'])

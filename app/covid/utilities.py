@@ -8,19 +8,11 @@ import time
 import numpy as np
 from bokeh import __version__ as bokeh_release_ver
 from bokeh.plotting import figure
-from bokeh.resources import get_sri_hashes_for_version
 from bokeh.models import (
     HoverTool,
     NumeralTickFormatter
 )
-from config import BOKEH_CDN
 
-
-BOKEH_BROWSER_LOGGING = """
-    <script type="text/javascript">
-      Bokeh.set_log_level("info");
-    </script>
-"""
 
 LOADER = """
     #loader {
@@ -129,7 +121,7 @@ def histogram(x, xlabel='x', ylabel='y', **kwargs):
         Bokeh figure -- plot
     """
     # plot settings
-    figure_settings = dict(title=None, tools='', background_fill_color=None)
+    figure_settings = dict(title=None, tools='')
 
     quad_settings = dict(fill_color='navy', hover_fill_color='grey',
                          line_color="white", alpha=0.5, hover_fill_alpha=1.0)
@@ -232,28 +224,3 @@ def vbar(x, y, xlabel='x', ylabel='y', **kwargs):
     plot.yaxis.axis_label = ylabel
 
     return plot
-
-def bokeh_cdn_resources():
-    """Create script to load Bokeh resources from CDN based on
-       installed bokeh version.
-
-    Returns:
-        script -- script to load resources from CDN
-    """
-    included_resources = [
-        f'bokeh-{bokeh_release_ver}.min.js',
-        f'bokeh-api-{bokeh_release_ver}.min.js',
-        f'bokeh-tables-{bokeh_release_ver}.min.js',
-        f'bokeh-widgets-{bokeh_release_ver}.min.js'
-    ]
-
-    resources = '\n    '
-    for key, value in get_sri_hashes_for_version(bokeh_release_ver).items():
-        if key in included_resources:
-            resources += '<script type="text/javascript" '
-            resources += f'src="{BOKEH_CDN}/{key}" '
-            resources += f'integrity="sha384-{value}" '
-            resources += 'crossorigin="anonymous"></script>\n    '
-
-    resources += BOKEH_BROWSER_LOGGING
-    return resources

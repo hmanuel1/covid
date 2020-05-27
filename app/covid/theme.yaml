@@ -1,36 +1,65 @@
 attrs:
-  Plot:
-    min_border: 0
+  # Plot:
+  #   min_border: 0
 
   DataRange:
       only_visible: True
 
+  Figure:
+    background_fill_color: '#20262B'
+    border_fill_color: '#2F2F2F'
+    outline_line_color: '#E0E0E0'
+    outline_line_alpha: 0.25
+
+    min_border_top: 5
+    min_border_left: 5
+    min_border_right: 10
+    min_border_bottom: 5
+
+  Title:
+    text_color: '#E0E0E0'
+    text_font: 'Helvetica'
+    text_font_size: '11pt'
+    text_font_style: 'normal'
+
   Axis:
-    minor_tick_in: null
-    minor_tick_out: null
-    major_tick_in: null
-    major_label_text_font_size: '11px'
-    major_label_text_font_style: 'normal'
-    axis_label_text_font_size: '11px'
-
-    axis_line_color: '#AAAAAA'
-    major_tick_line_color: '#AAAAAA'
-    major_label_text_color: '#666666'
-
-    major_tick_line_cap: 'round'
     axis_line_cap: 'round'
     axis_line_width: 1
+
+    major_tick_in: null
     major_tick_line_width: 1
+    major_tick_line_alpha: 0
+    major_tick_line_color: '#E0E0E0'
+
+    minor_tick_in: null
+    minor_tick_out: null
+    minor_tick_line_alpha: 0
+    minor_tick_line_color: '#E0E0E0'
+
+    axis_line_alpha: 0
+    axis_line_color: '#E0E0E0'
+
+    major_label_text_color: '#E0E0E0'
+    major_label_text_font: 'Helvetica'
+    major_label_text_font_size: '8pt'
+
+    axis_label_text_color: '#E0E0E0'
+    axis_label_text_font: 'Helvetica'
+    axis_label_text_font_size: '8pt'
+    axis_label_text_font_style: 'normal'
 
   Grid:
     grid_line_color: null
 
   Legend:
-    label_text_font_size: '8pt'
-    background_fill_alpha: 0
-    background_fill_color: null
-    border_line_color: null
     spacing: 0
+    label_text_color: '#E0E0E0'
+    label_text_font: 'Helvetica'
+    label_text_font_size: '8pt'
+
+    border_line_alpha: 0
+    background_fill_alpha: 0.25
+    background_fill_color: '#20262B'
 
   Toolbar:
     active_drag: null

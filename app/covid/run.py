@@ -40,4 +40,4 @@ log.info("Flask + Bokeh Server App Running at: %s", FLASK_URL)
 
 # loop for ever
 while True:
-    time.sleep(0.05)
+    time.sleep(0.01)

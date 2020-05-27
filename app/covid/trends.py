@@ -226,8 +226,8 @@ class Trends:
     def _add_multiselect(self):
         self.multiselect = MultiSelect(title='States:', value=['01'],
                                        options=self.cases.options)
-        self.multiselect.max_width = 180
-        self.multiselect.min_height = 500 - 40
+        self.multiselect.max_width = 170
+        self.multiselect.min_height = 500 - 47
         self.multiselect.on_change('value', self._callback_cases)
         self.multiselect.on_change('value', self._callback_deaths)
 
@@ -307,11 +307,10 @@ class Trends:
             Bokeh Layout -- layout with cases, deaths and state selection
         """
         _graphs = gridplot([self.cases.plot, self.deaths.plot], ncols=1,
-                           plot_width=800 - self.multiselect.max_width - 40,
-                           plot_height=250, toolbar_location='right',
-                           toolbar_options=dict(logo=None))
+                           plot_width=800 - self.multiselect.max_width,
+                           plot_height=250, toolbar_location=None)
 
-        _layout = row(self.multiselect, _graphs)
+        _layout = row(_graphs, self.multiselect)
 
         return _layout
 

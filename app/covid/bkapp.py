@@ -361,4 +361,4 @@ if __name__ == '__main__':
     bokeh_url = BOKEH_URL.replace('$PORT', str(bk_port))
     log.info("Bokeh Server App Running at: %s", bokeh_url)
     while True:
-        time.sleep(0.05)
+        time.sleep(0.01)

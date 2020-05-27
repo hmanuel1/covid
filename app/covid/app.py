@@ -14,6 +14,7 @@ from flask_cors import CORS, cross_origin
 
 from bokeh import __version__ as ver
 from bokeh.embed import server_document
+from bokeh.resources import Resources
 from tornado.wsgi import WSGIContainer
 from tornado.web import (
     Application,
@@ -22,7 +23,6 @@ from tornado.web import (
 from tornado.ioloop import IOLoop
 
 from wsproxy import WebSocketProxy
-from utilities import bokeh_cdn_resources
 from config import (
     FLASK_PORT,
     FLASK_PATH,
@@ -46,13 +46,15 @@ app.config['SECRET_KEY'] = 'secret!'
 @app.route('/', methods=['GET'])
 def index():
     """ histograms page """
-    _resources = bokeh_cdn_resources()
-    _maps = server_document(FLASK_URL + '/bkapp-maps', resources=None)
-    _trends = server_document(FLASK_URL + '/bkapp-trends', resources=None)
+    _js_resources = Resources(mode="cdn", log_level='trace').render_js()
+    _css_resources = Resources(mode="cdn", log_level='trace').render_css()
     _histograms = server_document(FLASK_URL + '/bkapp-histograms', resources=None)
     _models = server_document(FLASK_URL + '/bkapp-models', resources=None)
+    _maps = server_document(FLASK_URL + '/bkapp-maps', resources=None)
+    _trends = server_document(FLASK_URL + '/bkapp-trends', resources=None)
     return render_template("embed.html",
-                           resources=_resources,
+                           js_resources=_js_resources,
+                           css_resources=_css_resources,
                            maps=_maps,
                            trends=_trends,
                            histograms=_histograms,
@@ -62,25 +64,37 @@ def index():
 @app.route('/trends', methods=['GET'])
 def trends():
     """ trends page """
-    resources = bokeh_cdn_resources()
+    js_resources = Resources(mode="cdn", log_level='trace').render_js()
+    css_resources = Resources(mode="cdn", log_level='trace').render_css()
     script = server_document(FLASK_URL + '/bkapp-trends', resources=None)
-    return render_template("embed.html", resources=resources, script=script)
+    return render_template("embed.html",
+                           js_resources=js_resources,
+                           css_resources=css_resources,
+                           script=script)
 
 
 @app.route('/histograms', methods=['GET'])
 def histograms():
     """ histograms page """
-    resources = bokeh_cdn_resources()
+    js_resources = Resources(mode="cdn", log_level='trace').render_js()
+    css_resources = Resources(mode="cdn", log_level='trace').render_css()
     script = server_document(FLASK_URL + '/bkapp-histograms', resources=None)
-    return render_template("embed.html", resources=resources, script=script)
+    return render_template("embed.html",
+                           js_resources=js_resources,
+                           css_resources=css_resources,
+                           script=script)
 
 
 @app.route('/models', methods=['GET'])
 def models():
     """ models page """
-    resources = bokeh_cdn_resources()
+    js_resources = Resources(mode="cdn", log_level='trace').render_js()
+    css_resources = Resources(mode="cdn", log_level='trace').render_css()
     script = server_document(FLASK_URL + '/bkapp-models', resources=None)
-    return render_template("embed.html", resources=resources, script=script)
+    return render_template("embed.html",
+                           js_resources=js_resources,
+                           css_resources=css_resources,
+                           script=script)
 
 
 @app.route('/<path:path>', methods=['GET'])
@@ -103,6 +117,7 @@ def proxy(path):
 def start_tornado():
     """Start Tornado server to run a flask app in a Tornado
        WSGI container.
+
     """
     asyncio.set_event_loop(asyncio.new_event_loop())
     container = WSGIContainer(app)
@@ -121,4 +136,4 @@ if __name__ == '__main__':
     t.start()
     log.info("Flask + Bokeh Server App Running at %s", FLASK_URL + FLASK_PATH)
     while True:
-        time.sleep(0.05)
+        time.sleep(0.01)

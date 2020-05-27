@@ -54,7 +54,7 @@ def roc(data, palette, plot_width=400, plot_height=400):
                              muted_color=color, muted_alpha=0.2)
 
         if category == 'Random':
-            line_settings = dict(line_color='black', line_width=2, line_dash='dashed',
+            line_settings = dict(line_color='darkgrey', line_width=2, line_dash='dashed',
                                  muted_color='black', muted_alpha=0.2)
 
         lines[category] = plot.line(x='fpr', y='tpr',
