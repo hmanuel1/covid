@@ -61,40 +61,52 @@ def index():
                            models=_models)
 
 
+@app.route('/maps', methods=['GET'])
+def maps():
+    """ trends page """
+    _js_resources = Resources(mode="cdn", log_level='trace').render_js()
+    _css_resources = Resources(mode="cdn", log_level='trace').render_css()
+    _maps = server_document(FLASK_URL + '/bkapp-maps', resources=None)
+    return render_template("embed.html",
+                           js_resources=_js_resources,
+                           css_resources=_css_resources,
+                           maps=_maps)
+
+
 @app.route('/trends', methods=['GET'])
 def trends():
     """ trends page """
-    js_resources = Resources(mode="cdn", log_level='trace').render_js()
-    css_resources = Resources(mode="cdn", log_level='trace').render_css()
-    script = server_document(FLASK_URL + '/bkapp-trends', resources=None)
+    _js_resources = Resources(mode="cdn", log_level='trace').render_js()
+    _css_resources = Resources(mode="cdn", log_level='trace').render_css()
+    _trends = server_document(FLASK_URL + '/bkapp-trends', resources=None)
     return render_template("embed.html",
-                           js_resources=js_resources,
-                           css_resources=css_resources,
-                           script=script)
+                           js_resources=_js_resources,
+                           css_resources=_css_resources,
+                           trends=_trends)
 
 
 @app.route('/histograms', methods=['GET'])
 def histograms():
     """ histograms page """
-    js_resources = Resources(mode="cdn", log_level='trace').render_js()
-    css_resources = Resources(mode="cdn", log_level='trace').render_css()
-    script = server_document(FLASK_URL + '/bkapp-histograms', resources=None)
+    _js_resources = Resources(mode="cdn", log_level='info').render_js()
+    _css_resources = Resources(mode="cdn", log_level='info').render_css()
+    _histograms = server_document(FLASK_URL + '/bkapp-histograms', resources=None)
     return render_template("embed.html",
-                           js_resources=js_resources,
-                           css_resources=css_resources,
-                           script=script)
+                           js_resources=_js_resources,
+                           css_resources=_css_resources,
+                           histograms=_histograms)
 
 
 @app.route('/models', methods=['GET'])
 def models():
     """ models page """
-    js_resources = Resources(mode="cdn", log_level='trace').render_js()
-    css_resources = Resources(mode="cdn", log_level='trace').render_css()
-    script = server_document(FLASK_URL + '/bkapp-models', resources=None)
+    _js_resources = Resources(mode="cdn", log_level='trace').render_js()
+    _css_resources = Resources(mode="cdn", log_level='trace').render_css()
+    _models = server_document(FLASK_URL + '/bkapp-models', resources=None)
     return render_template("embed.html",
-                           js_resources=js_resources,
-                           css_resources=css_resources,
-                           script=script)
+                           js_resources=_js_resources,
+                           css_resources=_css_resources,
+                           models=_models)
 
 
 @app.route('/<path:path>', methods=['GET'])

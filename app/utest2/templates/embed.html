@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>COVID19</title>
-    <style>
-      body { background-color: rgba(21, 25, 28, 0.25);}
-    </style>
-    {{ js_resources|safe }} {{ css_resources|safe }}
+    {{ js_resources|safe }}
+    {{ css_resources|safe }}
   </head>
   <body>
     <div>
       This Bokeh App is served by a Bokeh server embedded into a Flask framework
       through a Tornado framework.
     </div>
-    {{ blue|safe }} {{ red|safe }}
+    {{ blue|safe }}
+    {{ red|safe }}
+    {{ table|safe }}
   </body>
 </html>

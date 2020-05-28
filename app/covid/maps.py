@@ -184,7 +184,7 @@ class Map:
         """
         # select control
         self.controls['select'] = Select(value='a', options=self.meta['options'],
-                                         max_width=self.plot.plot_width-40)
+                                         max_width=self.plot.plot_width-35)
 
         # map views
         _filter = GroupFilter(column_name='state_id', group='12')

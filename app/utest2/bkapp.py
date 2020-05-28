@@ -15,7 +15,6 @@ from tornado.ioloop import IOLoop
 from bokeh import __version__ as bokeh_release_ver
 from bokeh.application import Application
 from bokeh.application.handlers import FunctionHandler
-from bokeh.models import ColumnDataSource, Slider
 from bokeh.plotting import figure
 from bokeh.sampledata.sea_surface_temperature import sea_surface_temperature
 from bokeh.server.server import BaseServer
@@ -24,7 +23,11 @@ from bokeh.server.util import bind_sockets
 from bokeh.themes import Theme
 from bokeh.layouts import column
 from bokeh.resources import get_sri_hashes_for_version
-
+from bokeh.models.widgets import DateFormatter, TableColumn, DataTable
+from bokeh.models import (
+    ColumnDataSource,
+    Slider
+)
 
 
 from config import (
@@ -109,6 +112,31 @@ def bkapp_red(doc):
     return doc.add_root(column(slider, plot))
 
 
+def bkapp_table(doc):
+    """Create a Table App
+
+    Arguments:
+        doc {Document} -- bokeh document
+
+    Returns:
+        Document -- updated bokeh document
+    """
+    data = sea_surface_temperature.copy()
+    data.reset_index(inplace=True)
+    source = ColumnDataSource(data=data)
+
+    columns = [
+        TableColumn(field='time', title='Time', formatter=DateFormatter(format='yy-mm-dd')),
+        TableColumn(field='temperature', title='Temperature')
+    ]
+
+    data_table = DataTable(source=source, columns=columns, width=400,
+                           selectable='checkbox', index_position=None)
+
+    doc.theme = Theme(filename=os.path.join(cwd(), 'theme.yaml'))
+    return doc.add_root(data_table)
+
+
 def bokeh_cdn_resources():
     """Create script to load Bokeh resources from CDN based on
        installed bokeh version.
@@ -149,6 +177,7 @@ def  get_sockets():
 # two applications running in a bokeh server
 _bkapp_blue = Application(FunctionHandler(bkapp_blue))
 _bkapp_red = Application(FunctionHandler(bkapp_red))
+_bkapp_table = Application(FunctionHandler(bkapp_table))
 
 
 def bk_worker(sockets, port):
@@ -158,7 +187,8 @@ def bk_worker(sockets, port):
 
     websocket_origins = [f"{BOKEH_ADDR}:{port}", f"{FLASK_ADDR}:{FLASK_PORT}"]
     bokeh_tornado = BokehTornado({"/bkapp-blue": _bkapp_blue,
-                                  "/bkapp-red": _bkapp_red},
+                                  "/bkapp-red": _bkapp_red,
+                                  "/bkapp-table": _bkapp_table},
                                  extra_websocket_origins=websocket_origins,
                                  **{'use_xheaders': True})
 

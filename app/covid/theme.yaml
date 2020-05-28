@@ -65,3 +65,6 @@ attrs:
     active_drag: null
     autohide: False
     logo: null
+
+  DataTable:
+    color: 'black'

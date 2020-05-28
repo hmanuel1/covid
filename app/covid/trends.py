@@ -192,10 +192,7 @@ class LinePlot:
         self._add_area()
         self._add_hover()
         self._add_legend()
-        self.color_actual()
-        self.color_predict()
-        self.color_interval()
-        self.color_area()
+
 
 class Trends:
     """Trends layout
@@ -314,12 +311,12 @@ class Trends:
 
         return _layout
 
-
+# %%
 if __name__[:9] == 'bokeh_app':
     print('unit testing...')
 
     trend = Trends(palette=Purples[3])
 
-    curdoc().add_root(trend.layout)
+    curdoc().add_root(trend.layout())
     curdoc().title = "trends"
     curdoc().theme = Theme(filename=join(cwd(), "theme.yaml"))

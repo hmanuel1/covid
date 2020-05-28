@@ -23,7 +23,6 @@ from tornado.web import (
 from tornado.ioloop import IOLoop
 
 from wsproxy import WebSocketProxy
-from bkapp import bokeh_cdn_resources
 from config import (
     FLASK_PORT,
     FLASK_PATH,
@@ -44,9 +43,8 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['SECRET_KEY'] = 'secret!'
 
 
-@app.route('/blue', methods=['GET'])
 @app.route('/', methods=['GET'])
-def blue():
+def index():
     """ bk blue app """
     _js_resources = Resources(mode="cdn", log_level='trace').render_js()
     _css_resources = Resources(mode="cdn", log_level='trace').render_css()
@@ -59,12 +57,40 @@ def blue():
                            red=red_app)
 
 
+@app.route('/blue', methods=['GET'])
+def blue():
+    """ bk blue app """
+    _js_resources = Resources(mode="cdn", log_level='trace').render_js()
+    _css_resources = Resources(mode="cdn", log_level='trace').render_css()
+    blue_app = server_document(FLASK_URL + '/bkapp-blue', resources=None)
+    return render_template("embed.html",
+                           js_resources=_js_resources,
+                           css_resources=_css_resources,
+                           blue=blue_app)
+
+
 @app.route('/red', methods=['GET'])
 def red():
     """ bk red app """
-    resources = bokeh_cdn_resources()
-    script = server_document(FLASK_URL + '/bkapp-red', resources=None)
-    return render_template("embed.html", script=script, resources=resources)
+    _js_resources = Resources(mode="cdn", log_level='trace').render_js()
+    _css_resources = Resources(mode="cdn", log_level='trace').render_css()
+    red_app = server_document(FLASK_URL + '/bkapp-red', resources=None)
+    return render_template("embed.html",
+                           js_resources=_js_resources,
+                           css_resources=_css_resources,
+                           red=red_app)
+
+
+@app.route('/table', methods=['GET'])
+def table():
+    """ bk table app """
+    _js_resources = Resources(mode="cdn", log_level='trace').render_js()
+    _css_resources = Resources(mode="cdn", log_level='trace').render_css()
+    table_app = server_document(FLASK_URL + '/bkapp-table', resources=None)
+    return render_template("embed.html",
+                           js_resources=_js_resources,
+                           css_resources=_css_resources,
+                           table=table_app)
 
 
 @app.route('/<path:path>', methods=['GET'])
@@ -95,6 +121,7 @@ def start_tornado():
         # bokeh server app websocket handlers
         (r'/bkapp-blue/ws', WebSocketProxy, dict(path='/bkapp-blue')),
         (r'/bkapp-red/ws', WebSocketProxy, dict(path='/bkapp-red')),
+        (r'/bkapp-table/ws', WebSocketProxy, dict(path='/bkapp-table')),
         # flask app
         (r'.*', FallbackHandler, dict(fallback=container))
     ], **{'use_xheaders': True})
