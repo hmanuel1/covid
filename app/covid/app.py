@@ -46,8 +46,8 @@ app.config['SECRET_KEY'] = 'secret!'
 @app.route('/', methods=['GET'])
 def index():
     """ histograms page """
-    _js_resources = Resources(mode="cdn", log_level='trace').render_js()
-    _css_resources = Resources(mode="cdn", log_level='trace').render_css()
+    _js_resources = Resources(mode="cdn", log_level='info').render_js()
+    _css_resources = Resources(mode="cdn", log_level='info').render_css()
     _histograms = server_document(FLASK_URL + '/bkapp-histograms', resources=None)
     _models = server_document(FLASK_URL + '/bkapp-models', resources=None)
     _maps = server_document(FLASK_URL + '/bkapp-maps', resources=None)

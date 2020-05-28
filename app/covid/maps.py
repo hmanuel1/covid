@@ -76,7 +76,7 @@ class Map:
         # init plot
         self.plot = figure(match_aspect=True, toolbar_location='right',
                            tools="box_zoom, wheel_zoom, pan, reset, save",
-                           **kwargs)
+                           name='maps', **kwargs)
         # hide axes
         self.plot.axis.visible = False
 

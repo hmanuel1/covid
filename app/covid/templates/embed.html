@@ -12,13 +12,53 @@
         color: #fff;
         background: #2f2f2f;
       }
+      #loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1000;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border: 16px solid #3f4140;
+        border-radius: 50%;
+        border-top: 16px solid #9cdd7e5d;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+      }
+      @-webkit-keyframes spin {
+        0% {-webkit-transform: rotate(0deg);}
+        100% {-webkit-transform: rotate(360deg);}
+      }
+      @keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+      }
     </style>
     {{ js_resources|safe }} {{ css_resources|safe }}
   </head>
   <body>
+    <div id="loader"></div>
     <div align="center">{{ maps|safe }}</div>
     <div align="center">{{ trends|safe }}</div>
     <div align="center">{{ histograms|safe }}</div>
     <div align="center">{{ models|safe }}</div>
+    <script>
+      var loadIntervalId = null;
+      function findAppHeading() {
+        if (
+          document.getElementById("hist:1") != null ||
+          document.getElementById("map:1") != null ||
+          document.getElementById("trends:1") != null ||
+          document.getElementById("models:1") != null
+        ) {
+          clearInterval(loadIntervalId);
+          document.getElementById("loader").style.display = "none";
+        }
+      }
+      loadIntervalId = setInterval(function () {findAppHeading();}, 500);
+    </script>
   </body>
 </html>
