@@ -57,7 +57,7 @@ class BokehApp:
     def __init__(self, doc, id_base='app:'):
         self.doc = doc
         self.count = 0
-        self.id = id_base
+        self.id_base = id_base
 
         _db = DataBase()
         self.data = _db.get_table(FLDEM_VIEW_TABLE)
@@ -91,7 +91,7 @@ class BokehApp:
                                  'color': self.palette['hover'],
                                  'text-align': 'center'})
         self.count += 1
-        text_id = f"{self.id}{self.count}"
+        text_id = f"{self.id_base}{self.count}"
         text_update = f"<b id=\"{text_id}\">{text}</b>"
 
         doc.add_root(Div(text=text_update, **attributes))
@@ -160,6 +160,8 @@ class BokehApp:
         """
         if doc is None:
             doc = self.doc
+
+        self.add_text('Data Sources: New York Times, Florida Department of Health')
         self.add_text('Technology Stack: HTML, CSS, JavaScript, '\
                       'Python, AJAX, Flask, Tornado, Bokeh, '\
                       'GeoPandas, SQLite')
@@ -263,9 +265,8 @@ def _bkapp_maps(doc):
     app = BokehApp(doc, id_base='map:')
     app.add_heading('US COVID-19 Cases in Last 15 Days')
     app.add_map()
-    app.add_text('Data Source: New York Times')
-    app.add_text('')
-    doc = app.add_text('')
+    app.add_heading('')
+    doc = app.add_heading('')
     doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
     return doc
 
@@ -282,9 +283,8 @@ def _bkapp_histograms(doc):
     app = BokehApp(doc, id_base='hist:')
     app.add_heading('FL COVID-19 Distributions by Age and Gender')
     app.add_histograms()
-    app.add_text('Data Source: Florida Department of Emergency Management')
-    app.add_text('')
-    doc = app.add_text('')
+    app.add_heading('')
+    doc = app.add_heading('')
     doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
     return doc
 
@@ -301,9 +301,8 @@ def _bkapp_trends(doc):
     app = BokehApp(doc, id_base='trends:')
     app.add_heading('FL COVID-19 Trends by State')
     app.add_trends()
-    app.add_text('Data Source: New York Times')
-    app.add_text('')
-    doc = app.add_text('')
+    app.add_heading('')
+    doc = app.add_heading('')
     doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
     return doc
 
@@ -320,10 +319,10 @@ def _bkapp_models(doc):
     app = BokehApp(doc, id_base='models:')
     app.add_heading('FL COVID-19 Models')
     app.add_models()
-    app.add_text('Data Source: Florida Department of Emergency Management')
-    app.add_text('')
-    app.add_text('')
-    doc = app.add_footer()
+    app.add_heading('')
+    app.add_heading('')
+    app.add_footer()
+    doc = app.add_heading('')
     doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
     return doc
 

@@ -63,7 +63,7 @@ attrs:
 
   Toolbar:
     active_drag: null
-    autohide: False
+    autohide: True
     logo: null
 
   DataTable:

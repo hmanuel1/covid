@@ -50,6 +50,7 @@ class LinePlot:
         self.plot = None
 
         # glyphs
+        self.source = dict()
         self.actual = dict()
         self.predict = dict()
         self.lower = dict()
@@ -65,16 +66,21 @@ class LinePlot:
         self.plot.yaxis.axis_label = 'y'
 
     def _add_lines(self):
-        _args = dict(x='x', y='y', source=None, name=None, visible=False)
         for _id, _state, in self.options:
-            _args['name'] = _state
-            _args['source'] = ColumnDataSource(data=dict(x=[], y=[]))
+            source = ColumnDataSource(data=dict(date=[], actual=[], predict=[],
+                                                lower=[], upper=[]))
+            self.source[_id] = source
+
+            _args = dict(x='date', y='actual', source=source, name=_state, visible=False)
             self.actual[_id] = self.plot.line(**_args)
-            _args['source'] = ColumnDataSource(data=dict(x=[], y=[]))
+
+            _args = dict(x='date', y='predict', source=source, name=_state, visible=False)
             self.predict[_id] = self.plot.line(**_args)
-            _args['source'] = ColumnDataSource(data=dict(x=[], y=[]))
+
+            _args = dict(x='date', y='lower', source=source, name=_state, visible=False)
             self.lower[_id] = self.plot.line(**_args)
-            _args['source'] = ColumnDataSource(data=dict(x=[], y=[]))
+
+            _args = dict(x='date', y='upper', source=source, name=_state, visible=False)
             self.upper[_id] = self.plot.line(**_args)
 
     def _add_hover(self):
@@ -91,8 +97,8 @@ class LinePlot:
 
     def _add_area(self):
         for _id, _state, in self.options:
-            _source = ColumnDataSource(data=dict(x=[], y1=[], y2=[]))
-            _area_args = dict(x='x', y1='y1', y2='y2', source=_source,
+            _source = self.source[_id]
+            _area_args = dict(x='date', y1='lower', y2='upper', source=_source,
                               name=_state, visible=False)
             self.area[_id] = self.plot.varea(**_area_args)
 
@@ -237,25 +243,10 @@ class Trends:
                 self.cases.upper[_id].visible = False
                 self.cases.area[_id].visible = False
 
-                self.cases.actual[_id].data_source.data = dict(x=[], y=[])
-                self.cases.predict[_id].data_source.data = dict(x=[], y=[])
-                self.cases.lower[_id].data_source.data = dict(x=[], y=[])
-                self.cases.upper[_id].data_source.data = dict(x=[], y=[])
-                self.cases.area[_id].data_source.data = dict(x=[], y1=[], y2=[])
-
         for _id in new:
             if not self.cases.actual[_id].visible:
                 _slice = self.cases.data.loc[_id, :]
-                _x = _slice['date'].to_list()
-                _y = _slice['actual'].to_list()
-                self.cases.actual[_id].data_source.data = dict(x=_x, y=_y)
-                _y = _slice['predict'].to_list()
-                self.cases.predict[_id].data_source.data = dict(x=_x, y=_y)
-                _y1 = _slice['lower'].to_list()
-                self.cases.lower[_id].data_source.data = dict(x=_x, y=_y1)
-                _y2 = _slice['upper'].to_list()
-                self.cases.upper[_id].data_source.data = dict(x=_x, y=_y2)
-                self.cases.area[_id].data_source.data = dict(x=_x, y1=_y1, y2=_y2)
+                self.cases.source[_id].data = ColumnDataSource.from_df(data=_slice)
 
                 self.cases.actual[_id].visible = True
                 self.cases.predict[_id].visible = True
@@ -272,25 +263,11 @@ class Trends:
                 self.deaths.upper[_id].visible = False
                 self.deaths.area[_id].visible = False
 
-                self.deaths.actual[_id].data_source.data = dict(x=[], y=[])
-                self.deaths.predict[_id].data_source.data = dict(x=[], y=[])
-                self.deaths.lower[_id].data_source.data = dict(x=[], y=[])
-                self.deaths.upper[_id].data_source.data = dict(x=[], y=[])
-                self.deaths.area[_id].data_source.data = dict(x=[], y1=[], y2=[])
-
         for _id in new:
             if not self.deaths.actual[_id].visible:
                 _slice = self.deaths.data.loc[_id, :]
-                _x = _slice['date'].to_list()
-                _y = _slice['actual'].to_list()
-                self.deaths.actual[_id].data_source.data = dict(x=_x, y=_y)
-                _y = _slice['predict'].to_list()
-                self.deaths.predict[_id].data_source.data = dict(x=_x, y=_y)
-                _y1 = _slice['lower'].to_list()
-                self.deaths.lower[_id].data_source.data = dict(x=_x, y=_y1)
-                _y2 = _slice['upper'].to_list()
-                self.deaths.upper[_id].data_source.data = dict(x=_x, y=_y2)
-                self.deaths.area[_id].data_source.data = dict(x=_x, y1=_y1, y2=_y2)
+                self.deaths.source[_id].data = ColumnDataSource.from_df(data=_slice)
+
                 self.deaths.actual[_id].visible = True
                 self.deaths.predict[_id].visible = True
                 self.deaths.lower[_id].visible = True
