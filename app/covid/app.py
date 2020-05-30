@@ -126,6 +126,7 @@ def proxy(path):
     response = Response(resp.content, resp.status_code, headers)
     return response
 
+
 def start_tornado():
     """Start Tornado server to run a flask app in a Tornado
        WSGI container.
@@ -142,6 +143,7 @@ def start_tornado():
     ], **{'use_xheaders': True})
     server.listen(port=FLASK_PORT)
     IOLoop.instance().start()
+
 
 if __name__ == '__main__':
     t = Thread(target=start_tornado, daemon=True)
