@@ -15,6 +15,10 @@ cryptography==2.9.2
 cycler==0.10.0
 Cython==0.29.17
 DateTime==4.3
+
+cpython==0.0.5
+pymongo==3.10.1
+
 # Fiona==1.8.4 part of geopandas
 geopandas==0.6.1
 github.py==0.5.0
