@@ -299,7 +299,7 @@ def _bkapp_trends(doc):
         Document -- updated bokeh document
     """
     app = BokehApp(doc, id_base='trends:')
-    app.add_heading('FL COVID-19 Trends by State')
+    app.add_heading('US COVID-19 Trends by State')
     app.add_trends()
     app.add_heading('')
     doc = app.add_heading('')
