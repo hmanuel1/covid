@@ -20,24 +20,31 @@ from config import (
 )
 
 logging.basicConfig(level=logging.INFO)
-log = logging.getLogger(__name__)
 
-# get sockets, so bkapp and app can talk
-bk_sockets, bk_port = get_sockets()
+def run():
+    """Run flask application
 
-# start bokeh sever
-t1 = Thread(target=bk_worker, args=[bk_sockets, bk_port], daemon=True)
-t1.start()
+    """
+    log = logging.getLogger(__name__)
 
-bokeh_url = BOKEH_URL.replace('$PORT', str(bk_port))
-log.info("Bokeh Server App Running at: %s", bokeh_url)
+    # get sockets, so bkapp and app can talk
+    bk_sockets, bk_port = get_sockets()
 
-# start flask server
-t2 = Thread(target=start_tornado, daemon=True)
-t2.start()
+    # start bokeh sever
+    thread_bokeh = Thread(target=bk_worker, args=[bk_sockets, bk_port], daemon=True)
+    thread_bokeh.start()
 
-log.info("Flask + Bokeh Server App Running at: %s", FLASK_URL)
+    bokeh_url = BOKEH_URL.replace('$PORT', str(bk_port))
+    log.info("Bokeh Server App Running at: %s", bokeh_url)
 
-# loop for ever
-while True:
-    time.sleep(0.01)
+    # start flask server
+    thread_flask = Thread(target=start_tornado, daemon=True)
+    thread_flask.start()
+
+    log.info("Flask + Bokeh Server App Running at: %s", FLASK_URL)
+
+    # loop for ever
+    while True:
+        time.sleep(0.01)
+
+run()

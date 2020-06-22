@@ -46,8 +46,7 @@ from config import (
 )
 
 logging.basicConfig(level=logging.INFO)
-log = logging.getLogger(__name__)
-
+LOG = logging.getLogger(__name__)
 
 
 class BokehApp:
@@ -64,7 +63,7 @@ class BokehApp:
         self.roc = _db.get_table(MODELS_ROC_TABLE)
         self.importance = _db.get_table(IMPORTANCE_TABLE)
         _db.close()
-        log.info('data loaded')
+        LOG.info('data loaded')
 
         self.palette = dict()
         self.palette['theme'] = list(reversed(Greens[8]))
@@ -187,7 +186,7 @@ class BokehApp:
             self.palette['color'],
             self.palette['hover']
         ))
-        log.info('histograms added')
+        LOG.info('histograms added')
         return doc
 
     def add_map(self, doc=None):
@@ -210,7 +209,7 @@ class BokehApp:
                         row(plot.controls['slider'],
                             plot.controls['button']))
         doc.add_root(layout)
-        log.info('us_map added')
+        LOG.info('us_map added')
         return doc
 
     def add_models(self, doc=None):
@@ -232,7 +231,7 @@ class BokehApp:
             self.palette['color'],
             self.palette['hover']
         ))
-        log.info('modeling added')
+        LOG.info('modeling added')
         return doc
 
     def add_trends(self, doc=None):
@@ -249,11 +248,11 @@ class BokehApp:
 
         trend = Trends(self.palette['trends'])
         doc.add_root(trend.layout())
-        log.info('trends added')
+        LOG.info('trends added')
         return doc
 
 
-def _bkapp_maps(doc):
+def bkapp_maps(doc):
     """Generate Landing Page
 
     Arguments:
@@ -271,7 +270,7 @@ def _bkapp_maps(doc):
     return doc
 
 
-def _bkapp_histograms(doc):
+def bkapp_histograms(doc):
     """Generate histogram Page
 
     Arguments:
@@ -289,7 +288,7 @@ def _bkapp_histograms(doc):
     return doc
 
 
-def _bkapp_trends(doc):
+def bkapp_trends(doc):
     """Generate trends Page
 
     Arguments:
@@ -307,7 +306,7 @@ def _bkapp_trends(doc):
     return doc
 
 
-def _bkapp_models(doc):
+def bkapp_models(doc):
     """Generate models Page
 
     Arguments:
@@ -326,12 +325,6 @@ def _bkapp_models(doc):
     doc.theme = Theme(filename=os.path.join(cwd(), "theme.yaml"))
     return doc
 
-# bokeh applications
-bkapp_maps = Application(FunctionHandler(_bkapp_maps))
-bkapp_trends = Application(FunctionHandler(_bkapp_trends))
-bkapp_histograms = Application(FunctionHandler(_bkapp_histograms))
-bkapp_models = Application(FunctionHandler(_bkapp_models))
-
 
 def  get_sockets():
     """bind to available socket in this system
@@ -349,10 +342,17 @@ def bk_worker(sockets, port):
     asyncio.set_event_loop(asyncio.new_event_loop())
 
     websocket_origins = [f"{BOKEH_ADDR}:{port}", f"{FLASK_ADDR}:{FLASK_PORT}"]
-    bokeh_tornado = BokehTornado({'/bkapp-maps': bkapp_maps,
-                                  '/bkapp-trends': bkapp_trends,
-                                  '/bkapp-histograms': bkapp_histograms,
-                                  '/bkapp-models': bkapp_models},
+
+    # bokeh applications
+    _bkapp_maps = Application(FunctionHandler(bkapp_maps))
+    _bkapp_trends = Application(FunctionHandler(bkapp_trends))
+    _bkapp_histograms = Application(FunctionHandler(bkapp_histograms))
+    _bkapp_models = Application(FunctionHandler(bkapp_models))
+
+    bokeh_tornado = BokehTornado({'/bkapp-maps': _bkapp_maps,
+                                  '/bkapp-trends': _bkapp_trends,
+                                  '/bkapp-histograms': _bkapp_histograms,
+                                  '/bkapp-models': _bkapp_models},
                                  extra_websocket_origins=websocket_origins,
                                  **{'use_xheaders': True})
 
@@ -364,10 +364,12 @@ def bk_worker(sockets, port):
 
 
 if __name__ == '__main__':
-    bk_sockets, bk_port = get_sockets()
-    t = Thread(target=bk_worker, args=[bk_sockets, bk_port], daemon=True)
-    t.start()
-    bokeh_url = BOKEH_URL.replace('$PORT', str(bk_port))
-    log.info("Bokeh Server App Running at: %s", bokeh_url)
+    BK_SOCKETS, BK_PORT = get_sockets()
+
+    THREAD = Thread(target=bk_worker, args=[BK_SOCKETS, BK_PORT], daemon=True)
+    THREAD.start()
+    BOKEH_URL = BOKEH_URL.replace('$PORT', str(BK_PORT))
+    LOG.info("Bokeh Server App Running at: %s", BOKEH_URL)
+
     while True:
         time.sleep(0.01)

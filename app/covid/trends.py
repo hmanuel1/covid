@@ -28,7 +28,7 @@ from arima import (
 
 
 logging.basicConfig(level=logging.INFO)
-log = logging.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 
 
 class LinePlot:
@@ -210,7 +210,7 @@ class Trends:
         self.cases.axis_label('Date', 'Cases')
         self.cases.color_palette(palette)
 
-        log.debug('state cases')
+        LOG.debug('state cases')
 
         self.deaths = LinePlot(ARIMA_DEATHS_TABLE)
         self.deaths.render_figure()
@@ -218,13 +218,13 @@ class Trends:
         self.deaths.axis_label('Date', 'Deaths')
         self.deaths.color_palette(palette)
 
-        log.debug('state deaths')
+        LOG.debug('state deaths')
 
         self.multiselect = None
         self._add_multiselect()
         self.multiselect.value = ['12', '34', '36']
 
-        log.debug('render default states')
+        LOG.debug('render default states')
 
     def _add_multiselect(self):
         self.multiselect = MultiSelect(title='States:', value=['01'],
@@ -292,8 +292,8 @@ class Trends:
 if __name__[:9] == 'bokeh_app':
     print('unit testing...')
 
-    trend = Trends(palette=Purples[3])
+    TREND = Trends(palette=Purples[3])
 
-    curdoc().add_root(trend.layout())
+    curdoc().add_root(TREND.layout())
     curdoc().title = "trends"
     curdoc().theme = Theme(filename=join(cwd(), "theme.yaml"))

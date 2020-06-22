@@ -18,7 +18,7 @@ from config import (
 
 
 logging.basicConfig(level=logging.INFO)
-log = logging.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 
 
 class SocketConnection:
@@ -71,7 +71,7 @@ class WebSocketProxy(WebSocketHandler):
         return subprotocols[0]
 
     def open(self, *args, **kwargs):
-        log.info("ws connection opened")
+        LOG.info("ws connection opened")
         self.chan.client.conn = self.ws_connection
         protocols = self.request.headers['Sec-Websocket-Protocol'].split(', ')
         IOLoop.current().spawn_callback(
@@ -88,10 +88,10 @@ class WebSocketProxy(WebSocketHandler):
                 on_message_callback=self._on_message_callback
             )
         except Exception as e:
-            log.error("ws failed to connect to server %r", e, exc_info=True)
+            LOG.error("ws failed to connect to server %r", e, exc_info=True)
         else:
             self.chan.server.conn = connection
-            log.info("ws proxy channel opened")
+            LOG.info("ws proxy channel opened")
         return None
 
     # proxy to client (browser)
@@ -109,7 +109,7 @@ class WebSocketProxy(WebSocketHandler):
         try:
             await self.write_message(message, binary)
         except Exception as e:
-            log.error("ws error sending to browser %r", e, exc_info=True)
+            LOG.error("ws error sending to browser %r", e, exc_info=True)
         return None
 
     # proxy to server (bokeh)
@@ -127,8 +127,8 @@ class WebSocketProxy(WebSocketHandler):
         try:
             await self.chan.server.conn.write_message(message, binary)
         except Exception as e:
-            log.error("ws error sending to server %r", e, exc_info=True)
+            LOG.error("ws error sending to server %r", e, exc_info=True)
         return None
 
     def on_close(self):
-        log.info("ws connection closed.")
+        LOG.info("ws connection closed.")

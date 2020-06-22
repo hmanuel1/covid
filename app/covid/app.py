@@ -34,16 +34,16 @@ from config import (
 
 
 logging.basicConfig(level=logging.INFO)
-log = logging.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 
 
-app = Flask(__name__)
-CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
-app.config['SECRET_KEY'] = 'secret!'
+APP = Flask(__name__)
+CORS(APP)
+APP.config['CORS_HEADERS'] = 'Content-Type'
+APP.config['SECRET_KEY'] = 'secret!'
 
 
-@app.route('/', methods=['GET'])
+@APP.route('/', methods=['GET'])
 def index():
     """ histograms page """
     _js_resources = Resources(mode="cdn", log_level='info').render_js()
@@ -61,7 +61,7 @@ def index():
                            models=_models)
 
 
-@app.route('/maps', methods=['GET'])
+@APP.route('/maps', methods=['GET'])
 def maps():
     """ trends page """
     _js_resources = Resources(mode="cdn", log_level='trace').render_js()
@@ -73,7 +73,7 @@ def maps():
                            maps=_maps)
 
 
-@app.route('/trends', methods=['GET'])
+@APP.route('/trends', methods=['GET'])
 def trends():
     """ trends page """
     _js_resources = Resources(mode="cdn", log_level='trace').render_js()
@@ -85,7 +85,7 @@ def trends():
                            trends=_trends)
 
 
-@app.route('/histograms', methods=['GET'])
+@APP.route('/histograms', methods=['GET'])
 def histograms():
     """ histograms page """
     _js_resources = Resources(mode="cdn", log_level='info').render_js()
@@ -97,7 +97,7 @@ def histograms():
                            histograms=_histograms)
 
 
-@app.route('/models', methods=['GET'])
+@APP.route('/models', methods=['GET'])
 def models():
     """ models page """
     _js_resources = Resources(mode="cdn", log_level='trace').render_js()
@@ -109,7 +109,7 @@ def models():
                            models=_models)
 
 
-@app.route('/<path:path>', methods=['GET'])
+@APP.route('/<path:path>', methods=['GET'])
 @cross_origin(origins='*')
 def proxy(path):
     """ HTTP Proxy """
@@ -133,7 +133,7 @@ def start_tornado():
 
     """
     asyncio.set_event_loop(asyncio.new_event_loop())
-    container = WSGIContainer(app)
+    container = WSGIContainer(APP)
     server = Application([
         (r'/bkapp-maps/ws', WebSocketProxy, dict(path='/bkapp-maps')),
         (r'/bkapp-trends/ws', WebSocketProxy, dict(path='/bkapp-trends')),
@@ -146,8 +146,8 @@ def start_tornado():
 
 
 if __name__ == '__main__':
-    t = Thread(target=start_tornado, daemon=True)
-    t.start()
-    log.info("Flask + Bokeh Server App Running at %s", FLASK_URL + FLASK_PATH)
+    THREAD = Thread(target=start_tornado, daemon=True)
+    THREAD.start()
+    LOG.info("Flask + Bokeh Server App Running at %s", FLASK_URL + FLASK_PATH)
     while True:
         time.sleep(0.01)
