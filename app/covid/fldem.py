@@ -45,9 +45,9 @@ class PdfScraper:
         self.data = None
 
         # get pdf file url
-        self.__get_url()
+        self._get_url()
 
-    def __get_url(self):
+    def _get_url(self):
         """Extract pdf file url
 
         Arguments:
@@ -65,7 +65,7 @@ class PdfScraper:
             _sentences = _paragraph.find_all('a')
             _data.append(str(_sentences[0]))
 
-        _line = [x for x in _data if re.search(r'Daily Report', x)][0]
+        _line = [x for x in _data if re.search(r'state_reports', x)][0]
 
         # find sub url of pdf file
         _match = re.search(r'\"(.+?)\"', _line)
@@ -89,22 +89,25 @@ class PdfScraper:
         for _page in range(_reader.numPages):
             self.pages.append(_reader.getPage(_page).extractText())
 
-    def __get_lines(self, marker):
+    def _get_lines(self, marker):
         """Extract text lines from pdf pages
 
         Arguments:
             marker {String} -- identifier of data in text
         """
         # remove non-data pages
-        _pages = [page for page in self.pages if re.search(marker, page[:100])]
+        _pages = [page for page in self.pages if re.search(marker, page[:500])]
 
         # make sure these field are not joined
         _pages = [page.replace('Male', '\nMale\n') for page in _pages]
         _pages = [page.replace('Female', '\nFemale\n') for page in _pages]
         _pages = [page.replace('Yes', '\nYes\n') for page in _pages]
         _pages = [page.replace('NoFL', '\nNo\nFL') for page in _pages]
-        _pages = [re.sub(r'(No)([A-Z])+', r'\n\1\n\2', page) for page in _pages]
         _pages = [page.replace('Unknown', '\nUnknown\n') for page in _pages]
+        _pages = [re.sub(r'(\d{2}/\d{2}/\d{2})', r'\n\1\n', page) for page in _pages]
+        _pages = [re.sub(r'(\d{1,3}\,\d{3})', r'\n\1\n', page) for page in _pages]
+        _pages = [re.sub(r'([a-z])(\d{1,3})', r'\1\n\2\n', page) for page in _pages]
+        _pages = [re.sub(r'(No)([A-Z])+', r'\n\1\n\2', page) for page in _pages]
         _pages = [re.sub(r'(\d{1,4})([A-Z])', r'\n\1\n\2', page) for page in _pages]
         _pages = [re.sub(r'\n+', '\n', page) for page in _pages]
 
@@ -115,7 +118,7 @@ class PdfScraper:
 
         _pages = [page.split('\n') for page in _pages]
         self.lines = [line for page in _pages for line in page
-                      if not re.search(_regex, line)]
+                      if not re.search(_regex, line) and line != '']
 
     def get_data(self, marker):
         """Extract data from pdf text
@@ -127,7 +130,7 @@ class PdfScraper:
             DataFrame -- data extracted from pdf
         """
         # get pages that contain specified <marker>
-        self.__get_lines(marker)
+        self._get_lines(marker)
 
         # tag start of row by date
         _tags = [(x, 'e') if re.search(r'\d{2}\/', x) else (x, 'b')
@@ -185,8 +188,8 @@ def get_data(download=False):
         pdf.get_pages()
 
         # covid19 cases
-        cases = pdf.get_data(marker='line list of cases')
-        deaths = pdf.get_data(marker='line list of deaths')
+        cases = pdf.get_data(marker=r'Case[^s]')
+        deaths = pdf.get_data(marker='new deaths')
 
         _db = DataBase()
         _db.add_table(FL_CASES_TABLE, cases, index=False)
