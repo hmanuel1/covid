@@ -189,7 +189,7 @@ def get_data(download=False):
 
         # covid19 cases
         cases = pdf.get_data(marker=r'Case[^s]')
-        deaths = pdf.get_data(marker='new deaths')
+        deaths = pdf.get_data(marker=r'Death[^s]')
 
         _db = DataBase()
         _db.add_table(FL_CASES_TABLE, cases, index=False)

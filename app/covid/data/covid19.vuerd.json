@@ -2,8 +2,8 @@
   "canvas": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": 88.80000305175781,
-    "scrollLeft": 212.40000915527344,
+    "scrollTop": 83.19999694824219,
+    "scrollLeft": 0,
     "show": {
       "tableComment": true,
       "columnComment": false,
@@ -20,7 +20,19 @@
     "canvasType": "ERD",
     "language": "GraphQL",
     "tableCase": "snakeCase",
-    "columnCase": "snakeCase"
+    "columnCase": "snakeCase",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    }
   },
   "table": {
     "tables": [
@@ -676,7 +688,7 @@
           "active": false,
           "left": 1343.2319915009746,
           "top": 326.6528813647819,
-          "zIndex": 1650,
+          "zIndex": 1717,
           "widthName": 63,
           "widthComment": 173
         },
@@ -870,7 +882,7 @@
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
-              "unique": false,
+              "unique": true,
               "notNull": true
             },
             "ui": {
@@ -911,9 +923,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1341.735987719481,
-          "top": 528.2204558481428,
-          "zIndex": 1664,
+          "left": 1377.7359877194806,
+          "top": 530.6204558481427,
+          "zIndex": 1713,
           "widthName": 66,
           "widthComment": 259
         },
@@ -2128,7 +2140,8 @@
         },
         "id": "2139810d-aafe-221a-5676-8904242c3531"
       }
-    ]
+    ],
+    "indexes": []
   },
   "memo": {
     "memos": []
