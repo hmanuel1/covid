@@ -35,7 +35,8 @@ DATES_TABLE = 'dates'
 
 
 # levels to map cases and deaths
-LEVELS = [0, 1, 10, 100, 250, 500, 5000, 10000, np.inf]
+# LEVELS = [0, 1, 10, 100, 250, 500, 5000, 10000, np.inf]
+LEVELS = [0, 1, 500, 1000, 2500, 5000, 10000, 20000, np.inf]
 
 URL_COUNTIES = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv'
 URL_STATES = 'https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv'

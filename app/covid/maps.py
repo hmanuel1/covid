@@ -330,12 +330,12 @@ if __name__[:9] == 'bokeh_app':
     print('unit testing...')
 
     # unit test module in stand alone mode
-    palette = list(reversed(Purples[8]))
-    plot = Map(plot_width=800, plot_height=400, palette=palette)
-    layout = column(plot.controls['select'],
-                    plot.plot,
-                    row(plot.controls['slider'], plot.controls['button']))
+    PALETTE = list(reversed(Purples[8]))
+    PLOT = Map(plot_width=800, plot_height=400, palette=PALETTE)
+    LAYOUT = column(PLOT.controls['select'],
+                    PLOT.plot,
+                    row(PLOT.controls['slider'], PLOT.controls['button']))
 
-    curdoc().add_root(layout)
+    curdoc().add_root(LAYOUT)
     curdoc().title = 'maps'
     curdoc().theme = Theme(filename=join(cwd(), "theme.yaml"))
