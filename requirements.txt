@@ -47,7 +47,7 @@ pyproj==1.9.6
 PySocks==1.7.1
 python-dateutil==2.8.1
 pytz==2019.3
-PyYAML==5.3.1
+PyYAML==5.4
 requests==2.23.0
 scikit-learn==0.22.2.post1
 scipy==1.4.1
